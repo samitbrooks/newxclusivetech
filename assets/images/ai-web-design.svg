@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="40" fill="#08131f" />
+  <path d="M120 420c120-80 320-80 480 0" fill="none" stroke="url(#g1)" stroke-width="40" stroke-linecap="round" />
+  <rect x="100" y="100" width="260" height="220" rx="32" fill="#0f172a" stroke="url(#g2)" stroke-width="14" />
+  <rect x="170" y="170" width="150" height="110" rx="18" fill="#0ea5e9" opacity="0.18" />
+  <circle cx="205" cy="220" r="24" fill="#ffffff" opacity="0.85" />
+  <path d="M380 160h260v160H380z" fill="#0f172a" stroke="url(#g1)" stroke-width="14" rx="28"/>
+  <rect x="420" y="210" width="180" height="100" rx="20" fill="#38bdf8" opacity="0.25"/>
+  <line x1="420" y1="260" x2="600" y2="260" stroke="#f8fafc" stroke-width="12" stroke-linecap="round" opacity="0.35"/>
+  <line x1="420" y1="298" x2="520" y2="298" stroke="#f8fafc" stroke-width="12" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="160" cy="480" r="60" fill="url(#g2)" opacity="0.4" />
+  <circle cx="620" cy="460" r="48" fill="url(#g1)" opacity="0.35" />
+  <text x="130" y="560" fill="#f8fafc" font-family="Inter, sans-serif" font-size="42" font-weight="700">AI Web</text>
+  <text x="130" y="604" fill="#94a3b8" font-family="Inter, sans-serif" font-size="28">Design Preview</text>
+</svg>

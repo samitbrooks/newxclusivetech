@@ -1,0 +1,38 @@
+{
+  "name": "xclusivetech-website",
+  "version": "1.0.0",
+  "description": "Premium web design and development brand website for Xclusivetech",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000 || npx http-server",
+    "build": "echo 'No build required for static site'",
+    "test": "echo 'Add tests when needed'"
+  },
+  "keywords": [
+    "web design",
+    "web development",
+    "UI/UX design",
+    "website optimization",
+    "Kenya",
+    "tech agency"
+  ],
+  "author": "Xclusivetech",
+  "license": "Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xclusivetech/xclusivetech-website"
+  },
+  "homepage": "https://www.xclusivetech.co.ke",
+  "bugs": {
+    "url": "https://github.com/xclusivetech/xclusivetech-website/issues",
+    "email": "info@xclusivetech.co.ke"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

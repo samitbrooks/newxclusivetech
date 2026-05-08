@@ -1,0 +1,42 @@
+# Xclusivetech Website robots.txt
+# Directives for search engine crawlers
+
+User-agent: *
+Allow: /
+Allow: /*.html
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Disallow admin and private areas (if any exist in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
+Disallow: /*.backup
+
+# Sitemap location
+Sitemap: https://www.xclusivetech.co.ke/sitemap.xml
+
+# Crawl delay (optional - be nice to servers)
+Crawl-delay: 1
+
+# Request rate (Google)
+User-agent: Googlebot
+Crawl-delay: 0
+
+# Allow specific bots
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots (optional)
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

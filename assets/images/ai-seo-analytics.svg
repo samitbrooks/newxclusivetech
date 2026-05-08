@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="s1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+    <linearGradient id="s2" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="40" fill="#02111d" />
+  <rect x="120" y="120" width="260" height="220" rx="30" fill="#0f172a" stroke="url(#s1)" stroke-width="14" />
+  <rect x="460" y="120" width="220" height="320" rx="30" fill="#0f172a" stroke="url(#s2)" stroke-width="14" />
+  <line x1="180" y1="190" x2="340" y2="190" stroke="#f8fafc" stroke-width="14" stroke-linecap="round" opacity="0.5" />
+  <circle cx="200" cy="270" r="14" fill="#ffffff" opacity="0.9" />
+  <circle cx="260" cy="310" r="10" fill="#38bdf8" opacity="0.8" />
+  <circle cx="540" cy="250" r="18" fill="#22c55e" opacity="0.85" />
+  <rect x="500" y="190" width="120" height="36" rx="18" fill="#38bdf8" opacity="0.18" />
+  <rect x="500" y="250" width="140" height="24" rx="12" fill="#0ea5e9" opacity="0.18" />
+  <rect x="500" y="300" width="180" height="16" rx="8" fill="#0ea5e9" opacity="0.12" />
+  <path d="M180 420h120a20 20 0 0120 20v22H160v-22a20 20 0 0120-20z" fill="url(#s1)" opacity="0.25" />
+  <path d="M500 430h80a20 20 0 0120 20v12H480v-12a20 20 0 0120-20z" fill="url(#s2)" opacity="0.25" />
+  <text x="120" y="560" fill="#f8fafc" font-family="Inter, sans-serif" font-size="42" font-weight="700">AI SEO</text>
+  <text x="120" y="604" fill="#94a3b8" font-family="Inter, sans-serif" font-size="28">Growth Dashboard</text>
+</svg>
