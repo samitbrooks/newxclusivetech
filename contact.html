@@ -83,7 +83,12 @@
                 <div class="animate-fade-in-up">
                     <h2 class="text-3xl font-bold mb-8">Send Us a Message</h2>
                     
-                    <form class="space-y-6" id="contact-form">
+                    <form action="https://formsubmit.co/hello@xclusivetech.co.ke" method="POST" class="space-y-6" id="contact-form">
+                        <input type="hidden" name="_subject" value="New inquiry from Xclusivetech website">
+                        <input type="hidden" name="_next" value="contact.html?success=true">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+
                         <!-- Name Field -->
                         <div>
                             <label for="name" class="block text-sm font-medium mb-2">Full Name</label>

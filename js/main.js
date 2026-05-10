@@ -9,6 +9,7 @@ class XclusiveTech {
     static init() {
         this.setupEventListeners();
         this.setupFormHandling();
+        this.checkQueryParams();
         this.optimizePerformance();
     }
     
@@ -34,6 +35,26 @@ class XclusiveTech {
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
             contactForm.addEventListener('submit', (e) => {
+                const shouldUseNativeSubmit = contactForm.action && contactForm.method.toLowerCase() === 'post';
+                const formData = new FormData(contactForm);
+                const data = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    subject: formData.get('subject'),
+                    message: formData.get('message'),
+                    service: formData.get('service')
+                };
+
+                if (!this.validateForm(data)) {
+                    e.preventDefault();
+                    alert('Please fill in all required fields');
+                    return;
+                }
+
+                if (shouldUseNativeSubmit) {
+                    return;
+                }
+
                 e.preventDefault();
                 this.handleFormSubmit(contactForm);
             });
@@ -183,6 +204,18 @@ class XclusiveTech {
             params[key] = value;
         });
         return params;
+    }
+
+    // Show success message if redirected after native submit
+    static checkQueryParams() {
+        const params = this.getQueryParams();
+        if (params.success === 'true') {
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                this.showSuccessMessage(contactForm);
+                contactForm.reset();
+            }
+        }
     }
 
     // Utility: Store in localStorage
