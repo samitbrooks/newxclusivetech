@@ -354,6 +354,7 @@ input:focus, textarea:focus, select:focus {
     vertical-align: middle;
 }
 
+/* Preview modal and card interactivity */
 /* Tailwind color overrides for existing utility classes */
 .bg-red-600,
 .text-red-500,

@@ -184,7 +184,7 @@ class XclusiveTech {
         });
         return params;
     }
-    
+
     // Utility: Store in localStorage
     static localStorage(action, key, value = null) {
         try {

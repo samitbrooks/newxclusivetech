@@ -10,16 +10,21 @@
     </linearGradient>
   </defs>
   <rect width="800" height="600" rx="40" fill="#08131f" />
-  <rect x="120" y="120" width="280" height="220" rx="32" fill="#0f172a" stroke="url(#gd1)" stroke-width="14" />
-  <rect x="420" y="140" width="220" height="180" rx="30" fill="#0f172a" stroke="url(#gd2)" stroke-width="14" />
-  <line x1="160" y1="180" x2="360" y2="180" stroke="#f8fafc" stroke-width="18" stroke-linecap="round" opacity="0.7" />
-  <line x1="160" y1="230" x2="340" y2="230" stroke="#f8fafc" stroke-width="18" stroke-linecap="round" opacity="0.5" />
-  <line x1="160" y1="280" x2="360" y2="280" stroke="#f8fafc" stroke-width="18" stroke-linecap="round" opacity="0.3" />
-  <circle cx="360" cy="420" r="50" fill="url(#gd2)" opacity="0.2" />
-  <path d="M510 320h120a20 20 0 0120 20v80a20 20 0 01-20 20H510a20 20 0 01-20-20v-80a20 20 0 0120-20z" fill="#0ea5e9" opacity="0.18" />
-  <rect x="540" y="360" width="60" height="20" rx="10" fill="#f8fafc" opacity="0.8" />
-  <rect x="540" y="400" width="100" height="20" rx="10" fill="#f8fafc" opacity="0.5" />
-  <path d="M260 420h240" stroke="#f8fafc" stroke-width="22" stroke-linecap="round" opacity="0.22" />
+  <rect x="100" y="110" width="300" height="260" rx="32" fill="#0f172a" stroke="url(#gd1)" stroke-width="14" />
+  <rect x="130" y="150" width="240" height="38" rx="18" fill="#38bdf8" opacity="0.22" />
+  <rect x="130" y="220" width="180" height="24" rx="12" fill="#f8fafc" opacity="0.85" />
+  <rect x="130" y="260" width="220" height="24" rx="12" fill="#ffffff" opacity="0.25" />
+  <rect x="130" y="308" width="240" height="24" rx="12" fill="#ffffff" opacity="0.25" />
+  <rect x="130" y="356" width="260" height="18" rx="9" fill="#ffffff" opacity="0.18" />
+  <rect x="460" y="130" width="220" height="310" rx="32" fill="#0f172a" stroke="url(#gd2)" stroke-width="14" />
+  <rect x="500" y="180" width="140" height="42" rx="16" fill="#ffffff" opacity="0.15" />
+  <rect x="490" y="260" width="100" height="18" rx="9" fill="#ffffff" opacity="0.45" />
+  <rect x="540" y="300" width="80" height="18" rx="9" fill="#ffffff" opacity="0.45" />
+  <circle cx="530" cy="380" r="28" fill="#22c55e" opacity="0.72" />
+  <circle cx="590" cy="440" r="18" fill="#38bdf8" opacity="0.8" />
+  <line x1="160" y1="200" x2="360" y2="200" stroke="#f8fafc" stroke-width="18" stroke-linecap="round" opacity="0.7" />
+  <line x1="160" y1="250" x2="360" y2="250" stroke="#f8fafc" stroke-width="18" stroke-linecap="round" opacity="0.5" />
+  <path d="M260 430h240" stroke="#f8fafc" stroke-width="22" stroke-linecap="round" opacity="0.22" />
   <text x="120" y="560" fill="#f8fafc" font-family="Inter, sans-serif" font-size="42" font-weight="700">AI Dev</text>
   <text x="120" y="604" fill="#94a3b8" font-family="Inter, sans-serif" font-size="28">Project Preview</text>
 </svg>
