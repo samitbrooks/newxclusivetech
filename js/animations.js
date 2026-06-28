@@ -66,8 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { threshold: 0.5 });
     
+    // Respect prefers-reduced-motion: show final values immediately instead of animating
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     counterElements.forEach(element => {
-        counterObserver.observe(element);
+        if (prefersReducedMotion) {
+            element.textContent = element.getAttribute('data-target');
+        } else {
+            counterObserver.observe(element);
+        }
     });
     
     // Parallax Effect on Hero Section

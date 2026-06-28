@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Xclusivetech | Web Design & Development</title>
-    <meta name="description" content="Explore Xclusivetech services in Nairobi: web design, web development, graphic design, website optimization, and SEO-ready digital solutions.">
-    <meta name="keywords" content="web design Nairobi, Kenya web agency, graphic design, SEO services, website development, digital marketing, branding">
-    <meta property="og:title" content="Services - Xclusivetech | Web Design, SEO & Graphic Design">
-    <meta property="og:description" content="Discover premium web, SEO and graphic design services tailored for Kenyan businesses and brands.">
+    <title>Web Design Services in Kenya — Xclusivetech, Nairobi</title>
+    <meta name="description" content="Affordable web design, e-commerce, SEO, and digital marketing services for Kenyan businesses. Transparent KES pricing, fast delivery, M-Pesa payments accepted.">
+    <meta name="keywords" content="web design services Kenya, e-commerce website Kenya, SEO Kenya, website development Nairobi, M-Pesa website, digital marketing Kenya, graphic design Nairobi">
+    <meta property="og:title" content="Web Design Services — Xclusivetech, Nairobi">
+    <meta property="og:description" content="Affordable web design, e-commerce, SEO, and graphic design for Kenyan businesses. Transparent prices, fast delivery, pay via M-Pesa.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/images/ai-web-development.svg">
+    <!-- TODO: replace with a real 1200×630 PNG — SVG files are not rendered by most social platforms -->
+    <meta property="og:image" content="assets/images/og-preview.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Xclusivetech Services - Nairobi Web Design & SEO">
-    <meta name="twitter:description" content="Premium website design, development, and graphic design services for Nairobi and East Africa.">
-    
+    <meta name="twitter:title" content="Xclusivetech Services — Affordable Web Design Kenya">
+    <meta name="twitter:description" content="Web design, e-commerce, SEO, and digital marketing for Nairobi and Kenya. Transparent KES pricing.">
+    <meta name="twitter:image" content="assets/images/og-preview.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="assets/icons/xclusivetech-favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/icons/xclusivetech-favicon.svg">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-slate-950 text-white overflow-x-hidden">
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800 transition-all duration-300" id="navbar">
+<body class="bg-gray-900 text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-lg border-b border-gray-800 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <a href="index.html" class="flex items-center gap-2">
                     <img src="assets/icons/xclusivetech-header-logo.svg" alt="Xclusivetech logo" class="h-10 w-auto">
                 </a>
-
                 <div class="hidden md:flex gap-8">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="about.html" class="nav-link">About</a>
@@ -36,295 +38,224 @@
                     <a href="portfolio.html" class="nav-link">Portfolio</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                 </div>
-
-                <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I'm%20interested%20in%20your%20services." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 font-medium">
-                    Get Started
-                </a>
-
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-800 transition-colors" aria-label="Toggle menu">
+                <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I%27d%20like%20a%20free%20quote." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-white text-gray-900 hover:bg-gray-100 hover:shadow-lg hover:shadow-white/50 transition-all duration-300 font-medium">Get a Free Quote</a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors" aria-label="Toggle menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-
-            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-slate-800 mt-4">
-                <a href="index.html" class="block py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors">Home</a>
-                <a href="about.html" class="block py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors">About</a>
-                <a href="services.html" class="block py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors">Services</a>
-                <a href="pricing.html" class="block py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors">Pricing</a>
-                <a href="portfolio.html" class="block py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors">Portfolio</a>
-                <a href="contact.html" class="block py-2 px-4 rounded-lg hover:bg-slate-800 transition-colors">Contact</a>
-                    <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I'm%20interested%20in%20your%20services." target="_blank" class="block mt-2 px-6 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 text-center font-medium">Get Started</a>
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-800 mt-4">
+                <a href="index.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Home</a>
+                <a href="about.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">About</a>
+                <a href="services.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Services</a>
+                <a href="pricing.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Pricing</a>
+                <a href="portfolio.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Portfolio</a>
+                <a href="contact.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Contact</a>
+                <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I%27d%20like%20a%20free%20quote." target="_blank" class="block mt-2 px-6 py-2 rounded-lg bg-white text-gray-900 text-center font-medium">Get a Free Quote</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-slate-950 to-blue-900/10 animate-pulse"></div>
-        
-        <div class="max-w-7xl mx-auto relative z-10">
-            <div class="text-center space-y-6 animate-fade-in">
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight">
-                    Our <span class="gradient-text">Services</span>
-                </h1>
-                <p class="text-xl text-slate-400 max-w-3xl mx-auto">
-                    Comprehensive digital solutions tailored to Kenyan brands, Nairobi businesses, and growing teams across East Africa.
-                </p>
-            </div>
+    <!-- Hero -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="max-w-7xl mx-auto text-center space-y-6 animate-fade-in">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight">Web design services <span class="gradient-text">that work for Kenya</span></h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">Practical digital services — web design, e-commerce, SEO, and graphic design — built for Kenyan businesses and priced fairly. No jargon, no hidden costs.</p>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto space-y-24">
+
             <!-- Service 1: Web Design -->
-            <div class="mb-20 grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6 animate-fade-in-up">
+                    <div class="inline-block p-3 rounded-full bg-white/10 text-white">
+                        <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    </div>
                     <h2 class="text-4xl font-bold">Web Design</h2>
-                    <p class="text-slate-400 leading-relaxed">
-                        Beautiful, modern web design that captures your brand essence and engages your audience. We combine aesthetics with functionality to create interfaces that not only look stunning but drive conversions.
-                    </p>
-                    
+                    <p class="text-gray-400 leading-relaxed">A website that looks professional on both a phone and a desktop, loads fast on Kenyan mobile data, and gives visitors a clear reason to contact you. That's what every web design project delivers — no compromises on mobile.</p>
                     <ul class="space-y-3">
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Custom brand-aligned designs</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Responsive, mobile-first approach</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Conversion-focused layouts</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Modern UI components</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Smooth animations & interactions</span>
-                        </li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Mobile-first responsive design</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Fast loading on all connections</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Clear calls-to-action and contact forms</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">WhatsApp button on every page</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Basic on-page SEO included</span></li>
                     </ul>
-
-                    <a href="contact.html" class="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 font-medium">
-                        Get Design Consultation
-                    </a>
+                    <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I%27d%20like%20a%20web%20design%20quote." target="_blank" class="inline-block px-6 py-3 rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium">Get a web design quote</a>
                 </div>
-
-                <div class="relative h-96">
-                    <img src="assets/images/ai-web-design.svg" alt="AI web design preview" class="w-full h-full object-cover rounded-[2rem] shadow-2xl shadow-cyan-500/10">
+                <div class="relative h-72 md:h-96 case-study-placeholder rounded-[2rem]">
+                    <!-- TODO: replace with a real screenshot of a completed web design project -->
+                    <svg aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    <p class="text-sm font-medium mt-2">Web design screenshot<br>coming soon</p>
                 </div>
             </div>
 
             <!-- Service 2: Web Development -->
-            <div class="mb-20 grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative h-96 order-last md:order-first">
-                    <img src="assets/images/ai-web-development.svg" alt="AI web development preview" class="w-full h-full object-cover rounded-[2rem] shadow-2xl shadow-cyan-500/10">
-                </div>
-
-                <div class="space-y-6 animate-fade-in-up">
-                    <h2 class="text-4xl font-bold">Web Development</h2>
-                    <p class="text-slate-400 leading-relaxed">
-                        Robust, scalable web applications built with modern technologies and best practices. We create performance-optimized solutions that handle growth and deliver exceptional user experiences.
-                    </p>
-                    
-                    <ul class="space-y-3">
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Modern tech stack (React, Node, etc.)</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">RESTful APIs & integrations</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Database design & optimization</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Security best practices</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Testing & QA</span>
-                        </li>
-                    </ul>
-
-                    <a href="contact.html" class="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 font-medium">
-                        Start Development Project
-                    </a>
-                </div>
-            </div>
-
-            <!-- Service 3: Graphic Design -->
-            <div class="mb-20 grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6 animate-fade-in-up">
-                    <h2 class="text-4xl font-bold">Graphic Design</h2>
-                    <p class="text-slate-400 leading-relaxed">
-                        High-impact graphic design using Adobe Creative Suite and Canva. From brand identity to marketing visuals, every asset is created to stand out and communicate clearly.
-                    </p>
-                    
-                    <ul class="space-y-3">
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Brand identity, logos, and stationery</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Social media graphics and campaigns</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Print materials, posters, and packaging</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Adobe Illustrator, Photoshop, InDesign</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Canva templates and polished brand assets</span>
-                        </li>
-                    </ul>
-
-                    <a href="contact.html" class="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 font-medium">
-                        Request Design Services
-                    </a>
-                </div>
-
-                <div class="relative h-96">
-                    <img src="assets/images/ai-graphic-design.svg" alt="AI graphic design preview" class="w-full h-full object-cover rounded-[2rem] shadow-2xl shadow-fuchsia-500/10">
-                </div>
-            </div>
-
-            <!-- Service 4: Website Optimization & Maintenance -->
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative h-96 order-last md:order-first">
-                    <img src="assets/images/ai-seo-analytics.svg" alt="AI SEO analytics preview" class="w-full h-full object-cover rounded-[2rem] shadow-2xl shadow-cyan-500/10">
+                <div class="relative h-72 md:h-96 case-study-placeholder rounded-[2rem] order-last md:order-first">
+                    <!-- TODO: replace with a real screenshot of a completed web development project -->
+                    <svg aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    <p class="text-sm font-medium mt-2">Web development screenshot<br>coming soon</p>
                 </div>
-
                 <div class="space-y-6 animate-fade-in-up">
-                    <h2 class="text-4xl font-bold">Website Optimization & Maintenance</h2>
-                    <p class="text-slate-400 leading-relaxed">
-                        Keep your website fast, secure, and up-to-date. We provide ongoing optimization, security monitoring, and maintenance to ensure peak performance and user satisfaction.
-                    </p>
-                    
+                    <div class="inline-block p-3 rounded-full bg-white/10 text-white">
+                        <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h2 class="text-4xl font-bold">Web Development</h2>
+                    <p class="text-gray-400 leading-relaxed">Need something more than a static website? We build web applications, booking systems, customer portals, and custom integrations — all built for reliability and ease of use.</p>
                     <ul class="space-y-3">
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Performance optimization</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Security & SSL certificates</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">SEO optimization</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Regular backups & monitoring</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-cyan-400 font-bold">✓</span>
-                            <span class="text-slate-300">Content & feature updates</span>
-                        </li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Custom web applications</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">API integrations and third-party connections</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Booking, inquiry, and lead capture systems</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Database design and content management</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Security best practices and SSL</span></li>
                     </ul>
-
-                    <a href="contact.html" class="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 font-medium">
-                        Discuss Maintenance Plans
-                    </a>
+                    <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I%27d%20like%20to%20discuss%20a%20web%20development%20project." target="_blank" class="inline-block px-6 py-3 rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium">Discuss your project</a>
                 </div>
             </div>
+
+            <!-- Service 3: E-commerce & M-Pesa -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 animate-fade-in-up">
+                    <div class="inline-block p-3 rounded-full bg-white/10 text-white">
+                        <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    </div>
+                    <h2 class="text-4xl font-bold">E-commerce &amp; M-Pesa Stores</h2>
+                    <p class="text-gray-400 leading-relaxed">Sell online in Kenya without the complexity. We build straightforward online stores with M-Pesa (Daraja API) checkout built in, so your customers can pay the way they prefer — and you start earning.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">M-Pesa STK Push (Daraja API) checkout</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Product catalogue and stock management</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Order and delivery tracking</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Customer accounts and order history</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Mobile-first checkout optimised for Kenyan users</span></li>
+                    </ul>
+                    <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I%27m%20interested%20in%20an%20e-commerce%20website%20with%20M-Pesa." target="_blank" class="inline-block px-6 py-3 rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium">Get an e-commerce quote</a>
+                </div>
+                <div class="relative h-72 md:h-96 case-study-placeholder rounded-[2rem]">
+                    <!-- TODO: replace with a real screenshot of an e-commerce project -->
+                    <svg aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    <p class="text-sm font-medium mt-2">E-commerce screenshot<br>coming soon</p>
+                </div>
+            </div>
+
+            <!-- Service 4: Graphic Design -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative h-72 md:h-96 case-study-placeholder rounded-[2rem] order-last md:order-first">
+                    <!-- TODO: replace with a real graphic design sample -->
+                    <svg aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                    <p class="text-sm font-medium mt-2">Design samples<br>coming soon</p>
+                </div>
+                <div class="space-y-6 animate-fade-in-up">
+                    <div class="inline-block p-3 rounded-full bg-white/10 text-white">
+                        <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M16 11.5l-3.5 3.5L9 11.5 5 16H19l-3-4.5z"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                    </div>
+                    <h2 class="text-4xl font-bold">Graphic Design</h2>
+                    <p class="text-gray-400 leading-relaxed">From logos and brand identity to social media graphics and print materials — consistent visuals that make your business look like it means business, without the design agency price tag.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Logo and brand identity packages</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Social media graphics and templates</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Business cards, letterheads, and stationery</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Posters, banners, and flyers for print</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Delivered via Adobe Illustrator or Canva</span></li>
+                    </ul>
+                    <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I%27m%20interested%20in%20graphic%20design%20services." target="_blank" class="inline-block px-6 py-3 rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium">Get a design quote</a>
+                </div>
+            </div>
+
+            <!-- Service 5: SEO & Digital Marketing -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 animate-fade-in-up">
+                    <div class="inline-block p-3 rounded-full bg-white/10 text-white">
+                        <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <h2 class="text-4xl font-bold">SEO &amp; Website Maintenance</h2>
+                    <p class="text-gray-400 leading-relaxed">Basic SEO comes with every website we build. If you need to go further — local keyword research, Google Business Profile setup, ongoing content — we offer monthly SEO packages. We also keep your site fast, secure, and up to date.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">On-page SEO included in every package</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Local Kenya / Nairobi keyword targeting</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Google Analytics setup and reporting</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Security monitoring and software updates</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-300">Monthly maintenance plans from KES 2,000/mo</span></li>
+                    </ul>
+                    <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I%27d%20like%20to%20know%20more%20about%20SEO%20and%20maintenance." target="_blank" class="inline-block px-6 py-3 rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium">Ask about SEO &amp; maintenance</a>
+                </div>
+                <div class="relative h-72 md:h-96 case-study-placeholder rounded-[2rem]">
+                    <!-- TODO: replace with a real screenshot of an SEO/analytics dashboard -->
+                    <svg aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    <p class="text-sm font-medium mt-2">SEO &amp; analytics screenshot<br>coming soon</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+    <!-- CTA -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
         <div class="max-w-4xl mx-auto text-center space-y-8">
-            <h2 class="text-4xl font-bold">Ready to Get Started?</h2>
-            <p class="text-xl text-slate-300">Let's discuss which services are right for your project</p>
-            <a href="contact.html" class="inline-block px-8 py-4 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 font-medium">
-                Schedule Consultation
-            </a>
+            <h2 class="text-4xl font-bold">Not sure which service you need?</h2>
+            <p class="text-xl text-gray-400">Tell us about your business and what you're trying to achieve. We'll recommend the right service and give you a straight quote.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I%27m%20not%20sure%20which%20service%20I%20need%20-%20can%20you%20help?" target="_blank" class="px-8 py-4 rounded-full bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium">Chat on WhatsApp</a>
+                <a href="pricing.html" class="px-8 py-4 rounded-full border border-white/20 hover:bg-white/10 transition-all duration-300 font-medium">View pricing</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 border-t border-slate-800">
+    <footer class="bg-gray-900 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-10">
                 <div class="space-y-4">
                     <a href="index.html" class="flex items-center gap-2">
                         <img src="assets/icons/xclusivetech-footer-logo.svg" alt="Xclusivetech logo" class="h-10 w-auto">
                     </a>
-                    <p class="text-slate-400">Premium web design and development for modern brands.</p>
+                    <p class="text-gray-400">Professional web design for Kenyan businesses — affordable, fast, M-Pesa accepted.</p>
                 </div>
-
                 <div class="space-y-4">
-                    <h4 class="font-bold">Quick Links</h4>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a></li>
-                        <li><a href="about.html" class="hover:text-cyan-400 transition-colors">About</a></li>
-                        <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Services</a></li>
-                        <li><a href="portfolio.html" class="hover:text-cyan-400 transition-colors">Portfolio</a></li>
+                    <h4 class="font-bold">Quick links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
                     </ul>
                 </div>
-
                 <div class="space-y-4">
                     <h4 class="font-bold">Services</h4>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Web Design</a></li>
-                        <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Web Development</a></li>
-                        <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Graphic Design</a></li>
-                        <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Optimization</a></li>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-white transition-colors">Web Design</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">E-commerce &amp; M-Pesa</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">SEO &amp; Marketing</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Website Maintenance</a></li>
                     </ul>
                 </div>
-
                 <div class="space-y-4">
-                    <h4 class="font-bold">Connect</h4>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-cyan-600 transition-colors flex items-center justify-center" aria-label="Twitter">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-cyan-600 transition-colors flex items-center justify-center" aria-label="LinkedIn">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.002-3.096 1.548 1.548 0 01.002 3.096zm-1.337 9.763h2.669V5.748H3.668v10.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.733 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.4 1 17.668 1z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-cyan-600 transition-colors flex items-center justify-center" aria-label="Instagram">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10.333 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.976 1.409 4.1 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.058 4.042-.124 2.687-1.386 3.975-4.099 4.099-1.055.048-1.37.058-4.042.058-2.67 0-2.986-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zm0-1.802C7.618 0 7.278.012 6.211.06 2.579.227.56 2.242.56 5.877v8.246c0 3.636 2.02 5.651 5.655 5.818 1.067.048 1.407.06 4.178.06 2.771 0 3.111-.012 4.178-.06 3.632-.167 5.65-2.182 5.817-5.817.048-1.067.06-1.407.06-4.178 0-2.771-.012-3.111-.06-4.178-.167-3.632-2.182-5.65-5.817-5.817C13.111.012 12.771 0 10.333 0z"></path>
-                                <path d="M10.333 4.859a5.474 5.474 0 100 10.948 5.474 5.474 0 000-10.948zm0 9.146a3.672 3.672 0 110-7.344 3.672 3.672 0 010 7.344zM15.757 4.64a1.278 1.278 0 11-2.557 0 1.278 1.278 0 012.557 0z"></path>
-                            </svg>
-                        </a>
-                    </div>
+                    <h4 class="font-bold">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="mailto:hello@xclusivetech.co.ke" class="hover:text-white transition-colors">hello@xclusivetech.co.ke</a></li>
+                        <li><a href="tel:+254722753819" class="hover:text-white transition-colors">+254 722 753 819</a></li>
+                        <li><a href="https://www.instagram.com/xclusivetech.co.ke" target="_blank" class="hover:text-white transition-colors">Instagram</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400">
-                <p>&copy; 2026 Xclusivetech. All rights reserved.</p>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+                <p>&copy; 2026 Xclusivetech. All Rights Reserved.</p>
                 <div class="flex gap-4">
-                    <a href="#" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I'd%20like%20to%20discuss%20my%20project%20needs." target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 z-40" title="Chat on WhatsApp">
-        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.025 0-2.031.313-2.891.893L9.9 4.504C10.742 3.74 11.853 3.3 13.05 3.3c2.969 0 5.387 2.418 5.387 5.387 0 1.197-.46 2.307-1.224 3.15l.531 1.465c.592-.689.956-1.586.956-2.615 0-2.206-1.794-4-4-4zm0 0" />
-        </svg>
+    <!-- WhatsApp floating button -->
+    <a href="https://wa.me/254722753819?text=Hi%20Xclusivetech,%20I%27d%20like%20to%20discuss%20my%20project%20needs." target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 z-40" title="Chat on WhatsApp">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-label="Chat on WhatsApp"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.025 0-2.031.313-2.891.893L9.9 4.504C10.742 3.74 11.853 3.3 13.05 3.3c2.969 0 5.387 2.418 5.387 5.387 0 1.197-.46 2.307-1.224 3.15l.531 1.465c.592-.689.956-1.586.956-2.615 0-2.206-1.794-4-4-4zm0 0"/></svg>
     </a>
 
     <script src="js/main.js"></script>

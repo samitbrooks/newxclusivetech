@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "regalscopelogistics",
+    "project": "Regalscope Logistics",
+    "industry": "Logistics & Transport",
+    "challenge": "Needed a credible online presence to compete for corporate freight contracts.",
+    "solution": "Built a professional multi-page site with a services breakdown, coverage areas, and a WhatsApp inquiry flow.",
+    "result": "TODO: owner to supply real metric — e.g. number of new contract inquiries since launch.",
+    "image": "assets/images/case-studies/regalscopelogistics.jpg",
+    "imageAlt": "Regalscope Logistics website screenshot",
+    "url": "https://regalscopelogistics.com/"
+  },
+  {
+    "slug": "smaadvocates",
+    "project": "SMA Advocates",
+    "industry": "Legal Services",
+    "challenge": "Law firm lacked any web presence and relied entirely on in-person referrals.",
+    "solution": "Designed a professional legal site with practice areas, team profiles, and a client inquiry form.",
+    "result": "TODO: owner to supply real metric — e.g. number of online inquiries in first month.",
+    "image": "assets/images/case-studies/smaadvocates.jpg",
+    "imageAlt": "SMA Advocates law firm website screenshot",
+    "url": "https://smaadvocates.com/"
+  },
+  {
+    "slug": "sagebeans",
+    "project": "Sage Beans",
+    "industry": "Coffee & Retail",
+    "challenge": "Coffee brand needed a website that matched their product quality and could drive online orders.",
+    "solution": "Launched a product-led site with brand storytelling, menu display, and a simple order/contact flow.",
+    "result": "TODO: owner to supply real metric — e.g. increase in online orders or walk-in inquiries.",
+    "image": "assets/images/case-studies/sagebeans.jpg",
+    "imageAlt": "Sage Beans coffee brand website screenshot",
+    "url": "https://sagebeans.co.ke/"
+  },
+  {
+    "slug": "oncolink",
+    "project": "Oncolink Kenya",
+    "industry": "Healthcare",
+    "challenge": "Healthcare provider needed a patient-friendly site with clear navigation to services and appointment booking.",
+    "solution": "Built an accessible healthcare site with services listed clearly and a simple appointment request flow.",
+    "result": "TODO: owner to supply real metric — e.g. number of appointment requests since launch.",
+    "image": "assets/images/case-studies/oncolink.jpg",
+    "imageAlt": "Oncolink Kenya healthcare portal screenshot",
+    "url": "https://oncolink.co.ke/"
+  }
+]
