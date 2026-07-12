@@ -1,4 +1,4 @@
-# Xclusivetech Website robots.txt
+# Xclusive Tech Website robots.txt
 # Directives for search engine crawlers
 
 User-agent: *

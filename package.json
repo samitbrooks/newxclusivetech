@@ -1,7 +1,7 @@
 {
   "name": "xclusivetech-website",
   "version": "1.0.0",
-  "description": "Premium web design and development brand website for Xclusivetech",
+  "description": "Premium web design and development brand website for Xclusive Tech",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 8000 || npx http-server",
@@ -16,7 +16,7 @@
     "Kenya",
     "tech agency"
   ],
-  "author": "Xclusivetech",
+  "author": "Xclusive Tech",
   "license": "Proprietary",
   "repository": {
     "type": "git",
