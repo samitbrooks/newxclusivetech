@@ -1,14 +1,14 @@
 [
   {
-    "slug": "regalscopelogistics",
-    "project": "Regalscope Logistics",
-    "industry": "Logistics & Transport",
-    "challenge": "Needed a credible online presence to compete for corporate freight contracts.",
-    "solution": "Built a professional multi-page site with a services breakdown, coverage areas, and a WhatsApp inquiry flow.",
-    "result": "TODO: owner to supply real metric — e.g. number of new contract inquiries since launch.",
-    "image": "assets/images/case-studies/regalscopelogistics.jpg",
-    "imageAlt": "Regalscope Logistics website screenshot",
-    "url": "https://regalscopelogistics.com/"
+    "slug": "irenemuendoisuzu",
+    "project": "Irene Muendo Isuzu",
+    "industry": "Automotive",
+    "challenge": "Isuzu dealership needed a professional online presence to showcase their vehicle range and drive showroom visits.",
+    "solution": "Built a site with model listings, financing info, and a WhatsApp inquiry button.",
+    "result": "TODO: owner to supply real metric — e.g. number of showroom visits or inquiries since launch.",
+    "image": "assets/images/case-studies/irene-muendo-isuzu.png",
+    "imageAlt": "Irene Muendo Isuzu website — Isuzu truck and vehicle dealership in Kenya",
+    "url": "https://irenemuendoisuzu.co.ke/"
   },
   {
     "slug": "smaadvocates",
@@ -17,19 +17,19 @@
     "challenge": "Law firm lacked any web presence and relied entirely on in-person referrals.",
     "solution": "Designed a professional legal site with practice areas, team profiles, and a client inquiry form.",
     "result": "TODO: owner to supply real metric — e.g. number of online inquiries in first month.",
-    "image": "assets/images/case-studies/smaadvocates.jpg",
-    "imageAlt": "SMA Advocates law firm website screenshot",
+    "image": "assets/images/case-studies/sma-advocates.png",
+    "imageAlt": "SMA Advocates website — Nairobi law firm",
     "url": "https://smaadvocates.com/"
   },
   {
     "slug": "sagebeans",
-    "project": "Sage Beans",
-    "industry": "Coffee & Retail",
-    "challenge": "Coffee brand needed a website that matched their product quality and could drive online orders.",
-    "solution": "Launched a product-led site with brand storytelling, menu display, and a simple order/contact flow.",
-    "result": "TODO: owner to supply real metric — e.g. increase in online orders or walk-in inquiries.",
-    "image": "assets/images/case-studies/sagebeans.jpg",
-    "imageAlt": "Sage Beans coffee brand website screenshot",
+    "project": "Sage Beans Export",
+    "industry": "Agri-Export",
+    "challenge": "Yellow bean agricultural exporter needed a site that could attract international buyers and showcase their Kajiado farming operation.",
+    "solution": "Built a product-led site with product detail pages, export quality standards, and a global partnership inquiry flow.",
+    "result": "TODO: owner to supply real metric — e.g. increase in export inquiries.",
+    "image": "assets/images/case-studies/sage-beans.png",
+    "imageAlt": "Sage Beans Export website — yellow bean agricultural exporter, Kajiado Kenya",
     "url": "https://sagebeans.co.ke/"
   },
   {
@@ -39,8 +39,8 @@
     "challenge": "Healthcare provider needed a patient-friendly site with clear navigation to services and appointment booking.",
     "solution": "Built an accessible healthcare site with services listed clearly and a simple appointment request flow.",
     "result": "TODO: owner to supply real metric — e.g. number of appointment requests since launch.",
-    "image": "assets/images/case-studies/oncolink.jpg",
-    "imageAlt": "Oncolink Kenya healthcare portal screenshot",
+    "image": "assets/images/case-studies/oncolink-kenya.png",
+    "imageAlt": "OncoLink Africa website — oncology professionals platform",
     "url": "https://oncolink.co.ke/"
   }
 ]
