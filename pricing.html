@@ -100,7 +100,19 @@
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="services.html" class="nav-link">Services</a>
-                    <a href="web-design-thika-kiambu.html" class="nav-link">Thika &amp; Kiambu</a>
+                    <div class="relative group">
+                        <button type="button" class="nav-link bg-transparent cursor-pointer flex items-center gap-1">
+                            Solutions
+                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
+                            <div class="bg-gray-800 border border-gray-700 rounded-xl shadow-2xl py-2 w-60">
+                                <a href="solutions.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">Solutions by Business Type</a>
+                                <a href="solutions.html#industries" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">Industries We Serve</a>
+                                <a href="solutions.html#saas" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">SaaS &amp; Custom Platforms</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="pricing.html" class="nav-link active">Pricing</a>
                     <a href="portfolio.html" class="nav-link">Portfolio</a>
                     <a href="contact.html" class="nav-link">Contact</a>
@@ -116,7 +128,17 @@
                 <a href="index.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Home</a>
                 <a href="about.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">About</a>
                 <a href="services.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Services</a>
-                <a href="web-design-thika-kiambu.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Thika &amp; Kiambu</a>
+                <details>
+                    <summary class="flex justify-between items-center py-2 px-4 rounded-lg hover:bg-gray-800 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                        <span>Solutions</span>
+                        <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="pl-4 space-y-1 pb-2">
+                        <a href="solutions.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800 text-sm text-gray-300">Solutions by Business Type</a>
+                        <a href="solutions.html#industries" class="block py-2 px-4 rounded-lg hover:bg-gray-800 text-sm text-gray-300">Industries We Serve</a>
+                        <a href="solutions.html#saas" class="block py-2 px-4 rounded-lg hover:bg-gray-800 text-sm text-gray-300">SaaS &amp; Custom Platforms</a>
+                    </div>
+                </details>
                 <a href="pricing.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Pricing</a>
                 <a href="portfolio.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Portfolio</a>
                 <a href="contact.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Contact</a>
@@ -218,7 +240,7 @@
                 </div>
 
                 <!-- Custom Solutions -->
-                <div class="group relative animate-fade-in-up" style="animation-delay: 0.4s">
+                <div id="custom-solutions" class="group relative animate-fade-in-up scroll-mt-24" style="animation-delay: 0.4s">
                     <div class="glassmorphism-card p-8 rounded-2xl border border-white/10 h-full flex flex-col hover:border-white/30 transition-all duration-300">
                         <div class="mb-6">
                             <p class="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-1">Custom Solutions</p>
@@ -337,6 +359,8 @@
                         <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
                         <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
                         <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Solutions</a></li>
+                        <li><a href="web-design-thika-kiambu.html" class="hover:text-white transition-colors">Thika &amp; Kiambu</a></li>
                     </ul>
                 </div>
                 <div class="space-y-4">
