@@ -59,7 +59,7 @@
             '  <button type="button" class="xt-offer-close" aria-label="Close">&times;</button>' +
             '  <span class="xt-offer-badge">Limited Launch Offer</span>' +
             '  <h2 class="xt-offer-title">A website for just <span class="xt-offer-price">KES 20,000</span></h2>' +
-            '  <p class="xt-offer-desc">A single-page website — mobile-first, WhatsApp contact button, basic SEO, delivered in ~1&ndash;2 weeks.</p>' +
+            '  <p class="xt-offer-desc">A single-page website — mobile-first, WhatsApp contact button, basic SEO, delivered in 3 days.</p>' +
             '  <p class="xt-offer-note">Limited to our first 10 new clients on this offer.</p>' +
             '  <a class="xt-offer-cta" target="_blank" href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech%2C%20I%27d%20like%20to%20claim%20the%20KES%2020%2C000%20launch%20offer%20for%20a%20single-page%20website.">Claim This Offer on WhatsApp</a>' +
             '</div>';
