@@ -119,4 +119,148 @@
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
+
+    <!-- Blog: why-churches-and-ministries-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-churches-and-ministries-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-ngos-and-nonprofits-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-ngos-and-nonprofits-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-law-firms-need-a-professional-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-law-firms-need-a-professional-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-clinics-and-healthcare-providers-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-clinics-and-healthcare-providers-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-schools-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-schools-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-hotels-and-hospitality-businesses-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-hotels-and-hospitality-businesses-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-restaurants-and-cafes-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-restaurants-and-cafes-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-startups-need-a-professional-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-startups-need-a-professional-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-ecommerce-and-retail-businesses-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-ecommerce-and-retail-businesses-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-beauty-salons-and-spas-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-beauty-salons-and-spas-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-gyms-and-fitness-studios-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-gyms-and-fitness-studios-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-event-planners-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-event-planners-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-agriculture-and-agribusiness-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-agriculture-and-agribusiness-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-consultants-need-a-professional-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-consultants-need-a-professional-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-financial-services-and-fintech-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-financial-services-and-fintech-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-fashion-and-apparel-brands-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-fashion-and-apparel-brands-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-cosmetics-and-beauty-brands-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-cosmetics-and-beauty-brands-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: why-food-and-beverage-brands-need-a-website -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-food-and-beverage-brands-need-a-website.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>

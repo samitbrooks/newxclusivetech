@@ -2,6 +2,132 @@
   "_comment": "Audit trail of every published post. The generator scans this to find the next un-covered industry from site-facts.json's industriesServed list (matched by the 'topic' field on type=industry posts) and to decide original-vs-roundup rotation.",
   "posts": [
     {
+      "slug": "why-food-and-beverage-brands-need-a-website",
+      "title": "Why Food &amp; Beverage Brands in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Food & Beverage Brands"
+    },
+    {
+      "slug": "why-cosmetics-and-beauty-brands-need-a-website",
+      "title": "Why Cosmetics &amp; Beauty Brands in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Cosmetics & Beauty Brands"
+    },
+    {
+      "slug": "why-fashion-and-apparel-brands-need-a-website",
+      "title": "Why Fashion &amp; Apparel Brands in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Fashion & Apparel"
+    },
+    {
+      "slug": "why-financial-services-and-fintech-need-a-website",
+      "title": "Why Financial Services &amp; Fintech Businesses in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Financial Services & Fintech"
+    },
+    {
+      "slug": "why-consultants-need-a-professional-website",
+      "title": "Why Consultants &amp; Professional Services Need a Website in Kenya",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Consultants & Professional Services"
+    },
+    {
+      "slug": "why-agriculture-and-agribusiness-need-a-website",
+      "title": "Why Agriculture &amp; Agribusiness Companies in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Agriculture & Agribusiness"
+    },
+    {
+      "slug": "why-event-planners-need-a-website",
+      "title": "Why Event Planners &amp; Entertainment Businesses in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Event Planners & Entertainment"
+    },
+    {
+      "slug": "why-gyms-and-fitness-studios-need-a-website",
+      "title": "Why Gyms &amp; Fitness Studios in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Gyms & Fitness Studios"
+    },
+    {
+      "slug": "why-beauty-salons-and-spas-need-a-website",
+      "title": "Why Beauty Salons &amp; Spas in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Beauty Salons & Spas"
+    },
+    {
+      "slug": "why-ecommerce-and-retail-businesses-need-a-website",
+      "title": "Why E-commerce &amp; Retail Businesses in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "E-commerce & Retail"
+    },
+    {
+      "slug": "why-startups-need-a-professional-website",
+      "title": "Why Startups in Kenya Need a Professional Website From Day One",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Startups"
+    },
+    {
+      "slug": "why-restaurants-and-cafes-need-a-website",
+      "title": "Why Restaurants &amp; Cafes in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Restaurants & Cafes"
+    },
+    {
+      "slug": "why-hotels-and-hospitality-businesses-need-a-website",
+      "title": "Why Hotels &amp; Hospitality Businesses in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Hotels & Hospitality"
+    },
+    {
+      "slug": "why-schools-need-a-website",
+      "title": "Why Schools &amp; Education Providers in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Schools & Education"
+    },
+    {
+      "slug": "why-clinics-and-healthcare-providers-need-a-website",
+      "title": "Why Clinics &amp; Healthcare Providers in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Clinics & Healthcare"
+    },
+    {
+      "slug": "why-law-firms-need-a-professional-website",
+      "title": "Why Law Firms in Kenya Need a Professional Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Law Firms"
+    },
+    {
+      "slug": "why-ngos-and-nonprofits-need-a-website",
+      "title": "Why NGOs &amp; Non-Profits in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "NGOs & Non-Profits"
+    },
+    {
+      "slug": "why-churches-and-ministries-need-a-website",
+      "title": "Why Churches &amp; Ministries in Kenya Need a Website",
+      "date": "2026-07-20",
+      "type": "industry",
+      "topic": "Churches & Ministries"
+    },
+    {
       "slug": "geo-and-aeo-explained-getting-found-by-ai",
       "title": "GEO & AEO Explained: How to Get Found by ChatGPT, Gemini and Claude",
       "date": "2026-02-02",
