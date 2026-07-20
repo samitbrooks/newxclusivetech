@@ -96,8 +96,63 @@
     {
       "name": "SaaS & Custom Platforms",
       "description": "Bespoke web applications, booking and reservation systems, marketplaces, and custom integrations for businesses that have outgrown a standard website."
+    },
+    {
+      "name": "Social Media Management",
+      "description": "Monthly social media management packages so businesses can grow their brand with consistent, professional content, without hiring an in-house team. Covers Facebook, Instagram and TikTok content, reels/short videos, story posts, promotional graphics, and monthly reporting."
     }
   ],
+  "socialMediaManagement": {
+    "currency": "KES",
+    "tagline": "Grow your brand with consistent, professional content.",
+    "packages": [
+      {
+        "name": "Starter",
+        "price": "KES 12,000/month",
+        "includes": [
+          "8 social media posts",
+          "2 reels / short videos",
+          "Facebook & Instagram management",
+          "Basic caption writing",
+          "Monthly content calendar",
+          "Brand consultation"
+        ]
+      },
+      {
+        "name": "Business",
+        "price": "KES 18,000/month",
+        "mostPopular": true,
+        "includes": [
+          "12 social media posts",
+          "4 reels / short videos",
+          "Facebook, Instagram & TikTok management",
+          "Story posts",
+          "Promotional graphics",
+          "Monthly performance report",
+          "Brand consultation"
+        ]
+      },
+      {
+        "name": "Premium",
+        "price": "KES 25,000/month",
+        "includes": [
+          "16 social media posts",
+          "6 reels / short videos",
+          "Multi-platform management",
+          "Story designs",
+          "Promotional campaign graphics",
+          "Website banners",
+          "Monthly analytics report",
+          "Priority support"
+        ]
+      }
+    ],
+    "individualDesigns": {
+      "name": "Individual designs",
+      "price": "KES 500 per design",
+      "description": "Professional social media graphics for businesses that just need occasional designs, not a full monthly package."
+    }
+  },
   "industriesServed": [
     "Churches & Ministries", "NGOs & Non-Profits", "Law Firms", "Clinics & Healthcare",
     "Schools & Education", "Hotels & Hospitality", "Restaurants & Cafes", "Real Estate",

@@ -2,6 +2,13 @@
   "_comment": "Audit trail of every published post. The generator scans this to find the next un-covered industry from site-facts.json's industriesServed list (matched by the 'topic' field on type=industry posts) and to decide original-vs-roundup rotation.",
   "posts": [
     {
+      "slug": "how-much-does-social-media-management-cost-in-kenya",
+      "title": "How Much Does Social Media Management Cost in Kenya?",
+      "date": "2026-07-20",
+      "type": "original",
+      "topic": "social media management pricing in Kenya"
+    },
+    {
       "slug": "why-food-and-beverage-brands-need-a-website",
       "title": "Why Food &amp; Beverage Brands in Kenya Need a Website",
       "date": "2026-07-20",
