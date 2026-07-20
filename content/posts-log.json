@@ -1,0 +1,34 @@
+{
+  "_comment": "Audit trail of every published post. The generator scans this to find the next un-covered industry from site-facts.json's industriesServed list (matched by the 'topic' field on type=industry posts) and to decide original-vs-roundup rotation.",
+  "posts": [
+    {
+      "slug": "geo-and-aeo-explained-getting-found-by-ai",
+      "title": "GEO & AEO Explained: How to Get Found by ChatGPT, Gemini and Claude",
+      "date": "2026-02-02",
+      "type": "original",
+      "topic": "GEO/AEO explainer"
+    },
+    {
+      "slug": "how-much-does-a-website-cost-in-kenya",
+      "title": "How Much Does a Website Cost in Kenya?",
+      "date": "2026-02-02",
+      "type": "original",
+      "topic": "website pricing in Kenya"
+    },
+    {
+      "slug": "why-logistics-transport-companies-need-a-website",
+      "title": "Why Logistics & Transport Companies in Kenya Need a Professional Website",
+      "date": "2026-02-02",
+      "type": "industry",
+      "topic": "Logistics & Transport",
+      "referencedPortfolio": "Irene Muendo Isuzu"
+    },
+    {
+      "slug": "why-real-estate-businesses-need-a-website",
+      "title": "Why Real Estate Businesses in Thika & Kiambu Need a Website",
+      "date": "2026-02-02",
+      "type": "industry",
+      "topic": "Real Estate"
+    }
+  ]
+}

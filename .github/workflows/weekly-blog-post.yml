@@ -1,0 +1,50 @@
+name: Weekly Blog Post
+
+on:
+  schedule:
+    # Monday 06:00 UTC ≈ 09:00 Kenya time (EAT, UTC+3)
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate this week's blog post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-post.mjs
+
+      - name: Sanity build check on the new post
+        run: node scripts/check-post.mjs
+
+      - name: Configure git identity
+        run: |
+          git config user.name "xclusivetech-bot"
+          git config user.email "bot@xclusivetech.co.ke"
+
+      - name: Commit and push
+        run: |
+          git add blog/ content/posts-log.json sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit — generation may have failed silently upstream. Exiting without pushing."
+            exit 1
+          fi
+          git commit -m "Auto-publish weekly blog post [skip ci]"
+          git push origin master

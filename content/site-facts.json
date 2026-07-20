@@ -1,0 +1,149 @@
+{
+  "_comment": "This is the ONLY source of truth for blog content generation. The generation script must not invent facts, statistics, testimonials, or claims that are not present here or explicitly supplied by the owner. Add real facts (metrics, anecdotes, new projects) here as they become available.",
+  "company": {
+    "name": "Xclusive Tech",
+    "founded": "2020",
+    "tagline": "The most affordable, reliable web designer in Kiambu — fast, affordable, built to get you found.",
+    "positioning": "Affordable, transparent web design and development company for Kenyan small and growing businesses.",
+    "primaryServiceArea": ["Thika", "Kiambu County", "Ruiru", "Juja", "Gatundu", "Githunguri", "Limuru", "Kikuyu"],
+    "secondaryServiceArea": ["Nairobi", "Kenya-wide"],
+    "website": "https://xclusivetech.co.ke",
+    "email": "hello@xclusivetech.co.ke",
+    "phone": "+254 722 753 819",
+    "whatsapp": "https://wa.me/254722753819",
+    "officeAddress": "1st Floor, Suite F8, Wood Ave, Park Apartments, Nairobi",
+    "googleBusinessProfile": "https://share.google/nOqYIkKFu0ynASqVK",
+    "instagram": "https://www.instagram.com/xclusivetech.co.ke",
+    "facebook": "https://www.facebook.com/share/1CcjjbidRp/",
+    "trackRecord": "34+ live websites delivered for real businesses across Kenya",
+    "differentiators": [
+      "Transparent, published pricing with no hidden costs",
+      "Fast delivery, typically 2-4 weeks from kick-off to launch",
+      "Mobile-first design",
+      "Direct, reachable support on WhatsApp, not a ticketing queue",
+      "M-Pesa payments accepted throughout, including domain registration"
+    ]
+  },
+  "pricing": {
+    "currency": "KES",
+    "launchOffer": {
+      "name": "Limited Launch Offer",
+      "price": "KES 20,000",
+      "scope": "A single-page website - mobile-first, WhatsApp contact button, basic on-page SEO",
+      "delivery": "1-2 weeks",
+      "limit": "Limited to the first 10 new clients on this offer"
+    },
+    "packages": [
+      {
+        "name": "Starter Site",
+        "price": "KES 31,500-45,500",
+        "scope": "Up to 5 pages, custom UI/UX, mobile-first, basic on-page SEO, contact form + WhatsApp integration, 1 month free support",
+        "delivery": "2-3 weeks",
+        "fits": "Company profiles, logistics & transport, professional services, consultancies, single-location businesses"
+      },
+      {
+        "name": "Business Growth",
+        "price": "KES 49,000-62,000",
+        "scope": "Up to 15 pages, everything in Starter, CMS for blog/news, advanced SEO + Google Analytics, social media integration, 3 months free support",
+        "delivery": "3-5 weeks",
+        "fits": "Multi-service companies, real estate & property listings, businesses that publish news/updates, catalogs without online checkout"
+      },
+      {
+        "name": "E-commerce Pro",
+        "price": "KES 72,000-85,000",
+        "scope": "Unlimited products, everything in Business Growth, secure M-Pesa (Daraja API) checkout, inventory management, customer accounts, 6 months priority support",
+        "delivery": "5-7 weeks",
+        "fits": "Retail shops, dropshipping, online stores, any business that needs real online checkout and inventory"
+      },
+      {
+        "name": "Custom Solutions",
+        "price": "From KES 85,000+",
+        "scope": "Custom feature development, advanced API integrations, scalable architecture, dedicated project manager, ongoing maintenance & SLA, full ownership of code",
+        "delivery": "Scoped per project",
+        "fits": "Marketplaces, booking & reservation systems, custom web apps, businesses needing integrations beyond a standard website"
+      }
+    ],
+    "carePlan": "Ongoing maintenance from KES 2,000/month, covers 4 hours of support and updates per month",
+    "domainRegistration": {
+      "tlds": [
+        { "tld": ".co.ke", "price": "From KES 1,500/yr" },
+        { "tld": ".com", "price": "From KES 1,800/yr" },
+        { "tld": ".org", "price": "From KES 2,000/yr" },
+        { "tld": ".ke", "price": "From KES 2,500/yr" },
+        { "tld": ".africa", "price": "From KES 2,500/yr" },
+        { "tld": ".io", "price": "From KES 6,500/yr" }
+      ],
+      "features": ["M-Pesa STK push payment", "Free WHOIS privacy", "Self-service DNS management", "Auto-renewal reminders"]
+    }
+  },
+  "services": [
+    {
+      "name": "Web Design & Development",
+      "description": "Mobile-first, professionally designed websites, from a focused brochure site to a larger multi-page platform, built around what the business actually needs to do."
+    },
+    {
+      "name": "E-commerce & M-Pesa Stores",
+      "description": "Full online stores with M-Pesa (Daraja API) checkout built in, product management, and inventory, so businesses can sell to customers who'll never walk into a shop."
+    },
+    {
+      "name": "SEO, GEO & AEO",
+      "description": "Basic on-page SEO comes with every website. Also builds in GEO (Generative Engine Optimisation) and AEO (Answer Engine Optimisation): structured data and FAQ schema that help a business get recommended by AI assistants like ChatGPT, Gemini and Claude, not just found on Google."
+    },
+    {
+      "name": "Domain Registration",
+      "description": "Registers .co.ke, .com, .org, .ke, .africa and .io domains directly, from KES 1,500/year, with free WHOIS privacy and self-service DNS management. Pay via M-Pesa."
+    },
+    {
+      "name": "SaaS & Custom Platforms",
+      "description": "Bespoke web applications, booking and reservation systems, marketplaces, and custom integrations for businesses that have outgrown a standard website."
+    }
+  ],
+  "industriesServed": [
+    "Churches & Ministries", "NGOs & Non-Profits", "Law Firms", "Clinics & Healthcare",
+    "Schools & Education", "Hotels & Hospitality", "Restaurants & Cafes", "Real Estate",
+    "Startups", "E-commerce & Retail", "Beauty Salons & Spas", "Gyms & Fitness Studios",
+    "Logistics & Transport", "Event Planners & Entertainment", "Agriculture & Agribusiness",
+    "Consultants & Professional Services", "Financial Services & Fintech", "Fashion & Apparel",
+    "Cosmetics & Beauty Brands", "Food & Beverage Brands"
+  ],
+  "portfolio": [
+    {
+      "name": "Irene Muendo Isuzu",
+      "industry": "Automotive / Logistics",
+      "url": "https://irenemuendoisuzu.co.ke/",
+      "challenge": "An Isuzu dealership with no online presence, relying entirely on showroom walk-ins.",
+      "whatWeBuilt": "A model listings site with financing info and a WhatsApp inquiry button on every vehicle page.",
+      "result": "A professional site the dealership can now point buyers to before they ever visit the showroom."
+    },
+    {
+      "name": "SMA Advocates",
+      "industry": "Law Firms",
+      "url": "https://smaadvocates.com/",
+      "challenge": "A law firm winning clients only through in-person referrals, with no way to be found online.",
+      "whatWeBuilt": "A professional site with practice areas, attorney bios, and an online inquiry form.",
+      "result": "A credible online presence that lets prospective clients research the firm before they call."
+    },
+    {
+      "name": "Sage Beans Export",
+      "industry": "Agriculture & Agribusiness",
+      "url": "https://sagebeans.co.ke/",
+      "challenge": "A yellow bean exporter needing to reach international buyers who'd never heard of their Kajiado operation.",
+      "whatWeBuilt": "Product detail pages, export quality standards, and a global partnership inquiry flow.",
+      "result": "A site that reads as export-ready to buyers evaluating suppliers from outside Kenya."
+    },
+    {
+      "name": "Oncolink Kenya",
+      "industry": "Clinics & Healthcare",
+      "url": "https://oncolink.co.ke/",
+      "challenge": "An oncology platform needing to be approachable to patients, not just professionals.",
+      "whatWeBuilt": "A patient-friendly portal with clear service navigation and an appointment request flow.",
+      "result": "A site built for accessibility and ease of use on mobile, where most patients actually browse."
+    }
+  ],
+  "geoFaq": [
+    "Websites start from a KES 20,000 limited launch offer (single page), with full packages from KES 31,500.",
+    "Primary focus is Thika town and Kiambu County, also serving Nairobi and businesses across Kenya.",
+    "All packages can be paid via M-Pesa.",
+    "Typical delivery is 2-3 weeks for a Starter Site."
+  ]
+}
