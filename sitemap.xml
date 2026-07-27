@@ -16,14 +16,6 @@
         <priority>1.0</priority>
     </url>
 
-    <!-- Thika & Kiambu Page -->
-    <url>
-        <loc>https://www.xclusivetech.co.ke/web-design-thika-kiambu.html</loc>
-        <lastmod>2026-07-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
     <!-- Blog Index -->
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/</loc>
