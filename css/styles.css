@@ -626,6 +626,15 @@ input:focus, textarea:focus, select:focus {
     counter-reset: counter 0;
 }
 
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
 /* Case study image placeholder — replace with real screenshot */
 .case-study-placeholder {
     background: rgba(255, 255, 255, 0.03);

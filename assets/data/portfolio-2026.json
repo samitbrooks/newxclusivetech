@@ -1,0 +1,123 @@
+{
+  "_comment": "Source of truth for the 2026 Portfolio Showcase (portfolio.html + PDF deck). Each project must be a real, live Xclusive Tech client website.",
+  "industries": [
+    {
+      "key": "travel-tourism-transport",
+      "name": "Travel, Tourism & Transport",
+      "description": "Booking-ready sites for yacht charters, safari operators, taxi fleets and travel agencies built to convert browsers into bookings.",
+      "projects": [
+        { "slug": "santoriniqueen", "name": "Santorini Queen", "description": "Luxury Travel & Yacht Charters", "url": "https://santoriniqueen.com" },
+        { "slug": "dianielitetaxi", "name": "Diani Elite Taxi", "description": "Transport & Airport Transfer Services", "url": "https://dianielitetaxi.co.ke" },
+        { "slug": "traininkenya", "name": "Train In Kenya Ventures", "description": "Sports Tourism & Elite Training", "url": "https://traininkenya.co.ke" },
+        { "slug": "kakytravel", "name": "Kaky Travel", "description": "East Africa Travel Agency", "url": "https://kakytravel.com" },
+        { "slug": "pomperadventures", "name": "Pomper Adventures", "description": "Adventure Tour Operator", "url": "https://pomperadventures.com" }
+      ]
+    },
+    {
+      "key": "real-estate-property",
+      "name": "Real Estate & Property",
+      "description": "Listing-driven sites for developers, brokerages and property managers designed to showcase inventory and capture serious leads.",
+      "projects": [
+        { "slug": "sherranehomes", "name": "Sherrane Homes", "description": "Real Estate Development", "url": "https://sherranehomes.co.ke" },
+        { "slug": "difrontealmare", "name": "Di Fronte Al Mare", "description": "Luxury Property Sales", "url": "https://difrontealmare.com" },
+        { "slug": "smartsolutionsrealtors", "name": "Smart Solutions Realtors", "description": "Real Estate Brokerage", "url": "https://smartsolutionsrealtors.com" },
+        { "slug": "hometime", "name": "Hometime Investments", "description": "Coastal Real Estate & Airbnb", "url": "https://hometime.co.ke" }
+      ]
+    },
+    {
+      "key": "professional-business-services",
+      "name": "Professional & Business Services",
+      "description": "Credibility-first sites for law firms, engineering consultancies and procurement specialists that win trust before the first call.",
+      "projects": [
+        { "slug": "transformationarkhub", "name": "Transformation Ark Hub", "description": "Leadership Coaching & Training", "url": "https://transformationarkhub.co.ke" },
+        { "slug": "luswetinabutola", "name": "Lusweti & Nabutola Advocates", "description": "Corporate Law Firm", "url": "https://luswetinabutola.com" },
+        { "slug": "smaadvocates", "name": "Siema Majani & Associates Advocates", "description": "Legal Services", "url": "https://smaadvocates.com" },
+        { "slug": "electronengineers", "name": "Electron Engineers", "description": "Electro-Mechanical Consultancy", "url": "https://electronengineers.com" },
+        { "slug": "dealforge", "name": "Dealforge", "description": "Procurement & General Supplies", "url": "https://dealforge.org" },
+        { "slug": "mileselectromech", "name": "Miles Electro-Mech", "description": "Engineering & Construction Solutions", "url": "https://mileselectromech.co.ke" }
+      ]
+    },
+    {
+      "key": "healthcare-wellness-medical-education",
+      "name": "Healthcare, Wellness & Medical Education",
+      "description": "Patient- and student-friendly platforms for clinics, medical schools and therapy practices, built for clarity and easy appointment booking.",
+      "projects": [
+        { "slug": "gluksdbs", "name": "GLUK School of Dentistry & Biomedical Sciences", "description": "Medical Education", "url": "https://gluksdbs.org" },
+        { "slug": "opsok", "name": "OPSOK", "description": "Healthcare Society", "url": "https://opsok.org" },
+        { "slug": "oncolink", "name": "Oncolink", "description": "Cancer Resource Platform", "url": "https://oncolink.co.ke" },
+        { "slug": "purymaxtherapy", "name": "Purymax Exercise Therapy", "description": "Physical Therapy & Sports Rehabilitation", "url": "https://purymaxtherapy.com" }
+      ]
+    },
+    {
+      "key": "retail-fashion-consumer-brands",
+      "name": "Retail, Fashion & Consumer Brands",
+      "description": "Conversion-focused storefronts for fashion, beauty and lifestyle brands, engineered to look premium and sell effortlessly on mobile.",
+      "projects": [
+        { "slug": "vapecollectivekenya", "name": "Vape Collective Kenya", "description": "Lifestyle eCommerce", "url": "https://vapecollectivekenya.com" },
+        { "slug": "kishkidsbabyshop", "name": "KishKids Baby Shop", "description": "Baby Store", "url": "https://kishkidsbabyshop.co.ke" },
+        { "slug": "beautybites", "name": "Beauty Bites", "description": "Beauty & Skincare Store", "url": "https://beautybites.co.ke" },
+        { "slug": "jumphouse", "name": "The JumpHouse", "description": "Kids Entertainment", "url": "https://jumphouse.co.ke" },
+        { "slug": "belioras", "name": "Belioras Luxe", "description": "Luxury Fashion", "url": "https://belioras.com" },
+        { "slug": "malukibespoke", "name": "Maluki Bespoke", "description": "Luxury Tailoring", "url": "https://malukibespoke.com" },
+        { "slug": "batteriq", "name": "Batteriq", "description": "Portable Power Solutions", "url": "https://batteriq.com" },
+        { "slug": "onzetrends", "name": "Onzetrends", "description": "Fashion Store", "url": "https://onzetrends.co.ke" },
+        { "slug": "born2fro", "name": "Born2Fro", "description": "Natural Hair Care", "url": "https://born2fro.com" }
+      ]
+    },
+    {
+      "key": "finance-investment-fintech",
+      "name": "Finance, Investment & FinTech",
+      "description": "Trust-engineered platforms for investment firms, SACCOs and trading mentorships where credibility and security have to show on page one.",
+      "projects": [
+        { "slug": "astrosmining", "name": "Astros Mining (AsMiCo)", "description": "Mining & Mineral Trade", "url": "https://astrosmining.com" },
+        { "slug": "elitecapitalfx", "name": "Elite Capital FX", "description": "Cryptocurrency Investment Platform", "url": "https://elitecapital-mining.com" },
+        { "slug": "visionarypharmacists", "name": "Visionary Pharmacists", "description": "Financial Cooperative (Chama/SACCO)", "url": "https://visionaries.co.ke" },
+        { "slug": "highyields", "name": "High Yields", "description": "Investment & Wealth Management", "url": "https://highyields.org" }
+      ]
+    },
+    {
+      "key": "ngos-development-community",
+      "name": "NGOs, Development & Community",
+      "description": "Mission-driven sites for NGOs, faith-based organizations and alumni networks that communicate impact and make giving or joining simple.",
+      "projects": [
+        { "slug": "ghsd", "name": "Global Health and Sustainable Development (GHSD)", "description": "Global Health NGO", "url": "https://globalhealthandsustainabledevelopment.com" },
+        { "slug": "suhad", "name": "SUHAD", "description": "Humanitarian NGO", "url": "https://suhadsom.org" },
+        { "slug": "stalwartskhs2017", "name": "Stalwarts KHS 2017", "description": "Alumni Network", "url": "https://stalwarts.co.ke" },
+        { "slug": "lifelineconsultingfirm", "name": "Lifeline Consulting Firm", "description": "International Development Consulting", "url": "https://lifelineconsultingfirm.com" },
+        { "slug": "cak", "name": "Charities Association of Kenya", "description": "NGO Support Platform", "url": "https://cak.co.ke" },
+        { "slug": "israeluniversalchurch", "name": "Israel Universal Church", "description": "Faith-Based Organization", "url": "https://israeluniversalchurch.org" },
+        { "slug": "sedhuro", "name": "SEDHURO", "description": "Community Health & Advocacy", "url": "https://sedhuro.org" }
+      ]
+    },
+    {
+      "key": "technology-saas-digital-platforms",
+      "name": "Technology, SaaS & Digital Platforms",
+      "description": "Custom-built platforms and SaaS products, from AI automation tools to point-of-sale systems, engineered for scale, not just brochureware.",
+      "projects": [
+        { "slug": "omniagentmarketplace", "name": "Omni Agent Marketplace", "description": "AI Business Automation Platform", "url": "https://omniagentmarketplace.com" },
+        { "slug": "tendersaccesshub", "name": "Tenders Access Hub", "description": "Procurement Intelligence Platform", "url": "https://tendersaccesshub.com" },
+        { "slug": "pharmapos", "name": "PharmaPOS", "description": "Pharmacy Point-of-Sale SaaS", "url": "https://pharmacypos.co.ke" }
+      ]
+    },
+    {
+      "key": "energy-industrial-trade",
+      "name": "Energy, Industrial & Trade",
+      "description": "Operationally serious sites for logistics, manufacturing and energy companies where the site has to prove real capacity, not just style.",
+      "projects": [
+        { "slug": "shadeskenya", "name": "Shades & Fabrication Kenya", "description": "Outdoor Structures & Fabrication", "url": "https://shadeskenya.co.ke" },
+        { "slug": "sourcewallnl", "name": "Sourcewall NL", "description": "International Trade Platform", "url": "https://sourcewall.nl" },
+        { "slug": "bakemark", "name": "BakeMark", "description": "Food Manufacturing", "url": "https://bakemark.co.ke" },
+        { "slug": "gridxafrica", "name": "GridX Africa", "description": "Renewable Energy", "url": "https://gridxafrica.com" },
+        { "slug": "sagebeans", "name": "Sage Beans Export", "description": "Agribusiness Export", "url": "https://sagebeans.co.ke" }
+      ]
+    },
+    {
+      "key": "automotive",
+      "name": "Automotive",
+      "description": "Showroom-grade sites for dealerships and automotive logistics operators that turn browsers into showroom visits.",
+      "projects": [
+        { "slug": "ukroadrunner", "name": "UK Roadrunner Limited", "description": "Automotive Logistics", "url": "https://ukroadrunner.co.uk" }
+      ]
+    }
+  ]
+}
