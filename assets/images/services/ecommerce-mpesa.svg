@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="eGlow1" cx="88%" cy="88%" r="55%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eGlow2" cx="10%" cy="10%" r="55%">
+      <stop offset="0%" stop-color="#1D85D0" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#1D85D0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="eTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D85D0"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <pattern id="eGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="eShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#0A0A0B"/>
+  <rect width="1200" height="800" fill="url(#eGrid)"/>
+  <rect width="1200" height="800" fill="url(#eGlow1)"/>
+  <rect width="1200" height="800" fill="url(#eGlow2)"/>
+
+  <!-- badge -->
+  <g transform="translate(60,56)" filter="url(#eShadow)">
+    <rect width="270" height="46" rx="23" fill="#12141A" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <rect x="16" y="14" width="18" height="18" rx="3" fill="none" stroke="#10B981" stroke-width="2.2"/>
+    <path d="M20 23 l3 3 l7 -8" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="46" y="28" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#E5EDF8">M-Pesa (Daraja API) checkout</text>
+  </g>
+
+  <!-- product catalogue card -->
+  <g filter="url(#eShadow)">
+    <rect x="150" y="150" width="560" height="500" rx="22" fill="#111318" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1.5"/>
+    <text x="184" y="204" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" fill="#E5EDF8">Shop</text>
+    <rect x="184" y="222" width="490" height="2" fill="#FFFFFF" fill-opacity="0.08"/>
+
+    <!-- product 1 -->
+    <g transform="translate(184,246)">
+      <rect width="220" height="180" rx="14" fill="#181B22"/>
+      <rect x="16" y="16" width="188" height="110" rx="10" fill="url(#eTextGrad)" fill-opacity="0.18"/>
+      <circle cx="70" cy="55" r="24" fill="#1D85D0" fill-opacity="0.35"/>
+      <rect x="110" y="40" width="80" height="14" rx="4" fill="#FFFFFF" fill-opacity="0.12"/>
+      <rect x="110" y="62" width="60" height="14" rx="4" fill="#FFFFFF" fill-opacity="0.10"/>
+      <text x="16" y="152" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#8B93A1">Ankara Tote Bag</text>
+      <text x="16" y="172" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#10B981">KES 2,500</text>
+    </g>
+
+    <!-- product 2 -->
+    <g transform="translate(454,246)">
+      <rect width="220" height="180" rx="14" fill="#181B22"/>
+      <rect x="16" y="16" width="188" height="110" rx="10" fill="url(#eTextGrad)" fill-opacity="0.18"/>
+      <rect x="40" y="35" width="140" height="80" rx="8" fill="#10B981" fill-opacity="0.30"/>
+      <circle cx="150" cy="50" r="10" fill="#FFFFFF" fill-opacity="0.18"/>
+      <text x="16" y="152" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#8B93A1">Wireless Earbuds</text>
+      <text x="16" y="172" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#10B981">KES 4,200</text>
+    </g>
+
+    <!-- product 3 -->
+    <g transform="translate(184,446)">
+      <rect width="220" height="150" rx="14" fill="#181B22"/>
+      <rect x="16" y="16" width="188" height="82" rx="10" fill="url(#eTextGrad)" fill-opacity="0.18"/>
+      <path d="M40 80 l30 -30 l25 20 l40 -45 l35 40 v15 h-130 z" fill="#1D85D0" fill-opacity="0.35"/>
+      <text x="16" y="122" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#8B93A1">Leather Sandals</text>
+      <text x="16" y="142" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#10B981">KES 1,800</text>
+    </g>
+
+    <!-- delivery tracking -->
+    <g transform="translate(454,446)">
+      <rect width="220" height="150" rx="14" fill="#181B22"/>
+      <text x="18" y="34" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#E5EDF8">Order #KE10492</text>
+      <circle cx="30" cy="60" r="6" fill="#10B981"/>
+      <line x1="30" y1="66" x2="30" y2="90" stroke="#10B981" stroke-width="2"/>
+      <circle cx="30" cy="96" r="6" fill="#10B981"/>
+      <line x1="30" y1="102" x2="30" y2="126" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="2"/>
+      <circle cx="30" cy="132" r="6" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2"/>
+      <text x="46" y="65" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8B93A1">Paid via M-Pesa</text>
+      <text x="46" y="101" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8B93A1">Out for delivery</text>
+      <text x="46" y="137" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8B93A1">Delivered</text>
+    </g>
+  </g>
+
+  <!-- Phone: M-Pesa STK push -->
+  <g filter="url(#eShadow)">
+    <rect x="760" y="220" width="290" height="500" rx="36" fill="#111318" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="1.5"/>
+    <rect x="774" y="240" width="262" height="460" rx="20" fill="#0F1319"/>
+    <rect x="860" y="228" width="40" height="8" rx="4" fill="#05070C"/>
+
+    <!-- cart summary -->
+    <text x="905" y="280" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#E5EDF8">Checkout</text>
+    <rect x="798" y="298" width="214" height="2" fill="#FFFFFF" fill-opacity="0.08"/>
+    <text x="798" y="326" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8B93A1">Ankara Tote Bag</text>
+    <text x="1012" y="326" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#E5EDF8">KES 2,500</text>
+    <text x="798" y="350" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8B93A1">Delivery</text>
+    <text x="1012" y="350" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#E5EDF8">KES 300</text>
+    <rect x="798" y="364" width="214" height="1" fill="#FFFFFF" fill-opacity="0.08"/>
+    <text x="798" y="392" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#E5EDF8">Total</text>
+    <text x="1012" y="392" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#10B981">KES 2,800</text>
+
+    <!-- STK push prompt -->
+    <g transform="translate(798,420)">
+      <rect width="214" height="220" rx="16" fill="#0A0A0B" stroke="#10B981" stroke-opacity="0.5" stroke-width="1.5"/>
+      <circle cx="107" cy="46" r="26" fill="#10B981" fill-opacity="0.18"/>
+      <path d="M97 46 l7 7 l16 -16" fill="none" stroke="#10B981" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="107" y="96" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" fill="#E5EDF8">M-PESA</text>
+      <text x="107" y="118" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#8B93A1">Enter M-Pesa PIN to pay</text>
+      <text x="107" y="138" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#10B981">KES 2,800</text>
+      <rect x="22" y="160" width="170" height="40" rx="20" fill="#10B981"/>
+      <text x="107" y="185" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#06281D">Payment Confirmed</text>
+    </g>
+  </g>
+
+  <!-- floating cart badge -->
+  <g transform="translate(150,700) rotate(-4)" filter="url(#eShadow)">
+    <rect width="230" height="60" rx="16" fill="#1D85D0"/>
+    <circle cx="34" cy="30" r="16" fill="#FFFFFF" fill-opacity="0.15"/>
+    <path d="M26 24 h4 l3 16 h13 M31 24 l3 10 h10 l3 -10 z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="62" y="26" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#E9F3FC">Cart</text>
+    <text x="62" y="46" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">3 items ready</text>
+  </g>
+</svg>

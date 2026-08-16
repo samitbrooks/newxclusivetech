@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="dGlow1" cx="12%" cy="88%" r="55%">
+      <stop offset="0%" stop-color="#1D85D0" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#1D85D0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dGlow2" cx="92%" cy="10%" r="55%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="dTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D85D0"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <pattern id="dGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="dShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#0A0A0B"/>
+  <rect width="1200" height="800" fill="url(#dGrid)"/>
+  <rect width="1200" height="800" fill="url(#dGlow1)"/>
+  <rect width="1200" height="800" fill="url(#dGlow2)"/>
+
+  <!-- badge -->
+  <g transform="translate(60,56)" filter="url(#dShadow)">
+    <rect width="256" height="46" rx="23" fill="#12141A" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <path d="M18 15 L10 23 L18 31 M34 15 L42 23 L34 31 M25 12 L23 34" stroke="#1D85D0" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,0)"/>
+    <text x="58" y="28" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#E5EDF8">Custom-built, not templates</text>
+  </g>
+
+  <!-- code editor panel -->
+  <g filter="url(#dShadow)">
+    <rect x="150" y="140" width="620" height="480" rx="22" fill="#111318" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1.5"/>
+    <rect x="150" y="140" width="620" height="44" rx="22" fill="#181B22"/>
+    <rect x="150" y="162" width="620" height="22" fill="#181B22"/>
+    <circle cx="180" cy="162" r="6" fill="#FF5F57"/>
+    <circle cx="202" cy="162" r="6" fill="#FEBC2E"/>
+    <circle cx="224" cy="162" r="6" fill="#28C840"/>
+    <text x="470" y="167" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#8B93A1">booking-api.js</text>
+
+    <g font-family="Consolas, Menlo, monospace" font-size="16">
+      <text x="180" y="230" fill="#8B93A1">1</text>
+      <text x="220" y="230" fill="#1D85D0" font-weight="700">POST</text>
+      <text x="290" y="230" fill="#E5EDF8">/api/bookings</text>
+
+      <text x="180" y="262" fill="#8B93A1">2</text>
+      <text x="220" y="262" fill="#E5EDF8">{</text>
+
+      <text x="180" y="294" fill="#8B93A1">3</text>
+      <text x="240" y="294" fill="#10B981">"customer"</text>
+      <text x="345" y="294" fill="#E5EDF8">: "Wanjiru K.",</text>
+
+      <text x="180" y="326" fill="#8B93A1">4</text>
+      <text x="240" y="326" fill="#10B981">"service"</text>
+      <text x="330" y="326" fill="#E5EDF8">: "Consultation",</text>
+
+      <text x="180" y="358" fill="#8B93A1">5</text>
+      <text x="240" y="358" fill="#10B981">"date"</text>
+      <text x="305" y="358" fill="#E5EDF8">: "2026-08-20",</text>
+
+      <text x="180" y="390" fill="#8B93A1">6</text>
+      <text x="240" y="390" fill="#10B981">"status"</text>
+      <text x="325" y="390" fill="#FEBC2E">: "confirmed"</text>
+
+      <text x="180" y="422" fill="#8B93A1">7</text>
+      <text x="220" y="422" fill="#E5EDF8">}</text>
+    </g>
+
+    <!-- status pill -->
+    <rect x="180" y="460" width="220" height="44" rx="22" fill="#0A0A0B" stroke="#10B981" stroke-opacity="0.5"/>
+    <circle cx="204" cy="482" r="6" fill="#10B981"/>
+    <text x="220" y="487" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#E5EDF8">200 OK &#8226; SSL Secured</text>
+
+    <rect x="180" y="520" width="270" height="44" rx="22" fill="#0A0A0B" stroke="#1D85D0" stroke-opacity="0.5"/>
+    <circle cx="204" cy="542" r="6" fill="#1D85D0"/>
+    <text x="220" y="547" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#E5EDF8">Connected to Database</text>
+  </g>
+
+  <!-- floating booking system card -->
+  <g transform="translate(760,220)" filter="url(#dShadow)">
+    <rect width="330" height="290" rx="20" fill="#111318" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.5"/>
+    <text x="24" y="40" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="url(#dTextGrad)">Booking System</text>
+    <text x="24" y="64" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#8B93A1">Live availability, zero double-bookings</text>
+
+    <g transform="translate(24,84)">
+      <rect width="282" height="170" rx="12" fill="#181B22"/>
+      <g font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8B93A1">
+        <text x="24" y="26" text-anchor="middle">Mon</text>
+        <text x="65" y="26" text-anchor="middle">Tue</text>
+        <text x="106" y="26" text-anchor="middle">Wed</text>
+        <text x="147" y="26" text-anchor="middle">Thu</text>
+        <text x="188" y="26" text-anchor="middle">Fri</text>
+        <text x="229" y="26" text-anchor="middle">Sat</text>
+        <text x="258" y="26" text-anchor="middle">Sun</text>
+      </g>
+      <g>
+        <rect x="10" y="42" width="28" height="28" rx="6" fill="#0A0A0B"/>
+        <rect x="51" y="42" width="28" height="28" rx="6" fill="#0A0A0B"/>
+        <rect x="92" y="42" width="28" height="28" rx="6" fill="#10B981"/>
+        <rect x="133" y="42" width="28" height="28" rx="6" fill="#0A0A0B"/>
+        <rect x="174" y="42" width="28" height="28" rx="6" fill="#0A0A0B"/>
+        <rect x="215" y="42" width="28" height="28" rx="6" fill="#0A0A0B"/>
+        <rect x="244" y="42" width="28" height="28" rx="6" fill="#0A0A0B"/>
+
+        <rect x="10" y="80" width="28" height="28" rx="6" fill="#0A0A0B"/>
+        <rect x="51" y="80" width="28" height="28" rx="6" fill="#1D85D0"/>
+        <rect x="92" y="80" width="28" height="28" rx="6" fill="#0A0A0B"/>
+        <rect x="133" y="80" width="28" height="28" rx="6" fill="#0A0A0B"/>
+        <rect x="174" y="80" width="28" height="28" rx="6" fill="#0A0A0B"/>
+        <rect x="215" y="80" width="28" height="28" rx="6" fill="#0A0A0B"/>
+        <rect x="244" y="80" width="28" height="28" rx="6" fill="#0A0A0B"/>
+      </g>
+      <rect x="10" y="122" width="262" height="34" rx="8" fill="#0A0A0B"/>
+      <circle cx="26" cy="139" r="5" fill="#10B981"/>
+      <text x="40" y="144" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#E5EDF8">Wed 10:00 &#8212; confirmed</text>
+    </g>
+  </g>
+
+  <!-- KES / API integration badge -->
+  <g transform="translate(800,560) rotate(-4)" filter="url(#dShadow)">
+    <rect width="240" height="70" rx="16" fill="#1D85D0"/>
+    <text x="120" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#E9F3FC">API &amp; Third-Party</text>
+    <text x="120" y="54" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">Integrations</text>
+  </g>
+</svg>
