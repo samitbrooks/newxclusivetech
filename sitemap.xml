@@ -64,6 +64,70 @@
         <priority>0.7</priority>
     </url>
 
+    <!-- Blog: Tour & Safari Companies -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-tour-and-safari-companies-need-a-website.html</loc>
+        <lastmod>2026-08-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: Insurance Agents & Brokers -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-insurance-agents-and-brokers-need-a-website.html</loc>
+        <lastmod>2026-08-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: Construction & Contractors -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-construction-and-contractors-need-a-website.html</loc>
+        <lastmod>2026-08-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: Car Dealerships -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-car-dealerships-need-a-website.html</loc>
+        <lastmod>2026-08-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: Driving Schools -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-driving-schools-need-a-website.html</loc>
+        <lastmod>2026-08-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: Photographers & Videographers -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/why-photographers-and-videographers-need-a-website.html</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: Website vs Facebook Page -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/website-vs-facebook-page-which-does-your-business-need.html</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog: How Long Does a Website Take -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/how-long-does-it-take-to-build-a-website-in-kenya.html</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <!-- About Page -->
     <url>
         <loc>https://www.xclusivetech.co.ke/about.html</loc>
