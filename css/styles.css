@@ -3,7 +3,7 @@
    Modern dark theme with neon accents
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 /* CSS Variables */
 :root {
@@ -29,7 +29,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
     background: radial-gradient(circle at 12% 12%, rgba(29, 133, 208, 0.10), transparent 24%),
@@ -54,7 +54,7 @@ body::before {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 code, pre, .tech-mono {
@@ -614,7 +614,7 @@ input:focus, textarea:focus, select:focus {
 
 .stat-counter {
     display: inline-block;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 2.25rem;
     font-weight: bold;
     color: #ffffff;
