@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="sGlow1" cx="88%" cy="12%" r="55%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sGlow2" cx="8%" cy="90%" r="55%">
+      <stop offset="0%" stop-color="#1D85D0" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#1D85D0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D85D0"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="sGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="sShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0A0A0B"/>
+  <rect width="1200" height="800" fill="url(#sGrid)"/>
+  <rect width="1200" height="800" fill="url(#sGlow1)"/>
+  <rect width="1200" height="800" fill="url(#sGlow2)"/>
+
+  <!-- Local SEO badge -->
+  <g transform="translate(60,56)" filter="url(#sShadow)">
+    <rect width="240" height="46" rx="23" fill="#12141A" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <circle cx="30" cy="23" r="10" fill="none" stroke="#10B981" stroke-width="2.5"/>
+    <path d="M30 15 a8 8 0 0 1 0 16 a8 8 0 0 1 0 -16" fill="none" stroke="#10B981" stroke-width="0"/>
+    <path d="M22 23 h16 M30 15 v16 M25 17.5 q5 6 0 11 M35 17.5 q-5 6 0 11" stroke="#10B981" stroke-width="1.3" fill="none"/>
+    <text x="52" y="28" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#E5EDF8">Local SEO, GEO &amp; AEO</text>
+  </g>
+
+  <!-- Dashboard panel -->
+  <g filter="url(#sShadow)">
+    <rect x="150" y="130" width="900" height="560" rx="24" fill="#111318" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1.5"/>
+
+    <!-- search bar -->
+    <rect x="190" y="168" width="560" height="56" rx="28" fill="#0A0A0B" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <circle cx="222" cy="196" r="9" fill="none" stroke="#8B93A1" stroke-width="2.5"/>
+    <line x1="229" y1="203" x2="236" y2="210" stroke="#8B93A1" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="250" y="203" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#E5EDF8">web design Nairobi</text>
+    <rect x="470" y="184" width="2" height="24" fill="#10B981"/>
+
+    <!-- AI recommended badge -->
+    <g transform="translate(770,168)">
+      <rect width="230" height="56" rx="28" fill="#0A0A0B" stroke="#10B981" stroke-opacity="0.5"/>
+      <path d="M20 28 l4 -10 l4 10 l-4 -3 z" fill="#10B981"/>
+      <circle cx="30" cy="14" r="2" fill="#10B981"/>
+      <text x="45" y="33" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#E5EDF8">Recommended by AI</text>
+    </g>
+
+    <!-- ranking result card -->
+    <g transform="translate(190,250)">
+      <rect width="820" height="110" rx="16" fill="#181B22" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="30" y="52" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="900" fill="#10B981">#1</text>
+      <text x="110" y="42" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#E5EDF8">Xclusive Tech</text>
+      <text x="110" y="68" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#8B93A1">xclusivetech.co.ke</text>
+      <g transform="translate(660,30)">
+        <path d="M0 20 L10 4 L20 20 Z" fill="#10B981"/>
+        <text x="30" y="18" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#10B981">+12 positions</text>
+        <text x="30" y="38" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8B93A1">this month</text>
+      </g>
+    </g>
+
+    <!-- growth chart -->
+    <g transform="translate(190,400)">
+      <line x1="0" y1="190" x2="820" y2="190" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <line x1="0" y1="130" x2="820" y2="130" stroke="#FFFFFF" stroke-opacity="0.06"/>
+      <line x1="0" y1="70" x2="820" y2="70" stroke="#FFFFFF" stroke-opacity="0.06"/>
+      <line x1="0" y1="10" x2="820" y2="10" stroke="#FFFFFF" stroke-opacity="0.06"/>
+
+      <path d="M0,190 L0,175 L137,150 L274,155 L411,105 L548,95 L685,45 L820,20 L820,190 Z" fill="url(#chartFill)"/>
+      <path d="M0,175 L137,150 L274,155 L411,105 L548,95 L685,45 L820,20" fill="none" stroke="#10B981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="0" cy="175" r="6" fill="#10B981"/>
+      <circle cx="137" cy="150" r="6" fill="#10B981"/>
+      <circle cx="274" cy="155" r="6" fill="#10B981"/>
+      <circle cx="411" cy="105" r="6" fill="#10B981"/>
+      <circle cx="548" cy="95" r="6" fill="#10B981"/>
+      <circle cx="685" cy="45" r="6" fill="#10B981"/>
+      <circle cx="820" cy="20" r="7" fill="#0A0A0B" stroke="#10B981" stroke-width="3"/>
+
+      <g font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#8B93A1">
+        <text x="0" y="212" text-anchor="middle">Jan</text>
+        <text x="137" y="212" text-anchor="middle">Feb</text>
+        <text x="274" y="212" text-anchor="middle">Mar</text>
+        <text x="411" y="212" text-anchor="middle">Apr</text>
+        <text x="548" y="212" text-anchor="middle">May</text>
+        <text x="685" y="212" text-anchor="middle">Jun</text>
+        <text x="820" y="212" text-anchor="end">Jul</text>
+      </g>
+    </g>
+
+    <!-- location pins -->
+    <g transform="translate(190,632)">
+      <rect width="180" height="38" rx="19" fill="#0A0A0B" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <path d="M20 12 a8 8 0 1 1 -0.1 0 z M20 26 l0 4" fill="none" stroke="#1D85D0" stroke-width="2"/>
+      <circle cx="20" cy="18" r="4" fill="#1D85D0"/>
+      <text x="36" y="24" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#E5EDF8">Nairobi</text>
+    </g>
+    <g transform="translate(380,632)">
+      <rect width="240" height="38" rx="19" fill="#0A0A0B" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <circle cx="20" cy="18" r="4" fill="#1D85D0"/>
+      <text x="36" y="24" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#E5EDF8">Kiambu County</text>
+    </g>
+  </g>
+</svg>
