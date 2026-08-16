@@ -128,6 +128,14 @@
         <priority>0.7</priority>
     </url>
 
+    <!-- Blog: Web Design for Kiambu County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/web-design-for-businesses-in-kiambu-county.html</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <!-- About Page -->
     <url>
         <loc>https://www.xclusivetech.co.ke/about.html</loc>
