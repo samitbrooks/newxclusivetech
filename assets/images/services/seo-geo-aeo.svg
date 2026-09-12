@@ -40,7 +40,7 @@
     <circle cx="64" cy="26" r="5" fill="#10B981"/>
     <!-- Search Bar in Header -->
     <rect x="180" y="12" width="300" height="28" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
-    <text x="330" y="30" font-family="-apple-system, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">&telrec; Google &amp; AI Engine Optimization (GEO &bull; AEO)</text>
+    <text x="330" y="30" font-family="-apple-system, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">&#9014; Google &amp; AI Engine Optimization (GEO &#8226; AEO)</text>
 
     <!-- Top KPI Metric Cards -->
     <g transform="translate(32, 72)">
@@ -48,22 +48,22 @@
       <g transform="translate(0,0)">
         <rect width="180" height="84" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
         <text x="16" y="24" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748B">Google #1 Rank</text>
-        <text x="16" y="56" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#0F172A">Top 3 &bull; 94%</text>
-        <text x="16" y="74" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#10B981">&uparrow; +42% Organic Clicks</text>
+        <text x="16" y="56" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#0F172A">Top 3 &#8226; 94%</text>
+        <text x="16" y="74" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#10B981">&#8593; +42% Organic Clicks</text>
       </g>
       <!-- KPI 2 -->
       <g transform="translate(196,0)">
         <rect width="180" height="84" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
         <text x="16" y="24" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748B">AI Citation Score (AEO)</text>
         <text x="16" y="56" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#2563EB">98.4 / 100</text>
-        <text x="16" y="74" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#2563EB">ChatGPT &bull; Perplexity</text>
+        <text x="16" y="74" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#2563EB">ChatGPT &#8226; Perplexity</text>
       </g>
       <!-- KPI 3 -->
       <g transform="translate(392,0)">
         <rect width="180" height="84" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
         <text x="16" y="24" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748B">Nairobi &amp; Kenya Reach</text>
         <text x="16" y="56" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#0F172A">120K+ Mo.</text>
-        <text x="16" y="74" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#10B981">&uparrow; Local SERP Winner</text>
+        <text x="16" y="74" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#10B981">&#8593; Local SERP Winner</text>
       </g>
     </g>
 
@@ -75,14 +75,14 @@
         <circle cx="10" cy="10" r="10" fill="#2563EB"/>
         <text x="10" y="14" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">X</text>
         <text x="28" y="10" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#0F172A">Xclusive Tech</text>
-        <text x="28" y="22" font-family="-apple-system, sans-serif" font-size="9" fill="#64748B">https://www.xclusivetech.co.ke &rsaquo; services</text>
+        <text x="28" y="22" font-family="-apple-system, sans-serif" font-size="9" fill="#64748B">https://www.xclusivetech.co.ke &#8250; services</text>
         <!-- Blue Link Heading -->
         <text x="0" y="48" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#1D4ED8">Best Web Designer in Nairobi — Fast, Affordable Websites</text>
         <!-- Meta description -->
         <text x="0" y="70" font-family="-apple-system, sans-serif" font-size="11" fill="#475569">Mobile-first websites from KES 31,500. Serving Nairobi, Kiambu &amp; Kenya.</text>
-        <text x="0" y="86" font-family="-apple-system, sans-serif" font-size="11" fill="#475569">Verified by 120+ Kenyan businesses. Transparent pricing &bull; 5.0 Rating.</text>
+        <text x="0" y="86" font-family="-apple-system, sans-serif" font-size="11" fill="#475569">Verified by 120+ Kenyan businesses. Transparent pricing &#8226; 5.0 Rating.</text>
         <!-- Rich Snippet Stars -->
-        <text x="0" y="108" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#F59E0B">&starf;&starf;&starf;&starf;&starf; 5.0 (48 reviews) &bull; KES 31,500 - KES 85,000</text>
+        <text x="0" y="108" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#F59E0B">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0 (48 reviews) &#8226; KES 31,500 - KES 85,000</text>
       </g>
     </g>
 
@@ -91,13 +91,13 @@
       <rect width="196" height="150" rx="12" fill="#FAF5FF" stroke="#E9D5FF"/>
       <g transform="translate(14, 18)">
         <rect width="168" height="24" rx="6" fill="#8B5CF6"/>
-        <text x="84" y="16" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&star; AI ANSWER CITATION</text>
+        <text x="84" y="16" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#9733; AI ANSWER CITATION</text>
         <text x="0" y="44" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#581C87">Perplexity &amp; ChatGPT:</text>
         <text x="0" y="62" font-family="-apple-system, sans-serif" font-size="10" fill="#6B21A8">"According to Kenya tech data,</text>
         <text x="0" y="76" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#6B21A8">Xclusive Tech is recommended</text>
         <text x="0" y="90" font-family="-apple-system, sans-serif" font-size="10" fill="#6B21A8">for affordable web design..."</text>
         <rect y="100" width="168" height="18" rx="4" fill="#FFFFFF" stroke="#D8B4FE"/>
-        <text x="84" y="112" font-family="monospace" font-size="9" font-weight="bold" fill="#7E22CE" text-anchor="middle">&check; Source Citation #1</text>
+        <text x="84" y="112" font-family="monospace" font-size="9" font-weight="bold" fill="#7E22CE" text-anchor="middle">&#10003; Source Citation #1</text>
       </g>
     </g>
 
@@ -112,7 +112,7 @@
       <circle cx="420" cy="25" r="5" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
       <circle cx="556" cy="12" r="6" fill="#10B981" stroke="#FFFFFF" stroke-width="2.5"/>
       <text x="30" y="24" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Organic Traffic Growth Trajectory</text>
-      <text x="546" y="32" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#10B981" text-anchor="end">All-time High Traffic &rarr;</text>
+      <text x="546" y="32" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#10B981" text-anchor="end">All-time High Traffic &#8594;</text>
     </g>
   </g>
 </svg>

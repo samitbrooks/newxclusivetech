@@ -36,16 +36,16 @@
     <text x="100" y="188" font-family="-apple-system, sans-serif" font-size="10" fill="#E2E8F0" text-anchor="middle">Available in Nairobi Stores</text>
     <!-- Engagement column (Heart, comment, share) -->
     <circle cx="170" cy="200" r="10" fill="#EC4899"/>
-    <text x="170" y="204" font-family="-apple-system, sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">&hearts;</text>
+    <text x="170" y="204" font-family="-apple-system, sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">&#9829;</text>
     <circle cx="170" cy="226" r="10" fill="#FFFFFF" opacity="0.3"/>
     <text x="170" y="230" font-family="-apple-system, sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">&#128172;</text>
     <!-- Bottom caption -->
     <text x="24" y="280" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">@kenya_brand</text>
     <text x="24" y="298" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8">Elevating local business with</text>
-    <text x="24" y="312" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8">high converting video reels &bull; #Nairobi</text>
+    <text x="24" y="312" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8">high converting video reels &#8226; #Nairobi</text>
     <!-- Audio bar -->
     <rect x="24" y="334" width="152" height="20" rx="10" fill="#1E293B"/>
-    <text x="34" y="348" font-family="-apple-system, sans-serif" font-size="9" fill="#38BDF8">&sung; Original Sound &bull; Trending</text>
+    <text x="34" y="348" font-family="-apple-system, sans-serif" font-size="9" fill="#38BDF8">&#9835; Original Sound &#8226; Trending</text>
   </g>
 
   <!-- Marketing Flyer Mockup (Center Card) -->
@@ -57,18 +57,18 @@
     <rect x="20" y="20" width="90" height="26" rx="13" fill="#FFFFFF"/>
     <text x="65" y="37" font-family="-apple-system, sans-serif" font-size="10" font-weight="800" fill="#0F172A" text-anchor="middle">WEEKEND DEAL</text>
     <text x="125" y="90" font-family="-apple-system, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle">UP TO 40% OFF</text>
-    <text x="125" y="112" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Order Via WhatsApp &bull; Fast Delivery</text>
+    <text x="125" y="112" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Order Via WhatsApp &#8226; Fast Delivery</text>
     <!-- Lower Card Body -->
     <text x="24" y="180" font-family="-apple-system, sans-serif" font-size="14" font-weight="800" fill="#0F172A">High-Impact Social Flyer</text>
     <text x="24" y="202" font-family="-apple-system, sans-serif" font-size="11" fill="#64748B">Formatted for Instagram, Facebook</text>
     <text x="24" y="218" font-family="-apple-system, sans-serif" font-size="11" fill="#64748B">&amp; WhatsApp status stories.</text>
     <!-- Metrics Pill -->
     <rect x="24" y="240" width="202" height="42" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
-    <text x="40" y="266" font-family="-apple-system, sans-serif" font-size="12" font-weight="800" fill="#10B981">&uparrow; 3.8x</text>
+    <text x="40" y="266" font-family="-apple-system, sans-serif" font-size="12" font-weight="800" fill="#10B981">&#8593; 3.8x</text>
     <text x="80" y="266" font-family="-apple-system, sans-serif" font-size="11" fill="#64748B">Higher Inquiries</text>
     <!-- Action Button -->
     <rect x="24" y="294" width="202" height="30" rx="8" fill="#0F172A"/>
-    <text x="125" y="313" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Order on WhatsApp &rarr;</text>
+    <text x="125" y="313" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Order on WhatsApp &#8594;</text>
   </g>
 
   <!-- Scheduled Calendar View (Right Column) -->
@@ -77,33 +77,33 @@
     <rect width="180" height="44" rx="16" fill="#F8FAFC"/>
     <rect y="32" width="180" height="12" fill="#F8FAFC"/>
     <line x1="0" y1="44" x2="180" y2="44" stroke="#E2E8F0" stroke-width="1"/>
-    <text x="90" y="28" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#0F172A" text-anchor="middle">&calendar; Content Calendar</text>
+    <text x="90" y="28" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#0F172A" text-anchor="middle">&#128197; Content Calendar</text>
     
     <!-- Week Slots -->
     <g transform="translate(14, 56)">
       <!-- Day 1 -->
       <rect width="152" height="34" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
       <circle cx="16" cy="17" r="5" fill="#2563EB"/>
-      <text x="28" y="16" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#1D4ED8">Mon &bull; Product Reel</text>
+      <text x="28" y="16" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#1D4ED8">Mon &#8226; Product Reel</text>
       <text x="28" y="26" font-family="-apple-system, sans-serif" font-size="8" fill="#64748B">Scheduled 10:00 AM</text>
       <!-- Day 2 -->
       <g transform="translate(0, 42)">
         <rect width="152" height="34" rx="6" fill="#F0FDF4" stroke="#BBF7D0"/>
         <circle cx="16" cy="17" r="5" fill="#10B981"/>
-        <text x="28" y="16" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#15803D">Wed &bull; Promo Poster</text>
+        <text x="28" y="16" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#15803D">Wed &#8226; Promo Poster</text>
         <text x="28" y="26" font-family="-apple-system, sans-serif" font-size="8" fill="#64748B">Scheduled 2:00 PM</text>
       </g>
       <!-- Day 3 -->
       <g transform="translate(0, 84)">
         <rect width="152" height="34" rx="6" fill="#FAF5FF" stroke="#E9D5FF"/>
         <circle cx="16" cy="17" r="5" fill="#8B5CF6"/>
-        <text x="28" y="16" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#7E22CE">Fri &bull; Customer Review</text>
+        <text x="28" y="16" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#7E22CE">Fri &#8226; Customer Review</text>
         <text x="28" y="26" font-family="-apple-system, sans-serif" font-size="8" fill="#64748B">Scheduled 5:30 PM</text>
       </g>
       <!-- Summary Box -->
       <g transform="translate(0, 132)">
         <rect width="152" height="42" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
-        <text x="76" y="18" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#0F172A" text-anchor="middle">&check; Consistent Growth</text>
+        <text x="76" y="18" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#0F172A" text-anchor="middle">&#10003; Consistent Growth</text>
         <text x="76" y="32" font-family="-apple-system, sans-serif" font-size="8" fill="#64748B" text-anchor="middle">From KES 10,000/mo</text>
       </g>
     </g>

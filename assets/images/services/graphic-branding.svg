@@ -40,7 +40,7 @@
     <circle cx="32" cy="26" r="5" fill="#EF4444"/>
     <circle cx="48" cy="26" r="5" fill="#F59E0B"/>
     <circle cx="64" cy="26" r="5" fill="#10B981"/>
-    <text x="300" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle">Brand Identity &amp; Design System &bull; Guidelines 2026</text>
+    <text x="300" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle">Brand Identity &amp; Design System &#8226; Guidelines 2026</text>
 
     <!-- Logo Construction Grid (Left section) -->
     <g transform="translate(36, 80)">
@@ -98,7 +98,7 @@
         <circle cx="34" cy="36" r="14" fill="#2563EB"/>
         <path d="M 28,30 L 40,42 M 40,30 L 28,42" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
         <text x="60" y="35" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">XCLUSIVE</text>
-        <text x="60" y="48" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#38BDF8">TECH &bull; NAIROBI</text>
+        <text x="60" y="48" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#38BDF8">TECH &#8226; NAIROBI</text>
         <line x1="20" y1="68" x2="160" y2="68" stroke="#334155" stroke-width="0.75"/>
         <text x="20" y="84" font-family="-apple-system, sans-serif" font-size="8" fill="#94A3B8">www.xclusivetech.co.ke</text>
       </g>
@@ -114,7 +114,7 @@
       <!-- Brand Guide Tag -->
       <g transform="translate(400, 16)">
         <rect width="128" height="68" rx="10" fill="#EFF6FF" stroke="#BFDBFE"/>
-        <text x="64" y="32" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">&check; Complete Assets</text>
+        <text x="64" y="32" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">&#10003; Complete Assets</text>
         <text x="64" y="50" font-family="-apple-system, sans-serif" font-size="9" fill="#3B82F6" text-anchor="middle">SVG, PNG, PDF, CMYK</text>
       </g>
     </g>
@@ -123,6 +123,6 @@
   <!-- Floating Badge (Top Right) -->
   <g transform="translate(620, 30)" filter="url(#floatShadow)">
     <rect width="140" height="42" rx="21" fill="#10B981"/>
-    <text x="70" y="26" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">&starf; 100% Vector Ready</text>
+    <text x="70" y="26" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#9733; 100% Vector Ready</text>
   </g>
 </svg>
