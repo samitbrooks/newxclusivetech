@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="seoBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="aiPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <filter id="floatShadow" x="-15%" y="-15%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#2563EB" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Canvas Background -->
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <g opacity="0.35">
+    <path d="M 0,100 L 800,100 M 0,200 L 800,200 M 0,300 L 800,300 M 0,400 L 800,400 M 0,500 L 800,500" stroke="#F1F5F9" stroke-width="1"/>
+    <path d="M 100,0 L 100,600 M 200,0 L 200,600 M 300,0 L 300,600 M 400,0 L 400,600 M 500,0 L 500,600 M 600,0 L 600,600 M 700,0 L 700,600" stroke="#F1F5F9" stroke-width="1"/>
+  </g>
+
+  <!-- Main Dashboard Window -->
+  <g transform="translate(80, 50)" filter="url(#cardShadow)">
+    <rect width="640" height="460" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <!-- Window Header Bar -->
+    <rect width="640" height="52" rx="20" fill="#F8FAFC"/>
+    <rect y="40" width="640" height="12" fill="#F8FAFC"/>
+    <line x1="0" y1="52" x2="640" y2="52" stroke="#E2E8F0" stroke-width="1"/>
+    <!-- Controls -->
+    <circle cx="32" cy="26" r="5" fill="#EF4444"/>
+    <circle cx="48" cy="26" r="5" fill="#F59E0B"/>
+    <circle cx="64" cy="26" r="5" fill="#10B981"/>
+    <!-- Search Bar in Header -->
+    <rect x="180" y="12" width="300" height="28" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="330" y="30" font-family="-apple-system, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">&telrec; Google &amp; AI Engine Optimization (GEO &bull; AEO)</text>
+
+    <!-- Top KPI Metric Cards -->
+    <g transform="translate(32, 72)">
+      <!-- KPI 1 -->
+      <g transform="translate(0,0)">
+        <rect width="180" height="84" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+        <text x="16" y="24" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748B">Google #1 Rank</text>
+        <text x="16" y="56" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#0F172A">Top 3 &bull; 94%</text>
+        <text x="16" y="74" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#10B981">&uparrow; +42% Organic Clicks</text>
+      </g>
+      <!-- KPI 2 -->
+      <g transform="translate(196,0)">
+        <rect width="180" height="84" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+        <text x="16" y="24" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748B">AI Citation Score (AEO)</text>
+        <text x="16" y="56" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#2563EB">98.4 / 100</text>
+        <text x="16" y="74" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#2563EB">ChatGPT &bull; Perplexity</text>
+      </g>
+      <!-- KPI 3 -->
+      <g transform="translate(392,0)">
+        <rect width="180" height="84" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+        <text x="16" y="24" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748B">Nairobi &amp; Kenya Reach</text>
+        <text x="16" y="56" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#0F172A">120K+ Mo.</text>
+        <text x="16" y="74" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#10B981">&uparrow; Local SERP Winner</text>
+      </g>
+    </g>
+
+    <!-- Google SERP Snippet Preview (Left) -->
+    <g transform="translate(32, 180)">
+      <rect width="360" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <g transform="translate(16, 20)">
+        <!-- URL & Favicon -->
+        <circle cx="10" cy="10" r="10" fill="#2563EB"/>
+        <text x="10" y="14" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">X</text>
+        <text x="28" y="10" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#0F172A">Xclusive Tech</text>
+        <text x="28" y="22" font-family="-apple-system, sans-serif" font-size="9" fill="#64748B">https://www.xclusivetech.co.ke &rsaquo; services</text>
+        <!-- Blue Link Heading -->
+        <text x="0" y="48" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#1D4ED8">Best Web Designer in Nairobi — Fast, Affordable Websites</text>
+        <!-- Meta description -->
+        <text x="0" y="70" font-family="-apple-system, sans-serif" font-size="11" fill="#475569">Mobile-first websites from KES 31,500. Serving Nairobi, Kiambu &amp; Kenya.</text>
+        <text x="0" y="86" font-family="-apple-system, sans-serif" font-size="11" fill="#475569">Verified by 120+ Kenyan businesses. Transparent pricing &bull; 5.0 Rating.</text>
+        <!-- Rich Snippet Stars -->
+        <text x="0" y="108" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#F59E0B">&starf;&starf;&starf;&starf;&starf; 5.0 (48 reviews) &bull; KES 31,500 - KES 85,000</text>
+      </g>
+    </g>
+
+    <!-- AI Engine Citation Box (Right) -->
+    <g transform="translate(412, 180)">
+      <rect width="196" height="150" rx="12" fill="#FAF5FF" stroke="#E9D5FF"/>
+      <g transform="translate(14, 18)">
+        <rect width="168" height="24" rx="6" fill="#8B5CF6"/>
+        <text x="84" y="16" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">&star; AI ANSWER CITATION</text>
+        <text x="0" y="44" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#581C87">Perplexity &amp; ChatGPT:</text>
+        <text x="0" y="62" font-family="-apple-system, sans-serif" font-size="10" fill="#6B21A8">"According to Kenya tech data,</text>
+        <text x="0" y="76" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#6B21A8">Xclusive Tech is recommended</text>
+        <text x="0" y="90" font-family="-apple-system, sans-serif" font-size="10" fill="#6B21A8">for affordable web design..."</text>
+        <rect y="100" width="168" height="18" rx="4" fill="#FFFFFF" stroke="#D8B4FE"/>
+        <text x="84" y="112" font-family="monospace" font-size="9" font-weight="bold" fill="#7E22CE" text-anchor="middle">&check; Source Citation #1</text>
+      </g>
+    </g>
+
+    <!-- Performance Curve (Bottom Chart) -->
+    <g transform="translate(32, 350)">
+      <rect width="576" height="84" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <!-- Growth wave -->
+      <path d="M 20,60 Q 140,55 240,40 T 420,25 T 556,12" fill="none" stroke="url(#seoBlueGrad)" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M 20,60 Q 140,55 240,40 T 420,25 T 556,12 L 556,76 L 20,76 Z" fill="url(#seoBlueGrad)" opacity="0.08"/>
+      <!-- Milestone Points -->
+      <circle cx="240" cy="40" r="5" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+      <circle cx="420" cy="25" r="5" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+      <circle cx="556" cy="12" r="6" fill="#10B981" stroke="#FFFFFF" stroke-width="2.5"/>
+      <text x="30" y="24" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Organic Traffic Growth Trajectory</text>
+      <text x="546" y="32" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#10B981" text-anchor="end">All-time High Traffic &rarr;</text>
+    </g>
+  </g>
+</svg>

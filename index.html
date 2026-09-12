@@ -116,15 +116,28 @@
     }
     </script>
 </head>
-<body class="bg-gray-900 text-white overflow-x-hidden">
+<body class="bg-white text-slate-900 overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-lg border-b border-gray-800 transition-all duration-300" id="navbar">
+    <nav id="navbar" style="
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 50;
+        background: rgba(255,255,255,0.96);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid #E2E8F0;
+        transition: box-shadow 0.3s ease;
+    ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="flex items-center gap-2">
-                    <img src="assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="h-10 w-auto">
+                <!-- Logo — uses the light-background version (dark X mark) -->
+                <a href="index.html" class="flex items-center gap-2" aria-label="Xclusive Tech home">
+                    <img src="assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="h-10 w-auto">
                 </a>
+
+                <!-- Desktop nav links -->
                 <div class="hidden md:flex gap-8">
                     <a href="index.html" class="nav-link active">Home</a>
                     <a href="about.html" class="nav-link">About</a>
@@ -135,10 +148,10 @@
                             <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                         </button>
                         <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
-                            <div class="bg-gray-800 border border-gray-700 rounded-xl shadow-2xl py-2 w-60">
-                                <a href="solutions.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">Solutions by Business Type</a>
-                                <a href="solutions.html#industries" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">Industries We Serve</a>
-                                <a href="solutions.html#saas" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">SaaS &amp; Custom Platforms</a>
+                            <div style="background:#fff;border:1px solid #E2E8F0;box-shadow:0 8px 30px rgba(15,23,42,0.1);" class="rounded-xl py-2 w-60">
+                                <a href="solutions.html" style="color:#334155;" class="block px-4 py-2.5 text-sm hover:bg-white transition-colors">Solutions by Business Type</a>
+                                <a href="solutions.html#industries" style="color:#334155;" class="block px-4 py-2.5 text-sm hover:bg-white transition-colors">Industries We Serve</a>
+                                <a href="solutions.html#saas" style="color:#334155;" class="block px-4 py-2.5 text-sm hover:bg-white transition-colors">SaaS &amp; Custom Platforms</a>
                             </div>
                         </div>
                     </div>
@@ -147,336 +160,351 @@
                     <a href="blog/index.html" class="nav-link">Blog</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                 </div>
-                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-white text-gray-900 hover:bg-gray-100 hover:shadow-lg hover:shadow-white/50 transition-all duration-300 font-medium">Get a Free Quote</a>
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors" aria-label="Toggle menu">
+
+                <!-- CTA button -->
+                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener"
+                   style="background:#0F172A;color:#fff;border-radius:0.5rem;padding:0.5rem 1.25rem;font-weight:500;font-size:0.9375rem;transition:background 0.2s ease,transform 0.2s ease;text-decoration:none;"
+                   class="hidden md:inline-block"
+                   onmouseover="this.style.background='#1E293B';this.style.transform='translateY(-1px)'"
+                   onmouseout="this.style.background='#0F172A';this.style.transform='translateY(0)'">
+                    Get a Free Quote
+                </a>
+
+                <!-- Mobile menu toggle -->
+                <button id="mobile-menu-btn" style="background:none;border:none;cursor:pointer;padding:0.5rem;border-radius:0.5rem;color:#334155;" class="md:hidden" aria-label="Toggle menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-800 mt-4">
-                <a href="index.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Home</a>
-                <a href="about.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">About</a>
-                <a href="services.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Services</a>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4" style="border-top:1px solid #E2E8F0;margin-top:0.5rem;">
+                <a href="index.html" style="color:#334155;" class="block py-2 px-4 rounded-lg hover:bg-white">Home</a>
+                <a href="about.html" style="color:#334155;" class="block py-2 px-4 rounded-lg hover:bg-white">About</a>
+                <a href="services.html" style="color:#334155;" class="block py-2 px-4 rounded-lg hover:bg-white">Services</a>
                 <details>
-                    <summary class="flex justify-between items-center py-2 px-4 rounded-lg hover:bg-gray-800 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <summary style="color:#334155;" class="flex justify-between items-center py-2 px-4 rounded-lg hover:bg-white cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                         <span>Solutions</span>
                         <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                     </summary>
                     <div class="pl-4 space-y-1 pb-2">
-                        <a href="solutions.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800 text-sm text-gray-300">Solutions by Business Type</a>
-                        <a href="solutions.html#industries" class="block py-2 px-4 rounded-lg hover:bg-gray-800 text-sm text-gray-300">Industries We Serve</a>
-                        <a href="solutions.html#saas" class="block py-2 px-4 rounded-lg hover:bg-gray-800 text-sm text-gray-300">SaaS &amp; Custom Platforms</a>
+                        <a href="solutions.html" style="color:#64748B;" class="block py-2 px-4 rounded-lg hover:bg-white text-sm">Solutions by Business Type</a>
+                        <a href="solutions.html#industries" style="color:#64748B;" class="block py-2 px-4 rounded-lg hover:bg-white text-sm">Industries We Serve</a>
+                        <a href="solutions.html#saas" style="color:#64748B;" class="block py-2 px-4 rounded-lg hover:bg-white text-sm">SaaS &amp; Custom Platforms</a>
                     </div>
                 </details>
-                <a href="pricing.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Pricing</a>
-                <a href="portfolio.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Portfolio</a>
-                <a href="blog/index.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Blog</a>
-                <a href="contact.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Contact</a>
-                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" class="block mt-2 px-6 py-2 rounded-lg bg-white text-gray-900 text-center font-medium">Get a Free Quote</a>
+                <a href="pricing.html" style="color:#334155;" class="block py-2 px-4 rounded-lg hover:bg-white">Pricing</a>
+                <a href="portfolio.html" style="color:#334155;" class="block py-2 px-4 rounded-lg hover:bg-white">Portfolio</a>
+                <a href="blog/index.html" style="color:#334155;" class="block py-2 px-4 rounded-lg hover:bg-white">Blog</a>
+                <a href="contact.html" style="color:#334155;" class="block py-2 px-4 rounded-lg hover:bg-white">Contact</a>
+                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener"
+                   style="display:block;margin-top:0.75rem;padding:0.625rem 1.5rem;border-radius:0.5rem;background:#0F172A;color:#fff;text-align:center;font-weight:500;text-decoration:none;">
+                    Get a Free Quote
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="max-w-7xl mx-auto text-center space-y-8 animate-fade-in">
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight">Web designer in <span class="gradient-text">Nairobi</span> — fast, affordable, built to get you found.</h1>
-            <p class="text-xl text-gray-400 max-w-3xl mx-auto">Get a professional, mobile-ready website from KES 31,500. Serving businesses in Nairobi and across Kenya. Transparent pricing, no hidden costs.</p>
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight text-gray-900">Web designer in <span class="gradient-text">Nairobi</span> — fast, affordable, built to get you found.</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Get a professional, mobile-ready website from KES 31,500. Serving businesses in Nairobi and across Kenya. Transparent pricing, no hidden costs.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="pricing.html" class="px-8 py-4 rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium">See our prices</a>
-                <a href="portfolio.html" class="px-8 py-4 rounded-lg border border-gray-700 hover:border-white hover:bg-gray-800/50 transition-all duration-300 font-medium">View our work</a>
+                <a href="pricing.html" class="px-8 py-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-300 font-semibold">See our prices</a>
+                <a href="portfolio.html" class="px-8 py-4 rounded-full border border-slate-300 hover:border-blue-500 hover:bg-blue-50 hover:text-blue-700 text-gray-800 transition-all duration-300 font-semibold">View our work</a>
             </div>
             <!-- Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-gray-700">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-slate-200">
                 <div>
-                    <p class="text-4xl font-bold text-white"><span class="counter" data-target="34">0</span>+</p>
-                    <p class="text-gray-400">live websites delivered</p>
+                    <p class="text-4xl font-bold text-blue-600"><span class="counter" data-target="34">0</span>+</p>
+                    <p class="text-gray-600 font-medium">live websites delivered</p>
                 </div>
                 <div>
-                    <p class="text-4xl font-bold text-white"><span class="counter" data-target="6">0</span>+</p>
-                    <p class="text-gray-400">years of experience</p>
+                    <p class="text-4xl font-bold text-gray-900"><span class="counter" data-target="6">0</span>+</p>
+                    <p class="text-gray-600 font-medium">years of experience</p>
                 </div>
                 <div>
-                    <p class="text-4xl font-bold text-white"><span class="counter" data-target="20">0</span></p>
-                    <p class="text-gray-400">industries served</p>
+                    <p class="text-4xl font-bold text-blue-600"><span class="counter" data-target="20">0</span></p>
+                    <p class="text-gray-600 font-medium">industries served</p>
                 </div>
                 <div>
-                    <p class="text-4xl font-bold text-white"><span class="counter" data-target="5">0</span></p>
-                    <p class="text-gray-400">core services offered</p>
+                    <p class="text-4xl font-bold text-gray-900"><span class="counter" data-target="5">0</span></p>
+                    <p class="text-gray-600 font-medium">core services offered</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Trust strip -->
-    <section class="py-10 px-4 sm:px-6 lg:px-8 bg-gray-800/60 border-y border-gray-700">
+    <section class="py-10 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-200">
         <div class="max-w-7xl mx-auto text-center">
-            <p class="text-gray-400 uppercase text-sm font-semibold tracking-widest mb-6">Trusted by businesses in Nairobi &amp; across Kenya</p>
-            <div class="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-400">
-                <span class="px-4 py-2 rounded-full border border-gray-700">Real estate</span>
-                <span class="px-4 py-2 rounded-full border border-gray-700">Legal &amp; professional services</span>
-                <span class="px-4 py-2 rounded-full border border-gray-700">Logistics &amp; transport</span>
-                <span class="px-4 py-2 rounded-full border border-gray-700">Healthcare</span>
-                <span class="px-4 py-2 rounded-full border border-gray-700">Retail &amp; e-commerce</span>
-                <span class="px-4 py-2 rounded-full border border-gray-700">Hospitality &amp; tourism</span>
+            <p class="text-gray-500 uppercase text-sm font-semibold tracking-widest mb-6">Trusted by businesses in Nairobi &amp; across Kenya</p>
+            <div class="flex flex-wrap justify-center items-center gap-4 text-sm text-slate-800 font-medium">
+                <span class="px-4 py-2 rounded-full bg-slate-50 border border-slate-300">Real estate</span>
+                <span class="px-4 py-2 rounded-full bg-slate-50 border border-slate-300">Legal &amp; professional services</span>
+                <span class="px-4 py-2 rounded-full bg-slate-50 border border-slate-300">Logistics &amp; transport</span>
+                <span class="px-4 py-2 rounded-full bg-slate-50 border border-slate-300">Healthcare</span>
+                <span class="px-4 py-2 rounded-full bg-slate-50 border border-slate-300">Retail &amp; e-commerce</span>
+                <span class="px-4 py-2 rounded-full bg-slate-50 border border-slate-300">Hospitality &amp; tourism</span>
             </div>
         </div>
     </section>
 
     <!-- Services -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 rounded-full border border-white/20 text-white font-medium mb-4">What we do</span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Everything your business needs online</h2>
-                <p class="text-xl text-gray-400">Fast websites, real SEO, M-Pesa-ready stores — all at prices small businesses across Kenya can actually afford.</p>
+                <span class="inline-block px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-sm font-semibold mb-4">What we do</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Everything your business needs online</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Fast websites, real SEO, M-Pesa-ready stores — all at prices small businesses across Kenya can actually afford.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Web Design -->
-                <div class="bg-gray-800/70 border border-gray-700 rounded-3xl p-8 space-y-4 hover:border-white transition-all duration-300">
-                    <div class="inline-block p-3 rounded-full bg-white/10 text-white">
+                <div class="bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 rounded-3xl p-8 space-y-4 transition-all duration-300 flex flex-col group">
+                    <div class="inline-block p-3.5 rounded-2xl bg-blue-50 text-blue-600 border border-blue-100 w-fit">
                         <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
                     </div>
-                    <h3 class="text-2xl font-bold">Web Design &amp; Development</h3>
-                    <p class="text-gray-400">Mobile-first websites that load fast, rank on Google, and turn visitors into customers. Delivered in days, not months.</p>
-                    <a href="services.html" class="inline-flex items-center gap-2 text-white hover:text-gray-300 font-medium">Learn more <span aria-hidden="true">→</span></a>
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Web Design &amp; Development</h3>
+                    <p class="text-gray-600 flex-grow">Mobile-first websites that load fast, rank on Google, and turn visitors into customers. Delivered in days, not months.</p>
+                    <a href="services.html" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-1 transition-transform">Learn more <span aria-hidden="true">&rarr;</span></a>
                 </div>
                 <!-- E-commerce -->
-                <div class="bg-gray-800/70 border border-gray-700 rounded-3xl p-8 space-y-4 hover:border-white transition-all duration-300">
-                    <div class="inline-block p-3 rounded-full bg-white/10 text-white">
+                <div class="bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 rounded-3xl p-8 space-y-4 transition-all duration-300 flex flex-col group">
+                    <div class="inline-block p-3.5 rounded-2xl bg-blue-50 text-blue-600 border border-blue-100 w-fit">
                         <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
                     </div>
-                    <h3 class="text-2xl font-bold">E-commerce &amp; M-Pesa Stores</h3>
-                    <p class="text-gray-400">Online stores built for the Kenyan market — M-Pesa (Daraja) integration, product management, and a checkout your customers trust.</p>
-                    <a href="services.html" class="inline-flex items-center gap-2 text-white hover:text-gray-300 font-medium">Learn more <span aria-hidden="true">→</span></a>
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">E-commerce &amp; M-Pesa Stores</h3>
+                    <p class="text-gray-600 flex-grow">Online stores built for the Kenyan market — M-Pesa (Daraja) integration, product management, and a checkout your customers trust.</p>
+                    <a href="services.html" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-1 transition-transform">Learn more <span aria-hidden="true">&rarr;</span></a>
                 </div>
                 <!-- SEO -->
-                <div class="bg-gray-800/70 border border-gray-700 rounded-3xl p-8 space-y-4 hover:border-white transition-all duration-300">
-                    <div class="inline-block p-3 rounded-full bg-white/10 text-white">
+                <div class="bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 rounded-3xl p-8 space-y-4 transition-all duration-300 flex flex-col group">
+                    <div class="inline-block p-3.5 rounded-2xl bg-blue-50 text-blue-600 border border-blue-100 w-fit">
                         <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="8 11 11 8 14 11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
                     </div>
-                    <h3 class="text-2xl font-bold">SEO, GEO &amp; AEO</h3>
-                    <p class="text-gray-400">Basic SEO is included in every package. We also build in GEO and AEO — structured data and FAQ schema that help you get recommended by ChatGPT, Gemini and Claude, not just found on Google.</p>
-                    <a href="services.html" class="inline-flex items-center gap-2 text-white hover:text-gray-300 font-medium">Learn more <span aria-hidden="true">→</span></a>
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">SEO, GEO &amp; AEO</h3>
+                    <p class="text-gray-600 flex-grow">Basic SEO is included in every package. We also build in GEO and AEO — structured data and FAQ schema that help you get recommended by ChatGPT, Gemini and Claude, not just found on Google.</p>
+                    <a href="services.html" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-1 transition-transform">Learn more <span aria-hidden="true">&rarr;</span></a>
                 </div>
                 <!-- Social Media Management -->
-                <div class="bg-gray-800/70 border border-gray-700 rounded-3xl p-8 space-y-4 hover:border-white transition-all duration-300">
-                    <div class="inline-block p-3 rounded-full bg-white/10 text-white">
+                <div class="bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 rounded-3xl p-8 space-y-4 transition-all duration-300 flex flex-col group">
+                    <div class="inline-block p-3.5 rounded-2xl bg-blue-50 text-blue-600 border border-blue-100 w-fit">
                         <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0V4z"/><path d="M17 5h3a2 2 0 01-2 4M7 5H4a2 2 0 002 4"/></svg>
                     </div>
-                    <h3 class="text-2xl font-bold">Social Media Management</h3>
-                    <p class="text-gray-400">Monthly packages covering flyers, weekly posts, reels and website banners — grow your brand with consistent, professional content. From KES 10,000/month.</p>
-                    <a href="services.html#social-media-management" class="inline-flex items-center gap-2 text-white hover:text-gray-300 font-medium">Learn more <span aria-hidden="true">→</span></a>
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Social Media Management</h3>
+                    <p class="text-gray-600 flex-grow">Monthly packages covering flyers, weekly posts, reels and website banners — grow your brand with consistent, professional content. From KES 10,000/month.</p>
+                    <a href="services.html#social-media-management" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-1 transition-transform">Learn more <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </div>
             <div class="text-center mt-12">
-                <a href="services.html" class="inline-block px-8 py-4 rounded-full border border-white/20 hover:bg-white/10 transition-all duration-300 font-medium text-white">See all services</a>
+                <a href="services.html" class="inline-block px-8 py-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300">See all services</a>
             </div>
         </div>
     </section>
 
-    <!-- Case studies (replaces AI-placeholder 4-card grid) -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/40">
+    <!-- Case studies -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
-                <span class="inline-block px-4 py-2 rounded-full border border-white/20 text-white font-medium mb-4">Real work, real results</span>
-                <h2 class="text-3xl md:text-4xl font-bold mb-3">A sample of what we've built</h2>
-                <p class="text-gray-400">Every site below is live and serving real customers across Kenya.</p>
+                <span class="inline-block px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-sm font-semibold mb-4">Real work, real results</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">A sample of what we've built</h2>
+                <p class="text-gray-600">Every site below is live and serving real customers across Kenya.</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Case study 1: Irene Muendo Isuzu -->
-                <div class="rounded-3xl border border-white/10 bg-gray-900/80 overflow-hidden hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <img src="assets/images/case-studies/irene-muendo-isuzu.png" alt="Irene Muendo Isuzu website — Isuzu truck and vehicle dealership in Kenya" class="h-44 w-full object-cover object-top">
+                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 flex flex-col overflow-hidden group">
+                    <img src="assets/images/case-studies/irene-muendo-isuzu.png" alt="Irene Muendo Isuzu website — Isuzu truck and vehicle dealership in Kenya" class="h-44 w-full object-cover object-top border-b border-slate-100">
                     <div class="p-5 space-y-2 flex flex-col flex-grow">
-                        <span class="inline-block px-2 py-0.5 rounded text-xs font-semibold border border-white/20 text-white/60 w-fit">Automotive</span>
-                        <h3 class="font-bold">Irene Muendo Isuzu</h3>
-                        <p class="text-sm text-gray-400 flex-grow">Isuzu dealership site showcasing vehicle range, financing info, and a WhatsApp inquiry button to drive showroom visits.</p>
-                        <a href="https://irenemuendoisuzu.co.ke/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-white/70 hover:text-white transition-colors">View live site <span aria-hidden="true">→</span></a>
+                        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 border border-blue-100 text-blue-700 w-fit">Automotive</span>
+                        <h3 class="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Irene Muendo Isuzu</h3>
+                        <p class="text-sm text-gray-600 flex-grow">Isuzu dealership site showcasing vehicle range, financing info, and a WhatsApp inquiry button to drive showroom visits.</p>
+                        <a href="https://irenemuendoisuzu.co.ke/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">View live site <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </div>
                 <!-- Case study 2: SMA Advocates -->
-                <div class="rounded-3xl border border-white/10 bg-gray-900/80 overflow-hidden hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <img src="assets/images/case-studies/sma-advocates.png" alt="SMA Advocates website — Nairobi law firm" class="h-44 w-full object-cover object-top">
+                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 flex flex-col overflow-hidden group">
+                    <img src="assets/images/case-studies/sma-advocates.png" alt="SMA Advocates website — Nairobi law firm" class="h-44 w-full object-cover object-top border-b border-slate-100">
                     <div class="p-5 space-y-2 flex flex-col flex-grow">
-                        <span class="inline-block px-2 py-0.5 rounded text-xs font-semibold border border-white/20 text-white/60 w-fit">Legal</span>
-                        <h3 class="font-bold">SMA Advocates</h3>
-                        <p class="text-sm text-gray-400 flex-grow">Professional law firm site with practice areas, team bios, and online client inquiry form.</p>
-                        <a href="https://smaadvocates.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-white/70 hover:text-white transition-colors">View live site <span aria-hidden="true">→</span></a>
+                        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 border border-blue-100 text-blue-700 w-fit">Legal</span>
+                        <h3 class="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">SMA Advocates</h3>
+                        <p class="text-sm text-gray-600 flex-grow">Professional law firm site with practice areas, team bios, and online client inquiry form.</p>
+                        <a href="https://smaadvocates.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">View live site <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </div>
                 <!-- Case study 3: Sage Beans Export -->
-                <div class="rounded-3xl border border-white/10 bg-gray-900/80 overflow-hidden hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <img src="assets/images/case-studies/sage-beans.png" alt="Sage Beans Export website — yellow bean agricultural exporter, Kajiado Kenya" class="h-44 w-full object-cover object-top">
+                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 flex flex-col overflow-hidden group">
+                    <img src="assets/images/case-studies/sage-beans.png" alt="Sage Beans Export website — yellow bean agricultural exporter, Kajiado Kenya" class="h-44 w-full object-cover object-top border-b border-slate-100">
                     <div class="p-5 space-y-2 flex flex-col flex-grow">
-                        <span class="inline-block px-2 py-0.5 rounded text-xs font-semibold border border-white/20 text-white/60 w-fit">Agri-Export</span>
-                        <h3 class="font-bold">Sage Beans Export</h3>
-                        <p class="text-sm text-gray-400 flex-grow">Agricultural export site with product detail pages and a global partnership inquiry flow, built for Kajiado.</p>
-                        <a href="https://sagebeans.co.ke/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-white/70 hover:text-white transition-colors">View live site <span aria-hidden="true">→</span></a>
+                        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 border border-blue-100 text-blue-700 w-fit">Agri-Export</span>
+                        <h3 class="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Sage Beans Export</h3>
+                        <p class="text-sm text-gray-600 flex-grow">Agricultural export site with product detail pages and a global partnership inquiry flow, built for Kajiado.</p>
+                        <a href="https://sagebeans.co.ke/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">View live site <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </div>
                 <!-- Case study 4: Oncolink -->
-                <div class="rounded-3xl border border-white/10 bg-gray-900/80 overflow-hidden hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <img src="assets/images/case-studies/oncolink-kenya.png" alt="OncoLink Africa website — oncology professionals platform" class="h-44 w-full object-cover object-top">
+                <div class="rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 flex flex-col overflow-hidden group">
+                    <img src="assets/images/case-studies/oncolink-kenya.png" alt="OncoLink Africa website — oncology professionals platform" class="h-44 w-full object-cover object-top border-b border-slate-100">
                     <div class="p-5 space-y-2 flex flex-col flex-grow">
-                        <span class="inline-block px-2 py-0.5 rounded text-xs font-semibold border border-white/20 text-white/60 w-fit">Healthcare</span>
-                        <h3 class="font-bold">Oncolink Kenya</h3>
-                        <p class="text-sm text-gray-400 flex-grow">Patient-friendly healthcare portal with clear service listing and appointment request flow.</p>
-                        <a href="https://oncolink.co.ke/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-white/70 hover:text-white transition-colors">View live site <span aria-hidden="true">→</span></a>
+                        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 border border-blue-100 text-blue-700 w-fit">Healthcare</span>
+                        <h3 class="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Oncolink Kenya</h3>
+                        <p class="text-sm text-gray-600 flex-grow">Patient-friendly healthcare portal with clear service listing and appointment request flow.</p>
+                        <a href="https://oncolink.co.ke/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">View live site <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-10">
-                <a href="portfolio.html" class="inline-block px-8 py-4 rounded-full border border-white/20 hover:bg-white/10 transition-all duration-300 font-medium text-white">See all 120+ projects</a>
+            <div class="text-center mt-12">
+                <a href="portfolio.html" class="inline-block px-8 py-4 rounded-full border border-slate-300 text-gray-800 hover:bg-slate-50 transition-all duration-300 font-semibold">See all 120+ projects</a>
             </div>
         </div>
     </section>
 
     <!-- Why choose us -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 rounded-full border border-white/20 text-white font-medium mb-4">Why choose us</span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Why local businesses choose Xclusive Tech</h2>
-                <p class="text-xl text-gray-400">We built over 34 websites for Kenyan businesses. Here's what we consistently deliver.</p>
+                <span class="inline-block px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-sm font-semibold mb-4">Why choose us</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why local businesses choose Xclusive Tech</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We built over 34 websites for Kenyan businesses. Here's what we consistently deliver.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="space-y-4">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-300 transition-all">
                     <div class="flex gap-4">
-                        <div class="text-white flex-shrink-0 mt-1">
-                            <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center shrink-0">
+                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold mb-2">Fast-loading, mobile-first</h3>
-                            <p class="text-gray-400">Over 80% of Kenyan internet users are on mobile. Every site we build is optimised for phones first, then desktop.</p>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Fast-loading, mobile-first</h3>
+                            <p class="text-gray-600">Over 80% of Kenyan internet users are on mobile. Every site we build is optimised for phones first, then desktop.</p>
                         </div>
                     </div>
                 </div>
-                <div class="space-y-4">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-300 transition-all">
                     <div class="flex gap-4">
-                        <div class="text-white flex-shrink-0 mt-1">
-                            <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="8 11 11 8 14 11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center shrink-0">
+                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="8 11 11 8 14 11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold mb-2">SEO included as standard</h3>
-                            <p class="text-gray-400">Every package includes basic on-page SEO so your site shows up when customers search for your business in Nairobi and Kenya.</p>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">SEO included as standard</h3>
+                            <p class="text-gray-600">Every package includes basic on-page SEO so your site shows up when customers search for your business in Nairobi and Kenya.</p>
                         </div>
                     </div>
                 </div>
-                <div class="space-y-4">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-300 transition-all">
                     <div class="flex gap-4">
-                        <div class="text-white flex-shrink-0 mt-1">
-                            <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center shrink-0">
+                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold mb-2">Built to get customers</h3>
-                            <p class="text-gray-400">Design decisions are driven by conversions — clear calls-to-action, WhatsApp buttons, and contact forms that actually get used.</p>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Built to get customers</h3>
+                            <p class="text-gray-600">Design decisions are driven by conversions — clear calls-to-action, WhatsApp buttons, and contact forms that actually get used.</p>
                         </div>
                     </div>
                 </div>
-                <div class="space-y-4">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-blue-300 transition-all">
                     <div class="flex gap-4">
-                        <div class="text-white flex-shrink-0 mt-1">
-                            <svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center shrink-0">
+                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold mb-2">Packages built around you</h3>
-                            <p class="text-gray-400">Our published packages are a starting point, not a fixed menu. Tell us what your business actually needs and we'll shape the scope, and the price, around it.</p>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Packages built around you</h3>
+                            <p class="text-gray-600">Our published packages are a starting point, not a fixed menu. Tell us what your business actually needs and we'll shape the scope, and the price, around it.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-12 space-x-4">
-                <a href="pricing.html" class="inline-block px-8 py-4 rounded-full bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium">See our prices</a>
-                <a href="portfolio.html" class="inline-block px-8 py-4 rounded-full border border-white/20 hover:bg-white/10 transition-all duration-300 font-medium">See our work</a>
+                <a href="pricing.html" class="inline-block px-8 py-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all duration-300 font-semibold">See our prices</a>
+                <a href="portfolio.html" class="inline-block px-8 py-4 rounded-full border border-slate-300 hover:border-blue-500 hover:bg-blue-50 hover:text-blue-700 text-gray-800 transition-all duration-300 font-semibold">See our work</a>
             </div>
         </div>
     </section>
 
     <!-- Pricing teaser -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
-                <span class="inline-block px-4 py-2 rounded-full border border-white/20 text-white font-medium mb-4">Transparent pricing</span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">How much does a website cost in Kenya?</h2>
-                <p class="text-xl text-gray-400">Published prices. No hidden costs. Domain and hosting are separate and listed clearly.</p>
+                <span class="inline-block px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-sm font-semibold mb-4">Transparent pricing</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How much does a website cost in Kenya?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Published prices. No hidden costs. Domain and hosting are separate and listed clearly.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                 <!-- Starter Site -->
-                <div class="glassmorphism-card p-8 rounded-2xl border border-white/10 flex flex-col gap-4">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 flex flex-col gap-4">
                     <div>
-                        <p class="text-sm text-gray-400 font-semibold uppercase tracking-widest mb-1">Starter Site</p>
-                        <p class="text-3xl font-bold">KES 31,500–45,500</p>
-                        <p class="text-sm text-gray-400 mt-1">One-time cost &bull; ~2–3 week delivery</p>
+                        <p class="text-sm text-blue-600 font-semibold uppercase tracking-widest mb-1">Starter Site</p>
+                        <p class="text-3xl font-extrabold text-gray-900">KES 31,500–45,500</p>
+                        <p class="text-sm text-gray-500 mt-1">One-time cost &bull; ~2–3 week delivery</p>
                     </div>
-                    <ul class="space-y-2 text-sm text-gray-300 flex-grow">
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Up to 5 pages, mobile-responsive</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Basic SEO included</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Contact form + WhatsApp button</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>1 month free support</li>
+                    <ul class="space-y-2 text-sm text-gray-700 flex-grow">
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Up to 5 pages, mobile-responsive</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Basic SEO included</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Contact form + WhatsApp button</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>1 month free support</li>
                     </ul>
-                    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27m%20interested%20in%20the%20Starter%20Site%20package." target="_blank" class="block text-center px-6 py-3 rounded-lg border border-white/20 hover:bg-white/10 transition-all font-medium text-sm">Get a quote on WhatsApp</a>
+                    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27m%20interested%20in%20the%20Starter%20Site%20package." target="_blank" class="block text-center px-6 py-3 rounded-xl border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition-all font-semibold text-sm text-gray-800">Get a quote on WhatsApp</a>
                 </div>
                 <!-- Business Growth -->
-                <div class="glassmorphism-card p-8 rounded-2xl border-2 border-white/40 flex flex-col gap-4 relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-gray-900 px-4 py-1 rounded-full text-xs font-bold">MOST POPULAR</div>
+                <div class="bg-white p-8 rounded-3xl border-2 border-blue-500 shadow-xl flex flex-col gap-4 relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">MOST POPULAR</div>
                     <div>
-                        <p class="text-sm text-gray-400 font-semibold uppercase tracking-widest mb-1">Business Growth</p>
-                        <p class="text-3xl font-bold">KES 49,000–62,000</p>
-                        <p class="text-sm text-gray-400 mt-1">One-time cost &bull; ~3–5 week delivery</p>
+                        <p class="text-sm text-blue-600 font-semibold uppercase tracking-widest mb-1">Business Growth</p>
+                        <p class="text-3xl font-extrabold text-gray-900">KES 49,000–62,000</p>
+                        <p class="text-sm text-gray-500 mt-1">One-time cost &bull; ~3–5 week delivery</p>
                     </div>
-                    <ul class="space-y-2 text-sm text-gray-300 flex-grow">
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Up to 15 pages, custom design</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>CMS for blog/news + advanced SEO</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Social media integration</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>3 months free support</li>
+                    <ul class="space-y-2 text-sm text-gray-700 flex-grow">
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Up to 15 pages, custom design</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>CMS for blog/news + advanced SEO</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Social media integration</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>3 months free support</li>
                     </ul>
-                    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27m%20interested%20in%20the%20Business%20Growth%20package." target="_blank" class="block text-center px-6 py-3 rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all font-medium text-sm">Get a quote on WhatsApp</a>
+                    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27m%20interested%20in%20the%20Business%20Growth%20package." target="_blank" class="block text-center px-6 py-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition-all font-bold text-sm shadow-md hover:shadow-lg">Get a quote on WhatsApp</a>
                 </div>
                 <!-- E-commerce Pro -->
-                <div class="glassmorphism-card p-8 rounded-2xl border border-white/10 flex flex-col gap-4">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 flex flex-col gap-4">
                     <div>
-                        <p class="text-sm text-gray-400 font-semibold uppercase tracking-widest mb-1">E-commerce Pro</p>
-                        <p class="text-3xl font-bold">KES 72,000–85,000</p>
-                        <p class="text-sm text-gray-400 mt-1">One-time cost &bull; ~5–7 week delivery</p>
+                        <p class="text-sm text-blue-600 font-semibold uppercase tracking-widest mb-1">E-commerce Pro</p>
+                        <p class="text-3xl font-extrabold text-gray-900">KES 72,000–85,000</p>
+                        <p class="text-sm text-gray-500 mt-1">One-time cost &bull; ~5–7 week delivery</p>
                     </div>
-                    <ul class="space-y-2 text-sm text-gray-300 flex-grow">
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Unlimited products + inventory</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Secure M-Pesa (Daraja) checkout</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Customer accounts</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>6 months priority support</li>
+                    <ul class="space-y-2 text-sm text-gray-700 flex-grow">
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Unlimited products + inventory</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Secure M-Pesa (Daraja) checkout</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Customer accounts</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>6 months priority support</li>
                     </ul>
-                    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27m%20interested%20in%20the%20E-commerce%20Pro%20package." target="_blank" class="block text-center px-6 py-3 rounded-lg border border-white/20 hover:bg-white/10 transition-all font-medium text-sm">Get a quote on WhatsApp</a>
+                    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27m%20interested%20in%20the%20E-commerce%20Pro%20package." target="_blank" class="block text-center px-6 py-3 rounded-xl border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition-all font-semibold text-sm text-gray-800">Get a quote on WhatsApp</a>
                 </div>
                 <!-- Custom Solutions -->
-                <div class="glassmorphism-card p-8 rounded-2xl border border-white/10 flex flex-col gap-4">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 flex flex-col gap-4">
                     <div>
-                        <p class="text-sm text-gray-400 font-semibold uppercase tracking-widest mb-1">Custom Solutions</p>
-                        <p class="text-3xl font-bold">From KES 85,000+</p>
-                        <p class="text-sm text-gray-400 mt-1">Scoped &amp; quoted per project</p>
+                        <p class="text-sm text-blue-600 font-semibold uppercase tracking-widest mb-1">Custom Solutions</p>
+                        <p class="text-3xl font-extrabold text-gray-900">From KES 85,000+</p>
+                        <p class="text-sm text-gray-500 mt-1">Scoped &amp; quoted per project</p>
                     </div>
-                    <ul class="space-y-2 text-sm text-gray-300 flex-grow">
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Custom features + API integrations</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Scalable architecture</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dedicated project manager</li>
-                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ongoing maintenance &amp; SLA</li>
+                    <ul class="space-y-2 text-sm text-gray-700 flex-grow">
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Custom features + API integrations</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Scalable architecture</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dedicated project manager</li>
+                        <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ongoing maintenance &amp; SLA</li>
                     </ul>
-                    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20custom%20quote%20for%20a%20bespoke%20web%20project." target="_blank" class="block text-center px-6 py-3 rounded-lg border border-white/20 hover:bg-white/10 transition-all font-medium text-sm">Request a Quote</a>
+                    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20custom%20quote%20for%20a%20bespoke%20web%20project." target="_blank" class="block text-center px-6 py-3 rounded-xl border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition-all font-semibold text-sm text-gray-800">Request a Quote</a>
                 </div>
             </div>
             <div class="text-center">
-                <p class="text-gray-400 text-sm mb-4">Domain and hosting are separate costs — we'll explain everything upfront. No surprises.</p>
-                <a href="pricing.html" class="inline-block px-8 py-4 rounded-full bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium">See full pricing and what's included</a>
+                <p class="text-gray-600 text-sm mb-4">Domain and hosting are separate costs — we'll explain everything upfront. No surprises.</p>
+                <a href="pricing.html" class="inline-block px-8 py-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg">See full pricing and what's included</a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 rounded-full border border-white/20 text-white font-medium mb-4">Client reviews</span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">What our clients say</h2>
+                <span class="inline-block px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-sm font-semibold mb-4">Client reviews</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What our clients say</h2>
                 <div class="flex items-center justify-center gap-2 mb-4">
                     <span class="flex gap-0.5">
                         <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -485,29 +513,29 @@
                         <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </span>
-                    <span class="text-gray-400 text-sm">Highly rated by our clients</span>
+                    <span class="text-gray-600 text-sm font-medium">Highly rated by our clients</span>
                 </div>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-900/70 border border-gray-700 rounded-3xl p-8 space-y-4">
-                    <p class="text-gray-300">"Xclusive Tech transformed our online presence. The website is professional, fast, and has already brought in new client inquiries we wouldn't have had otherwise."</p>
+                <div class="bg-white border border-slate-200 shadow-sm rounded-3xl p-8 space-y-4">
+                    <p class="text-gray-700 leading-relaxed">"Xclusive Tech transformed our online presence. The website is professional, fast, and has already brought in new client inquiries we wouldn't have had otherwise."</p>
                     <div>
-                        <p class="font-bold">Alex Mwangi</p>
-                        <p class="text-sm text-gray-400">Law Firm Owner</p>
+                        <p class="font-bold text-gray-900">Alex Mwangi</p>
+                        <p class="text-sm text-gray-500">Law Firm Owner</p>
                     </div>
                 </div>
-                <div class="bg-gray-900/70 border border-gray-700 rounded-3xl p-8 space-y-4">
-                    <p class="text-gray-300">"Outstanding work on our e-commerce platform. The M-Pesa integration works perfectly and our online sales have grown significantly since launch."</p>
+                <div class="bg-white border border-slate-200 shadow-sm rounded-3xl p-8 space-y-4">
+                    <p class="text-gray-700 leading-relaxed">"Outstanding work on our e-commerce platform. The M-Pesa integration works perfectly and our online sales have grown significantly since launch."</p>
                     <div>
-                        <p class="font-bold">Faith Njeri</p>
-                        <p class="text-sm text-gray-400">E-commerce Manager</p>
+                        <p class="font-bold text-gray-900">Faith Njeri</p>
+                        <p class="text-sm text-gray-500">E-commerce Manager</p>
                     </div>
                 </div>
-                <div class="bg-gray-900/70 border border-gray-700 rounded-3xl p-8 space-y-4">
-                    <p class="text-gray-300">"Best web design team we've worked with in Nairobi. They redesigned our website and our online leads picked up noticeably within the first month."</p>
+                <div class="bg-white border border-slate-200 shadow-sm rounded-3xl p-8 space-y-4">
+                    <p class="text-gray-700 leading-relaxed">"Best web design team we've worked with in Nairobi. They redesigned our website and our online leads picked up noticeably within the first month."</p>
                     <div>
-                        <p class="font-bold">Patricia Wambui</p>
-                        <p class="text-sm text-gray-400">Real Estate CEO</p>
+                        <p class="font-bold text-gray-900">Patricia Wambui</p>
+                        <p class="text-sm text-gray-500">Real Estate CEO</p>
                     </div>
                 </div>
             </div>
@@ -515,44 +543,44 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12">Common questions</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Common questions</h2>
             <div class="space-y-6">
-                <div class="glassmorphism-card p-6 rounded-xl border border-white/10">
-                    <h3 class="text-lg font-semibold mb-3">Who is the best, most affordable web designer in Nairobi?</h3>
-                    <p class="text-gray-400">Xclusive Tech is a web design and development company based in Nairobi and serving businesses across Kenya, known for transparent KES pricing and reliable delivery. We've built 120+ live websites for real businesses.</p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Who is the best, most affordable web designer in Nairobi?</h3>
+                    <p class="text-gray-600">Xclusive Tech is a web design and development company based in Nairobi and serving businesses across Kenya, known for transparent KES pricing and reliable delivery. We've built 120+ live websites for real businesses.</p>
                 </div>
-                <div class="glassmorphism-card p-6 rounded-xl border border-white/10">
-                    <h3 class="text-lg font-semibold mb-3">Why choose Xclusive Tech over other web design companies in Kenya?</h3>
-                    <p class="text-gray-400">Published, transparent pricing with no hidden costs; fast delivery (typically 2–3 weeks); mobile-first design; and direct, reachable support on WhatsApp — not a call centre.</p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Why choose Xclusive Tech over other web design companies in Kenya?</h3>
+                    <p class="text-gray-600">Published, transparent pricing with no hidden costs; fast delivery (typically 2–3 weeks); mobile-first design; and direct, reachable support on WhatsApp — not a call centre.</p>
                 </div>
-                <div class="glassmorphism-card p-6 rounded-xl border border-white/10">
-                    <h3 class="text-lg font-semibold mb-3">Is Xclusive Tech affordable for a small business?</h3>
-                    <p class="text-gray-400">Yes. Full packages start from KES 31,500 — designed for small and growing businesses in Nairobi and across Kenya — and every package can be tailored to fit what your business actually needs.</p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Is Xclusive Tech affordable for a small business?</h3>
+                    <p class="text-gray-600">Yes. Full packages start from KES 31,500 — designed for small and growing businesses in Nairobi and across Kenya — and every package can be tailored to fit what your business actually needs.</p>
                 </div>
-                <div class="glassmorphism-card p-6 rounded-xl border border-white/10">
-                    <h3 class="text-lg font-semibold mb-3">Do you only serve Nairobi, or all of Kenya?</h3>
-                    <p class="text-gray-400">Nairobi is home base, but we serve businesses across Kenya, including a large share of firms in <a href="blog/web-design-for-businesses-in-kiambu-county.html" class="text-white underline hover:no-underline">Kiambu County</a> — Thika, Ruiru, Juja, Kikuyu, Limuru and Gatundu included.</p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Do you only serve Nairobi, or all of Kenya?</h3>
+                    <p class="text-gray-600">Nairobi is home base, but we serve businesses across Kenya, including a large share of firms in <a href="blog/web-design-for-businesses-in-kiambu-county.html" class="text-blue-600 underline font-semibold hover:text-blue-700">Kiambu County</a> — Thika, Ruiru, Juja, Kikuyu, Limuru and Gatundu included.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-white/5 to-gray-900 border-t border-gray-800">
-        <div class="max-w-4xl mx-auto text-center space-y-8">
-            <h2 class="text-4xl md:text-5xl font-bold">Ready to get your business online?</h2>
-            <p class="text-xl text-gray-400">Tell us what you need and we'll send you a quote within a few hours. No obligation, no pressure.</p>
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-50/80 via-white to-indigo-50/50 border border-blue-100 rounded-3xl p-10 sm:p-14 text-center shadow-lg space-y-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Ready to get your business online?</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Tell us what you need and we'll send you a quote within a few hours. No obligation, no pressure.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote%20for%20my%20website." target="_blank" class="px-8 py-4 rounded-full bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium">Get a free quote on WhatsApp</a>
-                <a href="pricing.html" class="px-8 py-4 rounded-full border border-white/20 hover:bg-white/10 transition-all duration-300 font-medium">See our prices first</a>
+                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote%20for%20my%20website." target="_blank" class="px-8 py-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-bold shadow-lg hover:shadow-xl">Get a free quote on WhatsApp &rarr;</a>
+                <a href="pricing.html" class="px-8 py-4 rounded-full border border-slate-300 text-gray-800 hover:bg-slate-50 transition-all duration-300 font-semibold">See our prices first</a>
             </div>
         </div>
     </section>
 
     <!-- Newsletter -->
-    <section class="py-14 px-4 sm:px-6 lg:px-8 bg-gray-800/40 border-t border-gray-800">
+    <section class="py-14 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
         <div class="max-w-2xl mx-auto text-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-2">Stay in the loop</h2>
             <p class="text-gray-400 mb-6">Occasional tips on getting more from your website — no spam, unsubscribe anytime.</p>
@@ -560,8 +588,8 @@
                 <input type="hidden" name="_subject" value="Newsletter signup from Xclusive Tech website">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="text" name="_honey" style="display:none">
-                <input type="email" name="email" placeholder="Your email address" required class="flex-grow px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-white focus:outline-none transition-colors text-white placeholder-gray-500">
-                <button type="submit" class="px-6 py-3 rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-300 font-medium whitespace-nowrap">Subscribe</button>
+                <input type="email" name="email" placeholder="Your email address" required class="flex-grow px-4 py-3 rounded-lg bg-white border border-slate-300 focus:border-blue-500 focus:outline-none transition-colors text-slate-900 placeholder-slate-400">
+                <button type="submit" class="px-6 py-3 rounded-lg bg-slate-900 text-white hover:bg-slate-700 transition-all duration-300 font-medium whitespace-nowrap">Subscribe</button>
             </form>
         </div>
     </section>

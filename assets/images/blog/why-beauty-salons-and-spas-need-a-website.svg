@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+    <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#831843"/>
+            <stop offset="60%" stop-color="#9D174D"/>
+            <stop offset="100%" stop-color="#090D16"/>
+        </linearGradient>
+        <linearGradient id="panelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="rgba(255, 255, 255, 0.08)"/>
+            <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)"/>
+        </linearGradient>
+        <radialGradient id="glow" cx="20%" cy="30%" r="60%">
+            <stop offset="0%" stop-color="#F472B6" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#F472B6" stop-opacity="0"/>
+        </radialGradient>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        </pattern>
+    </defs>
+
+    <!-- Background Base -->
+    <rect width="1200" height="630" fill="url(#bgGrad)"/>
+    <rect width="1200" height="630" fill="url(#grid)"/>
+    <circle cx="250" cy="200" r="350" fill="url(#glow)"/>
+
+    <!-- Header Brand Bar -->
+    <g transform="translate(70, 60)">
+        <rect width="36" height="36" rx="8" fill="#FFFFFF"/>
+        <path d="M 10 10 L 26 26 M 26 10 L 10 26" stroke="#0F172A" stroke-width="4.5" stroke-linecap="round"/>
+        <text x="48" y="25" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="900" letter-spacing="0.5">XCLUSIVE TECH</text>
+        <text x="210" y="25" fill="#F472B6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="2">KENYA</text>
+    </g>
+
+    <!-- Category / Tag Badge -->
+    <g transform="translate(70, 125)">
+        <rect width="270" height="32" rx="16" fill="rgba(255, 255, 255, 0.12)" stroke="#F472B6" stroke-width="1.2"/>
+        <circle cx="16" cy="16" r="4" fill="#F472B6"/>
+        <text x="28" y="21" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">WELLNESS &amp; GROOMING</text>
+    </g>
+
+    <!-- Main Title (Wrapped if long) -->
+    <g transform="translate(70, 200)">
+        <text x="0" y="30" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800" line-height="1.2">
+            <tspan x='0' dy='0'>Why Beauty Salons &amp; Spas in Kenya Need</tspan><tspan x='0' dy='48'> a Website</tspan>
+        </text>
+        <text x="0" y="115" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400">
+            <tspan x='0' dy='0'>Stop Managing Bookings in WhatsApp DMs: Automated Calendar</tspan><tspan x='0' dy='26'> &amp; Stylists</tspan>
+        </text>
+    </g>
+
+    <!-- Industry Pills Row -->
+    
+        <g transform="translate(70, 530)">
+            <rect width="228" height="42" rx="21" fill="rgba(255, 255, 255, 0.08)" stroke="#F472B6" stroke-width="1.5"/>
+            <circle cx="20" cy="21" r="5" fill="#F472B6"/>
+            <text x="34" y="26" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Stylist Portfolios</text>
+        </g>
+        
+        <g transform="translate(314, 530)">
+            <rect width="184" height="42" rx="21" fill="rgba(255, 255, 255, 0.08)" stroke="#F472B6" stroke-width="1.5"/>
+            <circle cx="20" cy="21" r="5" fill="#F472B6"/>
+            <text x="34" y="26" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Treatment Menu</text>
+        </g>
+        
+        <g transform="translate(514, 530)">
+            <rect width="239" height="42" rx="21" fill="rgba(255, 255, 255, 0.08)" stroke="#F472B6" stroke-width="1.5"/>
+            <circle cx="20" cy="21" r="5" fill="#F472B6"/>
+            <text x="34" y="26" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Automated Reminders</text>
+        </g>
+        
+        <g transform="translate(769, 530)">
+            <rect width="195" height="42" rx="21" fill="rgba(255, 255, 255, 0.08)" stroke="#F472B6" stroke-width="1.5"/>
+            <circle cx="20" cy="21" r="5" fill="#F472B6"/>
+            <text x="34" y="26" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Bridal Packages</text>
+        </g>
+        
+
+    <!-- Right Side Graphic Panel -->
+    
+        <rect x="760" y="80" width="380" height="470" rx="24" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="2"/>
+        <circle cx="795" cy="115" r="7" fill="#EF4444"/>
+        <circle cx="815" cy="115" r="7" fill="#F59E0B"/>
+        <circle cx="835" cy="115" r="7" fill="#10B981"/>
+        <rect x="860" y="103" width="250" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+        <text x="872" y="119" fill="#94A3B8" font-family="monospace" font-size="11">xclusivetech.co.ke/why-beauty-salons-and-spas-need-a-website</text>
+
+        <!-- Metric Cards Inside Panel -->
+        <g transform="translate(785, 155)">
+            <rect width="330" height="95" rx="16" fill="rgba(255,255,255,0.04)" stroke="#F472B6" stroke-width="1.5"/>
+            <text x="20" y="32" fill="#94A3B8" font-family="sans-serif" font-size="12" font-weight="600" letter-spacing="1">KEY METRIC / FOCUS</text>
+            <text x="20" y="68" fill="#FFFFFF" font-family="sans-serif" font-size="22" font-weight="800">Zero Missed Clients</text>
+            <circle cx="290" cy="48" r="18" fill="#F472B6" fill-opacity="0.15"/>
+            <text x="290" y="54" text-anchor="middle" fill="#F472B6" font-size="16" font-weight="900">&#10003;</text>
+        </g>
+
+        <g transform="translate(785, 265)">
+            <rect width="330" height="95" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+            <text x="20" y="32" fill="#94A3B8" font-family="sans-serif" font-size="12" font-weight="600" letter-spacing="1">KENYA PERFORMANCE</text>
+            <text x="20" y="68" fill="#F472B6" font-family="sans-serif" font-size="20" font-weight="800">Upfront Deposits</text>
+            <circle cx="290" cy="48" r="18" fill="rgba(255,255,255,0.1)"/>
+            <text x="290" y="54" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="900">&#8594;</text>
+        </g>
+
+        <!-- Guarantee Bar -->
+        <g transform="translate(785, 375)">
+            <rect width="330" height="135" rx="16" fill="url(#panelGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <text x="20" y="32" fill="#FFFFFF" font-family="sans-serif" font-size="15" font-weight="700">Kenyan SME Benchmark</text>
+            <text x="20" y="58" fill="#CBD5E1" font-family="sans-serif" font-size="13">Standard SEO, GEO &amp; AEO Architecture</text>
+            <text x="20" y="82" fill="#CBD5E1" font-family="sans-serif" font-size="13">Daraja M-Pesa Ready &#8226; Fast Turnaround</text>
+            <rect x="20" y="100" width="290" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+            <rect x="20" y="100" width="245" height="8" rx="4" fill="#F472B6"/>
+        </g>
+    
+</svg>

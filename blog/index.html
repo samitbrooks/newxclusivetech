@@ -36,14 +36,14 @@
     }
     </script>
 </head>
-<body class="bg-gray-900 text-white overflow-x-hidden">
+<body class="bg-white text-slate-900 overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-lg border-b border-gray-800 transition-all duration-300" id="navbar">
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <a href="../index.html" class="flex items-center gap-2">
-                    <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="h-10 w-auto">
+                <a href="../index.html" class="flex items-center gap-2" aria-label="Xclusive Tech home">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="h-10 w-auto">
                 </a>
                 <div class="hidden md:flex gap-8">
                     <a href="../index.html" class="nav-link">Home</a>
@@ -55,7 +55,7 @@
                             <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                         </button>
                         <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
-                            <div class="bg-gray-800 border border-gray-700 rounded-xl shadow-2xl py-2 w-60">
+                            <div class="bg-white border border-slate-200 rounded-xl shadow-2xl py-2 w-60">
                                 <a href="../solutions.html" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">Solutions by Business Type</a>
                                 <a href="../solutions.html#industries" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">Industries We Serve</a>
                                 <a href="../solutions.html#saas" class="block px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">SaaS &amp; Custom Platforms</a>
@@ -74,7 +74,7 @@
                     </svg>
                 </button>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-800 mt-4">
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-slate-200 mt-4">
                 <a href="../index.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Home</a>
                 <a href="../about.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">About</a>
                 <a href="../services.html" class="block py-2 px-4 rounded-lg hover:bg-gray-800">Services</a>
@@ -99,7 +99,7 @@
     </nav>
 
     <!-- Hero -->
-    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
         <div class="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight">The <span class="gradient-text">Xclusive Tech</span> Blog</h1>
             <p class="text-xl text-gray-400 max-w-2xl mx-auto">Practical web design, SEO, GEO and AEO advice for small businesses across Kenya.</p>
@@ -110,216 +110,309 @@
     <section class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
             <div id="post-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- POST_CARDS_START -->
-                <a href="web-design-for-businesses-in-kiambu-county.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">16 August 2026 &bull; Local</span>
-                    <h2 class="text-xl font-bold mb-2">Web Design for Businesses in Kiambu County</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Nairobi is home base, but a large share of the firms we build for are in Kiambu County — Thika, Ruiru, Juja, Kikuyu, Limuru and Gatundu included.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="web-design-for-businesses-in-kiambu-county.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/web-design-for-businesses-in-kiambu-county.svg" alt="Web design services in Kiambu County, Thika, Ruiru, Juja and Kikuyu Kenya" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Local SEO & Web Design</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Web Design for Businesses in Kiambu County</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Thika, Ruiru, Juja, Kikuyu, Limuru & Gatundu Growth Blueprint</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="how-long-does-it-take-to-build-a-website-in-kenya.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">16 August 2026 &bull; Advice</span>
-                    <h2 class="text-xl font-bold mb-2">How Long Does It Take to Build a Website in Kenya?</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A realistic breakdown of website delivery timelines by package, what actually slows a project down, and how to keep your build on schedule.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="how-long-does-it-take-to-build-a-website-in-kenya.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/how-long-does-it-take-to-build-a-website-in-kenya.svg" alt="Website development timeline and turnaround schedule in Kenya" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Website Delivery Timelines</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">How Long Does It Take to Build a Website in Kenya?</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Realistic Delivery Schedules, Phased Sprints & Launch Deadlines</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="website-vs-facebook-page-which-does-your-business-need.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">16 August 2026 &bull; Advice</span>
-                    <h2 class="text-xl font-bold mb-2">Website vs Facebook Page: Which Does Your Kenyan Business Need?</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A Facebook page feels like enough when you're starting out. Here's what it actually can't do, and why most growing businesses end up needing both.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="how-much-does-a-website-cost-in-kenya.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/how-much-does-a-website-cost-in-kenya.svg" alt="Website design cost and pricing packages in Kenya KES breakdown" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Web Design Pricing</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">How Much Does a Website Cost in Kenya?</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Clear Breakdown: Starter, Business Growth & Custom E-Commerce</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-photographers-and-videographers-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">16 August 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Photographers &amp; Videographers in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">An Instagram feed shows your best shots, but not your packages, pricing or availability. A website answers those questions upfront.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="how-much-does-social-media-management-cost-in-kenya.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/how-much-does-social-media-management-cost-in-kenya.svg" alt="Social media management pricing and monthly retainer cost in Kenya" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Digital Marketing Costs</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">How Much Does Social Media Management Cost in Kenya?</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Monthly Retainers, Content Calendars, Paid Meta Ads & ROI</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-driving-schools-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">14 August 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Driving Schools in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">"Driving school near me" is searched constantly, with almost no competition online in most areas — an easy win for the school that shows up.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="website-vs-facebook-page-which-does-your-business-need.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/website-vs-facebook-page-which-does-your-business-need.svg" alt="Comparison between custom website and Facebook business page for Kenyan SMEs" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Digital Strategy Guide</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Website vs Facebook Page: Which Does Your Kenyan Business Need?</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Why Relying Solely on Social Media Is Costing You Serious Revenue</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-car-dealerships-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">14 August 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Car Dealerships in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Car buyers browse stock and compare prices online before they ever visit a yard. If your stock isn't listed, you're not on that shortlist.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="geo-and-aeo-explained-getting-found-by-ai.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/geo-and-aeo-explained-getting-found-by-ai.svg" alt="Generative Engine Optimization GEO and AEO for AI search engines in Kenya" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">AI Search Optimization</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">GEO & AEO Explained: How to Get Found by ChatGPT & Claude</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Generative Engine Optimization & Answer Engine Optimization in Kenya</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-construction-and-contractors-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">14 August 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Construction &amp; Contracting Companies in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Referrals get a contractor in the room. A website is what a client checks before they hand over a deposit on a project worth millions.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-photographers-and-videographers-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-photographers-and-videographers-need-a-website.svg" alt="Web design for photographers and videographers in Kenya high resolution portfolio" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Creative & Media</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Photographers & Videographers in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">High-Res Client Galleries, Package Pricing & Direct Booking</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-insurance-agents-and-brokers-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">14 August 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Insurance Agents &amp; Brokers in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Insurance is sold on trust, and trust is researched online first. No website leaves the "are they legitimate?" question unanswered.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-driving-schools-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-driving-schools-need-a-website.svg" alt="Website development for driving schools in Kenya NTSA curriculum registration" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Education & Licensing</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Driving Schools in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Capture 'Driving School Near Me' Searches & Automate Student Signups</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-tour-and-safari-companies-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">14 August 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Tour &amp; Safari Companies in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Most safari clients book from another continent, months ahead of travel, comparing operators entirely online. If you're not a tab they have open, a competitor is.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-car-dealerships-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-car-dealerships-need-a-website.svg" alt="Car dealership website design and motor vehicle inventory management Kenya" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Automotive & Motor Yards</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Car Dealerships in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Live Inventory Search, Vehicle Specs, Trade-Ins & Financing Calculators</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="how-much-does-social-media-management-cost-in-kenya.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Services</span>
-                    <h2 class="text-xl font-bold mb-2">How Much Does Social Media Management Cost in Kenya?</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A transparent breakdown of social media management pricing in Kenya — what's included in Starter, Business and Premium packages, and how consistent content supports your SEO and AEO.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-real-estate-businesses-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-real-estate-businesses-need-a-website.svg" alt="Real estate website design in Kenya property listings and land sales" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Property & Developments</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Real Estate Businesses in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Nairobi Apartments, Gated Plots, Title Deed Trust & Virtual Tours</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-churches-and-ministries-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Churches &amp; Ministries in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A church website isn't about looking modern for its own sake — it's about making it easy for a first-time visitor to find you, and for your congregation to</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-clinics-and-healthcare-providers-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-clinics-and-healthcare-providers-need-a-website.svg" alt="Clinic and hospital healthcare website development Kenya SHA NHIF portal" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Healthcare & Medicine</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Clinics & Healthcare Providers in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Doctor Schedules, Online Appointments, NHIF/SHA Info & Lab Results</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-ngos-and-nonprofits-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why NGOs &amp; Non-Profits in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Donors, partners, and grant-makers research an organisation online before they commit funding. If your NGO has no website, that due-diligence step often en</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-law-firms-need-a-professional-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-law-firms-need-a-professional-website.svg" alt="Law firm website design Kenya advocates commissioner for oaths corporate law" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Legal & Corporate Law</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Law Firms in Kenya Need a Professional Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Establish Authority, Practice Areas, Partner Bios & Retainer Intakes</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-law-firms-need-a-professional-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Law Firms in Kenya Need a Professional Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Referrals built your law firm. But a prospective client researching a legal matter online, with no way to find you, is a client a competitor with a website</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-schools-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-schools-need-a-website.svg" alt="School website design Kenya CBC curriculum admissions fee structures" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Education & Academics</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Schools & Education Providers in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Admissions Portals, Term Calendars, Fee Structures & Parent Portals</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-clinics-and-healthcare-providers-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Clinics &amp; Healthcare Providers in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Patients research a provider online before they book — and a confusing or missing website adds friction at exactly the moment someone is already anxious ab</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-churches-and-ministries-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-churches-and-ministries-need-a-website.svg" alt="Church website design Kenya live sermon streaming M-Pesa paybill tithe" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Faith & Non-Profit</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Churches & Ministries in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Live Stream Broadcasts, Sermon Archives, M-Pesa Tithing & Ministries</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-schools-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Schools &amp; Education Providers in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Parents comparing schools do it online before they ever visit a campus. A school with no website, or an outdated one, quietly drops off that comparison lis</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-restaurants-and-cafes-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-restaurants-and-cafes-need-a-website.svg" alt="Restaurant and cafe website development Kenya digital QR menu table booking" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Food & Hospitality</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Restaurants & Cafes in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Direct Online Menus, Table Reservations, Event Bookings & Takeaway</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-hotels-and-hospitality-businesses-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Hotels &amp; Hospitality Businesses in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Every booking made through a third-party platform costs a commission. A direct booking through your own website doesn't.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-hotels-and-hospitality-businesses-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-hotels-and-hospitality-businesses-need-a-website.svg" alt="Hotel website design Kenya booking engine safari lodge resort bookings" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Hotels & Lodges</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Hotels & Hospitality Businesses in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Bypass 25% OTA Commissions with Direct Reservations & Safari Lodges</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-restaurants-and-cafes-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Restaurants &amp; Cafes in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A menu posted only on Instagram scrolls out of view within a day. A website menu doesn't.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-tour-and-safari-companies-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-tour-and-safari-companies-need-a-website.svg" alt="Tour and safari company web design Kenya Maasai Mara itinerary booking" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Tours & Safaris</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Tour & Safari Companies in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Interactive Itineraries, KWS Park Fees, Custom Quotes & USD/KES Checkout</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-startups-need-a-professional-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Startups in Kenya Need a Professional Website From Day One</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Investors, early customers, and potential hires all check for a website before they take a startup seriously. Not having one is a credibility gap that's ea</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-ecommerce-and-retail-businesses-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-ecommerce-and-retail-businesses-need-a-website.svg" alt="Ecommerce website design Kenya M-Pesa STK push integration online store" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">E-Commerce & Retail</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why E-commerce & Retail Businesses in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">STK Push Automated Checkout, Stock Tracking & Countrywide Courier</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-ecommerce-and-retail-businesses-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why E-commerce &amp; Retail Businesses in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Selling only through Instagram DMs and WhatsApp broadcasts caps how many customers you can actually serve at once. A proper online store doesn't.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-agriculture-and-agribusiness-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-agriculture-and-agribusiness-need-a-website.svg" alt="Agribusiness website design Kenya agricultural export horticulture B2B" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Agribusiness & Exports</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Agriculture & Agribusiness in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Avocado, Tea & Coffee Exports, B2B Tenders, GAP Certifications</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-beauty-salons-and-spas-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Beauty Salons &amp; Spas in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Clients booking a salon or spa appointment increasingly expect to browse services and book online first — not call and wait for someone to pick up.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-construction-and-contractors-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-construction-and-contractors-need-a-website.svg" alt="Construction and contractor website design Kenya civil engineering NCA" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Building & Civil Works</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Construction & Contractors in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Win Commercial Tenders, Showcase Completed Projects & Bill of Quantities</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-gyms-and-fitness-studios-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Gyms &amp; Fitness Studios in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A prospective member checking out class schedules and membership options before they visit is far more likely to actually walk in than one who has to call </p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-consultants-need-a-professional-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-consultants-need-a-professional-website.svg" alt="Consultant and professional advisory services website development Kenya" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Advisory & Strategy</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Consultants & Professional Services Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Build Authority, Whitepapers, Case Studies & High-Value Retainers</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-event-planners-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Event Planners &amp; Entertainment Businesses in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A client evaluating event planners wants to see your past work before they commit. A website portfolio makes that decision easy; relying on scattered socia</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-beauty-salons-and-spas-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-beauty-salons-and-spas-need-a-website.svg" alt="Beauty salon and spa website design Kenya appointment booking stylist portfolio" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Wellness & Grooming</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Beauty Salons & Spas in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Stop Managing Bookings in WhatsApp DMs: Automated Calendar & Stylists</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-agriculture-and-agribusiness-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Agriculture &amp; Agribusiness Companies in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">International buyers evaluating a supplier check for a website before they ever place an inquiry. No website often means no shortlist.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-gyms-and-fitness-studios-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-gyms-and-fitness-studios-need-a-website.svg" alt="Gym and fitness studio website design Kenya class timetable membership M-Pesa" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Fitness & Athletics</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Gyms & Fitness Studios in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Class Schedules, Personal Training Profiles, Memberships & M-Pesa</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-consultants-need-a-professional-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Consultants &amp; Professional Services Need a Website in Kenya</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Consulting is sold on credibility. A serious prospect researching you before a call finds either a professional website, or nothing — and decides according</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-logistics-transport-companies-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-logistics-transport-companies-need-a-website.svg" alt="Logistics and transport freight company website design Kenya cargo tracking" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Supply Chain & Haulage</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Logistics & Transport Companies Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Mombasa-Nairobi Corridor, Consignment Tracking & Instant Freight Quotes</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-financial-services-and-fintech-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Financial Services &amp; Fintech Businesses in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Trust is the entire product in financial services. A website is often the first, and sometimes only, chance to establish it before someone hands over their</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-financial-services-and-fintech-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-financial-services-and-fintech-need-a-website.svg" alt="Fintech and financial services website design Kenya loan calculator compliance" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Fintech & Finance</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Financial Services & Fintech in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Security Compliance, Loan Calculators, Bank Grade Trust & Investor Portal</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-fashion-and-apparel-brands-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Fashion &amp; Apparel Brands in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A great Instagram feed sells a look. A website sells the ability to actually buy it, without the buyer having to DM and wait for a reply.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-insurance-agents-and-brokers-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-insurance-agents-and-brokers-need-a-website.svg" alt="Insurance broker and agent website design Kenya motor private policy quotes" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Insurance & Risk</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Insurance Agents & Brokers in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Motor, Health & Life Premium Calculators, Claim Assistance & Fast Quotes</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-cosmetics-and-beauty-brands-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Cosmetics &amp; Beauty Brands in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Selling cosmetics purely through resellers and social media caps your margins and your reach. A direct-to-customer website doesn't.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-fashion-and-apparel-brands-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-fashion-and-apparel-brands-need-a-website.svg" alt="Fashion brand and clothing apparel ecommerce website design Kenya lookbook" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Fashion & Lifestyle</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Fashion & Apparel Brands in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Digital Lookbooks, Size Fit Guides, New Drops & Direct M-Pesa Orders</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-food-and-beverage-brands-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">20 July 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Food &amp; Beverage Brands in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A food or beverage producer is a different business from a restaurant — and needs a website built for reaching distributors and retail buyers, not just din</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-event-planners-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-event-planners-need-a-website.svg" alt="Event planner and wedding organizer website development Kenya gala summits" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Events & Weddings</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Event Planners & Entertainment in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Showcase Galas, Weddings, Corporate Summits & Availability Dates</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-
-                <a href="geo-and-aeo-explained-getting-found-by-ai.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">Feb 2026 &bull; SEO &amp; AEO</span>
-                    <h2 class="text-xl font-bold mb-2">GEO &amp; AEO Explained: How to Get Found by ChatGPT, Gemini and Claude</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Search is changing. Here's what Generative and Answer Engine Optimisation actually mean, and how a Kenyan small business can start showing up in AI-generated answers.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-food-and-beverage-brands-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-food-and-beverage-brands-need-a-website.svg" alt="Food and beverage FMCG brand website design Kenya supermarket stockist locator" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">FMCG & Beverages</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Food & Beverage Brands in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Supermarket Stockists Locator, Nutritional Facts & B2B Wholesale</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="how-much-does-a-website-cost-in-kenya.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">Feb 2026 &bull; Pricing</span>
-                    <h2 class="text-xl font-bold mb-2">How Much Does a Website Cost in Kenya?</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A transparent breakdown of what website pricing actually looks like in Kenya in 2026, and what you should expect to get at each price point.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-cosmetics-and-beauty-brands-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-cosmetics-and-beauty-brands-need-a-website.svg" alt="Cosmetics and beauty skincare brand website design Kenya melanin shade finder" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Cosmetics & Skincare</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Cosmetics & Beauty Brands in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Melanin-Tailored Skincare, Ingredient Authenticity & Retail Checkouts</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-logistics-transport-companies-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">Feb 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Logistics &amp; Transport Companies in Kenya Need a Professional Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">A look at why a logistics business shouldn't rely on walk-ins and word of mouth alone, with a real example from our own portfolio.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-ngos-and-nonprofits-need-a-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-ngos-and-nonprofits-need-a-website.svg" alt="NGO and non-profit organization website development Kenya donor reporting grants" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">NGOs & Non-Profits</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why NGOs & Non-Profits in Kenya Need a Website</h2>
+                    <p class="text-gray-600 text-sm flex-grow">Audit Reports, Impact Metrics, Storytelling & Global Grant Eligibility</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <a href="why-real-estate-businesses-need-a-website.html" class="glassmorphism-card p-6 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-300 flex flex-col">
-                    <span class="text-xs uppercase tracking-widest text-gray-500 mb-2">Feb 2026 &bull; Industry</span>
-                    <h2 class="text-xl font-bold mb-2">Why Real Estate Businesses in Kenya Need a Website</h2>
-                    <p class="text-gray-400 text-sm flex-grow">Property listings live and die by how easily a buyer can find and browse them. Here's what a real estate website actually needs.</p>
-                    <span class="text-sm font-medium text-white/80 mt-4">Read more &rarr;</span>
+                <a href="why-startups-need-a-professional-website.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
+                        <img src="../assets/images/blog/why-startups-need-a-professional-website.svg" alt="Startup web development Kenya venture capital pitch deck traction waitlist" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2">Startups & Tech</span>
+                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">Why Startups in Kenya Need a Professional Website From Day One</h2>
+                    <p class="text-gray-600 text-sm flex-grow">VC Due Diligence, Customer Traction, Early Beta Waitlists & Hiring</p>
+                    <span class="text-sm font-semibold text-blue-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read article &rarr;</span>
                 </a>
-                <!-- POST_CARDS_END -->
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
-        <div class="max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-12 text-center animate-fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to get your business online?</h2>
-            <p class="text-xl text-gray-400 mb-8">Message us on WhatsApp and tell us about your business — we'll come back with an honest quote and timeline.</p>
-            <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20to%20discuss%20a%20website%20for%20my%20business." target="_blank" class="inline-block px-8 py-4 bg-white text-gray-900 hover:bg-gray-100 font-bold rounded-full transition-all duration-300">Chat on WhatsApp</a>
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto bg-white border border-slate-200 shadow-xl rounded-2xl p-12 text-center animate-fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to get your business online?</h2>
+            <p class="text-xl text-gray-600 mb-8">Message us on WhatsApp and tell us about your business — we'll come back with an honest quote and timeline.</p>
+            <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20to%20discuss%20a%20website%20for%20my%20business." target="_blank" class="inline-block px-8 py-4 bg-blue-600 text-white hover:bg-blue-700 font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300">Chat on WhatsApp</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800">
+    <footer class="bg-gray-900 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid md:grid-cols-4 gap-8 mb-10">
                 <div class="space-y-4">
@@ -362,7 +455,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+            <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
                 <p>&copy; 2026 Xclusive Tech. All Rights Reserved.</p>
                 <div class="flex gap-4">
                     <a href="../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
