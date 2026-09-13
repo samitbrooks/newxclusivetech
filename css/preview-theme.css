@@ -309,8 +309,24 @@ body.theme-light-whitespace::before {
     color: #334155 !important;
 }
 
-.theme-light-whitespace .text-white {
+.theme-light-whitespace .text-white:not(footer):not(footer *):not(button):not(button *):not([class*="bg-blue"]):not([class*="bg-blue"] *):not(.shimmer-badge):not(.shimmer-badge *):not(.btn-luxe-primary):not(.btn-luxe-primary *) {
     color: #0F172A !important;
+}
+
+/* Guarantee white writing on all blue elements in preview theme */
+.theme-light-whitespace [class*="bg-blue-600"],
+.theme-light-whitespace [class*="bg-blue-700"],
+.theme-light-whitespace [class*="bg-blue-500"],
+.theme-light-whitespace .shimmer-badge,
+.theme-light-whitespace .btn-luxe-primary {
+    color: #FFFFFF !important;
+}
+.theme-light-whitespace [class*="bg-blue-600"] *,
+.theme-light-whitespace [class*="bg-blue-700"] *,
+.theme-light-whitespace [class*="bg-blue-500"] *,
+.theme-light-whitespace .shimmer-badge *,
+.theme-light-whitespace .btn-luxe-primary * {
+    color: #FFFFFF !important;
 }
 
 .theme-light-whitespace .bg-white\/5 {

@@ -514,8 +514,73 @@ div.bg-gradient-to-br {
 /* ================================================================
    TEXT & BORDER COLORS ON WHITE
    ================================================================ */
-.text-white:not(footer):not(footer *):not(button):not(a.btn):not(.btn):not(nav a[href*="wa.me"]):not([style*="color:#fff"]):not([style*="color: #fff"]):not([style*="color:white"]):not([style*="color: white"]) {
+.text-white:not(footer):not(footer *):not(button):not(button *):not(a.btn):not(.btn):not(.btn *):not(nav a[href*="wa.me"]):not([style*="color:#fff"]):not([style*="color: #fff"]):not([style*="color:white"]):not([style*="color: white"]):not([class*="bg-blue"]):not([class*="bg-blue"] *):not([class*="bg-indigo"]):not([class*="bg-indigo"] *):not([class*="bg-slate-9"]):not([class*="bg-slate-9"] *):not([class*="bg-gray-9"]):not([class*="bg-gray-9"] *):not([class*="bg-emerald"]):not([class*="bg-emerald"] *):not(.shimmer-badge):not(.shimmer-badge *):not(.btn-luxe-primary):not(.btn-luxe-primary *) {
     color: var(--text-primary) !important;
+}
+
+/* ================================================================
+   ALL BLUE CARDS, BUTTONS, BADGES & PILLS:
+   WHITE TEXT GUARANTEE ACROSS THE ENTIRE WEBSITE
+   ================================================================ */
+
+/* 1. All buttons, links, badges, pills, and cards with blue backgrounds */
+.bg-blue-500,
+.bg-blue-600,
+.bg-blue-700,
+.bg-blue-800,
+.bg-blue-900,
+.bg-blue-950,
+[class*="bg-blue-500"],
+[class*="bg-blue-600"],
+[class*="bg-blue-700"],
+[class*="bg-blue-800"],
+[class*="bg-blue-900"],
+[class*="bg-blue-950"],
+a[class*="bg-blue-"]:not(.bg-blue-50):not(.bg-blue-100):not(.bg-blue-200),
+button[class*="bg-blue-"]:not(.bg-blue-50):not(.bg-blue-100):not(.bg-blue-200),
+div[class*="bg-blue-"]:not(.bg-blue-50):not(.bg-blue-100):not(.bg-blue-200),
+span[class*="bg-blue-"]:not(.bg-blue-50):not(.bg-blue-100):not(.bg-blue-200),
+.shimmer-badge,
+.btn-luxe-primary {
+    color: #FFFFFF !important;
+}
+
+/* 2. All text, headings, paragraphs, spans, links, lists, labels INSIDE any blue card, badge, pill or button */
+[class*="bg-blue-500"]:not(.bg-blue-50) :is(h1, h2, h3, h4, h5, h6, p, span, a, li, strong, b, div, button),
+[class*="bg-blue-600"]:not(.bg-blue-50) :is(h1, h2, h3, h4, h5, h6, p, span, a, li, strong, b, div, button),
+[class*="bg-blue-700"]:not(.bg-blue-50) :is(h1, h2, h3, h4, h5, h6, p, span, a, li, strong, b, div, button),
+[class*="bg-blue-800"]:not(.bg-blue-50) :is(h1, h2, h3, h4, h5, h6, p, span, a, li, strong, b, div, button),
+[class*="bg-blue-900"]:not(.bg-blue-50) :is(h1, h2, h3, h4, h5, h6, p, span, a, li, strong, b, div, button),
+[class*="bg-blue-950"]:not(.bg-blue-50) :is(h1, h2, h3, h4, h5, h6, p, span, a, li, strong, b, div, button),
+a[class*="bg-blue-"]:not(.bg-blue-50) *,
+button[class*="bg-blue-"]:not(.bg-blue-50) *,
+.shimmer-badge *,
+.btn-luxe-primary * {
+    color: #FFFFFF !important;
+}
+
+/* 3. Explicit .text-white on any blue element or inside any blue container */
+[class*="bg-blue-"] .text-white,
+[class*="bg-blue-"].text-white,
+.text-white[class*="bg-blue-"] {
+    color: #FFFFFF !important;
+}
+
+/* 4. MOST POPULAR badges specifically */
+[class*="-top-"][class*="bg-blue"],
+.absolute[class*="-top-"][class*="bg-blue"] {
+    background-color: #2563EB !important;
+    color: #FFFFFF !important;
+}
+[class*="-top-"][class*="bg-blue"] *,
+.absolute[class*="-top-"][class*="bg-blue"] * {
+    color: #FFFFFF !important;
+}
+
+/* 5. Hover states for all blue buttons and links */
+a[class*="bg-blue-"]:not(.bg-blue-50):hover,
+button[class*="bg-blue-"]:not(.bg-blue-50):hover {
+    color: #FFFFFF !important;
 }
 .text-gray-100,
 .text-gray-200,
