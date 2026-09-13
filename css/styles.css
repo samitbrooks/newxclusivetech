@@ -884,3 +884,82 @@ footer .hover\:text-white:hover {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ================================================================
+   SLIDE-IN FLOATING QUOTE POPUP (Triggered on scroll + time)
+   ================================================================ */
+.xt-quote-popup {
+    position: fixed;
+    bottom: 96px;
+    right: 24px;
+    width: min(370px, calc(100vw - 32px));
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 35px -5px rgba(15, 23, 42, 0.18), 0 10px 15px -5px rgba(15, 23, 42, 0.08);
+    padding: 1.25rem;
+    z-index: 45;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px) scale(0.96);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.4s;
+    pointer-events: none;
+}
+
+.xt-quote-popup.xt-popup-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.xt-quote-popup.xt-popup-closing {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.xt-popup-close-btn:hover {
+    color: #0F172A !important;
+    background-color: #F1F5F9 !important;
+}
+
+.xt-popup-cta-btn:hover {
+    background-color: #1D4ED8 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.xt-popup-dismiss-text:hover {
+    color: #475569 !important;
+}
+
+@keyframes xt-status-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+}
+
+.xt-pulse-dot {
+    animation: xt-status-pulse 2s infinite ease-in-out;
+}
+
+@media (max-width: 640px) {
+    .xt-quote-popup {
+        bottom: 84px;
+        right: 16px;
+        left: 16px;
+        width: auto;
+        max-width: none;
+        padding: 1.1rem;
+    }
+}
+
