@@ -309,8 +309,8 @@ body.theme-light-whitespace::before {
     color: #334155 !important;
 }
 
-.theme-light-whitespace .text-white:not(footer):not(footer *):not(button):not(button *):not([class*="bg-blue"]):not([class*="bg-blue"] *):not(.shimmer-badge):not(.shimmer-badge *):not(.btn-luxe-primary):not(.btn-luxe-primary *) {
-    color: #0F172A !important;
+.theme-light-whitespace .text-white {
+    color: #FFFFFF !important;
 }
 
 /* Guarantee white writing on all blue elements in preview theme */
