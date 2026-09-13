@@ -530,68 +530,83 @@ h6.text-white {
     color: #FFFFFF !important;
 }
 
-/* All buttons, links, badges, pills, and cards with blue backgrounds */
-.bg-blue-500,
+/* ================================================================
+   SOLID BLUE BUTTONS, BADGES & PILLS:
+   WHITE TEXT (#FFFFFF) GUARANTEE
+   ================================================================ */
 .bg-blue-600,
 .bg-blue-700,
 .bg-blue-800,
 .bg-blue-900,
 .bg-blue-950,
-[class*="bg-blue-500"],
-[class*="bg-blue-600"],
-[class*="bg-blue-700"],
-[class*="bg-blue-800"],
-[class*="bg-blue-900"],
-[class*="bg-blue-950"],
-a[class*="bg-blue-"]:not(.bg-blue-50):not(.bg-blue-100):not(.bg-blue-200),
-button[class*="bg-blue-"]:not(.bg-blue-50):not(.bg-blue-100):not(.bg-blue-200),
-div[class*="bg-blue-"]:not(.bg-blue-50):not(.bg-blue-100):not(.bg-blue-200),
-span[class*="bg-blue-"]:not(.bg-blue-50):not(.bg-blue-100):not(.bg-blue-200),
 .shimmer-badge,
 .btn-luxe-primary {
     color: #FFFFFF !important;
 }
 
-/* All text, headings, paragraphs, spans, links, lists, labels INSIDE any blue card, badge, pill or button */
-[class*="bg-blue-500"]:not(.bg-blue-50) *,
-[class*="bg-blue-600"]:not(.bg-blue-50) *,
-[class*="bg-blue-700"]:not(.bg-blue-50) *,
-[class*="bg-blue-800"]:not(.bg-blue-50) *,
-[class*="bg-blue-900"]:not(.bg-blue-50) *,
-[class*="bg-blue-950"]:not(.bg-blue-50) *,
-a[class*="bg-blue-"]:not(.bg-blue-50) *,
-button[class*="bg-blue-"]:not(.bg-blue-50) *,
-div[class*="bg-blue-"]:not(.bg-blue-50) *,
-span[class*="bg-blue-"]:not(.bg-blue-50) *,
+.bg-blue-600 *,
+.bg-blue-700 *,
+.bg-blue-800 *,
+.bg-blue-900 *,
+.bg-blue-950 *,
 .shimmer-badge *,
 .btn-luxe-primary * {
     color: #FFFFFF !important;
 }
 
-/* Explicit .text-white on any blue element or inside any blue container */
-[class*="bg-blue-"] .text-white,
-[class*="bg-blue-"].text-white,
-.text-white[class*="bg-blue-"] {
+/* Hover on solid blue buttons maintains white text */
+.bg-blue-600:hover,
+.bg-blue-700:hover,
+.bg-blue-800:hover,
+.bg-blue-600:hover *,
+.bg-blue-700:hover *,
+.bg-blue-800:hover * {
     color: #FFFFFF !important;
 }
 
 /* MOST POPULAR badges specifically */
-[class*="-top-"][class*="bg-blue"],
-.absolute[class*="-top-"][class*="bg-blue"] {
+[class*="-top-"].bg-blue-600,
+.absolute[class*="-top-"].bg-blue-600 {
     background-color: #2563EB !important;
     color: #FFFFFF !important;
 }
-[class*="-top-"][class*="bg-blue"] *,
-.absolute[class*="-top-"][class*="bg-blue"] * {
+[class*="-top-"].bg-blue-600 *,
+.absolute[class*="-top-"].bg-blue-600 * {
     color: #FFFFFF !important;
 }
 
-/* Hover states for all blue buttons and links */
-a[class*="bg-blue-"]:not(.bg-blue-50):hover,
-button[class*="bg-blue-"]:not(.bg-blue-50):hover,
-a[class*="bg-blue-"]:not(.bg-blue-50):hover *,
-button[class*="bg-blue-"]:not(.bg-blue-50):hover * {
-    color: #FFFFFF !important;
+/* ================================================================
+   SECONDARY & OUTLINE BUTTONS (Like "See our prices first")
+   Crisp border and high-contrast dark (#0F172A) text on white cards
+   ================================================================ */
+.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *),
+.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *) {
+    border-color: #CBD5E1 !important;
+    color: #0F172A !important;
+}
+
+.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *) *,
+.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *) * {
+    color: #0F172A !important;
+}
+
+/* Hover states for outline buttons: turn blue text with blue border */
+.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):hover,
+.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):hover {
+    border-color: #2563EB !important;
+    color: #1D4ED8 !important;
+    background-color: #EFF6FF !important;
+}
+
+.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):hover *,
+.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):hover * {
+    color: #1D4ED8 !important;
+}
+
+/* Light badges (bg-blue-50) stay blue, never white */
+.bg-blue-50,
+.bg-blue-50 * {
+    color: #1D4ED8 !important;
 }
 .text-gray-100,
 .text-gray-200,
