@@ -4,7 +4,7 @@
   "description": "Premium web design and development brand website for Xclusive Tech",
   "main": "index.html",
   "scripts": {
-    "start": "python -m http.server 8000 || npx http-server",
+    "start": "python3 scripts/server.py 8000 || python -m http.server 8000 || npx http-server",
     "build": "echo 'No build required for static site'",
     "test": "echo 'Add tests when needed'"
   },

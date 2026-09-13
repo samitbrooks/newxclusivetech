@@ -3,15 +3,15 @@
     <!-- Homepage -->
     <url>
         <loc>https://www.xclusivetech.co.ke/</loc>
-        <lastmod>2026-07-20</lastmod>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <!-- Solutions Page -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/solutions.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/solutions</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -19,319 +19,311 @@
     <!-- Blog Index -->
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/</loc>
-        <lastmod>2026-07-20</lastmod>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <!-- Blog: GEO & AEO Explained -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/geo-and-aeo-explained-getting-found-by-ai.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/geo-and-aeo-explained-getting-found-by-ai</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Website Cost in Kenya -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/how-much-does-a-website-cost-in-kenya.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/how-much-does-a-website-cost-in-kenya</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Social Media Management Cost in Kenya -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/how-much-does-social-media-management-cost-in-kenya.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/how-much-does-social-media-management-cost-in-kenya</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Logistics & Transport -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-logistics-transport-companies-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-logistics-transport-companies-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Real Estate -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-real-estate-businesses-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-real-estate-businesses-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Tour & Safari Companies -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-tour-and-safari-companies-need-a-website.html</loc>
-        <lastmod>2026-08-14</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-tour-and-safari-companies-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Insurance Agents & Brokers -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-insurance-agents-and-brokers-need-a-website.html</loc>
-        <lastmod>2026-08-14</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-insurance-agents-and-brokers-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Construction & Contractors -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-construction-and-contractors-need-a-website.html</loc>
-        <lastmod>2026-08-14</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-construction-and-contractors-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Car Dealerships -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-car-dealerships-need-a-website.html</loc>
-        <lastmod>2026-08-14</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-car-dealerships-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Driving Schools -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-driving-schools-need-a-website.html</loc>
-        <lastmod>2026-08-14</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-driving-schools-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Photographers & Videographers -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-photographers-and-videographers-need-a-website.html</loc>
-        <lastmod>2026-08-16</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-photographers-and-videographers-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Website vs Facebook Page -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/website-vs-facebook-page-which-does-your-business-need.html</loc>
-        <lastmod>2026-08-16</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/website-vs-facebook-page-which-does-your-business-need</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: How Long Does a Website Take -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/how-long-does-it-take-to-build-a-website-in-kenya.html</loc>
-        <lastmod>2026-08-16</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/how-long-does-it-take-to-build-a-website-in-kenya</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: Web Design for Kiambu County -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/web-design-for-businesses-in-kiambu-county.html</loc>
-        <lastmod>2026-08-16</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/web-design-for-businesses-in-kiambu-county</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- About Page -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/about.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/about</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Services Page -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/services.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/services</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <!-- Pricing Page -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/pricing.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/pricing</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <!-- Portfolio Page -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/portfolio.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/portfolio</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Founder Page -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/founder</loc>
+        <lastmod>2026-09-13</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Contact Page -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/contact.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/contact</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Privacy Policy -->
-    <url>
-        <loc>https://www.xclusivetech.co.ke/privacy.html</loc>
-        <lastmod>2026-07-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-
-    <!-- Terms of Service -->
-    <url>
-        <loc>https://www.xclusivetech.co.ke/terms.html</loc>
-        <lastmod>2026-07-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-
     <!-- Blog: why-churches-and-ministries-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-churches-and-ministries-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-churches-and-ministries-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-ngos-and-nonprofits-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-ngos-and-nonprofits-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-ngos-and-nonprofits-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-law-firms-need-a-professional-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-law-firms-need-a-professional-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-law-firms-need-a-professional-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-clinics-and-healthcare-providers-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-clinics-and-healthcare-providers-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-clinics-and-healthcare-providers-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-schools-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-schools-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-schools-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-hotels-and-hospitality-businesses-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-hotels-and-hospitality-businesses-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-hotels-and-hospitality-businesses-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-restaurants-and-cafes-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-restaurants-and-cafes-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-restaurants-and-cafes-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-startups-need-a-professional-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-startups-need-a-professional-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-startups-need-a-professional-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-ecommerce-and-retail-businesses-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-ecommerce-and-retail-businesses-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-ecommerce-and-retail-businesses-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-beauty-salons-and-spas-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-beauty-salons-and-spas-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-beauty-salons-and-spas-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-gyms-and-fitness-studios-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-gyms-and-fitness-studios-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-gyms-and-fitness-studios-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-event-planners-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-event-planners-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-event-planners-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-agriculture-and-agribusiness-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-agriculture-and-agribusiness-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-agriculture-and-agribusiness-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-consultants-need-a-professional-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-consultants-need-a-professional-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-consultants-need-a-professional-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-financial-services-and-fintech-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-financial-services-and-fintech-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-financial-services-and-fintech-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-fashion-and-apparel-brands-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-fashion-and-apparel-brands-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-fashion-and-apparel-brands-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-cosmetics-and-beauty-brands-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-cosmetics-and-beauty-brands-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-cosmetics-and-beauty-brands-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Blog: why-food-and-beverage-brands-need-a-website -->
     <url>
-        <loc>https://www.xclusivetech.co.ke/blog/why-food-and-beverage-brands-need-a-website.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://www.xclusivetech.co.ke/blog/why-food-and-beverage-brands-need-a-website</loc>
+        <lastmod>2026-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
