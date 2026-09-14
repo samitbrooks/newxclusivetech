@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=2">
     <link rel="shortcut icon" href="favicon.ico?v=2">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/styles.css?v=20260913e">
+    <link rel="stylesheet" href="css/styles.css?v=20260914a">
 
     <!-- FAQPage structured data -->
     <script type="application/ld+json">
@@ -96,342 +96,182 @@
 </head>
 <body class="bg-white text-slate-900 overflow-x-hidden">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="/" class="flex items-center gap-2" aria-label="Xclusive Tech home">
-                    <img src="assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="h-10 w-auto">
+        <!-- Header & Navigation -->
+    <header class="site-header">
+        <nav id="navbar" class="nav-container" aria-label="Main navigation">
+            <div class="nav-row">
+                <!-- Logo -->
+                <a href="/" class="nav-logo" aria-label="Xclusive Tech home">
+                    <img src="assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img" width="160" height="40">
                 </a>
-                <div class="hidden md:flex gap-8">
+
+                <!-- Desktop nav links -->
+                <div class="nav-menu-desktop">
                     <a href="/" class="nav-link">Home</a>
                     <a href="/about" class="nav-link">About</a>
                     <a href="/services" class="nav-link">Services</a>
-                    <div class="relative group">
-                        <button type="button" class="nav-link bg-transparent cursor-pointer flex items-center gap-1">
+                    <div class="nav-dropdown">
+                        <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true">
                             Solutions
-                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                         </button>
-                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
-                            <div class="bg-white border border-slate-200 rounded-xl shadow-2xl py-2 w-60">
-                                <a href="/solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">Solutions by Business Type</a>
-                                <a href="/solutions#industries" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">Industries We Serve</a>
-                                <a href="/solutions#saas" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">SaaS &amp; Custom Platforms</a>
+                        <div class="nav-dropdown-menu">
+                            <div class="nav-dropdown-inner">
+                                <a href="/solutions" class="nav-dropdown-item">Solutions by Business Type</a>
+                                <a href="/solutions#industries" class="nav-dropdown-item">Industries We Serve</a>
+                                <a href="/solutions#saas" class="nav-dropdown-item">SaaS &amp; Custom Platforms</a>
                             </div>
                         </div>
                     </div>
-                    <a href="/pricing" class="nav-link active">Pricing</a>
+                    <a href="/pricing" class="nav-link active" aria-current="page">Pricing</a>
                     <a href="/portfolio" class="nav-link">Portfolio</a>
                     <a href="/blog/" class="nav-link">Blog</a>
                     <a href="/contact" class="nav-link">Contact</a>
                 </div>
-                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg transition-all duration-300 font-medium">Get a Free Quote</a>
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <!-- CTA button -->
+                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer" class="nav-cta-btn">
+                    Get a Free Quote
+                </a>
+
+                <!-- Mobile menu toggle -->
+                <button id="mobile-menu-btn" class="nav-mobile-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-slate-200 mt-4">
-                <a href="/" class="block py-2 px-4 rounded-lg hover:bg-slate-100 text-gray-700">Home</a>
-                <a href="/about" class="block py-2 px-4 rounded-lg hover:bg-slate-100 text-gray-700">About</a>
-                <a href="/services" class="block py-2 px-4 rounded-lg hover:bg-slate-100 text-gray-700">Services</a>
-                <details>
-                    <summary class="flex justify-between items-center py-2 px-4 rounded-lg hover:bg-slate-100 text-gray-700 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="nav-mobile-menu hidden">
+                <a href="/" class="nav-mobile-link">Home</a>
+                <a href="/about" class="nav-mobile-link">About</a>
+                <a href="/services" class="nav-mobile-link">Services</a>
+                <details class="nav-mobile-details">
+                    <summary>
                         <span>Solutions</span>
                         <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                     </summary>
-                    <div class="pl-4 space-y-1 pb-2">
-                        <a href="/solutions" class="block py-2 px-4 rounded-lg hover:bg-blue-50 text-sm text-gray-600 hover:text-blue-600">Solutions by Business Type</a>
-                        <a href="/solutions#industries" class="block py-2 px-4 rounded-lg hover:bg-blue-50 text-sm text-gray-600 hover:text-blue-600">Industries We Serve</a>
-                        <a href="/solutions#saas" class="block py-2 px-4 rounded-lg hover:bg-blue-50 text-sm text-gray-600 hover:text-blue-600">SaaS &amp; Custom Platforms</a>
+                    <div class="nav-mobile-subitems">
+                        <a href="/solutions" class="nav-mobile-sublink">Solutions by Business Type</a>
+                        <a href="/solutions#industries" class="nav-mobile-sublink">Industries We Serve</a>
+                        <a href="/solutions#saas" class="nav-mobile-sublink">SaaS &amp; Custom Platforms</a>
                     </div>
                 </details>
-                <a href="/pricing" class="block py-2 px-4 rounded-lg hover:bg-slate-100 text-gray-700">Pricing</a>
-                <a href="/portfolio" class="block py-2 px-4 rounded-lg hover:bg-slate-100 text-gray-700">Portfolio</a>
-                <a href="/blog/" class="block py-2 px-4 rounded-lg hover:bg-slate-100 text-gray-700">Blog</a>
-                <a href="/contact" class="block py-2 px-4 rounded-lg hover:bg-slate-100 text-gray-700">Contact</a>
-                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" class="block mt-2 px-6 py-2 rounded-lg bg-blue-600 text-white text-center font-medium">Get a Free Quote</a>
+                <a href="/pricing" class="nav-mobile-link active" aria-current="page">Pricing</a>
+                <a href="/portfolio" class="nav-mobile-link">Portfolio</a>
+                <a href="/blog/" class="nav-mobile-link">Blog</a>
+                <a href="/contact" class="nav-mobile-link">Contact</a>
+                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer" class="nav-mobile-cta">
+                    Get a Free Quote
+                </a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+
+    <main id="main-content">
 
     <!-- Hero -->
-    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
-        <div class="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">How much does a website cost in Kenya?</h1>
-            <p class="text-xl text-gray-600">Published website design prices for businesses in Nairobi, Kiambu County and across Kenya. No hidden fees. Don't see an exact fit? We'll tailor a package to your budget and goals. Domain and hosting are separate costs — we explain them upfront so there are no surprises.</p>
-        </div>
-    </section>
-
-    <!-- Main Pricing Cards -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <p class="text-center text-gray-600 text-sm mb-6">Need more than one page? See our full packages below.</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-
-                <!-- Starter Site -->
-                <div class="group relative animate-fade-in-up" style="animation-delay: 0.1s">
-                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 h-full flex flex-col">
-                        <div class="mb-6">
-                            <p class="text-sm font-semibold uppercase tracking-widest text-blue-600 mb-1">Starter Site</p>
-                            <p class="text-gray-600 text-sm">Ideal for startups and individuals needing a professional, polished online presence — no product catalog or online payments needed.</p>
-                            <p class="text-gray-500 text-xs mt-2 italic">Fits: company profiles, logistics &amp; transport, professional services, consultancies, single-location businesses</p>
-                        </div>
-                        <div class="mb-2">
-                            <p class="text-3xl font-extrabold text-gray-900">KES 31,500–45,500</p>
-                        </div>
-                        <p class="text-gray-500 text-sm mb-2">One-time cost, depending on scope</p>
-                        <p class="text-gray-700 text-sm mb-8 font-semibold">Delivered in ~2–3 weeks</p>
-                        <ul class="space-y-3 mb-8 flex-grow">
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Up to 5 pages</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Custom UI/UX design</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Mobile-first responsive</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Basic on-page SEO</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Contact form + WhatsApp integration</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">1 month free support</span></li>
-                        </ul>
-                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27m%20interested%20in%20the%20Starter%20Site%20package." target="_blank" style="color: #0F172A !important; border-color: #CBD5E1 !important;" class="block w-full text-center py-3 px-6 rounded-xl border border-slate-300 hover:border-blue-500 hover:text-blue-600 text-gray-900 font-semibold transition-all duration-300">Get Started</a>
-                    </div>
-                </div>
-
-                <!-- Business Growth (most popular) -->
-                <div class="group relative animate-fade-in-up lg:scale-105" style="animation-delay: 0.2s">
-                    <div class="bg-white p-8 rounded-3xl border-2 border-blue-500 shadow-xl h-full flex flex-col relative">
-                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-5 py-1.5 rounded-full font-bold text-xs uppercase tracking-wider shadow-md" style="color: #ffffff !important;">MOST POPULAR</div>
-                        <div class="mb-6">
-                            <p class="text-sm font-semibold uppercase tracking-widest text-blue-600 mb-1">Business Growth</p>
-                            <p class="text-gray-600 text-sm">For growing businesses aiming to generate leads and publish content — everything in Starter, with more room to showcase what you do.</p>
-                            <p class="text-gray-500 text-xs mt-2 italic">Fits: multi-service companies, real estate &amp; property listings, businesses that publish news/updates, catalogs without online checkout</p>
-                        </div>
-                        <div class="mb-2">
-                            <p class="text-3xl font-extrabold text-gray-900">KES 49,000–62,000</p>
-                        </div>
-                        <p class="text-gray-500 text-sm mb-2">One-time cost, depending on scope</p>
-                        <p class="text-gray-700 text-sm mb-8 font-semibold">Delivered in ~3–5 weeks</p>
-                        <ul class="space-y-3 mb-8 flex-grow">
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Up to 15 pages</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Everything in Starter Site</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">CMS for blog/news updates</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Advanced SEO + Google Analytics</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Social media integration</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">3 months free support</span></li>
-                        </ul>
-                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27m%20interested%20in%20the%20Business%20Growth%20package." target="_blank" class="block w-full text-center py-3 px-6 rounded-xl bg-blue-600 text-white hover:bg-blue-700 font-bold shadow-md hover:shadow-lg transition-all duration-300" style="color: #ffffff !important;">Choose Business</a>
-                    </div>
-                </div>
-
-                <!-- E-commerce Pro -->
-                <div class="group relative animate-fade-in-up" style="animation-delay: 0.3s">
-                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 h-full flex flex-col">
-                        <div class="mb-6">
-                            <p class="text-sm font-semibold uppercase tracking-widest text-blue-600 mb-1">E-commerce Pro</p>
-                            <p class="text-gray-600 text-sm">A complete solution for businesses ready to sell online and scale effectively — customers browse, add to cart, and pay you directly on the website.</p>
-                            <p class="text-gray-500 text-xs mt-2 italic">Fits: retail shops, dropshipping, online stores, any business that needs real online checkout and inventory</p>
-                        </div>
-                        <div class="mb-2">
-                            <p class="text-3xl font-extrabold text-gray-900">KES 72,000–85,000</p>
-                        </div>
-                        <p class="text-gray-500 text-sm mb-2">One-time cost, depending on scope</p>
-                        <p class="text-gray-700 text-sm mb-8 font-semibold">Delivered in ~5–7 weeks</p>
-                        <ul class="space-y-3 mb-8 flex-grow">
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Unlimited products</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Everything in Business Growth</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Secure M-Pesa (Daraja API) checkout</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Inventory management</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Customer accounts</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">6 months priority support</span></li>
-                        </ul>
-                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27m%20interested%20in%20the%20E-commerce%20Pro%20package." target="_blank" style="color: #0F172A !important; border-color: #CBD5E1 !important;" class="block w-full text-center py-3 px-6 rounded-xl border border-slate-300 hover:border-blue-500 hover:text-blue-600 text-gray-900 font-semibold transition-all duration-300">Start Selling</a>
-                    </div>
-                </div>
-
-                <!-- Custom Solutions -->
-                <div id="custom-solutions" class="group relative animate-fade-in-up scroll-mt-24" style="animation-delay: 0.4s">
-                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 h-full flex flex-col">
-                        <div class="mb-6">
-                            <p class="text-sm font-semibold uppercase tracking-widest text-blue-600 mb-1">Custom Solutions</p>
-                            <p class="text-gray-600 text-sm">For unique web apps, platforms, or complex integrations requiring a bespoke approach.</p>
-                            <p class="text-gray-500 text-xs mt-2 italic">Fits: marketplaces, booking &amp; reservation systems, custom web apps, businesses needing integrations beyond a standard website</p>
-                        </div>
-                        <div class="mb-2">
-                            <p class="text-3xl font-extrabold text-gray-900">From KES 85,000+</p>
-                        </div>
-                        <p class="text-gray-500 text-sm mb-2">Scoped and quoted per project</p>
-                        <p class="text-gray-700 text-sm mb-8 font-semibold">Timeline scoped per project</p>
-                        <ul class="space-y-3 mb-8 flex-grow">
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Custom feature development</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Advanced API integrations</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Scalable architecture</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Dedicated project manager</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Ongoing maintenance &amp; SLA</span></li>
-                            <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Full ownership of code</span></li>
-                        </ul>
-                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20custom%20quote%20for%20a%20bespoke%20web%20project." target="_blank" style="color: #0F172A !important; border-color: #CBD5E1 !important;" class="block w-full text-center py-3 px-6 rounded-xl border border-slate-300 hover:border-blue-500 hover:text-blue-600 text-gray-900 font-semibold transition-all duration-300">Request a Quote</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Care Plan (4th card, full width) -->
-            <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-md animate-fade-in-up" style="animation-delay: 0.4s">
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <p class="text-sm font-semibold uppercase tracking-widest text-blue-600 mb-1">Care Plan</p>
-                        <h3 class="text-3xl font-bold text-gray-900 mb-2">Ongoing website maintenance</h3>
-                        <p class="text-gray-600">Keep your site fast, secure, and up to date after launch. Available to all clients after their free maintenance period ends.</p>
-                    </div>
-                    <div>
-                        <p class="text-4xl font-extrabold text-gray-900 mb-1">From KES 2,000<span class="text-xl text-gray-500 font-normal">/month</span></p>
-                        <p class="text-gray-500 text-sm mb-4">Covers 4 hours of support and updates per month</p>
-                        <ul class="space-y-2 text-sm text-gray-700 mb-6">
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Security monitoring and SSL renewals</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Content and page updates on request</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Performance and uptime monitoring</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Monthly backup</li>
-                        </ul>
-                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27m%20interested%20in%20a%20Care%20Plan%20for%20my%20website." target="_blank" style="color: #0F172A !important; border-color: #CBD5E1 !important;" class="inline-block px-6 py-3 rounded-xl border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition-all font-semibold text-sm text-gray-900">Ask about Care Plan</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Domain/hosting note -->
-            <div class="mt-6 p-5 rounded-2xl border border-slate-200 bg-slate-50 text-center text-sm text-gray-700">
-Domain registration (from KES 1,500/year — <a href="/services#domain-registration" class="underline text-blue-600 font-semibold hover:text-blue-700">see pricing by TLD</a>) and web hosting (from KES 3,000/year) are separate costs. We can register your domain directly, or you can bring your own. We'll explain all options clearly before you commit to anything.
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12 animate-fade-in">Common questions about our pricing</h2>
-            <div class="space-y-6">
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm animate-fade-in-up">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Do you build websites for businesses in Nairobi?</h3>
-                    <p class="text-gray-600">Yes — Nairobi is our primary service area, and we also serve businesses across Kenya.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm animate-fade-in-up">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Can you customize a package for my business?</h3>
-                    <p class="text-gray-600">Yes. These packages are a starting point, not a fixed menu. Tell us what your business actually needs and we'll adjust the scope, and the price, to fit. We typically ask for a deposit to start work and the balance on delivery.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm animate-fade-in-up" style="animation-delay: 0.1s">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">What does a revision round include?</h3>
-                    <p class="text-gray-600">Design changes, content updates, layout adjustments, and feature tweaks within the project scope. Each revision round takes up to 5 business days.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm animate-fade-in-up" style="animation-delay: 0.2s">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Can I upgrade my package after I start?</h3>
-                    <p class="text-gray-600">Yes. You can upgrade from Starter Site to Business Growth, Business Growth to E-commerce Pro, or move to a Custom Solution at any time. We'll credit the amount already paid and continue from where we are.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm animate-fade-in-up" style="animation-delay: 0.3s">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">What happens after the free maintenance period?</h3>
-                    <p class="text-gray-600">You can continue with our Care Plan from KES 2,000/month, or hand off the site to manage yourself. We'll give you a heads-up before anything expires.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm animate-fade-in-up" style="animation-delay: 0.4s">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Do you provide domain and hosting?</h3>
-                    <p class="text-gray-600">Domain registration and hosting are separate costs, not included in the packages above. We register domains directly from KES 1,500/year (.co.ke, .com, .org and more), or you can bring your own — we'll explain all options before you commit.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm animate-fade-in-up" style="animation-delay: 0.5s">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Do you have a package for something smaller or custom?</h3>
-                    <p class="text-gray-600">Yes. If none of the packages above fit what you need, message us on WhatsApp and we'll put together a custom quote. No obligation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
-        <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-50/80 via-white to-indigo-50/50 border border-blue-100 rounded-3xl p-10 sm:p-14 text-center shadow-lg animate-fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Not sure which package is right for you?</h2>
-            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Message us on WhatsApp, tell us about your business, and we'll tell you honestly which package fits your budget and goals.</p>
-            <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20to%20discuss%20which%20package%20is%20best%20for%20my%20project." target="_blank" class="inline-block px-8 py-4 bg-blue-600 text-white hover:bg-blue-700 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">Chat on WhatsApp &rarr;</a>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="py-14 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Stay in the loop</h2>
-            <p class="text-gray-600 mb-6">Occasional tips on getting more from your website — no spam, unsubscribe anytime.</p>
-            <form action="https://formsubmit.co/hello@xclusivetech.co.ke" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <!-- Technical Insights Newsletter -->
+    <section class="newsletter-section" aria-labelledby="newsletter-heading">
+        <div class="newsletter-container">
+            <h2 id="newsletter-heading" class="newsletter-title">Kenya Web Performance &amp; Commercial Insights</h2>
+            <p class="newsletter-lead">Quarterly benchmarks on local hosting latency, M-Pesa API updates, and search indexation for Kenyan web applications. No promotional noise.</p>
+            <form action="https://formsubmit.co/hello@xclusivetech.co.ke" method="POST" class="newsletter-form">
                 <input type="hidden" name="_subject" value="Newsletter signup from Xclusive Tech website">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="_honey" style="display:none">
-                <input type="email" name="email" placeholder="Your email address" required class="flex-grow px-4 py-3 rounded-lg bg-white border border-slate-300 focus:border-blue-500 focus:outline-none transition-colors text-gray-900 placeholder-gray-400">
-                <button type="submit" class="px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-medium whitespace-nowrap">Subscribe</button>
+                <input type="text" name="_honey" class="honeypot-field" tabindex="-1" autocomplete="off">
+                <input type="email" name="email" placeholder="Enter corporate email" required class="newsletter-input" aria-label="Corporate email address">
+                <button type="submit" class="newsletter-submit">Subscribe</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid md:grid-cols-4 gap-8 mb-10">
-                <div class="space-y-4">
-                    <a href="/" class="flex items-center gap-2">
-                        <img src="assets/icons/xclusivetech-footer-logo.svg" alt="Xclusive Tech logo" class="h-10 w-auto">
+        </main>
+
+    <!-- Global Site Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand & Google Verification -->
+                <div class="footer-col">
+                    <a href="/" class="footer-brand-logo" aria-label="Xclusive Tech Home">
+                        <img src="assets/icons/xclusivetech-footer-logo.svg" alt="Xclusive Tech logo" width="160" height="40" class="footer-brand-logo">
                     </a>
-                    <p class="text-gray-400">The most affordable, reliable web design &amp; development company serving Nairobi and Kenya-wide — fast delivery, honest pricing.</p>
-                    <div class="pt-2">
-                        <p class="text-xs font-semibold text-gray-300 mb-2">Google Preferred Source</p>
+                    <p class="footer-desc">High-performance web applications, e-commerce storefronts, and structured local SEO engineering for ambitious enterprises in Nairobi and across Kenya.</p>
+                    <div class="footer-source-box">
+                        <p class="footer-source-tag">Google Preferred Source</p>
                         <div google-add-preferred-source-btn data-theme="dark"></div>
-                        <a href="https://www.google.com/preferences/source?q=xclusivetech.co.ke" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-200 text-xs font-medium transition-colors">
-                            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17Z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24Z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15Z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98Z"/></svg>
+                        <a href="https://www.google.com/preferences/source?q=xclusivetech.co.ke" target="_blank" rel="noopener noreferrer" class="footer-source-btn">
+                            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17Z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24Z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15Z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98Z"/></svg>
                             <span>Add on Google Search</span>
                         </a>
                     </div>
                 </div>
-                <div class="space-y-4">
-                    <h4 class="font-bold">Quick links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="/about" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="/services" class="hover:text-white transition-colors">Services</a></li>
-                        <li><a href="/portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
-                        <li><a href="/pricing" class="hover:text-white transition-colors">Pricing</a></li>
-                        <li><a href="/blog/" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="/solutions" class="hover:text-white transition-colors">Solutions</a></li>
+
+                <!-- Col 2: Navigation -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="/" class="footer-nav-link">Home</a></li>
+                        <li><a href="/about" class="footer-nav-link">About Company</a></li>
+                        <li><a href="/services" class="footer-nav-link">Engineering Services</a></li>
+                        <li><a href="/solutions" class="footer-nav-link">Solutions</a></li>
+                        <li><a href="/pricing" class="footer-nav-link">Milestone Pricing</a></li>
+                        <li><a href="/portfolio" class="footer-nav-link">Client Portfolio</a></li>
+                        <li><a href="/blog/" class="footer-nav-link">Technical Blog</a></li>
+                        <li><a href="/contact" class="footer-nav-link">Contact Intake</a></li>
                     </ul>
                 </div>
-                <div class="space-y-4">
-                    <h4 class="font-bold">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/services" class="hover:text-white transition-colors">Web Design</a></li>
-                        <li><a href="/services" class="hover:text-white transition-colors">Web Development</a></li>
-                        <li><a href="/services" class="hover:text-white transition-colors">E-commerce &amp; M-Pesa</a></li>
-                        <li><a href="/services" class="hover:text-white transition-colors">SEO &amp; Marketing</a></li>
-                        <li><a href="/services" class="hover:text-white transition-colors">Website Maintenance</a></li>
-                        <li><a href="/services#domain-registration" class="hover:text-white transition-colors">Domain Registration</a></li>
-                        <li><a href="/services#social-media-management" class="hover:text-white transition-colors">Social Media Management</a></li>
+
+                <!-- Col 3: Services -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="/services" class="footer-nav-link">Web Design &amp; UI/UX</a></li>
+                        <li><a href="/services" class="footer-nav-link">Full-Stack Development</a></li>
+                        <li><a href="/services" class="footer-nav-link">E-commerce &amp; M-Pesa</a></li>
+                        <li><a href="/services" class="footer-nav-link">SEO, GEO &amp; AEO Schema</a></li>
+                        <li><a href="/services" class="footer-nav-link">Continuous Maintenance</a></li>
+                        <li><a href="/services#domain-registration" class="footer-nav-link">Domain &amp; DNS Management</a></li>
+                        <li><a href="/services#social-media-management" class="footer-nav-link">Social Media Architecture</a></li>
                     </ul>
                 </div>
-                <div class="space-y-4">
-                    <h4 class="font-bold">Contact</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><a href="mailto:hello@xclusivetech.co.ke" class="hover:text-white transition-colors">hello@xclusivetech.co.ke</a></li>
-                        <li><a href="tel:+254722753819" class="hover:text-white transition-colors">+254 722 753 819</a></li>
-                                                <li><a href="https://share.google/nOqYIkKFu0ynASqVK" target="_blank" class="hover:text-white transition-colors">Find us on Google</a></li>
-                        <li><a href="https://www.google.com/preferences/source?q=xclusivetech.co.ke" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17Z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24Z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15Z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98Z"/></svg> Add as Preferred Source</a></li>
-                        <li><a href="https://www.facebook.com/share/1CcjjbidRp/" target="_blank" class="hover:text-white transition-colors">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/xclusivetech.co.ke" target="_blank" class="hover:text-white transition-colors">Instagram</a></li>
+
+                <!-- Col 4: Operations & Contact -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Operations &amp; Office</h3>
+                    <ul class="footer-nav-list">
+                        <li class="footer-contact-item">
+                            <svg aria-hidden="true" class="footer-contact-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>1st Floor, Suite F8, Wood Ave, Park Apartments, Kilimani, Nairobi, Kenya</span>
+                        </li>
+                        <li><a href="mailto:hello@xclusivetech.co.ke" class="footer-nav-link">hello@xclusivetech.co.ke</a></li>
+                        <li><a href="tel:+254722753819" class="footer-nav-link">+254 722 753 819</a></li>
+                        <li><a href="https://share.google/nOqYIkKFu0ynASqVK" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Google Business Profile</a></li>
+                        <li><a href="https://www.facebook.com/share/1CcjjbidRp/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Facebook Corporate</a></li>
+                        <li><a href="https://www.instagram.com/xclusivetech.co.ke?igsh=aWl6c3U5cDY1YWJi" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram Corporate</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
-                <p>&copy; 2026 Xclusive Tech. All Rights Reserved.</p>
-                <div class="flex gap-4">
-                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+
+            <!-- Footer Bottom Legal Bar -->
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Xclusive Tech. All rights reserved. Registered web development enterprise in Nairobi, Kenya.</p>
+                <div class="footer-bottom-links">
+                    <a href="/privacy" class="footer-bottom-link">Privacy Policy</a>
+                    <a href="/terms" class="footer-bottom-link">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp floating button -->
-    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20to%20discuss%20my%20project%20needs." target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 z-40" title="Chat on WhatsApp">
-        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-label="Chat on WhatsApp"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.025 0-2.031.313-2.891.893L9.9 4.504C10.742 3.74 11.853 3.3 13.05 3.3c2.969 0 5.387 2.418 5.387 5.387 0 1.197-.46 2.307-1.224 3.15l.531 1.465c.592-.689.956-1.586.956-2.615 0-2.206-1.794-4-4-4zm0 0"/></svg>
+    <!-- WhatsApp Floating Action Button -->
+    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20to%20discuss%20my%20project%20needs." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Contact lead engineer on WhatsApp" title="Chat on WhatsApp">
+        <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.025 0-2.031.313-2.891.893L9.9 4.504C10.742 3.74 11.853 3.3 13.05 3.3c2.969 0 5.387 2.418 5.387 5.387 0 1.197-.46 2.307-1.224 3.15l.531 1.465c.592-.689.956-1.586.956-2.615 0-2.206-1.794-4-4-4zm0 0"/></svg>
     </a>
 
-    <script src="js/main.js?v=20260913e"></script>
+    <script src="js/main.js?v=20260914a"></script>
     <script src="js/navigation.js"></script>
     <script src="js/animations.js"></script>
 </body>
