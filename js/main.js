@@ -7,11 +7,62 @@
 class XclusiveTech {
     // Initialize app
     static init() {
+        this.setupThemeToggle();
         this.setupEventListeners();
         this.setupFormHandling();
         this.checkQueryParams();
         this.optimizePerformance();
         this.setupScrollQuotePopup();
+    }
+
+    // Setup Theme Toggle (Light / Dark mode)
+    static setupThemeToggle() {
+        const THEME_KEY = 'xclusive_theme';
+        const getPreferredTheme = () => {
+            try {
+                const stored = window.localStorage.getItem(THEME_KEY);
+                if (stored === 'dark') return 'dark';
+                if (stored === 'light') return 'light';
+            } catch (e) {}
+            return 'light'; // Always default to light mode
+        };
+
+        const updateToggleButtons = (theme) => {
+            const isDark = theme === 'dark';
+            const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+            document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+                btn.setAttribute('aria-label', label);
+                btn.setAttribute('title', label);
+                btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+            });
+        };
+
+        const applyTheme = (theme, persist = false) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            if (persist) {
+                try {
+                    window.localStorage.setItem(THEME_KEY, theme);
+                } catch (e) {}
+            }
+            updateToggleButtons(theme);
+            try {
+                window.dispatchEvent(new CustomEvent('themechange', { detail: { theme } }));
+            } catch (e) {}
+        };
+
+        // Initialize state on buttons
+        const currentTheme = document.documentElement.getAttribute('data-theme') || getPreferredTheme();
+        applyTheme(currentTheme, false);
+
+        // Click handlers on all theme toggle buttons
+        document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const active = document.documentElement.getAttribute('data-theme') || getPreferredTheme();
+                const nextTheme = active === 'dark' ? 'light' : 'dark';
+                applyTheme(nextTheme, true);
+            });
+        });
     }
     
     // Setup event listeners

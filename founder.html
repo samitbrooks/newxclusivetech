@@ -17,6 +17,20 @@
     <meta name="twitter:description" content="A registered Pharmacist by training, a web designer &amp; front-end developer by passion. The story behind Xclusive Tech.">
     <meta name="twitter:image" content="https://www.xclusivetech.co.ke/assets/images/samuel-headshot.png">
 
+        <!-- Theme Initialization (Prevents FOUC, defaults strictly to light) -->
+    <script>
+        (function() {
+            try {
+                var storedTheme = localStorage.getItem('xclusive_theme');
+                if (storedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png?v=2">
@@ -82,7 +96,8 @@
             <div class="nav-row">
                 <!-- Logo -->
                 <a href="/" class="nav-logo" aria-label="Xclusive Tech home">
-                    <img src="assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img" width="160" height="40">
+                    <img src="assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-light" width="160" height="40">
+                    <img src="assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-dark" width="160" height="40">
                 </a>
 
                 <!-- Desktop nav links -->
@@ -109,7 +124,27 @@
                     <a href="/contact" class="nav-link">Contact</a>
                 </div>
 
-                <!-- CTA button -->
+                <!-- Navigation Actions (Theme Toggle, Quote CTA, Mobile Toggle) -->
+                <div class="nav-actions">
+                    <!-- Light / Dark Mode Toggle Button -->
+                    <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Switch theme">
+                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- CTA button -->
                 <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer" class="nav-cta-btn">
                     Get a Free Quote
                 </a>
@@ -120,6 +155,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
+                </div>
             </div>
 
             <!-- Mobile menu -->
