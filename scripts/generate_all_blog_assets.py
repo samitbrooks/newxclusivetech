@@ -52,8 +52,8 @@ POSTS = [
         "c1": "#1E1B4B", "c2": "#4338CA", "accent": "#818CF8",
         "alt": "Website design cost and pricing packages in Kenya KES breakdown",
         "badge": "Transparent Pricing",
-        "pills": ["KES 31.5K Starter", "KES 49K Growth", "KES 72K E-Commerce", "No Hidden Fees"],
-        "stat1": "From KES 31,500", "stat2": "Zero Monthly Lock-in",
+        "pills": ["KES 25K Starter", "KES 49K Growth", "KES 72K E-Commerce", "No Hidden Fees"],
+        "stat1": "From KES 25,000", "stat2": "Zero Monthly Lock-in",
         "viz_type": "pricing_tiers"
     },
     {
