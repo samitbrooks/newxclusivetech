@@ -262,7 +262,7 @@ This project is proprietary to Xclusivetech. All rights reserved.
 
 **Xclusivetech**
 - Email: hello@xclusivetech.co.ke
-- Phone: +254 722 753 819
+- Phone: +254722753819
 - Website: www.xclusivetech.co.ke
 - Location: Nairobi, Kenya
 

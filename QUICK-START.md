@@ -345,7 +345,7 @@ Tailwind CSS is loaded from CDN for best performance.
 
 **Xclusivetech**
 - Email: hello@xclusivetech.co.ke
-- Phone: +254 722 753 819
+- Phone: +254722753819
 - Website: www.xclusivetech.co.ke
 
 ---
