@@ -43,6 +43,7 @@
       "description": "Patient- and student-friendly platforms for clinics, medical schools and therapy practices, built for clarity and easy appointment booking.",
       "projects": [
         { "slug": "gluksdbs", "name": "GLUK School of Dentistry & Biomedical Sciences", "description": "Medical Education", "url": "https://gluksdbs.org" },
+        { "slug": "medmarket", "name": "MedMarket Pharmacy", "description": "Online Pharmacy & Healthcare Marketplace", "url": "https://medmarket.co.ke" },
         { "slug": "opsok", "name": "OPSOK", "description": "Healthcare Society", "url": "https://opsok.org" },
         { "slug": "oncolink", "name": "Oncolink", "description": "Cancer Resource Platform", "url": "https://oncolink.co.ke" },
         { "slug": "purymaxtherapy", "name": "Purymax Exercise Therapy", "description": "Physical Therapy & Sports Rehabilitation", "url": "https://purymaxtherapy.com" }

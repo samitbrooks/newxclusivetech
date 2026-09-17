@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="uxBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="uxPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="uxEmeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <filter id="floatShadow" x="-15%" y="-15%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#2563EB" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Canvas Background -->
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <g opacity="0.35">
+    <path d="M 0,100 L 800,100 M 0,200 L 800,200 M 0,300 L 800,300 M 0,400 L 800,400 M 0,500 L 800,500" stroke="#F1F5F9" stroke-width="1"/>
+    <path d="M 100,0 L 100,600 M 200,0 L 200,600 M 300,0 L 300,600 M 400,0 L 400,600 M 500,0 L 500,600 M 600,0 L 600,600 M 700,0 L 700,600" stroke="#F1F5F9" stroke-width="1"/>
+  </g>
+
+  <!-- Figma Canvas Workspace Window -->
+  <g transform="translate(60, 40)" filter="url(#cardShadow)">
+    <!-- Workspace Frame -->
+    <rect width="680" height="490" rx="18" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <!-- Workspace Top Header Bar -->
+    <rect width="680" height="44" rx="18" fill="#0F172A"/>
+    <rect y="30" width="680" height="14" fill="#0F172A"/>
+    <!-- Window Controls -->
+    <circle cx="28" cy="22" r="5" fill="#EF4444"/>
+    <circle cx="44" cy="22" r="5" fill="#F59E0B"/>
+    <circle cx="60" cy="22" r="5" fill="#10B981"/>
+
+    <!-- Figma File Title & Tabs -->
+    <g transform="translate(100, 14)">
+      <rect width="210" height="22" rx="4" fill="#1E293B"/>
+      <text x="14" y="15" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">❖ Xclusive Design System 2.0</text>
+      <circle cx="195" cy="11" r="3" fill="#10B981"/>
+    </g>
+
+    <!-- Right Collaboration Badges -->
+    <g transform="translate(480, 12)">
+      <circle cx="100" cy="10" r="12" fill="#2563EB" stroke="#0F172A" stroke-width="2"/>
+      <text x="100" y="14" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">SK</text>
+      <rect x="125" y="1" width="60" height="20" rx="10" fill="#10B981"/>
+      <text x="155" y="14" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Share</text>
+    </g>
+
+    <!-- Canvas Grid Area -->
+    <!-- Artboard 1: Desktop Web App Dashboard Frame -->
+    <g transform="translate(40, 70)" filter="url(#cardShadow)">
+      <rect width="360" height="250" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+      <!-- Frame Label -->
+      <text x="4" y="-8" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#64748B">Desktop Hero &amp; App Frame [1440px]</text>
+      <!-- Sub Nav in Wireframe -->
+      <rect x="16" y="16" width="70" height="12" rx="3" fill="#2563EB"/>
+      <rect x="100" y="18" width="35" height="8" rx="2" fill="#E2E8F0"/>
+      <rect x="145" y="18" width="40" height="8" rx="2" fill="#E2E8F0"/>
+      <rect x="195" y="18" width="35" height="8" rx="2" fill="#E2E8F0"/>
+      <rect x="280" y="14" width="64" height="18" rx="9" fill="#10B981"/>
+      <!-- Hero Content -->
+      <rect x="16" y="50" width="180" height="18" rx="4" fill="#0F172A"/>
+      <rect x="16" y="76" width="150" height="10" rx="3" fill="#94A3B8"/>
+      <rect x="16" y="92" width="130" height="8" rx="3" fill="#CBD5E1"/>
+      <rect x="16" y="115" width="90" height="26" rx="6" fill="#2563EB"/>
+      <rect x="114" y="115" width="80" height="26" rx="6" fill="#F1F5F9" stroke="#CBD5E1"/>
+      <!-- Mock Hero Visual on Right -->
+      <rect x="215" y="48" width="130" height="96" rx="8" fill="#EFF6FF" stroke="#BFDBFE"/>
+      <path d="M 230,120 L 255,90 L 280,110 L 305,75 L 330,105" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Metrics Row -->
+      <g transform="translate(16, 160)">
+        <rect width="100" height="70" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+        <rect x="10" y="12" width="40" height="6" rx="2" fill="#94A3B8"/>
+        <text x="10" y="42" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0F172A">+184%</text>
+        <rect x="10" y="52" width="70" height="5" rx="2" fill="#10B981"/>
+      </g>
+      <g transform="translate(126, 160)">
+        <rect width="100" height="70" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+        <rect x="10" y="12" width="40" height="6" rx="2" fill="#94A3B8"/>
+        <text x="10" y="42" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#2563EB">0.85s</text>
+        <rect x="10" y="52" width="70" height="5" rx="2" fill="#2563EB"/>
+      </g>
+      <g transform="translate(236, 160)">
+        <rect width="108" height="70" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+        <rect x="10" y="12" width="50" height="6" rx="2" fill="#94A3B8"/>
+        <text x="10" y="42" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0F172A">4.9 ★</text>
+        <rect x="10" y="52" width="60" height="5" rx="2" fill="#F59E0B"/>
+      </g>
+    </g>
+
+    <!-- Artboard 2: Mobile-First Ergonomic Phone Frame -->
+    <g transform="translate(440, 70)" filter="url(#floatShadow)">
+      <!-- Phone Outer Shell -->
+      <rect width="190" height="360" rx="24" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+      <!-- Screen -->
+      <rect x="6" y="6" width="178" height="348" rx="20" fill="#FFFFFF"/>
+      <!-- Dynamic Island / Notch -->
+      <rect x="65" y="10" width="60" height="12" rx="6" fill="#0F172A"/>
+      <!-- Mobile Content -->
+      <text x="18" y="-8" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#2563EB">Mobile Prototype [390px]</text>
+      <!-- App Header -->
+      <g transform="translate(18, 30)">
+        <rect width="50" height="10" rx="2" fill="#2563EB"/>
+        <circle cx="140" cy="5" r="7" fill="#F1F5F9"/>
+      </g>
+      <!-- Mobile Hero -->
+      <g transform="translate(18, 52)">
+        <rect width="140" height="14" rx="3" fill="#0F172A"/>
+        <rect y="20" width="120" height="7" rx="2" fill="#94A3B8"/>
+        <rect y="32" width="100" height="7" rx="2" fill="#CBD5E1"/>
+        <rect y="46" width="142" height="60" rx="8" fill="#EFF6FF" stroke="#BFDBFE"/>
+        <!-- Conversion Button (Thumb Zone) -->
+        <rect y="120" width="142" height="32" rx="8" fill="#2563EB"/>
+        <text x="71" y="140" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Book Consultation →</text>
+        <!-- WhatsApp Floating Action -->
+        <rect y="160" width="142" height="26" rx="8" fill="#ECFDF5" stroke="#A7F3D0"/>
+        <text x="71" y="177" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#059669" text-anchor="middle">Direct WhatsApp Chat</text>
+      </g>
+      <!-- Bottom Thumb Navigation Bar -->
+      <rect x="6" y="315" width="178" height="39" rx="0" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="35" cy="334" r="5" fill="#2563EB"/>
+      <circle cx="72" cy="334" r="5" fill="#CBD5E1"/>
+      <circle cx="112" cy="334" r="5" fill="#CBD5E1"/>
+      <circle cx="152" cy="334" r="5" fill="#CBD5E1"/>
+    </g>
+
+    <!-- Interactive Prototype Connector Wire -->
+    <path d="M 400,190 C 420,190 425,185 440,185" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="4,4"/>
+    <circle cx="400" cy="190" r="4" fill="#2563EB"/>
+    <circle cx="440" cy="185" r="4" fill="#2563EB"/>
+
+    <!-- Design System Token Bar at Bottom -->
+    <g transform="translate(40, 340)">
+      <rect width="360" height="110" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="16" y="24" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#64748B">Design Tokens &amp; Component System</text>
+      <!-- Color Chips -->
+      <g transform="translate(16, 36)">
+        <circle cx="12" cy="12" r="12" fill="#2563EB"/>
+        <circle cx="44" cy="12" r="12" fill="#10B981"/>
+        <circle cx="76" cy="12" r="12" fill="#0F172A"/>
+        <circle cx="108" cy="12" r="12" fill="#F8FAFC" stroke="#CBD5E1"/>
+        <circle cx="140" cy="12" r="12" fill="#8B5CF6"/>
+      </g>
+      <!-- Badges -->
+      <g transform="translate(16, 74)">
+        <rect width="90" height="22" rx="11" fill="#EFF6FF" stroke="#BFDBFE"/>
+        <text x="45" y="88" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#1D4ED8" text-anchor="middle">WCAG 2.1 AAA</text>
+        <rect x="98" y="0" width="105" height="22" rx="11" fill="#ECFDF5" stroke="#A7F3D0"/>
+        <text x="150.5" y="88" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#047857" text-anchor="middle">Mobile Ergonomic</text>
+        <rect x="211" y="0" width="130" height="22" rx="11" fill="#F1F5F9" stroke="#CBD5E1"/>
+        <text x="276" y="88" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#334155" text-anchor="middle">Figma Component Set</text>
+      </g>
+    </g>
+
+    <!-- Collaborative Cursor Indicator -->
+    <g transform="translate(370, 230)" filter="url(#cardShadow)">
+      <!-- Cursor Arrow -->
+      <polygon points="0,0 6,18 10,13 16,13" fill="#2563EB"/>
+      <rect x="14" y="8" width="115" height="20" rx="4" fill="#2563EB"/>
+      <text x="20" y="22" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">Samuel (Lead UI/UX)</text>
+    </g>
+  </g>
+</svg>
