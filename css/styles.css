@@ -4002,4 +4002,9 @@ footer.bg-slate-900 {
     color: #CBD5E1 !important;
 }
 
+/* Image Positioning Utilities */
+.object-top {
+    object-position: center top !important;
+}
+
 
