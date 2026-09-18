@@ -1,6 +1,6 @@
 # Xclusive Tech
 
-> Xclusive Tech is an affordable, transparent web design and development company for Kenyan small and growing businesses, based in Nairobi and serving businesses across Kenya. Founded in 2020, with 34+ live websites delivered for real businesses across Kenya.
+> Xclusive Tech is an award-winning web design and development company for Kenyan enterprises and growing businesses, based in Nairobi and serving Kiambu County and businesses across Kenya. Co-founder of Top Digitally Fit Web Design Firm of the Year (Digitally Fit Awards), with 120+ live websites delivered for real businesses across Kenya.
 
 Website: https://www.xclusivetech.co.ke
 Email: hello@xclusivetech.co.ke
@@ -11,23 +11,23 @@ Instagram: https://www.instagram.com/xclusivetech.co.ke
 
 ## Services
 
-- Web Design & Development — mobile-first websites, from a focused brochure site to a larger multi-page platform.
-- E-commerce & M-Pesa Stores — full online stores with M-Pesa (Daraja API) checkout, product management, and inventory.
-- SEO, GEO & AEO — on-page SEO plus Generative/Answer Engine Optimisation (structured data and FAQ schema) so the business can be found and recommended by AI assistants like ChatGPT, Gemini and Claude, not just Google.
+- Web Design & Development — mobile-first websites by top website developers in Nairobi, from brochure profiles to enterprise platforms.
+- UI/UX & Product Design — user research, interactive Figma prototyping, and design systems for web and mobile apps.
+- E-commerce & M-Pesa Stores — online shops with Daraja M-Pesa API checkout, product inventory, and customer accounts.
+- SEO, GEO & AEO — on-page SEO plus Generative & Answer Engine Optimisation (structured data and FAQ schema) so the business can be found and cited by AI assistants (Google AI Overviews, Perplexity, ChatGPT, Claude, Gemini).
 - Domain Registration — .co.ke, .com, .org, .ke, .africa and .io domains from KES 1,500/year, paid via M-Pesa.
 - SaaS & Custom Platforms — bespoke web apps, booking/reservation systems, marketplaces, custom integrations.
-- Social Media Management — monthly packages (Starter KES 12,000/mo, Business KES 18,000/mo, Premium KES 25,000/mo) covering Facebook, Instagram and TikTok content, reels, story posts, promotional graphics and reporting. Individual designs from KES 500 each. Details: https://www.xclusivetech.co.ke/services.html#social-media-management
+- Social Media Management — monthly packages (Starter KES 12,000/mo, Business KES 18,000/mo, Premium KES 25,000/mo) covering content, reels, story posts, and reporting.
 
-## Pricing (KES)
+## Website Design Prices in Kenya (KES)
 
-- Limited Launch Offer: KES 20,000 — single-page site, mobile-first, WhatsApp contact button, basic on-page SEO, 3 days delivery. Limited to the first 10 new clients.
-- Starter Site: KES 25,000-45,500 — up to 5 pages, 2-3 weeks delivery.
-- Business Growth: KES 49,000-62,000 — up to 15 pages, CMS, advanced SEO + Analytics, 3-5 weeks delivery.
-- E-commerce Pro: KES 72,000-85,000 — unlimited products, M-Pesa checkout, inventory management, 5-7 weeks delivery.
-- Custom Solutions: From KES 85,000+ — custom features, API integrations, scoped per project.
+- Starter Site: KES 25,000–45,500 — up to 5 pages, custom UI/UX, on-page SEO, WhatsApp chat, 2–3 weeks delivery.
+- Business Growth: KES 49,000–62,000 — up to 15 pages, CMS blog, advanced SEO + Analytics, 3–5 weeks delivery.
+- E-commerce Pro: KES 72,000–85,000 — unlimited products, M-Pesa checkout, inventory management, 5–7 weeks delivery.
+- Custom Solutions: From KES 85,000+ — custom web apps, API integrations, scoped per project.
 - Ongoing care plan from KES 2,000/month.
 
-Full, current pricing: https://www.xclusivetech.co.ke/pricing.html
+Full published pricing breakdown: https://www.xclusivetech.co.ke/pricing.html
 
 ## Industries served
 
@@ -37,10 +37,12 @@ Details: https://www.xclusivetech.co.ke/solutions.html
 
 ## Portfolio (real, verifiable projects)
 
-- Irene Muendo Isuzu (automotive/logistics dealership) — https://irenemuendoisuzu.co.ke/
-- SMA Advocates (law firm) — https://smaadvocates.com/
-- Sage Beans Export (agriculture/agribusiness exporter) — https://sagebeans.co.ke/
-- Oncolink Kenya (oncology/healthcare) — https://oncolink.co.ke/
+- MedMarket Kenya (medical supplies e-commerce platform) — https://medmarket.co.ke/
+- Elite Designs (architectural design & 3D visualization studio) — https://elitedesigns.co.ke/
+- Irene Muendo Isuzu (automotive & commercial truck dealership) — https://irenemuendoisuzu.co.ke/
+- SMA Advocates (corporate & commercial law firm) — https://smaadvocates.com/
+- Sage Beans Export (international French beans & avocado exporter) — https://sagebeans.co.ke/
+- Oncolink Kenya (medical oncology & cancer care directory) — https://oncolink.co.ke/
 
 Full case studies: https://www.xclusivetech.co.ke/portfolio.html
 

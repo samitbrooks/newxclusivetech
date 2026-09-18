@@ -3,7 +3,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://www.xclusivetech.co.ke/</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -19,7 +19,7 @@
     <!-- Blog Index -->
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -35,9 +35,9 @@
     <!-- Blog: Website Cost in Kenya -->
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/how-much-does-a-website-cost-in-kenya</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
 
     <!-- Blog: Social Media Management Cost in Kenya -->
@@ -131,9 +131,9 @@
     <!-- Blog: Web Design for Kiambu County -->
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/web-design-for-businesses-in-kiambu-county</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
 
     <!-- About Page -->
@@ -147,7 +147,7 @@
     <!-- Services Page -->
     <url>
         <loc>https://www.xclusivetech.co.ke/services</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -155,9 +155,9 @@
     <!-- Pricing Page -->
     <url>
         <loc>https://www.xclusivetech.co.ke/pricing</loc>
-        <lastmod>2026-09-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <lastmod>2026-09-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
     </url>
 
     <!-- Portfolio Page -->
