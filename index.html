@@ -44,99 +44,198 @@
     <!-- Google Preferred Sources Library -->
     <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 
-    <!-- LocalBusiness + Service structured data -->
+    <!-- WebSite + LocalBusiness + Services + FAQPage structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
-          "@id": "https://www.xclusivetech.co.ke/",
-          "name": "Xclusive Tech",
-          "logo": "https://www.xclusivetech.co.ke/assets/icons/favicon-512x512.png",
+          "@type": "WebSite",
+          "@id": "https://www.xclusivetech.co.ke/#website",
           "url": "https://www.xclusivetech.co.ke/",
+          "name": "Xclusive Tech",
+          "alternateName": ["Xclusive Tech Kenya", "XclusiveTech"],
+          "description": "Award-winning website developers in Nairobi delivering mobile-first website design, e-commerce stores with M-Pesa integration, and SEO across Kenya.",
+          "publisher": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "inLanguage": "en-KE"
+        },
+        {
+          "@type": ["LocalBusiness", "ProfessionalService"],
+          "@id": "https://www.xclusivetech.co.ke/#organization",
+          "name": "Xclusive Tech",
+          "alternateName": "Xclusive Tech Kenya",
+          "legalName": "Xclusive Tech",
+          "url": "https://www.xclusivetech.co.ke/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://www.xclusivetech.co.ke/#logo",
+            "url": "https://www.xclusivetech.co.ke/assets/icons/favicon-512x512.png",
+            "caption": "Xclusive Tech Logo",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://www.xclusivetech.co.ke/assets/images/og-preview.png",
           "telephone": "+254722753819",
           "email": "hello@xclusivetech.co.ke",
+          "priceRange": "KES 25,000 - KES 85,000+",
+          "currenciesAccepted": "KES, USD",
+          "paymentAccepted": "Cash, Credit Card, M-Pesa, Bank Transfer",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "1st Floor, Suite F8, Wood Ave, Park Apartments, Kilimani",
             "addressLocality": "Nairobi",
             "addressRegion": "Nairobi County",
+            "postalCode": "00100",
             "addressCountry": "KE"
           },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -1.2921,
+            "longitude": 36.7860
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "09:00",
+              "closes": "15:00"
+            }
+          ],
           "areaServed": [
             { "@type": "City", "name": "Nairobi" },
             { "@type": "AdministrativeArea", "name": "Kiambu County" },
-            { "@type": "Country", "name": "Kenya" }
+            { "@type": "Country", "name": "Kenya" },
+            { "@type": "AdministrativeArea", "name": "East Africa" }
           ],
-          "priceRange": "KES 25,000 - KES 85,000+",
-          "image": "https://www.xclusivetech.co.ke/assets/images/og-preview.png",
           "hasMap": "https://share.google/nOqYIkKFu0ynASqVK",
           "sameAs": [
             "https://www.instagram.com/xclusivetech.co.ke",
             "https://www.facebook.com/share/1CcjjbidRp/",
             "https://share.google/nOqYIkKFu0ynASqVK"
-          ]
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+254722753819",
+              "contactType": "customer service",
+              "availableLanguage": ["English", "Swahili"],
+              "areaServed": ["KE"]
+            }
+          ],
+          "founder": {
+            "@type": "Person",
+            "@id": "https://www.xclusivetech.co.ke/founder#person",
+            "name": "Samuel Kidemi Kisaga",
+            "jobTitle": "Founder & Lead Web Designer",
+            "url": "https://www.xclusivetech.co.ke/founder"
+          },
+          "award": "Top Digitally Fit Web Design Firm of the Year - Digitally Fit Awards"
         },
         {
           "@type": "Service",
           "name": "Website Developers in Nairobi & Kenya",
           "serviceType": "Web Development & Design",
-          "provider": { "@id": "https://www.xclusivetech.co.ke/" },
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
           "areaServed": ["Nairobi", "Kiambu County", "Kenya"],
-          "description": "Award-winning website developers in Nairobi delivering mobile-first website design, e-commerce stores with M-Pesa integration, and SEO for businesses across Kenya from KES 25,000."
+          "description": "Award-winning website developers in Nairobi delivering mobile-first website design, e-commerce stores with M-Pesa integration, and SEO for businesses across Kenya from KES 25,000.",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "KES",
+            "lowPrice": "25000",
+            "highPrice": "62000",
+            "offerCount": "2"
+          },
+          "url": "https://www.xclusivetech.co.ke/services"
+        },
+        {
+          "@type": "Service",
+          "name": "E-commerce & M-Pesa Web Stores",
+          "serviceType": "E-commerce Development",
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "areaServed": ["Nairobi", "Kiambu County", "Kenya"],
+          "description": "Full-featured online stores with automated Daraja M-Pesa API integration, product catalog management, mobile-first checkout, and inventory tracking.",
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "KES",
+            "price": "72000",
+            "priceValidUntil": "2026-12-31",
+            "url": "https://www.xclusivetech.co.ke/pricing"
+          },
+          "url": "https://www.xclusivetech.co.ke/services"
         },
         {
           "@type": "Service",
           "name": "UI/UX & Product Design",
           "serviceType": "UI/UX Design",
-          "provider": { "@id": "https://www.xclusivetech.co.ke/" },
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
           "areaServed": ["Nairobi", "Kiambu County", "Kenya"],
           "description": "User research, wireframing, high-fidelity Figma prototyping, design systems, and mobile conversion rate optimization (CRO) for web and mobile applications.",
-          "url": "https://www.xclusivetech.co.ke/services.html#ui-ux-design"
+          "url": "https://www.xclusivetech.co.ke/services#ui-ux-design"
         },
         {
           "@type": "Service",
           "name": "Social Media Management",
           "serviceType": "Social Media Management",
-          "provider": { "@id": "https://www.xclusivetech.co.ke/" },
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
           "areaServed": ["Nairobi", "Kiambu County", "Kenya"],
           "description": "Monthly social media management packages from KES 10,000/month covering flyers/e-posters, weekly posts, reels, social account management, website banners and promotion flyers.",
-          "url": "https://www.xclusivetech.co.ke/services.html#social-media-management"
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "KES",
+            "price": "10000",
+            "priceValidUntil": "2026-12-31",
+            "url": "https://www.xclusivetech.co.ke/services#social-media-management"
+          },
+          "url": "https://www.xclusivetech.co.ke/services#social-media-management"
+        },
+        {
+          "@type": "Service",
+          "name": "SEO, GEO & AEO Services",
+          "serviceType": "Search Engine & AI Optimization",
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "areaServed": ["Nairobi", "Kiambu County", "Kenya"],
+          "description": "Foundational on-page SEO, Google Business Profile optimization, rich results structured data schema, and Generative Engine Optimization for AI answer engines (ChatGPT, Perplexity, Gemini).",
+          "url": "https://www.xclusivetech.co.ke/services"
         },
         {
           "@type": "FAQPage",
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Who is the best, most affordable web designer in Nairobi?",
+              "name": "Who is the most reliable, cost-effective web design agency in Nairobi?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Xclusive Tech is a web design and development company based in Nairobi and serving businesses across Kenya, including Kiambu County, known for transparent KES pricing and reliable delivery. We've built 120+ live websites for real businesses."
+                "text": "Xclusive Tech is an established web development agency based in Nairobi and serving enterprises across Kenya. We are known for milestone-based KES pricing, zero hidden fees, and rapid engineering delivery. We have deployed over 120 live, mobile-indexed websites for Kenyan businesses."
               }
             },
             {
               "@type": "Question",
-              "name": "Why choose Xclusive Tech over other web design companies in Kenya?",
+              "name": "Why choose Xclusive Tech over conventional freelancers or generic agencies?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Published, transparent pricing with no hidden costs; fast delivery (typically 2–3 weeks); mobile-first design; and direct, reachable support on WhatsApp — not a call centre."
+                "text": "We offer published milestone pricing, guaranteed delivery within 2 to 3 weeks, mobile-first performance targeting Lighthouse scores above 90, and direct communication with lead engineers via WhatsApp rather than an impersonal ticketing portal."
               }
             },
             {
               "@type": "Question",
-              "name": "Is Xclusive Tech affordable for a small business?",
+              "name": "Are your web development packages affordable for growing small businesses?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Full packages start from KES 25,000 — designed for small and growing businesses in Nairobi and across Kenya — and every package can be tailored to fit what your business actually needs."
+                "text": "Yes. Complete professional production packages start from KES 25,000 for small and medium enterprises across Kenya. Every package is modular and can be tailored to the exact requirements and technical complexity of your operation."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you only serve Nairobi, or all of Kenya?",
+              "name": "Do you only serve clients within Nairobi, or nationwide?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nairobi is home base, but we serve businesses across Kenya, including Kiambu County."
+                "text": "While our primary office is in Nairobi, we deploy web applications for companies nationwide. We serve a large volume of businesses in Kiambu County (including Thika, Ruiru, Juja, Kikuyu, and Limuru), as well as clients in Mombasa, Nakuru, and Eldoret."
               }
             }
           ]
@@ -245,95 +344,75 @@
     <main id="main-content">
     <!-- Hero Section & Core Metrics -->
     <section class="hero-section" aria-labelledby="hero-heading">
-        <div class="hero-container">
-            <div class="hero-grid">
+        <div class="hero-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="hero-grid grid lg:grid-cols-12 gap-12 items-center">
                 <!-- Left Editorial Column -->
-                <div class="hero-content">
-                    <div class="hero-eyebrow">
-                        <span class="hero-eyebrow-dot" aria-hidden="true"></span>
-                        <span>🏆 Award-Winning Web Design Company &bull; Nairobi &amp; Kenya-Wide</span>
+                <div class="hero-content lg:col-span-7">
+                    <div class="mb-3">
+                        <span class="hero-sub-title">Creative Thinking &amp; Development</span>
                     </div>
 
                     <h1 id="hero-heading" class="hero-title">
-                        Award-winning <span class="hero-title-accent">website developers in Nairobi</span> &amp; top web design company in Kenya.
+                        Strategic Thinking, Tangible <span class="hero-title-accent">Results for</span> <span style="color: #20D9A1;">Business!</span>
                     </h1>
 
                     <p class="hero-lead">
-                        Engineered to turn Kenyan searchers into paying clients. High-speed, mobile-ready websites from KES 25,000 for businesses in Nairobi, Kiambu, and across Kenya. Transparent pricing, SEO included, and fast delivery in 2–3 weeks.
+                        Award-winning website developers in Nairobi &amp; top web design company in Kenya. Mobile-ready, high-speed websites from KES 25,000 engineered to convert visitors into loyal clients.
                     </p>
 
-                    <div class="hero-actions">
-                        <a href="/pricing" class="hero-btn-primary">
+                    <div class="hero-actions flex flex-wrap gap-4 items-center mb-6">
+                        <a href="/pricing" class="tj-primary-btn">
                             <span>See website design prices</span>
-                            <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            <svg aria-hidden="true" class="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </a>
-                        <a href="/portfolio" class="hero-btn-secondary">
-                            View client work
+                        <a href="/portfolio" class="tj-secondary-btn">
+                            <span>View client work</span>
                         </a>
                     </div>
 
-                    <p class="hero-trust-note">
-                        <svg aria-hidden="true" class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    <p class="hero-trust-note flex items-center gap-2">
+                        <svg aria-hidden="true" class="w-4 h-4 text-[#20D9A1]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                         Direct WhatsApp support &bull; Zero hidden retainers &bull; 2–3 week typical delivery
                     </p>
                 </div>
 
-                <!-- Right Editorial Credibility Card -->
-                <aside class="hero-editorial-card" aria-label="Studio Standards">
-                    <div class="hero-card-header">
-                        <span class="hero-card-badge">KENYA-WIDE DELIVERY</span>
-                        <span class="hero-card-location">Kilimani, Nairobi</span>
+                <!-- Right Arch Sculpture Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="hero-arch-card">
+                        <div class="hero-arch-inner">
+                            <img src="assets/images/webency-hero-arch.jpg" alt="Xclusive Tech team designing web applications in Nairobi" class="hero-arch-img" width="520" height="693" fetchpriority="high">
+                        </div>
+                        <div class="hero-floating-badge">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#20D9A1] to-[#5F39FF] flex items-center justify-center text-white text-xl shadow-lg shrink-0">
+                                🏆
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase font-bold tracking-wider text-[#20D9A1]">Digitally Fit Awards</p>
+                                <p class="text-sm font-bold text-white leading-tight">Top Web Design Firm</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="hero-card-quote">
-                        Published, transparent KES packages tailored for Kenyan enterprises, SMEs, and fast-growing service firms.
-                    </p>
-                    <ul class="hero-card-checklist">
-                        <li class="hero-card-check-item">
-                            <span class="text-amber-500 font-bold text-sm leading-none">🏆</span>
-                            <span class="font-semibold text-gray-900">Top Digitally Fit Web Design Firm of the Year</span>
-                        </li>
-                        <li class="hero-card-check-item">
-                            <svg aria-hidden="true" class="w-4 h-4 hero-card-check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Mobile-first engineering (80%+ Kenya traffic)</span>
-                        </li>
-                        <li class="hero-card-check-item">
-                            <svg aria-hidden="true" class="w-4 h-4 hero-card-check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Figma UI/UX prototyping &amp; bespoke design systems</span>
-                        </li>
-                        <li class="hero-card-check-item">
-                            <svg aria-hidden="true" class="w-4 h-4 hero-card-check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>M-Pesa (Daraja) &amp; WhatsApp conversion flows</span>
-                        </li>
-                        <li class="hero-card-check-item">
-                            <svg aria-hidden="true" class="w-4 h-4 hero-card-check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>GEO &amp; AEO structured schema included</span>
-                        </li>
-                        <li class="hero-card-check-item">
-                            <svg aria-hidden="true" class="w-4 h-4 hero-card-check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>No monthly lock-in or surprise hosting fees</span>
-                        </li>
-                    </ul>
-                </aside>
+                </div>
             </div>
 
             <!-- Integrated Core Metrics Strip -->
-            <div class="hero-metrics-bar">
-                <div class="hero-metrics-grid">
+            <div class="hero-metrics-bar rounded-2xl">
+                <div class="hero-metrics-grid grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div class="hero-metric-item">
-                        <p class="hero-metric-number"><span class="counter" data-target="34">34</span>+</p>
+                        <p class="hero-metric-number"><span class="counter" data-target="34">34</span><span class="counter-plus">+</span></p>
                         <p class="hero-metric-label">Live websites delivered</p>
                     </div>
                     <div class="hero-metric-item">
-                        <p class="hero-metric-number"><span class="counter" data-target="6">6</span>+</p>
+                        <p class="hero-metric-number"><span class="counter" data-target="6">6</span><span class="counter-plus">+</span></p>
                         <p class="hero-metric-label">Years of experience</p>
                     </div>
                     <div class="hero-metric-item">
-                        <p class="hero-metric-number"><span class="counter" data-target="20">20</span></p>
+                        <p class="hero-metric-number"><span class="counter" data-target="20">20</span><span class="counter-plus">+</span></p>
                         <p class="hero-metric-label">Industries served</p>
                     </div>
                     <div class="hero-metric-item">
-                        <p class="hero-metric-number text-amber-600">🏆 Winner</p>
-                        <p class="hero-metric-label">Top Digitally Fit Web Firm</p>
+                        <p class="hero-metric-number"><span class="counter" data-target="100">100</span><span class="counter-plus">%</span></p>
+                        <p class="hero-metric-label">Client Satisfaction</p>
                     </div>
                 </div>
             </div>
@@ -344,14 +423,27 @@
     <section class="trust-section" aria-label="Industries and sectors served">
         <div class="trust-container">
             <p class="trust-header-text">Trusted by businesses across Nairobi &amp; Kenya</p>
-            <div class="trust-chips-row">
-                <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Real estate &amp; property</span>
-                <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Legal &amp; advocates</span>
-                <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Logistics &amp; freight</span>
-                <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Healthcare &amp; clinics</span>
-                <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Retail &amp; e-commerce</span>
-                <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Hospitality &amp; tourism</span>
-                <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Agriculture &amp; export</span>
+        </div>
+        <div class="trust-marquee-wrapper" aria-hidden="false">
+            <div class="trust-marquee-track">
+                <div class="trust-marquee-group">
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Real estate &amp; property</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Legal &amp; advocates</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Logistics &amp; freight</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Healthcare &amp; clinics</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Retail &amp; e-commerce</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Hospitality &amp; tourism</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Agriculture &amp; export</span>
+                </div>
+                <div class="trust-marquee-group" aria-hidden="true">
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Real estate &amp; property</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Legal &amp; advocates</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Logistics &amp; freight</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Healthcare &amp; clinics</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Retail &amp; e-commerce</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Hospitality &amp; tourism</span>
+                    <span class="trust-chip"><span class="trust-chip-dot" aria-hidden="true"></span>Agriculture &amp; export</span>
+                </div>
             </div>
         </div>
     </section>
@@ -359,11 +451,11 @@
     <!-- Core Engineering Services -->
     <section class="services-section" aria-labelledby="services-heading">
         <div class="services-container">
-            <!-- Editorial Header -->
-            <div class="services-header">
-                <span class="services-eyebrow">Core Capabilities</span>
-                <h2 id="services-heading" class="services-title">Everything your business needs to win online in Kenya</h2>
-                <p class="services-lead">Fast load speeds on Safaricom mobile networks, native M-Pesa checkouts, and AI-ready search schema — engineered for tangible business ROI at transparent KES pricing.</p>
+            <!-- Webency Section Heading -->
+            <div class="tj-sec-heading text-center mb-16">
+                <span class="sub-title">Our Services</span>
+                <h2 id="services-heading" class="sec-title">Service We Provide</h2>
+                <p class="services-lead max-w-2xl mx-auto">Fast load speeds on Safaricom mobile networks, native M-Pesa checkouts, and AI-ready search schema — engineered for tangible business ROI at transparent KES pricing.</p>
             </div>
 
             <!-- 2x3 Clean Services Grid -->
@@ -391,6 +483,12 @@
                         </div>
                         <h3 class="service-card-title">UI/UX &amp; Product Design</h3>
                         <p class="service-card-desc">Human-centered digital interfaces crafted in Figma. Interactive wireframes, design systems, ergonomic mobile journeys, and conversion-focused checkout UX before writing a single line of code.</p>
+                        <div class="work-card-tags" style="margin-top: 14px; margin-bottom: 0;">
+                            <span class="work-card-tag tag-accent">100% Auto-Layout v5</span>
+                            <span class="work-card-tag tag-purple">Tokenized Variables</span>
+                            <span class="work-card-tag">Interactive Variants</span>
+                            <span class="work-card-tag">Developer-Ready Handoff</span>
+                        </div>
                     </div>
                     <a href="/services#ui-ux-design" class="service-card-link">
                         <span>Explore UI/UX prototyping</span>
@@ -460,97 +558,135 @@
             </div>
 
             <!-- Footer Action -->
-            <div class="services-footer-cta">
-                <a href="/services" class="services-all-btn">
-                    <span>View all service packages &amp; pricing</span>
-                    <span aria-hidden="true">&rarr;</span>
+            <div class="services-footer-cta text-center mt-12">
+                <a href="/services" class="tj-secondary-btn btn-light-border">
+                    <span>View all service packages &amp; pricing <span aria-hidden="true">&rarr;</span></span>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Case Studies / Selected Client Work -->
-    <section class="work-section" aria-labelledby="work-heading">
+    <section class="work-section dark-canvas" aria-labelledby="work-heading">
         <div class="work-container">
-            <!-- Editorial Header -->
-            <div class="work-header">
-                <span class="work-eyebrow">Selected Client Work &bull; 120+ Live Projects</span>
-                <h2 id="work-heading" class="work-title">Real Kenyan businesses. Real measurable results.</h2>
-                <p class="work-lead">Every site below is live, mobile-indexed, and actively generating inquiries for companies in Nairobi, Kiambu, and across Kenya.</p>
+            <!-- Webency Section Heading -->
+            <div class="tj-sec-heading mb-12">
+                <span class="sub-title">Portfolio</span>
+                <h2 id="work-heading" class="sec-title text-white">Our Latest Work For Our Best Clients</h2>
+                <p class="work-lead max-w-2xl">Every site below is live, mobile-indexed, and actively generating inquiries for companies in Nairobi, Kiambu, and across Kenya.</p>
             </div>
 
-            <!-- 4-Card Responsive Grid -->
+            <!-- 5-Card Responsive Flagship Grid -->
             <div class="work-grid">
-                <!-- Case Study 1: Irene Muendo Isuzu -->
+                <!-- Flagship 1: Omni Agent Marketplace -->
                 <article class="work-card">
                     <div class="work-card-media">
                         <picture>
-                            <source srcset="assets/images/case-studies/irene-muendo-isuzu.webp" type="image/webp">
-                            <img src="assets/images/case-studies/irene-muendo-isuzu.png" alt="Irene Muendo Isuzu dealership website" width="800" height="450" loading="lazy" decoding="async" class="work-card-img">
+                            <source srcset="assets/images/case-studies/omniagentmarketplace.webp" type="image/webp">
+                            <img src="assets/images/case-studies/omniagentmarketplace.png" alt="Omni Agent Marketplace website — Designed in Figma and Live in Production" width="800" height="450" loading="lazy" decoding="async" class="work-card-img">
                         </picture>
                     </div>
                     <div class="work-card-body">
-                        <span class="work-card-badge">Automotive</span>
-                        <h3 class="work-card-title">Irene Muendo Isuzu</h3>
-                        <p class="work-card-desc">Commercial vehicle dealership platform with financing calculator and instant WhatsApp showroom inquiry routing.</p>
-                        <a href="https://irenemuendoisuzu.co.ke/" target="_blank" rel="noopener noreferrer" class="work-card-link">
+                        <span class="work-card-badge">Designed in Figma · Live in Production</span>
+                        <h3 class="work-card-title">Omni Agent Marketplace</h3>
+                        <p class="work-card-desc">B2B marketplace selling 21+ AI agents; designed with dark-mode tokens and interactive live chat simulation component.</p>
+                        <div class="work-card-tags">
+                            <span class="work-card-tag tag-accent">AI Platform</span>
+                            <span class="work-card-tag tag-purple">Figma Auto-Layout v5</span>
+                        </div>
+                        <a href="https://omniagentmarketplace.com" target="_blank" rel="noopener noreferrer" class="work-card-link">
                             <span>View live site</span>
                             <span aria-hidden="true">&rarr;</span>
                         </a>
                     </div>
                 </article>
 
-                <!-- Case Study 2: SMA Advocates -->
+                <!-- Flagship 2: Tenders Access Hub -->
                 <article class="work-card">
                     <div class="work-card-media">
                         <picture>
-                            <source srcset="assets/images/case-studies/sma-advocates.webp" type="image/webp">
-                            <img src="assets/images/case-studies/sma-advocates.png" alt="SMA Advocates Nairobi law firm website" width="800" height="450" loading="lazy" decoding="async" class="work-card-img">
+                            <source srcset="assets/images/case-studies/tendersaccesshub.webp" type="image/webp">
+                            <img src="assets/images/case-studies/tendersaccesshub.png" alt="Tenders Access Hub website — B2B SaaS One-Pager" width="800" height="450" loading="lazy" decoding="async" class="work-card-img">
                         </picture>
                     </div>
                     <div class="work-card-body">
-                        <span class="work-card-badge">Legal Practice</span>
-                        <h3 class="work-card-title">SMA Advocates</h3>
-                        <p class="work-card-desc">Corporate law firm portal featuring practice areas, advocate profiles, and encrypted confidential consultation intake.</p>
-                        <a href="https://smaadvocates.com/" target="_blank" rel="noopener noreferrer" class="work-card-link">
+                        <span class="work-card-badge">B2B SaaS One-Pager</span>
+                        <h3 class="work-card-title">Tenders Access Hub</h3>
+                        <p class="work-card-desc">Global procurement platform across 190+ countries; engineered with Z-pattern search hierarchy and interactive monthly/annual pricing toggles.</p>
+                        <div class="work-card-tags">
+                            <span class="work-card-tag tag-accent">B2B SaaS</span>
+                            <span class="work-card-tag tag-purple">Z-Pattern CRO</span>
+                        </div>
+                        <a href="https://tendersaccesshub.com" target="_blank" rel="noopener noreferrer" class="work-card-link">
                             <span>View live site</span>
                             <span aria-hidden="true">&rarr;</span>
                         </a>
                     </div>
                 </article>
 
-                <!-- Case Study 3: Sage Beans Export -->
+                <!-- Flagship 3: PharmaPOS Platform -->
                 <article class="work-card">
                     <div class="work-card-media">
                         <picture>
-                            <source srcset="assets/images/case-studies/sage-beans.webp" type="image/webp">
-                            <img src="assets/images/case-studies/sage-beans.png" alt="Sage Beans Export agricultural website" width="800" height="450" loading="lazy" decoding="async" class="work-card-img">
+                            <source srcset="assets/images/case-studies/pharmapos.webp" type="image/webp">
+                            <img src="assets/images/case-studies/pharmapos.png" alt="PharmaPOS Platform website — Healthcare SaaS UI Kit" width="800" height="450" loading="lazy" decoding="async" class="work-card-img">
                         </picture>
                     </div>
                     <div class="work-card-body">
-                        <span class="work-card-badge">Agri-Export</span>
-                        <h3 class="work-card-title">Sage Beans Export</h3>
-                        <p class="work-card-desc">Agricultural export site with comprehensive product specs, international shipment logistics, and global buyer RFQ workflows.</p>
-                        <a href="https://sagebeans.co.ke/" target="_blank" rel="noopener noreferrer" class="work-card-link">
+                        <span class="work-card-badge">Healthcare SaaS UI Kit</span>
+                        <h3 class="work-card-title">PharmaPOS Platform</h3>
+                        <p class="work-card-desc">Cloud point-of-sale for retail pharmacies; designed with touch-ergonomic counter keys and instant barcode/SKU scanning layouts.</p>
+                        <div class="work-card-tags">
+                            <span class="work-card-tag tag-accent">Healthcare SaaS</span>
+                            <span class="work-card-tag tag-purple">Touch UX</span>
+                        </div>
+                        <a href="https://pharmacypos.co.ke" target="_blank" rel="noopener noreferrer" class="work-card-link">
                             <span>View live site</span>
                             <span aria-hidden="true">&rarr;</span>
                         </a>
                     </div>
                 </article>
 
-                <!-- Case Study 4: MedMarket Pharmacy -->
+                <!-- Flagship 4: Santorini Queen Charters -->
                 <article class="work-card">
                     <div class="work-card-media">
                         <picture>
-                            <source srcset="assets/images/case-studies/medmarket.webp" type="image/webp">
-                            <img src="assets/images/case-studies/medmarket.png" alt="MedMarket Pharmacy website — Online Pharmacy & Healthcare Marketplace in Nairobi" width="800" height="450" loading="lazy" decoding="async" class="work-card-img">
+                            <source srcset="assets/images/case-studies/santoriniqueen.webp" type="image/webp">
+                            <img src="assets/images/case-studies/santoriniqueen.png" alt="Santorini Queen Charters website — Luxury Experience" width="800" height="450" loading="lazy" decoding="async" class="work-card-img">
                         </picture>
                     </div>
                     <div class="work-card-body">
-                        <span class="work-card-badge">Pharmacy &amp; Health Marketplace</span>
-                        <h3 class="work-card-title">MedMarket Pharmacy</h3>
-                        <p class="work-card-desc">Full-scale online pharmacy and health marketplace with automated M-Pesa checkouts, digital prescription intake, and direct courier dispatch.</p>
-                        <a href="https://medmarket.co.ke" target="_blank" rel="noopener noreferrer" class="work-card-link">
+                        <span class="work-card-badge">Luxury Experience</span>
+                        <h3 class="work-card-title">Santorini Queen Charters</h3>
+                        <p class="work-card-desc">Luxury Mediterranean yacht charter platform; high-contrast editorial typography pairing (grotesk + serif) and instant VIP booking routing.</p>
+                        <div class="work-card-tags">
+                            <span class="work-card-tag tag-accent">Luxury Commerce</span>
+                            <span class="work-card-tag tag-purple">Editorial Typography</span>
+                        </div>
+                        <a href="https://santoriniqueen.com" target="_blank" rel="noopener noreferrer" class="work-card-link">
+                            <span>View live site</span>
+                            <span aria-hidden="true">&rarr;</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Flagship 5: Global Health & Sustainable Development - GHSD -->
+                <article class="work-card">
+                    <div class="work-card-media">
+                        <picture>
+                            <source srcset="assets/images/case-studies/ghsd.webp" type="image/webp">
+                            <img src="assets/images/case-studies/ghsd.png" alt="Global Health & Sustainable Development GHSD website — Multi-Touchpoint Brand System" width="800" height="450" loading="lazy" decoding="async" class="work-card-img">
+                        </picture>
+                    </div>
+                    <div class="work-card-body">
+                        <span class="work-card-badge">Multi-Touchpoint Brand System</span>
+                        <h3 class="work-card-title">Global Health &amp; Sustainable Development - GHSD</h3>
+                        <p class="work-card-desc">Unified visual identity for international health NGO; single design token system applied across web portal and matching 16:9 executive presentation slide decks.</p>
+                        <div class="work-card-tags">
+                            <span class="work-card-tag tag-accent">Cross-Platform</span>
+                            <span class="work-card-tag tag-purple">16:9 Pitch Decks</span>
+                        </div>
+                        <a href="https://globalhealthandsustainabledevelopment.com" target="_blank" rel="noopener noreferrer" class="work-card-link">
                             <span>View live site</span>
                             <span aria-hidden="true">&rarr;</span>
                         </a>
@@ -559,10 +695,9 @@
             </div>
 
             <!-- Footer Action -->
-            <div class="work-footer-cta">
-                <a href="/portfolio" class="work-all-btn">
-                    <span>Explore full client portfolio (120+ live sites)</span>
-                    <span aria-hidden="true">&rarr;</span>
+            <div class="work-footer-cta text-center mt-12">
+                <a href="/portfolio" class="tj-secondary-btn">
+                    <span>Explore full client portfolio (120+ live sites) <span aria-hidden="true">&rarr;</span></span>
                 </a>
             </div>
         </div>
@@ -571,11 +706,11 @@
     <!-- Why Choose Us -->
     <section class="why-section" aria-labelledby="why-heading">
         <div class="why-container">
-            <!-- Editorial Header -->
-            <div class="why-header">
-                <span class="why-eyebrow">The Engineering Difference &bull; Proven Impact</span>
-                <h2 id="why-heading" class="why-title">Why ambitious Kenyan enterprises choose Xclusive Tech</h2>
-                <p class="why-lead">Over 120 live client projects delivered across Kenya. Here is the operational and technical standard we bring to every deployment.</p>
+            <!-- Webency Section Heading -->
+            <div class="tj-sec-heading text-center mb-16">
+                <span class="sub-title">About Us</span>
+                <h2 id="why-heading" class="sec-title">Making Your Business More Unique</h2>
+                <p class="why-lead max-w-2xl mx-auto">Over 120 live client projects delivered across Kenya. Here is the operational and technical standard we bring to every deployment.</p>
             </div>
 
             <!-- 2x2 Clean Value Proposition Grid -->
@@ -634,14 +769,13 @@
             </div>
 
             <!-- Action Strip -->
-            <div class="why-actions">
-                <a href="/pricing" class="why-btn-primary">
+            <div class="why-actions flex flex-wrap gap-4 items-center justify-center mt-12">
+                <a href="/pricing" class="tj-primary-btn">
                     <span>Explore transparent packages</span>
-                    <span aria-hidden="true">&rarr;</span>
+                    <svg aria-hidden="true" class="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
-                <a href="/portfolio" class="why-btn-secondary">
+                <a href="/portfolio" class="tj-secondary-btn btn-light-border">
                     <span>View verified client work</span>
-                    <span aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         </div>
@@ -650,11 +784,11 @@
     <!-- Pricing Teaser & Packages -->
     <section class="pricing-section" aria-labelledby="pricing-heading">
         <div class="pricing-container">
-            <!-- Editorial Header -->
-            <div class="pricing-header">
-                <span class="pricing-eyebrow">Transparent Commercial Terms &bull; Fixed Scope</span>
-                <h2 id="pricing-heading" class="pricing-title">Clear, milestone-based pricing for Kenyan enterprises</h2>
-                <p class="pricing-lead">Published rates with zero concealed fees. Domain registration and server infrastructure are itemized separately so you maintain 100% ownership.</p>
+            <!-- Webency Section Heading -->
+            <div class="tj-sec-heading text-center mb-16">
+                <span class="sub-title">Pricing Packages</span>
+                <h2 id="pricing-heading" class="sec-title">Clear, Milestone-Based Pricing</h2>
+                <p class="pricing-lead max-w-2xl mx-auto">Published rates with zero concealed fees. Domain registration and server infrastructure are itemized separately so you maintain 100% ownership.</p>
             </div>
 
             <!-- 4-Card Grid -->
@@ -886,20 +1020,20 @@
     <!-- Client Testimonials & Verifiable Reviews -->
     <section class="reviews-section" aria-labelledby="reviews-heading">
         <div class="reviews-container">
-            <!-- Editorial Header -->
-            <div class="reviews-header">
-                <span class="reviews-eyebrow">Client Feedback &bull; Verified Engagements</span>
-                <h2 id="reviews-heading" class="reviews-title">What Kenyan business founders say about working with us</h2>
-                <p class="reviews-lead">Real direct feedback from founders, managing partners, and commercial directors across Nairobi, Kiambu, and Eldoret.</p>
-                <div class="reviews-trust-pill">
-                    <span class="reviews-stars" aria-hidden="true">
-                        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <!-- Webency Section Heading -->
+            <div class="tj-sec-heading text-center mb-16">
+                <span class="sub-title">Testimonials</span>
+                <h2 id="reviews-heading" class="sec-title">What Our Customers Say About Us</h2>
+                <p class="reviews-lead max-w-2xl mx-auto">Real direct feedback from founders, managing partners, and commercial directors across Nairobi, Kiambu, and Eldoret.</p>
+                <div class="reviews-trust-pill mx-auto mt-4 inline-flex items-center gap-2">
+                    <span class="reviews-stars flex items-center text-amber-400" aria-hidden="true">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </span>
-                    <span>5.0 / 5.0 Rating &bull; 120+ Completed Deployments</span>
+                    <span class="font-semibold text-sm">5.0 / 5.0 Rating &bull; 120+ Completed Deployments</span>
                 </div>
             </div>
 
@@ -956,11 +1090,11 @@
     <!-- Frequently Asked Questions -->
     <section class="faq-section" aria-labelledby="faq-heading">
         <div class="faq-container">
-            <!-- Editorial Header -->
-            <div class="faq-header">
-                <span class="faq-eyebrow">Clear Answers &bull; Commercial Guidance</span>
-                <h2 id="faq-heading" class="faq-title">Frequently asked questions about web development in Kenya</h2>
-                <p class="faq-lead">Direct, transparent answers regarding delivery timelines, milestone costs, mobile performance, and post-launch maintenance.</p>
+            <!-- Webency Section Heading -->
+            <div class="tj-sec-heading text-center mb-16">
+                <span class="sub-title">F, A, Q</span>
+                <h2 id="faq-heading" class="sec-title">Our Expert Answers</h2>
+                <p class="faq-lead max-w-2xl mx-auto">Direct, transparent answers regarding delivery timelines, milestone costs, mobile performance, and post-launch maintenance.</p>
             </div>
 
             <!-- FAQ List -->
@@ -1005,22 +1139,23 @@
     </section>
 
     <!-- Final Conversion Callout -->
-    <section class="cta-section" aria-labelledby="cta-heading">
+    <section class="cta-section dark-canvas" aria-labelledby="cta-heading">
         <div class="cta-container">
             <div class="cta-card">
                 <div class="cta-content">
-                    <span class="cta-eyebrow">Direct Engineering Consultation</span>
-                    <h2 id="cta-heading" class="cta-title">Ready to launch a high-performance web platform?</h2>
-                    <p class="cta-lead">Share your commercial goals with our technical team. We will deliver an itemized scope, fixed milestone timeline, and complete cost breakdown within hours.</p>
+                    <div class="mb-2">
+                        <span class="sub-title">Get In Touch</span>
+                    </div>
+                    <h2 id="cta-heading" class="cta-title text-white">Have Any Project Plan In Your Mind?</h2>
+                    <p class="cta-lead">Share your commercial goals with our technical team in Nairobi. We will deliver an itemized scope, fixed milestone timeline, and complete cost breakdown within hours.</p>
                 </div>
-                <div class="cta-actions">
-                    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote%20for%20my%20website." target="_blank" rel="noopener noreferrer" class="cta-btn-primary">
+                <div class="cta-actions flex flex-wrap gap-4 items-center">
+                    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote%20for%20my%20website." target="_blank" rel="noopener noreferrer" class="tj-primary-btn">
                         <span>Get a free WhatsApp quote</span>
-                        <span aria-hidden="true">&rarr;</span>
+                        <svg aria-hidden="true" class="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
-                    <a href="/pricing" class="cta-btn-secondary">
+                    <a href="/pricing" class="tj-secondary-btn">
                         <span>Compare milestone pricing</span>
-                        <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
             </div>

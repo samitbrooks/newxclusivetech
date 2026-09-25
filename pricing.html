@@ -40,91 +40,206 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/styles.css?v=20260916a">
 
-    <!-- FAQPage structured data -->
+    <!-- Structured Data: BreadcrumbList, WebPage, OfferCatalog, FAQPage -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "What are the current website design prices in Kenya in 2026?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Website design prices in Kenya range from KES 25,000 for a starter 5-page business profile up to KES 85,000+ for a full e-commerce store with Daraja M-Pesa API integration. At Xclusive Tech, published packages include Starter Site (KES 25,000–45,500), Business Growth (KES 49,000–62,000), and E-commerce Pro (KES 72,000–85,000) with no hidden renewal fees."
-          }
+          "@type": "BreadcrumbList",
+          "@id": "https://www.xclusivetech.co.ke/pricing#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.xclusivetech.co.ke/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Pricing",
+              "item": "https://www.xclusivetech.co.ke/pricing"
+            }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "How much does a basic business website cost in Kenya?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A basic professional 5-page business website in Kenya costs between KES 25,000 and KES 45,500. This includes custom mobile-responsive UI/UX design, foundational on-page SEO, WhatsApp live chat integration, contact forms, and 1 month of complimentary technical support."
-          }
+          "@type": "WebPage",
+          "@id": "https://www.xclusivetech.co.ke/pricing#webpage",
+          "url": "https://www.xclusivetech.co.ke/pricing",
+          "name": "Website Design Prices in Kenya (2026) — From KES 25,000 | Xclusive Tech",
+          "description": "Compare transparent website design prices in Kenya for 2026. Starter sites from KES 25,000, business sites from KES 49,000, and M-Pesa e-commerce from KES 72,000.",
+          "isPartOf": { "@id": "https://www.xclusivetech.co.ke/#website" },
+          "breadcrumb": { "@id": "https://www.xclusivetech.co.ke/pricing#breadcrumb" },
+          "about": { "@id": "https://www.xclusivetech.co.ke/#organization" }
         },
         {
-          "@type": "Question",
-          "name": "What is included in the KES 25,000 starter website package?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The KES 25,000 starter package includes up to 5 custom-designed pages (such as Home, About, Services, Portfolio, Contact), mobile-first responsive design, foundational Google SEO setup, contact form and WhatsApp chat integration, and fast 2–3 week delivery."
-          }
+          "@type": "OfferCatalog",
+          "@id": "https://www.xclusivetech.co.ke/pricing#catalog",
+          "name": "Xclusive Tech Web Design & Engineering Packages",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Starter Site Package",
+              "description": "Up to 5 custom-designed pages, mobile-first responsive design, foundational Google SEO setup, contact form and WhatsApp chat integration, 2–3 week delivery.",
+              "priceCurrency": "KES",
+              "price": "25000",
+              "priceValidUntil": "2026-12-31",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": "25000",
+                "maxPrice": "45500",
+                "priceCurrency": "KES"
+              },
+              "url": "https://www.xclusivetech.co.ke/pricing"
+            },
+            {
+              "@type": "Offer",
+              "name": "Business Growth Package",
+              "description": "6 to 12 custom pages, enhanced on-page SEO, CMS setup for blog and news, conversion-focused landing page UI/UX, priority WhatsApp support, 2–3 week delivery.",
+              "priceCurrency": "KES",
+              "price": "49000",
+              "priceValidUntil": "2026-12-31",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": "49000",
+                "maxPrice": "62000",
+                "priceCurrency": "KES"
+              },
+              "url": "https://www.xclusivetech.co.ke/pricing"
+            },
+            {
+              "@type": "Offer",
+              "name": "E-commerce Pro Package",
+              "description": "Full online store with Daraja M-Pesa API checkout (STK Push, Till, Paybill), product catalog, inventory tracking, customer accounts, and automated email/SMS receipts.",
+              "priceCurrency": "KES",
+              "price": "72000",
+              "priceValidUntil": "2026-12-31",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": "72000",
+                "maxPrice": "85000",
+                "priceCurrency": "KES"
+              },
+              "url": "https://www.xclusivetech.co.ke/pricing"
+            },
+            {
+              "@type": "Offer",
+              "name": "Care Plan / Ongoing Website Maintenance",
+              "description": "Monthly security updates, regular cloud backups, uptime monitoring, and content revision support.",
+              "priceCurrency": "KES",
+              "price": "2000",
+              "priceValidUntil": "2026-12-31",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "2000",
+                "priceCurrency": "KES",
+                "unitText": "MONTH"
+              },
+              "url": "https://www.xclusivetech.co.ke/pricing"
+            },
+            {
+              "@type": "Offer",
+              "name": "Domain Registration & DNS Management",
+              "description": "Annual domain registration (.co.ke, .com, .org, .africa, .io) with free WHOIS privacy protection and DNS configuration.",
+              "priceCurrency": "KES",
+              "price": "1500",
+              "priceValidUntil": "2026-12-31",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "1500",
+                "priceCurrency": "KES",
+                "unitText": "YEAR"
+              },
+              "url": "https://www.xclusivetech.co.ke/pricing"
+            }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "Do you build websites for businesses in Nairobi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — Nairobi is our primary service area, and we also serve businesses across Kenya, including Kiambu County."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you customize a package for my business?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. These packages are a starting point, not a fixed menu. Tell us what your business actually needs and we'll adjust the scope, and the price, to fit. We typically ask for a deposit to start work and the balance on delivery."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does a revision round include?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Design changes, content updates, layout adjustments, and feature tweaks within the project scope. Each revision round takes up to 5 business days."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I upgrade my package after I start?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. You can upgrade from Starter Site to Business Growth, Business Growth to E-commerce Pro, or move to a Custom Solution at any time. We'll credit the amount already paid and continue from where we are."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens after the free maintenance period?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can continue with our Care Plan from KES 2,000/month, or hand off the site to manage yourself. We'll give you a heads-up before anything expires."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you provide domain and hosting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Domain registration and hosting are separate costs, not included in the packages above. We register domains directly from KES 1,500/year (.co.ke, .com, .org and more), or you can bring your own — we'll explain all options before you commit."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you have a package for something smaller or custom?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. If none of the packages above fit what you need, message us on WhatsApp and we'll put together a custom quote. No obligation."
-          }
+          "@type": "FAQPage",
+          "@id": "https://www.xclusivetech.co.ke/pricing#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What are the current website design prices in Kenya in 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Website design prices in Kenya range from KES 25,000 for a starter 5-page business profile up to KES 85,000+ for a full e-commerce store with Daraja M-Pesa API integration. At Xclusive Tech, published packages include Starter Site (KES 25,000–45,500), Business Growth (KES 49,000–62,000), and E-commerce Pro (KES 72,000–85,000) with no hidden renewal fees."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a basic business website cost in Kenya?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A basic professional 5-page business website in Kenya costs between KES 25,000 and KES 45,500. This includes custom mobile-responsive UI/UX design, foundational on-page SEO, WhatsApp live chat integration, contact forms, and 1 month of complimentary technical support."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is included in the KES 25,000 starter website package?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The KES 25,000 starter package includes up to 5 custom-designed pages (such as Home, About, Services, Portfolio, Contact), mobile-first responsive design, foundational Google SEO setup, contact form and WhatsApp chat integration, and fast 2–3 week delivery."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you build websites for businesses in Nairobi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — Nairobi is our primary service area, and we also serve businesses across Kenya, including Kiambu County."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you customize a package for my business?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. These packages are a starting point, not a fixed menu. Tell us what your business actually needs and we'll adjust the scope, and the price, to fit. We typically ask for a deposit to start work and the balance on delivery."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does a revision round include?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Design changes, content updates, layout adjustments, and feature tweaks within the project scope. Each revision round takes up to 5 business days."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I upgrade my package after I start?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. You can upgrade from Starter Site to Business Growth, Business Growth to E-commerce Pro, or move to a Custom Solution at any time. We'll credit the amount already paid and continue from where we are."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens after the free maintenance period?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can continue with our Care Plan from KES 2,000/month, or hand off the site to manage yourself. We'll give you a heads-up before anything expires."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you provide domain and hosting?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Domain registration and hosting are separate costs, not included in the packages above. We register domains directly from KES 1,500/year (.co.ke, .com, .org and more), or you can bring your own — we'll explain all options before you commit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you have a package for something smaller or custom?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. If none of the packages above fit what you need, message us on WhatsApp and we'll put together a custom quote. No obligation."
+              }
+            }
+          ]
         }
       ]
     }

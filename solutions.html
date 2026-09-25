@@ -40,26 +40,48 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/styles.css?v=20260916a">
 
-    <!-- WebPage + Service structured data -->
+    <!-- Structured Data: BreadcrumbList, WebPage, Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.xclusivetech.co.ke/solutions#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.xclusivetech.co.ke/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Solutions",
+              "item": "https://www.xclusivetech.co.ke/solutions"
+            }
+          ]
+        },
+        {
           "@type": "WebPage",
-          "@id": "https://www.xclusivetech.co.ke/solutions.html",
-          "url": "https://www.xclusivetech.co.ke/solutions.html",
+          "@id": "https://www.xclusivetech.co.ke/solutions#webpage",
+          "url": "https://www.xclusivetech.co.ke/solutions",
           "name": "Solutions by Business Type, Industry & SaaS — Xclusive Tech",
-          "about": { "@id": "https://www.xclusivetech.co.ke/" },
-          "description": "Website solutions organised by business type, by industry, and custom SaaS/platform development."
+          "description": "Website solutions organised by business type, by industry, and custom SaaS/platform development for Kenyan enterprises.",
+          "isPartOf": { "@id": "https://www.xclusivetech.co.ke/#website" },
+          "breadcrumb": { "@id": "https://www.xclusivetech.co.ke/solutions#breadcrumb" },
+          "about": { "@id": "https://www.xclusivetech.co.ke/#organization" }
         },
         {
           "@type": "Service",
+          "@id": "https://www.xclusivetech.co.ke/solutions#custom-saas",
           "name": "Custom SaaS & Platform Development",
-          "serviceType": "Software Development",
-          "provider": { "@id": "https://www.xclusivetech.co.ke/" },
-          "areaServed": ["Nairobi", "Kiambu County", "Kenya"],
-          "description": "Bespoke web applications, booking and reservation systems, marketplaces, and custom platforms with API integrations, built for businesses that have outgrown a standard website."
+          "serviceType": "Software Development & Custom Web Applications",
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "areaServed": ["Nairobi", "Kiambu County", "Kenya", "East Africa"],
+          "description": "Bespoke web applications, booking and reservation systems, marketplaces, and custom platforms with API integrations, built for businesses that have outgrown a standard website.",
+          "url": "https://www.xclusivetech.co.ke/solutions"
         }
       ]
     }

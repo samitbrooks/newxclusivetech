@@ -1,69 +1,89 @@
 /* ============================================
-   XCLUSIVETECH CUSTOM STYLES
-   Clean Light & Whitespace Theme — Ubuntu Font
+   XCLUSIVETECH — WEBENCY CREATIVE TECH DESIGN SYSTEM
+   Electric Purple (#5f39ff) & Mint Teal (#20d9a1)
+   Ubuntu + Bilbo Swash Caps Cursive Script
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..800;1,6..12,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-/* ── DESIGN.md Authoritative Design Tokens ───────────────── */
+/* ── Webency Authoritative Design Tokens ───────────────── */
 :root {
     color-scheme: light dark;
 
-    /* ── Modular Type Scale (1.250 — Major Third Ratio) ── */
-    --type-xs:    0.75rem;    /* 12px | line-height: 1.40 */
-    --type-sm:    0.875rem;   /* 14px | line-height: 1.50 */
-    --type-base:  1.000rem;   /* 16px | line-height: 1.60 */
-    --type-lg:    1.250rem;   /* 20px | line-height: 1.40 */
-    --type-xl:    1.563rem;   /* 25px | line-height: 1.30 */
-    --type-2xl:   1.953rem;   /* 31px | line-height: 1.25 */
-    --type-3xl:   2.441rem;   /* 39px | line-height: 1.20 */
-    --type-4xl:   3.052rem;   /* 49px | line-height: 1.15 */
-    --type-5xl:   3.815rem;   /* 61px | line-height: 1.10 */
+    /* ── Webency Brand Color Palette ── */
+    --tj-color-theme-primary:   #5f39ff;  /* Vibrant Royal Purple */
+    --tj-color-theme-secondary: #20d9a1;  /* Luminous Mint Teal */
+    --tj-color-theme-accent:    #fd31bc;  /* Neon Magenta */
+    --tj-color-theme-gold:      #fbb500;  /* Radiant Gold */
 
-    /* ── Fixed Spacing Scale (8-point Grid) ──────────────── */
-    --space-1:    0.25rem;    /* 4px  */
-    --space-2:    0.50rem;    /* 8px  */
-    --space-3:    0.75rem;    /* 12px */
-    --space-4:    1.00rem;    /* 16px */
-    --space-6:    1.50rem;    /* 24px */
-    --space-8:    2.00rem;    /* 32px */
-    --space-12:   3.00rem;    /* 48px */
-    --space-16:   4.00rem;    /* 64px */
-    --space-24:   6.00rem;    /* 96px */
-
-    /* ── Surface Palette (Light Foundation) ──────────────── */
+    /* ── Surface Palette ── */
     --surface-canvas:  #FFFFFF;
-    --surface-subtle:  #F8FAFC;
-    --surface-sunken:  #F1F5F9;
+    --surface-subtle:  #F8F7FF;  /* Soft Lilac Tinted Surface */
+    --surface-sunken:  #F1F0FA;
     --surface-card:    #FFFFFF;
-    --surface-inverse: #0A0F1D;
+    --surface-inverse: #13131A;  /* Deep Webency Obsidian */
 
-    /* ── Border Palette ──────────────────────────────────── */
-    --border-subtle:   #E2E8F0;
-    --border-strong:   #CBD5E1;
-    --border-focus:    #0A0F1D;
-    --border-accent:   #1D4ED8;
+    /* ── Dark Surfaces (Webency Canvas) ── */
+    --dark-hero-bg:    #13131A;
+    --dark-surface:    #181824;
+    --dark-footer-bg:  #141419;
 
-    /* ── Text Palette (WCAG AAA & AA Certified) ──────────── */
-    --text-primary:    #0A0F1D;  /* 18.2:1 contrast against white */
-    --text-secondary:  #334155;  /* 9.6:1 contrast against white */
-    --text-muted:      #64748B;  /* 4.6:1 contrast against white */
+    /* ── Border Palette ── */
+    --border-subtle:   #EEECFF;  /* Delicate Lilac Card Border */
+    --border-strong:   #D6D1FF;
+    --border-focus:    #5F39FF;
+    --border-accent:   #5F39FF;
+
+    /* ── Text Palette ── */
+    --text-primary:    #1E1E24;  /* High-Contrast Charcoal */
+    --text-secondary:  #5E5E72;  /* Smooth Webency Body Text */
+    --text-muted:      #8F8FA2;  /* Metadata / Footnotes */
     --text-inverse:    #FFFFFF;
-    --text-accent:     #1D4ED8;  /* 7.2:1 contrast against white */
+    --text-accent:     #5F39FF;  /* Vibrant Violet Link */
+    --text-teal:       #20D9A1;  /* Mint Teal Accent */
 
-    /* ── Accent Palette ──────────────────────────────────── */
-    --accent-primary:  #1D4ED8;
-    --accent-hover:    #1E40AF;
-    --accent-subtle:   #EFF6FF;
-    --accent-success:  #059669;
+    /* ── Signature Webency Gradients ── */
+    --gradient-primary:      linear-gradient(90deg, #20D9A1 0%, #5F39FF 100%);
+    --gradient-reverse:      linear-gradient(90deg, #5F39FF 0%, #20D9A1 100%);
+    --gradient-button:       linear-gradient(to right, #20D9A1 0%, #5F39FF 51%, #20D9A1 100%);
+    --gradient-card-glow:    linear-gradient(135deg, rgba(32, 217, 161, 0.12) 0%, rgba(95, 57, 255, 0.12) 100%);
 
-    /* ── Shadows (crisp, subtle, architectural) ──────────── */
-    --shadow-sm:       0 1px 2px rgba(10, 15, 29, 0.05);
-    --shadow-md:       0 4px 12px -1px rgba(10, 15, 29, 0.07), 0 2px 4px -1px rgba(10, 15, 29, 0.04);
-    --shadow-lg:       0 12px 28px -4px rgba(10, 15, 29, 0.09), 0 4px 8px -2px rgba(10, 15, 29, 0.04);
-    --shadow-card:     0 1px 3px rgba(10, 15, 29, 0.04), 0 6px 18px -2px rgba(10, 15, 29, 0.05);
+    /* ── Accent Palette ── */
+    --accent-primary:  #5F39FF;
+    --accent-hover:    #4B24F5;
+    --accent-subtle:   rgba(95, 57, 255, 0.08);
+    --accent-success:  #20D9A1;
 
-    /* ── Backward-Compatibility Aliases ──────────────────── */
+    /* ── Webency Soft Elevated Shadows ── */
+    --shadow-sm:       0 2px 6px rgba(95, 57, 255, 0.04);
+    --shadow-md:       0 8px 24px -2px rgba(95, 57, 255, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
+    --shadow-lg:       0 18px 45px -4px rgba(95, 57, 255, 0.14), 0 6px 16px rgba(0, 0, 0, 0.04);
+    --shadow-card:     0 4px 20px rgba(95, 57, 255, 0.06);
+    --shadow-btn-glow: 0 10px 28px rgba(95, 57, 255, 0.38);
+
+    /* ── Typography & Scales ── */
+    --type-xs:    0.75rem;
+    --type-sm:    0.875rem;
+    --type-base:  1.000rem;
+    --type-lg:    1.250rem;
+    --type-xl:    1.563rem;
+    --type-2xl:   1.953rem;
+    --type-3xl:   2.441rem;
+    --type-4xl:   3.052rem;
+    --type-5xl:   4.000rem;
+
+    /* ── Fixed Spacing Scale ── */
+    --space-1:    0.25rem;
+    --space-2:    0.50rem;
+    --space-3:    0.75rem;
+    --space-4:    1.00rem;
+    --space-6:    1.50rem;
+    --space-8:    2.00rem;
+    --space-12:   3.00rem;
+    --space-16:   4.00rem;
+    --space-24:   6.00rem;
+
+    /* ── Backward Compatibility Aliases ── */
     --bg-base:         var(--surface-canvas);
     --bg-surface:      var(--surface-card);
     --bg-subtle:       var(--surface-subtle);
@@ -73,43 +93,39 @@
     --accent:          var(--accent-primary);
     --accent-dark:     var(--accent-hover);
     --accent-light:    var(--accent-subtle);
-    --accent-border:   #BFDBFE;
+    --accent-border:   var(--border-strong);
     --emerald:         var(--accent-success);
     --obsidian:        var(--surface-inverse);
     --brand-blue:      var(--accent-primary);
     --brand-blue-deep: var(--accent-hover);
-    --header-bg:       rgba(255, 255, 255, 0.98);
+    --header-bg:       rgba(255, 255, 255, 0.92);
 }
 
-/* ── Dark Theme Tokens (Explicit [data-theme="dark"] or System Dark if not pinned light) ── */
+/* ── Explicit Dark Theme ──────────────────────────── */
 :root[data-theme="dark"] {
-    --surface-canvas:  #0A0F1D;
-    --surface-subtle:  #0F172A;
-    --surface-sunken:  #020617;
-    --surface-card:    #11192E;
+    --surface-canvas:  #13131A;
+    --surface-subtle:  #181824;
+    --surface-sunken:  #0F0F14;
+    --surface-card:    #1B1B26;
     --surface-inverse: #FFFFFF;
 
-    --border-subtle:   #1E293B;
-    --border-strong:   #334155;
-    --border-focus:    #60A5FA;
-    --border-accent:   #3B82F6;
+    --border-subtle:   #282838;
+    --border-strong:   #3D3D52;
+    --border-focus:    #20D9A1;
+    --border-accent:   #5F39FF;
 
-    --text-primary:    #F8FAFC;
-    --text-secondary:  #CBD5E1;
-    --text-muted:      #94A3B8;
-    --text-inverse:    #0A0F1D;
-    --text-accent:     #60A5FA;
+    --text-primary:    #F5F5FA;
+    --text-secondary:  #B2B2C6;
+    --text-muted:      #7E7E94;
+    --text-inverse:    #13131A;
+    --text-accent:     #20D9A1;
 
-    --accent-primary:  #2563EB;
-    --accent-hover:    #3B82F6;
-    --accent-subtle:   rgba(37, 99, 235, 0.18);
-    --accent-success:  #10B981;
+    --accent-primary:  #5F39FF;
+    --accent-hover:    #7352FF;
+    --accent-subtle:   rgba(95, 57, 255, 0.22);
+    --accent-success:  #20D9A1;
 
-    --shadow-sm:       0 1px 2px rgba(0, 0, 0, 0.5);
-    --shadow-md:       0 4px 12px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
-    --shadow-lg:       0 12px 28px -4px rgba(0, 0, 0, 0.7), 0 4px 8px -2px rgba(0, 0, 0, 0.4);
-    --shadow-card:     0 2px 8px -1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
-
+    --shadow-card:     0 4px 20px rgba(0, 0, 0, 0.5);
     --bg-base:         var(--surface-canvas);
     --bg-surface:      var(--surface-card);
     --bg-subtle:       var(--surface-subtle);
@@ -119,11 +135,7 @@
     --accent:          var(--accent-primary);
     --accent-dark:     var(--accent-hover);
     --accent-light:    var(--accent-subtle);
-    --accent-border:   #1E3A8A;
-    --emerald:         var(--accent-success);
-    --obsidian:        #020617;
-    --brand-blue:      var(--accent-primary);
-    --brand-blue-deep: var(--accent-hover);
+    --header-bg:       rgba(19, 19, 26, 0.92);
 }
 
 /* ── Reset ──────────────────────────────────── */
@@ -227,17 +239,54 @@ p {
     outline-offset: 2px;
 }
 
-code, pre, .tech-mono {
-    font-family: 'JetBrains Mono', monospace;
+code, pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-/* ── Gradient text ──────────────────────────── */
-.gradient-text,
-.text-gradient {
-    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 55%, #0284C7 100%);
+.tech-mono,
+.font-mono,
+span.font-mono,
+p.font-mono {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+/* ── Webency Signature Cursive Script Eyebrows ──────── */
+.sub-title,
+.hero-sub-title,
+.script-sub-title,
+.tj-sub-title {
+    font-family: 'Bilbo Swash Caps', cursive !important;
+    font-size: 35px !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 3.5px !important;
+    display: inline-block;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #20D9A1 0%, #5F39FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+.hero-sub-title,
+.dark-sub-title {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    background: none !important;
+}
+
+/* ── Webency Gradient Text ──────────────────────────── */
+.gradient-text,
+.text-gradient,
+.hero-title-accent,
+.sec-title span,
+.hero-title span,
+h1 span.accent,
+h2 span.accent {
+    background: linear-gradient(90deg, #5F39FF 0%, #20D9A1 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    display: inline;
 }
 
 /* ── Glassmorphism Card → White Card ────────── */
@@ -514,16 +563,16 @@ nav#navbar {
     position: sticky;
     top: 0;
     z-index: 50;
-    background-color: var(--header-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-subtle);
+    background-color: rgba(18, 18, 24, 0.94) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .site-header.shadow-md,
 nav#navbar.shadow-md {
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .nav-container {
@@ -550,7 +599,7 @@ nav#navbar.shadow-md {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4.5rem; /* 72px */
+    height: 4.75rem; /* 76px */
 }
 
 .nav-logo {
@@ -566,18 +615,11 @@ nav#navbar.shadow-md {
     display: block;
 }
 
-/* Light / Dark Header Logo Display */
+/* Light / Dark Header Logo Display - Webency Header is always dark obsidian */
 .nav-logo-light {
-    display: block !important;
+    display: none !important;
 }
 .nav-logo-dark {
-    display: none !important;
-}
-
-:root[data-theme="dark"] .nav-logo-light {
-    display: none !important;
-}
-:root[data-theme="dark"] .nav-logo-dark {
     display: block !important;
 }
 
@@ -593,14 +635,14 @@ nav#navbar.shadow-md {
 }
 
 .nav-link {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: var(--type-sm);
-    font-weight: 400;
-    color: var(--text-secondary);
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    color: #FFFFFF !important;
     text-decoration: none;
     padding: var(--space-2) var(--space-1);
     position: relative;
-    transition: color 0.15s ease;
+    transition: color 0.2s ease;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -611,25 +653,24 @@ nav#navbar.shadow-md {
 }
 
 .nav-link:hover {
-    color: var(--accent-primary);
+    color: #20D9A1 !important;
 }
 
 .nav-link.active {
-    font-weight: 700;
-    color: var(--text-primary);
+    color: #20D9A1 !important;
+    font-weight: 700 !important;
 }
 
 .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: -4px;
     left: 0;
     right: 0;
     height: 2px;
-    background-color: var(--accent-primary);
-    border-radius: 1px;
+    background: linear-gradient(90deg, #20D9A1, #5F39FF);
+    border-radius: 2px;
 }
-
 /* Solutions Dropdown */
 .nav-dropdown {
     position: relative;
@@ -652,52 +693,52 @@ nav#navbar.shadow-md {
 }
 
 .nav-dropdown-inner {
-    background-color: var(--surface-canvas);
-    border: 1px solid var(--border-subtle);
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-lg);
+    background-color: #181824 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6) !important;
     padding: var(--space-2) 0;
 }
 
 .nav-dropdown-item {
     display: block;
     padding: var(--space-2) var(--space-4);
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif !important;
     font-size: var(--type-sm);
-    font-weight: 400;
-    color: var(--text-secondary);
+    font-weight: 500 !important;
+    color: #E2E2EC !important;
     text-decoration: none;
     transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .nav-dropdown-item:hover,
 .nav-dropdown-item:focus {
-    background-color: var(--surface-subtle);
-    color: var(--accent-primary);
-    font-weight: 700;
+    background-color: rgba(95, 57, 255, 0.18) !important;
+    color: #20D9A1 !important;
 }
 
-/* Navbar Primary CTA */
+/* Webency Navbar Primary CTA Button */
 .nav-cta-btn {
     display: none;
     align-items: center;
     justify-content: center;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: var(--type-sm);
-    font-weight: 700;
-    color: var(--text-inverse) !important;
-    background-color: var(--text-primary);
-    border: 1px solid var(--text-primary);
-    border-radius: 0.375rem;
-    padding: var(--space-2) var(--space-4);
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+    background: linear-gradient(90deg, #20D9A1 0%, #5F39FF 100%) !important;
+    border: none !important;
+    border-radius: 150px !important;
+    padding: 10px 24px !important;
     text-decoration: none;
-    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+    box-shadow: 0 4px 18px rgba(95, 57, 255, 0.38) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .nav-cta-btn:hover {
-    background-color: #1E293B;
-    border-color: #1E293B;
-    color: var(--text-inverse) !important;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 26px rgba(95, 57, 255, 0.52) !important;
+    color: #FFFFFF !important;
 }
 
 @media (min-width: 960px) {
@@ -721,24 +762,24 @@ nav#navbar.shadow-md {
     width: 2.5rem; /* 40px */
     height: 2.5rem; /* 40px */
     padding: 0;
-    background-color: var(--surface-canvas);
-    color: var(--text-secondary);
-    border: 1px solid var(--border-subtle);
-    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 50% !important;
     cursor: pointer;
     flex-shrink: 0;
     transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
 
 .theme-toggle-btn:hover {
-    color: var(--text-primary);
-    background-color: var(--surface-subtle);
-    border-color: var(--border-strong);
+    color: #20D9A1 !important;
+    background-color: rgba(32, 217, 161, 0.12) !important;
+    border-color: #20D9A1 !important;
     transform: scale(1.05);
 }
 
 .theme-toggle-btn:focus-visible {
-    outline: 2px solid var(--border-focus);
+    outline: 2px solid #20D9A1;
     outline-offset: 2px;
 }
 
@@ -1856,14 +1897,15 @@ nav#navbar.shadow-md {
 }
 
 .why-card-index {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: var(--type-xs);
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 13px;
     font-weight: 700;
     color: var(--accent-primary);
     background-color: var(--accent-subtle);
-    padding: var(--space-1) var(--space-2);
-    border-radius: 0.25rem;
-    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .why-card-icon {
@@ -1905,7 +1947,7 @@ nav#navbar.shadow-md {
 
 .why-card-tag {
     align-self: flex-start;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     font-size: var(--type-xs);
     font-weight: 400;
     color: var(--text-muted);
@@ -2112,7 +2154,7 @@ nav#navbar.shadow-md {
     left: var(--space-6);
     background-color: var(--accent-primary);
     color: var(--text-inverse);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     font-size: var(--type-xs);
     font-weight: 700;
     padding: var(--space-1) var(--space-3);
@@ -2145,7 +2187,7 @@ nav#navbar.shadow-md {
 }
 
 .pricing-card-meta {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     font-size: var(--type-xs);
     font-weight: 400;
     color: var(--text-muted);
@@ -2417,7 +2459,7 @@ nav#navbar.shadow-md {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     font-size: var(--type-xs);
     font-weight: 700;
     color: var(--text-primary);
@@ -2476,7 +2518,7 @@ nav#navbar.shadow-md {
 }
 
 .reviews-sector-tag {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     font-size: var(--type-xs);
     font-weight: 700;
     color: var(--accent-primary);
@@ -2484,7 +2526,7 @@ nav#navbar.shadow-md {
 }
 
 .reviews-verified-tag {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     font-size: var(--type-xs);
     font-weight: 400;
     color: var(--text-muted);
@@ -2644,7 +2686,7 @@ nav#navbar.shadow-md {
 }
 
 .faq-item-num {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     font-size: var(--type-xs);
     font-weight: 700;
     color: var(--accent-primary);
@@ -2929,7 +2971,7 @@ nav#navbar.shadow-md {
 
 .source-eyebrow {
     display: inline-block;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     font-size: var(--type-xs);
     font-weight: 700;
     color: var(--accent-primary);
@@ -3214,7 +3256,7 @@ nav#navbar.shadow-md {
 }
 
 .footer-source-tag {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     font-size: var(--type-xs);
     font-weight: 700;
     color: #CBD5E1;
@@ -4007,4 +4049,841 @@ footer.bg-slate-900 {
     object-position: center top !important;
 }
 
+/* ================================================================
+   WEBENCY COMPLETE COMPONENT & VISUAL SYSTEM (THEME JUNCTION SPEC)
+   ================================================================ */
 
+/* ── Webency Section Heading Architecture ────────────────────── */
+.tj-sec-heading,
+.section-heading-webency {
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 2;
+}
+
+.tj-sec-heading.text-center,
+.section-heading-webency.text-center {
+    text-align: center;
+}
+
+.tj-sec-heading .sub-title,
+.hero-sub-title,
+.section-heading-webency .sub-title {
+    font-family: 'Bilbo Swash Caps', cursive !important;
+    font-size: 38px !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    letter-spacing: 3.5px !important;
+    display: inline-block;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #20D9A1 0%, #5F39FF 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.hero-sub-title,
+.dark-canvas .sub-title {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    background: none !important;
+}
+
+.tj-sec-heading .sec-title,
+.section-heading-webency .sec-title {
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 46px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.025em !important;
+    color: #1E1E24;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .tj-sec-heading .sec-title,
+    .section-heading-webency .sec-title {
+        font-size: 32px !important;
+    }
+    .tj-sec-heading .sub-title,
+    .hero-sub-title,
+    .section-heading-webency .sub-title {
+        font-size: 30px !important;
+    }
+}
+
+.dark-canvas .sec-title,
+.dark-canvas .services-title,
+.dark-canvas .work-title,
+.dark-canvas h2 {
+    color: #FFFFFF !important;
+}
+
+.tj-sec-heading .sec-title span,
+.section-heading-webency .sec-title span,
+.hero-title-accent,
+.hero-title span,
+h2 span.accent-gradient {
+    background: linear-gradient(90deg, #5F39FF 0%, #20D9A1 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    display: inline;
+}
+
+.tj-sec-heading .desc,
+.section-heading-webency .desc,
+.services-lead,
+.work-lead {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #5E5E72;
+    max-width: 680px;
+}
+
+.dark-canvas .desc,
+.dark-canvas .work-lead,
+.dark-canvas p {
+    color: #A6A6B8 !important;
+}
+
+/* ── Webency Signature Button Suite ─────────────────────────── */
+.tj-primary-btn,
+.hero-btn-primary,
+.btn-webency-primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    border-radius: 150px !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+    padding: 16px 36px !important;
+    background-image: linear-gradient(to right, #20D9A1 0%, #5F39FF 51%, #20D9A1 100%) !important;
+    background-size: 200% auto !important;
+    border: none !important;
+    box-shadow: 0 10px 26px rgba(95, 57, 255, 0.32) !important;
+    text-decoration: none !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    cursor: pointer;
+    line-height: 1 !important;
+}
+
+.tj-primary-btn:hover,
+.hero-btn-primary:hover,
+.btn-webency-primary:hover {
+    background-position: -100% 0 !important;
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 14px 34px rgba(95, 57, 255, 0.46) !important;
+    color: #FFFFFF !important;
+}
+
+.tj-secondary-btn,
+.hero-btn-secondary,
+.btn-webency-border {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 150px !important;
+    padding: 1.5px !important;
+    background: linear-gradient(90deg, #20D9A1 0%, #5F39FF 100%) !important;
+    text-decoration: none !important;
+    transition: all 0.35s ease !important;
+    cursor: pointer;
+    border: none !important;
+    line-height: 1 !important;
+}
+
+.tj-secondary-btn span,
+.hero-btn-secondary span,
+.btn-webency-border span {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 34px;
+    border-radius: 150px;
+    background: #14141C;
+    color: #FFFFFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.35s ease;
+}
+
+/* Light context secondary button span */
+.btn-light-border span {
+    background: #FFFFFF !important;
+    color: #5F39FF !important;
+}
+
+.tj-secondary-btn:hover,
+.hero-btn-secondary:hover,
+.btn-webency-border:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 25px rgba(95, 57, 255, 0.35) !important;
+}
+
+.tj-secondary-btn:hover span,
+.hero-btn-secondary:hover span,
+.btn-webency-border:hover span {
+    background: transparent !important;
+    color: #FFFFFF !important;
+}
+
+/* ── Webency Atmospheric Hero Section ────────────────────────── */
+.hero-section {
+    background-color: #121218 !important;
+    color: #FFFFFF !important;
+    position: relative;
+    overflow: hidden;
+    padding-top: 140px !important;
+    padding-bottom: 90px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Glowing Ambient Orbs */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    background: #20D9A1;
+    filter: blur(180px);
+    opacity: 0.22;
+    top: -5%;
+    left: -8%;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: #5F39FF;
+    filter: blur(200px);
+    opacity: 0.35;
+    top: 10%;
+    right: -10%;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-title {
+    color: #FFFFFF !important;
+    font-size: 64px !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.03em !important;
+    margin-bottom: 24px !important;
+}
+
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 48px !important;
+    }
+}
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 36px !important;
+    }
+    .hero-section {
+        padding-top: 110px !important;
+    }
+}
+
+.hero-lead {
+    color: #A8A8BE !important;
+    font-size: 1.125rem !important;
+    line-height: 1.65 !important;
+    margin-bottom: 36px !important;
+    max-width: 580px !important;
+}
+
+.hero-trust-note {
+    color: #7E7E94 !important;
+    font-size: 14px !important;
+}
+
+/* Webency Arch / Stadium Sculptural Hero Frame */
+.hero-arch-card {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    border-radius: 240px 240px 28px 28px;
+    padding: 6px;
+    background: linear-gradient(145deg, rgba(32, 217, 161, 0.45) 0%, rgba(95, 57, 255, 0.45) 100%);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.65);
+    z-index: 2;
+}
+
+.hero-arch-inner {
+    border-radius: 234px 234px 22px 22px;
+    overflow: hidden;
+    position: relative;
+    background: #181824;
+}
+
+.hero-arch-img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-arch-card:hover .hero-arch-img {
+    transform: scale(1.04);
+}
+
+/* Floating Webency Badge */
+.hero-floating-badge {
+    position: absolute;
+    bottom: 25px;
+    left: -24px;
+    background: rgba(19, 19, 26, 0.94);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    padding: 16px 22px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 4;
+}
+
+@media (max-width: 640px) {
+    .hero-floating-badge {
+        left: 10px;
+        right: 10px;
+        bottom: 15px;
+    }
+}
+
+/* ── Webency Dark Counter Strip ──────────────────────────────── */
+.hero-metrics-bar {
+    background-color: #181824 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 48px 0 !important;
+    margin-top: 70px !important;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-metric-item {
+    text-align: center;
+    position: relative;
+}
+
+.hero-metric-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+    .hero-metric-item:not(:last-child)::after {
+        display: none;
+    }
+}
+
+.hero-metric-number {
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 54px !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    line-height: 1 !important;
+    margin-bottom: 8px !important;
+}
+
+.hero-metric-number .counter-plus {
+    background: linear-gradient(90deg, #20D9A1 0%, #5F39FF 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.hero-metric-label {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #9E9EB0 !important;
+    text-transform: capitalize;
+}
+
+/* ── Webency Service Cards Architecture ──────────────────────── */
+.services-section {
+    background-color: #FFFFFF !important;
+    position: relative;
+}
+
+.service-card {
+    background-color: #F8F7FF !important;
+    border: 1px solid #EEECFF !important;
+    border-radius: 24px !important;
+    padding: 42px 32px !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 4px 20px rgba(95, 57, 255, 0.03) !important;
+}
+
+.service-card:hover {
+    transform: translateY(-8px) !important;
+    background-color: #FFFFFF !important;
+    border-color: #5F39FF !important;
+    box-shadow: 0 24px 50px rgba(95, 57, 255, 0.14) !important;
+}
+
+.service-icon-box {
+    width: 68px !important;
+    height: 68px !important;
+    border-radius: 50% !important;
+    background: #151329 !important;
+    color: #20D9A1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 26px !important;
+    transition: all 0.4s ease !important;
+}
+
+.service-card:hover .service-icon-box {
+    background: linear-gradient(135deg, #20D9A1, #5F39FF) !important;
+    color: #FFFFFF !important;
+    transform: scale(1.08) rotate(4deg) !important;
+}
+
+.service-card-title {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #1E1E24 !important;
+    margin-bottom: 14px !important;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover .service-card-title {
+    color: #5F39FF !important;
+}
+
+.service-card-desc {
+    color: #5E5E72 !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 24px !important;
+}
+
+.service-card-link {
+    color: #5F39FF !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+    transition: gap 0.25s ease !important;
+}
+
+.service-card-link:hover {
+    gap: 12px !important;
+    color: #20D9A1 !important;
+}
+
+/* ── Webency Portfolio Showcase ──────────────────────────────── */
+.work-section {
+    background-color: #13131A !important;
+    color: #FFFFFF !important;
+    position: relative;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.work-card {
+    background-color: #1A1A26 !important;
+    border: 1px solid #28283A !important;
+    border-radius: 22px !important;
+    overflow: hidden !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.work-card:hover {
+    transform: translateY(-8px) !important;
+    border-color: #5F39FF !important;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6) !important;
+}
+
+.work-card-media {
+    overflow: hidden;
+    position: relative;
+}
+
+.work-card-img {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.work-card:hover .work-card-img {
+    transform: scale(1.06) !important;
+}
+
+.work-card-badge {
+    background: rgba(95, 57, 255, 0.22) !important;
+    color: #20D9A1 !important;
+    border: 1px solid rgba(32, 217, 161, 0.3) !important;
+    border-radius: 100px !important;
+    padding: 6px 14px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    display: inline-block !important;
+    margin-bottom: 12px !important;
+}
+
+.work-card-title {
+    color: #FFFFFF !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+}
+
+.work-card-desc {
+    color: #A6A6B8 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 18px !important;
+}
+
+.work-card-link {
+    color: #20D9A1 !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+}
+
+.work-card-link:hover {
+    color: #FFFFFF !important;
+}
+
+.work-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.work-card-tag {
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #CBD5E1 !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 6px !important;
+    padding: 3px 10px !important;
+}
+
+.work-card-tag.tag-accent {
+    color: #20D9A1 !important;
+    background: rgba(32, 217, 161, 0.12) !important;
+    border-color: rgba(32, 217, 161, 0.25) !important;
+}
+
+.work-card-tag.tag-purple {
+    color: #D6D1FF !important;
+    background: rgba(95, 57, 255, 0.2) !important;
+    border-color: rgba(95, 57, 255, 0.35) !important;
+}
+
+/* Service Card Light-Theme Tag Variant */
+.service-card .work-card-tag {
+    color: #4A4A62 !important;
+    background: #F4F2FF !important;
+    border-color: #E2DEFF !important;
+}
+
+.service-card .work-card-tag.tag-accent {
+    color: #0A8B63 !important;
+    background: #E6FBF4 !important;
+    border-color: #B2F3DE !important;
+}
+
+.service-card .work-card-tag.tag-purple {
+    color: #5F39FF !important;
+    background: #ECE8FF !important;
+    border-color: #D6CEFF !important;
+}
+
+/* ── Webency Testimonials Architecture ───────────────────────── */
+.reviews-section {
+    background-color: #F8F7FF !important;
+    position: relative;
+}
+
+.reviews-card {
+    background-color: #FFFFFF !important;
+    border: 1px solid #EEECFF !important;
+    border-radius: 28px !important;
+    padding: 42px !important;
+    box-shadow: 0 10px 32px rgba(95, 57, 255, 0.06) !important;
+    position: relative;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.reviews-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(95, 57, 255, 0.12) !important;
+}
+
+.reviews-card-quote {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #5E5E72 !important;
+    margin-bottom: 24px !important;
+}
+
+.reviews-author-name {
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #1E1E24 !important;
+}
+
+.reviews-author-role {
+    font-size: 14px !important;
+    color: #5F39FF !important;
+    font-weight: 500 !important;
+}
+
+/* ── Webency FAQ Accordion ───────────────────────────────────── */
+.faq-section {
+    background-color: #FFFFFF !important;
+}
+
+.faq-item {
+    background-color: #F8F7FF !important;
+    border: 1px solid #EEECFF !important;
+    border-radius: 18px !important;
+    padding: 26px 30px !important;
+    margin-bottom: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.faq-item:hover {
+    background-color: #FFFFFF !important;
+    border-color: #5F39FF !important;
+    box-shadow: 0 10px 28px rgba(95, 57, 255, 0.08) !important;
+}
+
+.faq-question {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #1E1E24 !important;
+}
+
+.faq-item:hover .faq-question {
+    color: #5F39FF !important;
+}
+
+.faq-answer {
+    color: #5E5E72 !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    margin-top: 12px !important;
+}
+
+/* ── Webency Footer ─────────────────────────────────────────── */
+.site-footer {
+    background-color: #141419 !important;
+    color: #8F8FA2 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-footer a {
+    color: #A6A6B8;
+    transition: color 0.25s ease;
+}
+
+.site-footer a:hover {
+    color: #20D9A1 !important;
+}
+
+.site-footer .footer-social-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #20202C;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF !important;
+    transition: all 0.3s ease;
+}
+
+.site-footer .footer-social-btn:hover {
+    background: linear-gradient(135deg, #20D9A1, #5F39FF) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(95, 57, 255, 0.4);
+}
+
+/* ── Webency Micro-Animations ────────────────────────────────── */
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.035); }
+}
+
+@keyframes shakeY {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+.spin-slow {
+    animation: spinSlow 22s linear infinite;
+}
+
+.pulse {
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.shake-y {
+    animation: shakeY 3.5s ease-in-out infinite;
+}
+
+/* ── Webency Dark CTA Card ───────────────────────────────────── */
+.cta-section.dark-canvas .cta-card {
+    background: linear-gradient(135deg, #181824 0%, #121218 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 28px !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+    padding: 56px 48px !important;
+}
+
+.cta-section.dark-canvas .cta-title {
+    color: #FFFFFF !important;
+    font-size: 38px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+.cta-section.dark-canvas .cta-lead {
+    color: #A8A8BE !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+}
+
+/* ── Trust Chips Webency Polish ──────────────────────────────── */
+.trust-section {
+    background: #FAFAFF !important;
+    border-bottom: 1px solid #EEECFF !important;
+    padding: 32px 0 !important;
+}
+
+.trust-chip {
+    background: #FFFFFF !important;
+    border: 1px solid #E8E5FF !important;
+    border-radius: 100px !important;
+    padding: 8px 18px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #4A4A62 !important;
+    box-shadow: 0 2px 10px rgba(95, 57, 255, 0.04) !important;
+    transition: all 0.25s ease !important;
+}
+
+.trust-chip:hover {
+    border-color: #5F39FF !important;
+    color: #5F39FF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(95, 57, 255, 0.1) !important;
+}
+
+.trust-chip-dot {
+    background: #20D9A1 !important;
+}
+
+/* ── Moving Sector Chips Marquee (Left-to-Right) ──────────────── */
+.trust-marquee-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 6px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.trust-marquee-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: marquee-ltr 28s linear infinite;
+}
+
+.trust-marquee-wrapper:hover .trust-marquee-track {
+    animation-play-state: paused;
+}
+
+.trust-marquee-group {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-right: 14px;
+    flex-shrink: 0;
+}
+
+.trust-chip {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+}
+
+@keyframes marquee-ltr {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .trust-marquee-track {
+        animation: none !important;
+    }
+}
+
+/* ── Work Grid Balanced Multi-Card Layout ─────────────────────── */
+@media (min-width: 1024px) {
+    .work-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 28px !important;
+    }
+}

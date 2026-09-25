@@ -40,57 +40,79 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/styles.css?v=20260916a">
 
+    <!-- Structured Data: BreadcrumbList, AboutPage, FAQPage -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "AboutPage",
-        "@id": "https://www.xclusivetech.co.ke/about.html",
-        "url": "https://www.xclusivetech.co.ke/about.html",
-        "name": "About Xclusive Tech",
-        "description": "Xclusive Tech is a web design agency based in Nairobi, serving Kiambu County and businesses across Kenya, helping small businesses get online affordably. Founded 2020.",
-        "isPartOf": { "@id": "https://www.xclusivetech.co.ke/" },
-        "about": { "@id": "https://www.xclusivetech.co.ke/" },
-        "mainEntity": { "@id": "https://www.xclusivetech.co.ke/" }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.xclusivetech.co.ke/about#breadcrumb",
+          "itemListElement": [
             {
-                "@type": "Question",
-                "name": "When was Xclusive Tech founded?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Xclusive Tech was founded in 2020 in Nairobi, with a goal of making professional web design accessible to every Kenyan business, not just the big ones."
-                }
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.xclusivetech.co.ke/"
             },
             {
-                "@type": "Question",
-                "name": "How many websites has Xclusive Tech built?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Xclusive Tech has delivered over 120 live websites for real businesses across Kenya, spanning law firms, logistics companies, agriculture exporters and healthcare providers."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What areas does Xclusive Tech serve?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Xclusive Tech is based in Nairobi and serves businesses across Kenya, including Kiambu County."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can you tailor a package to fit my business?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. Our published packages are a starting point, not a fixed menu. Tell us what your business actually needs and we'll shape the scope, and the price, around that."
-                }
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://www.xclusivetech.co.ke/about"
             }
-        ]
+          ]
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://www.xclusivetech.co.ke/about#webpage",
+          "url": "https://www.xclusivetech.co.ke/about",
+          "name": "About Xclusive Tech",
+          "description": "Xclusive Tech is a web design agency based in Nairobi, serving Kiambu County and businesses across Kenya, helping small businesses get online affordably. Founded 2020.",
+          "isPartOf": { "@id": "https://www.xclusivetech.co.ke/#website" },
+          "breadcrumb": { "@id": "https://www.xclusivetech.co.ke/about#breadcrumb" },
+          "about": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "mainEntity": { "@id": "https://www.xclusivetech.co.ke/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.xclusivetech.co.ke/about#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "When was Xclusive Tech founded?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Xclusive Tech was founded in 2020 in Nairobi, with a goal of making professional web design accessible to every Kenyan business, not just the big ones."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many websites has Xclusive Tech built?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Xclusive Tech has delivered over 120 live websites for real businesses across Kenya, spanning law firms, logistics companies, agriculture exporters and healthcare providers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What areas does Xclusive Tech serve?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Xclusive Tech is based in Nairobi and serves businesses across Kenya, including Kiambu County."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you tailor a package to fit my business?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Our published packages are a starting point, not a fixed menu. Tell us what your business actually needs and we'll shape the scope, and the price, around that."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
     <!-- Google Preferred Sources Library -->
@@ -203,7 +225,7 @@
                 <span>Award-Winning Web Design Agency &bull; Nairobi, Kenya</span>
             </div>
             <h1 class="text-5xl md:text-6xl font-bold leading-tight">About <span class="gradient-text">Xclusive Tech</span></h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Award-winning web design and development for businesses across Nairobi and Kenya. Founded by Dr. Samuel Kidemi Kisaga — co-founder of the Top Digitally Fit Web Design Firm of the Year.</p>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Award-winning web design and development for businesses across Nairobi and Kenya. Founded by Samuel Kidemi Kisaga — co-founder of the Top Digitally Fit Web Design Firm of the Year.</p>
         </div>
     </section>
 
@@ -246,11 +268,12 @@
         <div class="max-w-5xl mx-auto bg-gradient-to-br from-blue-50/50 via-white to-slate-50 p-8 md:p-10 rounded-3xl border border-slate-200 flex flex-col md:flex-row items-center gap-8 shadow-sm animate-fade-in-up">
             <picture>
                 <source srcset="assets/images/samuel-headshot.webp" type="image/webp">
-                <img src="assets/images/samuel-headshot.png" alt="Dr. Samuel Kidemi Kisaga, founder of Xclusive Tech" width="96" height="96" loading="lazy" decoding="async" class="w-24 h-24 rounded-full object-cover border-2 border-blue-200 shrink-0">
+                <img src="assets/images/samuel-headshot.png" alt="Samuel Kidemi, Founder &amp; Lead Web Designer of Xclusive Tech" width="96" height="96" loading="lazy" decoding="async" class="w-24 h-24 rounded-full object-cover border-2 border-blue-200 shrink-0">
             </picture>
             <div class="flex-1 text-center md:text-left space-y-2">
                 <h3 class="text-2xl font-bold text-gray-900">Curious who's actually behind Xclusive Tech?</h3>
-                <p class="text-gray-600">Meet Dr. Samuel Kidemi Kisaga — award-winning web designer, registered Pharmacist, and co-founder of Elite Designs Kenya (Winner: Top Digitally Fit Web Design Firm of the Year).</p>
+                <p class="text-gray-600">Meet Samuel Kidemi — Founder &amp; Lead Web Designer &amp; UI/UX Specialist — 6+ years experience, 120+ client websites delivered, and Top Digitally Fit Web Design Firm of the Year.</p>
+                <p class="text-xs text-gray-500 pt-1">Personal Portfolio: <a href="https://samuel-kidemi.sammiekidemi.workers.dev" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline font-medium hover:text-blue-700">https://samuel-kidemi.sammiekidemi.workers.dev ↗</a></p>
             </div>
             <a href="/founder" class="px-6 py-3.5 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-300 font-semibold whitespace-nowrap">Meet the founder &rarr;</a>
         </div>

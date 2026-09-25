@@ -1,110 +1,125 @@
-# Design System Specification (`DESIGN.md`)
-**Version**: 2.0.0 — Elite Editorial & Engineering Direction  
-**Status**: Draft for Phase 1 Approval  
+# Webency Design System Specification (`DESIGN.md`)
+**Version**: 3.0.0 — Webency Creative Agency Visual Direction  
+**Status**: Active Production Standard  
 
 ---
 
-## 1. Core Typographic System
+## 1. Executive Summary & Aesthetic DNA
 
-### 1.1 Typeface Pair
-- **Primary Interface & Editorial Font**: `'Ubuntu'`, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif.
-- **Monospace / Data / Metric Font**: `'JetBrains Mono'`, monospace.
+This specification codifies the visual direction inspired entirely by **Webency** (`https://webency.themejunction.net/`): a vibrant, high-energy, world-class creative and tech agency aesthetic.
 
-### 1.2 Strict Font Weight Limit (Maximum 2 Weights)
-The entire site is strictly limited to exactly two font weights of Ubuntu. No exceptions:
-- **`400` (Regular)**: All body copy, secondary descriptions, navigation links, meta tags, table content, and form inputs.
-- **`700` (Bold)**: All headings (`<h1>` through `<h6>`), button labels, emphasized pricing/metrics, active nav states, and badges.
-
-*(Strictly prohibited: 300 Light, 500 Medium, 800 ExtraBold, and arbitrary weights).*
-
-### 1.3 Strict Modular Type Scale (1.250 — Major Third Ratio)
-Base font size: `16px` (`1rem`). Every text element on the site must map directly to one of these 8 steps:
-
-| Token | Size (rem) | Size (px) | Line Height | Tracking | Recommended Use |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `--type-xs` | `0.75rem` | 12px | 1.40 (16.8px) | `+0.04em` | Category tags, uppercase pills, legal notes |
-| `--type-sm` | `0.875rem` | 14px | 1.50 (21.0px) | `+0.01em` | Captions, secondary text, metadata, form labels |
-| `--type-base`| `1.000rem` | 16px | 1.60 (25.6px) | `0` | Standard body paragraphs, list items, nav links |
-| `--type-lg` | `1.250rem` | 20px | 1.40 (28.0px) | `-0.01em` | Lead paragraphs, card titles, subheadings |
-| `--type-xl` | `1.563rem` | 25px | 1.30 (32.5px) | `-0.02em` | `<h3>` headers, metric highlights, modal titles |
-| `--type-2xl`| `1.953rem` | 31px | 1.25 (38.8px) | `-0.025em`| `<h2>` section headers (mobile/standard) |
-| `--type-3xl`| `2.441rem` | 39px | 1.20 (46.8px) | `-0.03em` | `<h2>` primary section headers (desktop) |
-| `--type-4xl`| `3.052rem` | 49px | 1.15 (56.4px) | `-0.035em`| `<h1>` hero display headline (mobile) |
-| `--type-5xl`| `3.815rem` | 61px | 1.10 (67.1px) | `-0.04em` | `<h1>` hero display headline (desktop) |
+### Core Visual Pillars:
+1. **Dynamic Color Spectrum**: Signature electric violet (`#5f39ff`) paired with luminous mint teal (`#20d9a1`), supported by neon magenta (`#fd31bc`) and radiant amber (`#fbb500`).
+2. **Dual-Soul Typography**: Bold, technical sans-serif (`'Ubuntu'`) combined with elegant cursive script accents (`'Bilbo Swash Caps'`) for section eyebrows and creative badges.
+3. **Pill-Shaped Fluid Buttons**: 150px border-radius buttons with animated multi-stop gradient fills (`linear-gradient(to right, #20d9a1 0%, #5f39ff 51%, #20d9a1 100%)`) and gradient-bordered glass pill buttons.
+4. **Atmospheric Dark Surfaces & Luminous Orbs**: Deep charcoal/obsidian hero (`#13131a`) and footer (`#16161c`) backgrounds infused with soft blurred radial lighting (`filter: blur(150px)`) and organic topographic contour line art.
+5. **Sculptural Geometry & Micro-Animations**: Arch/stadium framed visual compositions, rotating circular SVG badges (`Creative Minds ✦ Award Winning`), floating stat cards, and subtle organic keyframe animations (`pulse`, `shake-y`, `floatSlow`).
 
 ---
 
-## 2. Mathematical Spacing System
+## 2. Color Palette & Gradients
 
-### 2.1 Fixed Spacing Scale (8-Point Grid)
-Arbitrary pixels (`11px`, `17px`, `23px`, `36px`, `80px`, `96px` ad-hoc) are strictly forbidden. All margins, paddings, gaps, and absolute offsets must use this fixed scale:
+```css
+:root {
+  /* ── Brand Colors ── */
+  --tj-color-theme-primary:   #5f39ff;  /* Vibrant Royal Purple */
+  --tj-color-theme-secondary: #20d9a1;  /* Luminous Mint Teal */
+  --tj-color-theme-accent:    #fd31bc;  /* Neon Magenta */
+  --tj-color-theme-gold:      #fbb500;  /* Radiant Amber / Gold */
 
-| Token | Value | Equivalent | Usage |
-| :--- | :--- | :--- | :--- |
-| `--space-1` | `0.25rem` | 4px | Micro spacing, icon-to-text gap, border offset |
-| `--space-2` | `0.50rem` | 8px | Button inline icon gap, badge padding, compact grid gap |
-| `--space-3` | `0.75rem` | 12px | Compact padding, input vertical padding |
-| `--space-4` | `1.00rem` | 16px | Standard component padding, inline group spacing |
-| `--space-6` | `1.50rem` | 24px | Card padding, standard grid gap, layout column gutter |
-| `--space-8` | `2.00rem` | 32px | Large card padding, sub-section separation |
-| `--space-12` | `3.00rem` | 48px | Section intra-block spacing, mobile section padding |
-| `--space-16` | `4.00rem` | 64px | Standard section vertical padding (mobile/tablet) |
-| `--space-24` | `6.00rem` | 96px | Hero and primary section vertical padding (desktop) |
+  /* ── Canvas & Surface ── */
+  --tj-color-dark-bg:         #13131a;  /* Hero & Dark Canvas */
+  --tj-color-dark-surface:    #1a1a24;  /* Dark Elevated Cards */
+  --tj-color-dark-footer:     #16161c;  /* Deep Footer Background */
+  --tj-color-light-bg:        #ffffff;  /* Light Section Foundation */
+  --tj-color-light-surface:   #f8f7ff;  /* Soft Lilac Tinted Cards */
+  --tj-color-light-surface-2: #f2f0ff;  /* Light Highlight Background */
 
----
+  /* ── Typography & Ink ── */
+  --tj-color-heading-primary: #1e1e24;  /* High-Contrast Charcoal Heading */
+  --tj-color-heading-white:   #ffffff;  /* White Heading on Dark Canvas */
+  --tj-color-text-body:       #66667a;  /* Crisp Body Copy */
+  --tj-color-text-muted:      #9999a8;  /* Subtle Metadata */
+  --tj-color-text-light:      #e2e2ec;  /* Light Copy on Dark Canvas */
 
-## 3. Curated Color Palette & Contrast Hierarchy
+  /* ── Borders & Dividers ── */
+  --tj-color-border-light:    #eeecff;  /* Delicate Lilac Card Border */
+  --tj-color-border-dark:     #282836;  /* Subtle Dark Section Border */
+  --tj-color-border-accent:   #5f39ff;  /* Interactive Focus */
 
-All color combinations are mathematically verified to exceed **WCAG AA** (minimum 4.5:1) and achieve **WCAG AAA** (7.0:1+) for primary reading elements.
-
-### 3.1 Surface Tokens
-- `--surface-canvas`: `#FFFFFF` — The foundation canvas.
-- `--surface-subtle`: `#F8FAFC` (Slate 50) — Subtle alternate section canvas and card backgrounds.
-- `--surface-sunken`: `#F1F5F9` (Slate 100) — Input backgrounds, pill tags, and code blocks.
-- `--surface-card`: `#FFFFFF` — Primary elevated card background.
-- `--surface-inverse`: `#0A0F1D` — Deep obsidian slate for high-impact footer or contrast banners.
-
-### 3.2 Border Tokens
-- `--border-subtle`: `#E2E8F0` (Slate 200) — Razor-thin 1px card boundaries and structural dividers.
-- `--border-strong`: `#CBD5E1` (Slate 300) — Interactive element borders (secondary buttons, inputs).
-- `--border-focus`: `#0A0F1D` — High-contrast interactive focus ring.
-- `--border-accent`: `#1D4ED8` (Blue 700) — Active state indicator.
-
-### 3.3 Text & Icon Tokens
-- `--text-primary`: `#0A0F1D` — Deep slate-black. Contrast ratio on white: **18.2:1** (WCAG AAA).
-- `--text-secondary`: `#334155` (Slate 700) — High-clarity secondary copy. Contrast on white: **9.6:1** (WCAG AAA).
-- `--text-muted`: `#64748B` (Slate 500) — Supporting metadata, timestamps, captions. Contrast on white: **4.6:1** (WCAG AA).
-- `--text-inverse`: `#FFFFFF` — Text on dark surfaces (`--surface-inverse`).
-- `--text-accent`: `#1D4ED8` — Interactive link and category text. Contrast on white: **7.2:1** (WCAG AAA).
-
-### 3.4 Accent Tokens
-- `--accent-primary`: `#1D4ED8` (Blue 700) — Authoritative royal cobalt for primary actions.
-- `--accent-hover`: `#1E40AF` (Blue 800) — Darker cobalt for hover states.
-- `--accent-subtle`: `#EFF6FF` (Blue 50) — Delicate tint for active tabs, selected states, and tags.
-- `--accent-success`: `#059669` (Emerald 600) — Reserved solely for live status and confirmed indicators.
+  /* ── Signature Gradients ── */
+  --tj-gradient-primary:      linear-gradient(90deg, #20d9a1 0%, #5f39ff 100%);
+  --tj-gradient-primary-rev:  linear-gradient(90deg, #5f39ff 0%, #20d9a1 100%);
+  --tj-gradient-button:       linear-gradient(to right, #20d9a1 0%, #5f39ff 51%, #20d9a1 100%);
+  --tj-gradient-badge:        linear-gradient(90deg, #20d9a1 0%, #5f39ff 100%);
+  --tj-gradient-card:         linear-gradient(180deg, rgba(95, 57, 255, 0.04) 0%, rgba(32, 217, 161, 0.02) 100%);
+}
+```
 
 ---
 
-## 4. Architectural Rules & Anti-Patterns
+## 3. Typographic System
 
-This design system explicitly prohibits the following five practices:
+### 3.1 Typeface Pair
+- **Primary Interface, Headings & Body**: `'Ubuntu'`, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif.
+- **Signature Accent & Subtitles**: `'Bilbo Swash Caps'`, cursive (fallback: `'Caveat'`, cursive).
+- **Labels, Indices, Badges & Tags**: `'Ubuntu'`, sans-serif (consistent sitewide typography without monospaced fonts).
 
-### 1. No Centered-Everything Layouts
-- **The Anti-Pattern**: Stacking a centered badge, centered H2, centered paragraph, and centered 3-card grid in every section.
-- **The Rule**: Asymmetric, editorial grid layouts. Strong left-aligned headlines anchored by clear content columns, with generous intentional whitespace.
+### 3.2 Typography Scale & Roles
+- **Hero Display Title**: `70px` (Desktop) / `38px` (Mobile), Weight `700`, Line-height `1.2`. Includes gradient text highlight span (`linear-gradient(90deg, #5f39ff, #20d9a1)`).
+- **Primary Section Title (`h2`)**: `48px`–`50px`, Weight `700`, Line-height `1.3`, Color `#1e1e24` or `#ffffff`.
+- **Card Title (`h3`/`h4`)**: `22px`–`26px`, Weight `700`.
+- **Script Subtitles / Eyebrows (`.sub-title`)**: `35px`, `'Bilbo Swash Caps'`, cursive, letter-spacing `3.5px`, gradient text clip (`linear-gradient(90deg, #20d9a1, #5f39ff)`).
+- **Body Copy**: `16px`, Line-height `1.65`, Weight `400`, Color `#66667a`.
 
-### 2. No AI-Cliche Text Gradients or Neon Glows
-- **The Anti-Pattern**: Multi-stop rainbow/purple-to-cyan text gradients (`gradient-text`) and glowing drop-shadows (`shadow-glow`, neon borders).
-- **The Rule**: Sharp, crisp typography in solid high-contrast ink (`--text-primary`). Visual authority comes from proportion, kerning, and negative space — not novelty text gradients.
+---
 
-### 3. No Specificity Wars or Inline Style Overrides
-- **The Anti-Pattern**: Littering HTML tags with `style="color: #ffffff !important;"` to patch broken styles.
-- **The Rule**: 100% semantic CSS token architecture. Zero `!important` hacks. Single source of truth in CSS tokens.
+## 4. Component Architecture
 
-### 4. No Div Soup or Redundant Wrappers
-- **The Anti-Pattern**: Nesting 4 layers of generic `<div>` elements just to center a card or apply a border.
-- **The Rule**: Strict semantic HTML5 (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`). Zero arbitrary decorative wrapper divs.
+### 4.1 Webency Primary Button (`.tj-primary-btn`)
+- Pill shape (`border-radius: 150px`)
+- Multi-stop gradient: `linear-gradient(to right, #20d9a1 0%, #5f39ff 51%, #20d9a1 100%)`
+- `background-size: 200% auto;`
+- Hover: Slides background position to `-100%`, elevates `-2px` with a rich violet glow (`box-shadow: 0 10px 25px rgba(95, 57, 255, 0.35)`).
 
-### 5. No Toy Micro-Animations or Visual Gimmicks
-- **The Anti-Pattern**: Wobbling, pulsing, shaking, bouncing icons, glowing threads, and decorative background matrices.
-- **The Rule**: Fast, stable, static-first rendering. Transitions are limited to micro-interactions under `0.2s ease` on user intent (focus, hover, click). No autonomous looping animations.
+### 4.2 Webency Secondary Border Button (`.tj-secondary-btn.btn-border`)
+- Pill shape (`border-radius: 150px`)
+- `padding: 1px;` outer background gradient (`linear-gradient(90deg, #20d9a1, #5f39ff)`)
+- Inside `span`: `border-radius: 58px; padding: 16px 34px;` in white or dark obsidian.
+- Hover: Inner span becomes transparent gradient, text transitions to pure white.
+
+### 4.3 Hero Composition
+- Asymmetric layout:
+  - **Left**: Script eyebrow, bold headline with gradient highlight, descriptive copy, primary & secondary action buttons, direct trust notes.
+  - **Right**: Sculptural arch / stadium image mask (`border-radius: 200px 200px 0 0` or rounded organic container) with floating statistics card, glowing accent spheres (`blur(150px)`), and subtle geometric line art.
+
+### 4.4 Counter / Metric Bar
+- Full-width dark strip (`#1a1a20`) with clean vertical dividers.
+- Odometer / counter numbers in bold `56px` display font with teal gradient plus sign.
+- Uppercase or title-case label in clean white.
+
+### 4.5 Service Cards (`.tj-service-item`)
+- Rounded corners (`border-radius: 20px`), soft lilac surface (`#f8f7ff`).
+- Circular floating icon box with gradient or dark violet background.
+- Clean heading, informative copy, and hover transformation with elevation and subtle gradient border.
+
+### 4.6 Portfolio Showcase (`.tj_portfolios`)
+- Deep dark canvas (`#141419`).
+- Category filter pills with active gradient indicator.
+- Rounded masonry / card grid with interactive hover overlay, zoom effect, and project metadata.
+
+### 4.7 Testimonials & FAQ
+- Large rounded card surfaces (`border-radius: 30px`), SVG quote marks, golden star ratings.
+- Accordion with rounded card items, expandable details, and active state violet border highlight.
+
+### 4.8 Footer (`.tj-footer-area`)
+- Deep dark canvas (`#16161c`) with subtle topographic contour wave accents.
+- 4-column layout: Brand identity, Services, Recent Work / Insights, Direct Contact info with circular icon badges.
+- Social links with circular hover gradient transitions.
+
+---
+
+## 5. Animation Tokens
+- `pulse`: Subtle rhythmic breathing (`scale(1.03)`).
+- `shake-y`: Gentle vertical hover oscillation (`translateY(-8px)`).
+- `spin-slow`: Continuous 360-degree rotation for circular badges (20s linear infinite).

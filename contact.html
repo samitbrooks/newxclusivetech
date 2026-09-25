@@ -40,56 +40,103 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/styles.css?v=20260916a">
 
+    <!-- Structured Data: BreadcrumbList, ContactPage, FAQPage -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "@id": "https://www.xclusivetech.co.ke/contact.html",
-        "url": "https://www.xclusivetech.co.ke/contact.html",
-        "name": "Contact Xclusive Tech",
-        "description": "Contact Xclusive Tech for affordable, reliable web design in Nairobi, Kiambu County and across Kenya. Message us on WhatsApp, email, or fill in the form.",
-        "isPartOf": { "@id": "https://www.xclusivetech.co.ke/" },
-        "mainEntity": { "@id": "https://www.xclusivetech.co.ke/" }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.xclusivetech.co.ke/contact#breadcrumb",
+          "itemListElement": [
             {
-                "@type": "Question",
-                "name": "What's the fastest way to contact Xclusive Tech?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "WhatsApp is the fastest way to reach Xclusive Tech, at +254722753819. You can also email hello@xclusivetech.co.ke or call directly."
-                }
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.xclusivetech.co.ke/"
             },
             {
-                "@type": "Question",
-                "name": "How quickly does Xclusive Tech respond to enquiries?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Xclusive Tech typically responds to enquiries within a few hours, usually faster on WhatsApp."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does Xclusive Tech only serve businesses in Nairobi?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Nairobi is the primary service area, but Xclusive Tech also serves businesses across Kenya, including Kiambu County."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Where is Xclusive Tech's office located?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The office is at 1st Floor, Suite F8, Wood Ave, Park Apartments, Kilimani, Nairobi."
-                }
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contact",
+              "item": "https://www.xclusivetech.co.ke/contact"
             }
-        ]
+          ]
+        },
+        {
+          "@type": "ContactPage",
+          "@id": "https://www.xclusivetech.co.ke/contact#webpage",
+          "url": "https://www.xclusivetech.co.ke/contact",
+          "name": "Contact Xclusive Tech",
+          "description": "Contact Xclusive Tech for affordable, reliable web design in Nairobi, Kiambu County and across Kenya. Message us on WhatsApp, email, or fill in the form.",
+          "isPartOf": { "@id": "https://www.xclusivetech.co.ke/#website" },
+          "breadcrumb": { "@id": "https://www.xclusivetech.co.ke/contact#breadcrumb" },
+          "about": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "mainEntity": {
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "@id": "https://www.xclusivetech.co.ke/#organization",
+            "name": "Xclusive Tech",
+            "telephone": "+254722753819",
+            "email": "hello@xclusivetech.co.ke",
+            "url": "https://www.xclusivetech.co.ke/",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1st Floor, Suite F8, Wood Ave, Park Apartments, Kilimani",
+              "addressLocality": "Nairobi",
+              "addressRegion": "Nairobi County",
+              "postalCode": "00100",
+              "addressCountry": "KE"
+            },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+254722753819",
+                "contactType": "customer service",
+                "availableLanguage": ["English", "Swahili"],
+                "areaServed": ["KE"]
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.xclusivetech.co.ke/contact#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What's the fastest way to contact Xclusive Tech?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "WhatsApp is the fastest way to reach Xclusive Tech, at +254722753819. You can also email hello@xclusivetech.co.ke or call directly."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How quickly does Xclusive Tech respond to enquiries?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Xclusive Tech typically responds to enquiries within a few hours, usually faster on WhatsApp."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Xclusive Tech only serve businesses in Nairobi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nairobi is the primary service area, but Xclusive Tech also serves businesses across Kenya, including Kiambu County."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is Xclusive Tech's office located?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The office is at 1st Floor, Suite F8, Wood Ave, Park Apartments, Kilimani, Nairobi."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
     <!-- Google Preferred Sources Library -->

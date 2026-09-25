@@ -40,132 +40,216 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/styles.css?v=20260916a">
 
-    <!-- FAQPage structured data -->
+    <!-- Structured Data: BreadcrumbList, WebPage, Services, FAQPage -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "Can you build an e-commerce website with M-Pesa for my business?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We build online stores with M-Pesa (Daraja API) checkout built in, so your customers in Nairobi, Kiambu County and beyond can pay the way they already prefer."
-          }
+          "@type": "BreadcrumbList",
+          "@id": "https://www.xclusivetech.co.ke/services#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.xclusivetech.co.ke/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.xclusivetech.co.ke/services"
+            }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "Can you redesign my existing website?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We regularly redesign outdated or poorly performing websites — improving speed, mobile responsiveness, and overall design — for businesses across Kenya."
-          }
+          "@type": "WebPage",
+          "@id": "https://www.xclusivetech.co.ke/services#webpage",
+          "url": "https://www.xclusivetech.co.ke/services",
+          "name": "Services: Web Design, E-Commerce, UI/UX, SEO & Social Media — Xclusive Tech",
+          "description": "Explore web design, e-commerce with M-Pesa, UI/UX, SEO/GEO/AEO, graphic branding, and social media management services in Nairobi, Kiambu, and across Kenya.",
+          "isPartOf": { "@id": "https://www.xclusivetech.co.ke/#website" },
+          "breadcrumb": { "@id": "https://www.xclusivetech.co.ke/services#breadcrumb" },
+          "about": { "@id": "https://www.xclusivetech.co.ke/#organization" }
         },
         {
-          "@type": "Question",
-          "name": "Do you provide ongoing SEO and maintenance after launch?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Basic SEO is included with every website, and we offer monthly SEO and maintenance packages for businesses that want ongoing local keyword targeting, security updates, and content changes."
-          }
+          "@type": "Service",
+          "@id": "https://www.xclusivetech.co.ke/services#web-development",
+          "name": "Web Design & Development",
+          "serviceType": "Web Development & Design",
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "areaServed": ["Nairobi", "Kiambu County", "Kenya", "East Africa"],
+          "description": "Mobile-first responsive web design and development engineered for high speed, conversion rate optimization, and Lighthouse scores > 90.",
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "KES",
+            "lowPrice": "25000",
+            "highPrice": "62000",
+            "offerCount": "2",
+            "url": "https://www.xclusivetech.co.ke/pricing"
+          },
+          "url": "https://www.xclusivetech.co.ke/services"
         },
         {
-          "@type": "Question",
-          "name": "Do you help with Google Business Profile setup?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. As part of our SEO service, we can set up and optimise your Google Business Profile so your business shows up when people search for your service in Nairobi and across Kenya."
-          }
+          "@type": "Service",
+          "@id": "https://www.xclusivetech.co.ke/services#ecommerce-mpesa",
+          "name": "E-commerce & M-Pesa Stores",
+          "serviceType": "E-commerce Web Development",
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "areaServed": ["Nairobi", "Kiambu County", "Kenya", "East Africa"],
+          "description": "Full-featured online stores with automated Daraja M-Pesa API integration (STK Push, Till, Paybill), real-time order tracking, and mobile-friendly catalog management.",
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "KES",
+            "price": "72000",
+            "priceValidUntil": "2026-12-31",
+            "url": "https://www.xclusivetech.co.ke/pricing"
+          },
+          "url": "https://www.xclusivetech.co.ke/services"
         },
         {
-          "@type": "Question",
-          "name": "Can you register a domain for me?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We register .co.ke, .com, .org, .ke, .africa and .io domains directly, from KES 1,500/year, with free WHOIS privacy and self-service DNS management. We can also transfer in a domain you already own."
-          }
+          "@type": "Service",
+          "@id": "https://www.xclusivetech.co.ke/services#ui-ux-design",
+          "name": "UI/UX & Product Design",
+          "serviceType": "UI/UX Design, Interactive Figma Prototypes & Design Systems",
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "areaServed": ["Nairobi", "Kiambu County", "Kenya", "East Africa"],
+          "description": "User-centered UI/UX design, interactive Figma prototypes, mobile ergonomics, design systems, and conversion rate optimization for web apps and websites.",
+          "url": "https://www.xclusivetech.co.ke/services#ui-ux-design"
         },
         {
-          "@type": "Question",
-          "name": "What is GEO and AEO, and do you offer it?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "GEO (Generative Engine Optimisation) and AEO (Answer Engine Optimisation) help your business get recommended by AI tools like ChatGPT, Gemini and Claude, not just found on Google. We build structured data and FAQ schema into every website so AI assistants can read, understand and quote your business accurately when someone asks for a recommendation."
-          }
+          "@type": "Service",
+          "@id": "https://www.xclusivetech.co.ke/services#social-media-management",
+          "name": "Social Media Management",
+          "serviceType": "Social Media Management",
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "areaServed": ["Nairobi", "Kiambu County", "Kenya"],
+          "description": "Monthly social media management packages covering flyers/e-posters, weekly posts, reels, social account management, website banners and promotion flyers.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Bronze Package",
+              "price": "10000",
+              "priceCurrency": "KES",
+              "description": "8 flyers/e-posters, 3 posts per week, 2 reels/short videos, 2 social accounts, 1 website banner, 2 promotion flyers, holiday flyers, dedicated team.",
+              "priceSpecification": { "@type": "UnitPriceSpecification", "price": "10000", "priceCurrency": "KES", "unitText": "MONTH" }
+            },
+            {
+              "@type": "Offer",
+              "name": "Silver Package",
+              "price": "17000",
+              "priceCurrency": "KES",
+              "description": "12 flyers/e-posters, 5 posts per week, 4 reels/short videos, 3 social accounts, 2 website banners, 3 promotion flyers, holiday flyers, dedicated team. Most popular package.",
+              "priceSpecification": { "@type": "UnitPriceSpecification", "price": "17000", "priceCurrency": "KES", "unitText": "MONTH" }
+            },
+            {
+              "@type": "Offer",
+              "name": "Gold Package",
+              "price": "28000",
+              "priceCurrency": "KES",
+              "description": "16 flyers/e-posters, 7 posts per week, 6 reels/short videos, 4 social accounts, 3 website banners, 4 promotion flyers, holiday flyers, dedicated team.",
+              "priceSpecification": { "@type": "UnitPriceSpecification", "price": "28000", "priceCurrency": "KES", "unitText": "MONTH" }
+            },
+            {
+              "@type": "Offer",
+              "name": "Individual Design",
+              "price": "500",
+              "priceCurrency": "KES",
+              "description": "A single professional social media graphic, for businesses that don't need a full monthly package."
+            }
+          ],
+          "url": "https://www.xclusivetech.co.ke/services#social-media-management"
         },
         {
-          "@type": "Question",
-          "name": "Do you offer social media management packages?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We offer three monthly social media management packages — Bronze (KES 10,000/month), Silver (KES 17,000/month, our most popular), and Gold (KES 28,000/month) — covering flyers/e-posters, weekly posts, reels, social account management, website banners, promotion flyers, holiday flyers and a dedicated team. Individual designs are also available from KES 500 each."
-          }
+          "@type": "Service",
+          "@id": "https://www.xclusivetech.co.ke/services#seo-geo-aeo",
+          "name": "SEO, GEO & AEO Optimization",
+          "serviceType": "Search Engine & AI Engine Optimization",
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "areaServed": ["Nairobi", "Kiambu County", "Kenya", "East Africa"],
+          "description": "Structured data schema markup, Google Business Profile optimization, local SEO, and Generative/Answer Engine Optimization so AI agents (ChatGPT, Perplexity, Gemini, Claude) recommend your business.",
+          "url": "https://www.xclusivetech.co.ke/services"
         },
         {
-          "@type": "Question",
-          "name": "Do you provide bespoke UI/UX design and clickable Figma prototypes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We design complete digital products, websites, and SaaS dashboards in Figma before coding. Clients receive interactive, clickable prototypes to test user flows on mobile and desktop devices before development begins, ensuring 100% usability and high conversion rates."
-          }
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://www.xclusivetech.co.ke/services.html#ui-ux-design",
-      "name": "UI/UX & Product Design",
-      "serviceType": "UI/UX Design, Interactive Figma Prototypes & Design Systems",
-      "provider": { "@id": "https://www.xclusivetech.co.ke/" },
-      "areaServed": ["Nairobi", "Kiambu County", "Kenya", "East Africa"],
-      "description": "User-centered UI/UX design, interactive Figma prototypes, mobile ergonomics, design systems, and conversion rate optimization for web apps and websites."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://www.xclusivetech.co.ke/services.html#social-media-management",
-      "name": "Social Media Management",
-      "serviceType": "Social Media Management",
-      "provider": { "@id": "https://www.xclusivetech.co.ke/" },
-      "areaServed": ["Nairobi", "Kiambu County", "Kenya"],
-      "description": "Monthly social media management packages covering flyers/e-posters, weekly posts, reels, social account management, website banners and promotion flyers.",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Bronze",
-          "price": "10000",
-          "priceCurrency": "KES",
-          "description": "8 flyers/e-posters, 3 posts per week, 2 reels/short videos, 2 social accounts, 1 website banner, 2 promotion flyers, holiday flyers, dedicated team.",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "10000", "priceCurrency": "KES", "unitText": "MONTH" }
+          "@type": "Service",
+          "@id": "https://www.xclusivetech.co.ke/services#graphic-design-branding",
+          "name": "Graphic Design & Corporate Branding",
+          "serviceType": "Brand Identity & Graphic Design",
+          "provider": { "@id": "https://www.xclusivetech.co.ke/#organization" },
+          "areaServed": ["Nairobi", "Kiambu County", "Kenya", "East Africa"],
+          "description": "Brand identity design, corporate logos, marketing collateral, business cards, pitch decks, and digital style guides.",
+          "url": "https://www.xclusivetech.co.ke/services"
         },
         {
-          "@type": "Offer",
-          "name": "Silver",
-          "price": "17000",
-          "priceCurrency": "KES",
-          "description": "12 flyers/e-posters, 5 posts per week, 4 reels/short videos, 3 social accounts, 2 website banners, 3 promotion flyers, holiday flyers, dedicated team. Most popular package.",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "17000", "priceCurrency": "KES", "unitText": "MONTH" }
-        },
-        {
-          "@type": "Offer",
-          "name": "Gold",
-          "price": "28000",
-          "priceCurrency": "KES",
-          "description": "16 flyers/e-posters, 7 posts per week, 6 reels/short videos, 4 social accounts, 3 website banners, 4 promotion flyers, holiday flyers, dedicated team.",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "28000", "priceCurrency": "KES", "unitText": "MONTH" }
-        },
-        {
-          "@type": "Offer",
-          "name": "Individual design",
-          "price": "500",
-          "priceCurrency": "KES",
-          "description": "A single professional social media graphic, for businesses that don't need a full monthly package."
+          "@type": "FAQPage",
+          "@id": "https://www.xclusivetech.co.ke/services#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can you build an e-commerce website with M-Pesa for my business?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We build online stores with M-Pesa (Daraja API) checkout built in, so your customers in Nairobi, Kiambu County and beyond can pay the way they already prefer."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you redesign my existing website?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We regularly redesign outdated or poorly performing websites — improving speed, mobile responsiveness, and overall design — for businesses across Kenya."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you provide ongoing SEO and maintenance after launch?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Basic SEO is included with every website, and we offer monthly SEO and maintenance packages for businesses that want ongoing local keyword targeting, security updates, and content changes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you help with Google Business Profile setup?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. As part of our SEO service, we can set up and optimise your Google Business Profile so your business shows up when people search for your service in Nairobi and across Kenya."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you register a domain for me?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We register .co.ke, .com, .org, .ke, .africa and .io domains directly, from KES 1,500/year, with free WHOIS privacy and self-service DNS management. We can also transfer in a domain you already own."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is GEO and AEO, and do you offer it?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GEO (Generative Engine Optimisation) and AEO (Answer Engine Optimisation) help your business get recommended by AI tools like ChatGPT, Gemini and Claude, not just found on Google. We build structured data and FAQ schema into every website so AI assistants can read, understand and quote your business accurately when someone asks for a recommendation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer social media management packages?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We offer three monthly social media management packages — Bronze (KES 10,000/month), Silver (KES 17,000/month, our most popular), and Gold (KES 28,000/month) — covering flyers/e-posters, weekly posts, reels, social account management, website banners, promotion flyers, holiday flyers and a dedicated team. Individual designs are also available from KES 500 each."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you provide bespoke UI/UX design and clickable Figma prototypes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We design complete digital products, websites, and SaaS dashboards in Figma before coding. Clients receive interactive, clickable prototypes to test user flows on mobile and desktop devices before development begins, ensuring 100% usability and high conversion rates."
+              }
+            }
+          ]
         }
       ]
     }
@@ -333,13 +417,19 @@
                     </div>
                     <p class="text-gray-600 leading-relaxed">Design first, code second. We craft complete digital user experiences and Design Systems in Figma before a single line of code is written. Test clickable, high-fidelity prototypes directly on your phone and desktop to validate every user flow, button placement, and conversion journey with zero guesswork.</p>
                     <ul class="space-y-3">
-                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700 font-medium">Interactive Figma click-through prototypes you can test on real phones</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700 font-medium"><strong>100% Auto-Layout v5 Architecture:</strong> Responsive resizing, nested auto-layout containers, and pixel-exact box-model accuracy.</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700 font-medium"><strong>Tokenized Design Variables:</strong> Centralized spacing scales, primitive &amp; semantic color tokens, and fluid typography tokens.</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700 font-medium"><strong>Interactive Component Variants:</strong> Hover, active, focus, disabled states, and boolean toggle properties for real-world interactions.</span></li>
+                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700 font-medium"><strong>Developer-Ready Handoff:</strong> Clean box-model CSS specs directly exportable for Framer, Webflow, and React/Tailwind codebases.</span></li>
                         <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700 font-medium">Mobile ergonomics &amp; thumb-zone navigation tailored for Kenya's mobile audience</span></li>
-                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700 font-medium">Design Systems, scalable typography scales &amp; tokenized component libraries</span></li>
                         <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700 font-medium">Conversion Rate Optimization (CRO) &amp; user journey mapping</span></li>
-                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700 font-medium">SaaS dashboard, customer portal &amp; web application UI/UX architecture</span></li>
-                        <li class="flex items-center gap-3"><svg aria-hidden="true" class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700 font-medium">Complete UI redesigns &amp; heuristic usability audits for existing websites</span></li>
                     </ul>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">100% Auto-Layout v5</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Tokenized Variables</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200">Interactive Component Variants</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200">Developer-Ready Handoff</span>
+                    </div>
                     <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20to%20discuss%20a%20UI/UX%20design%20or%20Figma%20prototype%20project." target="_blank" class="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-300 font-medium">Request UI/UX Prototype Quote</a>
                 </div>
             </div>
@@ -690,6 +780,10 @@
                 <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
                     <h3 class="text-lg font-semibold text-gray-900 mb-2">Do you offer social media management packages?</h3>
                     <p class="text-gray-600">Yes. We offer three monthly social media management packages — Bronze (KES 10,000/month), Silver (KES 17,000/month, our most popular), and Gold (KES 28,000/month) — covering flyers/e-posters, weekly posts, reels, social account management, website banners, promotion flyers, holiday flyers and a dedicated team. Individual designs are also available from KES 500 each.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Do you provide bespoke UI/UX design and clickable Figma prototypes?</h3>
+                    <p class="text-gray-600">Yes. We design complete digital products, websites, and SaaS dashboards in Figma before coding. Clients receive interactive, clickable prototypes to test user flows on mobile and desktop devices before development begins, ensuring 100% usability and high conversion rates.</p>
                 </div>
             </div>
         </div>

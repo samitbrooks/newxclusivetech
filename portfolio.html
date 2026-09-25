@@ -40,16 +40,41 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/styles.css?v=20260916a">
 
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://www.xclusivetech.co.ke/portfolio#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.xclusivetech.co.ke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://www.xclusivetech.co.ke/portfolio"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: CollectionPage + ItemList -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "@id": "https://www.xclusivetech.co.ke/portfolio.html",
-        "url": "https://www.xclusivetech.co.ke/portfolio.html",
+        "@id": "https://www.xclusivetech.co.ke/portfolio#webpage",
+        "url": "https://www.xclusivetech.co.ke/portfolio",
         "name": "2026 Portfolio Showcase — Xclusive Tech",
         "description": "A curated collection of 48 live websites designed and built by Xclusive Tech for businesses in Nairobi, Kiambu County, across Kenya and beyond.",
-        "isPartOf": { "@id": "https://www.xclusivetech.co.ke/" },
-        "about": { "@id": "https://www.xclusivetech.co.ke/" },
+        "isPartOf": { "@id": "https://www.xclusivetech.co.ke/#website" },
+        "breadcrumb": { "@id": "https://www.xclusivetech.co.ke/portfolio#breadcrumb" },
+        "about": { "@id": "https://www.xclusivetech.co.ke/#organization" },
         "mainEntity": {
             "@type": "ItemList",
             "itemListElement": [
@@ -887,9 +912,14 @@
                     </div>
                     <div class="p-6 space-y-2 bg-white flex-grow flex flex-col justify-between">
                         <div>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-blue-50 text-blue-600 border border-blue-100 mb-1">Travel, Tourism & Transport</span>
-                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">Santorini Queen</h3>
-                            <p class="text-sm text-gray-600">Luxury Travel & Yacht Charters</p>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-amber-50 text-amber-700 border border-amber-200/80 mb-1.5">Luxury Experience</span>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">Santorini Queen Charters</h3>
+                            <p class="text-sm text-gray-600 font-medium">Luxury Travel &amp; Yacht Charters</p>
+                            <p class="text-xs text-slate-500 leading-relaxed pt-1.5"><strong class="text-slate-700">Problem &amp; Solution:</strong> Luxury Mediterranean yacht charter platform; high-contrast editorial typography pairing (grotesk + serif) and instant VIP booking routing.</p>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-50 text-amber-700 border border-amber-200/60">Luxury Commerce</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-purple-50 text-purple-700 border border-purple-200/60">Editorial Typography</span>
+                            </div>
                         </div>
                         <p class="text-xs font-mono font-semibold text-blue-600 pt-2 flex items-center gap-1">santoriniqueen.com <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span></p>
                     </div>
@@ -1718,9 +1748,14 @@
                     </div>
                     <div class="p-6 space-y-2 bg-white flex-grow flex flex-col justify-between">
                         <div>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-blue-50 text-blue-600 border border-blue-100 mb-1">NGOs, Development & Community</span>
-                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">Global Health and Sustainable Development (GHSD)</h3>
-                            <p class="text-sm text-gray-600">Global Health NGO</p>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-indigo-50 text-indigo-700 border border-indigo-200/80 mb-1.5">Multi-Touchpoint Brand System</span>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">Global Health &amp; Sustainable Development - GHSD</h3>
+                            <p class="text-sm text-gray-600 font-medium">Global Health NGO</p>
+                            <p class="text-xs text-slate-500 leading-relaxed pt-1.5"><strong class="text-slate-700">Problem &amp; Solution:</strong> Unified visual identity for international health NGO; single design token system applied across web portal and matching 16:9 executive presentation slide decks.</p>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-blue-50 text-blue-700 border border-blue-200/60">Cross-Platform</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/60">16:9 Pitch Decks</span>
+                            </div>
                         </div>
                         <p class="text-xs font-mono font-semibold text-blue-600 pt-2 flex items-center gap-1">globalhealthandsustainabledevelopment.com <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span></p>
                     </div>
@@ -1890,9 +1925,14 @@
                     </div>
                     <div class="p-6 space-y-2 bg-white flex-grow flex flex-col justify-between">
                         <div>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-blue-50 text-blue-600 border border-blue-100 mb-1">Technology, SaaS & Digital Platforms</span>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-emerald-50 text-emerald-700 border border-emerald-200/80 mb-1.5">Designed in Figma · Live in Production</span>
                             <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">Omni Agent Marketplace</h3>
-                            <p class="text-sm text-gray-600">AI Business Automation Platform</p>
+                            <p class="text-sm text-gray-600 font-medium">AI Business Automation Platform</p>
+                            <p class="text-xs text-slate-500 leading-relaxed pt-1.5"><strong class="text-slate-700">Problem &amp; Solution:</strong> B2B marketplace selling 21+ AI agents; designed with dark-mode tokens and interactive live chat simulation component.</p>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-blue-50 text-blue-700 border border-blue-200/60">AI Platform</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-purple-50 text-purple-700 border border-purple-200/60">Figma Auto-Layout v5</span>
+                            </div>
                         </div>
                         <p class="text-xs font-mono font-semibold text-blue-600 pt-2 flex items-center gap-1">omniagentmarketplace.com <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span></p>
                     </div>
@@ -1913,9 +1953,14 @@
                     </div>
                     <div class="p-6 space-y-2 bg-white flex-grow flex flex-col justify-between">
                         <div>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-blue-50 text-blue-600 border border-blue-100 mb-1">Technology, SaaS & Digital Platforms</span>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-blue-50 text-blue-700 border border-blue-200/80 mb-1.5">B2B SaaS One-Pager</span>
                             <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">Tenders Access Hub</h3>
-                            <p class="text-sm text-gray-600">Procurement Intelligence Platform</p>
+                            <p class="text-sm text-gray-600 font-medium">Procurement Intelligence Platform</p>
+                            <p class="text-xs text-slate-500 leading-relaxed pt-1.5"><strong class="text-slate-700">Problem &amp; Solution:</strong> Global procurement platform across 190+ countries; engineered with Z-pattern search hierarchy and interactive monthly/annual pricing toggles.</p>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-blue-50 text-blue-700 border border-blue-200/60">B2B SaaS</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-purple-50 text-purple-700 border border-purple-200/60">Z-Pattern CRO</span>
+                            </div>
                         </div>
                         <p class="text-xs font-mono font-semibold text-blue-600 pt-2 flex items-center gap-1">tendersaccesshub.com <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span></p>
                     </div>
@@ -1936,9 +1981,14 @@
                     </div>
                     <div class="p-6 space-y-2 bg-white flex-grow flex flex-col justify-between">
                         <div>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-blue-50 text-blue-600 border border-blue-100 mb-1">Technology, SaaS & Digital Platforms</span>
-                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">PharmaPOS</h3>
-                            <p class="text-sm text-gray-600">Pharmacy Point-of-Sale SaaS</p>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-emerald-50 text-emerald-700 border border-emerald-200/80 mb-1.5">Healthcare SaaS UI Kit</span>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">PharmaPOS Platform</h3>
+                            <p class="text-sm text-gray-600 font-medium">Pharmacy Point-of-Sale SaaS</p>
+                            <p class="text-xs text-slate-500 leading-relaxed pt-1.5"><strong class="text-slate-700">Problem &amp; Solution:</strong> Cloud point-of-sale for retail pharmacies; designed with touch-ergonomic counter keys and instant barcode/SKU scanning layouts.</p>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/60">Healthcare SaaS</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200/60">Touch UX</span>
+                            </div>
                         </div>
                         <p class="text-xs font-mono font-semibold text-blue-600 pt-2 flex items-center gap-1">pharmacypos.co.ke <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span></p>
                     </div>

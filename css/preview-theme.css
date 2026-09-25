@@ -5,7 +5,7 @@
    2. Theme Dark Luxe (Electric Neo-Sapphire)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
 
 /* ==========================================================================
    1. LIGHT & WHITESPACE THEME (Ubuntu typography)
@@ -52,9 +52,12 @@ body.theme-light-whitespace::before {
 }
 
 .theme-light-whitespace .font-mono,
-.theme-light-whitespace code,
 .theme-light-whitespace .tech-mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.theme-light-whitespace code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 /* Radiant Editorial Gradient Text for Light Mode */
