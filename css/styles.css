@@ -3392,12 +3392,12 @@ section.bg-gray-900,
 .bg-gray-800.py-20,
 .bg-gray-800\/60.border-y.border-gray-700,
 .py-16.px-4.sm\:px-6.lg\:px-8.bg-gray-800\/40,
-section.bg-gradient-to-b,
+section.bg-gradient-to-b:not(.frostwood-hero),
 section.bg-gradient-to-r,
 section.bg-gradient-to-br,
 div.bg-gradient-to-b,
-div.bg-gradient-to-r,
-div.bg-gradient-to-br {
+div.bg-gradient-to-r:not(.frostwood-growth-badge),
+div.bg-gradient-to-br:not(.frostwood-solution-card) {
     background-image: none !important;
     background-color: #FFFFFF !important;
     background: #FFFFFF !important;
@@ -3498,27 +3498,27 @@ h6.text-white {
    SECONDARY & OUTLINE BUTTONS (Like "See our prices first")
    Crisp border and high-contrast dark (#0F172A) text on white cards
    ================================================================ */
-.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *),
-.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *) {
+.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary),
+.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary) {
     border-color: #CBD5E1 !important;
     color: #0F172A !important;
 }
 
-.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *) *,
-.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *) * {
+.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary) *,
+.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary) * {
     color: #0F172A !important;
 }
 
 /* Hover states for outline buttons: turn blue text with blue border */
-.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):hover,
-.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):hover {
+.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover,
+.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover {
     border-color: #2563EB !important;
     color: #1D4ED8 !important;
     background-color: #EFF6FF !important;
 }
 
-.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):hover *,
-.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):hover * {
+.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover *,
+.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover * {
     color: #1D4ED8 !important;
 }
 
@@ -4243,8 +4243,8 @@ h2 span.accent-gradient {
     color: #FFFFFF !important;
     position: relative;
     overflow: hidden;
-    padding-top: 140px !important;
-    padding-bottom: 90px !important;
+    padding-top: 64px !important;
+    padding-bottom: 80px !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
@@ -4298,12 +4298,20 @@ h2 span.accent-gradient {
         font-size: 48px !important;
     }
 }
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 32px !important;
+        padding-bottom: 50px !important;
+    }
+}
 @media (max-width: 640px) {
     .hero-title {
-        font-size: 36px !important;
+        font-size: 34px !important;
+        line-height: 1.2 !important;
     }
     .hero-section {
-        padding-top: 110px !important;
+        padding-top: 24px !important;
+        padding-bottom: 40px !important;
     }
 }
 
@@ -4412,11 +4420,31 @@ h2 span.accent-gradient {
 
 .hero-metric-number {
     font-family: 'Ubuntu', sans-serif !important;
-    font-size: 54px !important;
+    font-size: 44px !important;
     font-weight: 700 !important;
     color: #FFFFFF !important;
+    line-height: 1.1 !important;
+    margin-bottom: 6px !important;
+}
+
+.hero-metric-winner-number {
+    font-size: 30px !important;
+    color: #F59E0B !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.hero-metric-trophy {
+    font-size: 26px !important;
     line-height: 1 !important;
-    margin-bottom: 8px !important;
+    display: inline-block;
+}
+
+.hero-metric-winner-text {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #F59E0B !important;
 }
 
 .hero-metric-number .counter-plus {
@@ -4431,6 +4459,27 @@ h2 span.accent-gradient {
     font-weight: 600 !important;
     color: #9E9EB0 !important;
     text-transform: capitalize;
+}
+
+@media (max-width: 640px) {
+    .hero-metric-number {
+        font-size: 32px !important;
+        margin-bottom: 4px !important;
+    }
+    .hero-metric-winner-number {
+        font-size: 22px !important;
+        gap: 4px !important;
+    }
+    .hero-metric-trophy {
+        font-size: 18px !important;
+    }
+    .hero-metric-winner-text {
+        font-size: 20px !important;
+    }
+    .hero-metric-label {
+        font-size: 13px !important;
+        line-height: 1.35 !important;
+    }
 }
 
 /* ── Webency Service Cards Architecture ──────────────────────── */
@@ -4891,4 +4940,380 @@ h2 span.accent-gradient {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 28px !important;
     }
+}
+
+/* ── Frostwood CRM Dedicated Architecture & Dark Mode ─────────── */
+
+/* Base Light Mode Rules */
+.frostwood-hero {
+    background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 50%, #F8FAFC 100%) !important;
+    background-image: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 50%, #F8FAFC 100%) !important;
+    background-color: #F8FAFC !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+}
+
+.frostwood-solution-card {
+    background: linear-gradient(135deg, rgba(239, 246, 255, 0.8) 0%, #FFFFFF 50%, rgba(236, 253, 245, 0.8) 100%) !important;
+    background-image: linear-gradient(135deg, rgba(239, 246, 255, 0.8) 0%, #FFFFFF 50%, rgba(236, 253, 245, 0.8) 100%) !important;
+    border: 1px solid #BFDBFE !important;
+}
+
+.frostwood-growth-badge,
+div.frostwood-growth-badge {
+    background: linear-gradient(90deg, #2563EB 0%, #4F46E5 100%) !important;
+    background-image: linear-gradient(90deg, #2563EB 0%, #4F46E5 100%) !important;
+    background-color: #2563EB !important;
+    color: #FFFFFF !important;
+    --tw-gradient-from: #2563EB !important;
+    --tw-gradient-to: #4F46E5 !important;
+    --tw-gradient-stops: #2563EB, #4F46E5 !important;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35) !important;
+}
+
+/* Frostwood Dark Theme [data-theme="dark"] */
+:root[data-theme="dark"] .frostwood-hero {
+    background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.12) 0%, transparent 60%), linear-gradient(180deg, #0B1120 0%, #0F172A 60%, #0B1120 100%) !important;
+    background-image: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.12) 0%, transparent 60%), linear-gradient(180deg, #0B1120 0%, #0F172A 60%, #0B1120 100%) !important;
+    background-color: #0B1120 !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:root[data-theme="dark"] .frostwood-pill {
+    background-color: rgba(37, 99, 235, 0.18) !important;
+    background: rgba(37, 99, 235, 0.18) !important;
+    border-color: rgba(96, 165, 250, 0.35) !important;
+}
+
+:root[data-theme="dark"] .frostwood-pill span:last-child {
+    color: #93C5FD !important;
+}
+
+:root[data-theme="dark"] .frostwood-hero-title {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-gradient-text {
+    background: linear-gradient(135deg, #60A5FA 0%, #818CF8 50%, #34D399 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+:root[data-theme="dark"] .frostwood-hero-lead {
+    color: #CBD5E1 !important;
+}
+
+:root[data-theme="dark"] .frostwood-hero-lead strong {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-demo-btn,
+:root[data-theme="dark"] .frostwood-demo-btn * {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-demo-btn svg {
+    color: #10B981 !important;
+}
+
+:root[data-theme="dark"] .frostwood-demo-btn {
+    background: rgba(255, 255, 255, 0.08) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+:root[data-theme="dark"] .frostwood-demo-btn:hover {
+    background: rgba(255, 255, 255, 0.14) !important;
+    background-color: rgba(255, 255, 255, 0.14) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-trust-pills {
+    color: #94A3B8 !important;
+}
+
+:root[data-theme="dark"] .frostwood-browser-frame {
+    background: #111827 !important;
+    background-color: #111827 !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+}
+
+:root[data-theme="dark"] .frostwood-browser-bar {
+    background: #1E293B !important;
+    background-color: #1E293B !important;
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+:root[data-theme="dark"] .frostwood-browser-address {
+    background: #0F172A !important;
+    background-color: #0F172A !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: #94A3B8 !important;
+}
+
+:root[data-theme="dark"] .frostwood-browser-screen {
+    background: #0B1120 !important;
+    background-color: #0B1120 !important;
+}
+
+/* Problem / Solution Section in Dark Theme */
+:root[data-theme="dark"] .frostwood-problem-section {
+    background: #0B1120 !important;
+    background-color: #0B1120 !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:root[data-theme="dark"] .frostwood-problem-tag {
+    background: rgba(244, 63, 94, 0.15) !important;
+    border-color: rgba(244, 63, 94, 0.3) !important;
+    color: #FB7185 !important;
+}
+
+:root[data-theme="dark"] .frostwood-problem-title {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-problem-section p {
+    color: #94A3B8 !important;
+}
+
+:root[data-theme="dark"] .frostwood-solution-card {
+    background: linear-gradient(135deg, #151D2F 0%, #0F172A 100%) !important;
+    background-image: linear-gradient(135deg, #151D2F 0%, #0F172A 100%) !important;
+    background-color: #151D2F !important;
+    border-color: rgba(96, 165, 250, 0.25) !important;
+    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(96, 165, 250, 0.15) !important;
+}
+
+:root[data-theme="dark"] .frostwood-solution-tag {
+    background: rgba(16, 185, 129, 0.15) !important;
+    border-color: rgba(16, 185, 129, 0.3) !important;
+    color: #34D399 !important;
+}
+
+:root[data-theme="dark"] .frostwood-solution-title {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-solution-card ul li {
+    color: #CBD5E1 !important;
+}
+
+:root[data-theme="dark"] .frostwood-solution-card ul li strong {
+    color: #F8FAFC !important;
+}
+
+/* Features Section in Dark Theme */
+:root[data-theme="dark"] .frostwood-features-section {
+    background: #0F172A !important;
+    background-color: #0F172A !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:root[data-theme="dark"] .frostwood-features-title {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-features-lead {
+    color: #94A3B8 !important;
+}
+
+:root[data-theme="dark"] .frostwood-feature-card {
+    background: #151B2B !important;
+    background-color: #151B2B !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+}
+
+:root[data-theme="dark"] .frostwood-feature-card:hover {
+    border-color: rgba(96, 165, 250, 0.45) !important;
+    box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(96, 165, 250, 0.2) !important;
+}
+
+:root[data-theme="dark"] .frostwood-feature-icon {
+    background: rgba(255, 255, 255, 0.06) !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+:root[data-theme="dark"] .frostwood-feature-title {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-feature-desc {
+    color: #94A3B8 !important;
+}
+
+:root[data-theme="dark"] .frostwood-feature-footer {
+    border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Pricing Section in Dark Theme */
+:root[data-theme="dark"] .frostwood-pricing-section {
+    background: #0B1120 !important;
+    background-color: #0B1120 !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:root[data-theme="dark"] .frostwood-pricing-pill {
+    background: rgba(37, 99, 235, 0.18) !important;
+    border-color: rgba(96, 165, 250, 0.35) !important;
+    color: #93C5FD !important;
+}
+
+:root[data-theme="dark"] .frostwood-pricing-title {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-pricing-desc {
+    color: #94A3B8 !important;
+}
+
+:root[data-theme="dark"] .frostwood-pricing-card {
+    background: #151B2B !important;
+    background-color: #151B2B !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+}
+
+:root[data-theme="dark"] .frostwood-card-title {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-plan-badge {
+    background: rgba(255, 255, 255, 0.08) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #CBD5E1 !important;
+}
+
+:root[data-theme="dark"] .frostwood-plan-desc {
+    color: #94A3B8 !important;
+}
+
+:root[data-theme="dark"] .frostwood-plan-pricing {
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:root[data-theme="dark"] .frostwood-plan-pricing p {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-price-freq {
+    color: #64748B !important;
+}
+
+:root[data-theme="dark"] .frostwood-plan-features li {
+    color: #CBD5E1 !important;
+}
+
+:root[data-theme="dark"] .frostwood-plan-btn {
+    background: rgba(255, 255, 255, 0.08) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-plan-btn:hover {
+    background: rgba(255, 255, 255, 0.16) !important;
+    background-color: rgba(255, 255, 255, 0.16) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-pricing-growth-card {
+    background: #0F172A !important;
+    background-color: #0F172A !important;
+    border-color: #3B82F6 !important;
+    box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.25), 0 0 0 1px rgba(59, 130, 246, 0.4) !important;
+}
+
+:root[data-theme="dark"] .frostwood-growth-pill {
+    background: rgba(37, 99, 235, 0.25) !important;
+    border-color: rgba(96, 165, 250, 0.4) !important;
+    color: #93C5FD !important;
+}
+
+/* Custom Platform Section in Dark Theme */
+:root[data-theme="dark"] .frostwood-custom-section {
+    background: #0F172A !important;
+    background-color: #0F172A !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+:root[data-theme="dark"] .frostwood-custom-badge {
+    background: rgba(99, 102, 241, 0.15) !important;
+    border-color: rgba(129, 140, 248, 0.3) !important;
+    color: #A5B4FC !important;
+}
+
+:root[data-theme="dark"] .frostwood-custom-title {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-custom-desc {
+    color: #94A3B8 !important;
+}
+
+:root[data-theme="dark"] .frostwood-custom-btn-primary {
+    background: #2563EB !important;
+    background-color: #2563EB !important;
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-custom-btn-primary:hover {
+    background: #1D4ED8 !important;
+    background-color: #1D4ED8 !important;
+}
+
+:root[data-theme="dark"] .frostwood-custom-btn-secondary,
+:root[data-theme="dark"] .frostwood-custom-btn-secondary * {
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-custom-btn-secondary {
+    background: rgba(255, 255, 255, 0.08) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .frostwood-custom-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.14) !important;
+    background-color: rgba(255, 255, 255, 0.14) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+    color: #FFFFFF !important;
+}
+
+/* Final CTA in Dark & Light Theme */
+.frostwood-final-cta {
+    background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 50%, #1E40AF 100%) !important;
+    color: #FFFFFF !important;
+}
+
+.frostwood-final-btn-white {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #1D4ED8 !important;
+}
+
+.frostwood-final-btn-white:hover {
+    background: #F1F5F9 !important;
+    background-color: #F1F5F9 !important;
+    color: #1E40AF !important;
+}
+
+.frostwood-final-btn-outline {
+    background: rgba(255, 255, 255, 0.12) !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #FFFFFF !important;
+}
+
+.frostwood-final-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
 }
