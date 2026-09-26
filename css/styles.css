@@ -4315,6 +4315,31 @@ h2 span.accent-gradient {
     }
 }
 
+/* Hero Title Typewriter Effect */
+.hero-typewriter-target {
+    display: inline;
+    position: relative;
+}
+.typewriter-cursor {
+    display: inline-block;
+    color: #20D9A1 !important;
+    -webkit-text-fill-color: #20D9A1 !important;
+    background: none !important;
+    font-weight: 300 !important;
+    margin-left: 2px;
+    animation: typewriterBlink 0.9s infinite;
+    vertical-align: baseline;
+}
+@keyframes typewriterBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .typewriter-cursor {
+        display: none !important;
+    }
+}
+
 .hero-lead {
     color: #A8A8BE !important;
     font-size: 1.125rem !important;

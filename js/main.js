@@ -13,6 +13,7 @@ class XclusiveTech {
         this.checkQueryParams();
         this.optimizePerformance();
         this.setupScrollQuotePopup();
+        this.setupTypewriter();
     }
 
     // Setup Theme Toggle (Light / Dark mode)
@@ -379,6 +380,69 @@ class XclusiveTech {
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    // Setup Rotating Typewriter Effect
+    static setupTypewriter() {
+        const target = document.querySelector('.hero-typewriter-target');
+        if (!target) return;
+
+        // Respect reduced motion preference
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+        }
+
+        const textSpan = target.querySelector('.typewriter-text');
+        if (!textSpan) return;
+
+        let words = [];
+        try {
+            const raw = target.getAttribute('data-words');
+            if (raw) words = JSON.parse(raw);
+        } catch (e) {
+            console.warn('Typewriter data-words parsing error:', e);
+        }
+
+        if (!words || words.length <= 1) return;
+
+        let wordIndex = 0;
+        let charIndex = words[0].length;
+        let isDeleting = false;
+        const typingSpeed = 65; // ms per char when typing
+        const deletingSpeed = 35; // ms per char when backspacing
+        const holdDelay = 2800; // ms pause with full word
+        const nextWordDelay = 400; // ms pause before typing next word
+
+        const tick = () => {
+            const currentWord = words[wordIndex];
+
+            if (isDeleting) {
+                charIndex--;
+                textSpan.textContent = currentWord.substring(0, charIndex);
+            } else {
+                charIndex++;
+                textSpan.textContent = currentWord.substring(0, charIndex);
+            }
+
+            let delay = isDeleting ? deletingSpeed : typingSpeed;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                delay = holdDelay;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                delay = nextWordDelay;
+            }
+
+            setTimeout(tick, delay);
+        };
+
+        // Pause initially so visitor reads the primary SEO phrase first
+        setTimeout(() => {
+            isDeleting = true;
+            tick();
+        }, holdDelay);
     }
 
     // Utility: Store in localStorage
