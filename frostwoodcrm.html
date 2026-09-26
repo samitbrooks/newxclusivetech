@@ -38,7 +38,170 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=2">
     <link rel="shortcut icon" href="favicon.ico?v=2">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/styles.css?v=20260916a">
+    <link rel="stylesheet" href="css/styles.css?v=20260926b">
+    <style id="critical-frostwood-theme">
+        @media (max-width: 640px) {
+            .frostwood-hero {
+                padding-top: 28px !important;
+                padding-bottom: 36px !important;
+            }
+        }
+        .frostwood-growth-badge,
+        div.frostwood-growth-badge {
+            background: linear-gradient(90deg, #2563EB 0%, #4F46E5 100%) !important;
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-hero {
+            background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.12) 0%, transparent 60%), linear-gradient(180deg, #0B1120 0%, #0F172A 60%, #0B1120 100%) !important;
+            background-color: #0B1120 !important;
+            border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+        }
+        :root[data-theme="dark"] .frostwood-pill {
+            background: rgba(37, 99, 235, 0.18) !important;
+            border-color: rgba(96, 165, 250, 0.35) !important;
+        }
+        :root[data-theme="dark"] .frostwood-pill span:last-child {
+            color: #93C5FD !important;
+        }
+        :root[data-theme="dark"] .frostwood-hero-title {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-gradient-text {
+            background: linear-gradient(135deg, #60A5FA 0%, #818CF8 50%, #34D399 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            background-clip: text !important;
+        }
+        :root[data-theme="dark"] .frostwood-hero-lead {
+            color: #CBD5E1 !important;
+        }
+        :root[data-theme="dark"] .frostwood-hero-lead strong {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-demo-btn,
+        :root[data-theme="dark"] .frostwood-demo-btn * {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-demo-btn svg {
+            color: #10B981 !important;
+        }
+        :root[data-theme="dark"] .frostwood-demo-btn {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+        :root[data-theme="dark"] .frostwood-problem-section {
+            background: #0B1120 !important;
+            border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+        }
+        :root[data-theme="dark"] .frostwood-problem-tag {
+            background: rgba(244, 63, 94, 0.15) !important;
+            color: #FB7185 !important;
+            border-color: rgba(244, 63, 94, 0.3) !important;
+        }
+        :root[data-theme="dark"] .frostwood-problem-title {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-problem-section p {
+            color: #94A3B8 !important;
+        }
+        :root[data-theme="dark"] .frostwood-solution-card {
+            background: linear-gradient(135deg, #151D2F 0%, #0F172A 100%) !important;
+            border-color: rgba(96, 165, 250, 0.25) !important;
+        }
+        :root[data-theme="dark"] .frostwood-solution-tag {
+            background: rgba(16, 185, 129, 0.15) !important;
+            color: #34D399 !important;
+        }
+        :root[data-theme="dark"] .frostwood-solution-title {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-solution-card ul li {
+            color: #CBD5E1 !important;
+        }
+        :root[data-theme="dark"] .frostwood-solution-card ul li strong {
+            color: #F8FAFC !important;
+        }
+        :root[data-theme="dark"] .frostwood-features-section {
+            background: #0F172A !important;
+            border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+        }
+        :root[data-theme="dark"] .frostwood-features-title {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-features-lead {
+            color: #94A3B8 !important;
+        }
+        :root[data-theme="dark"] .frostwood-feature-card {
+            background: #151B2B !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        }
+        :root[data-theme="dark"] .frostwood-feature-icon {
+            background: rgba(255, 255, 255, 0.06) !important;
+        }
+        :root[data-theme="dark"] .frostwood-feature-title {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-feature-desc {
+            color: #94A3B8 !important;
+        }
+        :root[data-theme="dark"] .frostwood-pricing-section {
+            background: #0B1120 !important;
+            border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+        }
+        :root[data-theme="dark"] .frostwood-pricing-pill {
+            background: rgba(37, 99, 235, 0.18) !important;
+            color: #93C5FD !important;
+        }
+        :root[data-theme="dark"] .frostwood-pricing-title {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-pricing-desc {
+            color: #94A3B8 !important;
+        }
+        :root[data-theme="dark"] .frostwood-pricing-card {
+            background: #151B2B !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        :root[data-theme="dark"] .frostwood-card-title {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-plan-desc {
+            color: #94A3B8 !important;
+        }
+        :root[data-theme="dark"] .frostwood-plan-pricing p {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-plan-features li {
+            color: #CBD5E1 !important;
+        }
+        :root[data-theme="dark"] .frostwood-plan-btn {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-pricing-growth-card {
+            background: #0F172A !important;
+            border-color: #3B82F6 !important;
+        }
+        :root[data-theme="dark"] .frostwood-custom-section {
+            background: #0F172A !important;
+            border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+        }
+        :root[data-theme="dark"] .frostwood-custom-title {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-custom-desc {
+            color: #94A3B8 !important;
+        }
+        :root[data-theme="dark"] .frostwood-custom-btn-secondary,
+        :root[data-theme="dark"] .frostwood-custom-btn-secondary * {
+            color: #FFFFFF !important;
+        }
+        :root[data-theme="dark"] .frostwood-custom-btn-secondary {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+    </style>
 
     <!-- Structured Data: BreadcrumbList, SoftwareApplication, Product, FAQPage -->
     <script type="application/ld+json">
