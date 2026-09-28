@@ -114,9 +114,9 @@
     --border-focus:    #20D9A1;
     --border-accent:   #5F39FF;
 
-    --text-primary:    #F5F5FA;
-    --text-secondary:  #B2B2C6;
-    --text-muted:      #7E7E94;
+    --text-primary:    #F8FAFC;
+    --text-secondary:  #E2E8F0;
+    --text-muted:      #94A3B8;
     --text-inverse:    #13131A;
     --text-accent:     #20D9A1;
 
@@ -3605,8 +3605,8 @@ section.bg-gradient-to-b:not(.frostwood-hero),
 section.bg-gradient-to-r,
 section.bg-gradient-to-br,
 div.bg-gradient-to-b,
-div.bg-gradient-to-r:not(.frostwood-growth-badge),
-div.bg-gradient-to-br:not(.frostwood-solution-card) {
+div.bg-gradient-to-r:not(.frostwood-growth-badge):not(.xt-express-card):not([class*="from-blue-900"]):not([class*="from-blue-600"]),
+div.bg-gradient-to-br:not(.frostwood-solution-card):not(.xt-express-card):not([class*="from-blue-900"]):not([class*="from-blue-600"]) {
     background-image: none !important;
     background-color: #FFFFFF !important;
     background: #FFFFFF !important;
@@ -3707,27 +3707,27 @@ h6.text-white {
    SECONDARY & OUTLINE BUTTONS (Like "See our prices first")
    Crisp border and high-contrast dark (#0F172A) text on white cards
    ================================================================ */
-.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary),
-.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary) {
+:root:not([data-theme="dark"]) .border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary),
+:root:not([data-theme="dark"]) .border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary) {
     border-color: #CBD5E1 !important;
     color: #0F172A !important;
 }
 
-.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary) *,
-.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary) * {
+:root:not([data-theme="dark"]) .border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary) *,
+:root:not([data-theme="dark"]) .border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.bg-slate-900):not(footer *):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary) * {
     color: #0F172A !important;
 }
 
 /* Hover states for outline buttons: turn blue text with blue border */
-.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover,
-.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover {
+:root:not([data-theme="dark"]) .border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover,
+:root:not([data-theme="dark"]) .border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover {
     border-color: #2563EB !important;
     color: #1D4ED8 !important;
     background-color: #EFF6FF !important;
 }
 
-.border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover *,
-.border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover * {
+:root:not([data-theme="dark"]) .border-slate-300:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover *,
+:root:not([data-theme="dark"]) .border-slate-400:not(.bg-blue-600):not(.bg-blue-700):not(.frostwood-demo-btn):not(.frostwood-custom-btn-secondary):hover * {
     color: #1D4ED8 !important;
 }
 
@@ -4484,6 +4484,123 @@ footer.bg-slate-900 {
 }
 :root[data-theme="dark"] .prose figcaption {
     color: var(--text-muted) !important;
+}
+
+/* ── Express Landing Page Feature Card (Light & Dark Theme) ── */
+.xt-express-card {
+    background: linear-gradient(135deg, #0b132b 0%, #171e38 50%, #0f172a 100%) !important;
+    background-color: #0b132b !important;
+    background-image: linear-gradient(135deg, #0b132b 0%, #171e38 50%, #0f172a 100%) !important;
+    border: 1px solid rgba(59, 130, 246, 0.4) !important;
+    box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.4) !important;
+    color: #FFFFFF !important;
+}
+
+:root[data-theme="dark"] .xt-express-card {
+    background: linear-gradient(135deg, #090e1f 0%, #131930 50%, #0b0f1c 100%) !important;
+    background-color: #090e1f !important;
+    background-image: linear-gradient(135deg, #090e1f 0%, #131930 50%, #0b0f1c 100%) !important;
+    border-color: rgba(96, 165, 250, 0.4) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8) !important;
+}
+
+.xt-express-card .xt-express-badge {
+    background-color: #FBBF24 !important;
+    color: #0F172A !important;
+    font-weight: 800 !important;
+}
+.xt-express-card .xt-express-heading {
+    color: #FFFFFF !important;
+}
+.xt-express-card .xt-express-desc {
+    color: #E2E8F0 !important;
+}
+.xt-express-card .xt-express-item {
+    color: #CBD5E1 !important;
+}
+.xt-express-card .xt-express-item strong {
+    color: #FFFFFF !important;
+}
+.xt-express-card .xt-express-guarantee {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #E2E8F0 !important;
+}
+.xt-express-card .xt-express-guarantee strong {
+    color: #FFFFFF !important;
+}
+
+/* Right-side pricing action box inside Express card */
+.xt-express-card .xt-express-action-box {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    color: #0F172A !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2) !important;
+}
+.xt-express-card .xt-express-action-box .xt-price-pill {
+    background-color: #ECFDF5 !important;
+    color: #047857 !important;
+}
+.xt-express-card .xt-express-action-box .xt-price-amount {
+    color: #0F172A !important;
+}
+.xt-express-card .xt-express-action-box .xt-price-subtext {
+    color: #64748B !important;
+}
+.xt-express-card .xt-express-action-box .xt-price-guarantee-text {
+    color: #047857 !important;
+}
+.xt-express-card .xt-express-action-box .xt-price-meta-label {
+    color: #475569 !important;
+}
+.xt-express-card .xt-express-action-box .xt-price-meta-value {
+    color: #0F172A !important;
+}
+.xt-express-card .xt-express-action-box .xt-price-divider {
+    border-color: #F1F5F9 !important;
+}
+.xt-express-card .xt-express-action-box .xt-price-cta-btn {
+    background-color: #2563EB !important;
+    color: #FFFFFF !important;
+}
+.xt-express-card .xt-express-action-box .xt-price-cta-btn:hover {
+    background-color: #1D4ED8 !important;
+}
+.xt-express-card .xt-express-action-box .xt-price-footer-text {
+    color: #64748B !important;
+}
+
+/* Dark mode version of the right-side action box */
+:root[data-theme="dark"] .xt-express-card .xt-express-action-box {
+    background-color: #14192B !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: #F8FAFC !important;
+    box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.6) !important;
+}
+:root[data-theme="dark"] .xt-express-card .xt-express-action-box .xt-price-pill {
+    background-color: rgba(16, 185, 129, 0.18) !important;
+    color: #34D399 !important;
+}
+:root[data-theme="dark"] .xt-express-card .xt-express-action-box .xt-price-amount {
+    color: #F8FAFC !important;
+}
+:root[data-theme="dark"] .xt-express-card .xt-express-action-box .xt-price-subtext {
+    color: #94A3B8 !important;
+}
+:root[data-theme="dark"] .xt-express-card .xt-express-action-box .xt-price-guarantee-text {
+    color: #34D399 !important;
+}
+:root[data-theme="dark"] .xt-express-card .xt-express-action-box .xt-price-meta-label {
+    color: #94A3B8 !important;
+}
+:root[data-theme="dark"] .xt-express-card .xt-express-action-box .xt-price-meta-value {
+    color: #F8FAFC !important;
+}
+:root[data-theme="dark"] .xt-express-card .xt-express-action-box .xt-price-divider {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+:root[data-theme="dark"] .xt-express-card .xt-express-action-box .xt-price-footer-text {
+    color: #94A3B8 !important;
 }
 
 /* Image Positioning Utilities */
