@@ -307,26 +307,33 @@ h2 span.accent {
 }
 
 /* ── Blog & Article Light Typography ────────── */
-.prose {
+:root:not([data-theme="dark"]) .prose {
     color: #334155 !important;
 }
-.prose h1, .prose h2, .prose h3, .prose h4 {
+:root:not([data-theme="dark"]) .prose h1,
+:root:not([data-theme="dark"]) .prose h2,
+:root:not([data-theme="dark"]) .prose h3,
+:root:not([data-theme="dark"]) .prose h4,
+:root:not([data-theme="dark"]) .prose h5,
+:root:not([data-theme="dark"]) .prose h6 {
     color: #0F172A !important;
 }
-.prose p, .prose li {
+:root:not([data-theme="dark"]) .prose p,
+:root:not([data-theme="dark"]) .prose li {
     color: #334155 !important;
 }
-.prose strong, .prose b {
+:root:not([data-theme="dark"]) .prose strong,
+:root:not([data-theme="dark"]) .prose b {
     color: #0F172A !important;
 }
-.prose a {
+:root:not([data-theme="dark"]) .prose a {
     color: #2563EB !important;
     text-decoration: underline;
 }
-.prose a:hover {
+:root:not([data-theme="dark"]) .prose a:hover {
     color: #1D4ED8 !important;
 }
-.prose blockquote {
+:root:not([data-theme="dark"]) .prose blockquote {
     border-left: 4px solid #3B82F6 !important;
     color: #475569 !important;
     background: #F8FAFC !important;
@@ -2318,6 +2325,170 @@ nav#navbar.shadow-md {
     border-color: var(--border-strong);
 }
 
+/* Pricing Promo Card (Express Landing Page KES 15,000) */
+.pricing-promo-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    border-radius: 1rem;
+    padding: var(--space-6);
+    color: #ffffff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: var(--space-8);
+}
+
+@media (min-width: 768px) {
+    .pricing-promo-card {
+        padding: var(--space-8);
+    }
+}
+
+.pricing-promo-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background-color: #fbbf24;
+    color: #0f172a;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: var(--type-xs);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-4);
+}
+
+.pricing-promo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .pricing-promo-grid {
+        grid-template-columns: 1.6fr 1fr;
+        gap: var(--space-8);
+    }
+}
+
+.pricing-promo-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: var(--type-2xl);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 var(--space-2) 0;
+    letter-spacing: -0.02em;
+}
+
+.pricing-promo-desc {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: var(--type-base);
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+}
+
+.pricing-promo-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+}
+
+@media (min-width: 640px) {
+    .pricing-promo-features {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-3);
+    }
+}
+
+.pricing-promo-feat-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: var(--type-sm);
+    color: #e2e8f0;
+    line-height: 1.45;
+}
+
+.pricing-promo-feat-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    color: #34d399;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.pricing-promo-pricing {
+    background-color: var(--surface-canvas);
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.75rem;
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.pricing-promo-price-tag {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: var(--space-4);
+}
+
+.pricing-promo-price-amount {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.pricing-promo-price-meta {
+    font-size: var(--type-xs);
+    color: var(--text-muted);
+}
+
+.pricing-promo-price-speed {
+    font-size: var(--type-xs);
+    font-weight: 700;
+    color: #059669;
+    margin-top: 0.25rem;
+}
+
+.pricing-promo-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--accent-primary);
+    color: #ffffff !important;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: var(--type-sm);
+    font-weight: 700;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+    margin-bottom: var(--space-2);
+}
+
+.pricing-promo-cta-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.pricing-promo-sublink {
+    font-size: var(--type-xs);
+    color: var(--accent-primary);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 .pricing-footer-content {
     display: flex;
     flex-direction: column;
@@ -3880,6 +4051,37 @@ footer.bg-slate-900 {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.xt-popup-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    padding: 2px 8px;
+    border-radius: 9999px;
+}
+.xt-popup-badge-text {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #047857;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.xt-popup-close-btn {
+    color: #94A3B8;
+}
+.xt-popup-title {
+    color: #0F172A;
+}
+.xt-popup-desc {
+    color: #64748B;
+}
+.xt-popup-desc strong {
+    color: #0F172A;
+}
+.xt-popup-dismiss-text {
+    color: #94A3B8;
+}
+
 .xt-popup-close-btn:hover {
     color: #0F172A !important;
     background-color: #F1F5F9 !important;
@@ -3955,7 +4157,14 @@ footer.bg-slate-900 {
 }
 
 :root[data-theme="dark"] section.bg-slate-50,
-:root[data-theme="dark"] section.bg-gray-50 {
+:root[data-theme="dark"] section.bg-gray-50,
+:root[data-theme="dark"] section#pricing-table,
+:root[data-theme="dark"] #pricing-table,
+:root[data-theme="dark"] .pricing-comparison-section,
+:root[data-theme="dark"] section[class*="bg-slate-50"],
+:root[data-theme="dark"] section[class*="bg-gray-50"],
+:root[data-theme="dark"] [class*="bg-slate-50\/"],
+:root[data-theme="dark"] [class*="bg-gray-50\/"] {
     background-color: var(--surface-subtle) !important;
 }
 
@@ -3966,16 +4175,41 @@ footer.bg-slate-900 {
 :root[data-theme="dark"] .bg-slate-50:not(section),
 :root[data-theme="dark"] .bg-gray-50:not(section),
 :root[data-theme="dark"] .bg-slate-100,
-:root[data-theme="dark"] .bg-gray-100 {
+:root[data-theme="dark"] .bg-gray-100,
+:root[data-theme="dark"] [class*="bg-slate-100\/"] {
     background-color: var(--surface-subtle) !important;
 }
 
+/* Gradient Containers in Dark Mode */
 :root[data-theme="dark"] .bg-gradient-to-b.from-slate-50.to-white,
 :root[data-theme="dark"] .from-slate-50.to-white,
 :root[data-theme="dark"] .from-white.to-slate-50 {
     background-image: linear-gradient(to bottom, #0F172A, #0A0F1D) !important;
 }
 
+:root[data-theme="dark"] [class*="via-white"],
+:root[data-theme="dark"] [class*="from-blue-50"][class*="to-indigo-50"],
+:root[data-theme="dark"] [class*="from-blue-50"][class*="to-slate-50"],
+:root[data-theme="dark"] [class*="from-blue-50"][class*="to-emerald-50"],
+:root[data-theme="dark"] [class*="from-amber-50"][class*="to-slate-50"],
+:root[data-theme="dark"] .bg-gradient-to-r.from-blue-50\/70.via-white.to-indigo-50\/50,
+:root[data-theme="dark"] .bg-gradient-to-br.from-blue-50\/80.via-white.to-indigo-50\/50 {
+    background-image: linear-gradient(135deg, #161D31 0%, #121626 50%, #0E1220 100%) !important;
+    border-color: rgba(96, 165, 250, 0.25) !important;
+}
+
+:root[data-theme="dark"] [class*="via-white"] .bg-white,
+:root[data-theme="dark"] [class*="from-blue-50"] .bg-white {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] h4,
+:root[data-theme="dark"] h5,
+:root[data-theme="dark"] h6,
 :root[data-theme="dark"] .text-gray-900,
 :root[data-theme="dark"] .text-slate-900,
 :root[data-theme="dark"] .text-gray-800,
@@ -3995,12 +4229,40 @@ footer.bg-slate-900 {
     color: var(--text-muted) !important;
 }
 
+/* Accent Text and Badge Colors in Dark Mode */
+:root[data-theme="dark"] .text-blue-600,
+:root[data-theme="dark"] .text-blue-700 {
+    color: #60A5FA !important;
+}
+:root[data-theme="dark"] .text-emerald-600,
+:root[data-theme="dark"] .text-emerald-700,
+:root[data-theme="dark"] .text-green-600 {
+    color: #34D399 !important;
+}
+:root[data-theme="dark"] a.text-blue-600:hover,
+:root[data-theme="dark"] a.text-blue-700:hover {
+    color: #93C5FD !important;
+}
+:root[data-theme="dark"] .group:hover .group-hover\:text-blue-600 {
+    color: #60A5FA !important;
+}
+
+/* Light badge pills in Dark Mode */
+:root[data-theme="dark"] [class*="bg-blue-50"] {
+    background-color: rgba(37, 99, 235, 0.15) !important;
+}
+:root[data-theme="dark"] [class*="bg-emerald-50"] {
+    background-color: rgba(16, 185, 129, 0.15) !important;
+}
+
 :root[data-theme="dark"] .border-slate-200,
 :root[data-theme="dark"] .border-gray-200,
 :root[data-theme="dark"] .border-slate-300,
 :root[data-theme="dark"] .border-gray-300,
 :root[data-theme="dark"] .border-slate-100,
-:root[data-theme="dark"] .border-gray-100 {
+:root[data-theme="dark"] .border-gray-100,
+:root[data-theme="dark"] .border-blue-100,
+:root[data-theme="dark"] .border-blue-200 {
     border-color: var(--border-subtle) !important;
 }
 
@@ -4011,10 +4273,18 @@ footer.bg-slate-900 {
     box-shadow: var(--shadow-card) !important;
 }
 
+/* Inline Style Overrides for Dark Mode */
+:root[data-theme="dark"] [style*="#0F172A"]:not(svg):not(rect):not(circle):not(path),
 :root[data-theme="dark"] a[style*="#0F172A"],
 :root[data-theme="dark"] button[style*="#0F172A"] {
     color: #F8FAFC !important;
     border-color: #334155 !important;
+}
+:root[data-theme="dark"] [style*="#64748B"] {
+    color: #94A3B8 !important;
+}
+:root[data-theme="dark"] [style*="#334155"]:not(svg):not(rect):not(circle):not(path) {
+    color: #CBD5E1 !important;
 }
 :root[data-theme="dark"] a[style*="#0F172A"]:hover,
 :root[data-theme="dark"] button[style*="#0F172A"]:hover {
@@ -4038,22 +4308,70 @@ footer.bg-slate-900 {
     color: #0A0F1D !important;
 }
 
+/* Table Adaptations in Dark Mode */
+:root[data-theme="dark"] table {
+    background-color: var(--surface-card) !important;
+}
 :root[data-theme="dark"] table thead,
+:root[data-theme="dark"] table thead tr,
 :root[data-theme="dark"] thead.bg-slate-50,
-:root[data-theme="dark"] thead.bg-gray-50 {
+:root[data-theme="dark"] thead.bg-gray-50,
+:root[data-theme="dark"] [class*="bg-slate-100"] {
     background-color: var(--surface-sunken) !important;
 }
 :root[data-theme="dark"] table th {
     color: var(--text-primary) !important;
+    border-color: var(--border-subtle) !important;
 }
 :root[data-theme="dark"] table td {
     color: var(--text-secondary) !important;
     border-color: var(--border-subtle) !important;
 }
+:root[data-theme="dark"] table td strong,
+:root[data-theme="dark"] table td.font-bold,
+:root[data-theme="dark"] table td .font-bold {
+    color: var(--text-primary) !important;
+}
 :root[data-theme="dark"] table tr:hover {
-    background-color: var(--surface-subtle) !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
+}
+:root[data-theme="dark"] table tr[class*="hover:bg-slate-50"]:hover,
+:root[data-theme="dark"] table tr[class*="hover:bg-blue-50"]:hover {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+}
+:root[data-theme="dark"] table a.border-slate-300 {
+    color: var(--text-primary) !important;
+    border-color: var(--border-strong) !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
+}
+:root[data-theme="dark"] table a.border-slate-300:hover {
+    color: #60A5FA !important;
+    border-color: #3B82F6 !important;
+    background-color: rgba(37, 99, 235, 0.18) !important;
+}
+:root[data-theme="dark"] .divide-slate-100 > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--border-subtle) !important;
 }
 
+/* Secondary / Outline Buttons in Dark Mode */
+:root[data-theme="dark"] a.border-slate-300:not(.xt-popup-cta-btn),
+:root[data-theme="dark"] button.border-slate-300:not(.xt-popup-cta-btn) {
+    color: var(--text-primary) !important;
+    border-color: var(--border-strong) !important;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+:root[data-theme="dark"] a.border-slate-300:not(.xt-popup-cta-btn):hover,
+:root[data-theme="dark"] button.border-slate-300:not(.xt-popup-cta-btn):hover {
+    color: #60A5FA !important;
+    border-color: #3B82F6 !important;
+    background-color: rgba(37, 99, 235, 0.15) !important;
+}
+:root[data-theme="dark"] a[class*="hover:bg-slate-50"]:hover,
+:root[data-theme="dark"] button[class*="hover:bg-slate-50"]:hover {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Form Controls in Dark Mode */
 :root[data-theme="dark"] input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
 :root[data-theme="dark"] textarea,
 :root[data-theme="dark"] select {
@@ -4072,17 +4390,100 @@ footer.bg-slate-900 {
     color: #94A3B8 !important;
 }
 
-:root[data-theme="dark"] .xt-quote-popup {
-    background: #11192E !important;
-    border-color: #1E293B !important;
-    box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+/* Quote Popup Dark Theme */
+:root[data-theme="dark"] .xt-quote-popup,
+:root[data-theme="dark"] #xt-scroll-quote-popup {
+    background: #151928 !important;
+    border: 1px solid #283048 !important;
+    box-shadow: 0 25px 45px -5px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+}
+:root[data-theme="dark"] .xt-popup-title,
+:root[data-theme="dark"] #xt-popup-title,
+:root[data-theme="dark"] .xt-quote-popup h3 {
+    color: #F8FAFC !important;
+}
+:root[data-theme="dark"] .xt-popup-desc,
+:root[data-theme="dark"] .xt-quote-popup p {
+    color: #94A3B8 !important;
+}
+:root[data-theme="dark"] .xt-popup-desc strong,
+:root[data-theme="dark"] .xt-quote-popup strong {
+    color: #F8FAFC !important;
+}
+:root[data-theme="dark"] .xt-popup-badge {
+    background: rgba(16, 185, 129, 0.15) !important;
+    border-color: rgba(16, 185, 129, 0.35) !important;
+}
+:root[data-theme="dark"] .xt-popup-badge-text {
+    color: #34D399 !important;
+}
+:root[data-theme="dark"] .xt-popup-close-btn {
+    color: #94A3B8 !important;
 }
 :root[data-theme="dark"] .xt-popup-close-btn:hover {
     color: #F8FAFC !important;
-    background-color: #1E293B !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+:root[data-theme="dark"] .xt-popup-dismiss-text {
+    color: #64748B !important;
 }
 :root[data-theme="dark"] .xt-popup-dismiss-text:hover {
     color: #CBD5E1 !important;
+}
+
+/* ── Blog & Article Dark Typography Overrides ── */
+:root[data-theme="dark"] .prose {
+    color: var(--text-secondary) !important;
+}
+:root[data-theme="dark"] .prose h1,
+:root[data-theme="dark"] .prose h2,
+:root[data-theme="dark"] .prose h3,
+:root[data-theme="dark"] .prose h4,
+:root[data-theme="dark"] .prose h5,
+:root[data-theme="dark"] .prose h6 {
+    color: var(--text-primary) !important;
+}
+:root[data-theme="dark"] .prose p,
+:root[data-theme="dark"] .prose li {
+    color: var(--text-secondary) !important;
+}
+:root[data-theme="dark"] .prose strong,
+:root[data-theme="dark"] .prose b {
+    color: var(--text-primary) !important;
+}
+:root[data-theme="dark"] .prose a {
+    color: #60A5FA !important;
+    text-decoration: underline;
+}
+:root[data-theme="dark"] .prose a:hover {
+    color: #93C5FD !important;
+}
+:root[data-theme="dark"] .prose blockquote {
+    border-left: 4px solid #60A5FA !important;
+    color: var(--text-secondary) !important;
+    background: var(--surface-card) !important;
+    padding: 1rem 1.5rem !important;
+    border-radius: 0 0.75rem 0.75rem 0 !important;
+}
+:root[data-theme="dark"] .prose code {
+    color: #38BDF8 !important;
+    background-color: var(--surface-sunken) !important;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.375rem;
+}
+:root[data-theme="dark"] .prose pre {
+    background-color: var(--surface-sunken) !important;
+    border: 1px solid var(--border-subtle) !important;
+    color: var(--text-primary) !important;
+}
+:root[data-theme="dark"] .prose hr {
+    border-color: var(--border-subtle) !important;
+}
+:root[data-theme="dark"] .prose figure {
+    border-color: var(--border-subtle) !important;
+}
+:root[data-theme="dark"] .prose figcaption {
+    color: var(--text-muted) !important;
 }
 
 /* Image Positioning Utilities */

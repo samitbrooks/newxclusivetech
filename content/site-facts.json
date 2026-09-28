@@ -27,11 +27,10 @@
   "pricing": {
     "currency": "KES",
     "launchOffer": {
-      "name": "Limited Launch Offer",
-      "price": "KES 20,000",
-      "scope": "A single-page website - mobile-first, WhatsApp contact button, basic on-page SEO",
-      "delivery": "3 days",
-      "limit": "Limited to the first 10 new clients on this offer"
+      "name": "Express Landing Page Offer",
+      "price": "KES 15,000",
+      "scope": "1 long-form high-converting sales page (5 conversion sections), WhatsApp floating chat, email lead capture form, Google Maps, sub-1.5s mobile speed, OpenGraph share preview, 100% upgrade credit within 6 months",
+      "delivery": "3-5 business days"
     },
     "packages": [
       {
@@ -196,7 +195,7 @@
     }
   ],
   "geoFaq": [
-    "Websites start from a KES 20,000 limited launch offer (single page), with full packages from KES 25,000.",
+    "Websites start from an Express Landing Page package at KES 15,000 (single high-converting page, delivered in 3–5 days), with full business packages from KES 25,000.",
     "Primary focus is Thika town and Kiambu County, also serving Nairobi and businesses across Kenya.",
     "All packages can be paid via M-Pesa.",
     "Typical delivery is 2-3 weeks for a Starter Site."
