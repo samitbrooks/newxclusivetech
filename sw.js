@@ -1,5 +1,5 @@
 // Xclusive Tech Service Worker (PWA Offline Support & Cache)
-const CACHE_NAME = 'xt-cache-v1';
+const CACHE_NAME = 'xt-cache-v2';
 const PRECACHE_ASSETS = [
     '/',
     '/pricing.html',
@@ -7,7 +7,9 @@ const PRECACHE_ASSETS = [
     '/js/main.js',
     '/js/navigation.js',
     '/js/animations.js',
-    '/site.webmanifest'
+    '/site.webmanifest',
+    '/llms.txt',
+    '/llms-full.txt'
 ];
 
 self.addEventListener('install', event => {

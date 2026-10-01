@@ -17,21 +17,21 @@
     <meta name="twitter:description" content="CRM, invoicing, automated M-Pesa STK push payments and project management in one unified platform.">
     <meta name="twitter:image" content="assets/images/products/frostwoodcrm-dashboard.png">
     <link rel="canonical" href="https://www.xclusivetech.co.ke/frostwoodcrm">
+    <link rel="describedby" href="/llms.txt">
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs.txt">
 
-    <!-- Theme Initialization (Prevents FOUC, defaults strictly to light) -->
+        <!-- Theme Enforcement: Strictly Light Mode -->
     <script>
-        (function() {
-            try {
-                var storedTheme = localStorage.getItem('xclusive_theme');
-                if (storedTheme === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                }
-            } catch (e) {}
-        })();
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
     </script>
 
+        <script>
+        window.tailwind = { config: { darkMode: 'class' } };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png?v=2">
@@ -51,31 +51,31 @@
             background: linear-gradient(90deg, #2563EB 0%, #4F46E5 100%) !important;
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-hero {
+        :root[data-theme="dark-disabled"] .frostwood-hero {
             background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.12) 0%, transparent 60%), linear-gradient(180deg, #0B1120 0%, #0F172A 60%, #0B1120 100%) !important;
             background-color: #0B1120 !important;
             border-bottom-color: rgba(255, 255, 255, 0.08) !important;
         }
-        :root[data-theme="dark"] .frostwood-pill {
+        :root[data-theme="dark-disabled"] .frostwood-pill {
             background: rgba(37, 99, 235, 0.18) !important;
             border-color: rgba(96, 165, 250, 0.35) !important;
         }
-        :root[data-theme="dark"] .frostwood-pill span:last-child {
+        :root[data-theme="dark-disabled"] .frostwood-pill span:last-child {
             color: #93C5FD !important;
         }
-        :root[data-theme="dark"] .frostwood-hero-title {
+        :root[data-theme="dark-disabled"] .frostwood-hero-title {
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-gradient-text {
+        :root[data-theme="dark-disabled"] .frostwood-gradient-text {
             background: linear-gradient(135deg, #60A5FA 0%, #818CF8 50%, #34D399 100%) !important;
             -webkit-background-clip: text !important;
             -webkit-text-fill-color: transparent !important;
             background-clip: text !important;
         }
-        :root[data-theme="dark"] .frostwood-hero-lead {
+        :root[data-theme="dark-disabled"] .frostwood-hero-lead {
             color: #CBD5E1 !important;
         }
-        :root[data-theme="dark"] .frostwood-hero-lead strong {
+        :root[data-theme="dark-disabled"] .frostwood-hero-lead strong {
             color: #FFFFFF !important;
         }
         .frostwood-demo-btn {
@@ -88,128 +88,128 @@
             background-color: #F8FAFC;
             border-color: #94A3B8;
         }
-        :root[data-theme="dark"] .frostwood-demo-btn {
+        :root[data-theme="dark-disabled"] .frostwood-demo-btn {
             background-color: rgba(255, 255, 255, 0.08) !important;
             border: 1px solid rgba(255, 255, 255, 0.2) !important;
             color: #FFFFFF !important;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
         }
-        :root[data-theme="dark"] .frostwood-demo-btn:hover {
+        :root[data-theme="dark-disabled"] .frostwood-demo-btn:hover {
             background-color: rgba(255, 255, 255, 0.14) !important;
             border-color: rgba(255, 255, 255, 0.35) !important;
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-demo-btn,
-        :root[data-theme="dark"] .frostwood-demo-btn * {
+        :root[data-theme="dark-disabled"] .frostwood-demo-btn,
+        :root[data-theme="dark-disabled"] .frostwood-demo-btn * {
             color: #FFFFFF !important;
         }
         .frostwood-demo-btn svg,
-        :root[data-theme="dark"] .frostwood-demo-btn svg {
+        :root[data-theme="dark-disabled"] .frostwood-demo-btn svg {
             color: #10B981 !important;
             fill: currentColor !important;
         }
-        :root[data-theme="dark"] .frostwood-problem-section {
+        :root[data-theme="dark-disabled"] .frostwood-problem-section {
             background: #0B1120 !important;
             border-bottom-color: rgba(255, 255, 255, 0.08) !important;
         }
-        :root[data-theme="dark"] .frostwood-problem-tag {
+        :root[data-theme="dark-disabled"] .frostwood-problem-tag {
             background: rgba(244, 63, 94, 0.15) !important;
             color: #FB7185 !important;
             border-color: rgba(244, 63, 94, 0.3) !important;
         }
-        :root[data-theme="dark"] .frostwood-problem-title {
+        :root[data-theme="dark-disabled"] .frostwood-problem-title {
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-problem-section p {
+        :root[data-theme="dark-disabled"] .frostwood-problem-section p {
             color: #94A3B8 !important;
         }
-        :root[data-theme="dark"] .frostwood-solution-card {
+        :root[data-theme="dark-disabled"] .frostwood-solution-card {
             background: linear-gradient(135deg, #151D2F 0%, #0F172A 100%) !important;
             border-color: rgba(96, 165, 250, 0.25) !important;
         }
-        :root[data-theme="dark"] .frostwood-solution-tag {
+        :root[data-theme="dark-disabled"] .frostwood-solution-tag {
             background: rgba(16, 185, 129, 0.15) !important;
             color: #34D399 !important;
         }
-        :root[data-theme="dark"] .frostwood-solution-title {
+        :root[data-theme="dark-disabled"] .frostwood-solution-title {
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-solution-card ul li {
+        :root[data-theme="dark-disabled"] .frostwood-solution-card ul li {
             color: #CBD5E1 !important;
         }
-        :root[data-theme="dark"] .frostwood-solution-card ul li strong {
+        :root[data-theme="dark-disabled"] .frostwood-solution-card ul li strong {
             color: #F8FAFC !important;
         }
-        :root[data-theme="dark"] .frostwood-features-section {
+        :root[data-theme="dark-disabled"] .frostwood-features-section {
             background: #0F172A !important;
             border-bottom-color: rgba(255, 255, 255, 0.08) !important;
         }
-        :root[data-theme="dark"] .frostwood-features-title {
+        :root[data-theme="dark-disabled"] .frostwood-features-title {
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-features-lead {
+        :root[data-theme="dark-disabled"] .frostwood-features-lead {
             color: #94A3B8 !important;
         }
-        :root[data-theme="dark"] .frostwood-feature-card {
+        :root[data-theme="dark-disabled"] .frostwood-feature-card {
             background: #151B2B !important;
             border: 1px solid rgba(255, 255, 255, 0.08) !important;
         }
-        :root[data-theme="dark"] .frostwood-feature-icon {
+        :root[data-theme="dark-disabled"] .frostwood-feature-icon {
             background: rgba(255, 255, 255, 0.06) !important;
         }
-        :root[data-theme="dark"] .frostwood-feature-title {
+        :root[data-theme="dark-disabled"] .frostwood-feature-title {
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-feature-desc {
+        :root[data-theme="dark-disabled"] .frostwood-feature-desc {
             color: #94A3B8 !important;
         }
-        :root[data-theme="dark"] .frostwood-pricing-section {
+        :root[data-theme="dark-disabled"] .frostwood-pricing-section {
             background: #0B1120 !important;
             border-bottom-color: rgba(255, 255, 255, 0.08) !important;
         }
-        :root[data-theme="dark"] .frostwood-pricing-pill {
+        :root[data-theme="dark-disabled"] .frostwood-pricing-pill {
             background: rgba(37, 99, 235, 0.18) !important;
             color: #93C5FD !important;
         }
-        :root[data-theme="dark"] .frostwood-pricing-title {
+        :root[data-theme="dark-disabled"] .frostwood-pricing-title {
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-pricing-desc {
+        :root[data-theme="dark-disabled"] .frostwood-pricing-desc {
             color: #94A3B8 !important;
         }
-        :root[data-theme="dark"] .frostwood-pricing-card {
+        :root[data-theme="dark-disabled"] .frostwood-pricing-card {
             background: #151B2B !important;
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
         }
-        :root[data-theme="dark"] .frostwood-card-title {
+        :root[data-theme="dark-disabled"] .frostwood-card-title {
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-plan-desc {
+        :root[data-theme="dark-disabled"] .frostwood-plan-desc {
             color: #94A3B8 !important;
         }
-        :root[data-theme="dark"] .frostwood-plan-pricing p {
+        :root[data-theme="dark-disabled"] .frostwood-plan-pricing p {
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-plan-features li {
+        :root[data-theme="dark-disabled"] .frostwood-plan-features li {
             color: #CBD5E1 !important;
         }
-        :root[data-theme="dark"] .frostwood-plan-btn {
+        :root[data-theme="dark-disabled"] .frostwood-plan-btn {
             background: rgba(255, 255, 255, 0.08) !important;
             border: 1px solid rgba(255, 255, 255, 0.2) !important;
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-pricing-growth-card {
+        :root[data-theme="dark-disabled"] .frostwood-pricing-growth-card {
             background: #0F172A !important;
             border-color: #3B82F6 !important;
         }
-        :root[data-theme="dark"] .frostwood-custom-section {
+        :root[data-theme="dark-disabled"] .frostwood-custom-section {
             background: #0F172A !important;
             border-bottom-color: rgba(255, 255, 255, 0.08) !important;
         }
-        :root[data-theme="dark"] .frostwood-custom-title {
+        :root[data-theme="dark-disabled"] .frostwood-custom-title {
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-custom-desc {
+        :root[data-theme="dark-disabled"] .frostwood-custom-desc {
             color: #94A3B8 !important;
         }
         .frostwood-custom-btn-secondary {
@@ -222,15 +222,15 @@
             background-color: #F8FAFC;
             border-color: #94A3B8;
         }
-        :root[data-theme="dark"] .frostwood-custom-btn-secondary,
-        :root[data-theme="dark"] .frostwood-custom-btn-secondary * {
+        :root[data-theme="dark-disabled"] .frostwood-custom-btn-secondary,
+        :root[data-theme="dark-disabled"] .frostwood-custom-btn-secondary * {
             color: #FFFFFF !important;
         }
-        :root[data-theme="dark"] .frostwood-custom-btn-secondary {
+        :root[data-theme="dark-disabled"] .frostwood-custom-btn-secondary {
             background-color: rgba(255, 255, 255, 0.08) !important;
             border: 1px solid rgba(255, 255, 255, 0.2) !important;
         }
-        :root[data-theme="dark"] .frostwood-custom-btn-secondary:hover {
+        :root[data-theme="dark-disabled"] .frostwood-custom-btn-secondary:hover {
             background-color: rgba(255, 255, 255, 0.14) !important;
             border-color: rgba(255, 255, 255, 0.35) !important;
         }
@@ -370,22 +370,6 @@
 
                 <!-- Navigation Actions (Theme Toggle, Quote CTA, Mobile Toggle) -->
                 <div class="nav-actions">
-                    <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Switch theme">
-                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </button>
 
                     <a href="https://frostwoodcrm.com" target="_blank" rel="noopener noreferrer" class="nav-cta-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold shadow-md">
                         Try Frostwood CRM &rarr;
@@ -835,6 +819,7 @@
                 <div class="footer-bottom-links">
                     <a href="/privacy" class="footer-bottom-link">Privacy Policy</a>
                     <a href="/terms" class="footer-bottom-link">Terms of Service</a>
+                    <a href="/llms.txt" class="footer-bottom-link" title="LLM Context Specification">llms.txt</a>
                 </div>
             </div>
         </div>

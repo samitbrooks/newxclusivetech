@@ -335,4 +335,356 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+
+
+    <!-- All 47 Counties Locations Hub Index -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <!-- Location: Mombasa County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-mombasa</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Kwale County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-kwale</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Kilifi County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-kilifi</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Tana River County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-tana-river</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Lamu County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-lamu</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Taita-Taveta County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-taita-taveta</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Garissa County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-garissa</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Wajir County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-wajir</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Mandera County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-mandera</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Marsabit County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-marsabit</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Isiolo County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-isiolo</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Meru County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-meru</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Tharaka-Nithi County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-tharaka-nithi</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Embu County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-embu</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Kitui County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-kitui</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Machakos County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-machakos</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Makueni County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-makueni</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Nyandarua County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-nyandarua</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Nyeri County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-nyeri</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Kirinyaga County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-kirinyaga</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Murang'a County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-muranga</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Kiambu County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-kiambu</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Turkana County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-turkana</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: West Pokot County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-west-pokot</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Samburu County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-samburu</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Trans Nzoia County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-trans-nzoia</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Uasin Gishu County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-uasin-gishu</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Elgeyo-Marakwet County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-elgeyo-marakwet</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Nandi County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-nandi</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Baringo County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-baringo</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Laikipia County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-laikipia</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Nakuru County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-nakuru</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Narok County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-narok</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Kajiado County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-kajiado</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Kericho County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-kericho</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Bomet County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-bomet</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Kakamega County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-kakamega</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Vihiga County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-vihiga</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Bungoma County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-bungoma</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Busia County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-busia</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Siaya County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-siaya</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Kisumu County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-kisumu</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Homa Bay County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-homa-bay</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Migori County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-migori</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Kisii County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-kisii</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Nyamira County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-nyamira</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Location: Nairobi County -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/locations/web-design-nairobi</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- LLMs Context Specification Files -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/llms.txt</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.xclusivetech.co.ke/llms-full.txt</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

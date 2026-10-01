@@ -16,6 +16,10 @@ Disallow: /*.backup
 # Sitemap location
 Sitemap: https://www.xclusivetech.co.ke/sitemap.xml
 
+# LLM context & directory (https://llmstxt.org/)
+# llms.txt: https://www.xclusivetech.co.ke/llms.txt
+# llms-full.txt: https://www.xclusivetech.co.ke/llms-full.txt
+
 # AI assistants and answer engines — explicitly welcome
 # (GEO/AEO: we want ChatGPT, Claude, Gemini and Perplexity to read
 # and cite this site accurately, not just traditional search engines)

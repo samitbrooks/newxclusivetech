@@ -18,22 +18,22 @@
     <meta name="twitter:description" content="Affordable, reliable websites for businesses in Nairobi, Kiambu County and across Kenya, from KES 25,000. Transparent pricing, fast delivery, tailored to your business.">
     <meta name="twitter:image" content="assets/images/og-preview.png">
     <link rel="canonical" href="https://www.xclusivetech.co.ke/">
+    <link rel="describedby" href="/llms.txt">
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs.txt">
 
-    <!-- Theme Initialization (Prevents FOUC, defaults strictly to light) -->
+        <!-- Theme Enforcement: Strictly Light Mode -->
     <script>
-        (function() {
-            try {
-                var storedTheme = localStorage.getItem('xclusive_theme');
-                if (storedTheme === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                }
-            } catch (e) {}
-        })();
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
     </script>
 
     <!-- Tailwind CSS -->
+        <script>
+        window.tailwind = { config: { darkMode: 'class' } };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png?v=2">
@@ -354,6 +354,10 @@
                                 </a>
                                 <a href="/solutions" class="nav-dropdown-item">Solutions by Business Type</a>
                                 <a href="/solutions#industries" class="nav-dropdown-item">Industries We Serve</a>
+                                <a href="/locations/" class="nav-dropdown-item font-semibold text-emerald-600 dark:text-emerald-400 flex items-center justify-between">
+                                    All 47 Counties Coverage
+                                    <span class="text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-emerald-600 text-white">Kenya</span>
+                                </a>
                                 <a href="/solutions#saas" class="nav-dropdown-item">SaaS &amp; Custom Platforms</a>
                             </div>
                         </div>
@@ -367,22 +371,6 @@
                 <!-- Navigation Actions (Theme Toggle, Quote CTA, Mobile Toggle) -->
                 <div class="nav-actions">
                     <!-- Light / Dark Mode Toggle Button -->
-                    <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Switch theme">
-                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </button>
 
                     <!-- CTA button -->
                     <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer" class="nav-cta-btn">
@@ -1429,6 +1417,7 @@
                         <li><a href="/services" class="footer-nav-link">Engineering Services</a></li>
                         <li><a href="/frostwoodcrm" class="footer-nav-link font-semibold text-blue-400">Frostwood CRM</a></li>
                         <li><a href="/solutions" class="footer-nav-link">Solutions</a></li>
+                        <li><a href="/locations/" class="footer-nav-link font-semibold text-emerald-400">All 47 Counties</a></li>
                         <li><a href="/pricing" class="footer-nav-link">Milestone Pricing</a></li>
                         <li><a href="/portfolio" class="footer-nav-link">Client Portfolio</a></li>
                         <li><a href="/blog/" class="footer-nav-link">Technical Blog</a></li>
@@ -1473,6 +1462,7 @@
                 <div class="footer-bottom-links">
                     <a href="/privacy" class="footer-bottom-link">Privacy Policy</a>
                     <a href="/terms" class="footer-bottom-link">Terms of Service</a>
+                    <a href="/llms.txt" class="footer-bottom-link" title="LLM Context Specification">llms.txt</a>
                 </div>
             </div>
         </div>

@@ -17,21 +17,21 @@
     <meta name="twitter:description" content="Website solutions built around how your business actually works — by business type, by industry, or a fully custom SaaS platform.">
     <meta name="twitter:image" content="assets/images/og-preview.png">
     <link rel="canonical" href="https://www.xclusivetech.co.ke/solutions">
+    <link rel="describedby" href="/llms.txt">
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs.txt">
 
-        <!-- Theme Initialization (Prevents FOUC, defaults strictly to light) -->
+            <!-- Theme Enforcement: Strictly Light Mode -->
     <script>
-        (function() {
-            try {
-                var storedTheme = localStorage.getItem('xclusive_theme');
-                if (storedTheme === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                }
-            } catch (e) {}
-        })();
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
     </script>
 
+        <script>
+        window.tailwind = { config: { darkMode: 'class' } };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png?v=2">
@@ -132,22 +132,6 @@
                 <!-- Navigation Actions (Theme Toggle, Quote CTA, Mobile Toggle) -->
                 <div class="nav-actions">
                     <!-- Light / Dark Mode Toggle Button -->
-                    <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Switch theme">
-                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </button>
 
                     <!-- CTA button -->
                 <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer" class="nav-cta-btn">
@@ -350,7 +334,7 @@
                     <li class="flex items-start gap-3"><svg aria-hidden="true" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span class="text-gray-700">Scalable architecture with a dedicated project manager</span></li>
                 </ul>
                 <!-- Live SaaS Case in Point: Frostwood CRM -->
-                <div class="mt-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-blue-50/80 via-indigo-50/30 to-white border-2 border-blue-500/40 shadow-lg">
+                <div class="frostwood-flagship-card mt-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-blue-50/80 via-indigo-50/30 to-white border-2 border-blue-500/40 shadow-lg">
                     <div class="flex flex-col md:flex-row items-center gap-6">
                         <div class="w-full md:w-5/12 overflow-hidden rounded-xl border border-slate-200 shadow-md relative group">
                             <picture>
@@ -360,7 +344,7 @@
                             <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-600 text-white shadow">Live SaaS Platform</span>
                         </div>
                         <div class="w-full md:w-7/12 space-y-3">
-                            <div class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 uppercase tracking-wider bg-blue-100/80 px-2.5 py-1 rounded-full">
+                            <div class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 uppercase tracking-wider bg-blue-100/80 px-2.5 py-1 rounded-full border border-blue-200/50">
                                 Flagship Case Study
                             </div>
                             <h3 class="text-2xl font-bold text-gray-900 leading-snug">Frostwood CRM — Enterprise SaaS Engineered in Nairobi</h3>
@@ -386,7 +370,7 @@
 
                 <div class="flex flex-col sm:flex-row gap-4 mt-8">
                     <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20custom%20quote%20for%20a%20SaaS%20or%20platform%20build." target="_blank" class="px-8 py-4 rounded-xl bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-300 font-semibold text-center">Request a Quote</a>
-                    <a href="/pricing#custom-solutions" style="color: #0F172A !important; border-color: #CBD5E1 !important;" class="px-8 py-4 rounded-xl border border-slate-300 hover:bg-slate-50 text-gray-900 transition-all duration-300 font-semibold text-center">See Custom Solutions pricing</a>
+                    <a href="/pricing#custom-solutions" class="px-8 py-4 rounded-xl border border-slate-300 hover:bg-slate-50 text-gray-900 transition-all duration-300 font-semibold text-center">See Custom Solutions pricing</a>
                 </div>
             </div>
         </div>
@@ -491,6 +475,7 @@
                 <div class="footer-bottom-links">
                     <a href="/privacy" class="footer-bottom-link">Privacy Policy</a>
                     <a href="/terms" class="footer-bottom-link">Terms of Service</a>
+                    <a href="/llms.txt" class="footer-bottom-link" title="LLM Context Specification">llms.txt</a>
                 </div>
             </div>
         </div>
