@@ -1,0 +1,158 @@
+I want you to type your industry into chat GPT. 
+Just what's the best and then say your industry.   Does your brand even appear? For most businesses, 
+the answer is no. Try it and comment below if you   show up. I want to see how many of you actually 
+make the cut. Because here's what's really   going on. AI is quietly changing how people find 
+information. Instead of clicking through 10 blue   links in Google, people are getting the answer 
+directly in the SER. They're going to chatb AI   overviews and they're getting their answers. 
+Let's test it. What's the best CRM software? Now, which marketing tools are worth it for 
+customer management? The same brands appear   again and again and again, even though we ask 
+completely different questions. That's how AI   search works. It keeps surfacing a handful of 
+trusted sources. And if your company isn't one   of them, you're invisible in this new search 
+ecosystem. According to Gartner, by 2026,   25% of traditional search traffic is supposed 
+to disappear and get replaced by AI generated   answers. Traditional SEO still matters, but 
+it doesn't guarantee visibility anymore. So,   today I'm walking you through generative engine 
+optimization or GEO, a seven-step system that   helps AI engines start citing your business, 
+understanding your business, and articulating   you as the solution instead of your competitors. 
+And if you want to see what this ship looks like   in action, HubSpot has a free guide that breaks 
+down the early signs of AI powered search and   how to get ahead of it. I'll link it below so you 
+can grab it before you start on your GEO audit.   All right, let's get into it. Step one, audit. 
+You have to find out where you stand. Before you   can optimize for AI, you need to know where you're 
+actually showing up. Here's what I want you to do.   Take your top 10 money keywords and I want you to 
+ask AI the same way that your customers would. For   example, if your keyword is marketing automation, 
+try a question like, "What's the best marketing   automation software?" or "How do I choose the best 
+marketing automation tool, you want to test these   in chat and perplexity or Google AI overviews?" 
+And when you do this, make sure that you are using   a private setting so it's not biased to answer 
+how you would think. Does your brand appear?   Which competitors are showing up in set? Which 
+sources are the AI tools citing? You can also   tap into tools like Profound or Aerops to give you 
+a sense of where they're going to get this data,   this information. You'll see the same pattern over 
+and over again. Maybe it's G2, maybe it's Reddit,   maybe it's comparison pages that dominate these 
+answers. This isn't a coincidence, folks. There   was a study done by authoritists which found that 
+only a small fraction of the top ranking Google   pages actually appear in AI. In other words, 
+what's winning in SEO today isn't automatically   winning an AI search. So, pattern recognition 
+is key. Understanding the way to structure your   content with datari, recently updated content is 
+absolutely important. So take a screenshot of some   of those results. Put them in a save folder and 
+monitor them time and time again. Now that you   know where to stand. The next step is simple. 
+You need to make your content easier for the   AI to understand and of course site. So step two, 
+restructuring. You need to write for how AI reads.   AI tools like CatchPT, Gemini, and Perplexity are 
+built to summarize huge amounts of text fast. And   that means they don't reward the mystery and 
+the fluff. They reward content that's clear,   structured, and gives direct answers upfront. 
+So, you need to start your top performing blog   posts and landing pages with insights that align 
+with the prompts that your customers and your   audience would be asking the LLM. Think of this 
+as the three layer system for generative engine   optimization. Start each page with a short answer 
+explaining why it matters and back it up with data   and examples. This gives you authority. Here's a 
+quick example. Before we had a long intro, story   and then the answer. After you'll see the answer 
+first and story second. When you flip that order,   AI instantly knows what your page is all about and 
+it can site it with confidence. But here's another   layer that most people miss. You need to make 
+sure you're using the exact language that people   type into AI or say to their AI when you're 
+restructuring. Think about the modifiers that   people use inside of an AI prompt. The same buying 
+stage phrases that worked in SEO like best, top,   easy to use, cheap are the phrases that users 
+are using when they're leveraging Chachi PT or   Plexity. These are your bottom offunnel prompt 
+modifiers. Here's a few examples. Best solution,   top product, cheapest category, easy to use tools. 
+So, make sure you have content like listicles and   comparison pages that use these phrases. And 
+yes, I know it might feel a little bit cringe   to put yourself as number one on the best XYZ 
+software list, but guess what? AI doesn't care.   It just sees structured, trustworthy data and 
+then it cites it. And that is your strategic   visibility. When you combine answer for structured 
+with bottom ofunnel modifiers, you're giving the   AI exactly what it needs to feature your brand. So 
+once your content is structured and it's visible,   the next question is why would AI choose to 
+site you over someone else? Let's dive into it.   Step three, authority. You want to build signals 
+that AI trusts. You need to make AI trust you   enough to site your content. Let's start with 
+schema markup. Your content's digital ID card.   Schema helps AI understand who wrote it, when it 
+was published, and who it belongs to. You should   also tap into metadata as well. You can use a free 
+tool like Google structured data markup helper to   make this really easy. Select a data type such as 
+articles or questions and answer page. Then paste   your HTML source or public URL into the tool and 
+click start tagging. Highlight your headline and   mark it as the title, author name as author, 
+publish date as date published, and your main   article text as article body. For FAQs, highlight 
+each question and tag them properly. Click create   HTML to generate the JSON LD markup. Copy the code 
+and paste the header section of your page. Then   you want to test your markup. Use Google's rich 
+results test to confirm that it's valid and see   how it appears in the search results. If you've 
+done this, congrats. You're already ahead of   90% of the site still guessing how AI reads their 
+content. Next, build external validation. You want   to get your website listed where AI is already 
+looking to for credibility. Whether it's Reddit,   YouTube, Capter, Trust Pilot, Yelp, these review 
+sites and UGC sites are AI's reference library.   Publish original research is also a great way to 
+establish authority. Buzz Sumo found that research   earns three times more citations than other 
+content. Even small surveys or benchmark reports   can help you have more recurring mentions in the 
+citations. Finally, don't be afraid of reaching   out to reporters and journalists to get you 
+published in third parties, whether that's through   affiliate marketing or simply using a tool like 
+Harrow. This is a great way for you to establish   credibility to show that you're verified, that 
+you're credible, and that you can be trusted.   Now, up to now, you've made your content very 
+trustworthy. You've made it structured. Now,   it's time to make sure AI actually finds 
+it. But first, if you're still watching,   you're officially in the top 1% of marketers who 
+care about future proofing their work. So, comment   below. Still here, because I want to know what 
+type of people start what they finish. Step four,   get technical. Optimize for AI crawlers. Think of 
+this as your website's infrastructure checkout.   The same principles as SEO, but turned into AI 
+discovery oriented. If AI can reach your content   faster, it's going to recommend you faster. Start 
+with a quick technical checkup because even though   AI discovery feels new, the fundamentals are 
+still key. Here's a simple checklist that you   can run through. First, speed. Your site should 
+load in under 2 seconds. Structure. Make sure your   layout's mobile friendly, your headers are in 
+order, and your URLs are clean. Signals. Add   schema markup in all text so AI and accessibility 
+tools can actually read what's on your page. Next,   leverage FAQ schema wherever it fits. Mstone 
+research found that 60% of AI responses come   from FAQ structured content. So, make sure that 
+you have these sections on your site and they're   tagged correctly. A lot of folks also like 
+to emphasize that content freshness is a key   signal for AI models updating content regularly 
+and can increase your chances of being cited.   This came directly from search engine. Finally, 
+test everything using Google's rich result test   and the schema.org validator. If your schema 
+is valid, then it's readable. When your site   is technically sound and fast, you remove every 
+barrier that exists between your content and the   AI models being able to index it and use it as a 
+part of their systems. Once your site is crawable,   let's build a system that scales everything that 
+you've just done. Step five, workflows. Scale your   GEO content production. This step is all about 
+building a system that you can hand off to your   team or your future self so every new piece 
+follows the same winning formula. Here's your   GEO content template. One, direct answers. Your 
+headline needs to clearly state the main query   that you're answering and keep it short and sweet. 
+Two, a quick answer. With like 50 words or so,   summarize the key takeaways up at the top of your 
+piece. Three, data visualization or a table. You   want to incorporate that directly in your piece 
+immediately after the intro. Four, a methodology   section. You want to have a section that breaks 
+down the methods, the analysis, and what you did   to come up with the various insights shared on 
+the page. Five, provide a detailed analysis. You   need to go above and beyond into the insights and 
+takeaways that you are providing your reader. Six,   an FAQ section with schema. Mark questions and 
+answers very clearly for AI visibility. Seven,   the last updated date. You want to show the 
+freshness on every page. Show exactly when this   piece just got updated. Once you've built a few of 
+these, use this pre-publication checklist before   you hit publish. Is there a direct answer in the 
+first 50 words? Is data or a chart included within   the first 200 words? Are there credible sources 
+and citations made throughout? Are the author's   credentials and schema visible, clickable, and 
+very much accessible? Is it mobile friendly? Is   the load time fast? Make sure that you use this 
+template to turn every single post into a GEO   ready asset that AI can understand, trust, and 
+site consistently. Build this workflow once and   you'll scale AI visibility on autopilot. Now, 
+let's make sure that your GEO ready content is   actually showing up where it matters the most. 
+Step six, tracking. Monitor your AI visibility.   I want you to run a weekly visibility audit. Test 
+your top 20 prompts across chat GPT, Perplexity,   Google's AI overviews. And again, you can use 
+tools like Profound or Aerops to make this smooth.   Keep everything in a simple tracker like you see 
+here. Log what you see. Was your brand mentioned?   Which competitors showed up? Which sources did the 
+AI site? You'll start to see patterns fast. Which   platforms site you, which skip you, and where 
+competitors dominate? Once you have the data,   use this GEO prioritization matrix. High value 
+plus low AI visibility equals immediate priority.   High traffic plus high visibility. Maintain and 
+update. Low traffic and high visibility means   analyze why and adapt. The goal is to turn AI 
+tracking into a habit. Because once you see the   patterns, you can optimize faster any algorithm 
+chase. Once you've nailed these six steps, there's   still room to grow. Let's dive into it. Step 
+seven, advanced tactics. Go beyond the basics.   Here are four tactical strategies that will help 
+you push your brand above the competition in the   AI answers. First, take a contrarian angle to your 
+content. Instead of just writing the best tools,   show people exactly why organizations switch 
+and back it up with research and data. Two,   real-time updates. Add a latest update sections 
+on a regular basis. Actually create a system   where you're constantly updating content 24 hours 
+a day on non-stop. Three, multiplatform authority.   Republish snippets and insights to LinkedIn, 
+to Reddit, to GitHub, to YouTube, to Quora. AI   engines use these platforms to decide who to site, 
+and it uses comments to inform the responses in   the LLM. Four, a Wikipedia strategy. You want to 
+tap in to Wikipedia because it is oftentimes being   cited. It is one of AI's most trusted data sets. 
+So, a credible edit can have outsized impact.   These tactics might take a bit more effort. They 
+might even require more budget and scope, but they   create long-term authority that AI recognizes and 
+uses across platforms. Now, let's turn it into a   30-day action plan that you can follow and execute 
+immediately. Week one, audit and test keywords.   You're going to test your top 20 keywords 
+across chatt, perplexity, Google AI overviews,   etc. You want to note where your brand does and 
+doesn't show up. Non-branded prompts are super   important here. That's your starting point. Week 
+two, restructure and schema optimization. Pick   your top performing pages that are being cited 
+and apply that three layer system. Then tag FAQs   using schema so AI engines can read them clearly. 
+Week three, build authority and technical setup.   Publish new FAQ pages. Refresh old data. Make sure 
+your author pages are up to date. Fix any speed   or mobile issues. Submit your site map so AI and 
+Google can recall them faster. Week four, workflow   and tracking. Build your GEO content template and 
+start your weekly tracking log. Every week, check   to see which AI tools are sending your content or 
+what other domains it's sending so you can reach   out and collaborate with them. Stick with this 
+for 30 days. You'll start seeing early signals   of AI visibility, citations, mentions, and traffic 
+from platforms that never existed in traditional   SEO. The sooner you start, the sooner AI is going 
+to start recognizing you as the authority. Folks,   GEO isn't replacing SEO. It's the evolution of 
+it. The brands winning aren't always the biggest.   They're the ones that are adapting the fastest. If 
+you want to start optimizing for how AI actually   finds sites information right now, then well done. 
+You're already ahead of 90% of your competitors.   If you want to go deeper, grab HubSpot's 
+AEO guide to early signals. It breaks down   exactly how AI is pulling content across different 
+industries. The link's in the description. And if   this video helped you, make sure to hit that like 
+and subscribe to this channel, HubSpot Marketing,   for weekly walkthroughs, frameworks, and 
+tutorials that are going to help your   business stay ahead of the competition. I'm Ross 
+Simmons. Thank you so much for listening. [Music]
