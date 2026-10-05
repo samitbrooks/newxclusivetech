@@ -1,0 +1,317 @@
+You need to understand AEO, GEO, and AIO
+right now because ranking number one on
+Google doesn't guarantee [music] anyone
+will see you anymore because AI tools
+like Perplexity, ChatGpt, Google AIO,
+and Gemini are now giving answers before
+people ever see [music] your website and
+no one else is explaining it properly.
+And if you ask the average marketer
+[music] or business owner, "Has any of
+this actually changed how you create
+content or get customers?" Most of them
+have to say, "Not really." They're
+confused, overwhelmed, or just ignoring
+it. But once I explain this to a
+business owner, they realize they can
+quietly get ahead of 99% of people who
+are freaking out about these acronyms.
+It's like something unlocks in their
+brain. They suddenly realize, "Oh, this
+is how I show up in AI overviews and
+chat GPT, get cited by generative
+summaries, own featured snippets, and
+shape what AI tools say about my brand."
+We've only broken down our approach a
+handful of times with clients in DMs, a
+podcast or two. And every time people
+say, "Why has nobody explained it this
+simply before?" So that's what I want to
+give you, an immediately actionable
+guide to AEO, GEO, and AIO, what they
+actually mean, and the exact ranking
+factors AI uses when deciding what
+businesses it talks about. My goal by
+the end of this video is simple. make
+you the business AI chooses, confidently
+recommends, and talks about. So, grab
+your coffee. Let's go.
+So, now that we've set the stage for AI
+search, we need crystal clear
+definitions. Let's start with AEO or
+answer engine optimization. Think about
+when you Google, "How often should I
+service my furnace?" You don't scroll or
+click on blue links anymore. Google
+shows you that AI overview box at the
+top. AEO is when you ask, "How do I
+become the brand AI tools keep citing
+when people ask questions like this?" If
+your brand is cited in that box or
+linked as one of the sources feeding
+that answer, congrats. That's AEO. The
+next AI layer is GEO or generative
+engine optimization. And this is where
+most SEO strategists get lost. GEO
+doesn't mean how do I rank this blog
+post, but rather how do I get
+recommended when someone asks an AI what
+to buy? Picture this. Someone goes to
+chatgpt or perplexity and types. What's
+the best tool for a 10p person marketing
+agency? Instead of sharing one snippet
+from one site, the AI reads multiple
+pages, breaks the question into sub
+questions, synthesizes an answer in its
+own words, and maybe cites two or three
+sources. And if one of those is your
+business, that's GEO working. AIO stands
+for AI optimization. Basically, it's
+making sure that ChatGpt, Perplexity,
+Gemini, Claude, and all these AI tools
+actually know your business exists. So,
+the question becomes, when someone asks
+an LLM for the best roofing service near
+me, is it going to recommend your
+business or send everyone to the next
+competitor? AEO is getting your words
+pulled into the answer, while GEO is
+getting your business chosen by AI, and
+AIO is getting your brand understood by
+AI.
+>> [snorts]
+>> Now, you must be thinking, "Do I really
+need to track all three?" Yes, you do.
+Because this is where you quietly lose
+or win revenue. If you only watch one
+section of this video, make it this one,
+because this is where we expose the gaps
+most SEO dashboards will never show you.
+First, you might be showing up AEO, but
+never getting chosen, GEO. If someone
+asks Google SGE or search generative
+experience, best accounting software for
+freelancers, you rank in the top three
+on Google. You even have the featured
+snippet. But if your pricing is vague,
+your features aren't clear, your reviews
+are weak, and your use cases aren't
+obvious, AI will still recommend your
+competitor. On paper, your SEO looks
+great. In reality, the money leaks out
+at the GEO layer. Or you might have the
+best product, but AI doesn't understand
+your brand. your AIO. If your info is
+outdated on Wikipedia, inconsistent in
+directories, missing on review sites, or
+contradicted by your own about page, AI
+skips you simply because it isn't
+confident talking about you. That's what
+AIO is really about. Filling in those
+brand knowledge gaps that silently cost
+you sales. Or your competitors might be
+getting recommended without ever
+outranking you. You could own a page one
+for best gym in Seattle, but when
+someone asks ChatGBT, should I get a
+Pelaton or join a local gym? If your
+competitor has clearer positioning,
+better reviews, a stronger about page,
+and more PR, AI will say their name, not
+yours. And no SEO dashboard will show
+you that unless you're specifically
+tracking it. So, if you're not measuring
+all three, you're not just losing to
+competitors, you're losing to the AI's
+assumptions about your business. Before
+we move on to AIO, hit that like button.
+It genuinely helps our channel grow and
+it helps other people who are struggling
+with the same questions find the answers
+faster. Now, let's get practical. What
+do you actually change on your pages,
+content, and brand so AI picks you. AEO
+is about making it effortless for an LLM
+to include you in the citations it
+summarizes. And it starts with knowing
+the exact questions people in your
+industry are asking. Tools like answer
+the public or also asked work. Or you
+can take your competitor's paid search
+data or your own, drop them into chat
+GPT and say convert these to questions
+people would ask and then supplement
+that with the real world sales calls,
+support tickets, Reddit threads, and
+community posts. But honestly, just
+listen. If five customers a week ask
+your HVAC company, "Why is my AC blowing
+warm air?" That's a piece of content
+right there. Those questions shape the
+videos you create, the Reddit threads
+you join, the help center articles you
+publish, and the partners who review
+your product. The more of the questions
+that you answer, the better, because an
+LLM's top answer is usually the brand
+mentioned the most. Also, when it comes
+to AEO, structure matters more than
+people realize. LLMs aren't trying to
+figure you out. They're trying to
+extract clean answers. Now, if your H2
+heading literally says, "Why is my AC
+blowing warm air?" LLMs don't have to
+guess what question you're answering,
+especially when you answer the question
+directly, immediately, and in about 40
+to 60 words. No story, no fluff. That's
+the whole game. That one clean paragraph
+is what LLMs want to steal. Then you can
+explain the details underneath, but you
+always open with the answer first
+approach. But here's the twist. That
+answer shouldn't live only on your site.
+LLM trust the crowd. They want YouTube
+explainers, Reddit opinions, affiliate
+reviews, customer forums, and support
+docs, all reinforcing that you are the
+right answer. So, the formula for
+winning in AEO becomes find the real
+questions people ask. Create the clean
+answer first section on your page.
+Replicate that answer across YouTube,
+Reddit, blogs, and help docs. Show up in
+as many citations as possible. And keep
+everything fast, readable, and
+trustworthy. [snorts] Next, GEO. Make it
+easy for AI to choose you. GEO is where
+things get interesting because now
+you're not going to be the answer.
+You're trying to be the recommendation.
+So, here's the simplest way to think
+about GEO. If AI were your friend giving
+someone advice, would it feel confident
+recommending you? That confidence comes
+from two places, fitness and synthesis.
+Let's say you run a small neighborhood
+gym. Fitness signals are the things that
+make AI think, "Okay, this place isn't
+sketchy. I can safely suggest it without
+embarrassing myself." So, instead of
+your website saying, "We offer
+affordable memberships," you'd have
+clear use cases,, transparent pricing,
+deep feature pages, honest comparison
+pages, reviews, and testimonials, real
+case studies, success stories, and clear
+positioning. If your brand looks real,
+specific, and trustworthy, AI is far
+more likely to include you in the
+recommendation set. Now, let's talk
+about the actual content AI pulls from.
+Imagine someone types Pelaton versus gym
+membership for weight loss in SGE or a
+chat GBT. The AI will probably generate
+a comparison, pros and cons, costs, and
+what type of person each solution is
+best suited for. If you've already
+created that exact content on your
+website, cleanly structured, you're in
+the conversation. Here's what makes your
+content AI friendly. Comprehensive,
+in-depth pages, simple, readable
+language with short sentences and clear
+points. Topical authority, which means
+crafting a whole cluster about fitness
+options, declarative facts because AI
+loves quoting numbers, tables, sections,
+lists, fresh timely content, updated
+screenshots, recent pricing, new class
+types, unique insights like your own
+data comparing average results between
+different programs. And when your
+content matches how AI structures its
+answers, AI uses it. And once you're
+used in the answer, your chances of
+being recommended skyrocket. Okay, so
+AIO. AIO is the layer nobody wants to
+talk about because it exposes a brutal
+truth. AI can't recommend you if it
+doesn't know you exist. AIO isn't about
+ranking a page. It's about your entire
+footprint across the internet. The stuff
+that teaches AI who you are, what you
+do, and whether you're a legit brand or
+a digital tumble weed. Imagine you run a
+pizza place called Peppy's Pizza. AIO is
+not about creating one blog post or one
+landing page. It's the sum of everything
+about your business that exists across
+the web, including your website, your
+reviews, your social media, your
+listings, your PR, and even your Yelp
+arguments with your local spicy Karen.
+All of it becomes part of the brand
+memory AI develops about you. So, let's
+break it down. Number one, structured
+brand data. So if your website basically
+says Peppy's pizza, best pizza in town,
+AI is going to wonder best according to
+who? Your mom. Instead, to strengthen
+your AIO, you need to feed AI the exact
+ingredients it needs to build a reliable
+knowledge card about you. That includes
+a schema markup telling AI, "Yes, I am a
+pizza restaurant. Yes, I serve
+Neapolitan style pies. Yes, we deliver.
+Yes, we're open late." or a real about
+page with details like founded in 1998,
+family-owned, woodfired, oven imported
+from Naples. Not to mention consistent
+business info everywhere. Same address,
+same hours, same phone number. These
+details make up your structured data
+layer. Next up is your authority
+ecosystem, or where else do you show up?
+This is where AIO gets fun because now
+we're talking off-site signals. You
+could have a perfect website, but if the
+rest of the internet is silent, AI has
+no idea whether you're real. Authority
+signals include news mentions, awards,
+review sites like Yelp, Trip Adviser,
+and Google reviews since these matter
+more than backlinks. Now, appearance
+across podcasts, features in industry
+blogs or listicles, directories,
+community Q&As's, all of that. Every one
+of these breadcrumbs tells AI that
+people talk about your business and that
+they like your business. Because here's
+the big shift. AI trusts consensus more
+than claims. Third, this is the part
+almost everybody misses. AI cares if
+anyone is actually paying attention to
+your brand. AI won't reward the best
+content. It will reward the loudest
+brands. We're talking about brands with
+lots of positive sentiment and mentions.
+This could mean more people searching
+for your business. Tik Toks mentioning
+your garlic knots, reviews mentioning
+you by name, bloggers including you in
+best late night eats, or foodies tagging
+you in Instagram posts. These are all
+knowledge signals that answer one simple
+question for AI. Is this a real credible
+brand I can safely talk about? So, if
+you want AI to work for you instead of
+around you, you need to fix your answers
+for AEO, fix your recommendations for
+GEO, and fix your brand footprint for
+AIO. Because here's the punch line. If
+you don't track AEO, GEO, and AIO,
+you're not just losing to competitors.
+You're losing to the AI's assumptions
+about your business. And that is a game
+you don't want to lose by accident.
