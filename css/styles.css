@@ -43,9 +43,9 @@
     --border-accent:   #5F39FF;
 
     /* ── Text Palette ── */
-    --text-primary:    #1E1E24;  /* High-Contrast Charcoal */
-    --text-secondary:  #5E5E72;  /* Smooth Webency Body Text */
-    --text-muted:      #8F8FA2;  /* Metadata / Footnotes */
+    --text-primary:    #1E1E24;  /* High-Contrast Charcoal Heading */
+    --text-secondary:  #334155;  /* Slate-700 High-Contrast Body Copy */
+    --text-muted:      #475569;  /* Slate-600 Metadata / Subtitles (WCAG AAA) */
     --text-inverse:    #FFFFFF;
     --text-accent:     #5F39FF;  /* Vibrant Violet Link */
     --text-teal:       #20D9A1;  /* Mint Teal Accent */
@@ -3744,19 +3744,19 @@ h6.text-white {
 .bg-blue-50 * {
     color: #1D4ED8 !important;
 }
-.text-gray-100,
-.text-gray-200,
-.text-gray-300,
-.text-slate-300 {
-    color: var(--text-secondary) !important;
+:not(.bg-slate-900):not(.bg-slate-900 *):not(.bg-slate-800):not(.bg-slate-800 *):not(footer):not(footer *):not(.site-footer *) > .text-gray-100,
+:not(.bg-slate-900):not(.bg-slate-900 *):not(.bg-slate-800):not(.bg-slate-800 *):not(footer):not(footer *):not(.site-footer *) > .text-gray-200,
+:not(.bg-slate-900):not(.bg-slate-900 *):not(.bg-slate-800):not(.bg-slate-800 *):not(footer):not(footer *):not(.site-footer *) > .text-gray-300,
+:not(.bg-slate-900):not(.bg-slate-900 *):not(.bg-slate-800):not(.bg-slate-800 *):not(footer):not(footer *):not(.site-footer *) > .text-slate-300 {
+    color: var(--text-secondary);
 }
-.text-gray-400,
-.text-slate-400 {
-    color: var(--text-muted) !important;
+:not(.bg-slate-900):not(.bg-slate-900 *):not(.bg-slate-800):not(.bg-slate-800 *):not(footer):not(footer *):not(.site-footer *) > .text-gray-400,
+:not(.bg-slate-900):not(.bg-slate-900 *):not(.bg-slate-800):not(.bg-slate-800 *):not(footer):not(footer *):not(.site-footer *) > .text-slate-400 {
+    color: var(--text-muted);
 }
-.text-gray-500,
-.text-slate-500 {
-    color: var(--text-faint) !important;
+:not(.bg-slate-900):not(.bg-slate-900 *):not(.bg-slate-800):not(.bg-slate-800 *):not(footer):not(footer *):not(.site-footer *) > .text-gray-500,
+:not(.bg-slate-900):not(.bg-slate-900 *):not(.bg-slate-800):not(.bg-slate-800 *):not(footer):not(footer *):not(.site-footer *) > .text-slate-500 {
+    color: var(--text-muted);
 }
 
 /* Borders */
@@ -6012,3 +6012,140 @@ div.frostwood-growth-badge {
     background: rgba(255, 255, 255, 0.2) !important;
     background-color: rgba(255, 255, 255, 0.2) !important;
 }
+
+/* ================================================================
+   LOCATIONS HUB & 47 COUNTY LANDING PAGES (STRICT HIGH-CONTRAST LIGHT SYSTEM)
+   ================================================================ */
+
+/* Locations Directory Card */
+.county-card {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 1.5rem !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.county-card:hover {
+    border-color: #2563EB !important;
+    box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.12), 0 8px 10px -6px rgba(37, 99, 235, 0.08) !important;
+    transform: translateY(-3px) !important;
+}
+
+.county-card h3 {
+    color: #0F172A !important;
+    font-weight: 700 !important;
+}
+
+.county-card p {
+    color: #475569 !important;
+}
+
+.county-card-badge {
+    background-color: #EFF6FF !important;
+    color: #1D4ED8 !important;
+    border: 1px solid #BFDBFE !important;
+    font-weight: 700 !important;
+}
+
+.county-card-btn {
+    background-color: #2563EB !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25) !important;
+    transition: all 0.2s ease !important;
+}
+
+.county-card-btn:hover {
+    background-color: #1D4ED8 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35) !important;
+    transform: translateY(-1px) !important;
+}
+
+.county-card-btn * {
+    color: #FFFFFF !important;
+}
+
+/* Region Filter Buttons in /locations/ */
+.region-filter-btn {
+    border: 1px solid #CBD5E1 !important;
+    background-color: #F1F5F9 !important;
+    color: #1E293B !important;
+    font-weight: 700 !important;
+    border-radius: 0.75rem !important;
+}
+
+.region-filter-btn:hover {
+    background-color: #E2E8F0 !important;
+    color: #0F172A !important;
+    border-color: #94A3B8 !important;
+}
+
+.region-filter-btn.active-tab {
+    background-color: #2563EB !important;
+    color: #FFFFFF !important;
+    border-color: #2563EB !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* County Pages: Highlight sidebar card */
+.county-highlight-card {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 1.5rem !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08) !important;
+}
+
+.county-highlight-card h3 {
+    color: #0F172A !important;
+}
+
+.county-highlight-card p,
+.county-highlight-card span,
+.county-highlight-card li {
+    color: #334155 !important;
+}
+
+.county-highlight-card strong {
+    color: #0F172A !important;
+}
+
+/* County Pages: Commercial Town Hub Pills */
+.county-town-pill {
+    background-color: #F1F5F9 !important;
+    color: #1E293B !important;
+    border: 1px solid #E2E8F0 !important;
+    font-weight: 600 !important;
+    border-radius: 0.75rem !important;
+}
+
+.county-town-pill:hover {
+    background-color: #E2E8F0 !important;
+    border-color: #93C5FD !important;
+    color: #1D4ED8 !important;
+}
+
+/* County Pages: Special Banner & Intake Sections (Intentional Navy Dark with Crisp White Text) */
+section.county-dark-banner,
+section.county-dark-intake {
+    background-color: #0F172A !important;
+    background: #0F172A !important;
+    color: #FFFFFF !important;
+}
+
+section.county-dark-banner h1,
+section.county-dark-banner h2,
+section.county-dark-intake h1,
+section.county-dark-intake h2 {
+    color: #FFFFFF !important;
+}
+
+section.county-dark-banner p,
+section.county-dark-intake p {
+    color: #E2E8F0 !important;
+}
+

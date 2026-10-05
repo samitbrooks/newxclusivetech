@@ -28,14 +28,19 @@
             localStorage.removeItem('xclusive_theme');
             document.documentElement.removeAttribute('data-theme');
             document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
         } catch (e) {}
     </script>
 
     <!-- Tailwind CSS & Styles (Configured to ignore OS dark mode) -->
-    <script>
-        window.tailwind = { config: { darkMode: 'class' } };
-    </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        };
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+    </script>
     <link rel="icon" href="../assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96x96.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png?v=2">
@@ -208,38 +213,38 @@
 
     <main class="min-h-screen">
         <!-- Hero Section -->
-        <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50/60 via-white to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 border-b border-slate-200 dark:border-slate-800">
+        <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50/60 via-white to-white border-b border-slate-200">
             <div class="max-w-6xl mx-auto">
                 <!-- Breadcrumbs -->
-                <nav class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-6" aria-label="Breadcrumb">
+                <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6" aria-label="Breadcrumb">
                     <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                     <span>/</span>
                     <a href="/locations/" class="hover:text-blue-600 transition-colors">Locations</a>
                     <span>/</span>
-                    <span class="text-slate-800 dark:text-slate-200 font-medium">Isiolo County</span>
+                    <span class="text-slate-800 font-medium">Isiolo County</span>
                 </nav>
 
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
                     <div class="lg:col-span-8 space-y-6">
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 text-xs font-bold uppercase tracking-wider">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-wider">
                             <span>📍 Serving Isiolo County</span>
                             <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                             <span>County Code 011 &bull; Eastern Region</span>
                         </div>
                         
-                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-                            Website Design &amp; Digital Engineering in <span class="text-blue-600 dark:text-blue-400">Isiolo County</span>
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                            Website Design &amp; Digital Engineering in <span class="text-blue-600">Isiolo County</span>
                         </h1>
                         
-                        <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                        <p class="text-lg text-slate-700 leading-relaxed">
                             Designated as a flagship LAPSSET resort hub and the central transport nexus linking Nairobi to Northern Kenya and Ethiopia, Isiolo is prime ground for logistics, hospitality, and modern commerce. We build high-converting websites designed to capture institutional and commercial contracts.
                         </p>
 
                         <!-- Key Towns List -->
                         <div class="space-y-2 pt-2">
-                            <p class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Coverage Across Commercial Centers &amp; Towns:</p>
+                            <p class="text-xs font-bold uppercase tracking-wider text-slate-600">Coverage Across Commercial Centers &amp; Towns:</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-700">📍 Isiolo Town</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-700">📍 Garbatulla</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-700">📍 Merti</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-700">📍 Oldonyiro</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-700">📍 Kinna</span>
+                                <span class="county-town-pill inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold">📍 Isiolo Town</span><span class="county-town-pill inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold">📍 Garbatulla</span><span class="county-town-pill inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold">📍 Merti</span><span class="county-town-pill inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold">📍 Oldonyiro</span><span class="county-town-pill inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold">📍 Kinna</span>
                             </div>
                         </div>
 
@@ -249,7 +254,7 @@
                                 <span>Get a Free Quote on WhatsApp</span>
                                 <span>&rarr;</span>
                             </a>
-                            <a href="/pricing" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white font-bold text-base border border-slate-300 dark:border-slate-700 transition-all">
+                            <a href="/pricing" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-base border border-slate-300 shadow-xs transition-all">
                                 <span>View Published Pricing (from KES 15K)</span>
                             </a>
                         </div>
@@ -257,37 +262,37 @@
 
                     <!-- Highlight Card -->
                     <div class="lg:col-span-4">
-                        <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
-                            <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
-                                <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 flex items-center justify-center text-2xl font-bold">🏆</div>
+                        <div class="county-highlight-card p-6 sm:p-8 space-y-6">
+                            <div class="flex items-center gap-3 border-b border-slate-100 pb-4">
+                                <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl font-bold">🏆</div>
                                 <div>
-                                    <h3 class="font-bold text-slate-900 dark:text-white text-sm">Digitally Fit Award Winner</h3>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Top Web Firm of the Year</p>
+                                    <h3 class="font-bold text-slate-900 text-sm">Digitally Fit Award Winner</h3>
+                                    <p class="text-xs text-slate-500">Top Web Firm of the Year</p>
                                 </div>
                             </div>
 
-                            <ul class="space-y-3.5 text-xs text-slate-700 dark:text-slate-300">
+                            <ul class="space-y-3.5 text-xs text-slate-700">
                                 <li class="flex items-start gap-2.5">
                                     <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <span><strong>Sub-1.5s Load Times:</strong> Optimized for mobile visitors on Safaricom 4G/5G and Airtel Kenya networks</span>
+                                    <span><strong class="text-slate-900">Sub-1.5s Load Times:</strong> Optimized for mobile visitors on Safaricom 4G/5G and Airtel Kenya networks</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <span><strong>Direct M-Pesa STK Push:</strong> Automatic customer checkout straight to your Till or Paybill</span>
+                                    <span><strong class="text-slate-900">Direct M-Pesa STK Push:</strong> Automatic customer checkout straight to your Till or Paybill</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <span><strong>Local SEO &amp; Google Maps:</strong> Dominate local search in Isiolo and nearby towns</span>
+                                    <span><strong class="text-slate-900">Local SEO &amp; Google Maps:</strong> Dominate local search in Isiolo and nearby towns</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <span><strong>100% Code Ownership:</strong> No recurring builder lock-ins or monthly template rent</span>
+                                    <span><strong class="text-slate-900">100% Code Ownership:</strong> No recurring builder lock-ins or monthly template rent</span>
                                 </li>
                             </ul>
 
-                            <div class="p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/50 text-xs">
-                                <span class="font-bold text-blue-900 dark:text-blue-200">Economic Drivers in Isiolo:</span>
-                                <p class="text-blue-800 dark:text-blue-300 mt-1">LAPSSET transport corridor logistics, Samburu/Buffalo Springs safari connections, international airport trade, and modern abattoirs.</p>
+                            <div class="p-4 rounded-2xl bg-blue-50/80 border border-blue-100 text-xs">
+                                <span class="font-bold text-blue-900">Economic Drivers in Isiolo:</span>
+                                <p class="text-slate-700 mt-1">LAPSSET transport corridor logistics, Samburu/Buffalo Springs safari connections, international airport trade, and modern abattoirs.</p>
                             </div>
                         </div>
                     </div>
@@ -296,12 +301,12 @@
         </section>
 
         <!-- Special KES 15,000 Landing Page Banner -->
-        <section class="py-12 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white relative overflow-hidden">
+        <section class="county-dark-banner py-12 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white relative overflow-hidden">
             <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-8 space-y-3">
                     <span class="inline-block px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-black uppercase tracking-wider">⚡ Special Offer &bull; Fastest Launch (3–5 Days)</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Express Sales Landing Page for Isiolo Businesses</h2>
-                    <p class="text-slate-300 text-sm leading-relaxed">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white" style="color: #ffffff !important;">Express Sales Landing Page for Isiolo Businesses</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed" style="color: #cbd5e1 !important;">
                         Need sales inquiries and direct WhatsApp calls right now without spending KES 25K+ on a multi-page website? Includes 5 long-form conversion sections, 1-click WhatsApp inquiry widget, direct lead intake form, and sub-1.5s load speed.
                     </p>
                 </div>
@@ -311,28 +316,28 @@
                         <span>Claim KES 15,000 Offer</span>
                         <span>&rarr;</span>
                     </a>
-                    <p class="text-[11px] text-slate-400 mt-1.5">Includes 100% upgrade credit guarantee</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5" style="color: #94a3b8 !important;">Includes 100% upgrade credit guarantee</p>
                 </div>
             </div>
         </section>
 
         <!-- Full Transparent Pricing Grid -->
-        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950">
+        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-200">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Honest &amp; Transparent</span>
-                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mt-1">Website Design Packages for Isiolo County</h2>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">All packages include bespoke Figma UI/UX design, foundational on-page SEO, mobile responsiveness, and 100% source code ownership.</p>
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Honest &amp; Transparent</span>
+                    <h2 class="text-3xl font-bold text-slate-900 mt-1">Website Design Packages for Isiolo County</h2>
+                    <p class="text-slate-600 text-sm mt-2">All packages include bespoke Figma UI/UX design, foundational on-page SEO, mobile responsiveness, and 100% source code ownership.</p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Starter -->
-                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
                         <div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Starter Site</span>
-                            <div class="text-3xl font-extrabold text-slate-900 dark:text-white mt-2">KES 25,000–45,500</div>
-                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Delivered in 2–3 weeks</p>
-                            <ul class="space-y-3 mt-6 text-sm text-slate-700 dark:text-slate-300">
+                            <span class="text-xs font-bold uppercase tracking-widest text-blue-600">Starter Site</span>
+                            <div class="text-3xl font-extrabold text-slate-900 mt-2">KES 25,000–45,500</div>
+                            <p class="text-xs text-slate-500 mt-1">Delivered in 2–3 weeks</p>
+                            <ul class="space-y-3 mt-6 text-sm text-slate-700">
                                 <li class="flex items-start gap-2">✓ Up to 5 custom-designed pages</li>
                                 <li class="flex items-start gap-2">✓ Bespoke Figma UI/UX design</li>
                                 <li class="flex items-start gap-2">✓ 100% responsive mobile layout</li>
@@ -340,17 +345,17 @@
                                 <li class="flex items-start gap-2">✓ Foundational on-page SEO</li>
                             </ul>
                         </div>
-                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I'm%20interested%20in%20the%20Starter%20Site%20package%20for%20my%20business%20in%20Isiolo." target="_blank" rel="noopener noreferrer" class="mt-8 block text-center py-3 px-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold text-sm hover:bg-slate-100 transition-colors">Choose Starter</a>
+                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I'm%20interested%20in%20the%20Starter%20Site%20package%20for%20my%20business%20in%20Isiolo." target="_blank" rel="noopener noreferrer" class="mt-8 block text-center py-3 px-4 rounded-xl bg-white border border-slate-300 text-slate-900 font-bold text-sm hover:bg-slate-100 shadow-xs transition-colors">Choose Starter</a>
                     </div>
 
                     <!-- Business Growth -->
-                    <div class="p-6 sm:p-8 rounded-3xl bg-blue-50 dark:bg-blue-950/40 border-2 border-blue-500 flex flex-col justify-between relative shadow-xl">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-blue-50/70 border-2 border-blue-500 flex flex-col justify-between relative shadow-xl">
                         <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-blue-600 text-white text-[10px] font-extrabold uppercase tracking-wider">Most Popular</span>
                         <div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">Business Growth</span>
-                            <div class="text-3xl font-extrabold text-slate-900 dark:text-white mt-2">KES 49,000–62,000</div>
-                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Delivered in 3–5 weeks</p>
-                            <ul class="space-y-3 mt-6 text-sm text-slate-700 dark:text-slate-300">
+                            <span class="text-xs font-bold uppercase tracking-widest text-blue-600">Business Growth</span>
+                            <div class="text-3xl font-extrabold text-slate-900 mt-2">KES 49,000–62,000</div>
+                            <p class="text-xs text-slate-500 mt-1">Delivered in 3–5 weeks</p>
+                            <ul class="space-y-3 mt-6 text-sm text-slate-700">
                                 <li class="flex items-start gap-2">✓ Up to 15 custom pages</li>
                                 <li class="flex items-start gap-2">✓ Dynamic CMS blog engine</li>
                                 <li class="flex items-start gap-2">✓ Advanced Local SEO &amp; Schema</li>
@@ -362,12 +367,12 @@
                     </div>
 
                     <!-- E-Commerce Pro -->
-                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
                         <div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">E-Commerce Pro</span>
-                            <div class="text-3xl font-extrabold text-slate-900 dark:text-white mt-2">KES 72,000–85,000</div>
-                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Delivered in 5–7 weeks</p>
-                            <ul class="space-y-3 mt-6 text-sm text-slate-700 dark:text-slate-300">
+                            <span class="text-xs font-bold uppercase tracking-widest text-blue-600">E-Commerce Pro</span>
+                            <div class="text-3xl font-extrabold text-slate-900 mt-2">KES 72,000–85,000</div>
+                            <p class="text-xs text-slate-500 mt-1">Delivered in 5–7 weeks</p>
+                            <ul class="space-y-3 mt-6 text-sm text-slate-700">
                                 <li class="flex items-start gap-2">✓ Unlimited products &amp; categories</li>
                                 <li class="flex items-start gap-2">✓ Automated Daraja M-Pesa STK Push</li>
                                 <li class="flex items-start gap-2">✓ Automated PDF tax invoices</li>
@@ -375,94 +380,94 @@
                                 <li class="flex items-start gap-2">✓ Inventory stock control</li>
                             </ul>
                         </div>
-                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I'm%20interested%20in%20an%20M-Pesa%20E-Commerce%20store%20for%20my%20business%20in%20Isiolo." target="_blank" rel="noopener noreferrer" class="mt-8 block text-center py-3 px-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold text-sm hover:bg-slate-100 transition-colors">Choose E-Commerce</a>
+                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I'm%20interested%20in%20an%20M-Pesa%20E-Commerce%20store%20for%20my%20business%20in%20Isiolo." target="_blank" rel="noopener noreferrer" class="mt-8 block text-center py-3 px-4 rounded-xl bg-white border border-slate-300 text-slate-900 font-bold text-sm hover:bg-slate-100 shadow-xs transition-colors">Choose E-Commerce</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQs Section -->
-        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/60 border-t border-b border-slate-200 dark:border-slate-800">
+        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-b border-slate-200">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-10">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Frequently Asked Questions</span>
-                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mt-1">Web Design in Isiolo County</h2>
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Frequently Asked Questions</span>
+                    <h2 class="text-3xl font-bold text-slate-900 mt-1">Web Design in Isiolo County</h2>
                 </div>
 
                 <div class="space-y-4">
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                        <h3 class="text-base font-bold text-slate-900 dark:text-white">How much does a website cost in Isiolo County?</h3>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Website prices start at KES 15,000 for our Express Sales Landing Page. Multi-page business websites start at KES 25,000, and full e-commerce stores with Daraja M-Pesa integration start at KES 72,000. All prices are published transparently with zero hidden fees.</p>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200">
+                        <h3 class="text-base font-bold text-slate-900">How much does a website cost in Isiolo County?</h3>
+                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">Website prices start at KES 15,000 for our Express Sales Landing Page. Multi-page business websites start at KES 25,000, and full e-commerce stores with Daraja M-Pesa integration start at KES 72,000. All prices are published transparently with zero hidden fees.</p>
                     </div>
 
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Can I integrate M-Pesa for my customers in Isiolo?</h3>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Yes! We natively connect the official Safaricom Daraja M-Pesa API to your website. When customers buy from your site in Isiolo or across Kenya, they enter their phone number and receive an instant M-Pesa PIN prompt. Funds go straight to your Till or Paybill.</p>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200">
+                        <h3 class="text-base font-bold text-slate-900">Can I integrate M-Pesa for my customers in Isiolo?</h3>
+                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">Yes! We natively connect the official Safaricom Daraja M-Pesa API to your website. When customers buy from your site in Isiolo or across Kenya, they enter their phone number and receive an instant M-Pesa PIN prompt. Funds go straight to your Till or Paybill.</p>
                     </div>
 
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Do I need to visit your Nairobi office to get started?</h3>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Not at all! We serve clients across all 47 counties remotely via WhatsApp, phone calls, Google Meet, and email. You will receive private Figma links to preview and approve designs before any code is built.</p>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200">
+                        <h3 class="text-base font-bold text-slate-900">Do I need to visit your Nairobi office to get started?</h3>
+                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">Not at all! We serve clients across all 47 counties remotely via WhatsApp, phone calls, Google Meet, and email. You will receive private Figma links to preview and approve designs before any code is built.</p>
                     </div>
 
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Do you register .co.ke and .com domains for Isiolo businesses?</h3>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">Yes. We register official .co.ke domains from KES 1,500/year and .com domains, paid directly via M-Pesa. You get complete administrative ownership of your domain credentials.</p>
+                    <div class="p-6 rounded-2xl bg-white border border-slate-200">
+                        <h3 class="text-base font-bold text-slate-900">Do you register .co.ke and .com domains for Isiolo businesses?</h3>
+                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">Yes. We register official .co.ke domains from KES 1,500/year and .com domains, paid directly via M-Pesa. You get complete administrative ownership of your domain credentials.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Neighboring Counties in Region -->
-        <section class="py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950">
+        <section class="py-12 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-200">
             <div class="max-w-6xl mx-auto">
                 <div class="flex items-center justify-between mb-6">
                     <div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Other Counties in the Eastern Region</h3>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">Explore web design services in neighboring economic zones</p>
+                        <h3 class="text-lg font-bold text-slate-900">Other Counties in the Eastern Region</h3>
+                        <p class="text-xs text-slate-500">Explore web design services in neighboring economic zones</p>
                     </div>
-                    <a href="/locations/" class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">View All 47 Counties &rarr;</a>
+                    <a href="/locations/" class="text-xs font-bold text-blue-600 hover:underline">View All 47 Counties &rarr;</a>
                 </div>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <a href="/locations/web-design-marsabit" class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 hover:shadow-md transition-all flex flex-col justify-between">
+                    <a href="/locations/web-design-marsabit" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">County 010 &bull; Eastern</span>
-                <h4 class="font-bold text-slate-900 dark:text-white text-base mt-1">Marsabit County</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">Moyale One-Stop Border Trade, Lake Turkana Wind Power & Cultural Tourism</p>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600">County 010 &bull; Eastern</span>
+                <h4 class="font-bold text-slate-900 text-base mt-1">Marsabit County</h4>
+                <p class="text-xs text-slate-600 mt-1 line-clamp-2">Moyale One-Stop Border Trade, Lake Turkana Wind Power & Cultural Tourism</p>
             </div>
-            <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-3 inline-flex items-center gap-1">Explore Marsabit &rarr;</span>
-        </a><a href="/locations/web-design-meru" class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 hover:shadow-md transition-all flex flex-col justify-between">
+            <span class="text-xs font-semibold text-blue-600 mt-3 inline-flex items-center gap-1">Explore Marsabit &rarr;</span>
+        </a><a href="/locations/web-design-meru" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">County 012 &bull; Eastern</span>
-                <h4 class="font-bold text-slate-900 dark:text-white text-base mt-1">Meru County</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">Horticulture, Floriculture, Miraa Commerce & Mount Kenya Tourism Web Portals</p>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600">County 012 &bull; Eastern</span>
+                <h4 class="font-bold text-slate-900 text-base mt-1">Meru County</h4>
+                <p class="text-xs text-slate-600 mt-1 line-clamp-2">Horticulture, Floriculture, Miraa Commerce & Mount Kenya Tourism Web Portals</p>
             </div>
-            <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-3 inline-flex items-center gap-1">Explore Meru &rarr;</span>
-        </a><a href="/locations/web-design-tharaka-nithi" class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 hover:shadow-md transition-all flex flex-col justify-between">
+            <span class="text-xs font-semibold text-blue-600 mt-3 inline-flex items-center gap-1">Explore Meru &rarr;</span>
+        </a><a href="/locations/web-design-tharaka-nithi" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">County 013 &bull; Eastern</span>
-                <h4 class="font-bold text-slate-900 dark:text-white text-base mt-1">Tharaka-Nithi County</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">Chuka University Tech Hub, Mount Kenya Climbing & Agro-Processing Websites</p>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600">County 013 &bull; Eastern</span>
+                <h4 class="font-bold text-slate-900 text-base mt-1">Tharaka-Nithi County</h4>
+                <p class="text-xs text-slate-600 mt-1 line-clamp-2">Chuka University Tech Hub, Mount Kenya Climbing & Agro-Processing Websites</p>
             </div>
-            <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-3 inline-flex items-center gap-1">Explore Tharaka-Nithi &rarr;</span>
-        </a><a href="/locations/web-design-embu" class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 hover:shadow-md transition-all flex flex-col justify-between">
+            <span class="text-xs font-semibold text-blue-600 mt-3 inline-flex items-center gap-1">Explore Tharaka-Nithi &rarr;</span>
+        </a><a href="/locations/web-design-embu" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">County 014 &bull; Eastern</span>
-                <h4 class="font-bold text-slate-900 dark:text-white text-base mt-1">Embu County</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">Macadamia Nut Processing, Coffee Cooperatives & Hospitality Web Platforms</p>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600">County 014 &bull; Eastern</span>
+                <h4 class="font-bold text-slate-900 text-base mt-1">Embu County</h4>
+                <p class="text-xs text-slate-600 mt-1 line-clamp-2">Macadamia Nut Processing, Coffee Cooperatives & Hospitality Web Platforms</p>
             </div>
-            <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-3 inline-flex items-center gap-1">Explore Embu &rarr;</span>
+            <span class="text-xs font-semibold text-blue-600 mt-3 inline-flex items-center gap-1">Explore Embu &rarr;</span>
         </a>
                 </div>
             </div>
         </section>
 
         <!-- Direct Consultation Form Section -->
-        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
+        <section class="county-dark-intake py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
             <div class="max-w-4xl mx-auto text-center space-y-6">
                 <span class="inline-block px-3.5 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider">Direct Project Intake</span>
-                <h2 class="text-3xl sm:text-4xl font-bold">Ready to Launch Your Website in Isiolo County?</h2>
-                <p class="text-slate-300 text-sm max-w-xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold" style="color: #ffffff !important;">Ready to Launch Your Website in Isiolo County?</h2>
+                <p class="text-slate-300 text-sm max-w-xl mx-auto" style="color: #cbd5e1 !important;">
                     Speak directly with lead developer Samuel Kidemi and our Nairobi engineering team. We deliver custom, high-converting websites on time and on budget.
                 </p>
                 <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center items-center">
