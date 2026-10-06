@@ -643,11 +643,23 @@ def render_county_page(c):
         }} catch (e) {{}}
     </script>
 
+    <!-- Google Fonts Preconnect & Ubuntu Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS & Styles (Configured to ignore OS dark mode) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {{
-            darkMode: 'class'
+            darkMode: 'class',
+            theme: {{
+                extend: {{
+                    fontFamily: {{
+                        sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }}
+                }}
+            }}
         }};
         document.documentElement.classList.remove('dark');
         document.documentElement.classList.add('light');
@@ -1201,11 +1213,23 @@ def render_locations_index():
         }} catch (e) {{}}
     </script>
 
+    <!-- Google Fonts Preconnect & Ubuntu Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS & Styles (Configured to ignore OS dark mode) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {{
-            darkMode: 'class'
+            darkMode: 'class',
+            theme: {{
+                extend: {{
+                    fontFamily: {{
+                        sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }}
+                }}
+            }}
         }};
         document.documentElement.classList.remove('dark');
         document.documentElement.classList.add('light');
