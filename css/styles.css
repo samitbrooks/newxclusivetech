@@ -760,7 +760,7 @@ nav#navbar.shadow-md {
     color: #FFFFFF !important;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 768px) {
     .nav-cta-btn {
         display: inline-flex;
     }
@@ -6244,7 +6244,10 @@ section.county-dark-intake p {
 }
 
 .xt-exit-headline-accent {
-    color: #C2410C;
+    background: linear-gradient(90deg, #5F39FF 0%, #20D9A1 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
     display: block;
 }
 
@@ -6267,9 +6270,9 @@ section.county-dark-intake p {
 }
 
 .xt-check-icon {
-    color: #C2410C;
+    color: #20D9A1 !important;
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.2;
     flex-shrink: 0;
 }
@@ -6340,7 +6343,7 @@ section.county-dark-intake p {
 .xt-speed-score {
     font-size: 0.82rem;
     font-weight: 800;
-    color: #EA580C;
+    color: #10B981;
     line-height: 1.1;
 }
 
@@ -6383,7 +6386,7 @@ section.county-dark-intake p {
 .xt-award-badge-tag {
     font-size: 0.68rem;
     font-weight: 800;
-    color: #C2410C;
+    color: #5F39FF !important;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -6458,8 +6461,8 @@ section.county-dark-intake p {
 
 .xt-input:focus,
 .xt-select:focus {
-    border-color: #C2410C;
-    box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
+    border-color: #5F39FF !important;
+    box-shadow: 0 0 0 3px rgba(95, 57, 255, 0.15) !important;
 }
 
 .xt-phone-group {
@@ -6473,8 +6476,8 @@ section.county-dark-intake p {
 }
 
 .xt-phone-group:focus-within {
-    border-color: #C2410C;
-    box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
+    border-color: #5F39FF !important;
+    box-shadow: 0 0 0 3px rgba(95, 57, 255, 0.15) !important;
 }
 
 .xt-phone-prefix {
@@ -6529,32 +6532,32 @@ section.county-dark-intake p {
 }
 
 .xt-checkbox-label input {
-    accent-color: #C2410C;
+    accent-color: #5F39FF !important;
     width: 1rem;
     height: 1rem;
     cursor: pointer;
 }
 
 .xt-checkbox-label a {
-    color: #0F172A;
+    color: #5F39FF;
     text-decoration: underline;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .xt-exit-submit-btn {
     width: 100%;
     padding: 0.95rem 1.5rem;
-    background-color: #C2410C !important;
+    background: linear-gradient(90deg, #20D9A1 0%, #5F39FF 100%) !important;
     color: #FFFFFF !important;
     font-size: 0.95rem;
     font-weight: 800;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     border: none;
-    border-radius: 0.85rem;
+    border-radius: 150px !important;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(194, 65, 12, 0.35);
-    transition: all 0.2s ease;
+    box-shadow: 0 4px 18px rgba(95, 57, 255, 0.38) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6562,9 +6565,10 @@ section.county-dark-intake p {
 }
 
 .xt-exit-submit-btn:hover {
-    background-color: #9A3412 !important;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(194, 65, 12, 0.45);
+    background: linear-gradient(90deg, #1bc491 0%, #4f28f0 100%) !important;
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 8px 26px rgba(95, 57, 255, 0.52) !important;
+    color: #FFFFFF !important;
 }
 
 .xt-exit-submit-btn:disabled {
