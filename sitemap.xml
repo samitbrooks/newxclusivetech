@@ -200,6 +200,22 @@
         <priority>0.7</priority>
     </url>
 
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/privacy</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Terms of Service -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/terms</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
     <!-- Blog: why-churches-and-ministries-need-a-website -->
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-churches-and-ministries-need-a-website</loc>

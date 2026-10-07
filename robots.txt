@@ -7,9 +7,12 @@ Allow: /css/
 Allow: /js/
 Allow: /assets/
 
-# Disallow admin and private areas (if any exist in future)
+# Disallow admin, private, and internal preview areas
 Disallow: /admin/
 Disallow: /private/
+Disallow: /preview/
+Disallow: /preview.html
+Disallow: /review_templates.html
 Disallow: /.env
 Disallow: /*.backup
 

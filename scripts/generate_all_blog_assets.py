@@ -632,7 +632,7 @@ def main():
         category = post["category"]
         alt = post["alt"]
         subtitle = post["subtitle"]
-        card = f"""                <a href="{slug}.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
+        card = f"""                <a href="/blog/{slug}" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col group">
                     <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-100">
                         <img src="../assets/images/blog/{slug}.svg" alt="{alt}" width="600" height="315" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
