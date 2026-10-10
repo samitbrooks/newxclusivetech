@@ -1,0 +1,25 @@
+To: info@africakenyasafaris.com
+Subject: Book a 10-min Call: Safari booking flow & conversion for africakenyasafaris.com
+
+Hi Travel Team,
+
+I was looking at Africa Kenya Safaris online and noticed you have great safari packages and itineraries.
+
+While browsing, I noticed your safari booking forms have multiple manual steps on mobile devices and lack instant automated M-Pesa / card deposit validation for local and international travelers.
+
+In our work engineering web systems for tourism brands (including Santorini Queen luxury charters and Diani Elite Taxi), we found that over 78% of travelers in Kenya browse on mobile. Trimming load speed below 1.5 seconds and adding automated M-Pesa + card deposit checkouts typically lifts direct booking inquiries by 35%+.
+
+Would you be open to a quick 10-minute discovery call this week? I can share a free 3-point conversion audit of africakenyasafaris.com with zero obligation.
+
+You can book a call with me directly here:
+👉 WhatsApp: https://wa.me/254722753819?text=Hi%20Samuel,%20I%20got%20your%20email%20and%20would%20like%20to%20book%20a%20quick%20discovery%20call.
+👉 Or simply reply to this email with a time that works best for you.
+
+Best regards,
+
+Samuel Kidemi
+Lead Software Engineer & Co-Founder | Xclusive Tech
+Co-Founder, Top Digitally Fit Web Design Firm of the Year
+Kilimani, Nairobi, Kenya
+Phone / WhatsApp: +254 722 753 819
+Website: https://www.xclusivetech.co.ke

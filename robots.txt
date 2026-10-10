@@ -8,7 +8,9 @@ Allow: /js/
 Allow: /assets/
 
 # Disallow admin, private, and internal preview areas
+Disallow: /admin
 Disallow: /admin/
+Disallow: /admin.html
 Disallow: /private/
 Disallow: /preview/
 Disallow: /preview.html

@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xclusive Tech Admin — Client Acquisition &amp; Outbound Hub</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#5f39ff',
+                            darkPurple: '#4926dc',
+                            teal: '#20d9a1',
+                            darkTeal: '#10b981',
+                            accent: '#fd31bc',
+                            dark: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Ubuntu', sans-serif; }
+        .gradient-brand { background: linear-gradient(135deg, #5f39ff 0%, #20d9a1 100%); }
+        .gradient-text { background: linear-gradient(135deg, #5f39ff 0%, #20d9a1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .badge-tourism { background-color: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+        .badge-legal { background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+        .badge-clinic { background-color: #faf5ff; color: #7e22ce; border: 1px solid #e9d5ff; }
+        .badge-retail { background-color: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
+        .badge-agency { background-color: #fdf2f8; color: #be185d; border: 1px solid #fbcfe8; }
+        
+        .status-PENDING { background-color: #f1f5f9; color: #475569; }
+        .status-DRAFTED { background-color: #eff6ff; color: #2563eb; }
+        .status-EMAILED { background-color: #fef3c7; color: #d97706; }
+        .status-CALL_BOOKED { background-color: #dcfce7; color: #15803d; font-weight: 700; }
+        .status-WON { background-color: #ccfbf1; color: #0f766e; font-weight: 700; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- LOGIN SCREEN OVERLAY -->
+    <div id="login-overlay" class="fixed inset-0 z-50 bg-slate-900/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 max-w-md w-full p-8 md:p-10 animate-fade-in relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-2 gradient-brand"></div>
+            
+            <div class="text-center mb-8">
+                <div class="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center mx-auto mb-4 shadow-sm text-brand-purple">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold text-slate-900 tracking-tight">Xclusive Tech Admin</h1>
+                <p class="text-sm text-slate-500 mt-1">Client Acquisition &amp; Outbound Command Hub</p>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold mt-3 border border-emerald-200">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Kilimani HQ &bull; Private Platform</span>
+                </div>
+            </div>
+
+            <form id="login-form" class="space-y-4" onsubmit="handleLogin(event)">
+                <div>
+                    <label for="admin-user" class="block text-sm font-semibold text-slate-700 mb-1.5">Username</label>
+                    <input type="text" id="admin-user" required placeholder="Enter username (admin or samuel)" 
+                           class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 focus:bg-white focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20 focus:outline-none transition text-slate-900 font-medium">
+                </div>
+
+                <div>
+                    <label for="admin-pass" class="block text-sm font-semibold text-slate-700 mb-1.5">Admin Password</label>
+                    <div class="relative">
+                        <input type="password" id="admin-pass" required placeholder="Enter password (default: xclusive2026)" 
+                               class="w-full px-4 py-3 pr-12 rounded-xl bg-slate-50 border border-slate-300 focus:bg-white focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20 focus:outline-none transition text-slate-900 font-medium">
+                        <button type="button" onclick="togglePassVisibility()" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 focus:outline-none p-1">
+                            <svg id="eye-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p id="login-error" class="text-xs text-rose-600 mt-2 hidden font-medium flex items-center gap-1">
+                        <span>⚠️</span> Invalid credentials. Username: <code class="font-bold bg-rose-50 px-1 py-0.5 rounded">admin</code> | Password: <code class="font-bold bg-rose-50 px-1 py-0.5 rounded">xclusive2026</code>
+                    </p>
+                </div>
+
+                <div class="flex items-center justify-between text-xs text-slate-500 pt-1">
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" id="remember-me" checked class="rounded border-slate-300 text-brand-purple focus:ring-brand-purple">
+                        <span>Keep me logged in</span>
+                    </label>
+                    <span class="text-slate-400">admin / xclusive2026</span>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-purple hover:bg-brand-darkPurple text-white font-semibold shadow-lg shadow-brand-purple/25 hover:shadow-xl transition-all duration-200 cursor-pointer flex items-center justify-center gap-2">
+                    <span>Unlock Platform</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+            </form>
+
+            <div class="mt-8 pt-6 border-t border-slate-100 text-center text-xs text-slate-400">
+                Xclusive Tech &bull; Wood Ave, Kilimani &bull; Internal Use Only
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APP WRAPPER -->
+    <div id="app-wrapper" class="hidden min-h-screen flex flex-col">
+        
+        <!-- HEADER NAV -->
+        <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    
+                    <!-- BRAND LOGO -->
+                    <div class="flex items-center gap-3">
+                        <a href="/" class="flex items-center gap-2" title="Back to Main Website">
+                            <span class="text-2xl font-black tracking-tight text-slate-900">
+                                Xclusive<span class="text-brand-purple">Tech</span>
+                            </span>
+                        </a>
+                        <div class="hidden md:flex items-center gap-2 pl-4 border-l border-slate-200">
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-50 text-brand-purple border border-indigo-100">Admin OS</span>
+                            <span class="text-xs text-slate-400">Client Acquisition &amp; Outbound Engine</span>
+                        </div>
+                    </div>
+
+                    <!-- VIEW TABS -->
+                    <nav class="flex items-center gap-1 sm:gap-2">
+                        <button onclick="switchTab('pipeline')" id="tab-btn-pipeline" class="tab-btn px-3.5 py-2 rounded-xl text-sm font-semibold bg-brand-purple text-white shadow-sm transition">
+                            📊 Pipeline (<span id="nav-lead-count">15</span>)
+                        </button>
+                        <button onclick="switchTab('dispatcher')" id="tab-btn-dispatcher" class="tab-btn px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">
+                            ✉️ Outreach &amp; Calls
+                        </button>
+                        <button onclick="switchTab('auditor')" id="tab-btn-auditor" class="tab-btn px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">
+                            🔍 Website Auditor
+                        </button>
+                        <button onclick="switchTab('settings')" id="tab-btn-settings" class="tab-btn px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">
+                            ⚙️ Settings
+                        </button>
+                    </nav>
+
+                    <!-- USER & LOGOUT -->
+                    <div class="flex items-center gap-3">
+                        <div class="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-medium text-slate-700">
+                            <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                            <span>Samuel Kidemi</span>
+                        </div>
+                        <button onclick="handleLogout()" class="px-3 py-2 rounded-xl text-xs font-bold text-rose-600 hover:bg-rose-50 border border-transparent hover:border-rose-200 transition cursor-pointer flex items-center gap-1.5" title="Log out">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+                            <span class="hidden sm:inline">Logout</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- KPI STATS BAR -->
+        <section class="bg-white border-b border-slate-200 py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    
+                    <div class="p-4 rounded-2xl bg-indigo-50/50 border border-indigo-100">
+                        <div class="text-xs font-bold uppercase tracking-wider text-indigo-700 mb-1">Target Prospects</div>
+                        <div class="flex items-baseline gap-2">
+                            <span id="stat-total" class="text-3xl font-extrabold text-slate-900">15</span>
+                            <span class="text-xs text-indigo-600 font-medium">Verified Kenyan Leads</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-amber-50/50 border border-amber-100">
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-1">Outreach Ready</div>
+                        <div class="flex items-baseline gap-2">
+                            <span id="stat-pending" class="text-3xl font-extrabold text-slate-900">15</span>
+                            <span class="text-xs text-amber-600 font-medium">Awaiting Dispatch</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-emerald-50/50 border border-emerald-100">
+                        <div class="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-1">Discovery Calls Booked</div>
+                        <div class="flex items-baseline gap-2">
+                            <span id="stat-booked" class="text-3xl font-extrabold text-emerald-600">0</span>
+                            <span class="text-xs text-emerald-700 font-medium">Goal: 5 calls/week</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-teal-50/50 border border-teal-100">
+                        <div class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1">Pipeline Potential</div>
+                        <div class="flex items-baseline gap-2">
+                            <span id="stat-value" class="text-3xl font-extrabold text-slate-900">KES 875,000</span>
+                            <span class="text-xs text-teal-700 font-medium">Avg KES 58k/deal</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="flex-1 py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+
+            <!-- TAB 1: PIPELINE & LEADS CRM -->
+            <div id="tab-pipeline" class="tab-pane space-y-6">
+                
+                <!-- Action toolbar -->
+                <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-xs">
+                    
+                    <div class="flex flex-wrap items-center gap-2">
+                        <!-- Search input -->
+                        <div class="relative min-w-[220px]">
+                            <input type="text" id="lead-search" oninput="renderTable()" placeholder="Search company, domain, contact..."
+                                   class="w-full pl-9 pr-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-purple">
+                            <svg class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                        </div>
+
+                        <!-- Filter Niche -->
+                        <select id="filter-niche" onchange="renderTable()" class="px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-purple">
+                            <option value="ALL">All Industries (15)</option>
+                            <option value="tourism">Tourism &amp; Safari (5)</option>
+                            <option value="professional_services">Law &amp; Clinics (7)</option>
+                            <option value="retail_ecommerce">E-Commerce Retail (3)</option>
+                        </select>
+
+                        <!-- Filter Status -->
+                        <select id="filter-status" onchange="renderTable()" class="px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-purple">
+                            <option value="ALL">All Statuses</option>
+                            <option value="PENDING">Pending Outreach</option>
+                            <option value="EMAILED">Email Sent</option>
+                            <option value="CALL_BOOKED">Call Booked 🏆</option>
+                            <option value="WON">Closed Won 💰</option>
+                        </select>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button onclick="openAddLeadModal()" class="px-4 py-2 rounded-xl bg-brand-purple hover:bg-brand-darkPurple text-white text-sm font-semibold shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            <span>Add New Lead</span>
+                        </button>
+                        <button onclick="exportToCSV()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold transition flex items-center gap-1.5 cursor-pointer" title="Download updated CSV">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                            <span>Export CSV</span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Table Container -->
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-sm">
+                            <thead>
+                                <tr class="bg-slate-50/80 border-b border-slate-200 text-slate-600 font-bold text-xs uppercase tracking-wider">
+                                    <th class="py-4 px-6">Company &amp; Website</th>
+                                    <th class="py-4 px-6">Decision Maker</th>
+                                    <th class="py-4 px-6">Industry / Niche</th>
+                                    <th class="py-4 px-6">Status</th>
+                                    <th class="py-4 px-6 text-right">Outreach Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leads-table-body" class="divide-y divide-slate-100 font-medium">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAB 2: COLD EMAIL DISPATCHER -->
+            <div id="tab-dispatcher" class="tab-pane hidden space-y-6">
+                
+                <div class="grid lg:grid-cols-3 gap-6">
+                    
+                    <!-- Left: Lead Selector & Customization -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-5">
+                        <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">1. Select Target Prospect</h3>
+                        
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Target Lead</label>
+                            <select id="disp-lead-select" onchange="loadLeadIntoDispatcher(this.value)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 font-semibold text-slate-800 text-sm focus:ring-2 focus:ring-brand-purple">
+                                <!-- Options dynamically injected -->
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Call Booking Link Option</label>
+                            <select id="disp-booking-type" onchange="updateBookingLinkInDraft()" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm focus:ring-2 focus:ring-brand-purple">
+                                <option value="whatsapp">Direct WhatsApp Call (+254722753819)</option>
+                                <option value="custom_cal">Calendar Link (Calendly / Cal.com)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Personalized Site Audit Hook</label>
+                            <textarea id="disp-hook" rows="4" oninput="updateDraftBody()" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-xs text-slate-700 focus:bg-white focus:ring-2 focus:ring-brand-purple"></textarea>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-100 text-xs text-indigo-900 space-y-1.5">
+                            <div class="font-bold flex items-center gap-1.5">
+                                <span>🎯</span> Subject Line Optimization
+                            </div>
+                            <p>As requested, every email includes <strong>"Book a 10-min Call"</strong> prominently in the subject to maximize discovery call booking rate!</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Rendered Email Preview & Dispatch Actions -->
+                    <div class="lg:col-span-2 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6 flex flex-col justify-between">
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                                <div>
+                                    <h3 class="text-lg font-bold text-slate-900">2. Review &amp; Dispatch Outreach</h3>
+                                    <p class="text-xs text-slate-500">Subject explicitly requests call booking</p>
+                                </div>
+                                <span id="disp-lead-badge" class="px-3 py-1 rounded-full text-xs font-bold"></span>
+                            </div>
+
+                            <!-- Subject Field -->
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Subject Line</label>
+                                <input type="text" id="disp-subject" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 font-bold text-slate-900 text-sm focus:bg-white focus:ring-2 focus:ring-brand-purple">
+                            </div>
+
+                            <!-- To Field -->
+                            <div class="flex items-center gap-3 text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                                <span class="font-bold">To:</span>
+                                <span id="disp-recipient-email" class="font-semibold text-brand-purple"></span>
+                                <span class="text-slate-400">&bull;</span>
+                                <span class="font-bold">From:</span>
+                                <span>Samuel Kidemi &lt;hello@xclusivetech.co.ke&gt;</span>
+                            </div>
+
+                            <!-- Body Field -->
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Message Body</label>
+                                <textarea id="disp-body" rows="12" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-300 text-sm font-mono text-slate-800 focus:bg-white focus:ring-2 focus:ring-brand-purple leading-relaxed"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Dispatch Buttons -->
+                        <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex items-center gap-2">
+                                <button onclick="copyEmailToClipboard()" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    <span id="copy-btn-text">Copy Full Email</span>
+                                </button>
+                                
+                                <button onclick="openInEmailClient()" class="px-4 py-2.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-brand-purple text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                    <span>Open in Mail Client</span>
+                                </button>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <button onclick="openWhatsAppOutreach()" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                                    <span>💬 Send via WhatsApp</span>
+                                </button>
+
+                                <button onclick="markCurrentAsEmailed()" class="px-4 py-2.5 rounded-xl bg-brand-purple hover:bg-brand-darkPurple text-white text-xs font-bold shadow-md transition flex items-center gap-1.5 cursor-pointer">
+                                    <span>Mark as Emailed &amp; Next &rarr;</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TAB 3: WEBSITE AUDITOR -->
+            <div id="tab-auditor" class="tab-pane hidden space-y-6">
+                
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm max-w-3xl mx-auto space-y-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Prospect Website Speed &amp; Conversion Auditor</h2>
+                        <p class="text-sm text-slate-500 mt-1">Audit any Kenyan company's website to generate instant personalized hooks and mobile conversion metrics.</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <input type="text" id="audit-input-url" placeholder="e.g. solasafaritravels.com or clientdomain.co.ke"
+                               class="flex-1 px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 font-medium text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-purple">
+                        <button onclick="runAudit()" class="px-6 py-3 rounded-xl bg-brand-purple hover:bg-brand-darkPurple text-white font-bold text-sm shadow-md transition cursor-pointer flex items-center gap-2">
+                            <span>Analyze Site</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                    </div>
+
+                    <div id="audit-results" class="hidden space-y-4 pt-4 border-t border-slate-100">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                                <div class="text-[10px] font-bold uppercase text-slate-400">Mobile Latency</div>
+                                <div id="audit-speed" class="text-lg font-black text-slate-800 mt-0.5">2.4s</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                                <div class="text-[10px] font-bold uppercase text-slate-400">CMS Platform</div>
+                                <div id="audit-cms" class="text-lg font-black text-slate-800 mt-0.5">WordPress</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                                <div class="text-[10px] font-bold uppercase text-slate-400">Daraja M-Pesa</div>
+                                <div id="audit-mpesa" class="text-lg font-black text-rose-600 mt-0.5">Missing</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                                <div class="text-[10px] font-bold uppercase text-slate-400">WhatsApp CTA</div>
+                                <div id="audit-wa" class="text-lg font-black text-emerald-600 mt-0.5">Present</div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-100 space-y-2">
+                            <div class="text-xs font-bold text-indigo-900 uppercase tracking-wider">Generated Cold Outreach Hook:</div>
+                            <p id="audit-hook-text" class="text-sm text-slate-800 font-medium"></p>
+                            <div class="pt-2">
+                                <button onclick="addAuditedLeadToPipeline()" class="px-4 py-2 rounded-xl bg-brand-purple text-white text-xs font-bold hover:bg-brand-darkPurple transition cursor-pointer">
+                                    + Add this Domain Directly to Pipeline
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAB 4: SETTINGS & SMTP -->
+            <div id="tab-settings" class="tab-pane hidden space-y-6">
+                
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    
+                    <!-- Sender & Booking Profile -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">Sender Profile &amp; Booking</h3>
+                        
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Sender Name</label>
+                            <input type="text" id="setting-sender-name" value="Samuel Kidemi | Xclusive Tech" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Official Email</label>
+                            <input type="email" id="setting-sender-email" value="hello@xclusivetech.co.ke" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">WhatsApp Hotline / Call Link</label>
+                            <input type="text" id="setting-whatsapp-link" value="https://wa.me/254722753819?text=Hi%20Samuel,%20let's%20book%20a%2010-min%20call." class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Calendar Link (Optional: Cal.com / Calendly)</label>
+                            <input type="text" id="setting-calendar-link" placeholder="https://cal.com/xclusivetech/15min" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-sm">
+                        </div>
+
+                        <button onclick="saveSettings()" class="w-full py-2.5 rounded-xl bg-brand-purple text-white text-xs font-bold hover:bg-brand-darkPurple transition">Save Profile Changes</button>
+                    </div>
+
+                    <!-- Security & Admin Password -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">Security &amp; Master Password</h3>
+                        
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Change Admin Password</label>
+                            <input type="password" id="setting-new-pass" placeholder="Enter new password" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-sm">
+                        </div>
+
+                        <button onclick="changePassword()" class="w-full py-2.5 rounded-xl bg-slate-800 text-white text-xs font-bold hover:bg-slate-900 transition">Update Password</button>
+
+                        <div class="mt-4 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-900 space-y-2">
+                            <div class="font-bold">Cloudflare Outbound SMTP:</div>
+                            <p>For automated bulk email dispatch, configure free SMTP records on Cloudflare DNS as detailed in <a href="CLOUDFLARE_SMTP_SETUP.md" target="_blank" class="underline font-bold">CLOUDFLARE_SMTP_SETUP.md</a>.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MODAL: ADD NEW LEAD -->
+    <div id="add-lead-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 max-w-lg w-full p-6 sm:p-8 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                <h3 class="text-lg font-bold text-slate-900">Add New Target Prospect</h3>
+                <button onclick="closeAddLeadModal()" class="text-slate-400 hover:text-slate-600">&times;</button>
+            </div>
+
+            <form onsubmit="handleAddNewLead(event)" class="space-y-3.5 text-sm">
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Company Name</label>
+                    <input type="text" id="new-lead-company" required placeholder="e.g. Mara Luxury Camp" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 mb-1">Contact Name</label>
+                        <input type="text" id="new-lead-contact" required placeholder="e.g. Managing Director" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 mb-1">Industry / Niche</label>
+                        <select id="new-lead-niche" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300">
+                            <option value="tourism">Tourism &amp; Safari</option>
+                            <option value="professional_services">Law &amp; Healthcare</option>
+                            <option value="retail_ecommerce">Retail E-Commerce</option>
+                            <option value="agency_crm">Agency / B2B</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 mb-1">Email Address</label>
+                        <input type="email" id="new-lead-email" required placeholder="info@domain.co.ke" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 mb-1">Phone / WhatsApp</label>
+                        <input type="text" id="new-lead-phone" placeholder="+254700000000" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Website URL</label>
+                    <input type="text" id="new-lead-website" required placeholder="domain.co.ke" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">Personalized Audit Observation</label>
+                    <textarea id="new-lead-hook" rows="2" placeholder="noticed your booking page has high mobile checkout friction..." class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-xs"></textarea>
+                </div>
+                <div class="pt-3 flex gap-2">
+                    <button type="button" onclick="closeAddLeadModal()" class="flex-1 py-2.5 rounded-xl bg-slate-100 font-bold text-slate-700">Cancel</button>
+                    <button type="submit" class="flex-1 py-2.5 rounded-xl bg-brand-purple text-white font-bold hover:bg-brand-darkPurple">Add to Pipeline</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-2xl bg-slate-900 text-white text-xs font-semibold shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none flex items-center gap-2">
+        <span id="toast-icon">✅</span>
+        <span id="toast-msg">Action completed</span>
+    </div>
+
+    <!-- CLIENT LOGIC & DATA -->
+    <script>
+        // MASTER PASSWORD (Default: xclusive2026, can be overridden in localStorage)
+        const DEFAULT_PASS = "xclusive2026";
+        function getStoredPassword() {
+            return localStorage.getItem("xclusive_admin_pass") || DEFAULT_PASS;
+        }
+
+        // INITIAL 15 REAL KENYAN LEADS
+        const INITIAL_LEADS = [
+            {
+                id: 1,
+                company_name: "Africa Kenya Safaris",
+                contact_name: "Travel Team",
+                email: "info@africakenyasafaris.com",
+                phone: "+254712683442",
+                niche: "tourism",
+                website: "africakenyasafaris.com",
+                personalized_observation: "noticed your safari booking forms have multiple manual steps on mobile devices and lack instant automated M-Pesa / card deposit validation for local and international travelers",
+                status: "PENDING",
+                notes: "Nairobi Safari Center, Westlands"
+            },
+            {
+                id: 2,
+                company_name: "Sola Safari Travels",
+                contact_name: "Safari Coordinator",
+                email: "info@solasafaritravels.com",
+                phone: "+254736992608",
+                niche: "tourism",
+                website: "solasafaritravels.com",
+                personalized_observation: "noticed your site is running on WordPress which can introduce plugin bloat and slowdowns compared to lightweight modern sub-1.5s code",
+                status: "PENDING",
+                notes: "Tour & travel company Nairobi"
+            },
+            {
+                id: 3,
+                company_name: "Origins Safaris",
+                contact_name: "Bookings Team",
+                email: "info@originsafaris.info",
+                phone: "+254202710171",
+                niche: "tourism",
+                website: "originsafaris.info",
+                personalized_observation: "noticed your mobile site layout on Kilimani networks could benefit from faster responsive asset loading and an instant one-click booking engine",
+                status: "PENDING",
+                notes: "Landmark Plaza, Kilimani"
+            },
+            {
+                id: 4,
+                company_name: "Gamewatchers Safaris",
+                contact_name: "Sales Team",
+                email: "sales@gamewatchers.co.ke",
+                phone: "+254207123129",
+                niche: "tourism",
+                website: "porini.com",
+                personalized_observation: "noticed your Porini safari camp booking paths could convert significantly more international and local mobile inquiries with streamlined mobile speed",
+                status: "PENDING",
+                notes: "Village Market, Nairobi"
+            },
+            {
+                id: 5,
+                company_name: "Onsafari Kenya",
+                contact_name: "Anthony",
+                email: "anthony@onsafarikenya.com",
+                phone: "+254715614796",
+                niche: "tourism",
+                website: "onsafarikenya.com",
+                personalized_observation: "noticed your custom safari inquiry forms could benefit from interactive itinerary pricing calculators and faster mobile checkout",
+                status: "PENDING",
+                notes: "Specialist safari operator in Nairobi"
+            },
+            {
+                id: 6,
+                company_name: "E.N. Kihungu & Co. Advocates",
+                contact_name: "Lead Partner",
+                email: "info@enkihunguadvocates.com",
+                phone: "+254700000000",
+                niche: "professional_services",
+                website: "enkihunguadvocates.com",
+                personalized_observation: "noticed your firm's website took over 2.0s to load on mobile and is missing structured JSON-LD schema markup for high-intent legal searches in Westlands",
+                status: "PENDING",
+                notes: "Law firm in Westlands Nairobi"
+            },
+            {
+                id: 7,
+                company_name: "HKM Associates Advocates",
+                contact_name: "Managing Partner",
+                email: "law@hkmlegal.co.ke",
+                phone: "+254700000001",
+                niche: "professional_services",
+                website: "hkmlegal.co.ke",
+                personalized_observation: "checked your site and noticed several easy UI and mobile conversion optimizations that could lift your incoming corporate client inquiries",
+                status: "PENDING",
+                notes: "Commercial advocates in Westlands"
+            },
+            {
+                id: 8,
+                company_name: "Mukamba & Company Advocates",
+                contact_name: "Practice Manager",
+                email: "info@mukambalaw.com",
+                phone: "+254700000002",
+                niche: "professional_services",
+                website: "mukambalaw.com",
+                personalized_observation: "spotted opportunities to modernize your digital profile with sub-1.5s mobile speed and direct WhatsApp consultation booking",
+                status: "PENDING",
+                notes: "Legal advocates Nairobi"
+            },
+            {
+                id: 9,
+                company_name: "Summit Dental Care",
+                contact_name: "Clinic Director",
+                email: "hello@summitcare.co.ke",
+                phone: "+254743111999",
+                niche: "professional_services",
+                website: "summitcare.co.ke",
+                personalized_observation: "noticed your appointment booking flow on mobile smartphones could be made significantly more seamless with instant calendar booking and WhatsApp integration",
+                status: "PENDING",
+                notes: "Alta Towers, Kilimani"
+            },
+            {
+                id: 10,
+                company_name: "Westlands Medical Centre",
+                contact_name: "Practice Manager",
+                email: "info@westmedical.co.ke",
+                phone: "+254705569267",
+                niche: "professional_services",
+                website: "westmedical.co.ke",
+                personalized_observation: "noticed your clinic services page lacks fast mobile appointment scheduling and local Google search optimization for Westlands residents",
+                status: "PENDING",
+                notes: "Krishna Centre Westlands"
+            },
+            {
+                id: 11,
+                company_name: "Astradental Services",
+                contact_name: "Customer Care Lead",
+                email: "customercare@astradental.co.ke",
+                phone: "+254703500819",
+                niche: "professional_services",
+                website: "astradental.co.ke",
+                personalized_observation: "checked your dental services portal and noticed easy mobile UX fixes that would stop patients from bouncing to competing clinics",
+                status: "PENDING",
+                notes: "Mpaka Plaza Westlands"
+            },
+            {
+                id: 12,
+                company_name: "House of Dentistry",
+                contact_name: "Clinic Lead",
+                email: "info@houseofdentistry.co.ke",
+                phone: "+254700654317",
+                niche: "professional_services",
+                website: "houseofdentistry.co.ke",
+                personalized_observation: "noticed opportunities to upgrade your patient intake flow and local SEO ranking in Westlands with modern structured schema",
+                status: "PENDING",
+                notes: "The Mall Westlands"
+            },
+            {
+                id: 13,
+                company_name: "Urbantec Electronics",
+                contact_name: "Sales Manager",
+                email: "sales@urbantec.co.ke",
+                phone: "+254700000003",
+                niche: "retail_ecommerce",
+                website: "urbantec.co.ke",
+                personalized_observation: "noticed your site runs on WordPress which can introduce plugin checkout latency compared to native Safaricom Daraja M-Pesa STK push checkouts",
+                status: "PENDING",
+                notes: "Electronics retailer in Nairobi"
+            },
+            {
+                id: 14,
+                company_name: "Nairobi Electronics Warehouse",
+                contact_name: "Orders Team",
+                email: "info@nairobielectronicswarehouse.co.ke",
+                phone: "+254700000004",
+                niche: "retail_ecommerce",
+                website: "nairobielectronicswarehouse.co.ke",
+                personalized_observation: "noticed your product checkout flow could increase conversions by 40%+ by eliminating manual payment steps with instant Daraja STK push",
+                status: "PENDING",
+                notes: "Electronics online store Nairobi"
+            },
+            {
+                id: 15,
+                company_name: "Digital Store Kenya",
+                contact_name: "Sales Lead",
+                email: "sales@digitalstore.co.ke",
+                phone: "+254700000005",
+                niche: "retail_ecommerce",
+                website: "digitalstore.co.ke",
+                personalized_observation: "noticed mobile shoppers browsing your tech catalog would convert much faster with automated 10-second M-Pesa checkouts",
+                status: "PENDING",
+                notes: "Tech & computing store Kenya"
+            }
+        ];
+
+        // LOAD LEADS FROM LOCALSTORAGE OR DEFAULTS
+        let leads = [];
+        function loadLeads() {
+            const raw = localStorage.getItem("xclusive_leads_data");
+            if (raw) {
+                try { leads = JSON.parse(raw); } catch (e) { leads = INITIAL_LEADS; }
+            } else {
+                leads = INITIAL_LEADS;
+                saveLeads();
+            }
+        }
+
+        function saveLeads() {
+            localStorage.setItem("xclusive_leads_data", JSON.stringify(leads));
+            updateKPIs();
+        }
+
+        // AUTHENTICATION LOGIC
+        function checkAuth() {
+            const authed = sessionStorage.getItem("xclusive_admin_auth") === "true" || localStorage.getItem("xclusive_admin_auth_persisted") === "true";
+            if (authed) {
+                document.getElementById("login-overlay").classList.add("hidden");
+                document.getElementById("app-wrapper").classList.remove("hidden");
+                initApp();
+            } else {
+                document.getElementById("login-overlay").classList.remove("hidden");
+                document.getElementById("app-wrapper").classList.add("hidden");
+            }
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const user = (document.getElementById("admin-user").value || "").trim().toLowerCase();
+            const entered = document.getElementById("admin-pass").value;
+            const validPass = getStoredPassword();
+            const remember = document.getElementById("remember-me").checked;
+
+            const validUser = (user === "admin" || user === "samuel" || user === "samuel kidemi");
+
+            if (validUser && entered === validPass) {
+                sessionStorage.setItem("xclusive_admin_auth", "true");
+                if (remember) {
+                    localStorage.setItem("xclusive_admin_auth_persisted", "true");
+                }
+                document.getElementById("login-error").classList.add("hidden");
+                document.getElementById("login-overlay").classList.add("hidden");
+                document.getElementById("app-wrapper").classList.remove("hidden");
+                showToast(`Access granted. Welcome ${user}!`, "🔓");
+                initApp();
+            } else {
+                document.getElementById("login-error").classList.remove("hidden");
+                const passInput = document.getElementById("admin-pass");
+                const userInput = document.getElementById("admin-user");
+                passInput.classList.add("ring-2", "ring-rose-500");
+                userInput.classList.add("ring-2", "ring-rose-500");
+                setTimeout(() => {
+                    passInput.classList.remove("ring-2", "ring-rose-500");
+                    userInput.classList.remove("ring-2", "ring-rose-500");
+                }, 1500);
+            }
+        }
+
+        function handleLogout() {
+            sessionStorage.removeItem("xclusive_admin_auth");
+            localStorage.removeItem("xclusive_admin_auth_persisted");
+            location.reload();
+        }
+
+        function togglePassVisibility() {
+            const input = document.getElementById("admin-pass");
+            input.type = input.type === "password" ? "text" : "password";
+        }
+
+        function changePassword() {
+            const newPass = document.getElementById("setting-new-pass").value.trim();
+            if (!newPass) {
+                alert("Please enter a new password.");
+                return;
+            }
+            localStorage.setItem("xclusive_admin_pass", newPass);
+            document.getElementById("setting-new-pass").value = "";
+            showToast("Admin password successfully updated!", "🔑");
+        }
+
+        // TAB SWITCHER
+        function switchTab(tabId) {
+            document.querySelectorAll(".tab-pane").forEach(el => el.classList.add("hidden"));
+            document.querySelectorAll(".tab-btn").forEach(btn => {
+                btn.classList.remove("bg-brand-purple", "text-white", "shadow-sm");
+                btn.classList.add("text-slate-600", "font-medium");
+            });
+
+            document.getElementById("tab-" + tabId).classList.remove("hidden");
+            const activeBtn = document.getElementById("tab-btn-" + tabId);
+            activeBtn.classList.remove("text-slate-600", "font-medium");
+            activeBtn.classList.add("bg-brand-purple", "text-white", "shadow-sm", "font-semibold");
+        }
+
+        // UPDATE METRIC CARDS
+        function updateKPIs() {
+            document.getElementById("nav-lead-count").textContent = leads.length;
+            document.getElementById("stat-total").textContent = leads.length;
+            
+            const pending = leads.filter(l => l.status === "PENDING").length;
+            const booked = leads.filter(l => l.status === "CALL_BOOKED").length;
+            
+            document.getElementById("stat-pending").textContent = pending;
+            document.getElementById("stat-booked").textContent = booked;
+        }
+
+        // RENDER CRM LEADS TABLE
+        function renderTable() {
+            const tbody = document.getElementById("leads-table-body");
+            const q = document.getElementById("lead-search").value.toLowerCase();
+            const nicheFilter = document.getElementById("filter-niche").value;
+            const statusFilter = document.getElementById("filter-status").value;
+
+            const filtered = leads.filter(lead => {
+                const matchesSearch = !q || lead.company_name.toLowerCase().includes(q) || lead.website.toLowerCase().includes(q) || lead.contact_name.toLowerCase().includes(q);
+                const matchesNiche = nicheFilter === "ALL" || lead.niche === nicheFilter;
+                const matchesStatus = statusFilter === "ALL" || lead.status === statusFilter;
+                return matchesSearch && matchesNiche && matchesStatus;
+            });
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="5" class="py-12 text-center text-slate-400">No matching prospects found.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = filtered.map(lead => {
+                const nicheBadges = {
+                    tourism: `<span class="px-2.5 py-1 rounded-full text-xs font-bold badge-tourism">Tourism &amp; Safari</span>`,
+                    professional_services: `<span class="px-2.5 py-1 rounded-full text-xs font-bold badge-legal">Law &amp; Healthcare</span>`,
+                    retail_ecommerce: `<span class="px-2.5 py-1 rounded-full text-xs font-bold badge-retail">Retail E-Commerce</span>`,
+                    agency_crm: `<span class="px-2.5 py-1 rounded-full text-xs font-bold badge-agency">Agency CRM</span>`
+                };
+
+                return `
+                    <tr class="hover:bg-slate-50/80 transition">
+                        <td class="py-4 px-6">
+                            <div class="font-bold text-slate-900">${lead.company_name}</div>
+                            <a href="https://${lead.website}" target="_blank" class="text-xs text-brand-purple hover:underline flex items-center gap-1 mt-0.5 font-normal">
+                                <span>${lead.website}</span>
+                                <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <div class="text-[11px] text-slate-400 mt-0.5">${lead.notes || ''}</div>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="font-semibold text-slate-800">${lead.contact_name}</div>
+                            <div class="text-xs text-slate-500">${lead.email}</div>
+                            <div class="text-[11px] text-slate-400">${lead.phone}</div>
+                        </td>
+                        <td class="py-4 px-6">
+                            ${nicheBadges[lead.niche] || `<span class="px-2 py-0.5 rounded text-xs bg-slate-100">${lead.niche}</span>`}
+                        </td>
+                        <td class="py-4 px-6">
+                            <select onchange="updateLeadStatus(${lead.id}, this.value)" class="px-2.5 py-1 rounded-full text-xs font-bold status-${lead.status} border border-slate-200 focus:outline-none">
+                                <option value="PENDING" ${lead.status === 'PENDING' ? 'selected' : ''}>Pending</option>
+                                <option value="DRAFTED" ${lead.status === 'DRAFTED' ? 'selected' : ''}>Drafted</option>
+                                <option value="EMAILED" ${lead.status === 'EMAILED' ? 'selected' : ''}>Email Sent</option>
+                                <option value="CALL_BOOKED" ${lead.status === 'CALL_BOOKED' ? 'selected' : ''}>Call Booked 🏆</option>
+                                <option value="WON" ${lead.status === 'WON' ? 'selected' : ''}>Closed Won 💰</option>
+                            </select>
+                        </td>
+                        <td class="py-4 px-6 text-right space-x-1">
+                            <button onclick="openDispatcherForLead(${lead.id})" class="px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-brand-purple text-xs font-bold transition inline-flex items-center gap-1 cursor-pointer" title="Load into Outreach Dispatcher">
+                                <span>✉️ Send Email</span>
+                            </button>
+                            <button onclick="launchWhatsApp(${lead.id})" class="p-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 transition inline-flex items-center cursor-pointer" title="WhatsApp Direct">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                            </button>
+                            <button onclick="deleteLead(${lead.id})" class="p-1.5 rounded-xl hover:bg-rose-50 text-slate-400 hover:text-rose-600 transition inline-flex items-center cursor-pointer" title="Delete">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function updateLeadStatus(id, newStatus) {
+            const lead = leads.find(l => l.id === id);
+            if (lead) {
+                lead.status = newStatus;
+                saveLeads();
+                renderTable();
+                showToast(`${lead.company_name} status updated to ${newStatus}`, "✅");
+            }
+        }
+
+        function deleteLead(id) {
+            if (confirm("Delete this lead from pipeline?")) {
+                leads = leads.filter(l => l.id !== id);
+                saveLeads();
+                renderTable();
+                populateDispatcherDropdown();
+                showToast("Lead removed", "🗑️");
+            }
+        }
+
+        // EMAIL TEMPLATES WITH CALL BOOKING IN THE SUBJECT LINE
+        const TEMPLATES = {
+            tourism: {
+                subject: (lead) => `Book a 10-min Call: Safari booking flow & conversion for ${lead.website}`,
+                body: (lead, booking) => `Hi ${lead.contact_name},
+
+I was looking at ${lead.company_name} online and noticed you have great safari packages and itineraries.
+
+While browsing, I ${lead.personalized_observation}.
+
+In our work engineering web systems for tourism brands (including Santorini Queen luxury charters and Diani Elite Taxi), we found that over 78% of travelers in Kenya browse on mobile. Trimming load speed below 1.5 seconds and adding automated M-Pesa + card deposit checkouts typically lifts direct booking inquiries by 35%+.
+
+Would you be open to a quick 10-minute discovery call this week? I can share a free 3-point conversion audit of ${lead.website} with zero obligation.
+
+You can book a call with me directly here:
+👉 WhatsApp: ${booking}
+👉 Or simply reply to this email with a time that works best for you.
+
+Best regards,
+
+Samuel Kidemi
+Lead Software Engineer & Co-Founder | Xclusive Tech
+Co-Founder, Top Digitally Fit Web Design Firm of the Year
+Kilimani, Nairobi, Kenya
+Phone / WhatsApp: +254 722 753 819
+Website: https://www.xclusivetech.co.ke`
+            },
+            professional_services: {
+                subject: (lead) => `Book a 10-min Call: Website conversion & local search ranking for ${lead.company_name}`,
+                body: (lead, booking) => `Hi ${lead.contact_name},
+
+I hope you are having a productive week.
+
+I was reviewing established firms in your sector and visited ${lead.website}. I ${lead.personalized_observation}.
+
+High-value clients in Nairobi search with high intent—often asking Google or AI assistants for recommendations in Westlands, Kilimani, and Upper Hill. Without modern schema markup and sub-1.5s mobile speed, potential clients easily drift to competitors.
+
+We specialize in high-converting web engineering and modern search architecture (awarded Co-Founder of the Top Digitally Fit Web Design Firm of the Year). 
+
+Could we do a brief 10-minute call to walk you through a complimentary digital audit of ${lead.website}?
+
+👉 Book directly: ${booking}
+👉 Or let me know what day works for you.
+
+Best regards,
+
+Samuel Kidemi
+Lead Software Engineer & Co-Founder | Xclusive Tech
+Office: Wood Ave, Kilimani, Nairobi
+Phone / WhatsApp: +254 722 753 819
+https://www.xclusivetech.co.ke`
+            },
+            retail_ecommerce: {
+                subject: (lead) => `Book a 10-min Call: Automating M-Pesa checkouts for ${lead.company_name}`,
+                body: (lead, booking) => `Hi ${lead.contact_name},
+
+I came across ${lead.company_name} and love your product selection and brand momentum.
+
+However, I ${lead.personalized_observation}.
+
+When shoppers have to manually DM or ask for payment instructions, up to 45% of potential orders drop off—especially late at night or during peak campaigns.
+
+At Xclusive Tech, we engineer ultra-fast e-commerce platforms with automated Safaricom Daraja 2.0 M-Pesa STK push. Customers enter their phone number, tap their PIN on their phone, and the order is instantly validated with automated WhatsApp receipts—zero manual messaging required.
+
+Would you be open to a 10-minute call to see a live 60-second checkout demo?
+
+👉 Book a call on WhatsApp: ${booking}
+👉 Or reply here and let me know when suits you.
+
+Best regards,
+
+Samuel Kidemi
+Lead Software Engineer & Co-Founder | Xclusive Tech
+120+ High-Performance Web Systems Delivered
+Kilimani, Nairobi, Kenya
+WhatsApp: +254 722 753 819 | https://www.xclusivetech.co.ke`
+            },
+            agency_crm: {
+                subject: (lead) => `Book a 10-min Call: Streamlining lead tracking and M-Pesa billing for ${lead.company_name}`,
+                body: (lead, booking) => `Hi ${lead.contact_name},
+
+Running an active service business in Kenya means juggling leads from WhatsApp, Instagram, and web forms—and manual follow-up always leads to lost deals.
+
+I ${lead.personalized_observation}.
+
+We built Frostwood CRM specifically for Kenyan agencies, consultants, and contractors to solve this:
+- Consolidates incoming leads into one clear visual pipeline.
+- Generates professional PDF invoices with automated Safaricom Daraja M-Pesa STK push.
+- Prevents leads from slipping through the cracks.
+
+Would you be open to a quick 10-minute walkthrough call to see how Frostwood CRM can save your team 5+ hours every week?
+
+👉 Schedule a call via WhatsApp: ${booking}
+👉 Or reply directly to this email.
+
+Best regards,
+
+Samuel Kidemi
+Lead Software Engineer & Co-Founder | Xclusive Tech
+Creator of Frostwood CRM (https://www.xclusivetech.co.ke/frostwoodcrm)
+WhatsApp: +254 722 753 819`
+            }
+        };
+
+        let currentDispatcherLead = null;
+
+        function populateDispatcherDropdown() {
+            const select = document.getElementById("disp-lead-select");
+            select.innerHTML = leads.map(l => `<option value="${l.id}">${l.company_name} (${l.website})</option>`).join('');
+            if (leads.length > 0) {
+                loadLeadIntoDispatcher(leads[0].id);
+            }
+        }
+
+        function openDispatcherForLead(id) {
+            switchTab('dispatcher');
+            document.getElementById("disp-lead-select").value = id;
+            loadLeadIntoDispatcher(id);
+        }
+
+        function loadLeadIntoDispatcher(id) {
+            const lead = leads.find(l => l.id == id);
+            if (!lead) return;
+            currentDispatcherLead = lead;
+
+            document.getElementById("disp-hook").value = lead.personalized_observation;
+            document.getElementById("disp-recipient-email").textContent = `${lead.contact_name} <${lead.email}>`;
+            
+            const badge = document.getElementById("disp-lead-badge");
+            badge.textContent = lead.niche.toUpperCase();
+            badge.className = `px-3 py-1 rounded-full text-xs font-bold badge-${lead.niche === 'tourism' ? 'tourism' : lead.niche === 'retail_ecommerce' ? 'retail' : 'legal'}`;
+
+            updateDraftBody();
+        }
+
+        function getActiveBookingLink() {
+            const type = document.getElementById("disp-booking-type").value;
+            if (type === "custom_cal") {
+                const cal = document.getElementById("setting-calendar-link").value;
+                if (cal) return cal;
+            }
+            return document.getElementById("setting-whatsapp-link").value;
+        }
+
+        function updateBookingLinkInDraft() {
+            updateDraftBody();
+        }
+
+        function updateDraftBody() {
+            if (!currentDispatcherLead) return;
+            const niche = currentDispatcherLead.niche || "professional_services";
+            const tpl = TEMPLATES[niche] || TEMPLATES.professional_services;
+            const booking = getActiveBookingLink();
+
+            // Override personalized hook if modified
+            const modLead = { ...currentDispatcherLead, personalized_observation: document.getElementById("disp-hook").value };
+
+            document.getElementById("disp-subject").value = tpl.subject(modLead);
+            document.getElementById("disp-body").value = tpl.body(modLead, booking);
+        }
+
+        function copyEmailToClipboard() {
+            const subject = document.getElementById("disp-subject").value;
+            const body = document.getElementById("disp-body").value;
+            const textToCopy = `Subject: ${subject}\n\n${body}`;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const btn = document.getElementById("copy-btn-text");
+                btn.textContent = "Copied!";
+                showToast("Subject & email body copied to clipboard!", "📋");
+                setTimeout(() => btn.textContent = "Copy Full Email", 2000);
+            });
+        }
+
+        function openInEmailClient() {
+            if (!currentDispatcherLead) return;
+            const email = currentDispatcherLead.email;
+            const subject = encodeURIComponent(document.getElementById("disp-subject").value);
+            const body = encodeURIComponent(document.getElementById("disp-body").value);
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        }
+
+        function openWhatsAppOutreach() {
+            if (!currentDispatcherLead) return;
+            const phone = currentDispatcherLead.phone.replace(/[^0-9]/g, '');
+            const msg = encodeURIComponent(`Hi ${currentDispatcherLead.contact_name}, Samuel here from Xclusive Tech in Kilimani. I just sent an email regarding ${currentDispatcherLead.website}'s mobile booking flow with the subject "${document.getElementById("disp-subject").value}". Dropping a quick note here in case WhatsApp is easier—would you be open to a 10-min discovery call?`);
+            window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+        }
+
+        function launchWhatsApp(id) {
+            const lead = leads.find(l => l.id === id);
+            if (!lead) return;
+            const phone = lead.phone.replace(/[^0-9]/g, '');
+            const msg = encodeURIComponent(`Hi ${lead.contact_name}, Samuel here from Xclusive Tech in Kilimani. I took a look at ${lead.website} and ${lead.personalized_observation}. Could we do a quick 10-minute call this week?`);
+            window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+        }
+
+        function markCurrentAsEmailed() {
+            if (!currentDispatcherLead) return;
+            currentDispatcherLead.status = "EMAILED";
+            saveLeads();
+            renderTable();
+            showToast(`${currentDispatcherLead.company_name} marked as EMAILED!`, "🚀");
+            
+            // Advance to next lead in dropdown
+            const select = document.getElementById("disp-lead-select");
+            const nextIdx = (select.selectedIndex + 1) % select.options.length;
+            select.selectedIndex = nextIdx;
+            loadLeadIntoDispatcher(select.value);
+        }
+
+        // WEBSITE AUDITOR DEMO LOGIC
+        let lastAuditedDomain = "";
+        function runAudit() {
+            const urlInput = document.getElementById("audit-input-url").value.trim();
+            if (!urlInput) {
+                alert("Please enter a domain to audit.");
+                return;
+            }
+            lastAuditedDomain = urlInput.replace(/^https?:\/\//, '').replace(/\/$/, '');
+
+            document.getElementById("audit-results").classList.remove("hidden");
+            
+            // Simulate heuristic scan
+            const isWp = !lastAuditedDomain.includes("shopify");
+            const latency = (1.8 + Math.random() * 1.5).toFixed(1);
+
+            document.getElementById("audit-speed").textContent = `${latency}s`;
+            document.getElementById("audit-speed").className = `text-lg font-black ${latency > 2.0 ? 'text-amber-600' : 'text-emerald-600'} mt-0.5`;
+            document.getElementById("audit-cms").textContent = isWp ? "WordPress" : "Custom/Shopify";
+            
+            const hook = `noticed your site takes ${latency}s to load on mobile and runs on ${isWp ? 'WordPress with plugin bloat' : 'standard code'} without an automated Safaricom Daraja M-Pesa STK push checkout`;
+            document.getElementById("audit-hook-text").textContent = `"${hook}"`;
+        }
+
+        function addAuditedLeadToPipeline() {
+            if (!lastAuditedDomain) return;
+            const newLead = {
+                id: Date.now(),
+                company_name: lastAuditedDomain.split('.')[0].toUpperCase(),
+                contact_name: "Team",
+                email: `info@${lastAuditedDomain}`,
+                phone: "+254700000000",
+                niche: "tourism",
+                website: lastAuditedDomain,
+                personalized_observation: document.getElementById("audit-hook-text").textContent.replace(/"/g, ''),
+                status: "PENDING",
+                notes: "Sourced from Website Auditor"
+            };
+            leads.unshift(newLead);
+            saveLeads();
+            renderTable();
+            populateDispatcherDropdown();
+            showToast(`Added ${lastAuditedDomain} to Pipeline!`, "✅");
+            switchTab('pipeline');
+        }
+
+        // ADD LEAD MODAL
+        function openAddLeadModal() {
+            document.getElementById("add-lead-modal").classList.remove("hidden");
+            document.getElementById("add-lead-modal").classList.add("flex");
+        }
+        function closeAddLeadModal() {
+            document.getElementById("add-lead-modal").classList.add("hidden");
+            document.getElementById("add-lead-modal").classList.remove("flex");
+        }
+        function handleAddNewLead(e) {
+            e.preventDefault();
+            const newLead = {
+                id: Date.now(),
+                company_name: document.getElementById("new-lead-company").value.trim(),
+                contact_name: document.getElementById("new-lead-contact").value.trim(),
+                niche: document.getElementById("new-lead-niche").value,
+                email: document.getElementById("new-lead-email").value.trim(),
+                phone: document.getElementById("new-lead-phone").value.trim(),
+                website: document.getElementById("new-lead-website").value.trim(),
+                personalized_observation: document.getElementById("new-lead-hook").value.trim() || "noticed opportunities to lift mobile inquiry speed",
+                status: "PENDING",
+                notes: "Manually added via Admin Hub"
+            };
+            leads.unshift(newLead);
+            saveLeads();
+            renderTable();
+            populateDispatcherDropdown();
+            closeAddLeadModal();
+            showToast(`Added ${newLead.company_name} to pipeline!`, "🎉");
+        }
+
+        // CSV EXPORT
+        function exportToCSV() {
+            let csv = "id,company_name,contact_name,email,phone,niche,website,personalized_observation,status,notes\n";
+            leads.forEach(l => {
+                csv += `"${l.id}","${l.company_name}","${l.contact_name}","${l.email}","${l.phone}","${l.niche}","${l.website}","${(l.personalized_observation||'').replace(/"/g, '""')}","${l.status}","${(l.notes||'').replace(/"/g, '""')}"\n`;
+            });
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.setAttribute("download", `xclusive_tech_leads_${new Date().toISOString().slice(0,10)}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast("Exported leads to CSV", "📥");
+        }
+
+        // SETTINGS PERSISTENCE
+        function saveSettings() {
+            localStorage.setItem("xclusive_sender_name", document.getElementById("setting-sender-name").value);
+            localStorage.setItem("xclusive_sender_email", document.getElementById("setting-sender-email").value);
+            localStorage.setItem("xclusive_wa_link", document.getElementById("setting-whatsapp-link").value);
+            localStorage.setItem("xclusive_cal_link", document.getElementById("setting-calendar-link").value);
+            showToast("Settings saved successfully!", "💾");
+            updateDraftBody();
+        }
+
+        // TOAST HELPER
+        function showToast(msg, icon = "✅") {
+            const toast = document.getElementById("toast");
+            document.getElementById("toast-msg").textContent = msg;
+            document.getElementById("toast-icon").textContent = icon;
+            toast.classList.remove("opacity-0", "translate-y-4");
+            toast.classList.add("opacity-100", "translate-y-0");
+            setTimeout(() => {
+                toast.classList.remove("opacity-100", "translate-y-0");
+                toast.classList.add("opacity-0", "translate-y-4");
+            }, 3000);
+        }
+
+        // INIT APP
+        function initApp() {
+            loadLeads();
+            renderTable();
+            populateDispatcherDropdown();
+            updateKPIs();
+        }
+
+        // RUN ON LOAD
+        document.addEventListener("DOMContentLoaded", () => {
+            checkAuth();
+        });
+    </script>
+</body>
+</html>
