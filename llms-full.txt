@@ -155,7 +155,7 @@ These live, publicly accessible projects demonstrate Xclusive Tech's engineering
 7. **Teria CBO** (https://teriacbo.org/)
    - *Sector*: NGOs, Development & Community
    - *Solution*: Grassroots community-based organization portal built to drive grassroots mobilization, donor transparency, community outreach programs, and frictionless direct support.
-8. **Kenya Remote Jobs** (https://kenyaremotejobs.co.ke/)
+8. **Kenya Remote Jobs** (https://kenyaremotejobs.com/)
    - *Sector*: Technology, SaaS & Digital Platforms
    - *Solution*: High-traffic recruitment marketplace connecting Kenyan talent with verified global remote jobs, built with programmatic SEO, indexed category archives, and M-Pesa automated subscription access.
 9. **Billan Beauty** (https://billanbeauty.co.uk/)

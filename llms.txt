@@ -68,7 +68,7 @@ Xclusive Tech specializes in custom UI/UX design, mobile-first business websites
 - [Sage Beans Export](https://sagebeans.co.ke/): Global exporter of fresh French beans and avocados to European and Middle Eastern markets.
 - [Oncolink Kenya](https://oncolink.co.ke/): Medical oncology and cancer care directory connecting patients with specialists.
 - [Teria CBO](https://teriacbo.org/): Community-based organisation portal engineered for grassroots mobilization, donor transparency, and community outreach.
-- [Kenya Remote Jobs](https://kenyaremotejobs.co.ke/): High-traffic remote recruitment marketplace with programmatic SEO and automated M-Pesa subscription access.
+- [Kenya Remote Jobs](https://kenyaremotejobs.com/): High-traffic remote recruitment marketplace with programmatic SEO and automated M-Pesa subscription access.
 - [Billan Beauty](https://billanbeauty.co.uk/): Dual-hub London & Nairobi skincare and cosmetics e-commerce platform with dual-currency pricing (GBP/KES).
 - [Greenhunt Energy](https://greenhuntenergy.co.ke/): Solar power equipment e-commerce store with system sizing calculators, EPRA certification, and M-Pesa checkout.
 

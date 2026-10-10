@@ -2,7 +2,7 @@
 """
 Generate high-fidelity UI preview assets (PNG & WebP, 800x500) for new portfolio items:
 1. Teria CBO (teriacbo.org)
-2. Kenya Remote Jobs (kenyaremotejobs.co.ke)
+2. Kenya Remote Jobs (kenyaremotejobs.com)
 3. Billan Beauty (billanbeauty.co.uk)
 4. Greenhunt Energy (greenhuntenergy.co.ke)
 """
@@ -94,7 +94,7 @@ create_preview(
 
 # 2. Kenya Remote Jobs (High-Traffic Job Board - Indigo & Mint)
 create_preview(
-    domain="kenyaremotejobs.co.ke",
+    domain="kenyaremotejobs.com",
     title="Kenya Remote Jobs",
     tag="Remote Work & Career Platform",
     accent_color=(79, 70, 229),       # Indigo
