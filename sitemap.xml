@@ -144,6 +144,46 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- Blog: Web Design for CBOs and Community Organisations in Kenya -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/web-design-for-cbos-and-community-organisations-in-kenya</loc>
+        <lastmod>2026-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog: How to Build a Successful Job Board Website in Kenya -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/how-to-build-a-successful-job-board-website-in-kenya</loc>
+        <lastmod>2026-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog: Multi-Currency E-Commerce in Kenya -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/multi-currency-ecommerce-kenya-selling-to-the-diaspora</loc>
+        <lastmod>2026-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog: Fresh Produce & Grocery E-Commerce in Kenya -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/fresh-produce-and-grocery-ecommerce-in-kenya-delivery-logistics</loc>
+        <lastmod>2026-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog: E-Commerce Web Design for Solar & Renewable Energy Companies in Kenya -->
+    <url>
+        <loc>https://www.xclusivetech.co.ke/blog/ecommerce-web-design-for-solar-and-renewable-energy-companies-in-kenya</loc>
+        <lastmod>2026-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- About Page -->
     <url>
         <loc>https://www.xclusivetech.co.ke/about</loc>
@@ -171,7 +211,7 @@
     <!-- Portfolio Page -->
     <url>
         <loc>https://www.xclusivetech.co.ke/portfolio</loc>
-        <lastmod>2026-09-26</lastmod>
+        <lastmod>2026-10-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

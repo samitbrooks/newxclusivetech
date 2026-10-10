@@ -192,6 +192,38 @@
       "challenge": "An oncology platform needing to be approachable to patients, not just professionals.",
       "whatWeBuilt": "A patient-friendly portal with clear service navigation and an appointment request flow.",
       "result": "A site built for accessibility and ease of use on mobile, where most patients actually browse."
+    },
+    {
+      "name": "Teria CBO",
+      "industry": "NGOs, Development & Community",
+      "url": "https://teriacbo.org/",
+      "challenge": "A community-based organisation needing grassroots mobilization, donor transparency, and direct digital contributions.",
+      "whatWeBuilt": "Mission-driven CBO portal with impact metrics, community outreach programs, and clear donor support flows.",
+      "result": "A high-trust platform that establishes donor accountability and grassroots legitimacy."
+    },
+    {
+      "name": "Kenya Remote Jobs",
+      "industry": "Technology, SaaS & Digital Platforms",
+      "url": "https://kenyaremotejobs.co.ke/",
+      "challenge": "A high-traffic recruitment marketplace connecting Kenyan professionals with verified global remote work opportunities.",
+      "whatWeBuilt": "High-speed job board platform with programmatic SEO, searchable job taxonomy, and automated M-Pesa subscription access.",
+      "result": "Massive organic search indexation and automated recurring monetization."
+    },
+    {
+      "name": "Billan Beauty",
+      "industry": "Retail, Fashion & Consumer Brands",
+      "url": "https://billanbeauty.co.uk/",
+      "challenge": "Cross-border logistical delays and dual-currency conversion friction between UK suppliers and Kenyan buyers.",
+      "whatWeBuilt": "Dual-hub London and Nairobi storefront with dual-currency pricing (GBP/KES), batch authenticity seals, and rapid courier dispatch.",
+      "result": "Frictionless cross-border sales and enhanced customer trust with verified authenticity."
+    },
+    {
+      "name": "Greenhunt Energy",
+      "industry": "Energy, Industrial & Trade",
+      "url": "https://greenhuntenergy.co.ke/",
+      "challenge": "High-value solar equipment buyers needing transparent sizing calculators and EPRA accreditation proof.",
+      "whatWeBuilt": "Commercial solar portal combining system sizing taxonomy, kilowatt calculators, EPRA badges, and direct M-Pesa hardware checkout.",
+      "result": "High customer confidence and streamlined procurement for commercial and residential clean energy."
     }
   ],
   "geoFaq": [

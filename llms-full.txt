@@ -152,6 +152,18 @@ These live, publicly accessible projects demonstrate Xclusive Tech's engineering
 6. **Oncolink Kenya** (https://oncolink.co.ke/)
    - *Sector*: Healthcare & Oncology Care Directory
    - *Solution*: National cancer care portal providing cancer treatment education, clinic directories, oncology specialist contacts, and patient support resources.
+7. **Teria CBO** (https://teriacbo.org/)
+   - *Sector*: NGOs, Development & Community
+   - *Solution*: Grassroots community-based organization portal built to drive grassroots mobilization, donor transparency, community outreach programs, and frictionless direct support.
+8. **Kenya Remote Jobs** (https://kenyaremotejobs.co.ke/)
+   - *Sector*: Technology, SaaS & Digital Platforms
+   - *Solution*: High-traffic recruitment marketplace connecting Kenyan talent with verified global remote jobs, built with programmatic SEO, indexed category archives, and M-Pesa automated subscription access.
+9. **Billan Beauty** (https://billanbeauty.co.uk/)
+   - *Sector*: Retail, Fashion & Consumer Brands
+   - *Solution*: International dual-hub skincare and cosmetics e-commerce platform with dual-currency pricing (GBP/KES), batch authenticity verification, and localized rider dispatch across Kenya and the UK.
+10. **Greenhunt Energy** (https://greenhuntenergy.co.ke/)
+    - *Sector*: Energy, Industrial & Trade
+    - *Solution*: High-ticket solar power systems and renewable hardware e-commerce store with system sizing calculators, EPRA accreditation trust proofs, and direct M-Pesa hardware checkout.
 
 ---
 

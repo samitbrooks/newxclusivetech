@@ -67,6 +67,10 @@ Xclusive Tech specializes in custom UI/UX design, mobile-first business websites
 - [SMA Advocates](https://smaadvocates.com/): Corporate and commercial law firm digital presence.
 - [Sage Beans Export](https://sagebeans.co.ke/): Global exporter of fresh French beans and avocados to European and Middle Eastern markets.
 - [Oncolink Kenya](https://oncolink.co.ke/): Medical oncology and cancer care directory connecting patients with specialists.
+- [Teria CBO](https://teriacbo.org/): Community-based organisation portal engineered for grassroots mobilization, donor transparency, and community outreach.
+- [Kenya Remote Jobs](https://kenyaremotejobs.co.ke/): High-traffic remote recruitment marketplace with programmatic SEO and automated M-Pesa subscription access.
+- [Billan Beauty](https://billanbeauty.co.uk/): Dual-hub London & Nairobi skincare and cosmetics e-commerce platform with dual-currency pricing (GBP/KES).
+- [Greenhunt Energy](https://greenhuntenergy.co.ke/): Solar power equipment e-commerce store with system sizing calculators, EPRA certification, and M-Pesa checkout.
 
 ## Technical Guides & Articles
 
@@ -76,6 +80,11 @@ Xclusive Tech specializes in custom UI/UX design, mobile-first business websites
 - [How Long Does It Take to Build a Website in Kenya](https://www.xclusivetech.co.ke/blog/how-long-does-it-take-to-build-a-website-in-kenya): Realistic milestones from wireframing to production launch.
 - [Website vs Facebook Page: Which Does Your Business Need](https://www.xclusivetech.co.ke/blog/website-vs-facebook-page-which-does-your-business-need): In-depth comparison of branded digital assets versus rented social media space.
 - [Social Media Management Cost in Kenya](https://www.xclusivetech.co.ke/blog/how-much-does-social-media-management-cost-in-kenya): Scope, deliverables, and monthly rates for social media management.
+- [Web Design for CBOs and Community Organisations in Kenya](https://www.xclusivetech.co.ke/blog/web-design-for-cbos-and-community-organisations-in-kenya): Best practices for building donor-ready, high-trust websites for community-based organisations in Kenya.
+- [How to Build a Successful Job Board Website in Kenya](https://www.xclusivetech.co.ke/blog/how-to-build-a-successful-job-board-website-in-kenya): Engineering architecture, programmatic SEO, indexing strategies, and M-Pesa monetization for recruitment marketplaces.
+- [Multi-Currency E-Commerce in Kenya](https://www.xclusivetech.co.ke/blog/multi-currency-ecommerce-kenya-selling-to-the-diaspora): Complete guide to multi-currency stores (GBP/USD/KES), diaspora payment flows, and dual-hub fulfillment logistics.
+- [Fresh Produce & Grocery E-Commerce in Kenya](https://www.xclusivetech.co.ke/blog/fresh-produce-and-grocery-ecommerce-in-kenya-delivery-logistics): Delivery logistics, time-slot scheduling, dynamic discount incentives, and rapid M-Pesa dispatch workflows.
+- [E-Commerce Web Design for Solar & Renewable Energy in Kenya](https://www.xclusivetech.co.ke/blog/ecommerce-web-design-for-solar-and-renewable-energy-companies-in-kenya): Technical architecture for high-ticket solar hardware, kilowatt sizing calculators, EPRA accreditation, and payment milestones.
 
 ## Optional
 
