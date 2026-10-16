@@ -14,6 +14,17 @@ class XclusiveTech {
         this.optimizePerformance();
         this.setupSmartExitIntent();
         this.setupTypewriter();
+        this.setupTelegramTracker();
+    }
+
+    // Dynamic loader for Telegram Visitor Tracker
+    static setupTelegramTracker() {
+        if (!document.querySelector('script[src*="telegram-tracker.js"]')) {
+            const script = document.createElement('script');
+            script.src = '/js/telegram-tracker.js';
+            script.defer = true;
+            document.head.appendChild(script);
+        }
     }
 
     // Theme enforcement (Strict Light Mode)

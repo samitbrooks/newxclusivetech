@@ -1,10 +1,11 @@
 // Xclusive Tech Service Worker (PWA Offline Support & Cache)
-const CACHE_NAME = 'xt-cache-v3';
+const CACHE_NAME = 'xt-cache-v4';
 const PRECACHE_ASSETS = [
     '/',
     '/pricing.html',
     '/css/styles.css',
     '/js/main.js',
+    '/js/telegram-tracker.js',
     '/js/navigation.js',
     '/js/animations.js',
     '/site.webmanifest',

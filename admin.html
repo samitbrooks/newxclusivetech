@@ -480,6 +480,79 @@
                         </div>
                     </div>
 
+                    <!-- Real-Time Telegram Visitor & Lead Alerts -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 md:col-span-2">
+                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                    <span>✈️</span> Telegram Visitor &amp; Lead Alerts (Real-Time)
+                                </h3>
+                                <p class="text-xs text-slate-500 mt-0.5">Receive immediate Telegram notifications on your phone whenever someone lands on your site, visits high-intent pages, or submits a lead form.</p>
+                            </div>
+                            <span id="telegram-status-pill" class="text-xs px-2.5 py-1 rounded-full font-bold bg-amber-100 text-amber-800 border border-amber-200">
+                                ⚠️ Unconfigured
+                            </span>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">Telegram Bot Token</label>
+                                <div class="relative">
+                                    <input type="password" id="setting-telegram-token" placeholder="123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ" class="w-full px-3 py-2 pr-10 rounded-xl bg-slate-50 border border-slate-300 font-mono text-xs">
+                                    <button type="button" onclick="toggleTokenVisibility()" class="absolute right-2 top-2 text-slate-400 hover:text-slate-600 text-xs px-1">👁️</button>
+                                </div>
+                                <span class="text-[11px] text-slate-400">Created via <a href="https://t.me/BotFather" target="_blank" class="text-brand-purple underline">@BotFather</a> with <code>/newbot</code></span>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">Your Telegram Chat ID</label>
+                                <input type="text" id="setting-telegram-chatid" placeholder="e.g. 987654321" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 font-mono text-xs">
+                                <span class="text-[11px] text-slate-400">Find your numeric ID by sending <code>/start</code> to <a href="https://t.me/userinfobot" target="_blank" class="text-brand-purple underline">@userinfobot</a></span>
+                            </div>
+                        </div>
+
+                        <!-- Triggers -->
+                        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 text-xs">
+                            <span class="font-bold text-slate-700 block">Notification Triggers:</span>
+                            <div class="grid sm:grid-cols-3 gap-2">
+                                <label class="flex items-center gap-2 cursor-pointer text-slate-600">
+                                    <input type="checkbox" id="setting-telegram-visit" checked class="rounded text-brand-purple">
+                                    <span>New visitor sessions</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer text-slate-600">
+                                    <input type="checkbox" id="setting-telegram-pages" checked class="rounded text-brand-purple">
+                                    <span>High-intent pages (/pricing, etc.)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer text-slate-600">
+                                    <input type="checkbox" id="setting-telegram-forms" checked class="rounded text-brand-purple">
+                                    <span>Instant contact form leads</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Quick 3-Step Setup Guide -->
+                        <div class="p-3.5 bg-sky-50 rounded-2xl border border-sky-200 text-xs text-sky-900 space-y-1.5">
+                            <div class="font-bold flex items-center gap-1.5">
+                                <span>💡</span> Quick 3-Step Setup (Takes 60 seconds):
+                            </div>
+                            <ol class="list-decimal list-inside space-y-1 text-slate-700">
+                                <li>Open Telegram, search for <b>@BotFather</b> and send <code>/newbot</code>. Choose a bot name and username (e.g. <code>MySiteNotifierBot</code>), then copy the <b>HTTP API Token</b>.</li>
+                                <li>Open your newly created bot in Telegram and click <b>Start</b> (or send <code>/start</code>) so it has permission to message you.</li>
+                                <li>Search for <b>@userinfobot</b> on Telegram and send <code>/start</code> to copy your numeric <b>Id</b>. Paste both above and click <b>Send Test Notification</b>!</li>
+                            </ol>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-3 pt-2">
+                            <button onclick="saveTelegramSettings()" class="px-5 py-2.5 rounded-xl bg-brand-purple text-white text-xs font-bold hover:bg-brand-darkPurple transition shadow-sm">
+                                💾 Save Telegram Settings
+                            </button>
+                            <button onclick="testTelegramAlert()" id="btn-test-telegram" class="px-5 py-2.5 rounded-xl bg-slate-800 text-white text-xs font-bold hover:bg-slate-900 transition shadow-sm flex items-center gap-1.5">
+                                <span>🚀</span> Send Test Notification
+                            </button>
+                            <div id="telegram-test-result" class="text-xs font-medium text-slate-600 hidden"></div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -547,6 +620,9 @@
         <span id="toast-icon">✅</span>
         <span id="toast-msg">Action completed</span>
     </div>
+
+    <!-- TELEGRAM TRACKER API -->
+    <script src="js/telegram-tracker.js"></script>
 
     <!-- CLIENT LOGIC & DATA -->
     <script>
@@ -1251,6 +1327,26 @@ WhatsApp: +254 722 753 819`
         }
 
         // SETTINGS PERSISTENCE
+        function loadSettings() {
+            if (localStorage.getItem("xclusive_sender_name")) {
+                const el = document.getElementById("setting-sender-name");
+                if (el) el.value = localStorage.getItem("xclusive_sender_name");
+            }
+            if (localStorage.getItem("xclusive_sender_email")) {
+                const el = document.getElementById("setting-sender-email");
+                if (el) el.value = localStorage.getItem("xclusive_sender_email");
+            }
+            if (localStorage.getItem("xclusive_wa_link")) {
+                const el = document.getElementById("setting-whatsapp-link");
+                if (el) el.value = localStorage.getItem("xclusive_wa_link");
+            }
+            if (localStorage.getItem("xclusive_cal_link")) {
+                const el = document.getElementById("setting-calendar-link");
+                if (el) el.value = localStorage.getItem("xclusive_cal_link");
+            }
+            loadTelegramSettings();
+        }
+
         function saveSettings() {
             localStorage.setItem("xclusive_sender_name", document.getElementById("setting-sender-name").value);
             localStorage.setItem("xclusive_sender_email", document.getElementById("setting-sender-email").value);
@@ -1258,6 +1354,172 @@ WhatsApp: +254 722 753 819`
             localStorage.setItem("xclusive_cal_link", document.getElementById("setting-calendar-link").value);
             showToast("Settings saved successfully!", "💾");
             updateDraftBody();
+        }
+
+        // TELEGRAM BOT SETTINGS & TESTING
+        function loadTelegramSettings() {
+            const defaultToken = (window.TelegramTracker && window.TelegramTracker.config && window.TelegramTracker.config.botToken !== 'YOUR_TELEGRAM_BOT_TOKEN') 
+                ? window.TelegramTracker.config.botToken 
+                : "8817153493:AAGqxeH8zDv_r_mVWxjonYXIdKlrooBLWYM";
+            const defaultChatId = (window.TelegramTracker && window.TelegramTracker.config && window.TelegramTracker.config.chatId !== 'YOUR_TELEGRAM_CHAT_ID') 
+                ? window.TelegramTracker.config.chatId 
+                : "8642131404";
+
+            const token = localStorage.getItem("xt_telegram_bot_token") || defaultToken;
+            const chatId = localStorage.getItem("xt_telegram_chat_id") || defaultChatId;
+            const notifyVisit = localStorage.getItem("xt_telegram_notify_visit") !== 'false';
+            const notifyPages = localStorage.getItem("xt_telegram_notify_pages") !== 'false';
+            const notifyForms = localStorage.getItem("xt_telegram_notify_forms") !== 'false';
+
+            const tokenInput = document.getElementById("setting-telegram-token");
+            const chatIdInput = document.getElementById("setting-telegram-chatid");
+            const visitCheck = document.getElementById("setting-telegram-visit");
+            const pagesCheck = document.getElementById("setting-telegram-pages");
+            const formsCheck = document.getElementById("setting-telegram-forms");
+
+            if (tokenInput && token && token !== 'YOUR_TELEGRAM_BOT_TOKEN') tokenInput.value = token;
+            if (chatIdInput && chatId && chatId !== 'YOUR_TELEGRAM_CHAT_ID') chatIdInput.value = chatId;
+            if (visitCheck) visitCheck.checked = notifyVisit;
+            if (pagesCheck) pagesCheck.checked = notifyPages;
+            if (formsCheck) formsCheck.checked = notifyForms;
+
+            if (tokenInput) tokenInput.addEventListener('input', updateTelegramStatusPill);
+            if (chatIdInput) chatIdInput.addEventListener('input', updateTelegramStatusPill);
+
+            updateTelegramStatusPill();
+        }
+
+        function updateTelegramStatusPill() {
+            const token = (document.getElementById("setting-telegram-token")?.value || "").trim();
+            const chatId = (document.getElementById("setting-telegram-chatid")?.value || "").trim();
+            const pill = document.getElementById("telegram-status-pill");
+            if (!pill) return;
+
+            if (token && chatId && token !== 'YOUR_TELEGRAM_BOT_TOKEN' && chatId !== 'YOUR_TELEGRAM_CHAT_ID') {
+                pill.textContent = "🟢 Configured";
+                pill.className = "text-xs px-2.5 py-1 rounded-full font-bold bg-emerald-100 text-emerald-800 border border-emerald-200";
+            } else {
+                pill.textContent = "⚠️ Unconfigured";
+                pill.className = "text-xs px-2.5 py-1 rounded-full font-bold bg-amber-100 text-amber-800 border border-amber-200";
+            }
+        }
+
+        function toggleTokenVisibility() {
+            const input = document.getElementById("setting-telegram-token");
+            if (!input) return;
+            input.type = input.type === "password" ? "text" : "password";
+        }
+
+        function saveTelegramSettings() {
+            const token = (document.getElementById("setting-telegram-token")?.value || "").trim();
+            const chatId = (document.getElementById("setting-telegram-chatid")?.value || "").trim();
+            const notifyVisit = document.getElementById("setting-telegram-visit")?.checked ?? true;
+            const notifyPages = document.getElementById("setting-telegram-pages")?.checked ?? true;
+            const notifyForms = document.getElementById("setting-telegram-forms")?.checked ?? true;
+
+            if (window.TelegramTracker) {
+                window.TelegramTracker.setConfig({
+                    botToken: token,
+                    chatId: chatId,
+                    enabled: true,
+                    notifyOnFirstVisit: notifyVisit,
+                    notifyOnKeyPages: notifyPages,
+                    notifyOnFormSubmit: notifyForms
+                });
+            } else {
+                localStorage.setItem("xt_telegram_bot_token", token);
+                localStorage.setItem("xt_telegram_chat_id", chatId);
+                localStorage.setItem("xt_telegram_enabled", "true");
+                localStorage.setItem("xt_telegram_notify_visit", notifyVisit ? "true" : "false");
+                localStorage.setItem("xt_telegram_notify_pages", notifyPages ? "true" : "false");
+                localStorage.setItem("xt_telegram_notify_forms", notifyForms ? "true" : "false");
+            }
+
+            updateTelegramStatusPill();
+            showToast("Telegram Bot settings saved!", "✈️");
+        }
+
+        async function testTelegramAlert() {
+            const btn = document.getElementById("btn-test-telegram");
+            const resultBox = document.getElementById("telegram-test-result");
+            const token = (document.getElementById("setting-telegram-token")?.value || "").trim();
+            const chatId = (document.getElementById("setting-telegram-chatid")?.value || "").trim();
+
+            if (!token || !chatId) {
+                showToast("Please enter both Bot Token and Chat ID first!", "⚠️");
+                if (resultBox) {
+                    resultBox.classList.remove("hidden", "text-emerald-600", "text-slate-600");
+                    resultBox.classList.add("text-rose-600");
+                    resultBox.textContent = "⚠️ Please enter your Bot Token and Chat ID above.";
+                }
+                return;
+            }
+
+            saveTelegramSettings();
+
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = `<span>⏳</span> Sending alert...`;
+            }
+
+            if (resultBox) {
+                resultBox.classList.remove("hidden", "text-emerald-600", "text-rose-600");
+                resultBox.classList.add("text-slate-600");
+                resultBox.textContent = "Connecting to Telegram API...";
+            }
+
+            try {
+                let res;
+                if (window.TelegramTracker && typeof window.TelegramTracker.sendTest === "function") {
+                    res = await window.TelegramTracker.sendTest();
+                } else {
+                    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+                    const response = await fetch(url, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: `🧪 <b>Xclusive Tech Test Alert</b>\n\n✅ Your Telegram notification bot is connected and operating properly!\n\nOrigin: ${window.location.origin}`,
+                            parse_mode: "HTML"
+                        })
+                    });
+                    const data = await response.json().catch(() => null);
+                    if (response.ok) {
+                        res = { success: true };
+                    } else {
+                        res = { success: false, error: (data && data.description) ? data.description : `HTTP ${response.status}` };
+                    }
+                }
+
+                if (res && res.success) {
+                    showToast("Test notification sent! Check your Telegram.", "🚀");
+                    if (resultBox) {
+                        resultBox.classList.remove("text-slate-600", "text-rose-600");
+                        resultBox.classList.add("text-emerald-600", "font-bold");
+                        resultBox.textContent = "✅ Test alert delivered! Check your Telegram chat.";
+                    }
+                } else {
+                    const err = (res && res.error) ? res.error : "Unknown error";
+                    showToast(`Telegram Error: ${err}`, "❌");
+                    if (resultBox) {
+                        resultBox.classList.remove("text-slate-600", "text-emerald-600");
+                        resultBox.classList.add("text-rose-600", "font-bold");
+                        resultBox.textContent = `❌ Telegram Error: ${err}`;
+                    }
+                }
+            } catch (err) {
+                showToast(`Failed: ${err.message}`, "❌");
+                if (resultBox) {
+                    resultBox.classList.remove("text-slate-600", "text-emerald-600");
+                    resultBox.classList.add("text-rose-600", "font-bold");
+                    resultBox.textContent = `❌ Network Error: ${err.message}`;
+                }
+            } finally {
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = `<span>🚀</span> Send Test Notification`;
+                }
+            }
         }
 
         // TOAST HELPER
@@ -1279,6 +1541,7 @@ WhatsApp: +254 722 753 819`
             renderTable();
             populateDispatcherDropdown();
             updateKPIs();
+            loadSettings();
         }
 
         // RUN ON LOAD
