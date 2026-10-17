@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """
-Google Search Console Automation Tool for Xclusive Tech
+Google Search Console & Indexing Automation Tool for Xclusive Tech
 Uses Google Service Account credentials to:
 - List verified sites
 - Submit XML sitemaps
 - Retrieve sitemap crawl status
 - Inspect URLs (index status, canonical verdict, crawl state)
+- Publish instant crawl requests via Google Indexing API (URL_UPDATED / URL_DELETED)
+- Query Search Analytics (keywords, pages, clicks, impressions, CTR, position)
+- Run sitewide indexing audit
 """
 
 import sys
@@ -16,6 +19,7 @@ import base64
 import subprocess
 import tempfile
 import argparse
+import xml.etree.ElementTree as ET
 import requests
 
 KEY_PATH = os.environ.get(
@@ -24,6 +28,7 @@ KEY_PATH = os.environ.get(
 )
 DEFAULT_SITE_URL = os.environ.get('GSC_SITE_URL', 'sc-domain:xclusivetech.co.ke')
 DEFAULT_SITEMAP_URL = 'https://www.xclusivetech.co.ke/sitemap.xml'
+LOCAL_SITEMAP_PATH = '/Users/app/newxclusivetech/sitemap.xml'
 
 
 def get_access_token():
@@ -101,12 +106,40 @@ def inspect_url(token, site_url, inspection_url):
     return res.status_code, res.json()
 
 
+def publish_indexing_url(token, target_url, action_type='URL_UPDATED'):
+    """Push instant high-priority crawl request to Google Indexing API."""
+    endpoint = 'https://indexing.googleapis.com/v3/urlNotifications:publish'
+    headers = {'Authorization': f'Bearer {token}', 'Content-Type': 'application/json'}
+    payload = {'url': target_url, 'type': action_type}
+    res = requests.post(endpoint, headers=headers, json=payload, timeout=15)
+    return res.status_code, res.json()
+
+
+def get_search_analytics(token, site_url, dimension='query', start_date='2026-07-01', end_date='2026-10-16', limit=50):
+    encoded_site = requests.utils.quote(site_url, safe='')
+    url = f'https://www.googleapis.com/webmasters/v3/sites/{encoded_site}/searchAnalytics/query'
+    headers = {'Authorization': f'Bearer {token}', 'Content-Type': 'application/json'}
+    payload = {
+        'startDate': start_date,
+        'endDate': end_date,
+        'dimensions': [dimension] if isinstance(dimension, str) else dimension,
+        'rowLimit': limit
+    }
+    res = requests.post(url, headers=headers, json=payload, timeout=20)
+    return res.status_code, res.json()
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Google Search Console API helper")
-    parser.add_argument('action', choices=['list-sites', 'submit-sitemap', 'get-sitemaps', 'inspect-url', 'inspect-core'])
+    parser = argparse.ArgumentParser(description="Google Search Console & Indexing API CLI")
+    parser.add_argument('action', choices=[
+        'list-sites', 'submit-sitemap', 'get-sitemaps', 'inspect-url',
+        'inspect-core', 'publish-url', 'publish-all', 'search-analytics'
+    ])
     parser.add_argument('--site-url', default=DEFAULT_SITE_URL, help="GSC Site URL (e.g. sc-domain:xclusivetech.co.ke)")
     parser.add_argument('--sitemap-url', default=DEFAULT_SITEMAP_URL, help="XML Sitemap URL")
-    parser.add_argument('--url', help="URL to inspect")
+    parser.add_argument('--url', help="Target URL for inspect or publish actions")
+    parser.add_argument('--dimension', default='query', choices=['query', 'page', 'country', 'device'], help="Search analytics dimension")
+    parser.add_argument('--limit', type=int, default=50, help="Row limit for search analytics")
 
     args = parser.parse_args()
 
@@ -138,6 +171,47 @@ def main():
         status, res = inspect_url(token, args.site_url, args.url)
         print(json.dumps(res, indent=2))
 
+    elif args.action == 'publish-url':
+        if not args.url:
+            print("Error: --url is required for publish-url action", file=sys.stderr)
+            sys.exit(1)
+        status, res = publish_indexing_url(token, args.url, 'URL_UPDATED')
+        print(f"HTTP {status}:", json.dumps(res, indent=2))
+
+    elif args.action == 'publish-all':
+        if not os.path.exists(LOCAL_SITEMAP_PATH):
+            print(f"Error: Sitemap not found at {LOCAL_SITEMAP_PATH}", file=sys.stderr)
+            sys.exit(1)
+        tree = ET.parse(LOCAL_SITEMAP_PATH)
+        urls = [loc.text for loc in tree.findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url/{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+        print(f"Found {len(urls)} URLs in local sitemap. Publishing to Google Indexing API...")
+        success = 0
+        for i, u in enumerate(urls, 1):
+            status, res = publish_indexing_url(token, u, 'URL_UPDATED')
+            if status == 200:
+                success += 1
+                print(f"[{i}/{len(urls)}] OK: {u}")
+            else:
+                print(f"[{i}/{len(urls)}] FAILED (HTTP {status}): {u}")
+            time.sleep(0.2)
+        print(f"\nCompleted. Successfully published {success}/{len(urls)} URLs.")
+
+    elif args.action == 'search-analytics':
+        status, res = get_search_analytics(token, args.site_url, dimension=args.dimension, limit=args.limit)
+        if status == 200:
+            rows = res.get('rows', [])
+            print(f"\n--- Search Analytics ({args.dimension.upper()}) --- Total rows: {len(rows)}")
+            rows.sort(key=lambda x: x['impressions'], reverse=True)
+            for r in rows:
+                k = r['keys'][0]
+                imp = r['impressions']
+                clicks = r['clicks']
+                pos = round(r['position'], 1)
+                ctr = round(r['ctr'] * 100, 1)
+                print(f"{clicks:2d} clicks | {imp:3d} imp | CTR {ctr:4.1f}% | pos {pos:4.1f} | {k}")
+        else:
+            print(f"Error {status}:", json.dumps(res, indent=2))
+
     elif args.action == 'inspect-core':
         core_urls = [
             'https://www.xclusivetech.co.ke/',
@@ -150,10 +224,11 @@ def main():
             'https://www.xclusivetech.co.ke/contact',
             'https://www.xclusivetech.co.ke/terms',
             'https://www.xclusivetech.co.ke/privacy',
-            'https://www.xclusivetech.co.ke/blog/best-web-design-companies-in-kenya'
+            'https://www.xclusivetech.co.ke/blog/best-web-design-companies-in-kenya',
+            'https://www.xclusivetech.co.ke/blog/how-much-does-a-website-cost-in-kenya'
         ]
         print(f"Inspecting {len(core_urls)} core URLs for {args.site_url}...\n")
-        print(f"{'URL':<45} | {'Verdict':<15} | {'Coverage State'}")
+        print(f"{'URL':<50} | {'Verdict':<12} | {'Coverage State'}")
         print("-" * 100)
         for u in core_urls:
             status, res = inspect_url(token, args.site_url, u)
@@ -161,11 +236,11 @@ def main():
                 idx = res.get('inspectionResult', {}).get('indexStatusResult', {})
                 verdict = idx.get('verdict', 'UNKNOWN')
                 cov = idx.get('coverageState', 'UNKNOWN')
-                print(f"{u:<45} | {verdict:<15} | {cov}")
+                print(f"{u:<50} | {verdict:<12} | {cov}")
             else:
                 err = res.get('error', {}).get('message', str(res))
-                print(f"{u:<45} | {'ERROR':<15} | HTTP {status}: {err}")
-            time.sleep(0.5)
+                print(f"{u:<50} | {'ERROR':<12} | HTTP {status}: {err}")
+            time.sleep(0.3)
 
 
 if __name__ == '__main__':
