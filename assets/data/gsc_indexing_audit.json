@@ -1,0 +1,902 @@
+[
+  {
+    "url": "https://www.xclusivetech.co.ke/",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-12T05:57:33Z",
+    "user_canon": "https://www.xclusivetech.co.ke/",
+    "google_canon": "https://www.xclusivetech.co.ke/"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/solutions",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-16T15:16:33Z",
+    "user_canon": "https://www.xclusivetech.co.ke/solutions",
+    "google_canon": "https://www.xclusivetech.co.ke/solutions"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-12T12:48:25Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/geo-and-aeo-explained-getting-found-by-ai",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-08-13T13:29:20Z",
+    "user_canon": "https://xclusivetech.co.ke/blog/geo-and-aeo-explained-getting-found-by-ai.html",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/geo-and-aeo-explained-getting-found-by-ai"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/best-web-design-companies-in-kenya",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/how-much-does-a-website-cost-in-kenya",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-16T17:46:32Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/how-much-does-a-website-cost-in-kenya",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/how-much-does-a-website-cost-in-kenya"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/how-much-does-social-media-management-cost-in-kenya",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-09T02:21:20Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/how-much-does-social-media-management-cost-in-kenya",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/how-much-does-social-media-management-cost-in-kenya"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-logistics-transport-companies-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-16T19:01:32Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-logistics-transport-companies-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-logistics-transport-companies-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-real-estate-businesses-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-10T22:20:32Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-real-estate-businesses-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-real-estate-businesses-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-tour-and-safari-companies-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-09-27T17:18:20Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-tour-and-safari-companies-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-tour-and-safari-companies-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-insurance-agents-and-brokers-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-09-27T00:16:45Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-insurance-agents-and-brokers-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-insurance-agents-and-brokers-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-construction-and-contractors-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-09-20T06:27:24Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-construction-and-contractors-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-construction-and-contractors-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-car-dealerships-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-09-13T21:21:37Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-car-dealerships-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-car-dealerships-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-driving-schools-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-16T21:31:15Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-driving-schools-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-driving-schools-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-photographers-and-videographers-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-09-27T09:21:36Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-photographers-and-videographers-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-photographers-and-videographers-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/website-vs-facebook-page-which-does-your-business-need",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-15T10:31:16Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/website-vs-facebook-page-which-does-your-business-need",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/website-vs-facebook-page-which-does-your-business-need"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/how-long-does-it-take-to-build-a-website-in-kenya",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-09-27T08:06:34Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/how-long-does-it-take-to-build-a-website-in-kenya",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/how-long-does-it-take-to-build-a-website-in-kenya"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/web-design-for-businesses-in-kiambu-county",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-14T16:58:21Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/web-design-for-businesses-in-kiambu-county",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/web-design-for-businesses-in-kiambu-county"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/web-design-for-cbos-and-community-organisations-in-kenya",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/how-to-build-a-successful-job-board-website-in-kenya",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/multi-currency-ecommerce-kenya-selling-to-the-diaspora",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/fresh-produce-and-grocery-ecommerce-in-kenya-delivery-logistics",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/ecommerce-web-design-for-solar-and-renewable-energy-companies-in-kenya",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/about",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-10T16:45:56Z",
+    "user_canon": "https://www.xclusivetech.co.ke/about",
+    "google_canon": "https://www.xclusivetech.co.ke/about"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/services",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-12T20:52:30Z",
+    "user_canon": "https://www.xclusivetech.co.ke/services",
+    "google_canon": "https://www.xclusivetech.co.ke/services"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/pricing",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-04T03:30:58Z",
+    "user_canon": "https://www.xclusivetech.co.ke/pricing",
+    "google_canon": "https://www.xclusivetech.co.ke/pricing"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/portfolio",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-12T14:30:54Z",
+    "user_canon": "https://www.xclusivetech.co.ke/portfolio",
+    "google_canon": "https://www.xclusivetech.co.ke/portfolio"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/frostwoodcrm",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-05T12:56:09Z",
+    "user_canon": "https://www.xclusivetech.co.ke/frostwoodcrm",
+    "google_canon": "https://www.xclusivetech.co.ke/frostwoodcrm"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/founder",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-17T01:16:15Z",
+    "user_canon": "https://www.xclusivetech.co.ke/founder",
+    "google_canon": "https://www.xclusivetech.co.ke/founder"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/contact",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-12T13:53:21Z",
+    "user_canon": "https://www.xclusivetech.co.ke/contact",
+    "google_canon": "https://www.xclusivetech.co.ke/contact"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/privacy",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Excluded by \u2018noindex\u2019 tag",
+    "last_crawl": "2026-09-15T03:23:12Z",
+    "user_canon": null,
+    "google_canon": "https://www.xclusivetech.co.ke/privacy"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/terms",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Excluded by \u2018noindex\u2019 tag",
+    "last_crawl": "2026-07-28T14:59:54Z",
+    "user_canon": null,
+    "google_canon": "https://www.xclusivetech.co.ke/terms"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-churches-and-ministries-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-09-27T19:48:20Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-churches-and-ministries-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-churches-and-ministries-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-ngos-and-nonprofits-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-15T05:31:16Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-ngos-and-nonprofits-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-ngos-and-nonprofits-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-law-firms-need-a-professional-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-16T14:01:32Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-law-firms-need-a-professional-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-law-firms-need-a-professional-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-clinics-and-healthcare-providers-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-05T15:01:34Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-clinics-and-healthcare-providers-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-clinics-and-healthcare-providers-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-schools-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-09-27T04:06:36Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-schools-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-schools-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-hotels-and-hospitality-businesses-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-03T02:08:19Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-hotels-and-hospitality-businesses-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-hotels-and-hospitality-businesses-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-restaurants-and-cafes-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-10T21:05:32Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-restaurants-and-cafes-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-restaurants-and-cafes-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-startups-need-a-professional-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-15T15:31:15Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-startups-need-a-professional-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-startups-need-a-professional-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-ecommerce-and-retail-businesses-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-09-26T01:27:52Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-ecommerce-and-retail-businesses-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-ecommerce-and-retail-businesses-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-beauty-salons-and-spas-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-12T22:48:24Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-beauty-salons-and-spas-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-beauty-salons-and-spas-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-gyms-and-fitness-studios-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-12T07:12:34Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-gyms-and-fitness-studios-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-gyms-and-fitness-studios-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-event-planners-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-09T03:36:23Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-event-planners-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-event-planners-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-agriculture-and-agribusiness-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-12T17:48:23Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-agriculture-and-agribusiness-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-agriculture-and-agribusiness-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-consultants-need-a-professional-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-08-20T06:32:14Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-consultants-need-a-professional-website.html",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-consultants-need-a-professional-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-financial-services-and-fintech-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-08-20T12:38:48Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-financial-services-and-fintech-need-a-website.html",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-financial-services-and-fintech-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-fashion-and-apparel-brands-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-10T10:05:55Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-fashion-and-apparel-brands-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-fashion-and-apparel-brands-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-cosmetics-and-beauty-brands-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-12T15:21:27Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-cosmetics-and-beauty-brands-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-cosmetics-and-beauty-brands-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/blog/why-food-and-beverage-brands-need-a-website",
+    "status": 200,
+    "verdict": "PASS",
+    "coverage": "Submitted and indexed",
+    "last_crawl": "2026-10-12T21:57:28Z",
+    "user_canon": "https://www.xclusivetech.co.ke/blog/why-food-and-beverage-brands-need-a-website",
+    "google_canon": "https://www.xclusivetech.co.ke/blog/why-food-and-beverage-brands-need-a-website"
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-mombasa",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-kwale",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-kilifi",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-tana-river",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-lamu",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-taita-taveta",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-garissa",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-wajir",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-mandera",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-marsabit",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-isiolo",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-meru",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-tharaka-nithi",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-embu",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-kitui",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-machakos",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-makueni",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-nyandarua",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-nyeri",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-kirinyaga",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-muranga",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-kiambu",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-turkana",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-west-pokot",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-samburu",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-trans-nzoia",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-uasin-gishu",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-elgeyo-marakwet",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-nandi",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-baringo",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-laikipia",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-nakuru",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-narok",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-kajiado",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-kericho",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-bomet",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-kakamega",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-vihiga",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-bungoma",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-busia",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-siaya",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-kisumu",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-homa-bay",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-migori",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-kisii",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-nyamira",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "URL is unknown to Google",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/locations/web-design-nairobi",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/llms.txt",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Crawled - currently not indexed",
+    "last_crawl": "2026-10-15T20:31:17Z",
+    "user_canon": null,
+    "google_canon": null
+  },
+  {
+    "url": "https://www.xclusivetech.co.ke/llms-full.txt",
+    "status": 200,
+    "verdict": "NEUTRAL",
+    "coverage": "Discovered - currently not indexed",
+    "last_crawl": null,
+    "user_canon": null,
+    "google_canon": null
+  }
+]

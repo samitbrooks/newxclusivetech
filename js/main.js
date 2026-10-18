@@ -15,6 +15,7 @@ class XclusiveTech {
         this.setupSmartExitIntent();
         this.setupTypewriter();
         this.setupTelegramTracker();
+        this.setupQuoteEstimator();
     }
 
     // Dynamic loader for Telegram Visitor Tracker
@@ -381,34 +382,39 @@ class XclusiveTech {
 
                         <!-- Right Column: Form -->
                         <div class="xt-exit-right">
+                            <div class="xt-fast-wa-bar mb-4">
+                                <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I'd%20like%20a%20free%20website%20quote%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2 text-center shadow-lg transition-all" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important; color: #FFFFFF !important; text-decoration: none !important;">
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.025 0-2.031.313-2.891.893L9.9 4.504C10.742 3.74 11.853 3.3 13.05 3.3c2.969 0 5.387 2.418 5.387 5.387 0 1.197-.46 2.307-1.224 3.15l.531 1.465c.592-.689.956-1.586.956-2.615 0-2.206-1.794-4-4-4zm0 0"/></svg>
+                                    <span>⚡ Chat on WhatsApp (+254 722 753 819) — Fastest</span>
+                                </a>
+                                <div style="display: flex; align-items: center; margin: 12px 0; color: #94A3B8; font-size: 12px; justify-content: center; gap: 8px;">
+                                    <span style="height: 1px; background: #E2E8F0; flex: 1;"></span>
+                                    <span>or leave your contact for a fast callback</span>
+                                    <span style="height: 1px; background: #E2E8F0; flex: 1;"></span>
+                                </div>
+                            </div>
                             <form id="xt-exit-form" class="xt-exit-form">
                                 <div class="xt-form-row xt-form-row-2">
                                     <div class="xt-input-group">
-                                        <input type="text" id="xt-exit-name" name="name" required placeholder="Full name*" class="xt-input">
+                                        <input type="text" id="xt-exit-name" name="name" required placeholder="Your full name*" class="xt-input">
                                     </div>
-                                    <div class="xt-input-group">
-                                        <input type="email" id="xt-exit-email" name="email" required placeholder="Email*" class="xt-input">
-                                    </div>
-                                </div>
-
-                                <div class="xt-form-row xt-form-row-2">
                                     <div class="xt-phone-group">
                                         <div class="xt-phone-prefix" title="Kenya (+254)">
                                             <span class="xt-flag">🇰🇪</span>
                                             <span class="xt-caret">▾</span>
                                             <span class="xt-code">+254</span>
                                         </div>
-                                        <input type="tel" id="xt-exit-phone" name="phone" required placeholder="Phone*" class="xt-input xt-input-phone">
-                                    </div>
-                                    <div class="xt-input-group">
-                                        <input type="text" id="xt-exit-company" name="company" placeholder="Company" class="xt-input">
+                                        <input type="tel" id="xt-exit-phone" name="phone" required placeholder="Phone / WhatsApp*" class="xt-input xt-input-phone">
                                     </div>
                                 </div>
 
                                 <div class="xt-form-row xt-form-row-2">
+                                    <div class="xt-input-group">
+                                        <input type="email" id="xt-exit-email" name="email" placeholder="Email address (optional)" class="xt-input">
+                                    </div>
                                     <div class="xt-select-group">
                                         <select id="xt-exit-service" name="service" class="xt-select">
-                                            <option value="" selected>Service interested in (option...</option>
+                                            <option value="" selected>What package do you need?</option>
                                             <option value="Express Sales Landing Page (KES 15K)">Express Sales Landing Page (KES 15K)</option>
                                             <option value="Starter Business Website (KES 25K–45.5K)">Starter Business Website (KES 25K–45.5K)</option>
                                             <option value="Business Growth Web App (KES 49K–62K)">Business Growth Web App (KES 49K–62K)</option>
@@ -417,35 +423,25 @@ class XclusiveTech {
                                             <option value="SEO, GEO & AEO Optimization">SEO, GEO &amp; AEO Optimization</option>
                                         </select>
                                     </div>
-                                    <div class="xt-select-group">
-                                        <select id="xt-exit-budget" name="budget" class="xt-select">
-                                            <option value="" selected>Budget range (optional)</option>
-                                            <option value="KES 15,000 – KES 25,000">KES 15,000 – KES 25,000</option>
-                                            <option value="KES 25,000 – KES 50,000">KES 25,000 – KES 50,000</option>
-                                            <option value="KES 50,000 – KES 100,000">KES 50,000 – KES 100,000</option>
-                                            <option value="KES 100,000+">KES 100,000+</option>
-                                            <option value="Flexible / Need Consultation">Flexible / Need Consultation</option>
-                                        </select>
-                                    </div>
                                 </div>
 
                                 <div class="xt-form-row">
-                                    <textarea id="xt-exit-project" name="project" required rows="3" placeholder="Tell us about your project*" class="xt-input xt-textarea"></textarea>
+                                    <textarea id="xt-exit-project" name="project" rows="2" placeholder="Brief note about your business (optional)" class="xt-input xt-textarea"></textarea>
                                 </div>
 
                                 <div class="xt-terms-row">
                                     <label class="xt-checkbox-label">
-                                        <input type="checkbox" id="xt-exit-terms" name="terms" required checked>
-                                        <span>I accept the <a href="/terms" target="_blank" rel="noopener">Terms &amp; Conditions</a> and <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+                                        <input type="checkbox" id="xt-exit-terms" name="terms" checked>
+                                        <span>I accept the <a href="/terms" target="_blank" rel="noopener">Terms</a> &amp; <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</span>
                                     </label>
                                 </div>
 
                                 <button type="submit" id="xt-exit-submit-btn" class="xt-exit-submit-btn">
-                                    <span>SUBMIT &rarr;</span>
+                                    <span>REQUEST QUICK CALLBACK &rarr;</span>
                                 </button>
 
                                 <p class="xt-exit-security-note">
-                                    All our projects are secured by NDA. <strong class="xt-secure-highlight">100% Secure. Zero Spam.</strong>
+                                    🛡️ 100% Risk-Free Guarantee &bull; <strong class="xt-secure-highlight">Zero Spam. Direct Engineer Response.</strong>
                                 </p>
 
                                 <div id="xt-exit-feedback" class="xt-exit-feedback" style="display: none;"></div>
@@ -532,15 +528,8 @@ class XclusiveTech {
                     const projectInput = modalOverlay.querySelector('#xt-exit-project');
                     const termsInput = modalOverlay.querySelector('#xt-exit-terms');
 
-                    if (!nameInput.value.trim() || !emailInput.value.trim() || !phoneInput.value.trim() || !projectInput.value.trim()) {
-                        feedbackEl.textContent = 'Please fill in all required fields marked with *.';
-                        feedbackEl.className = 'xt-exit-feedback error';
-                        feedbackEl.style.display = 'block';
-                        return;
-                    }
-
-                    if (!termsInput.checked) {
-                        feedbackEl.textContent = 'Please accept the Terms & Conditions and Privacy Policy.';
+                    if (!nameInput.value.trim() || !phoneInput.value.trim()) {
+                        feedbackEl.textContent = 'Please provide your name and WhatsApp/phone number.';
                         feedbackEl.className = 'xt-exit-feedback error';
                         feedbackEl.style.display = 'block';
                         return;
@@ -759,6 +748,145 @@ class XclusiveTech {
             isDeleting = true;
             tick();
         }, holdDelay);
+    }
+
+    // Setup 1-Minute Interactive Quote Estimator
+    static setupQuoteEstimator() {
+        const estimator = document.getElementById('quote-estimator');
+        if (!estimator) return;
+
+        const pkgCards = estimator.querySelectorAll('.estimator-pkg-card');
+        const addonDomain = estimator.querySelector('#addon-domain');
+        const addonMaintenance = estimator.querySelector('#addon-maintenance');
+        const totalEl = estimator.querySelector('#estimator-total');
+        const depositEl = estimator.querySelector('#estimator-deposit');
+        const balanceEl = estimator.querySelector('#estimator-balance');
+        const pkgNameEl = estimator.querySelector('#estimator-pkg-name');
+        const timelineEl = estimator.querySelector('#estimator-timeline');
+        const deliverablesListEl = estimator.querySelector('#estimator-deliverables-list');
+        const waBtn = estimator.querySelector('#estimator-whatsapp-btn');
+
+        if (!pkgCards.length || !totalEl || !waBtn) return;
+
+        const deliverablesMap = {
+            express: [
+                '1 High-Converting Long-Form Landing Page (5 Core Sections)',
+                'Delivered in 48 Hours (2 Days) with Full Revisions Round',
+                'Floating WhatsApp Quick-Chat Widget & Click-to-Call CTAs',
+                'Lead Intake Form with Instant Email & Mobile Notifications',
+                'Mobile-First Responsive Design Tested on Safaricom 4G/5G',
+                '100% Upgrade Credit: Full KES 15,000 credited if upgrading in 6 mos.',
+                '100% Source Code & Asset Ownership (Zero builder lock-in fees)'
+            ],
+            starter: [
+                '5 Custom Pages: Home, About Company, Services, Portfolio & Contact',
+                'Guaranteed 7-Day Fast Delivery with Milestone Approval Stages',
+                'Bespoke Figma UI/UX Design System Tailored to Your Brand Identity',
+                'Foundational On-Page SEO (Schema.org markup, meta tags & sitemap)',
+                'Interactive Google Maps Location & Google Business Profile Integration',
+                '1-Tap WhatsApp Chat & Multi-Field Contact Intake Forms',
+                '30 Days Free Post-Launch Technical Support & Automated Cloud Backups',
+                '100% Code & Domain Ownership with Direct Server Access'
+            ],
+            growth: [
+                'Up to 15 Bespoke Responsive Pages & High-Performance Templates',
+                '10–14 Days Delivery with Dedicated Staging Preview Environment',
+                'Lightweight Headless CMS Blog/News Engine for Publishing Articles',
+                'Interactive Quote Requests, Service Calculators or Booking Forms',
+                'Comprehensive County-by-County Kenya Local SEO & Semantic Schemas',
+                'Google Analytics 4 (GA4) & Google Search Console Setup & Verification',
+                '90 Days Dedicated Priority Maintenance & Technical Warranty'
+            ],
+            ecommerce: [
+                'Full E-Commerce Storefront with Product Catalog & Categories',
+                '14 Days Delivery with End-to-End Real-Time Payment Testing',
+                'Automated Safaricom Daraja M-Pesa STK Push Checkout Integration',
+                'Credit/Debit Card (Visa/Mastercard) & Bank Payment Gateway Option',
+                'Customer Accounts, Order History Dashboard & Automated PDF Invoices',
+                'Instant WhatsApp & SMS Notifications to Owner on Every New Order',
+                'Inventory Management, Low Stock Alerts & Coupon Promo Code Engine',
+                '6 Months Technical Warranty & Merchant Video Training Session'
+            ]
+        };
+
+        let selectedPrice = 15000;
+        let selectedName = 'Express Sales Landing Page';
+        let selectedTime = '2 Days (48 Hours)';
+        let selectedKey = 'express';
+
+        const updateDeliverables = (key) => {
+            if (!deliverablesListEl) return;
+            const items = [...(deliverablesMap[key] || deliverablesMap.express)];
+            if (addonDomain && addonDomain.checked) {
+                items.push('Custom .co.ke Domain Registration & 3 Branded Business Webmail Accounts');
+            }
+            if (addonMaintenance && addonMaintenance.checked) {
+                items.push('Monthly Maintenance Care Plan (Daily Cloud Backups, Security Scans & Updates)');
+            }
+            deliverablesListEl.innerHTML = items.map(item => `
+                <li class="estimator-deliverable-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>${item}</span>
+                </li>
+            `).join('');
+        };
+
+        const calculate = () => {
+            let total = selectedPrice;
+            let addonsList = [];
+
+            if (addonDomain && addonDomain.checked) {
+                total += 2500;
+                addonsList.push('Domain & Business Emails (+KES 2,500)');
+            }
+            if (addonMaintenance && addonMaintenance.checked) {
+                total += 2000;
+                addonsList.push('Monthly Care Plan (+KES 2,000)');
+            }
+
+            const deposit = Math.round(total * 0.5);
+            const balance = total - deposit;
+
+            totalEl.textContent = `KES ${total.toLocaleString()}`;
+            if (depositEl) depositEl.textContent = `KES ${deposit.toLocaleString()}`;
+            if (balanceEl) balanceEl.textContent = `KES ${balance.toLocaleString()}`;
+            if (pkgNameEl) pkgNameEl.textContent = selectedName;
+            if (timelineEl) timelineEl.textContent = selectedTime;
+
+            updateDeliverables(selectedKey);
+
+            // Generate WhatsApp conversion link with pre-filled message
+            let waMsg = `Hi Samuel, I used your website price calculator on Xclusive Tech:\n\n• Package: ${selectedName} (KES ${selectedPrice.toLocaleString()})\n• Turnaround: ${selectedTime}`;
+            if (addonsList.length > 0) {
+                waMsg += `\n• Add-ons: ${addonsList.join(', ')}`;
+            }
+            waMsg += `\n• Total: KES ${total.toLocaleString()} (50% deposit: KES ${deposit.toLocaleString()})\n• Deliverables: ${selectedKey === 'express' ? 'Landing page in 2 days' : 'Website in 7 days'}, 100% ownership & approval before final balance.\n\nCan you confirm your availability to get started?`;
+
+            waBtn.href = `https://wa.me/254722753819?text=${encodeURIComponent(waMsg)}`;
+        };
+
+        pkgCards.forEach(card => {
+            card.addEventListener('click', () => {
+                pkgCards.forEach(c => c.classList.remove('is-selected'));
+                card.classList.add('is-selected');
+
+                const radio = card.querySelector('input[type="radio"]');
+                if (radio) radio.checked = true;
+
+                selectedPrice = parseInt(card.getAttribute('data-price') || '15000', 10);
+                selectedName = card.getAttribute('data-name') || 'Express Sales Landing Page';
+                selectedTime = card.getAttribute('data-time') || '2 Days (48 Hours)';
+                selectedKey = card.getAttribute('data-pkg') || 'express';
+
+                calculate();
+            });
+        });
+
+        if (addonDomain) addonDomain.addEventListener('change', calculate);
+        if (addonMaintenance) addonMaintenance.addEventListener('change', calculate);
+
+        // Initial calculation and deliverables render
+        calculate();
     }
 
     // Utility: Store in localStorage

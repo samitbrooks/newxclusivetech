@@ -1358,10 +1358,10 @@ WhatsApp: +254 722 753 819`
 
         // TELEGRAM BOT SETTINGS & TESTING
         function loadTelegramSettings() {
-            const defaultToken = (window.TelegramTracker && window.TelegramTracker.config && window.TelegramTracker.config.botToken !== 'YOUR_TELEGRAM_BOT_TOKEN') 
+            const defaultToken = (window.TelegramTracker && window.TelegramTracker.config && window.TelegramTracker.config.botToken && window.TelegramTracker.config.botToken !== 'YOUR_TELEGRAM_BOT_TOKEN') 
                 ? window.TelegramTracker.config.botToken 
-                : "8817153493:AAGqxeH8zDv_r_mVWxjonYXIdKlrooBLWYM";
-            const defaultChatId = (window.TelegramTracker && window.TelegramTracker.config && window.TelegramTracker.config.chatId !== 'YOUR_TELEGRAM_CHAT_ID') 
+                : "";
+            const defaultChatId = (window.TelegramTracker && window.TelegramTracker.config && window.TelegramTracker.config.chatId && window.TelegramTracker.config.chatId !== 'YOUR_TELEGRAM_CHAT_ID') 
                 ? window.TelegramTracker.config.chatId 
                 : "8642131404";
 

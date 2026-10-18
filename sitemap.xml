@@ -1,754 +1,742 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Homepage -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/</loc>
-        <lastmod>2026-09-18</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <!-- Solutions Page -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/solutions</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <!-- Blog Index -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/</loc>
-        <lastmod>2026-09-18</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- Blog: GEO & AEO Explained -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/geo-and-aeo-explained-getting-found-by-ai</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Best Web Design Companies in Kenya (GEO Benchmark) -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/best-web-design-companies-in-kenya</loc>
-        <lastmod>2026-10-05</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- Blog: Website Cost in Kenya -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/how-much-does-a-website-cost-in-kenya</loc>
-        <lastmod>2026-09-18</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Blog: Social Media Management Cost in Kenya -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/how-much-does-social-media-management-cost-in-kenya</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Logistics & Transport -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-logistics-transport-companies-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Real Estate -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-real-estate-businesses-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Tour & Safari Companies -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-tour-and-safari-companies-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Insurance Agents & Brokers -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-insurance-agents-and-brokers-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Construction & Contractors -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-construction-and-contractors-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Car Dealerships -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-car-dealerships-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Driving Schools -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-driving-schools-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Photographers & Videographers -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-photographers-and-videographers-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Website vs Facebook Page -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/website-vs-facebook-page-which-does-your-business-need</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: How Long Does a Website Take -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/how-long-does-it-take-to-build-a-website-in-kenya</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: Web Design for Kiambu County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/web-design-for-businesses-in-kiambu-county</loc>
-        <lastmod>2026-09-18</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Blog: Web Design for CBOs and Community Organisations in Kenya -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/web-design-for-cbos-and-community-organisations-in-kenya</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Blog: How to Build a Successful Job Board Website in Kenya -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/how-to-build-a-successful-job-board-website-in-kenya</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Blog: Multi-Currency E-Commerce in Kenya -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/multi-currency-ecommerce-kenya-selling-to-the-diaspora</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Blog: Fresh Produce & Grocery E-Commerce in Kenya -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/fresh-produce-and-grocery-ecommerce-in-kenya-delivery-logistics</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Blog: E-Commerce Web Design for Solar & Renewable Energy Companies in Kenya -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/ecommerce-web-design-for-solar-and-renewable-energy-companies-in-kenya</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- About Page -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/about</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Services Page -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/services</loc>
-        <lastmod>2026-09-18</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- Pricing Page -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/pricing</loc>
-        <lastmod>2026-09-18</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <!-- Portfolio Page -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/portfolio</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Frostwood CRM Showcase -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/frostwoodcrm</loc>
-        <lastmod>2026-09-26</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- Founder Page -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/founder</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Contact Page -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/contact</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Privacy Policy -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/privacy</loc>
-        <lastmod>2026-10-07</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
-    <!-- Terms of Service -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/terms</loc>
-        <lastmod>2026-10-07</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
-    <!-- Blog: why-churches-and-ministries-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-churches-and-ministries-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-ngos-and-nonprofits-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-ngos-and-nonprofits-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-law-firms-need-a-professional-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-law-firms-need-a-professional-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-clinics-and-healthcare-providers-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-clinics-and-healthcare-providers-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-schools-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-schools-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-hotels-and-hospitality-businesses-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-hotels-and-hospitality-businesses-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-restaurants-and-cafes-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-restaurants-and-cafes-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-startups-need-a-professional-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-startups-need-a-professional-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-ecommerce-and-retail-businesses-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-ecommerce-and-retail-businesses-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-beauty-salons-and-spas-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-beauty-salons-and-spas-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-gyms-and-fitness-studios-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-gyms-and-fitness-studios-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-event-planners-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-event-planners-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-agriculture-and-agribusiness-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-agriculture-and-agribusiness-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-consultants-need-a-professional-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-consultants-need-a-professional-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-financial-services-and-fintech-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-financial-services-and-fintech-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-fashion-and-apparel-brands-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-fashion-and-apparel-brands-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-cosmetics-and-beauty-brands-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-cosmetics-and-beauty-brands-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Blog: why-food-and-beverage-brands-need-a-website -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/why-food-and-beverage-brands-need-a-website</loc>
-        <lastmod>2026-09-13</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
 
-    <!-- All 47 Counties Locations Hub Index -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-    <!-- Location: Mombasa County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-mombasa</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Kwale County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-kwale</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Kilifi County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-kilifi</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Tana River County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-tana-river</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Lamu County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-lamu</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Taita-Taveta County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-taita-taveta</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Garissa County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-garissa</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Wajir County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-wajir</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Mandera County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-mandera</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Marsabit County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-marsabit</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Isiolo County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-isiolo</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Meru County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-meru</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Tharaka-Nithi County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-tharaka-nithi</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Embu County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-embu</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Kitui County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-kitui</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Machakos County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-machakos</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Makueni County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-makueni</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Nyandarua County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-nyandarua</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Nyeri County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-nyeri</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Kirinyaga County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-kirinyaga</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Murang'a County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-muranga</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Kiambu County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-kiambu</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Turkana County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-turkana</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: West Pokot County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-west-pokot</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Samburu County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-samburu</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Trans Nzoia County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-trans-nzoia</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Uasin Gishu County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-uasin-gishu</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Elgeyo-Marakwet County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-elgeyo-marakwet</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Nandi County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-nandi</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Baringo County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-baringo</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Laikipia County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-laikipia</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Nakuru County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-nakuru</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Narok County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-narok</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Kajiado County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-kajiado</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Kericho County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-kericho</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Bomet County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-bomet</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Kakamega County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-kakamega</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Vihiga County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-vihiga</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Bungoma County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-bungoma</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Busia County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-busia</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Siaya County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-siaya</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Kisumu County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-kisumu</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Homa Bay County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-homa-bay</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Migori County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-migori</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Kisii County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-kisii</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Nyamira County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-nyamira</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <!-- Location: Nairobi County -->
+    
     <url>
         <loc>https://www.xclusivetech.co.ke/locations/web-design-nairobi</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- LLMs Context Specification Files -->
-    <url>
-        <loc>https://www.xclusivetech.co.ke/llms.txt</loc>
-        <lastmod>2026-10-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.xclusivetech.co.ke/llms-full.txt</loc>
-        <lastmod>2026-10-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-</urlset>
+    
+    </urlset>
