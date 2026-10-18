@@ -7220,51 +7220,247 @@ section.county-dark-intake p {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Estimator Deliverables List */
+/* Estimator Summary Card - High Contrast & Harmonious Palette */
+.estimator-summary-card {
+    background: #F8FAFC !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 20px !important;
+    padding: 24px 22px !important;
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08) !important;
+    color: #0F172A !important;
+    position: relative !important;
+}
+
+@media (min-width: 640px) {
+    .estimator-summary-card {
+        padding: 28px 26px !important;
+    }
+}
+
+.estimator-summary-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: #ECFDF5 !important;
+    border: 1px solid #A7F3D0 !important;
+    color: #065F46 !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    padding: 4px 10px !important;
+    border-radius: 9999px !important;
+    margin-bottom: 14px !important;
+}
+
+.estimator-summary-badge svg {
+    color: #059669 !important;
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.estimator-summary-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    border-bottom: 2px solid #E2E8F0 !important;
+    padding-bottom: 14px !important;
+    margin-bottom: 16px !important;
+}
+
+.estimator-summary-header .estimator-total-label {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+}
+
+.estimator-summary-header #estimator-total {
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    color: #0F172A !important;
+    letter-spacing: -0.02em !important;
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+.estimator-summary-rows {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-bottom: 18px !important;
+    font-size: 13px !important;
+}
+
+.estimator-summary-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.estimator-summary-row .row-label {
+    color: #64748B !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+.estimator-summary-row #estimator-pkg-name {
+    color: #0F172A !important;
+    font-weight: 700 !important;
+    text-align: right !important;
+    font-size: 13px !important;
+}
+
+.estimator-summary-row #estimator-timeline {
+    color: #065F46 !important;
+    background: #D1FAE5 !important;
+    border: 1px solid #A7F3D0 !important;
+    font-weight: 700 !important;
+    font-size: 12px !important;
+    padding: 2px 8px !important;
+    border-radius: 6px !important;
+}
+
+.estimator-summary-row.split-row {
+    border-top: 1px dashed #CBD5E1 !important;
+    padding-top: 10px !important;
+}
+
+.estimator-summary-row.split-row .row-label {
+    color: #334155 !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+
+.estimator-summary-row #estimator-deposit,
+.estimator-summary-row #estimator-balance {
+    color: #2563EB !important;
+    font-weight: 800 !important;
+    font-size: 15px !important;
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+/* Deliverables Card Inside Summary */
 .estimator-deliverables-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 14px;
-    padding: 14px 16px;
-    margin-bottom: 20px;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 14px !important;
+    padding: 14px 16px !important;
+    margin-bottom: 18px !important;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03) !important;
 }
 
 .estimator-deliverables-title {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #38BDF8;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: #1E293B !important;
+    margin-bottom: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.estimator-deliverables-title svg {
+    color: #2563EB !important;
+    width: 14px !important;
+    height: 14px !important;
 }
 
 .estimator-deliverables-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
 }
 
 .estimator-deliverable-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 12px;
-    line-height: 1.45;
-    color: #E2E8F0;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    color: #334155 !important;
+    font-weight: 500 !important;
 }
 
 .estimator-deliverable-item svg {
-    width: 14px;
-    height: 14px;
-    color: #10B981;
-    flex-shrink: 0;
-    margin-top: 2px;
+    width: 15px !important;
+    height: 15px !important;
+    color: #10B981 !important;
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
+}
+
+.estimator-deliverable-item.estimator-addon-item {
+    color: #1D4ED8 !important;
+    font-weight: 600 !important;
+}
+
+.estimator-deliverable-item.estimator-addon-item svg {
+    color: #2563EB !important;
+}
+
+/* Risk Reversal Banner inside Summary */
+.estimator-risk-note {
+    background: #F0FDF4 !important;
+    border: 1px solid #BBF7D0 !important;
+    border-radius: 12px !important;
+    padding: 12px 14px !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    color: #166534 !important;
+    margin-bottom: 18px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+}
+
+.estimator-risk-note svg {
+    width: 18px !important;
+    height: 18px !important;
+    color: #059669 !important;
+    flex-shrink: 0 !important;
+    margin-top: 1px !important;
+}
+
+.estimator-risk-note strong {
+    color: #14532D !important;
+    font-weight: 700 !important;
+}
+
+/* WhatsApp CTA Button */
+.estimator-whatsapp-btn {
+    width: 100% !important;
+    padding: 14px 20px !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    color: #FFFFFF !important;
+    background-color: #10B981 !important;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3) !important;
+    transition: all 0.25s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+.estimator-whatsapp-btn:hover {
+    background-color: #059669 !important;
+    box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45) !important;
+    transform: translateY(-1px) !important;
+    color: #FFFFFF !important;
+}
+
+.estimator-subtext {
+    font-size: 11px !important;
+    color: #64748B !important;
+    text-align: center !important;
+    margin-top: 8px !important;
 }
 
 /* Risk Reversal Item Alignment with SVG */

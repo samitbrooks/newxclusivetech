@@ -314,23 +314,23 @@ class XclusiveTech {
 
                             <ul class="xt-exit-checklist">
                                 <li>
-                                    <span class="xt-check-icon">✓</span>
+                                    <span class="xt-check-icon"><svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
                                     <span>Shape your vision into something smart, secure &amp; scalable.</span>
                                 </li>
                                 <li>
-                                    <span class="xt-check-icon">✓</span>
+                                    <span class="xt-check-icon"><svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
                                     <span>Talk directly with our founder about your goals.</span>
                                 </li>
                                 <li>
-                                    <span class="xt-check-icon">✓</span>
+                                    <span class="xt-check-icon"><svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
                                     <span>Define milestones and success metrics together.</span>
                                 </li>
                                 <li>
-                                    <span class="xt-check-icon">✓</span>
+                                    <span class="xt-check-icon"><svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
                                     <span>We help you pick the best stack for your project.</span>
                                 </li>
                                 <li>
-                                    <span class="xt-check-icon">✓</span>
+                                    <span class="xt-check-icon"><svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
                                     <span>A custom plan with timeline, budget &amp; solutions — free.</span>
                                 </li>
                             </ul>
@@ -363,7 +363,7 @@ class XclusiveTech {
 
                                 <!-- Badge 4: Digitally Fit '26 -->
                                 <div class="xt-exit-badge-pill xt-badge-award">
-                                    <span class="xt-badge-trophy">🏆</span>
+                                    <span class="xt-badge-trophy"><svg class="w-4 h-4 text-amber-500 fill-current" viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0 0 11 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 0 0 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg></span>
                                     <span class="xt-badge-sub font-semibold">Digitally Fit '26</span>
                                 </div>
                             </div>
@@ -385,7 +385,8 @@ class XclusiveTech {
                             <div class="xt-fast-wa-bar mb-4">
                                 <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I'd%20like%20a%20free%20website%20quote%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2 text-center shadow-lg transition-all" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important; color: #FFFFFF !important; text-decoration: none !important;">
                                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.025 0-2.031.313-2.891.893L9.9 4.504C10.742 3.74 11.853 3.3 13.05 3.3c2.969 0 5.387 2.418 5.387 5.387 0 1.197-.46 2.307-1.224 3.15l.531 1.465c.592-.689.956-1.586.956-2.615 0-2.206-1.794-4-4-4zm0 0"/></svg>
-                                    <span>⚡ Chat on WhatsApp (+254 722 753 819) — Fastest</span>
+                                    <svg class="w-4 h-4 text-emerald-200 fill-current inline-block" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                    <span>Chat via WhatsApp — Fastest Response</span>
                                 </a>
                                 <div style="display: flex; align-items: center; margin: 12px 0; color: #94A3B8; font-size: 12px; justify-content: center; gap: 8px;">
                                     <span style="height: 1px; background: #E2E8F0; flex: 1;"></span>
@@ -441,7 +442,7 @@ class XclusiveTech {
                                 </button>
 
                                 <p class="xt-exit-security-note">
-                                    🛡️ 100% Risk-Free Guarantee &bull; <strong class="xt-secure-highlight">Zero Spam. Direct Engineer Response.</strong>
+                                    <svg class="w-4 h-4 text-emerald-600 inline-block align-text-bottom mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> 100% Risk-Free Guarantee &bull; <strong class="xt-secure-highlight">Zero Spam. Direct Engineer Response.</strong>
                                 </p>
 
                                 <div id="xt-exit-feedback" class="xt-exit-feedback" style="display: none;"></div>
@@ -449,7 +450,7 @@ class XclusiveTech {
 
                             <!-- Success State -->
                             <div id="xt-exit-success" class="xt-exit-success" style="display: none;">
-                                <div class="xt-success-icon">✓</div>
+                                <div class="xt-success-icon"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
                                 <h3 class="xt-success-title">Inquiry Received!</h3>
                                 <p class="xt-success-desc">Thank you. Samuel Kidemi and our Nairobi engineering team will review your project details and respond with a custom roadmap within 2 hours.</p>
                                 <a href="https://wa.me/254722753819?text=Hi%20Samuel%2C%20I%20just%20submitted%20my%20project%20details%20on%20Xclusive%20Tech." target="_blank" rel="noopener noreferrer" class="xt-success-whatsapp-btn">
@@ -823,12 +824,14 @@ class XclusiveTech {
             if (addonMaintenance && addonMaintenance.checked) {
                 items.push('Monthly Maintenance Care Plan (Daily Cloud Backups, Security Scans & Updates)');
             }
-            deliverablesListEl.innerHTML = items.map(item => `
-                <li class="estimator-deliverable-item">
+            deliverablesListEl.innerHTML = items.map(item => {
+                const isAddon = item.includes('Domain') || item.includes('Care Plan');
+                return `
+                <li class="estimator-deliverable-item${isAddon ? ' estimator-addon-item' : ''}">
                     <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
                     <span>${item}</span>
                 </li>
-            `).join('');
+            `}).join('');
         };
 
         const calculate = () => {

@@ -1067,7 +1067,7 @@ def render_county_page(c):
                 </p>
                 <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="https://wa.me/254722753819?text={encoded_whatsapp_hero}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base shadow-lg transition-all">
-                        <span>Chat on WhatsApp (+254722753819)</span>
+                        <span>Chat via WhatsApp</span>
                     </a>
                     <a href="tel:+254722753819" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-base border border-slate-700 transition-all">
                         <span>Call Directly</span>
