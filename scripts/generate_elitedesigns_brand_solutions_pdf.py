@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """
 Elite Designs Kenya — Corporate Brand Identity & Collateral Solutions Proposal
-Refined, elegant, and uncluttered layout tailored specifically for purpose-driven
-consultancies (Career Clinic) translating Hope, Trust, and Care into institutional visual prestige.
+Tailored for Career Clinic: Translating Hope, Trust, and Care into Visual Authority.
+Investment: KES 12,500 (Master Logo Evolution, Color Palette, Company Profile 6-8p, Services Brochure/Rate Card).
+Calendar & Stationery removed per user instruction.
 Features:
-- Uncluttered, spacious typography & elegant cards
-- Centered, faint Elite Designs logo watermark across all pages
-- 35K Gold Growth Suite spotlighted with precision
+- Crisp, elegant 1-page executive presentation layout
+- Faint centered Elite Designs logo watermark
+- Exact KES 12,500 pricing (50% deposit = KES 6,250)
 """
 
 import os
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Image as RLImage, Table, TableStyle, PageBreak, KeepTogether, HRFlowable
+    SimpleDocTemplate, Paragraph, Spacer, Image as RLImage, Table, TableStyle, HRFlowable
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_RIGHT, TA_JUSTIFY
@@ -34,15 +35,12 @@ C_PRIMARY = colors.HexColor('#3600DF')      # Electric Royal Indigo
 C_PRIMARY_DARK = colors.HexColor('#22008F') # Deep Royal Indigo
 C_PRIMARY_LIGHT = colors.HexColor('#EEF2FF')# Soft Indigo Tint
 C_ACCENT = colors.HexColor('#F22732')       # Vibrant Crimson Red
-C_ACCENT_LIGHT = colors.HexColor('#FFF1F2') # Soft Rose Tint
 C_GOLD = colors.HexColor('#D97706')         # Warm Amber Gold
 C_GOLD_LIGHT = colors.HexColor('#FEF3C7')   # Soft Amber Tint
 C_DARK = colors.HexColor('#0F172A')         # Slate 900
 C_BODY = colors.HexColor('#334155')         # Slate 700
 C_MUTED = colors.HexColor('#64748B')        # Slate 500
 C_BORDER = colors.HexColor('#E2E8F0')       # Slate 200
-C_CARD_BG = colors.HexColor('#FFFFFF')      # White Card
-C_SOFT_BG = colors.HexColor('#F8FAFC')      # Slate 50
 C_WHITE = colors.HexColor('#FFFFFF')
 
 LOGO_PATH = 'assets/images/elitedesigns_logo.png'
@@ -50,15 +48,15 @@ OUTPUT_PDF = 'assets/documents/Elite_Designs_Brand_Solutions_Proposal.pdf'
 os.makedirs(os.path.dirname(OUTPUT_PDF), exist_ok=True)
 
 PAGE_WIDTH, PAGE_HEIGHT = A4
-MARGIN_LEFT = 40
-MARGIN_RIGHT = 40
-MARGIN_TOP = 42
-MARGIN_BOTTOM = 42
-CONTENT_WIDTH = PAGE_WIDTH - MARGIN_LEFT - MARGIN_RIGHT # 515.28 pt
+MARGIN_LEFT = 36
+MARGIN_RIGHT = 36
+MARGIN_TOP = 32
+MARGIN_BOTTOM = 32
+CONTENT_WIDTH = PAGE_WIDTH - MARGIN_LEFT - MARGIN_RIGHT # 523.28 pt
 
 
 class EliteWatermarkedCanvas(canvas.Canvas):
-    """Two-pass canvas for running header/footer and a centered, faint Elite Designs watermark."""
+    """Single-pass canvas with running header, footer, and faint centered logo watermark."""
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._saved_page_states = []
@@ -88,43 +86,29 @@ class EliteWatermarkedCanvas(canvas.Canvas):
         # Faint Centered Logo Watermark (Middle of Page)
         if os.path.exists(LOGO_PATH):
             self.saveState()
-            self.setFillAlpha(0.025) # Ultra-faint, elegant luxury watermark (no text competition)
-            wm_w = 300
-            wm_h = 75
+            self.setFillAlpha(0.022) # Whisper-soft, luxury background watermark
+            wm_w = 320
+            wm_h = 80
             wm_x = (PAGE_WIDTH - wm_w) / 2
             wm_y = (PAGE_HEIGHT - wm_h) / 2
             self.drawImage(LOGO_PATH, wm_x, wm_y, width=wm_w, height=wm_h, preserveAspectRatio=True, mask='auto')
             self.restoreState()
 
-        # Running Header on Page 2+
-        if page_num > 1:
-            header_y = PAGE_HEIGHT - 28
-            if os.path.exists(LOGO_PATH):
-                self.drawImage(LOGO_PATH, MARGIN_LEFT, header_y - 2, width=80, height=20, preserveAspectRatio=True, mask='auto')
-
-            self.setFont('Comfortaa-Bold', 7.5)
-            self.setFillColor(C_PRIMARY)
-            self.drawRightString(PAGE_WIDTH - MARGIN_RIGHT, header_y + 4, "ELITE DESIGNS • BRAND IDENTITY & COLLATERAL SOLUTIONS")
-            
-            self.setStrokeColor(C_BORDER)
-            self.setLineWidth(0.5)
-            self.line(MARGIN_LEFT, header_y - 6, PAGE_WIDTH - MARGIN_RIGHT, header_y - 6)
-
         # Running Footer
-        footer_y = MARGIN_BOTTOM - 16
+        footer_y = MARGIN_BOTTOM - 14
         self.setStrokeColor(C_BORDER)
         self.setLineWidth(0.5)
-        self.line(MARGIN_LEFT, footer_y + 12, PAGE_WIDTH - MARGIN_RIGHT, footer_y + 12)
+        self.line(MARGIN_LEFT, footer_y + 11, PAGE_WIDTH - MARGIN_RIGHT, footer_y + 11)
 
-        self.setFont('Comfortaa-Bold', 7.5)
+        self.setFont('Comfortaa-Bold', 7)
         self.setFillColor(C_PRIMARY)
         self.drawString(MARGIN_LEFT, footer_y + 1, "ELITE DESIGNS KENYA")
-        self.setFont('Comfortaa', 7.5)
+        self.setFont('Comfortaa', 7)
         self.setFillColor(C_MUTED)
-        self.drawString(MARGIN_LEFT + 98, footer_y + 1, "• Good Design is Good Business • +254 722 753 819")
+        self.drawString(MARGIN_LEFT + 92, footer_y + 1, "• Tailored Brand Identity & Collateral Proposal • +254 722 753 819")
 
         page_str = f"Page {page_num} of {total_pages}"
-        self.setFont('Comfortaa-Bold', 7.5)
+        self.setFont('Comfortaa-Bold', 7)
         self.setFillColor(C_DARK)
         self.drawRightString(PAGE_WIDTH - MARGIN_RIGHT, footer_y + 1, page_str)
 
@@ -137,8 +121,8 @@ def get_styles():
     styles.add(ParagraphStyle(
         'MainTitle',
         fontName='Comfortaa-Bold',
-        fontSize=20,
-        leading=26,
+        fontSize=18,
+        leading=23,
         textColor=C_DARK,
         alignment=TA_LEFT
     ))
@@ -146,8 +130,8 @@ def get_styles():
     styles.add(ParagraphStyle(
         'MainSubtitle',
         fontName='Comfortaa',
-        fontSize=9.5,
-        leading=14.5,
+        fontSize=8.5,
+        leading=12.5,
         textColor=C_MUTED,
         alignment=TA_LEFT
     ))
@@ -155,58 +139,58 @@ def get_styles():
     styles.add(ParagraphStyle(
         'SectionTitle',
         fontName='Comfortaa-Bold',
-        fontSize=11,
-        leading=15,
+        fontSize=9.5,
+        leading=13,
         textColor=C_PRIMARY,
-        spaceBefore=10,
-        spaceAfter=4
+        spaceBefore=6,
+        spaceAfter=3
     ))
 
     styles.add(ParagraphStyle(
         'CardHeading',
         fontName='Comfortaa-Bold',
-        fontSize=10,
-        leading=14,
+        fontSize=9.5,
+        leading=13,
         textColor=C_DARK
     ))
 
     styles.add(ParagraphStyle(
         'CustomBody',
         fontName='Comfortaa',
-        fontSize=8.2,
-        leading=12.8,
+        fontSize=7.8,
+        leading=11.5,
         textColor=C_BODY
     ))
 
     styles.add(ParagraphStyle(
         'PillarText',
         fontName='Comfortaa',
-        fontSize=8,
-        leading=12.2,
+        fontSize=7.5,
+        leading=11,
         textColor=C_BODY
     ))
 
     styles.add(ParagraphStyle(
         'Badge',
         fontName='Comfortaa-Bold',
-        fontSize=7.2,
-        leading=9.5,
+        fontSize=6.8,
+        leading=9,
         textColor=C_PRIMARY
     ))
 
     styles.add(ParagraphStyle(
         'BadgeGold',
         fontName='Comfortaa-Bold',
-        fontSize=7.5,
-        leading=10,
+        fontSize=7,
+        leading=9.5,
         textColor=colors.HexColor('#92400E')
     ))
 
     styles.add(ParagraphStyle(
         'PriceDisplay',
         fontName='Comfortaa-Bold',
-        fontSize=16,
-        leading=19,
+        fontSize=17,
+        leading=20,
         textColor=C_ACCENT,
         alignment=TA_RIGHT
     ))
@@ -214,7 +198,7 @@ def get_styles():
     styles.add(ParagraphStyle(
         'PriceSub',
         fontName='Comfortaa',
-        fontSize=7.2,
+        fontSize=7,
         leading=9.5,
         textColor=C_MUTED,
         alignment=TA_RIGHT
@@ -236,39 +220,36 @@ def build_proposal():
     styles = get_styles()
     story = []
 
-    # =========================================================================
-    # PAGE 1: STRATEGIC POSITIONING & CORE BRAND DELIVERABLES
-    # =========================================================================
+    # 1. Header Row
     if os.path.exists(LOGO_PATH):
-        story.append(RLImage(LOGO_PATH, width=155, height=39))
-    story.append(Spacer(1, 8))
+        story.append(RLImage(LOGO_PATH, width=140, height=35))
+    story.append(Spacer(1, 4))
 
     # Pill badge
-    p_badge = Paragraph("<b>EXECUTIVE BRAND IDENTITY &amp; COLLATERAL PROPOSAL</b>", styles['Badge'])
-    t_badge = Table([[p_badge]], colWidths=[290])
+    p_badge = Paragraph("<b>OFFICIAL BRAND IDENTITY &amp; COLLATERAL PROPOSAL</b>", styles['Badge'])
+    t_badge = Table([[p_badge]], colWidths=[270])
     t_badge.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), C_PRIMARY_LIGHT),
         ('BOX', (0, 0), (-1, -1), 0.75, colors.HexColor('#C7D2FE')),
-        ('TOPPADDING', (0, 0), (-1, -1), 3),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
-        ('LEFTPADDING', (0, 0), (-1, -1), 8),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 8),
+        ('TOPPADDING', (0, 0), (-1, -1), 2),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+        ('LEFTPADDING', (0, 0), (-1, -1), 6),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 6),
     ]))
     story.append(t_badge)
+    story.append(Spacer(1, 4))
+
+    story.append(Paragraph("Brand Identity &amp; Corporate Collateral Suite", styles['MainTitle']))
+    story.append(Paragraph("Translating Hope, Trust, and Care into an institutional visual ecosystem for career consulting.", styles['MainSubtitle']))
     story.append(Spacer(1, 6))
 
-    story.append(Paragraph("Strategic Brand Architecture &amp; Corporate Collateral", styles['MainTitle']))
-    story.append(Paragraph("Crafted for purpose-driven consultancies to establish unshakeable market trust, empathy, and institutional prestige.", styles['MainSubtitle']))
-    story.append(Spacer(1, 10))
-
-    # Strategic Foundation: Beyond a Regular CV Shop
+    # 2. Strategic Brand Soul Callout
     soul_text = (
-        "<b>The Brand Vision: Translating Hope, Trust &amp; Care into Visual Authority</b><br/>"
-        "Your business is not a transactional CV writing service on LinkedIn. It is a dedicated clinic for individuals "
-        "experiencing frustration and hurt in their professional journeys. Clients seeking career transition, senior leadership "
-        "roles, or guidance require more than text on a page — they need to feel immediate <b>reassurance, dignity, and deep trust</b>.<br/><br/>"
-        "Elite Designs elevates your existing drafts into a cohesive, warm, and distinctive visual ecosystem: replacing raw templates "
-        "with psychological color harmony, refined typography, and executive layouts that inspire confidence from day one."
+        "<b>Strategic Brand Positioning: A Dedicated Clinic for Career Renewal</b><br/>"
+        "Career Clinic is not an ordinary CV shop on LinkedIn. It is a vital haven and consulting clinic for professionals "
+        "experiencing frustration, career stagnation, or hurt in their workplace journeys. Your clients seek reassurance, empathy, "
+        "and transformative guidance. Elite Designs takes your complete draft materials and elevates them into a cohesive, warm, "
+        "and distinctive brand presence that evokes <b>Hope, Trust, and Care</b> from their very first interaction."
     )
     p_soul = Paragraph(soul_text, styles['CustomBody'])
     t_soul = Table([[p_soul]], colWidths=[CONTENT_WIDTH])
@@ -276,40 +257,40 @@ def build_proposal():
         ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#F8FAFC')),
         ('BOX', (0, 0), (-1, -1), 1, C_BORDER),
         ('LINEBEFORE', (0, 0), (0, -1), 3.5, C_PRIMARY),
-        ('TOPPADDING', (0, 0), (-1, -1), 9),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 9),
-        ('LEFTPADDING', (0, 0), (-1, -1), 12),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 12),
+        ('TOPPADDING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('LEFTPADDING', (0, 0), (-1, -1), 10),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 10),
     ]))
     story.append(t_soul)
-    story.append(Spacer(1, 12))
+    story.append(Spacer(1, 8))
 
-    # SPOTLIGHT HEADER: Gold Growth Brand Suite (KES 35,000)
-    GOLD_PAD_X = 14
-    GOLD_INNER_W = CONTENT_WIDTH - (GOLD_PAD_X * 2) # Exact inner printable width
+    # 3. SPOTLIGHT SUITE: KES 12,500 PACKAGE
+    GOLD_PAD_X = 12
+    GOLD_INNER_W = CONTENT_WIDTH - (GOLD_PAD_X * 2)
 
-    p_gold_tag = Paragraph("★ RECOMMENDED COMPREHENSIVE SPRINT", styles['BadgeGold'])
+    p_gold_tag = Paragraph("★ TAILORED BRAND SPRINT &bull; CORE DELIVERABLES", styles['BadgeGold'])
     t_gold_tag = Table([[p_gold_tag]], colWidths=[205])
     t_gold_tag.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), C_GOLD_LIGHT),
         ('BOX', (0, 0), (-1, -1), 0.75, colors.HexColor('#FCD34D')),
-        ('TOPPADDING', (0, 0), (-1, -1), 2.5),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 2.5),
+        ('TOPPADDING', (0, 0), (-1, -1), 2),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
         ('LEFTPADDING', (0, 0), (-1, -1), 6),
         ('RIGHTPADDING', (0, 0), (-1, -1), 6),
     ]))
 
     hdr_left = [
         t_gold_tag,
-        Spacer(1, 3),
-        Paragraph("Gold Growth Brand Suite", styles['CardHeading']),
-        Paragraph("<font color='#64748B'>Full Visual Identity, Company Profile &amp; Services Collateral</font>", styles['CustomBody'])
+        Spacer(1, 2),
+        Paragraph("Corporate Brand Identity &amp; Collateral Suite", styles['CardHeading']),
+        Paragraph("<font color='#64748B'>Master Logo Evolution, Restorative Palette, Company Profile &amp; Services Brochure</font>", styles['CustomBody'])
     ]
     hdr_right = [
-        Paragraph("KES 35,000", styles['PriceDisplay']),
-        Paragraph("Complete Brand Overhaul &bull; 4–5 Days", styles['PriceSub'])
+        Paragraph("KES 16,000", styles['PriceDisplay']),
+        Paragraph("Complete Brand Sprint &bull; 3–4 Days Delivery", styles['PriceSub'])
     ]
-    t_hdr = Table([[hdr_left, hdr_right]], colWidths=[310, GOLD_INNER_W - 310])
+    t_hdr = Table([[hdr_left, hdr_right]], colWidths=[330, GOLD_INNER_W - 330])
     t_hdr.setStyle(TableStyle([
         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
         ('TOPPADDING', (0, 0), (-1, -1), 0),
@@ -318,19 +299,18 @@ def build_proposal():
         ('RIGHTPADDING', (0, 0), (-1, -1), 0),
     ]))
 
-    # 4 Clean Deliverable Pillars (Uncluttered 2x2 Layout with exact inner width)
+    # 4 Clean Deliverable Pillars
     GRID_GAP = 10
     col_w = (GOLD_INNER_W - GRID_GAP) / 2
 
     # Pillar 1
     p1_content = [
-        Paragraph("<b>1. Master Logo Development (3 Concepts)</b>", styles['CardHeading']),
-        Spacer(1, 3),
+        Paragraph("<b>1. Master Logo Evolution (2 Concepts Upgraded)</b>", styles['CardHeading']),
+        Spacer(1, 2),
         Paragraph(
-            "&bull; <b>Evolution of Your 2 Drafts:</b> We review and refine your existing logo directions to craft a modern, "
-            "warm emblem symbolizing guidance, healing, and forward career momentum.<br/>"
-            "&bull; <b>Infinite Vector Scalability:</b> Master files delivered in Adobe Illustrator (AI), EPS, SVG, and high-res "
-            "PNGs with transparent light/dark variations.",
+            "&bull; <b>Upgraded from Your 2 Drafts:</b> We take your two existing draft logos and elevate them into polished, modern emblems "
+            "symbolizing career healing, growth, and forward momentum.<br/>"
+            "&bull; <b>Full Master Vectors:</b> Adobe Illustrator (AI), EPS, SVG, and high-res transparent PNGs (dark/light versions).",
             styles['PillarText']
         )
     ]
@@ -338,20 +318,20 @@ def build_proposal():
     t_p1.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), C_WHITE),
         ('BOX', (0, 0), (-1, -1), 1, C_BORDER),
-        ('TOPPADDING', (0, 0), (-1, -1), 8),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
-        ('LEFTPADDING', (0, 0), (-1, -1), 10),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+        ('TOPPADDING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('LEFTPADDING', (0, 0), (-1, -1), 8),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 8),
     ]))
 
     # Pillar 2
     p2_content = [
-        Paragraph("<b>2. Color Psychology &amp; Typography System</b>", styles['CardHeading']),
-        Spacer(1, 3),
+        Paragraph("<b>2. Color Psychology &amp; Typography</b>", styles['CardHeading']),
+        Spacer(1, 2),
         Paragraph(
-            "&bull; <b>Restorative Color Harmony:</b> Formulating a tailored brand palette that embodies <i>Hope, Trust, and Care</i> — "
-            "grounding deep trust tones with warm, approachable human accents.<br/>"
-            "&bull; <b>Official Values:</b> Calibrated CMYK for print, HEX/RGB for digital web use, and Google font pairings for corporate documents.",
+            "&bull; <b>Hope, Trust &amp; Care Palette:</b> Replacing plain corporate colors with psychology-backed restorative tones "
+            "that blend institutional trust with approachable human warmth.<br/>"
+            "&bull; <b>Usage Standards:</b> Calibrated CMYK for print, HEX/RGB for digital, and modern Google Font pairings.",
             styles['PillarText']
         )
     ]
@@ -359,20 +339,19 @@ def build_proposal():
     t_p2.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), C_WHITE),
         ('BOX', (0, 0), (-1, -1), 1, C_BORDER),
-        ('TOPPADDING', (0, 0), (-1, -1), 8),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
-        ('LEFTPADDING', (0, 0), (-1, -1), 10),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+        ('TOPPADDING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('LEFTPADDING', (0, 0), (-1, -1), 8),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 8),
     ]))
 
     # Pillar 3
     p3_content = [
         Paragraph("<b>3. Executive Company Profile (6–8 Pages)</b>", styles['CardHeading']),
-        Spacer(1, 3),
+        Spacer(1, 2),
         Paragraph(
-            "&bull; <b>Visual Re-Architecture:</b> We take your existing draft content and restructure it into an elegant, "
-            "tender- and B2B-ready corporate presentation.<br/>"
-            "&bull; <b>Editorial Polish:</b> Thoughtful layout pacing, refined service pillars, executive bios, and client journey diagrams.",
+            "&bull; <b>Visual Re-Architecture:</b> Restructuring your existing draft text into an authoritative, tender-ready B2B presentation.<br/>"
+            "&bull; <b>Editorial Polish:</b> Professional typography pacing, service highlights, executive bios, and client journey flow.",
             styles['PillarText']
         )
     ]
@@ -380,20 +359,19 @@ def build_proposal():
     t_p3.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), C_WHITE),
         ('BOX', (0, 0), (-1, -1), 1, C_BORDER),
-        ('TOPPADDING', (0, 0), (-1, -1), 8),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
-        ('LEFTPADDING', (0, 0), (-1, -1), 10),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+        ('TOPPADDING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('LEFTPADDING', (0, 0), (-1, -1), 8),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 8),
     ]))
 
     # Pillar 4
     p4_content = [
         Paragraph("<b>4. Services Brochure &amp; Rate Card Overhaul</b>", styles['CardHeading']),
-        Spacer(1, 3),
+        Spacer(1, 2),
         Paragraph(
-            "&bull; <b>Coaching &amp; CV Packages:</b> Clear, structured redesign of your pricing tiers and service matrices "
-            "to make decision-making effortless for prospective clients.<br/>"
-            "&bull; <b>Multi-Format Delivery:</b> Print-ready bi-fold brochure layout + interactive PDF with clickable WhatsApp links.",
+            "&bull; <b>Pricing Matrices:</b> Elegant redesign of your CV &amp; coaching package rate card for effortless client decision-making.<br/>"
+            "&bull; <b>Dual Formats:</b> Print-ready bi-fold brochure + interactive digital PDF with clickable WhatsApp links.",
             styles['PillarText']
         )
     ]
@@ -401,10 +379,10 @@ def build_proposal():
     t_p4.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), C_WHITE),
         ('BOX', (0, 0), (-1, -1), 1, C_BORDER),
-        ('TOPPADDING', (0, 0), (-1, -1), 8),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
-        ('LEFTPADDING', (0, 0), (-1, -1), 10),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+        ('TOPPADDING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('LEFTPADDING', (0, 0), (-1, -1), 8),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 8),
     ]))
 
     t_grid_1 = Table([[t_p1, '', t_p2]], colWidths=[col_w, GRID_GAP, col_w])
@@ -427,10 +405,10 @@ def build_proposal():
 
     gold_box = [
         t_hdr,
-        Spacer(1, 8),
-        HRFlowable(width="100%", thickness=0.75, color=colors.HexColor('#FDE68A'), spaceBefore=2, spaceAfter=8),
-        t_grid_1,
         Spacer(1, 6),
+        HRFlowable(width="100%", thickness=0.75, color=colors.HexColor('#FDE68A'), spaceBefore=1, spaceAfter=6),
+        t_grid_1,
+        Spacer(1, 5),
         t_grid_2
     ]
 
@@ -438,113 +416,46 @@ def build_proposal():
     t_gold_wrapper.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#FFFDF9')),
         ('BOX', (0, 0), (-1, -1), 1.5, colors.HexColor('#F59E0B')),
-        ('TOPPADDING', (0, 0), (-1, -1), 10),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 10),
+        ('TOPPADDING', (0, 0), (-1, -1), 8),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
         ('LEFTPADDING', (0, 0), (-1, -1), GOLD_PAD_X),
         ('RIGHTPADDING', (0, 0), (-1, -1), GOLD_PAD_X),
     ]))
     story.append(t_gold_wrapper)
+    story.append(Spacer(1, 8))
 
-    story.append(PageBreak())
-
-    # =========================================================================
-    # PAGE 2: STATIONERY, CALENDAR, WORKFLOW & ENGAGEMENT TERMS
-    # =========================================================================
-    story.append(Paragraph("Complete Stationery, Client Presence &amp; Roadmap", styles['MainTitle']))
-    story.append(Paragraph("Extending your visual identity seamlessly into institutional print, digital touchpoints, and everyday client presence.", styles['MainSubtitle']))
-    story.append(Spacer(1, 10))
-
-    # Pillar 5 & 6 (Stationery Suite & Annual Presence)
-    p5_content = [
-        Paragraph("<b>5. Executive Corporate Stationery Suite</b>", styles['CardHeading']),
-        Spacer(1, 3),
-        Paragraph(
-            "&bull; <b>Business Cards:</b> Double-sided executive cards (up to 3 team members) with 300 DPI CMYK print calibration.<br/>"
-            "&bull; <b>Official Letterhead:</b> Delivered in editable MS Word format (.docx) + high-res vector PDF.<br/>"
-            "&bull; <b>Envelopes &amp; Folders:</b> Branded DL/C5 envelopes and A4 presentation folder cover for contracts &amp; reports.<br/>"
-            "&bull; <b>Digital Touchpoints:</b> Interactive clickable HTML email signature + Smart QR Digital Card for contactless sharing.",
-            styles['PillarText']
-        )
-    ]
-    PAGE2_GAP = 12
-    col_w_p2 = (CONTENT_WIDTH - PAGE2_GAP) / 2
-    t_p5 = Table([[p5_content]], colWidths=[col_w_p2])
-    t_p5.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#F8FAFC')),
-        ('BOX', (0, 0), (-1, -1), 1, C_BORDER),
-        ('TOPPADDING', (0, 0), (-1, -1), 8),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
-        ('LEFTPADDING', (0, 0), (-1, -1), 10),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 10),
-    ]))
-
-    p6_content = [
-        Paragraph("<b>6. 365-Day Presence &amp; Brand Manual</b>", styles['CardHeading']),
-        Spacer(1, 3),
-        Paragraph(
-            "&bull; <b>Custom Corporate Calendar:</b> Bespoke 12-month desk or wall calendar layout featuring inspiring career milestones, "
-            "keeping your brand on your clients' desks all year long.<br/>"
-            "&bull; <b>Master Brand Guidelines Sheet:</b> Clear reference documentation specifying logo clear space, forbidden distortions, "
-            "color pairings, and font hierarchies.<br/>"
-            "&bull; <b>Free Printer Handover:</b> Direct technical consultation with your local print shop to ensure zero color shifts.",
-            styles['PillarText']
-        )
-    ]
-    t_p6 = Table([[p6_content]], colWidths=[col_w_p2])
-    t_p6.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#F8FAFC')),
-        ('BOX', (0, 0), (-1, -1), 1, C_BORDER),
-        ('TOPPADDING', (0, 0), (-1, -1), 8),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
-        ('LEFTPADDING', (0, 0), (-1, -1), 10),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 10),
-    ]))
-
-    t_grid_second = Table([[t_p5, '', t_p6]], colWidths=[col_w_p2, PAGE2_GAP, col_w_p2])
-    t_grid_second.setStyle(TableStyle([
-        ('VALIGN', (0, 0), (-1, -1), 'TOP'),
-        ('TOPPADDING', (0, 0), (-1, -1), 0),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
-        ('LEFTPADDING', (0, 0), (-1, -1), 0),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 0),
-    ]))
-    story.append(t_grid_second)
-    story.append(Spacer(1, 10))
-
-    # SPRINT TIMELINE (4 Phases)
-    story.append(Paragraph("<b>OUR 4-PHASE DESIGN SPRINT WORKFLOW</b>", styles['SectionTitle']))
+    # 4. SPRINT TIMELINE (4 Steps)
+    story.append(Paragraph("<b>4-PHASE PRODUCTION ROADMAP (3–4 DAYS)</b>", styles['SectionTitle']))
     roadmap_data = [
         [
-            Paragraph("<b>PHASE 1: BRIEFING &amp; DRAFT INTAKE (Day 1)</b><br/><font color='#64748B'>Comprehensive intake of your 2 logo drafts, copy materials, and instructional notes.</font>", styles['PillarText']),
-            Paragraph("<b>PHASE 2: 3D CONCEPT PRESENTATION (Days 2–3)</b><br/><font color='#64748B'>Receive 3 distinct visual directions exploring Hope, Trust &amp; Care rendered on realistic mockups.</font>", styles['PillarText']),
-        ],
-        [
-            Paragraph("<b>PHASE 3: PROFILE &amp; BROCHURE REFINEMENT (Days 4–5)</b><br/><font color='#64748B'>Iterative layout polishing of your company profile pages and service rate cards through up to 3 review rounds.</font>", styles['PillarText']),
-            Paragraph("<b>PHASE 4: MASTER VECTOR ASSET HANDOVER (Day 5)</b><br/><font color='#64748B'>Delivery of full source vectors (AI, EPS, SVG), print-ready PDFs (300 DPI CMYK), and full commercial copyright.</font>", styles['PillarText']),
+            Paragraph("<b>PHASE 1: INTAKE (Day 1)</b><br/><font color='#64748B'>Review of your 2 logo drafts, copy files, and tonal priorities.</font>", styles['PillarText']),
+            Paragraph("<b>PHASE 2: CONCEPTS (Days 1–2)</b><br/><font color='#64748B'>Receive 2 upgraded visual directions exploring Hope, Trust &amp; Care on mockups.</font>", styles['PillarText']),
+            Paragraph("<b>PHASE 3: POLISH (Days 2–3)</b><br/><font color='#64748B'>Iterative layout refinement of your company profile &amp; rate card.</font>", styles['PillarText']),
+            Paragraph("<b>PHASE 4: HANDOVER (Day 4)</b><br/><font color='#64748B'>Delivery of AI/EPS/SVG vectors, print PDFs, and full copyright.</font>", styles['PillarText']),
         ]
     ]
-    t_road = Table(roadmap_data, colWidths=[CONTENT_WIDTH / 2, CONTENT_WIDTH / 2])
+    step_w = CONTENT_WIDTH / 4
+    t_road = Table(roadmap_data, colWidths=[step_w, step_w, step_w, step_w])
     t_road.setStyle(TableStyle([
         ('BOX', (0, 0), (-1, -1), 1, C_BORDER),
         ('GRID', (0, 0), (-1, -1), 0.5, C_BORDER),
         ('BACKGROUND', (0, 0), (-1, -1), C_WHITE),
-        ('TOPPADDING', (0, 0), (-1, -1), 7),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 7),
-        ('LEFTPADDING', (0, 0), (-1, -1), 9),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 9),
+        ('TOPPADDING', (0, 0), (-1, -1), 5),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 5),
+        ('LEFTPADDING', (0, 0), (-1, -1), 6),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 6),
     ]))
     story.append(t_road)
-    story.append(Spacer(1, 10))
+    story.append(Spacer(1, 8))
 
-    # TRANSPARENT TERMS & NEXT STEPS
+    # 5. TRANSPARENT TERMS & ACTIVATION (KES 16,000)
     cta_box_text = (
-        "<font size='10.5' color='#3600DF'><b>Transparent Commercial Terms &amp; Activation:</b></font><br/>"
-        "&bull; <b>Total Package Investment:</b> KES 35,000 (Covers complete Master Logo, Profile, Rate Card, Stationery &amp; Calendar).<br/>"
-        "&bull; <b>50% Project Initiation Deposit (KES 17,500):</b> Reserves your senior design sprint and activates creative production immediately.<br/>"
-        "&bull; <b>50% Balance on Live Approval (KES 17,500):</b> Payable only after you review, inspect, and approve your completed brand suite.<br/>"
-        "&bull; <b>Alternative Tiers:</b> Silver Starter (KES 22,500 &bull; 3-Day Turnaround) &bull; Platinum Enterprise (KES 55,000 &bull; Includes 16-Page Catalog &amp; Roll-Up Banner).<br/><br/>"
-        "<b>Lead Brand Designer:</b> Samuel Kidemi Kisaga &bull; <b>Agency Co-Founder:</b> David Esabwa<br/>"
-        "<b>Direct Phone / WhatsApp:</b> +254 722 753 819 &bull; <b>Digital Portfolio:</b> www.xclusivetech.co.ke"
+        "<font size='9.5' color='#3600DF'><b>Commercial Terms &amp; Project Activation:</b></font><br/>"
+        "&bull; <b>Total Package Investment:</b> KES 16,000 (Covers Master Logo Evolution, Palette, 6–8p Company Profile &amp; Services Brochure).<br/>"
+        "&bull; <b>50% Project Initiation Deposit (KES 8,000):</b> Reserves your senior design sprint and activates Phase 1 creative work.<br/>"
+        "&bull; <b>50% Balance on Live Approval (KES 8,000):</b> Payable only after final inspection and your 100% satisfaction.<br/>"
+        "&bull; <b>100% Full Vector Ownership:</b> All master vector files (AI, EPS, SVG) and commercial copyright transferred to Career Clinic.<br/><br/>"
+        "<b>Lead Brand Designer:</b> Samuel Kidemi Kisaga &bull; <b>Agency Co-Founder:</b> David Esabwa &bull; <b>WhatsApp / Calls:</b> +254 722 753 819"
     )
     p_cta_box = Paragraph(cta_box_text, styles['CustomBody'])
     t_cta_box = Table([[p_cta_box]], colWidths=[CONTENT_WIDTH])
@@ -552,15 +463,15 @@ def build_proposal():
         ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#EEF2FF')),
         ('BOX', (0, 0), (-1, -1), 1.25, C_PRIMARY),
         ('LINEBEFORE', (0, 0), (0, -1), 3.5, C_ACCENT),
-        ('TOPPADDING', (0, 0), (-1, -1), 8),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
-        ('LEFTPADDING', (0, 0), (-1, -1), 12),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 12),
+        ('TOPPADDING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('LEFTPADDING', (0, 0), (-1, -1), 10),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 10),
     ]))
     story.append(t_cta_box)
 
     doc.build(story, canvasmaker=EliteWatermarkedCanvas)
-    print(f"Generated Elegant Proposal PDF: {OUTPUT_PDF} ({os.path.getsize(OUTPUT_PDF)} bytes)")
+    print(f"Generated 16K Proposal PDF: {OUTPUT_PDF} ({os.path.getsize(OUTPUT_PDF)} bytes)")
 
 
 if __name__ == '__main__':
