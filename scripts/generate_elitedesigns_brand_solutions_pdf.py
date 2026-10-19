@@ -88,9 +88,9 @@ class EliteWatermarkedCanvas(canvas.Canvas):
         # Faint Centered Logo Watermark (Middle of Page)
         if os.path.exists(LOGO_PATH):
             self.saveState()
-            self.setFillAlpha(0.045) # Faded, elegant agency watermark
-            wm_w = 320
-            wm_h = 80
+            self.setFillAlpha(0.025) # Ultra-faint, elegant luxury watermark (no text competition)
+            wm_w = 300
+            wm_h = 75
             wm_x = (PAGE_WIDTH - wm_w) / 2
             wm_y = (PAGE_HEIGHT - wm_h) / 2
             self.drawImage(LOGO_PATH, wm_x, wm_y, width=wm_w, height=wm_h, preserveAspectRatio=True, mask='auto')
@@ -205,8 +205,8 @@ def get_styles():
     styles.add(ParagraphStyle(
         'PriceDisplay',
         fontName='Comfortaa-Bold',
-        fontSize=18,
-        leading=22,
+        fontSize=16,
+        leading=19,
         textColor=C_ACCENT,
         alignment=TA_RIGHT
     ))
@@ -214,8 +214,8 @@ def get_styles():
     styles.add(ParagraphStyle(
         'PriceSub',
         fontName='Comfortaa',
-        fontSize=7.5,
-        leading=10.5,
+        fontSize=7.2,
+        leading=9.5,
         textColor=C_MUTED,
         alignment=TA_RIGHT
     ))
@@ -285,6 +285,9 @@ def build_proposal():
     story.append(Spacer(1, 12))
 
     # SPOTLIGHT HEADER: Gold Growth Brand Suite (KES 35,000)
+    GOLD_PAD_X = 14
+    GOLD_INNER_W = CONTENT_WIDTH - (GOLD_PAD_X * 2) # Exact inner printable width
+
     p_gold_tag = Paragraph("★ RECOMMENDED COMPREHENSIVE SPRINT", styles['BadgeGold'])
     t_gold_tag = Table([[p_gold_tag]], colWidths=[205])
     t_gold_tag.setStyle(TableStyle([
@@ -304,9 +307,9 @@ def build_proposal():
     ]
     hdr_right = [
         Paragraph("KES 35,000", styles['PriceDisplay']),
-        Paragraph("Complete Brand Overhaul &bull; 4–5 Days Turnaround", styles['PriceSub'])
+        Paragraph("Complete Brand Overhaul &bull; 4–5 Days", styles['PriceSub'])
     ]
-    t_hdr = Table([[hdr_left, hdr_right]], colWidths=[315, CONTENT_WIDTH - 315])
+    t_hdr = Table([[hdr_left, hdr_right]], colWidths=[310, GOLD_INNER_W - 310])
     t_hdr.setStyle(TableStyle([
         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
         ('TOPPADDING', (0, 0), (-1, -1), 0),
@@ -315,8 +318,9 @@ def build_proposal():
         ('RIGHTPADDING', (0, 0), (-1, -1), 0),
     ]))
 
-    # 4 Clean Deliverable Pillars (Uncluttered 2x2 Layout)
-    col_w = (CONTENT_WIDTH - 12) / 2
+    # 4 Clean Deliverable Pillars (Uncluttered 2x2 Layout with exact inner width)
+    GRID_GAP = 10
+    col_w = (GOLD_INNER_W - GRID_GAP) / 2
 
     # Pillar 1
     p1_content = [
@@ -403,7 +407,7 @@ def build_proposal():
         ('RIGHTPADDING', (0, 0), (-1, -1), 10),
     ]))
 
-    t_grid_1 = Table([[t_p1, t_p2]], colWidths=[col_w, col_w])
+    t_grid_1 = Table([[t_p1, '', t_p2]], colWidths=[col_w, GRID_GAP, col_w])
     t_grid_1.setStyle(TableStyle([
         ('VALIGN', (0, 0), (-1, -1), 'TOP'),
         ('TOPPADDING', (0, 0), (-1, -1), 0),
@@ -412,7 +416,7 @@ def build_proposal():
         ('RIGHTPADDING', (0, 0), (-1, -1), 0),
     ]))
 
-    t_grid_2 = Table([[t_p3, t_p4]], colWidths=[col_w, col_w])
+    t_grid_2 = Table([[t_p3, '', t_p4]], colWidths=[col_w, GRID_GAP, col_w])
     t_grid_2.setStyle(TableStyle([
         ('VALIGN', (0, 0), (-1, -1), 'TOP'),
         ('TOPPADDING', (0, 0), (-1, -1), 0),
@@ -436,8 +440,8 @@ def build_proposal():
         ('BOX', (0, 0), (-1, -1), 1.5, colors.HexColor('#F59E0B')),
         ('TOPPADDING', (0, 0), (-1, -1), 10),
         ('BOTTOMPADDING', (0, 0), (-1, -1), 10),
-        ('LEFTPADDING', (0, 0), (-1, -1), 12),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 12),
+        ('LEFTPADDING', (0, 0), (-1, -1), GOLD_PAD_X),
+        ('RIGHTPADDING', (0, 0), (-1, -1), GOLD_PAD_X),
     ]))
     story.append(t_gold_wrapper)
 
@@ -462,7 +466,9 @@ def build_proposal():
             styles['PillarText']
         )
     ]
-    t_p5 = Table([[p5_content]], colWidths=[col_w])
+    PAGE2_GAP = 12
+    col_w_p2 = (CONTENT_WIDTH - PAGE2_GAP) / 2
+    t_p5 = Table([[p5_content]], colWidths=[col_w_p2])
     t_p5.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#F8FAFC')),
         ('BOX', (0, 0), (-1, -1), 1, C_BORDER),
@@ -484,7 +490,7 @@ def build_proposal():
             styles['PillarText']
         )
     ]
-    t_p6 = Table([[p6_content]], colWidths=[col_w])
+    t_p6 = Table([[p6_content]], colWidths=[col_w_p2])
     t_p6.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#F8FAFC')),
         ('BOX', (0, 0), (-1, -1), 1, C_BORDER),
@@ -494,7 +500,7 @@ def build_proposal():
         ('RIGHTPADDING', (0, 0), (-1, -1), 10),
     ]))
 
-    t_grid_second = Table([[t_p5, t_p6]], colWidths=[col_w, col_w])
+    t_grid_second = Table([[t_p5, '', t_p6]], colWidths=[col_w_p2, PAGE2_GAP, col_w_p2])
     t_grid_second.setStyle(TableStyle([
         ('VALIGN', (0, 0), (-1, -1), 'TOP'),
         ('TOPPADDING', (0, 0), (-1, -1), 0),
