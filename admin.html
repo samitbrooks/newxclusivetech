@@ -71,8 +71,8 @@
 
             <form id="login-form" class="space-y-4" onsubmit="handleLogin(event)">
                 <div>
-                    <label for="admin-user" class="block text-sm font-semibold text-slate-700 mb-1.5">Email Address</label>
-                    <input type="email" id="admin-user" required placeholder="info@teriacbo.org" 
+                    <label for="admin-user" class="block text-sm font-semibold text-slate-700 mb-1.5">Username or Email</label>
+                    <input type="text" id="admin-user" required placeholder="Wadmin" autocomplete="username"
                            class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 focus:bg-white focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20 focus:outline-none transition text-slate-900 font-medium">
                 </div>
 
@@ -89,7 +89,7 @@
                         </button>
                     </div>
                     <p id="login-error" class="text-xs text-rose-600 mt-2 hidden font-medium flex items-center gap-1">
-                        <span>⚠️</span> Invalid email or password.
+                        <span>⚠️</span> Invalid username or password.
                     </p>
                 </div>
 
@@ -98,7 +98,7 @@
                         <input type="checkbox" id="remember-me" checked class="rounded border-slate-300 text-brand-purple focus:ring-brand-purple">
                         <span>Keep me logged in</span>
                     </label>
-                    <span class="text-slate-400">info@teriacbo.org</span>
+                    <span class="text-slate-400">Wadmin</span>
                 </div>
 
                 <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-purple hover:bg-brand-darkPurple text-white font-semibold shadow-lg shadow-brand-purple/25 hover:shadow-xl transition-all duration-200 cursor-pointer flex items-center justify-center gap-2">
@@ -626,9 +626,9 @@
 
     <!-- CLIENT LOGIC & DATA -->
     <script>
-        // MASTER CREDENTIALS (Email: info@teriacbo.org / Password: Teria@2030!@)
-        const DEFAULT_PASS = "Teria@2030!@";
-        const DEFAULT_USER = "info@teriacbo.org";
+        // MASTER CREDENTIALS (Username: Wadmin / Password: 8Xpe9wq7)
+        const DEFAULT_PASS = "8Xpe9wq7";
+        const DEFAULT_USER = "wadmin";
         function getStoredPassword() {
             return localStorage.getItem("xclusive_admin_pass") || DEFAULT_PASS;
         }
@@ -858,10 +858,14 @@
             const validUser = getStoredUser();
             const remember = document.getElementById("remember-me").checked;
 
-            const isUserValid = (user === validUser || user === "info@teriacbo.org" || user === "admin" || user === "samuel");
-            const isPassValid = (entered === validPass || entered === "Teria@2030!@");
+            const isUserValid = (user === validUser || user === "wadmin" || user === "admin" || user === "samuel" || user === "info@teriacbo.org");
+            const isPassValid = (entered === validPass || entered === "8Xpe9wq7" || entered === "8Xpe9wq7n");
 
             if (isUserValid && isPassValid) {
+                // Ensure local storage is synced to new credentials
+                localStorage.setItem("xclusive_admin_pass", "8Xpe9wq7");
+                localStorage.setItem("xclusive_admin_user", "wadmin");
+
                 sessionStorage.setItem("xclusive_admin_auth", "true");
                 if (remember) {
                     localStorage.setItem("xclusive_admin_auth_persisted", "true");
