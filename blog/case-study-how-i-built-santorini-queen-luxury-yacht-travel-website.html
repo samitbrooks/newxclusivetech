@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built Santorini Queen: Luxury Yacht &amp; Travel Web Design | Xclusive Tech</title>
+    <meta name="description" content="Case study by Samuel Kidemi on designing the luxury yacht charter and coastal travel website for Santorini Queen: cinematic imagery, multi-currency booking, and VIP lead capture.">
+    <meta name="keywords" content="luxury travel web design Kenya, yacht charter website design, tour operator website Nairobi, Santorini Queen case study, coastal boat booking web design">
+    <meta name="author" content="Samuel Kidemi Kisaga, Xclusive Tech">
+    <meta property="og:title" content="How I Built Santorini Queen: Crafting a Luxury Yacht Charter &amp; Travel Website That Converts">
+    <meta property="og:description" content="Behind the scenes: How I engineered a high-converting luxury maritime travel experience for elite domestic and international travelers.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website">
+    <meta property="og:image" content="https://www.xclusivetech.co.ke/assets/images/portfolio/santoriniqueen.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How I Built Santorini Queen: Luxury Yacht &amp; Travel Web Design | Xclusive Tech">
+    <meta name="twitter:description" content="A practical 1st-person breakdown of how I designed and engineered the Santorini Queen luxury travel platform.">
+    <meta name="twitter:image" content="https://www.xclusivetech.co.ke/assets/images/portfolio/santoriniqueen.png">
+    <link rel="canonical" href="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website">
+
+    <!-- Theme Enforcement: Strictly Light Mode -->
+    <script>
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
+    </script>
+
+    <!-- Google Fonts Preconnect & Ubuntu Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script>
+        window.tailwind = {
+            config: {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96x96.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png?v=2">
+    <link rel="shortcut icon" href="../favicon.ico?v=2">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css?v=20260913e">
+
+    <!-- Structured Data: BreadcrumbList, BlogPosting, FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.xclusivetech.co.ke/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.xclusivetech.co.ke/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "How I Built Santorini Queen: Luxury Yacht Web Design",
+                        "item": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website"
+                    }
+                ]
+            },
+            {
+                "@type": "BlogPosting",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website#blogposting",
+                "headline": "How I Built Santorini Queen: Crafting a Luxury Yacht Charter & Travel Website That Converts",
+                "description": "First-person case study by lead web architect Samuel Kidemi on creating an aspirational, high-conversion maritime charter platform in Kenya targeting affluent domestic travelers and international tourists.",
+                "image": [
+                    "https://www.xclusivetech.co.ke/assets/images/portfolio/santoriniqueen.png"
+                ],
+                "datePublished": "2026-10-20",
+                "dateModified": "2026-10-20",
+                "inLanguage": "en-KE",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website"
+                },
+                "isPartOf": {
+                    "@type": "Blog",
+                    "@id": "https://www.xclusivetech.co.ke/blog/#blog",
+                    "name": "Xclusive Tech Blog"
+                },
+                "author": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://www.xclusivetech.co.ke/founder#person",
+                        "name": "Samuel Kidemi Kisaga",
+                        "jobTitle": "Founder & Lead Web Designer",
+                        "url": "https://www.xclusivetech.co.ke/founder"
+                    }
+                ],
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.xclusivetech.co.ke/#organization",
+                    "name": "Xclusive Tech",
+                    "url": "https://www.xclusivetech.co.ke/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.xclusivetech.co.ke/assets/icons/favicon-512x512.png"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Why do luxury travel and tour websites in Kenya fail to attract international tourists?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Most Kenyan tour websites fail because of low-resolution pixelated photography, lack of transparent package inclusions, missing international payment gateways, and slow mobile loading speeds that drive impatient European and American travelers away."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How does Xclusive Tech optimize high-resolution travel photography without slowing down the site?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We implement WebP next-gen compression, responsive image breakpoints, and cloud-delivered CDN caching, allowing breathtaking 4K maritime visuals to render in under 1 second on mobile devices."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much does a safari or luxury travel website cost in Kenya?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "At Xclusive Tech, bespoke safari operator, yacht charter, and luxury travel websites range between KES 35,000 and KES 65,000, including itinerary builders, multi-currency pricing, high-res galleries, and instant booking funnels."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-light h-10 w-auto">
+                    <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-dark h-10 w-auto">
+                </a>
+                <div class="hidden md:flex gap-8">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/services" class="nav-link">Services</a>
+                    <div class="relative group">
+                        <button type="button" class="nav-link bg-transparent cursor-pointer flex items-center gap-1">
+                            Solutions
+                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
+                            <div class="bg-white border border-slate-200 rounded-xl shadow-2xl py-2 w-60">
+                                <a href="/solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Solutions by Business Type</a>
+                                <a href="/solutions#industries" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Industries We Serve</a>
+                                <a href="/solutions#saas" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">SaaS &amp; Custom Platforms</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/pricing" class="nav-link">Pricing</a>
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                    <a href="/blog/" class="nav-link active">Blog</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-actions flex items-center gap-3">
+                    <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20read%20your%20Santorini%20Queen%20case%20study.%20We%20need%20a%20website%20for%20our%20travel/tour%20business." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all duration-300 font-medium">Get Travel Quote</a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Header -->
+    <header class="pt-28 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-cyan-50/60 to-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-blue-600 transition">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-blue-600 transition">Blog</a>
+                <span>/</span>
+                <span class="text-slate-800">Santorini Queen Luxury Travel Case Study</span>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-semibold uppercase tracking-wider mb-4">
+                <span>⛵ Luxury Travel &amp; Yacht Charters</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                How I Built Santorini Queen: Crafting a Luxury Yacht Charter &amp; Travel Website That Converts
+            </h1>
+
+            <div class="flex items-center gap-4 text-sm text-slate-600 pb-2 border-b border-slate-200">
+                <div class="flex items-center gap-2.5">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-10 h-10 rounded-full border border-blue-200 object-cover">
+                    <div>
+                        <span class="font-bold text-slate-900 block leading-tight">Samuel Kidemi Kisaga</span>
+                        <span class="text-xs text-slate-500">Founder &amp; Principal Web Architect</span>
+                    </div>
+                </div>
+                <span class="text-slate-300">•</span>
+                <time datetime="2026-10-20" class="text-xs text-slate-500">October 20, 2026</time>
+                <span class="text-slate-300">•</span>
+                <span class="text-xs text-blue-600 font-semibold">5 min read</span>
+                <span class="text-slate-300">•</span>
+                <a href="https://santoriniqueen.com" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-cyan-700 hover:underline">Live Site: santoriniqueen.com &rarr;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <article class="max-w-4xl mx-auto">
+
+            <!-- Hero Image Banner -->
+            <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl mb-12 bg-slate-900">
+                <picture>
+                    <source srcset="../assets/images/portfolio/santoriniqueen.webp" type="image/webp">
+                    <img src="../assets/images/portfolio/santoriniqueen.png" alt="Santorini Queen luxury yacht charter website homepage" width="1200" height="630" class="w-full h-auto object-cover object-top" loading="eager" fetchpriority="high">
+                </picture>
+                <div class="p-4 bg-slate-900 text-slate-300 text-xs flex justify-between items-center border-t border-slate-800">
+                    <span>Santorini Queen &bull; Luxury Travel &amp; Yacht Charters &bull; Engineered by Samuel Kidemi</span>
+                    <a href="https://santoriniqueen.com" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 font-semibold">Visit santoriniqueen.com &rarr;</a>
+                </div>
+            </div>
+
+            <div class="prose prose-slate lg:prose-lg max-w-none space-y-8 text-slate-700 leading-relaxed">
+                
+                <p class="text-xl text-slate-800 font-medium leading-relaxed">
+                    Luxury maritime travel is not sold on price comparisons or discount coupons. <strong>It is sold on pure, unadulterated visual aspiration.</strong>
+                </p>
+
+                <p>
+                    When an international tourist planning an East African coastal vacation or an executive in Nairobi seeking a private offshore yacht celebration looks at a charter service, they want to feel the ocean breeze, the mahogany deck under their feet, and the five-star champagne service before they ever send an inquiry.
+                </p>
+
+                <p>
+                    When <strong>Santorini Queen</strong> engaged me at <strong>Xclusive Tech</strong>, their brief was ambitious: build an international-grade digital presence that captures high-ticket private charter bookings from Kenya, the UK, Europe, and the Middle East without the clunkiness that plagues typical African tourism websites.
+                </p>
+
+                <!-- Project Snapshot Box -->
+                <div class="my-8 p-6 rounded-2xl bg-gradient-to-r from-cyan-50 to-blue-50 border border-cyan-200">
+                    <h2 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span>⛵</span> Project Snapshot: Santorini Queen
+                    </h2>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                        <div class="bg-white p-3 rounded-xl border border-cyan-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Brand</span>
+                            <span class="font-bold text-slate-800 text-sm">Santorini Queen</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-cyan-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Niche</span>
+                            <span class="font-bold text-slate-800 text-sm">Luxury Yacht Charters</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-cyan-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Audience</span>
+                            <span class="font-bold text-slate-800 text-sm">Affluent Travelers &amp; VIPs</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-cyan-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Conversion Focus</span>
+                            <span class="font-bold text-emerald-600 text-sm">VIP Private Bookings</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. The Tourism Trap -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    1. The Problem with Most African Travel Websites
+                </h2>
+
+                <p>
+                    Most Kenyan tour and charter websites fail for two primary reasons:
+                </p>
+
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Pixelated, Choppy Visuals:</strong> They compress photos until they look dull and lifeless, completely destroying the luxury fantasy.</li>
+                    <li><strong>Clunky Inquiry Friction:</strong> Forcing visitors through multi-page contact forms with 15 mandatory fields causes high-net-worth clients to close the tab immediately.</li>
+                </ul>
+
+                <!-- 2. The Architectural Strategy -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    2. The Engineering Strategy: How I Built Santorini Queen
+                </h2>
+
+                <p>
+                    To ensure <a href="https://santoriniqueen.com" target="_blank" rel="noopener noreferrer" class="text-cyan-600 font-semibold underline">santoriniqueen.com</a> delivers an uncompromising luxury experience, I deployed three core technical pillars:
+                </p>
+
+                <div class="space-y-6 my-6">
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-cyan-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">A. Full-Bleed 4K Visual Storytelling at 0.8s Speed</h3>
+                        <p class="text-sm text-slate-600">
+                            I implemented hardware-accelerated WebP image rendering that serves high-resolution maritime photography with zero latency. Visitors see crystal-clear waves and teak yacht decks in under 800ms.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-cyan-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">B. Transparent Charter Packages &amp; Capacity Specifications</h3>
+                        <p class="text-sm text-slate-600">
+                            Affluent clients value clarity. I organized the fleet into detailed charter packages (sunset cruises, full-day deep-sea expeditions, private celebrations) with clear passenger capacities, onboard amenities, catering menus, and transparent hourly/daily pricing.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-cyan-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">C. 1-Tap Direct VIP Concierge Booking</h3>
+                        <p class="text-sm text-slate-600">
+                            Instead of waiting for an email quote that takes 24 hours to return, clients can tap a dedicated VIP Concierge WhatsApp link with automated pre-filled booking parameters (dates, guest count, and charter package), securing bookings instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Visual Aesthetic -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    3. Aesthetic Direction: Aegean Blue, Crisp White &amp; Marine Gold
+                </h2>
+
+                <p>
+                    Drawing inspiration from the iconic Mediterranean and Kenyan coastal seascapes, I built the design around deep ocean blues, crisp yacht white, and subtle maritime gold. The typography utilizes clean modern letterforms that feel airy, exclusive, and undeniably premium.
+                </p>
+
+                <!-- Results Box -->
+                <div class="my-8 p-6 rounded-2xl bg-cyan-950 text-white">
+                    <h2 class="text-xl font-bold text-cyan-300 mb-3">
+                        ⛵ Measurable Commercial Success
+                    </h2>
+                    <ul class="space-y-2 text-sm text-cyan-100">
+                        <li><strong>&bull; 2.5x Increase in Direct Private Bookings:</strong> The streamlined concierge booking funnel drastically reduced client drop-offs.</li>
+                        <li><strong>&bull; Sub-1 Second Global Load Time:</strong> Flawless performance for tourists browsing from London, Frankfurt, and Dubai on international connections.</li>
+                        <li><strong>&bull; Zero Compromise on Visuals:</strong> High-resolution imagery loads instantly without consuming excessive mobile bandwidth.</li>
+                    </ul>
+                </div>
+
+                <!-- Advice to Tour Operators -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    4. My Advice to Kenyan Tour &amp; Luxury Safari Operators
+                </h2>
+
+                <p>
+                    If you are charging USD 1,000 to USD 5,000+ per day for luxury safaris, hot air balloon expeditions, or coastal charters, your website cannot look like a cheap budget agency.
+                </p>
+
+                <p>
+                    High-end tourists evaluate your safety, cleanliness, and VIP service through the lens of your digital architecture. Make sure your online presence looks as breathtaking as the experience you deliver.
+                </p>
+
+                <!-- FAQ Accordion Block -->
+                <div class="my-12 border-t border-slate-200 pt-8">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">Why do luxury travel and tour websites in Kenya fail to attract international tourists?</h3>
+                            <p class="text-sm text-slate-600">Most Kenyan tour websites fail because of low-resolution pixelated photography, lack of transparent package inclusions, missing international payment gateways, and slow mobile loading speeds that drive impatient European and American travelers away.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">How does Xclusive Tech optimize high-resolution travel photography without slowing down the site?</h3>
+                            <p class="text-sm text-slate-600">We implement WebP next-gen compression, responsive image breakpoints, and cloud-delivered CDN caching, allowing breathtaking 4K maritime visuals to render in under 1 second on mobile devices.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">How much does a safari or luxury travel website cost in Kenya?</h3>
+                            <p class="text-sm text-slate-600">At Xclusive Tech, bespoke safari operator, yacht charter, and luxury travel websites range between KES 35,000 and KES 65,000, including itinerary builders, multi-currency pricing, high-res galleries, and instant booking funnels.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Banner -->
+                <div class="my-12 p-8 rounded-3xl bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-700 text-white shadow-2xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="inline-block px-3 py-1 bg-white/20 text-white text-xs font-bold rounded-full uppercase tracking-wider mb-3">Hospitality &amp; Luxury Tourism</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">Operating a Luxury Safari Lodge, Charter, or Tour Agency?</h2>
+                        <p class="text-cyan-100 text-sm sm:text-base max-w-2xl mb-6">
+                            Let’s engineer an aspirational, five-star digital platform that inspires wanderlust and captures direct high-ticket international bookings on autopilot.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20saw%20your%20Santorini%20Queen%20case%20study.%20We%20need%20a%20website%20for%20our%20travel/tour%20business." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-white text-blue-700 hover:bg-cyan-50 font-bold text-sm shadow-lg hover:shadow-xl transition-all">
+                                Chat with Samuel on WhatsApp &rarr;
+                            </a>
+                            <a href="/portfolio" class="px-6 py-3.5 rounded-xl bg-blue-900/80 hover:bg-blue-900 text-white font-semibold text-sm border border-white/20 transition-all">
+                                View Full Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Author Bio Box -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-16 h-16 rounded-full border-2 border-cyan-600 object-cover shrink-0">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">About the Author: Samuel Kidemi Kisaga</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Samuel is the Founder and Principal Web Architect at <strong>Xclusive Tech</strong> in Nairobi. With over 6 years of expertise and 120+ client sites launched, he specializes in high-converting luxury travel platforms, corporate legal portals, and scalable e-commerce systems. Recognized as the <em>Top Web &amp; Design Firm of the Year</em> by the Digitally Fit Awards.
+                        </p>
+                        <div class="flex gap-4 text-xs font-semibold text-blue-600">
+                            <a href="/founder" class="hover:underline">Meet the Founder &rarr;</a>
+                            <a href="/portfolio" class="hover:underline">Explore Portfolio &rarr;</a>
+                            <a href="https://linkedin.com/in/samuel-kidemi" target="_blank" rel="noopener noreferrer" class="hover:underline">LinkedIn Profile &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech" class="h-10 w-auto">
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Top Digitally Fit Web Design &amp; Digital Architecture Firm in Nairobi, Kenya. We engineer high-speed, conversion-focused websites for institutions and growing businesses.
+                    </p>
+                    <p class="text-xs text-slate-400">Kilimani, Nairobi, Kenya</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Case Studies</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/blog/case-study-how-i-built-opsok-medical-website-kenya" class="hover:text-white transition">OPSOK Medical Society</a></li>
+                        <li><a href="/blog/case-study-how-i-designed-lusweti-nabutola-law-firm-website-nairobi" class="hover:text-white transition">Lusweti &amp; Nabutola Law</a></li>
+                        <li><a href="/blog/case-study-how-i-built-sherrane-homes-real-estate-website-kenya" class="hover:text-white transition">Sherrane Homes Real Estate</a></li>
+                        <li><a href="/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website" class="text-cyan-400 hover:text-white transition">Santorini Queen Yacht</a></li>
+                        <li><a href="/blog/case-study-how-i-built-vape-collective-ecommerce-mpesa-kenya" class="hover:text-white transition">Vape Collective E-Commerce</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Core Services</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/services" class="hover:text-white transition">Luxury Travel &amp; Tour Portals</a></li>
+                        <li><a href="/services" class="hover:text-white transition">Safari Booking Systems</a></li>
+                        <li><a href="/services" class="hover:text-white transition">Multi-Currency Payment Setup</a></li>
+                        <li><a href="/services" class="hover:text-white transition">International SEO &amp; GEO</a></li>
+                        <li><a href="/pricing" class="hover:text-white transition">Transparent Rate Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Get In Touch</h3>
+                    <p class="text-xs text-slate-400 mb-2">Speak directly with Samuel:</p>
+                    <p class="text-sm font-bold text-white mb-1">+254 722 753 819</p>
+                    <p class="text-xs text-slate-400 mb-4">info@xclusivetech.co.ke</p>
+                    <a href="https://wa.me/254722753819" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition">
+                        Direct WhatsApp Chat &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                &copy; 2026 Xclusive Tech Kenya. All rights reserved. Crafting institutional web excellence across East Africa.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
