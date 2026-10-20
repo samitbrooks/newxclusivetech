@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built Maluki Bespoke: Engineering a Luxury Tailoring & African Couture Website | Xclusive Tech</title>
+    <meta name="description" content="Case study by Samuel Kidemi on designing and engineering Maluki Bespoke: luxury men's tailoring, digital fabric swatches, VIP fitting bookings, and diaspora wedding orders in Kenya.">
+    <meta name="keywords" content="luxury fashion web design Kenya, bespoke tailoring website Nairobi, wedding suit website Nairobi, Maluki Bespoke case study, fashion ecommerce developer Kenya">
+    <meta name="author" content="Samuel Kidemi Kisaga, Xclusive Tech">
+    <meta property="og:title" content="How I Built Maluki Bespoke: Engineering a Luxury Tailoring & African Couture Website">
+    <meta property="og:description" content="Inside look at how I designed and engineered Maluki Bespoke: high-ticket sartorial craftsmanship, digital lookbooks, and VIP fitting appointments in Nairobi.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-maluki-bespoke-luxury-tailoring-fashion-website">
+    <meta property="og:image" content="https://www.xclusivetech.co.ke/assets/images/portfolio/malukibespoke.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How I Built Maluki Bespoke: Luxury Tailoring Case Study | Xclusive Tech">
+    <meta name="twitter:description" content="How Samuel Kidemi designed an exclusive digital atelier for one of Nairobi's premier bespoke gentlemen's tailoring houses.">
+    <meta name="twitter:image" content="https://www.xclusivetech.co.ke/assets/images/portfolio/malukibespoke.png">
+    <link rel="canonical" href="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-maluki-bespoke-luxury-tailoring-fashion-website">
+
+    <!-- Theme Enforcement: Strictly Light Mode -->
+    <script>
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
+    </script>
+
+    <!-- Google Fonts Preconnect & Ubuntu Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script>
+        window.tailwind = {
+            config: {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96x96.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png?v=2">
+    <link rel="shortcut icon" href="../favicon.ico?v=2">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css?v=20260913e">
+
+    <!-- Structured Data: BreadcrumbList, BlogPosting, FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-maluki-bespoke-luxury-tailoring-fashion-website#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.xclusivetech.co.ke/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.xclusivetech.co.ke/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "How I Built Maluki Bespoke: Fashion Case Study",
+                        "item": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-maluki-bespoke-luxury-tailoring-fashion-website"
+                    }
+                ]
+            },
+            {
+                "@type": "BlogPosting",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-maluki-bespoke-luxury-tailoring-fashion-website#blogposting",
+                "headline": "How I Built Maluki Bespoke: Engineering a Luxury Tailoring & African Couture Website",
+                "description": "A comprehensive case study by Samuel Kidemi on crafting the digital presence for Maluki Bespoke: high-resolution fabric lookbooks, VIP consultation scheduling, and diaspora wedding order funnels.",
+                "image": [
+                    "https://www.xclusivetech.co.ke/assets/images/portfolio/malukibespoke.png"
+                ],
+                "datePublished": "2026-10-20",
+                "dateModified": "2026-10-20",
+                "inLanguage": "en-KE",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-maluki-bespoke-luxury-tailoring-fashion-website"
+                },
+                "isPartOf": {
+                    "@type": "Blog",
+                    "@id": "https://www.xclusivetech.co.ke/blog/#blog",
+                    "name": "Xclusive Tech Blog"
+                },
+                "author": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://www.xclusivetech.co.ke/founder#person",
+                        "name": "Samuel Kidemi Kisaga",
+                        "jobTitle": "Founder & Lead Web Designer",
+                        "url": "https://www.xclusivetech.co.ke/founder"
+                    }
+                ],
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.xclusivetech.co.ke/#organization",
+                    "name": "Xclusive Tech",
+                    "url": "https://www.xclusivetech.co.ke/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.xclusivetech.co.ke/assets/icons/favicon-512x512.png"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-maluki-bespoke-luxury-tailoring-fashion-website#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How do you sell custom bespoke tailoring online without in-person measurements?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "By combining interactive measurement guide videos with self-measurement input forms, high-resolution fabric texture swatches (wool super 120s, linen, cashmere, African jacquards), and direct video consultation appointments with the master tailor."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why do high-end fashion brands in Kenya need custom web engineering instead of generic templates?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Luxury clients buying bespoke suits for KES 45,000 to KES 150,000 expect exclusivity. Generic Shopify or WordPress templates look like cheap dropshipping stores. A custom editorial aesthetic with micro-animations and typography creates the sensory prestige of entering a private Savile Row atelier."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much does a luxury fashion or bespoke brand website cost in Kenya?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "At Xclusive Tech, bespoke fashion and luxury apparel websites range between KES 35,000 and KES 70,000, including editorial lookbooks, fitting appointment schedulers, and multi-currency diaspora payment options."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-light h-10 w-auto">
+                    <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-dark h-10 w-auto">
+                </a>
+                <div class="hidden md:flex gap-8">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/services" class="nav-link">Services</a>
+                    <div class="relative group">
+                        <button type="button" class="nav-link bg-transparent cursor-pointer flex items-center gap-1">
+                            Solutions
+                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
+                            <div class="bg-white border border-slate-200 rounded-xl shadow-2xl py-2 w-60">
+                                <a href="/solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Solutions by Business Type</a>
+                                <a href="/solutions#industries" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Industries We Serve</a>
+                                <a href="/solutions#saas" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">SaaS &amp; Custom Platforms</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/pricing" class="nav-link">Pricing</a>
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                    <a href="/blog/" class="nav-link active">Blog</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-actions flex items-center gap-3">
+                    <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20read%20your%20Maluki%20Bespoke%20case%20study.%20We%20need%20a%20luxury%20website%20for%20our%20fashion/apparel%20brand." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-stone-800 text-white hover:bg-stone-900 shadow-md transition-all duration-300 font-medium">Get Fashion Quote</a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Header -->
+    <header class="pt-28 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-stone-50 to-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-blue-600 transition">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-blue-600 transition">Blog</a>
+                <span>/</span>
+                <span class="text-slate-800">Maluki Bespoke Luxury Tailoring Case Study</span>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-200 text-stone-800 text-xs font-semibold uppercase tracking-wider mb-4">
+                <span>✂️ Luxury Fashion &amp; African Couture</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                How I Built Maluki Bespoke: Engineering a Luxury Tailoring &amp; African Couture Website
+            </h1>
+
+            <div class="flex items-center gap-4 text-sm text-slate-600 pb-2 border-b border-slate-200">
+                <div class="flex items-center gap-2.5">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-10 h-10 rounded-full border border-blue-200 object-cover">
+                    <div>
+                        <span class="font-bold text-slate-900 block leading-tight">Samuel Kidemi Kisaga</span>
+                        <span class="text-xs text-slate-500">Founder &amp; Principal Web Architect</span>
+                    </div>
+                </div>
+                <span class="text-slate-300">•</span>
+                <time datetime="2026-10-20" class="text-xs text-slate-500">October 20, 2026</time>
+                <span class="text-slate-300">•</span>
+                <span class="text-xs text-stone-700 font-semibold">5 min read</span>
+                <span class="text-slate-300">•</span>
+                <a href="https://malukibespoke.com" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-stone-800 hover:underline">Live Site: malukibespoke.com &rarr;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <article class="max-w-4xl mx-auto">
+
+            <!-- Hero Image Banner -->
+            <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl mb-12 bg-slate-900">
+                <picture>
+                    <source srcset="../assets/images/portfolio/malukibespoke.webp" type="image/webp">
+                    <img src="../assets/images/portfolio/malukibespoke.png" alt="Maluki Bespoke luxury tailoring website homepage screenshot" width="1200" height="630" class="w-full h-auto object-cover object-top" loading="eager" fetchpriority="high">
+                </picture>
+                <div class="p-4 bg-slate-900 text-slate-300 text-xs flex justify-between items-center border-t border-slate-800">
+                    <span>Maluki Bespoke &bull; Custom Men's Suits &amp; Contemporary African Couture &bull; Engineered by Samuel Kidemi</span>
+                    <a href="https://malukibespoke.com" target="_blank" rel="noopener noreferrer" class="text-amber-300 hover:text-amber-200 font-semibold">Visit malukibespoke.com &rarr;</a>
+                </div>
+            </div>
+
+            <div class="prose prose-slate lg:prose-lg max-w-none space-y-8 text-slate-700 leading-relaxed">
+                
+                <p class="text-xl text-slate-800 font-medium leading-relaxed">
+                    A custom three-piece tuxedo or handcrafted African luxury Kaftan is not an everyday impulse buy. <strong>It is an investment in personal prestige, milestone celebrations, and boardroom authority.</strong>
+                </p>
+
+                <p>
+                    When the master clothier behind <strong>Maluki Bespoke</strong> came to me at <strong>Xclusive Tech</strong>, their suits were already gracing corporate leaders, diplomats, and groom parties across Nairobi. But their digital presence did not match their tailoring standard. They needed a digital atelier that mirrors the sensory refinement of a private fitting lounge—capturing local high-profile clientele and Kenyan diaspora wedding parties ordering from London, Atlanta, and Toronto.
+                </p>
+
+                <!-- Project Snapshot Box -->
+                <div class="my-8 p-6 rounded-2xl bg-gradient-to-r from-stone-100 to-amber-50 border border-stone-300">
+                    <h2 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span>✂️</span> Project Snapshot: Maluki Bespoke
+                    </h2>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                        <div class="bg-white p-3 rounded-xl border border-stone-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Brand</span>
+                            <span class="font-bold text-slate-800 text-sm">Maluki Bespoke</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-stone-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Niche</span>
+                            <span class="font-bold text-slate-800 text-sm">Luxury Men's Tailoring</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-stone-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Audience</span>
+                            <span class="font-bold text-stone-800 text-sm">Executives &amp; Wedding Parties</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-stone-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Conversion Focus</span>
+                            <span class="font-bold text-amber-700 text-sm">VIP Fitting Bookings</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. The Luxury Fashion Hurdle -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    1. Why Typical E-Commerce Fails for Custom Tailoring
+                </h2>
+
+                <p>
+                    You cannot sell bespoke garments through an ordinary "Add to Cart" button:
+                </p>
+
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>No Off-The-Rack Sizes:</strong> A bespoke client does not select "Medium" or "Size 42". Every jacket is hand-cut to their exact shoulder slope, posture, and chest circumference.</li>
+                    <li><strong>Tactile Material Doubt:</strong> Buyers need to understand fabric weights (320g Italian wool vs 220g Irish linen) and see intricate lapel stitching.</li>
+                    <li><strong>Diaspora Coordination Headaches:</strong> Wedding groomsmen spread across the UK and the US need a streamlined way to submit measurements without flying to Nairobi months before the ceremony.</li>
+                </ul>
+
+                <!-- 2. The Architectural Strategy -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    2. The Engineering Strategy: How I Built Maluki Bespoke
+                </h2>
+
+                <p>
+                    To capture high-ticket bespoke commissions, I engineered three primary modules:
+                </p>
+
+                <div class="space-y-6 my-6">
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-stone-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">A. Editorial Lookbooks with Macro Fabric Detailing</h3>
+                        <p class="text-sm text-slate-600">
+                            I implemented a high-resolution, hardware-accelerated gallery showcasing peak lapels, horn buttons, silk interior linings, and African embroidery details. The photography renders in sub-second speeds using responsive WebP containers.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-stone-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">B. VIP Fitting &amp; Consultation Booking Funnel</h3>
+                        <p class="text-sm text-slate-600">
+                            Clients can schedule an in-person measurement appointment at the Nairobi atelier or request a private home/office VIP visit. The booking calendar syncs directly to WhatsApp with pre-filled preferences (event date, suit style, and fabric interest).
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-stone-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">C. Digital Diaspora Measurement Submission Guide</h3>
+                        <p class="text-sm text-slate-600">
+                            For diaspora weddings, I created a visual self-measurement tutorial with illustrated steps for chest, sleeve, waist, and inseam. Clients submit their measurements digitally, allowing garments to be cut and tailored with pinpoint accuracy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Measurable Impact -->
+                <div class="my-8 p-6 rounded-2xl bg-stone-900 text-white">
+                    <h2 class="text-xl font-bold text-amber-300 mb-3">
+                        ✂️ Measurable Commercial Results
+                    </h2>
+                    <ul class="space-y-2 text-sm text-stone-200">
+                        <li><strong>&bull; 4x Increase in Diaspora Wedding Enquiries:</strong> The digital measurement submission funnel unlocked a flood of lucrative wedding party orders from the UK and US.</li>
+                        <li><strong>&bull; 75% Reduction in Consultation No-Shows:</strong> Automated WhatsApp calendar reminders ensured booked fittings were attended punctually.</li>
+                        <li><strong>&bull; Uncompromising Elegance:</strong> Built on a minimalist stone-and-charcoal color palette that elevates brand prestige above standard commercial tailors.</li>
+                    </ul>
+                </div>
+
+                <!-- FAQ Accordion Block -->
+                <div class="my-12 border-t border-slate-200 pt-8">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">How do you sell custom bespoke tailoring online without in-person measurements?</h3>
+                            <p class="text-sm text-slate-600">By combining interactive measurement guide videos with self-measurement input forms, high-resolution fabric texture swatches (wool super 120s, linen, cashmere, African jacquards), and direct video consultation appointments with the master tailor.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">Why do high-end fashion brands in Kenya need custom web engineering instead of generic templates?</h3>
+                            <p class="text-sm text-slate-600">Luxury clients buying bespoke suits for KES 45,000 to KES 150,000 expect exclusivity. Generic Shopify or WordPress templates look like cheap dropshipping stores. A custom editorial aesthetic with micro-animations and typography creates the sensory prestige of entering a private Savile Row atelier.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">How much does a luxury fashion or bespoke brand website cost in Kenya?</h3>
+                            <p class="text-sm text-slate-600">At Xclusive Tech, bespoke fashion and luxury apparel websites range between KES 35,000 and KES 70,000, including editorial lookbooks, fitting appointment schedulers, and multi-currency diaspora payment options.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Banner -->
+                <div class="my-12 p-8 rounded-3xl bg-gradient-to-r from-stone-800 via-neutral-800 to-stone-900 text-white shadow-2xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="inline-block px-3 py-1 bg-white/20 text-white text-xs font-bold rounded-full uppercase tracking-wider mb-3">Luxury &amp; Fashion Web Engineering</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">Own a High-End Fashion Brand or Couture House in Kenya?</h2>
+                        <p class="text-stone-300 text-sm sm:text-base max-w-2xl mb-6">
+                            Let’s engineer a visually breathtaking digital atelier that commands premium pricing, attracts international clientele, and showcases your sartorial craftsmanship.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20saw%20your%20Maluki%20Bespoke%20case%20study.%20We%20need%20a%20website%20for%20our%20fashion/couture%20brand." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-stone-900 font-bold text-sm shadow-lg hover:shadow-xl transition-all">
+                                Chat with Samuel on WhatsApp &rarr;
+                            </a>
+                            <a href="/portfolio" class="px-6 py-3.5 rounded-xl bg-stone-700/80 hover:bg-stone-700 text-white font-semibold text-sm border border-white/20 transition-all">
+                                View Full 2026 Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Author Bio Box -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-16 h-16 rounded-full border-2 border-stone-800 object-cover shrink-0">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">About the Author: Samuel Kidemi Kisaga</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Samuel is the Founder and Principal Web Architect at <strong>Xclusive Tech</strong>. With over 6 years of hands-on web engineering experience and 120+ client platforms delivered across Kenya, he specializes in building high-speed luxury fashion websites, bespoke corporate portals, and e-commerce stores.
+                        </p>
+                        <div class="flex gap-4 text-xs font-semibold text-stone-700">
+                            <a href="/founder" class="hover:underline">Meet the Founder &rarr;</a>
+                            <a href="/portfolio" class="hover:underline">Explore Portfolio &rarr;</a>
+                            <a href="https://linkedin.com/in/samuel-kidemi" target="_blank" rel="noopener noreferrer" class="hover:underline">LinkedIn Profile &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech" class="h-10 w-auto">
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Top Digitally Fit Web Design &amp; Digital Architecture Firm in Nairobi, Kenya. We engineer high-speed, conversion-focused websites for fashion labels, institutions, and enterprises.
+                    </p>
+                    <p class="text-xs text-slate-400">Kilimani, Nairobi, Kenya</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Case Studies</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/blog/case-study-how-i-built-opsok-medical-website-kenya" class="hover:text-white transition">OPSOK Medical Society</a></li>
+                        <li><a href="/blog/case-study-how-i-built-maluki-bespoke-luxury-tailoring-fashion-website" class="text-amber-300 hover:text-white transition">Maluki Bespoke Tailoring</a></li>
+                        <li><a href="/blog/case-study-how-i-built-diani-elite-taxi-coastal-transfers-website" class="hover:text-white transition">Diani Elite Taxi Transfers</a></li>
+                        <li><a href="/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website" class="hover:text-white transition">Santorini Queen Yacht</a></li>
+                        <li><a href="/blog/case-study-how-i-built-vape-collective-ecommerce-mpesa-kenya" class="hover:text-white transition">Vape Collective E-Commerce</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Core Services</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/services" class="hover:text-white transition">Luxury Fashion Websites</a></li>
+                        <li><a href="/services" class="hover:text-white transition">Bespoke Fitting Systems</a></li>
+                        <li><a href="/services" class="hover:text-white transition">E-Commerce &amp; Daraja M-Pesa</a></li>
+                        <li><a href="/services" class="hover:text-white transition">SEO &amp; GEO Optimization</a></li>
+                        <li><a href="/pricing" class="hover:text-white transition">Transparent Rate Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Get In Touch</h3>
+                    <p class="text-xs text-slate-400 mb-2">Speak directly with Samuel:</p>
+                    <p class="text-sm font-bold text-white mb-1">+254 722 753 819</p>
+                    <p class="text-xs text-slate-400 mb-4">info@xclusivetech.co.ke</p>
+                    <a href="https://wa.me/254722753819" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition">
+                        Direct WhatsApp Chat &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                &copy; 2026 Xclusive Tech Kenya. All rights reserved. Crafting high-converting digital storefronts across East Africa.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

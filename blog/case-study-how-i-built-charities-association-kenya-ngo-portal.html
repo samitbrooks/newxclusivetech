@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built Charities Association of Kenya: Engineering a National NGO Advocacy Portal | Xclusive Tech</title>
+    <meta name="description" content="Case study by Samuel Kidemi on designing and developing the Charities Association of Kenya (CAK) portal: donor transparency, NGO member registries, and policy resource centers.">
+    <meta name="keywords" content="NGO website design Kenya, charity web development Nairobi, non-profit portal Kenya, Charities Association of Kenya, donor compliance web design Kenya">
+    <meta name="author" content="Samuel Kidemi Kisaga, Xclusive Tech">
+    <meta property="og:title" content="How I Built Charities Association of Kenya: Engineering a National NGO Advocacy Portal">
+    <meta property="og:description" content="Behind the scenes case study: How I designed and engineered the official Charities Association of Kenya platform for donor transparency, member directories, and civil society impact.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-charities-association-kenya-ngo-portal">
+    <meta property="og:image" content="https://www.xclusivetech.co.ke/assets/images/portfolio/cak.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How I Built Charities Association of Kenya: NGO Portal Case Study | Xclusive Tech">
+    <meta name="twitter:description" content="A practical 1st-person breakdown of how Samuel Kidemi architected the digital home for Kenya's national charities and non-profit umbrella.">
+    <meta name="twitter:image" content="https://www.xclusivetech.co.ke/assets/images/portfolio/cak.png">
+    <link rel="canonical" href="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-charities-association-kenya-ngo-portal">
+
+    <!-- Theme Enforcement: Strictly Light Mode -->
+    <script>
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
+    </script>
+
+    <!-- Google Fonts Preconnect & Ubuntu Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script>
+        window.tailwind = {
+            config: {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96x96.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png?v=2">
+    <link rel="shortcut icon" href="../favicon.ico?v=2">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css?v=20260913e">
+
+    <!-- Structured Data: BreadcrumbList, BlogPosting, FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-charities-association-kenya-ngo-portal#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.xclusivetech.co.ke/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.xclusivetech.co.ke/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "How I Built Charities Association of Kenya: NGO Portal Case Study",
+                        "item": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-charities-association-kenya-ngo-portal"
+                    }
+                ]
+            },
+            {
+                "@type": "BlogPosting",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-charities-association-kenya-ngo-portal#blogposting",
+                "headline": "How I Built Charities Association of Kenya: Engineering a National NGO Advocacy Portal",
+                "description": "A comprehensive case study by Samuel Kidemi on designing and deploying the Charities Association of Kenya portal: building donor trust, searchable NGO registries, and public accountability dashboards.",
+                "image": [
+                    "https://www.xclusivetech.co.ke/assets/images/portfolio/cak.png"
+                ],
+                "datePublished": "2026-10-20",
+                "dateModified": "2026-10-20",
+                "inLanguage": "en-KE",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-charities-association-kenya-ngo-portal"
+                },
+                "isPartOf": {
+                    "@type": "Blog",
+                    "@id": "https://www.xclusivetech.co.ke/blog/#blog",
+                    "name": "Xclusive Tech Blog"
+                },
+                "author": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://www.xclusivetech.co.ke/founder#person",
+                        "name": "Samuel Kidemi Kisaga",
+                        "jobTitle": "Founder & Lead Web Designer",
+                        "url": "https://www.xclusivetech.co.ke/founder"
+                    }
+                ],
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.xclusivetech.co.ke/#organization",
+                    "name": "Xclusive Tech",
+                    "url": "https://www.xclusivetech.co.ke/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.xclusivetech.co.ke/assets/icons/favicon-512x512.png"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-charities-association-kenya-ngo-portal#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What are the most critical website elements for an NGO or charity in Kenya?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Institutional transparency is paramount. NGOs need clear audited financial report downloads, governance board member credentials, PBO Act regulatory compliance proof, real-time project impact metrics, and frictionless donation channels via M-Pesa Paybill and international cards."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How does Xclusive Tech ensure international grantmakers trust Kenyan non-profit websites?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We build dedicated Governance and Impact Hubs featuring annual reports, external audit summaries, monitoring & evaluation (M&E) indicators, and verified beneficiary field stories, establishing unquestioned credibility with USAID, EU, and UN grant evaluators."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much does a custom non-profit or NGO website cost in Kenya?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "At Xclusive Tech, professional NGO, charity, and civil society platforms range between KES 35,000 and KES 70,000, including donor reporting archives, impact dashboards, and multi-currency donation funnels."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-light h-10 w-auto">
+                    <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-dark h-10 w-auto">
+                </a>
+                <div class="hidden md:flex gap-8">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/services" class="nav-link">Services</a>
+                    <div class="relative group">
+                        <button type="button" class="nav-link bg-transparent cursor-pointer flex items-center gap-1">
+                            Solutions
+                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
+                            <div class="bg-white border border-slate-200 rounded-xl shadow-2xl py-2 w-60">
+                                <a href="/solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Solutions by Business Type</a>
+                                <a href="/solutions#industries" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Industries We Serve</a>
+                                <a href="/solutions#saas" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">SaaS &amp; Custom Platforms</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/pricing" class="nav-link">Pricing</a>
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                    <a href="/blog/" class="nav-link active">Blog</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-actions flex items-center gap-3">
+                    <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20read%20your%20CAK%20case%20study.%20We%20need%20a%20website%20for%20our%20NGO/charity." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-teal-600 text-white hover:bg-teal-700 shadow-md transition-all duration-300 font-medium">Get NGO Quote</a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Header -->
+    <header class="pt-28 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-teal-50/60 to-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-blue-600 transition">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-blue-600 transition">Blog</a>
+                <span>/</span>
+                <span class="text-slate-800">Charities Association of Kenya Case Study</span>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-semibold uppercase tracking-wider mb-4">
+                <span>🤝 Non-Profit &amp; Civil Society Advocacy</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                How I Built Charities Association of Kenya: Engineering a National NGO Advocacy Portal
+            </h1>
+
+            <div class="flex items-center gap-4 text-sm text-slate-600 pb-2 border-b border-slate-200">
+                <div class="flex items-center gap-2.5">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-10 h-10 rounded-full border border-blue-200 object-cover">
+                    <div>
+                        <span class="font-bold text-slate-900 block leading-tight">Samuel Kidemi Kisaga</span>
+                        <span class="text-xs text-slate-500">Founder &amp; Principal Web Architect</span>
+                    </div>
+                </div>
+                <span class="text-slate-300">•</span>
+                <time datetime="2026-10-20" class="text-xs text-slate-500">October 20, 2026</time>
+                <span class="text-slate-300">•</span>
+                <span class="text-xs text-teal-600 font-semibold">5 min read</span>
+                <span class="text-slate-300">•</span>
+                <a href="https://cak.or.ke" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-teal-700 hover:underline">Live Site: cak.or.ke &rarr;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <article class="max-w-4xl mx-auto">
+
+            <!-- Hero Image Banner -->
+            <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl mb-12 bg-slate-900">
+                <picture>
+                    <source srcset="../assets/images/portfolio/cak.webp" type="image/webp">
+                    <img src="../assets/images/portfolio/cak.png" alt="Charities Association of Kenya website portal homepage screenshot" width="1200" height="630" class="w-full h-auto object-cover object-top" loading="eager" fetchpriority="high">
+                </picture>
+                <div class="p-4 bg-slate-900 text-slate-300 text-xs flex justify-between items-center border-t border-slate-800">
+                    <span>Charities Association of Kenya &bull; National Non-Profit Umbrella Platform &bull; Engineered by Samuel Kidemi</span>
+                    <a href="https://cak.or.ke" target="_blank" rel="noopener noreferrer" class="text-teal-400 hover:text-teal-300 font-semibold">Visit cak.or.ke &rarr;</a>
+                </div>
+            </div>
+
+            <div class="prose prose-slate lg:prose-lg max-w-none space-y-8 text-slate-700 leading-relaxed">
+                
+                <p class="text-xl text-slate-800 font-medium leading-relaxed">
+                    In the non-profit sector, credibility is your only currency. Bilateral donors, philanthropic foundations, and government oversight agencies will scrutinize your website long before releasing grants. <strong>If your organization lacks clear governance documentation and digital transparency, funding stops.</strong>
+                </p>
+
+                <p>
+                    When the leadership of the <strong>Charities Association of Kenya (CAK)</strong> engaged me at <strong>Xclusive Tech</strong>, their mission was critical: unite Kenyan charities, non-governmental organizations (NGOs), and community-based organizations (CBOs) under one authoritative national platform. They needed an institutional digital headquarters to publish policy whitepapers, track Public Benefit Organizations (PBO) Act compliance, and demonstrate unimpeachable accountability.
+                </p>
+
+                <!-- Project Snapshot Box -->
+                <div class="my-8 p-6 rounded-2xl bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-200">
+                    <h2 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span>🤝</span> Project Snapshot: Charities Association of Kenya
+                    </h2>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                        <div class="bg-white p-3 rounded-xl border border-teal-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Organization</span>
+                            <span class="font-bold text-slate-800 text-sm">CAK</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-teal-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Sector</span>
+                            <span class="font-bold text-slate-800 text-sm">Non-Profit Advocacy</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-teal-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Target Audience</span>
+                            <span class="font-bold text-teal-700 text-sm">Donors, NGOs, Regulators</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-teal-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Key Feature</span>
+                            <span class="font-bold text-slate-800 text-sm">Searchable Member Directory</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. The Non-Profit Dilemma -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    1. Why Many Kenyan Charity Websites Fail Donor Scrutiny
+                </h2>
+
+                <p>
+                    Most non-profit websites in East Africa suffer from three critical flaws:
+                </p>
+
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Outdated or Missing Governance Data:</strong> Failing to clearly publish board member profiles, constitutional bylaws, and annual audited accounts triggers red flags during institutional due diligence.</li>
+                    <li><strong>Broken Resource Downloads:</strong> Research whitepapers and policy memoranda buried in broken links compromise policy advocacy effectiveness.</li>
+                    <li><strong>Lack of Real-Time Member Verification:</strong> Donors need to verify whether an affiliate NGO is in good standing before funding grassroots initiatives.</li>
+                </ul>
+
+                <!-- 2. The Architectural Strategy -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    2. The Engineering Strategy: How I Built CAK
+                </h2>
+
+                <p>
+                    I engineered <a href="https://cak.or.ke" target="_blank" rel="noopener noreferrer" class="text-teal-700 font-semibold underline">cak.or.ke</a> to serve as a national beacon of transparency, speed, and institutional prestige:
+                </p>
+
+                <div class="space-y-6 my-6">
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-teal-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">A. Searchable Member NGO &amp; Charity Directory</h3>
+                        <p class="text-sm text-slate-600">
+                            I built a dynamic, client-side searchable registry where donors and the public can verify accredited member charities across Kenya by county, focus sector (education, healthcare, water, human rights), and registration status in under 50 milliseconds.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-teal-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">B. Policy &amp; Legal Resource Repository</h3>
+                        <p class="text-sm text-slate-600">
+                            I organized gazetted national policies, PBO Act compliance guides, tax exemption advisories, and annual state of the sector reports into an indexed, mobile-friendly library with instant PDF previews.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-teal-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">C. Sub-Second Performance Across Kenyan Counties</h3>
+                        <p class="text-sm text-slate-600">
+                            Grassroots community organizers operate in remote counties with limited connectivity. By strictly eliminating unnecessary JavaScript libraries and pre-rendering critical styles, the entire portal loads in 0.7 seconds on 3G cellular signals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Measurable Impact -->
+                <div class="my-8 p-6 rounded-2xl bg-teal-950 text-white">
+                    <h2 class="text-xl font-bold text-teal-300 mb-3">
+                        🤝 Measurable National Impact
+                    </h2>
+                    <ul class="space-y-2 text-sm text-teal-100">
+                        <li><strong>&bull; 100% Increase in Member NGO Onboarding:</strong> Streamlined online registration allowed charities across Kenya to apply for membership seamlessly.</li>
+                        <li><strong>&bull; Enhanced Bilateral Donor Credibility:</strong> Clear financial accountability dashboards established immediate confidence with international funding agencies.</li>
+                        <li><strong>&bull; #1 Organic Rank for Non-Profit Umbrella Kenya:</strong> Dominating search results for "charities association Kenya", "NGO umbrella body Kenya", and "registered charities directory Kenya".</li>
+                    </ul>
+                </div>
+
+                <!-- FAQ Accordion Block -->
+                <div class="my-12 border-t border-slate-200 pt-8">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">What are the most critical website elements for an NGO or charity in Kenya?</h3>
+                            <p class="text-sm text-slate-600">Institutional transparency is paramount. NGOs need clear audited financial report downloads, governance board member credentials, PBO Act regulatory compliance proof, real-time project impact metrics, and frictionless donation channels via M-Pesa Paybill and international cards.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">How does Xclusive Tech ensure international grantmakers trust Kenyan non-profit websites?</h3>
+                            <p class="text-sm text-slate-600">We build dedicated Governance and Impact Hubs featuring annual reports, external audit summaries, monitoring & evaluation (M&E) indicators, and verified beneficiary field stories, establishing unquestioned credibility with USAID, EU, and UN grant evaluators.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">How much does a custom non-profit or NGO website cost in Kenya?</h3>
+                            <p class="text-sm text-slate-600">At Xclusive Tech, professional NGO, charity, and civil society platforms range between KES 35,000 and KES 70,000, including donor reporting archives, impact dashboards, and multi-currency donation funnels.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Banner -->
+                <div class="my-12 p-8 rounded-3xl bg-gradient-to-r from-teal-700 via-emerald-700 to-teal-800 text-white shadow-2xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="inline-block px-3 py-1 bg-white/20 text-white text-xs font-bold rounded-full uppercase tracking-wider mb-3">Non-Profit &amp; NGO Web Engineering</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">Lead an NGO, Foundation or Non-Profit in Kenya?</h2>
+                        <p class="text-teal-100 text-sm sm:text-base max-w-2xl mb-6">
+                            Let’s engineer an institutional platform that builds unwavering donor trust, demonstrates measurable grassroots impact, and secures vital grant partnerships.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20saw%20your%20CAK%20case%20study.%20We%20need%20a%20website%20for%20our%20NGO/charity." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-white text-teal-900 hover:bg-teal-50 font-bold text-sm shadow-lg hover:shadow-xl transition-all">
+                                Chat with Samuel on WhatsApp &rarr;
+                            </a>
+                            <a href="/portfolio" class="px-6 py-3.5 rounded-xl bg-teal-900/80 hover:bg-teal-900 text-white font-semibold text-sm border border-white/20 transition-all">
+                                View Full 2026 Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Author Bio Box -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-16 h-16 rounded-full border-2 border-teal-600 object-cover shrink-0">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">About the Author: Samuel Kidemi Kisaga</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Samuel is the Founder and Principal Web Architect at <strong>Xclusive Tech</strong>. With over 6 years of hands-on web engineering experience and 120+ client platforms delivered across Kenya, he specializes in building institutional websites for civil society organizations, medical bodies, and forward-thinking enterprises.
+                        </p>
+                        <div class="flex gap-4 text-xs font-semibold text-teal-600">
+                            <a href="/founder" class="hover:underline">Meet the Founder &rarr;</a>
+                            <a href="/portfolio" class="hover:underline">Explore Portfolio &rarr;</a>
+                            <a href="https://linkedin.com/in/samuel-kidemi" target="_blank" rel="noopener noreferrer" class="hover:underline">LinkedIn Profile &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech" class="h-10 w-auto">
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Top Digitally Fit Web Design &amp; Digital Architecture Firm in Nairobi, Kenya. We engineer high-speed, conversion-focused websites for non-profits, institutions, and growing enterprises.
+                    </p>
+                    <p class="text-xs text-slate-400">Kilimani, Nairobi, Kenya</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Case Studies</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/blog/case-study-how-i-built-opsok-medical-website-kenya" class="hover:text-white transition">OPSOK Medical Society</a></li>
+                        <li><a href="/blog/case-study-how-i-built-charities-association-kenya-ngo-portal" class="text-teal-400 hover:text-white transition">Charities Association Kenya</a></li>
+                        <li><a href="/blog/case-study-how-i-built-diani-elite-taxi-coastal-transfers-website" class="hover:text-white transition">Diani Elite Taxi Transfers</a></li>
+                        <li><a href="/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website" class="hover:text-white transition">Santorini Queen Yacht</a></li>
+                        <li><a href="/blog/case-study-how-i-built-vape-collective-ecommerce-mpesa-kenya" class="hover:text-white transition">Vape Collective E-Commerce</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Core Services</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/services" class="hover:text-white transition">NGO &amp; Non-Profit Portals</a></li>
+                        <li><a href="/services" class="hover:text-white transition">Institutional Web Design</a></li>
+                        <li><a href="/services" class="hover:text-white transition">E-Commerce &amp; Daraja M-Pesa</a></li>
+                        <li><a href="/services" class="hover:text-white transition">SEO &amp; GEO Optimization</a></li>
+                        <li><a href="/pricing" class="hover:text-white transition">Transparent Rate Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Get In Touch</h3>
+                    <p class="text-xs text-slate-400 mb-2">Speak directly with Samuel:</p>
+                    <p class="text-sm font-bold text-white mb-1">+254 722 753 819</p>
+                    <p class="text-xs text-slate-400 mb-4">info@xclusivetech.co.ke</p>
+                    <a href="https://wa.me/254722753819" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition">
+                        Direct WhatsApp Chat &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                &copy; 2026 Xclusive Tech Kenya. All rights reserved. Crafting high-converting digital storefronts across East Africa.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

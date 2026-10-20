@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built Batteriq: Engineering an On-Demand Car Battery Delivery Platform in Nairobi | Xclusive Tech</title>
+    <meta name="description" content="Case study by Samuel Kidemi on designing and engineering Batteriq: 30-minute roadside automotive battery dispatch, car make/model selectors, and M-Pesa checkout in Kenya.">
+    <meta name="keywords" content="car battery replacement Nairobi, on-demand automotive web design Kenya, roadside assistance website Nairobi, Batteriq case study, emergency service web design Kenya">
+    <meta name="author" content="Samuel Kidemi Kisaga, Xclusive Tech">
+    <meta property="og:title" content="How I Built Batteriq: Engineering an On-Demand Car Battery Delivery Platform in Nairobi">
+    <meta property="og:description" content="Inside look at how I built Batteriq: rapid emergency technician dispatch, car battery compatibility filters, and frictionless mobile conversion in Kenya.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya">
+    <meta property="og:image" content="https://www.xclusivetech.co.ke/assets/images/portfolio/batteriq.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How I Built Batteriq: On-Demand Automotive Battery Case Study | Xclusive Tech">
+    <meta name="twitter:description" content="How Samuel Kidemi designed an emergency roadside dispatch platform that delivers and installs car batteries in Nairobi in under 30 minutes.">
+    <meta name="twitter:image" content="https://www.xclusivetech.co.ke/assets/images/portfolio/batteriq.png">
+    <link rel="canonical" href="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya">
+
+    <!-- Theme Enforcement: Strictly Light Mode -->
+    <script>
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
+    </script>
+
+    <!-- Google Fonts Preconnect & Ubuntu Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script>
+        window.tailwind = {
+            config: {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96x96.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png?v=2">
+    <link rel="shortcut icon" href="../favicon.ico?v=2">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css?v=20260913e">
+
+    <!-- Structured Data: BreadcrumbList, BlogPosting, FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.xclusivetech.co.ke/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.xclusivetech.co.ke/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "How I Built Batteriq: Automotive E-Commerce Case Study",
+                        "item": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya"
+                    }
+                ]
+            },
+            {
+                "@type": "BlogPosting",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya#blogposting",
+                "headline": "How I Built Batteriq: Engineering an On-Demand Car Battery Delivery Platform in Nairobi",
+                "description": "A comprehensive case study by Samuel Kidemi on architecting Batteriq: sub-second mobile loading for stranded motorists, car make/model battery compatibility lookups, and instant WhatsApp/M-Pesa emergency dispatch in Nairobi.",
+                "image": [
+                    "https://www.xclusivetech.co.ke/assets/images/portfolio/batteriq.png"
+                ],
+                "datePublished": "2026-10-20",
+                "dateModified": "2026-10-20",
+                "inLanguage": "en-KE",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya"
+                },
+                "isPartOf": {
+                    "@type": "Blog",
+                    "@id": "https://www.xclusivetech.co.ke/blog/#blog",
+                    "name": "Xclusive Tech Blog"
+                },
+                "author": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://www.xclusivetech.co.ke/founder#person",
+                        "name": "Samuel Kidemi Kisaga",
+                        "jobTitle": "Founder & Lead Web Designer",
+                        "url": "https://www.xclusivetech.co.ke/founder"
+                    }
+                ],
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.xclusivetech.co.ke/#organization",
+                    "name": "Xclusive Tech",
+                    "url": "https://www.xclusivetech.co.ke/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.xclusivetech.co.ke/assets/icons/favicon-512x512.png"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Why is mobile speed critical for roadside emergency services in Kenya?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "When a driver is stranded on Mombasa Road, Thika Superhighway, or in an office parking lot with a dead car battery, they are stressed and using low-battery smartphones on mobile 4G networks. If your website takes 4 seconds to load, they will immediately tap the next phone number on Google. Sub-second speed directly equals cash flow."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How does vehicle make and model filtering prevent battery return issues?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Different cars require specific amperages, terminal polarities (DIN vs JIS), and Stop-Start AGM/EFB technologies. An interactive vehicle selector ensures the customer gets the exact matching battery, eliminating costly technician return trips across Nairobi."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much does an on-demand emergency service website cost in Kenya?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "At Xclusive Tech, custom on-demand emergency dispatch websites range between KES 35,000 and KES 65,000, including GPS location sharing, interactive product selectors, and automated WhatsApp/M-Pesa integrations."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-light h-10 w-auto">
+                    <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-dark h-10 w-auto">
+                </a>
+                <div class="hidden md:flex gap-8">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/services" class="nav-link">Services</a>
+                    <div class="relative group">
+                        <button type="button" class="nav-link bg-transparent cursor-pointer flex items-center gap-1">
+                            Solutions
+                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
+                            <div class="bg-white border border-slate-200 rounded-xl shadow-2xl py-2 w-60">
+                                <a href="/solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Solutions by Business Type</a>
+                                <a href="/solutions#industries" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Industries We Serve</a>
+                                <a href="/solutions#saas" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">SaaS &amp; Custom Platforms</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/pricing" class="nav-link">Pricing</a>
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                    <a href="/blog/" class="nav-link active">Blog</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-actions flex items-center gap-3">
+                    <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20read%20your%20Batteriq%20case%20study.%20We%20need%20an%20on-demand%20service/ecommerce%20website." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 shadow-md transition-all duration-300 font-medium">Get Automotive Quote</a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Header -->
+    <header class="pt-28 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-red-50/60 to-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-blue-600 transition">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-blue-600 transition">Blog</a>
+                <span>/</span>
+                <span class="text-slate-800">Batteriq Automotive Case Study</span>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-800 text-xs font-semibold uppercase tracking-wider mb-4">
+                <span>⚡ On-Demand Roadside Assistance &amp; FinTech</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                How I Built Batteriq: Engineering an On-Demand Car Battery Delivery Platform in Nairobi
+            </h1>
+
+            <div class="flex items-center gap-4 text-sm text-slate-600 pb-2 border-b border-slate-200">
+                <div class="flex items-center gap-2.5">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-10 h-10 rounded-full border border-blue-200 object-cover">
+                    <div>
+                        <span class="font-bold text-slate-900 block leading-tight">Samuel Kidemi Kisaga</span>
+                        <span class="text-xs text-slate-500">Founder &amp; Principal Web Architect</span>
+                    </div>
+                </div>
+                <span class="text-slate-300">•</span>
+                <time datetime="2026-10-20" class="text-xs text-slate-500">October 20, 2026</time>
+                <span class="text-slate-300">•</span>
+                <span class="text-xs text-red-600 font-semibold">5 min read</span>
+                <span class="text-slate-300">•</span>
+                <a href="https://batteriq.co.ke" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-red-700 hover:underline">Live Site: batteriq.co.ke &rarr;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <article class="max-w-4xl mx-auto">
+
+            <!-- Hero Image Banner -->
+            <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl mb-12 bg-slate-900">
+                <picture>
+                    <source srcset="../assets/images/portfolio/batteriq.webp" type="image/webp">
+                    <img src="../assets/images/portfolio/batteriq.png" alt="Batteriq on-demand car battery delivery website screenshot" width="1200" height="630" class="w-full h-auto object-cover object-top" loading="eager" fetchpriority="high">
+                </picture>
+                <div class="p-4 bg-slate-900 text-slate-300 text-xs flex justify-between items-center border-t border-slate-800">
+                    <span>Batteriq &bull; 30-Minute Roadside Battery Delivery in Nairobi &bull; Engineered by Samuel Kidemi</span>
+                    <a href="https://batteriq.co.ke" target="_blank" rel="noopener noreferrer" class="text-red-400 hover:text-red-300 font-semibold">Visit batteriq.co.ke &rarr;</a>
+                </div>
+            </div>
+
+            <div class="prose prose-slate lg:prose-lg max-w-none space-y-8 text-slate-700 leading-relaxed">
+                
+                <p class="text-xl text-slate-800 font-medium leading-relaxed">
+                    Nobody plans to buy a car battery. You discover you need one at 7:15 AM on a Monday morning when you turn the ignition key and hear only a pathetic clicking sound. <strong>You are late for a meeting, your car is dead, and you need a technician at your gate within 30 minutes.</strong>
+                </p>
+
+                <p>
+                    When the team behind <strong>Batteriq</strong> engaged me at <strong>Xclusive Tech</strong>, their vision was bold: transform how automotive batteries are purchased in Nairobi. Rather than forcing motorists to seek out uncertified mechanics in downtown Kirinyaga Road, Batteriq brings genuine maintenance-free batteries directly to the stranded vehicle with free testing and installation.
+                </p>
+
+                <!-- Project Snapshot Box -->
+                <div class="my-8 p-6 rounded-2xl bg-gradient-to-r from-red-50 to-orange-50 border border-red-200">
+                    <h2 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span>⚡</span> Project Snapshot: Batteriq
+                    </h2>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                        <div class="bg-white p-3 rounded-xl border border-red-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Brand</span>
+                            <span class="font-bold text-slate-800 text-sm">Batteriq</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-red-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Niche</span>
+                            <span class="font-bold text-slate-800 text-sm">On-Demand Roadside Battery</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-red-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Service SLA</span>
+                            <span class="font-bold text-red-600 text-sm">30-Minute Dispatch</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-red-100 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Payment Mode</span>
+                            <span class="font-bold text-slate-800 text-sm">M-Pesa STK on Installation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. The High-Stress Conversion Challenge -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    1. High-Stress UX: Designing for Stranded Drivers
+                </h2>
+
+                <p>
+                    Emergency web design is completely different from recreational e-commerce:
+                </p>
+
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Cognitive Overload:</strong> When a motorist is stranded on the bypass or in an underground parking garage, they do not have patience for multi-page shopping carts.</li>
+                    <li><strong>Battery Compatibility Confusion:</strong> Does a Toyota Harrier take a 55D23L or an 80D26L? Is a Mazda CX-5 an i-Stop Q85 EFB battery? Most drivers have no idea what battery code they need.</li>
+                    <li><strong>Speed is Life:</strong> The platform must load in under 1 second on low battery and 3G cellular signals.</li>
+                </ul>
+
+                <!-- 2. The Architectural Strategy -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    2. The Engineering Strategy: How I Built Batteriq
+                </h2>
+
+                <p>
+                    I engineered <a href="https://batteriq.co.ke" target="_blank" rel="noopener noreferrer" class="text-red-600 font-semibold underline">batteriq.co.ke</a> around lightning speed and instant compatibility matching:
+                </p>
+
+                <div class="space-y-6 my-6">
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-red-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">A. 2-Click Vehicle Make &amp; Model Selector</h3>
+                        <p class="text-sm text-slate-600">
+                            I developed a fast JavaScript compatibility lookup where users simply choose their vehicle make (e.g., Toyota, Subaru, Mercedes-Benz, Nissan) and model. The platform immediately surfaces the exact recommended battery size, cold cranking amps (CCA), and warranty tier.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-red-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">B. Instant WhatsApp Emergency Dispatch with GPS Pin Sharing</h3>
+                        <p class="text-sm text-slate-600">
+                            The primary call to action opens a dedicated WhatsApp hotline that prompts the motorist to share their live Google Maps location pin. A motorized motorbike technician carrying the pre-tested battery is dispatched immediately.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-red-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">C. Old Battery Trade-In Rebate Calculation</h3>
+                        <p class="text-sm text-slate-600">
+                            To incentivize eco-friendly lead-acid recycling and lower upfront purchase prices, I built a scrap battery trade-in calculator that automatically knocks off up to KES 2,500 from the retail price when handing over the old scrap battery.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Measurable Results -->
+                <div class="my-8 p-6 rounded-2xl bg-red-950 text-white">
+                    <h2 class="text-xl font-bold text-red-300 mb-3">
+                        ⚡ Commercial Results for Batteriq Nairobi
+                    </h2>
+                    <ul class="space-y-2 text-sm text-red-100">
+                        <li><strong>&bull; #1 Organic Search Visibility:</strong> Dominating Google search results for "car battery delivery Nairobi", "emergency car battery replacement", and "buy Chloride Exide battery Nairobi".</li>
+                        <li><strong>&bull; Average 26-Minute On-Site Arrival:</strong> Streamlined WhatsApp dispatch cut intake friction to under 60 seconds from tab opening to technician motorbike departure.</li>
+                        <li><strong>&bull; 99% First-Time Fit Accuracy:</strong> The compatibility engine completely eliminated incorrect battery deliveries across Nairobi.</li>
+                    </ul>
+                </div>
+
+                <!-- FAQ Accordion Block -->
+                <div class="my-12 border-t border-slate-200 pt-8">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">Why is mobile speed critical for roadside emergency services in Kenya?</h3>
+                            <p class="text-sm text-slate-600">When a driver is stranded on Mombasa Road, Thika Superhighway, or in an office parking lot with a dead car battery, they are stressed and using low-battery smartphones on mobile 4G networks. If your website takes 4 seconds to load, they will immediately tap the next phone number on Google. Sub-second speed directly equals cash flow.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">How does vehicle make and model filtering prevent battery return issues?</h3>
+                            <p class="text-sm text-slate-600">Different cars require specific amperages, terminal polarities (DIN vs JIS), and Stop-Start AGM/EFB technologies. An interactive vehicle selector ensures the customer gets the exact matching battery, eliminating costly technician return trips across Nairobi.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50">
+                            <h3 class="font-bold text-slate-900 text-base mb-1">How much does an on-demand emergency service website cost in Kenya?</h3>
+                            <p class="text-sm text-slate-600">At Xclusive Tech, custom on-demand emergency dispatch websites range between KES 35,000 and KES 65,000, including GPS location sharing, interactive product selectors, and automated WhatsApp/M-Pesa integrations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Banner -->
+                <div class="my-12 p-8 rounded-3xl bg-gradient-to-r from-red-600 via-orange-600 to-red-700 text-white shadow-2xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="inline-block px-3 py-1 bg-white/20 text-white text-xs font-bold rounded-full uppercase tracking-wider mb-3">On-Demand &amp; Automotive Engineering</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">Run an Emergency Dispatch, Auto Garage or Field Service in Kenya?</h2>
+                        <p class="text-red-100 text-sm sm:text-base max-w-2xl mb-6">
+                            Let’s engineer a lightning-fast, high-converting digital platform that captures desperate customers right at the moment they need your urgent service.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20saw%20your%20Batteriq%20case%20study.%20We%20need%20a%20website%20for%20our%20automotive/emergency%20service." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-white text-red-800 hover:bg-red-50 font-bold text-sm shadow-lg hover:shadow-xl transition-all">
+                                Chat with Samuel on WhatsApp &rarr;
+                            </a>
+                            <a href="/portfolio" class="px-6 py-3.5 rounded-xl bg-red-800/80 hover:bg-red-800 text-white font-semibold text-sm border border-white/20 transition-all">
+                                View Full 2026 Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Author Bio Box -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center sm:items-start gap-4">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-16 h-16 rounded-full border-2 border-red-600 object-cover shrink-0">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">About the Author: Samuel Kidemi Kisaga</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Samuel is the Founder and Principal Web Architect at <strong>Xclusive Tech</strong>. With over 6 years of hands-on web engineering experience and 120+ client platforms delivered across Kenya, he specializes in building high-speed on-demand systems, automotive websites, and e-commerce platforms.
+                        </p>
+                        <div class="flex gap-4 text-xs font-semibold text-red-600">
+                            <a href="/founder" class="hover:underline">Meet the Founder &rarr;</a>
+                            <a href="/portfolio" class="hover:underline">Explore Portfolio &rarr;</a>
+                            <a href="https://linkedin.com/in/samuel-kidemi" target="_blank" rel="noopener noreferrer" class="hover:underline">LinkedIn Profile &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech" class="h-10 w-auto">
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Top Digitally Fit Web Design &amp; Digital Architecture Firm in Nairobi, Kenya. We engineer high-speed, conversion-focused websites for emergency dispatch, automotive, and retail businesses.
+                    </p>
+                    <p class="text-xs text-slate-400">Kilimani, Nairobi, Kenya</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Case Studies</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/blog/case-study-how-i-built-opsok-medical-website-kenya" class="hover:text-white transition">OPSOK Medical Society</a></li>
+                        <li><a href="/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya" class="text-red-400 hover:text-white transition">Batteriq Car Battery</a></li>
+                        <li><a href="/blog/case-study-how-i-built-diani-elite-taxi-coastal-transfers-website" class="hover:text-white transition">Diani Elite Taxi Transfers</a></li>
+                        <li><a href="/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website" class="hover:text-white transition">Santorini Queen Yacht</a></li>
+                        <li><a href="/blog/case-study-how-i-built-vape-collective-ecommerce-mpesa-kenya" class="hover:text-white transition">Vape Collective E-Commerce</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Core Services</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/services" class="hover:text-white transition">On-Demand Dispatch Portals</a></li>
+                        <li><a href="/services" class="hover:text-white transition">Automotive E-Commerce</a></li>
+                        <li><a href="/services" class="hover:text-white transition">E-Commerce &amp; Daraja M-Pesa</a></li>
+                        <li><a href="/services" class="hover:text-white transition">SEO &amp; GEO Optimization</a></li>
+                        <li><a href="/pricing" class="hover:text-white transition">Transparent Rate Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Get In Touch</h3>
+                    <p class="text-xs text-slate-400 mb-2">Speak directly with Samuel:</p>
+                    <p class="text-sm font-bold text-white mb-1">+254 722 753 819</p>
+                    <p class="text-xs text-slate-400 mb-4">info@xclusivetech.co.ke</p>
+                    <a href="https://wa.me/254722753819" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition">
+                        Direct WhatsApp Chat &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                &copy; 2026 Xclusive Tech Kenya. All rights reserved. Crafting high-converting digital storefronts across East Africa.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
