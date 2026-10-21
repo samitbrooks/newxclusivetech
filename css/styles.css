@@ -286,6 +286,20 @@ p.font-mono {
     background: none !important;
 }
 
+.sub-title svg,
+.hero-sub-title svg,
+.tj-sub-title svg {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle;
+}
+
 /* ── Webency Gradient Text ──────────────────────────── */
 .gradient-text,
 .text-gradient,
@@ -6809,6 +6823,18 @@ section.county-dark-intake p {
     line-height: 1 !important;
 }
 
+.hero-whatsapp-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle;
+}
+
 .hero-whatsapp-btn:hover {
     transform: translateY(-3px) scale(1.02) !important;
     box-shadow: 0 14px 34px rgba(16, 185, 129, 0.55) !important;
@@ -6833,6 +6859,18 @@ section.county-dark-intake p {
     transition: all 0.25s ease !important;
     cursor: pointer;
     line-height: 1 !important;
+}
+
+.hero-estimator-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle;
 }
 
 .hero-estimator-btn:hover {
@@ -7472,6 +7510,27 @@ section.county-dark-intake p {
     gap: 6px;
 }
 
+.hero-risk-reversal-bar svg,
+.risk-item svg {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle;
+}
 
-
-
+/* ── Global SVG Utility Fallbacks (Prevents huge SVG blowout on mobile if Tailwind JIT CDN is delayed) ── */
+svg.w-3, .w-3 { width: 12px !important; }
+svg.h-3, .h-3 { height: 12px !important; }
+svg.w-3\.5, .w-3\.5 { width: 14px !important; }
+svg.h-3\.5, .h-3\.5 { height: 14px !important; }
+svg.w-4, .w-4 { width: 16px !important; }
+svg.h-4, .h-4 { height: 16px !important; }
+svg.w-5, .w-5 { width: 20px !important; }
+svg.h-5, .h-5 { height: 20px !important; }
+svg.w-6, .w-6 { width: 24px !important; }
+svg.h-6, .h-6 { height: 24px !important; }
