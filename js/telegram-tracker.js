@@ -2,14 +2,21 @@
  * ============================================================================
  * Xclusive Tech — Instant Telegram Visitor & Lead Notifier
  * ============================================================================
- * Sends real-time alerts to your Telegram chat whenever a visitor lands on
- * your site, visits key conversion pages (pricing, contact), or submits a lead form.
+ * Sends real-time alerts to your Telegram chat whenever a genuine human visitor
+ * lands on your site, visits key conversion pages (pricing, contact), or
+ * submits a lead form.
+ *
+ * Anti-Bot & Human Verification:
+ * - Requires physical human interaction (scroll, touch, mouse movement, keypress)
+ * - Minimum dwell time threshold before alerts fire (filters instant bounces/crawlers)
+ * - Completely avoids Chromium, HeadlessChrome, Puppeteer & Playwright environments
+ * - Filters W3C navigator.webdriver, automated test runners & known web crawlers
  *
  * Setup (Takes 1-2 minutes):
  * 1. Open Telegram, search for @BotFather and send: /newbot
- * 2. Follow instructions and copy the HTTP API Token (e.g. "123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ")
- * 3. Search for @userinfobot on Telegram, send /start to get your numeric ID (e.g. "987654321")
- * 4. Paste both in TELEGRAM_CONFIG below (or set via window.TelegramTracker.setConfig).
+ * 2. Follow instructions and copy the HTTP API Token
+ * 3. Search for @userinfobot on Telegram, send /start to get your numeric ID
+ * 4. Paste both in TELEGRAM_CONFIG below (or configure via /admin.html).
  * ============================================================================
  */
 
@@ -19,7 +26,6 @@
     // Helper to resolve Bot Token securely without triggering GitHub Secret Scanning regexes
     function _getDefaultToken() {
         try {
-            // Base64 encoded token: prevents regex scanner matching on raw [0-9]{8,10}:[a-zA-Z0-9_-]{35}
             const _enc = 'ODgxNzE1MzQ5MzpBQUdxeGVIOHpEdl9yX21WV3hqb25ZWElkS2xyb29CTFdZTQ==';
             return typeof atob === 'function' ? atob(_enc) : '';
         } catch (e) {
@@ -34,9 +40,15 @@
         enabled: true,
 
         // Notification triggers
-        notifyOnFirstVisit: true,            // Alert when a new visitor session starts
+        notifyOnFirstVisit: true,            // Alert when a verified human visitor session starts
         notifyOnKeyPages: true,              // Alert when visitor views high-intent pages
         notifyOnFormSubmit: true,            // Alert instantly when contact form is submitted
+
+        // Quality, Anti-Bot & Human Filters
+        humanOnly: true,                     // Only notify if verified real human visitor (verifies scroll/mouse/touch)
+        avoidChromium: true,                 // Ignore Chromium, HeadlessChrome, Puppeteer, Playwright & test browsers
+        blockDatacenterTraffic: true,        // Automatically block AWS, DigitalOcean, Google Cloud, Azure & US datacenter crawlers
+        minEngagementSeconds: 2,             // Minimum active dwell time (seconds) before visit alert fires
 
         // Key high-intent paths that trigger a follow-up alert if viewed
         keyPages: ['/pricing', '/contact', '/frostwoodcrm', '/services', '/solutions'],
@@ -66,6 +78,68 @@
             .replace(/"/g, '&quot;');
     }
 
+    // Helper: Detect Chromium, HeadlessChrome, Puppeteer, Playwright
+    function isChromiumBrowser() {
+        const ua = ((navigator.userAgent || '') + ' ' + (navigator.appVersion || '')).toLowerCase();
+
+        // 1. Explicit Chromium or HeadlessChrome string in User-Agent
+        if (ua.includes('chromium') || ua.includes('headlesschrome')) {
+            return true;
+        }
+
+        // 2. User-Agent Client Hints check: Pure Chromium without standard consumer browser brands
+        try {
+            if (navigator.userAgentData && Array.isArray(navigator.userAgentData.brands)) {
+                const brands = navigator.userAgentData.brands.map(b => (b.brand || '').toLowerCase());
+                const hasChromium = brands.some(b => b.includes('chromium'));
+                const hasConsumerBrand = brands.some(b =>
+                    b.includes('google chrome') ||
+                    b.includes('microsoft edge') ||
+                    b.includes('brave') ||
+                    b.includes('opera') ||
+                    b.includes('vivaldi') ||
+                    b.includes('samsung')
+                );
+                if (hasChromium && !hasConsumerBrand) {
+                    return true;
+                }
+            }
+        } catch (e) {}
+
+        return false;
+    }
+
+    // Helper: Detect automated crawlers, bots, headless runners, and test scripts
+    function isBotOrAutomated() {
+        // 1. W3C Automation flag (Puppeteer, Selenium, Playwright, ChromeDriver)
+        if (navigator.webdriver === true) return true;
+
+        // 2. Known automated globals
+        if (window._phantom || window.__nightmare || window.callPhantom ||
+            window._selenium || window.__webdriver_evaluate || window.__selenium_evaluate ||
+            window.__webdriver_script_function || window.domAutomation || window.domAutomationController) {
+            return true;
+        }
+
+        // 3. Headless screen / window geometry anomalies
+        try {
+            if (window.outerWidth === 0 && window.outerHeight === 0) return true;
+            if (window.screen && (window.screen.width === 0 || window.screen.height === 0)) return true;
+        } catch (e) {}
+
+        // 4. Missing language in headless environments
+        if (!navigator.languages || navigator.languages.length === 0) {
+            if (!navigator.language) return true;
+        }
+
+        // 5. User-Agent keywords for crawlers, bots, scrapers, headless tools
+        const ua = ((navigator.userAgent || '') + ' ' + (navigator.vendor || '')).toLowerCase();
+        const botPattern = /bot|crawl|spider|slurp|lighthouse|preview|headless|phantomjs|selenium|puppeteer|playwright|postman|curl|wget|python|ruby|java|go-http|axios|fetch|facebookexternalhit|whatsapp|twitterbot|telegrambot|slackbot|discordbot|applebot|bingbot|googlebot|yandex|baiduspider|duckduckbot|semrush|ahrefs|mj12bot|petalbot|archive\.org/i;
+        if (botPattern.test(ua)) return true;
+
+        return false;
+    }
+
     // Helper: Detect Device & Browser
     function getDeviceInfo() {
         const ua = navigator.userAgent || '';
@@ -84,7 +158,10 @@
         else if (/Linux/i.test(ua)) os = 'Linux';
 
         if (/Edg\//i.test(ua)) browser = 'Edge';
-        else if (/Chrome\//i.test(ua) && !/Chromium|Edg/i.test(ua)) browser = 'Chrome';
+        else if (/OPR\//i.test(ua) || /Opera/i.test(ua)) browser = 'Opera';
+        else if (/SamsungBrowser/i.test(ua)) browser = 'Samsung Internet';
+        else if (/Chromium/i.test(ua)) browser = 'Chromium';
+        else if (/Chrome\//i.test(ua)) browser = 'Chrome';
         else if (/Safari\//i.test(ua) && !/Chrome/i.test(ua)) browser = 'Safari';
         else if (/Firefox\//i.test(ua)) browser = 'Firefox';
 
@@ -139,6 +216,13 @@
         }
     }
 
+    // Helper: Identify cloud/datacenter server ranges used by web scrapers & automated crawlers
+    function isDatacenterOrHosting(isp = '', org = '', domain = '') {
+        const combined = `${isp} ${org} ${domain}`.toLowerCase();
+        const datacenterPattern = /amazon|aws|google llc|google cloud|microsoft|azure|digitalocean|hetzner|ovh|linode|vultr|oracle|choopa|colocrossing|datacamp|hostinger|m247|cogent|leaseweb|contabo|akamai|fastly|cloudflare|censys|shodan|shadowserver|palo alto|netcraft|zscaler|quadranet|rackspace|level 3|lumen|centurylink|datapacket|scaleway|packet|equinix|interserver|ionos|1&1|strato|psychz|tzulo|server|hosting|datacenter|data center|vps|cloud/i;
+        return datacenterPattern.test(combined);
+    }
+
     // Helper: Fast IP Geo lookup with fallback and 2.5s strict timeout
     async function getGeoLocation() {
         const controller = new AbortController();
@@ -157,8 +241,13 @@
                     const city = data.city || '';
                     const region = data.region || '';
                     const country = data.country || '';
-                    const flag = data.country_code ? getFlagEmoji(data.country_code) : '🌍';
+                    const countryCode = data.country_code || '';
+                    const flag = countryCode ? getFlagEmoji(countryCode) : '🌍';
+                    const org = data.connection && data.connection.org ? data.connection.org : '';
                     const isp = data.connection && data.connection.isp ? data.connection.isp : (data.isp || '');
+                    const domain = data.connection && data.connection.domain ? data.connection.domain : '';
+
+                    const isDatacenter = isDatacenterOrHosting(isp, org, domain);
 
                     const locParts = [city, region, country].filter(Boolean);
                     const locationStr = locParts.length ? locParts.join(', ') : 'Unknown location';
@@ -166,7 +255,9 @@
                         summary: `${flag} ${locationStr}${isp ? ` (${isp})` : ''}`,
                         city,
                         country,
-                        ip: data.ip
+                        countryCode,
+                        ip: data.ip,
+                        isDatacenter
                     };
                 }
             }
@@ -261,8 +352,133 @@
         }
     }
 
+    // Human verification state variables
+    let _humanVerified = false;
+    let _humanInteractionReason = '';
+    let _interactionListenersAttached = false;
+    let _pageStartTime = Date.now();
+    let _tabActiveStartTime = Date.now();
+    let _visitTracked = false;
+    let _lastPointerX = -1;
+    let _lastPointerY = -1;
+    let _interactionTimeout = null;
+
+    function cleanupInteractionListeners() {
+        if (!_interactionListenersAttached) return;
+        _interactionListenersAttached = false;
+        try {
+            window.removeEventListener('scroll', handleScroll, { passive: true });
+            window.removeEventListener('pointermove', handlePointerMove, { passive: true });
+            window.removeEventListener('mousemove', handlePointerMove, { passive: true });
+            window.removeEventListener('touchstart', handleTouch, { passive: true });
+            window.removeEventListener('keydown', handleKey, { passive: true });
+            window.removeEventListener('click', handleClick, { passive: true });
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+            if (_interactionTimeout) {
+                clearTimeout(_interactionTimeout);
+                _interactionTimeout = null;
+            }
+        } catch (e) {}
+    }
+
+    function onHumanVerified(reason) {
+        if (_humanVerified) return;
+        _humanVerified = true;
+        _humanInteractionReason = reason;
+
+        if (TELEGRAM_CONFIG.debug) {
+            console.log(`[TelegramTracker] Human verified via: ${reason}`);
+        }
+
+        cleanupInteractionListeners();
+
+        // Calculate dwell time
+        const minDwellMs = (TELEGRAM_CONFIG.minEngagementSeconds || 2) * 1000;
+        const now = Date.now();
+        const activeSince = Math.max(_pageStartTime, _tabActiveStartTime);
+        const elapsed = now - activeSince;
+
+        if (elapsed >= minDwellMs) {
+            trackVisit(reason, Math.round(elapsed / 1000));
+        } else {
+            const remaining = Math.max(100, minDwellMs - elapsed);
+            setTimeout(() => {
+                const finalElapsed = Math.round((Date.now() - activeSince) / 1000);
+                trackVisit(reason, finalElapsed);
+            }, remaining);
+        }
+    }
+
+    function handlePointerMove(e) {
+        if (!e.isTrusted) return;
+        if (_lastPointerX === -1) {
+            _lastPointerX = e.clientX;
+            _lastPointerY = e.clientY;
+            return;
+        }
+        const delta = Math.hypot(e.clientX - _lastPointerX, e.clientY - _lastPointerY);
+        if (delta > 12) {
+            onHumanVerified('Mouse Movement');
+        }
+    }
+
+    function handleScroll() {
+        if (window.scrollY > 20 || window.scrollX > 20) {
+            onHumanVerified('Page Scroll');
+        }
+    }
+
+    function handleTouch(e) {
+        if (e.isTrusted) {
+            onHumanVerified('Mobile Touch / Tap');
+        }
+    }
+
+    function handleKey(e) {
+        if (e.isTrusted) {
+            onHumanVerified('Keyboard Input');
+        }
+    }
+
+    function handleClick(e) {
+        if (e.isTrusted) {
+            onHumanVerified('Click');
+        }
+    }
+
+    function handleVisibilityChange() {
+        if (document.visibilityState === 'visible') {
+            _tabActiveStartTime = Date.now();
+        }
+    }
+
+    function setupHumanVerification() {
+        if (_humanVerified || _interactionListenersAttached) return;
+        _interactionListenersAttached = true;
+        _pageStartTime = Date.now();
+        _tabActiveStartTime = document.visibilityState === 'visible' ? _pageStartTime : Date.now();
+
+        const opt = { passive: true };
+        window.addEventListener('scroll', handleScroll, opt);
+        window.addEventListener('pointermove', handlePointerMove, opt);
+        window.addEventListener('mousemove', handlePointerMove, opt);
+        window.addEventListener('touchstart', handleTouch, opt);
+        window.addEventListener('keydown', handleKey, opt);
+        window.addEventListener('click', handleClick, opt);
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        // Max wait: 60s without human interaction -> abandon tracking (crawler or abandoned tab)
+        _interactionTimeout = setTimeout(() => {
+            cleanupInteractionListeners();
+            if (TELEGRAM_CONFIG.debug) {
+                console.log('[TelegramTracker] No human interaction detected within 60s. Tracking aborted.');
+            }
+        }, 60000);
+    }
+
     // Main session tracker
-    async function trackVisit() {
+    async function trackVisit(interactionReason = '', dwellSeconds = 0) {
+        if (_visitTracked) return;
         const path = window.location.pathname || '/';
 
         // 1. Ignore admin page and admin users
@@ -289,7 +505,25 @@
             } catch (e) {}
         }
 
-        // 2. Session cooldown management
+        // 2. AVOID CHROMIUM CHECK
+        if (TELEGRAM_CONFIG.avoidChromium && isChromiumBrowser()) {
+            if (TELEGRAM_CONFIG.debug) {
+                console.log('[TelegramTracker] Avoided Chromium / automated browser environment.');
+            }
+            return;
+        }
+
+        // 3. BOT & AUTOMATION CHECK
+        if (TELEGRAM_CONFIG.humanOnly && isBotOrAutomated()) {
+            if (TELEGRAM_CONFIG.debug) {
+                console.log('[TelegramTracker] Automated bot / crawler detected. Alert suppressed.');
+            }
+            return;
+        }
+
+        _visitTracked = true;
+
+        // 4. Session cooldown management
         let session = null;
         try {
             const rawSession = sessionStorage.getItem(SESSION_KEY);
@@ -305,18 +539,32 @@
         const trafficSource = getTrafficSource();
         const device = getDeviceInfo();
 
-        // 3. New visitor landing alert
+        // 5. New visitor landing alert
         if (isNewSession && TELEGRAM_CONFIG.notifyOnFirstVisit) {
             const geo = await getGeoLocation();
+
+            // Safety guard: drop datacenter / cloud server crawlers (e.g. AWS, DigitalOcean, Google Cloud in USA)
+            if (TELEGRAM_CONFIG.blockDatacenterTraffic && geo.isDatacenter) {
+                if (TELEGRAM_CONFIG.debug) {
+                    console.log(`[TelegramTracker] Datacenter / cloud scraper blocked: ${geo.summary}`);
+                }
+                return;
+            }
+
             const timeStr = getFormattedTime();
 
+            const humanTag = interactionReason
+                ? `✅ ${escapeHtml(interactionReason)}${dwellSeconds ? ` (${dwellSeconds}s dwell)` : ''}`
+                : `✅ Verified Real Human`;
+
             const message = [
-                `🔔 <b>New Visitor Landed on Xclusive Tech!</b>`,
+                `🔔 <b>New Human Visitor on Xclusive Tech!</b>`,
                 ``,
                 `📄 <b>Page:</b> <a href="${escapeHtml(pageUrl)}">${escapeHtml(pageTitle)}</a>`,
                 `🌐 <b>Source:</b> ${escapeHtml(trafficSource)}`,
                 `🌍 <b>Location:</b> ${escapeHtml(geo.summary)}`,
                 `📱 <b>Device:</b> ${escapeHtml(device.summary)} (${device.screenRes})`,
+                `👤 <b>Human Verification:</b> ${humanTag}`,
                 `🕒 <b>Time:</b> ${escapeHtml(timeStr)}`
             ].join('\n');
 
@@ -330,20 +578,28 @@
                     lastActive: now,
                     pagesViewed: 1,
                     initialSource: trafficSource,
-                    geoSummary: geo.summary
+                    geoSummary: geo.summary,
+                    isHuman: true,
+                    isDatacenter: !!geo.isDatacenter
                 }));
             } catch (e) {}
 
             return;
         }
 
-        // 4. Update ongoing session page view count
+        // 6. Update ongoing session page view count
         if (session) {
+            // Drop ongoing session alerts if identified as datacenter crawler
+            if (TELEGRAM_CONFIG.blockDatacenterTraffic && session.isDatacenter) {
+                return;
+            }
+
             session.lastActive = now;
             session.pagesViewed = (session.pagesViewed || 1) + 1;
+            session.isHuman = true;
             try { sessionStorage.setItem(SESSION_KEY, JSON.stringify(session)); } catch (e) {}
 
-            // 5. Check if visitor reached a high-intent key page (e.g. /pricing, /contact)
+            // 7. Check if visitor reached a high-intent key page (e.g. /pricing, /contact)
             if (TELEGRAM_CONFIG.notifyOnKeyPages) {
                 const isKeyPage = TELEGRAM_CONFIG.keyPages.some(kp => path.toLowerCase().includes(kp));
                 if (isKeyPage) {
@@ -361,12 +617,13 @@
 
                         const sessionDurationMinutes = Math.max(1, Math.round((now - (session.startedAt || now)) / 60000));
                         const message = [
-                            `👀 <b>High-Intent Visitor on Key Page!</b>`,
+                            `👀 <b>High-Intent Human Visitor on Key Page!</b>`,
                             ``,
                             `📄 <b>Key Page:</b> <a href="${escapeHtml(pageUrl)}">${escapeHtml(pageTitle)}</a>`,
                             `🌍 <b>Location:</b> ${escapeHtml(session.geoSummary || 'Kenya')}`,
                             `📱 <b>Device:</b> ${escapeHtml(device.summary)}`,
                             `⏱️ <b>Engagement:</b> ${session.pagesViewed} pages viewed (${sessionDurationMinutes} min on site)`,
+                            `👤 <b>Human:</b> Verified real visitor`,
                             `🕒 <b>Time:</b> ${escapeHtml(getFormattedTime())}`
                         ].join('\n');
 
@@ -385,6 +642,11 @@
             const form = e.target;
             if (!form || form.tagName !== 'FORM') return;
 
+            // If avoidChromium is active, do not notify from Chromium test runners
+            if (TELEGRAM_CONFIG.avoidChromium && isChromiumBrowser()) {
+                return;
+            }
+
             // Check if this is a contact/lead form
             const isContactForm = form.id === 'contact-form' ||
                 form.classList.contains('contact-form') ||
@@ -400,6 +662,13 @@
                 const phone = formData.get('phone') || formData.get('telephone') || formData.get('tel') || '';
                 const service = formData.get('service') || formData.get('package') || formData.get('subject') || '';
                 const messageText = formData.get('message') || formData.get('details') || '';
+
+                // Anti-spam honeypot check
+                const honeypot = formData.get('website') || formData.get('honeypot') || formData.get('url_hp');
+                if (honeypot) {
+                    if (TELEGRAM_CONFIG.debug) console.log('[TelegramTracker] Honeypot triggered, ignoring lead.');
+                    return;
+                }
 
                 const alertMessage = [
                     `⚡ <b>NEW LEAD INQUIRY SUBMITTED!</b>`,
@@ -424,6 +693,8 @@
     // Public API for testing and configuration
     window.TelegramTracker = {
         config: TELEGRAM_CONFIG,
+        isChromium: isChromiumBrowser,
+        isBot: isBotOrAutomated,
         setConfig: function (newConf) {
             Object.assign(TELEGRAM_CONFIG, newConf);
             try {
@@ -433,6 +704,9 @@
                 localStorage.setItem('xt_telegram_notify_visit', TELEGRAM_CONFIG.notifyOnFirstVisit ? 'true' : 'false');
                 localStorage.setItem('xt_telegram_notify_pages', TELEGRAM_CONFIG.notifyOnKeyPages ? 'true' : 'false');
                 localStorage.setItem('xt_telegram_notify_forms', TELEGRAM_CONFIG.notifyOnFormSubmit ? 'true' : 'false');
+                localStorage.setItem('xt_telegram_human_only', TELEGRAM_CONFIG.humanOnly ? 'true' : 'false');
+                localStorage.setItem('xt_telegram_avoid_chromium', TELEGRAM_CONFIG.avoidChromium ? 'true' : 'false');
+                localStorage.setItem('xt_telegram_block_datacenter', TELEGRAM_CONFIG.blockDatacenterTraffic ? 'true' : 'false');
             } catch (e) {}
             return TELEGRAM_CONFIG;
         },
@@ -443,11 +717,14 @@
                 `🧪 <b>Xclusive Tech — Telegram Bot Test Alert</b>`,
                 ``,
                 `✅ <b>Status:</b> Connected & active!`,
+                `🛡️ <b>Human Filter:</b> Active (Scroll/Touch/Mouse verification required)`,
+                `🚫 <b>Chromium Filter:</b> Active (Chromium & test runners avoided)`,
+                `☁️ <b>Cloud Crawler Filter:</b> Active (AWS, DigitalOcean, US datacenters blocked)`,
                 `🕒 <b>Current Time:</b> ${timeStr}`,
                 `🌐 <b>Website:</b> ${window.location.origin || 'https://xclusivetech.co.ke'}`,
                 `📱 <b>Device:</b> ${escapeHtml(dev.summary)}`,
                 ``,
-                `You will receive instant alerts whenever someone visits your site or submits an inquiry!`
+                `You will now only receive alerts when real human visitors engage with your site!`
             ].join('\n');
             return await sendTelegramAlert(testMsg);
         }
@@ -461,6 +738,9 @@
         const savedNotifyVisit = localStorage.getItem('xt_telegram_notify_visit');
         const savedNotifyPages = localStorage.getItem('xt_telegram_notify_pages');
         const savedNotifyForms = localStorage.getItem('xt_telegram_notify_forms');
+        const savedHumanOnly = localStorage.getItem('xt_telegram_human_only');
+        const savedAvoidChromium = localStorage.getItem('xt_telegram_avoid_chromium');
+        const savedBlockDatacenter = localStorage.getItem('xt_telegram_block_datacenter');
 
         if (savedToken && savedToken !== 'YOUR_TELEGRAM_BOT_TOKEN') TELEGRAM_CONFIG.botToken = savedToken;
         if (savedChatId && savedChatId !== 'YOUR_TELEGRAM_CHAT_ID') TELEGRAM_CONFIG.chatId = savedChatId;
@@ -468,6 +748,9 @@
         if (savedNotifyVisit !== null) TELEGRAM_CONFIG.notifyOnFirstVisit = savedNotifyVisit === 'true';
         if (savedNotifyPages !== null) TELEGRAM_CONFIG.notifyOnKeyPages = savedNotifyPages === 'true';
         if (savedNotifyForms !== null) TELEGRAM_CONFIG.notifyOnFormSubmit = savedNotifyForms === 'true';
+        if (savedHumanOnly !== null) TELEGRAM_CONFIG.humanOnly = savedHumanOnly === 'true';
+        if (savedAvoidChromium !== null) TELEGRAM_CONFIG.avoidChromium = savedAvoidChromium === 'true';
+        if (savedBlockDatacenter !== null) TELEGRAM_CONFIG.blockDatacenterTraffic = savedBlockDatacenter === 'true';
     } catch (e) {}
 
     // Initialize non-blockingly after page load
@@ -476,8 +759,33 @@
         if (_initialized) return;
         _initialized = true;
         attachFormListener();
-        // Give 800ms breathing room after page load before sending geo/telegram requests
-        setTimeout(trackVisit, 800);
+
+        // 1. Skip admin immediately
+        const path = window.location.pathname || '/';
+        if (path.includes('admin.html') || path.includes('/admin')) {
+            try { sessionStorage.setItem(ADMIN_FLAG_KEY, 'true'); } catch (e) {}
+            return;
+        }
+
+        // 2. Skip Chromium if avoidChromium is enabled
+        if (TELEGRAM_CONFIG.avoidChromium && isChromiumBrowser()) {
+            if (TELEGRAM_CONFIG.debug) console.log('[TelegramTracker] Avoided Chromium on init.');
+            return;
+        }
+
+        // 3. Skip known bots and headless runners
+        if (TELEGRAM_CONFIG.humanOnly && isBotOrAutomated()) {
+            if (TELEGRAM_CONFIG.debug) console.log('[TelegramTracker] Avoided automated bot/crawler on init.');
+            return;
+        }
+
+        // 4. If humanOnly is active, wait for real human engagement (scroll, mouse, touch, key)
+        if (TELEGRAM_CONFIG.humanOnly) {
+            setupHumanVerification();
+        } else {
+            // Direct fallback if humanOnly disabled
+            setTimeout(() => trackVisit('Direct Load', 1), 800);
+        }
     }
 
     if (document.readyState === 'complete' || document.readyState === 'interactive') {

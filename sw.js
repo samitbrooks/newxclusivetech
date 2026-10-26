@@ -1,5 +1,5 @@
 // Xclusive Tech Service Worker (PWA Offline Support & Cache)
-const CACHE_NAME = 'xt-cache-v4';
+const CACHE_NAME = 'xt-cache-v6';
 const PRECACHE_ASSETS = [
     '/',
     '/pricing.html',

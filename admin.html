@@ -530,6 +530,27 @@
                             </div>
                         </div>
 
+                        <!-- Filters & Bot Verification -->
+                        <div class="p-3.5 bg-emerald-50/70 rounded-2xl border border-emerald-200 space-y-2 text-xs">
+                            <span class="font-bold text-emerald-950 block flex items-center gap-1.5">
+                                <span>🛡️</span> Bot Protection & Quality Filters:
+                            </span>
+                            <div class="grid sm:grid-cols-3 gap-2">
+                                <label class="flex items-center gap-2 cursor-pointer text-slate-700">
+                                    <input type="checkbox" id="setting-telegram-human" checked class="rounded text-emerald-600">
+                                    <span><b>Only real human visitors</b> (requires scroll / tap / mouse)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer text-slate-700">
+                                    <input type="checkbox" id="setting-telegram-chromium" checked class="rounded text-emerald-600">
+                                    <span><b>Avoid Chromium</b> (filters Chromium & headless runners)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer text-slate-700">
+                                    <input type="checkbox" id="setting-telegram-datacenter" checked class="rounded text-emerald-600">
+                                    <span><b>Block Datacenter IPs</b> (filters AWS, Google, DigitalOcean scrapers)</span>
+                                </label>
+                            </div>
+                        </div>
+
                         <!-- Quick 3-Step Setup Guide -->
                         <div class="p-3.5 bg-sky-50 rounded-2xl border border-sky-200 text-xs text-sky-900 space-y-1.5">
                             <div class="font-bold flex items-center gap-1.5">
@@ -1374,18 +1395,27 @@ WhatsApp: +254 722 753 819`
             const notifyVisit = localStorage.getItem("xt_telegram_notify_visit") !== 'false';
             const notifyPages = localStorage.getItem("xt_telegram_notify_pages") !== 'false';
             const notifyForms = localStorage.getItem("xt_telegram_notify_forms") !== 'false';
+            const notifyHuman = localStorage.getItem("xt_telegram_human_only") !== 'false';
+            const avoidChromium = localStorage.getItem("xt_telegram_avoid_chromium") !== 'false';
+            const blockDatacenter = localStorage.getItem("xt_telegram_block_datacenter") !== 'false';
 
             const tokenInput = document.getElementById("setting-telegram-token");
             const chatIdInput = document.getElementById("setting-telegram-chatid");
             const visitCheck = document.getElementById("setting-telegram-visit");
             const pagesCheck = document.getElementById("setting-telegram-pages");
             const formsCheck = document.getElementById("setting-telegram-forms");
+            const humanCheck = document.getElementById("setting-telegram-human");
+            const chromiumCheck = document.getElementById("setting-telegram-chromium");
+            const datacenterCheck = document.getElementById("setting-telegram-datacenter");
 
             if (tokenInput && token && token !== 'YOUR_TELEGRAM_BOT_TOKEN') tokenInput.value = token;
             if (chatIdInput && chatId && chatId !== 'YOUR_TELEGRAM_CHAT_ID') chatIdInput.value = chatId;
             if (visitCheck) visitCheck.checked = notifyVisit;
             if (pagesCheck) pagesCheck.checked = notifyPages;
             if (formsCheck) formsCheck.checked = notifyForms;
+            if (humanCheck) humanCheck.checked = notifyHuman;
+            if (chromiumCheck) chromiumCheck.checked = avoidChromium;
+            if (datacenterCheck) datacenterCheck.checked = blockDatacenter;
 
             if (tokenInput) tokenInput.addEventListener('input', updateTelegramStatusPill);
             if (chatIdInput) chatIdInput.addEventListener('input', updateTelegramStatusPill);
@@ -1420,6 +1450,9 @@ WhatsApp: +254 722 753 819`
             const notifyVisit = document.getElementById("setting-telegram-visit")?.checked ?? true;
             const notifyPages = document.getElementById("setting-telegram-pages")?.checked ?? true;
             const notifyForms = document.getElementById("setting-telegram-forms")?.checked ?? true;
+            const notifyHuman = document.getElementById("setting-telegram-human")?.checked ?? true;
+            const avoidChromium = document.getElementById("setting-telegram-chromium")?.checked ?? true;
+            const blockDatacenter = document.getElementById("setting-telegram-datacenter")?.checked ?? true;
 
             if (window.TelegramTracker) {
                 window.TelegramTracker.setConfig({
@@ -1428,7 +1461,10 @@ WhatsApp: +254 722 753 819`
                     enabled: true,
                     notifyOnFirstVisit: notifyVisit,
                     notifyOnKeyPages: notifyPages,
-                    notifyOnFormSubmit: notifyForms
+                    notifyOnFormSubmit: notifyForms,
+                    humanOnly: notifyHuman,
+                    avoidChromium: avoidChromium,
+                    blockDatacenterTraffic: blockDatacenter
                 });
             } else {
                 localStorage.setItem("xt_telegram_bot_token", token);
@@ -1437,6 +1473,9 @@ WhatsApp: +254 722 753 819`
                 localStorage.setItem("xt_telegram_notify_visit", notifyVisit ? "true" : "false");
                 localStorage.setItem("xt_telegram_notify_pages", notifyPages ? "true" : "false");
                 localStorage.setItem("xt_telegram_notify_forms", notifyForms ? "true" : "false");
+                localStorage.setItem("xt_telegram_human_only", notifyHuman ? "true" : "false");
+                localStorage.setItem("xt_telegram_avoid_chromium", avoidChromium ? "true" : "false");
+                localStorage.setItem("xt_telegram_block_datacenter", blockDatacenter ? "true" : "false");
             }
 
             updateTelegramStatusPill();
