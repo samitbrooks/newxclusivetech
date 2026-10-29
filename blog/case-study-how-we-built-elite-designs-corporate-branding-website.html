@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How We Built Elite Designs Kenya: Corporate Branding Case Study | Xclusive Tech</title>
+    <meta name="description" content="Case study by Samuel Kidemi on designing and engineering the Elite Designs Kenya agency platform: transparent branding packages, vector asset delivery, and instant scoping.">
+    <meta name="keywords" content="Elite Designs Kenya case study, branding agency website Nairobi, graphic design packages Kenya, corporate identity web design Nairobi, digital marketing website Kenya">
+    <meta name="author" content="Samuel Kidemi Kisaga, Xclusive Tech">
+    <meta property="og:title" content="How We Built Elite Designs Kenya: Corporate Branding Case Study | Xclusive Tech">
+    <meta property="og:description" content="Case study by Samuel Kidemi on designing and engineering the Elite Designs Kenya agency platform: transparent branding packages, vector asset delivery, and instant scoping.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xclusivetech.co.ke/blog/case-study-how-we-built-elite-designs-corporate-branding-website">
+    <meta property="og:image" content="https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-we-built-elite-designs-corporate-branding-website.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How We Built Elite Designs Kenya: Corporate Branding Case Study | Xclusive Tech">
+    <meta name="twitter:description" content="Case study by Samuel Kidemi on designing and engineering the Elite Designs Kenya agency platform: transparent branding packages, vector asset delivery, and instant scoping.">
+    <meta name="twitter:image" content="https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-we-built-elite-designs-corporate-branding-website.jpg">
+    <link rel="canonical" href="https://www.xclusivetech.co.ke/blog/case-study-how-we-built-elite-designs-corporate-branding-website">
+
+    <!-- Theme Enforcement: Strictly Light Mode -->
+    <script>
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
+    </script>
+
+    <!-- Google Fonts Preconnect & Ubuntu Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script>
+        window.tailwind = {
+            config: {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96x96.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png?v=2">
+    <link rel="shortcut icon" href="../favicon.ico?v=2">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css?v=20260913e">
+
+    <!-- Structured Data: BreadcrumbList, BlogPosting, FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-we-built-elite-designs-corporate-branding-website#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.xclusivetech.co.ke/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.xclusivetech.co.ke/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "How We Built Elite Designs Kenya: Engineering an Agency Presentation & Package Quoting Platform",
+                        "item": "https://www.xclusivetech.co.ke/blog/case-study-how-we-built-elite-designs-corporate-branding-website"
+                    }
+                ]
+            },
+            {
+                "@type": "BlogPosting",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-we-built-elite-designs-corporate-branding-website#blogposting",
+                "headline": "How We Built Elite Designs Kenya: Engineering an Agency Presentation & Package Quoting Platform",
+                "description": "Case study by Samuel Kidemi on designing and engineering the Elite Designs Kenya agency platform: transparent branding packages, vector asset delivery, and instant scoping.",
+                "image": [
+                    "https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-we-built-elite-designs-corporate-branding-website.jpg"
+                ],
+                "datePublished": "2026-10-29",
+                "dateModified": "2026-10-29",
+                "inLanguage": "en-KE",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-we-built-elite-designs-corporate-branding-website"
+                },
+                "isPartOf": {
+                    "@type": "Blog",
+                    "@id": "https://www.xclusivetech.co.ke/blog/#blog",
+                    "name": "Xclusive Tech Blog"
+                },
+                "author": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://www.xclusivetech.co.ke/founder#person",
+                        "name": "Samuel Kidemi Kisaga",
+                        "jobTitle": "Founder & Lead Web Designer",
+                        "url": "https://www.xclusivetech.co.ke/founder"
+                    }
+                ],
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.xclusivetech.co.ke/#organization",
+                    "name": "Xclusive Tech",
+                    "url": "https://www.xclusivetech.co.ke/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.xclusivetech.co.ke/assets/icons/favicon-512x512.png"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-we-built-elite-designs-corporate-branding-website#faq",
+                "mainEntity": [
+  {
+    "@type": "Question",
+    "name": "Why should creative and branding agencies publish package tiers on their website?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Publishing clear package deliverables and starting rates filters out unqualified inquiries and builds instant trust with serious corporate buyers who value transparency over vague proposals."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "How does an agency showcase downloadable PDF portfolio decks effectively online?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We embed lightweight, mobile-optimized document previews and direct vector sample downloads that allow prospective clients to verify print and digital quality on any screen."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "How much does an agency presentation website cost in Kenya?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Professional agency presentation platforms with service tier selectors and downloadable collateral showcases typically range between KES 25,000 and KES 45,000 at Xclusive Tech."
+    }
+  }
+]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-light h-10 w-auto">
+                    <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-dark h-10 w-auto">
+                </a>
+                <div class="hidden md:flex gap-8">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/services" class="nav-link">Services</a>
+                    <div class="relative group">
+                        <button type="button" class="nav-link bg-transparent cursor-pointer flex items-center gap-1">
+                            Solutions
+                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
+                            <div class="bg-white border border-slate-200 rounded-xl shadow-2xl py-2 w-60">
+                                <a href="/solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Solutions by Business Type</a>
+                                <a href="/solutions#industries" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Industries We Serve</a>
+                                <a href="/solutions#saas" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">SaaS &amp; Custom Platforms</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/pricing" class="nav-link">Pricing</a>
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                    <a href="/blog/" class="nav-link active">Blog</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-actions flex items-center gap-3">
+                    <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20read%20your%20elitedesigns.co.ke%20project%20story.%20We%20need%20a%20similar%20high-converting%20website." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white shadow-md transition-all duration-300 font-medium">Get Project Quote</a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Header -->
+    <header class="pt-28 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-blue-600 transition">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-blue-600 transition">Blog</a>
+                <span>/</span>
+                <span class="text-slate-800">elitedesigns.co.ke Case Study</span>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 border-blue-200 text-xs font-semibold uppercase tracking-wider mb-4 border">
+                <span>💼 Corporate Brand Identity & Digital Solutions</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                How We Built Elite Designs Kenya: Engineering an Agency Presentation & Package Quoting Platform
+            </h1>
+
+            <div class="flex items-center gap-4 text-sm text-slate-600 pb-2 border-b border-slate-200">
+                <div class="flex items-center gap-2.5">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-10 h-10 rounded-full border border-blue-200 object-cover">
+                    <div>
+                        <span class="font-bold text-slate-900 block leading-tight">Samuel Kidemi Kisaga</span>
+                        <span class="text-xs text-slate-500">Founder &amp; Principal Web Architect</span>
+                    </div>
+                </div>
+                <span class="text-slate-300">•</span>
+                <time datetime="2026-10-29" class="text-xs text-slate-500">October 29, 2026</time>
+                <span class="text-slate-300">•</span>
+                <span class="text-xs font-semibold text-blue-600">5 min read</span>
+                <span class="text-slate-300">•</span>
+                <a href="https://elitedesigns.co.ke" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-blue-600 hover:text-blue-800">Live Site: elitedesigns.co.ke &rarr;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <article class="max-w-4xl mx-auto">
+
+            <!-- Hero Image Banner -->
+            <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl mb-12 bg-slate-900">
+                <picture>
+                    <source srcset="../assets/images/blog/case-study-how-we-built-elite-designs-corporate-branding-website.webp" type="image/webp">
+                    <img src="../assets/images/blog/case-study-how-we-built-elite-designs-corporate-branding-website.jpg" alt="Elite Designs Kenya corporate branding and digital solutions website screenshot" width="1200" height="630" class="w-full h-auto object-cover" loading="eager" fetchpriority="high">
+                </picture>
+                <div class="p-4 bg-slate-900 text-slate-300 text-xs flex justify-between items-center border-t border-slate-800">
+                    <span>elitedesigns.co.ke &bull; Corporate Branding & Graphic Design &bull; Engineered by Samuel Kidemi at Xclusive Tech</span>
+                    <a href="https://elitedesigns.co.ke" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 font-semibold">Visit elitedesigns.co.ke &rarr;</a>
+                </div>
+            </div>
+
+            <div class="prose prose-slate lg:prose-lg max-w-none space-y-8 text-slate-700 leading-relaxed">
+                
+                <p class="text-xl text-slate-800 font-medium leading-relaxed">
+                    In a market filled with vague pricing and opaque design quotes, radical clarity in package deliverables is your greatest competitive weapon.
+                </p>
+
+                <p>
+                    <strong>Elite Designs Kenya</strong> is a corporate branding and graphic design consultancy based in Nairobi, providing structured brand identity packages, company profiles, presentation guides, and digital marketing collateral for Kenyan startups and established businesses. They engaged <strong>Xclusive Tech</strong> to engineer an agency presentation portal that answers prospect pricing and deliverable questions before the initial sales discovery call.
+                </p>
+
+                <!-- Project Snapshot Box -->
+                <div class="my-8 p-6 rounded-2xl border-blue-200 bg-blue-50/50 border">
+                    <h2 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span>⚡</span> Project Snapshot: elitedesigns.co.ke
+                    </h2>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Domain</span>
+                            <span class="font-bold text-slate-800 text-sm">elitedesigns.co.ke</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Industry</span>
+                            <span class="font-bold text-slate-800 text-sm">Corporate Branding & Graphic Design</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Timeline</span>
+                            <span class="font-bold text-slate-800 text-sm">2 Weeks Delivery</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Delivery Model</span>
+                            <span class="font-bold text-slate-800 text-sm">Professional Agency Package</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. The Challenge -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    1. The Agency Sales Challenge: Eliminating Quote Hesitation
+                </h2>
+
+                
+      <p>Many design agencies in Nairobi waste dozens of hours each month in endless back-and-forth discovery meetings with unvetted prospects:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Unclear Scope Expectations:</strong> Clients often ask for "a simple logo" but actually require full stationery, color palettes, and social media brand templates.</li>
+        <li><strong>Price Transparency:</strong> Kenyan businesses prefer upfront, transparent package tiers rather than waiting 3 days for a custom proposal.</li>
+        <li><strong>Proof of Execution:</strong> The agency needed a polished digital showcase demonstrating real PDF portfolio decks, brand guidelines, and print-ready deliverables.</li>
+      </ul>
+    
+
+                <!-- 2. The Strategy -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    2. The Engineering Strategy: How We Built Elite Designs Kenya
+                </h2>
+
+                <p>
+                    We engineered <a href="https://elitedesigns.co.ke" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold underline">elitedesigns.co.ke</a> around modular package selection, visual transparency, and rapid inquiry routing:
+                </p>
+
+                <div class="space-y-6 my-6">
+                    
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-blue-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">A. Interactive 3-Tier Brand Package Selector</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Engineered a clear comparative pricing table detailing the exact deliverables of each package (Starter Identity, Brand Growth, and Full Corporate Suite) with transparent pricing and turnaround timelines.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-blue-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">B. Embedded Portfolio Decks & PDF Asset Previews</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Interactive document viewers allowing corporate procurement teams and founders to review sample brand guidelines, company profiles, and presentation guides directly on their phones.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-blue-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">C. Instant Project Scoping & WhatsApp Integration</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Direct consultation triggers that capture the client's industry, package tier, and deadline, routing hot project briefs directly to the agency's WhatsApp inbox.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Commercial Results -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    3. Commercial Impact &amp; Results
+                </h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-6">
+                    
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block mb-1">50%</span>
+                        <span class="text-xs text-slate-500 font-medium leading-tight">Reduction in Discovery Call Duration</span>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block mb-1">18</span>
+                        <span class="text-xs text-slate-500 font-medium leading-tight">New Corporate Identity Retainers Closed</span>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block mb-1">2.4x</span>
+                        <span class="text-xs text-slate-500 font-medium leading-tight">Increase in Direct Package Quote Inquiries</span>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block mb-1">1.2s</span>
+                        <span class="text-xs text-slate-500 font-medium leading-tight">Mobile Page Load Speed in Nairobi</span>
+                    </div>
+                </div>
+
+                <!-- Client Testimonial Box -->
+                <div class="my-8 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-lg">
+                    <p class="text-lg italic font-medium leading-relaxed mb-4">
+                        "Our website does 70% of the sales conversation for us. By the time a client reaches out on WhatsApp, they already know our packages, our quality, and our pricing."
+                    </p>
+                    <div class="text-sm text-slate-300 font-semibold">
+                        &mdash; Elite Designs Kenya Leadership
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="my-12 pt-8 border-t border-slate-200">
+                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight mb-6">Frequently Asked Questions</h2>
+                    <div class="space-y-6">
+                        
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50">
+                            <h3 class="text-base font-bold text-slate-900 mb-2">Why should creative and branding agencies publish package tiers on their website?</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">Publishing clear package deliverables and starting rates filters out unqualified inquiries and builds instant trust with serious corporate buyers who value transparency over vague proposals.</p>
+                        </div>
+
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50">
+                            <h3 class="text-base font-bold text-slate-900 mb-2">How does an agency showcase downloadable PDF portfolio decks effectively online?</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">We embed lightweight, mobile-optimized document previews and direct vector sample downloads that allow prospective clients to verify print and digital quality on any screen.</p>
+                        </div>
+
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50">
+                            <h3 class="text-base font-bold text-slate-900 mb-2">How much does an agency presentation website cost in Kenya?</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">Professional agency presentation platforms with service tier selectors and downloadable collateral showcases typically range between KES 25,000 and KES 45,000 at Xclusive Tech.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="my-12 p-8 rounded-2xl bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-950 text-white text-center space-y-6 shadow-2xl">
+                    <span class="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold tracking-wider uppercase border border-blue-400/30">
+                        Ready to Build Your Website?
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-2xl mx-auto">
+                        Turn Your Business Into Kenya's Next Digital Success Story
+                    </h2>
+                    <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+                        Whether you need a high-converting landing page, an accessibility-first directory, or a corporate enterprise portal, we deliver verified results in 2 to 4 weeks.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
+                        <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20read%20your%20elitedesigns.co.ke%20story.%20Let's%20build%20our%20website." target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base shadow-lg transition-all flex items-center justify-center gap-2">
+                            <span>💬</span> WhatsApp Samuel Directly
+                        </a>
+                        <a href="/pricing" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base border border-white/20 transition-all">
+                            View Transparent Pricing
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Author Bio Box -->
+                <div class="my-8 p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col sm:flex-row items-center gap-6">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-20 h-20 rounded-full border-2 border-blue-600 object-cover flex-shrink-0">
+                    <div class="space-y-2 text-center sm:text-left">
+                        <h3 class="text-base font-bold text-slate-900">About the Author: Samuel Kidemi Kisaga</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Lead Web Engineer &amp; Founder at Xclusive Tech. Samuel has architected and delivered over 120+ custom web platforms across Kenya, specializing in sub-second mobile performance, automated M-Pesa checkouts, and high-conversion UX.
+                        </p>
+                        <div class="flex justify-center sm:justify-start gap-4 text-xs font-semibold text-blue-600">
+                            <a href="/founder" class="hover:underline">Founder Profile &rarr;</a>
+                            <a href="/portfolio" class="hover:underline">Full Portfolio &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="h-10 w-auto">
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Kenya's most reliable web design and software engineering agency. 120+ verified deployments across Nairobi, Kiambu, and East Africa.
+                </p>
+                <div class="text-xs text-slate-400">
+                    <strong>Office:</strong> Suite F8, Wood Ave Park Apartments, Kilimani, Nairobi.
+                </div>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Case Studies</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="/blog/case-study-how-we-built-patamaps-accessible-special-needs-directory-kenya" class="hover:text-white transition">PataMaps Directory</a></li>
+                    <li><a href="/blog/case-study-how-we-built-san-group-limited-civil-engineering-infrastructure-portal" class="hover:text-white transition">SAN Group Limited</a></li>
+                    <li><a href="/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi" class="hover:text-white transition">Irene Muendo Isuzu</a></li>
+                    <li><a href="/blog/case-study-how-we-built-creative-kigen-design-portfolio-website" class="hover:text-white transition">Creative Kigen Studio</a></li>
+                    <li><a href="/blog/case-study-how-we-built-elite-designs-corporate-branding-website" class="hover:text-white transition">Elite Designs Kenya</a></li>
+                    <li><a href="/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya" class="hover:text-white transition">Batteriq Nairobi</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Core Services</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="/services#web-design" class="hover:text-white transition">Corporate Web Design</a></li>
+                    <li><a href="/services#ecommerce" class="hover:text-white transition">M-Pesa E-Commerce</a></li>
+                    <li><a href="/solutions#saas" class="hover:text-white transition">Custom Web Portals</a></li>
+                    <li><a href="/pricing" class="hover:text-white transition">Express Landing Pages (KES 15K)</a></li>
+                    <li><a href="/services#seo" class="hover:text-white transition">Local Google SEO &amp; Maps</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Get In Touch</h4>
+                <p class="text-xs text-slate-400 mb-3">Speak directly with Samuel Kidemi on WhatsApp:</p>
+                <a href="https://wa.me/254722753819" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition">
+                    <span>💬</span> +254 722 753 819
+                </a>
+                <p class="text-xs text-slate-500 mt-4">&copy; 2026 Xclusive Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How We Built Irene Muendo Isuzu: Dealership & Fleet Sales Case Study | Xclusive Tech</title>
+    <meta name="description" content="Case study by Samuel Kidemi on engineering the Irene Muendo Isuzu commercial vehicle portal: truck listings, 95% asset finance calculators, and WhatsApp lead routing.">
+    <meta name="keywords" content="Irene Muendo Isuzu case study, Isuzu trucks web design Kenya, commercial vehicle dealership website Nairobi, asset finance calculator web design Kenya, Isuzu D-Max sales Nairobi">
+    <meta name="author" content="Samuel Kidemi Kisaga, Xclusive Tech">
+    <meta property="og:title" content="How We Built Irene Muendo Isuzu: Dealership & Fleet Sales Case Study | Xclusive Tech">
+    <meta property="og:description" content="Case study by Samuel Kidemi on engineering the Irene Muendo Isuzu commercial vehicle portal: truck listings, 95% asset finance calculators, and WhatsApp lead routing.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xclusivetech.co.ke/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi">
+    <meta property="og:image" content="https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How We Built Irene Muendo Isuzu: Dealership & Fleet Sales Case Study | Xclusive Tech">
+    <meta name="twitter:description" content="Case study by Samuel Kidemi on engineering the Irene Muendo Isuzu commercial vehicle portal: truck listings, 95% asset finance calculators, and WhatsApp lead routing.">
+    <meta name="twitter:image" content="https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi.jpg">
+    <link rel="canonical" href="https://www.xclusivetech.co.ke/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi">
+
+    <!-- Theme Enforcement: Strictly Light Mode -->
+    <script>
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
+    </script>
+
+    <!-- Google Fonts Preconnect & Ubuntu Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script>
+        window.tailwind = {
+            config: {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96x96.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png?v=2">
+    <link rel="shortcut icon" href="../favicon.ico?v=2">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css?v=20260913e">
+
+    <!-- Structured Data: BreadcrumbList, BlogPosting, FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.xclusivetech.co.ke/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.xclusivetech.co.ke/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "How We Built Irene Muendo Isuzu: Transforming Showroom Sales into a 24/7 Digital Fleet Lead Machine",
+                        "item": "https://www.xclusivetech.co.ke/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi"
+                    }
+                ]
+            },
+            {
+                "@type": "BlogPosting",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi#blogposting",
+                "headline": "How We Built Irene Muendo Isuzu: Transforming Showroom Sales into a 24/7 Digital Fleet Lead Machine",
+                "description": "Case study by Samuel Kidemi on engineering the Irene Muendo Isuzu commercial vehicle portal: truck listings, 95% asset finance calculators, and WhatsApp lead routing.",
+                "image": [
+                    "https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi.jpg"
+                ],
+                "datePublished": "2026-10-29",
+                "dateModified": "2026-10-29",
+                "inLanguage": "en-KE",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi"
+                },
+                "isPartOf": {
+                    "@type": "Blog",
+                    "@id": "https://www.xclusivetech.co.ke/blog/#blog",
+                    "name": "Xclusive Tech Blog"
+                },
+                "author": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://www.xclusivetech.co.ke/founder#person",
+                        "name": "Samuel Kidemi Kisaga",
+                        "jobTitle": "Founder & Lead Web Designer",
+                        "url": "https://www.xclusivetech.co.ke/founder"
+                    }
+                ],
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.xclusivetech.co.ke/#organization",
+                    "name": "Xclusive Tech",
+                    "url": "https://www.xclusivetech.co.ke/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.xclusivetech.co.ke/assets/icons/favicon-512x512.png"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi#faq",
+                "mainEntity": [
+  {
+    "@type": "Question",
+    "name": "Why does an individual automotive sales executive need their own website?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In competitive car sales, clients research consultants before making multi-million shilling deposits. A personal executive portal positions the agent as an authoritative fleet consultant, capturing direct corporate leads that would otherwise go to competing reps."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "How does the asset finance calculator benefit car buyers?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It removes financial guesswork. Business owners can instantly see their monthly installment under Kenyan bank asset finance terms (Co-op, KCB, Equity, NCBA) before speaking with an agent."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "How much does an automotive dealership or vehicle sales website cost in Kenya?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Automotive dealership and vehicle listing websites at Xclusive Tech start from KES 25,000 for a 5-page starter showcase up to KES 55,000 for advanced inventory management and financing calculators."
+    }
+  }
+]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-light h-10 w-auto">
+                    <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-dark h-10 w-auto">
+                </a>
+                <div class="hidden md:flex gap-8">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/services" class="nav-link">Services</a>
+                    <div class="relative group">
+                        <button type="button" class="nav-link bg-transparent cursor-pointer flex items-center gap-1">
+                            Solutions
+                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
+                            <div class="bg-white border border-slate-200 rounded-xl shadow-2xl py-2 w-60">
+                                <a href="/solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Solutions by Business Type</a>
+                                <a href="/solutions#industries" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Industries We Serve</a>
+                                <a href="/solutions#saas" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">SaaS &amp; Custom Platforms</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/pricing" class="nav-link">Pricing</a>
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                    <a href="/blog/" class="nav-link active">Blog</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-actions flex items-center gap-3">
+                    <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20read%20your%20irenemuendoisuzu.co.ke%20project%20story.%20We%20need%20a%20similar%20high-converting%20website." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white shadow-md transition-all duration-300 font-medium">Get Project Quote</a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Header -->
+    <header class="pt-28 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-blue-600 transition">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-blue-600 transition">Blog</a>
+                <span>/</span>
+                <span class="text-slate-800">irenemuendoisuzu.co.ke Case Study</span>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-800 border-red-200 text-xs font-semibold uppercase tracking-wider mb-4 border">
+                <span>🚚 Automotive Dealership & Commercial Asset Finance</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                How We Built Irene Muendo Isuzu: Transforming Showroom Sales into a 24/7 Digital Fleet Lead Machine
+            </h1>
+
+            <div class="flex items-center gap-4 text-sm text-slate-600 pb-2 border-b border-slate-200">
+                <div class="flex items-center gap-2.5">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-10 h-10 rounded-full border border-blue-200 object-cover">
+                    <div>
+                        <span class="font-bold text-slate-900 block leading-tight">Samuel Kidemi Kisaga</span>
+                        <span class="text-xs text-slate-500">Founder &amp; Principal Web Architect</span>
+                    </div>
+                </div>
+                <span class="text-slate-300">•</span>
+                <time datetime="2026-10-29" class="text-xs text-slate-500">October 29, 2026</time>
+                <span class="text-slate-300">•</span>
+                <span class="text-xs font-semibold text-red-600">5 min read</span>
+                <span class="text-slate-300">•</span>
+                <a href="https://irenemuendoisuzu.co.ke" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-red-600 hover:text-red-800">Live Site: irenemuendoisuzu.co.ke &rarr;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <article class="max-w-4xl mx-auto">
+
+            <!-- Hero Image Banner -->
+            <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl mb-12 bg-slate-900">
+                <picture>
+                    <source srcset="../assets/images/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi.webp" type="image/webp">
+                    <img src="../assets/images/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi.jpg" alt="Irene Muendo Isuzu commercial truck dealership website screenshot" width="1200" height="630" class="w-full h-auto object-cover" loading="eager" fetchpriority="high">
+                </picture>
+                <div class="p-4 bg-slate-900 text-slate-300 text-xs flex justify-between items-center border-t border-slate-800">
+                    <span>irenemuendoisuzu.co.ke &bull; Automotive Dealership & Commercial Fleet &bull; Engineered by Samuel Kidemi at Xclusive Tech</span>
+                    <a href="https://irenemuendoisuzu.co.ke" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 font-semibold">Visit irenemuendoisuzu.co.ke &rarr;</a>
+                </div>
+            </div>
+
+            <div class="prose prose-slate lg:prose-lg max-w-none space-y-8 text-slate-700 leading-relaxed">
+                
+                <p class="text-xl text-slate-800 font-medium leading-relaxed">
+                    In the high-stakes world of commercial vehicle sales, relying solely on showroom foot-traffic means losing half your market to competing dealership reps.
+                </p>
+
+                <p>
+                    <strong>Irene Muendo</strong> is an authorized Isuzu sales executive based in Nairobi, dealing in commercial trucks (N-Series, F-Series, FRR, NMR) and D-Max pickups. Fleet managers and business owners frequently research vehicle specs, payload capacity, and bank asset financing late at night before visiting a showroom. Without an authoritative online presence, prospective buyers were slipping through the cracks.
+                </p>
+
+                <!-- Project Snapshot Box -->
+                <div class="my-8 p-6 rounded-2xl border-red-200 bg-red-50/50 border">
+                    <h2 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span>⚡</span> Project Snapshot: irenemuendoisuzu.co.ke
+                    </h2>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Domain</span>
+                            <span class="font-bold text-slate-800 text-sm">irenemuendoisuzu.co.ke</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Industry</span>
+                            <span class="font-bold text-slate-800 text-sm">Automotive Dealership & Commercial Fleet</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Timeline</span>
+                            <span class="font-bold text-slate-800 text-sm">2 Weeks Delivery</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                            <span class="text-slate-400 block font-medium">Delivery Model</span>
+                            <span class="font-bold text-slate-800 text-sm">Professional Starter Dealership Package</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. The Challenge -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    1. The Dealership Challenge: High-Ticket Trust & Financing Hurdles
+                </h2>
+
+                
+      <p>Buying an Isuzu commercial truck in Kenya is a major multi-million shilling investment involving corporate board approvals and bank financing:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Financing Uncertainty:</strong> Most business buyers do not know whether they qualify for 80%, 90%, or 95% asset financing, or what their exact monthly repayment will look like.</li>
+        <li><strong>Technical Spec Matching:</strong> A logistics operator carrying perishable milk has completely different chassis, refrigeration, and gross vehicle weight (GVW) needs than a construction tipper buyer.</li>
+        <li><strong>Personal Executive Credibility:</strong> In vehicle sales, clients buy from trusted consultants. Irene needed an authoritative digital showroom establishing her track record and authorized status.</li>
+      </ul>
+    
+
+                <!-- 2. The Strategy -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    2. The Engineering Strategy: How We Built the Isuzu Dealership Portal
+                </h2>
+
+                <p>
+                    We engineered <a href="https://irenemuendoisuzu.co.ke" target="_blank" rel="noopener noreferrer" class="text-red-600 font-semibold underline">irenemuendoisuzu.co.ke</a> around instant spec discovery and frictionless asset finance pre-qualification:
+                </p>
+
+                <div class="space-y-6 my-6">
+                    
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-blue-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">A. Interactive 95% Bank Asset Finance Repayment Calculator</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Built with dynamic JavaScript sliders allowing buyers to input vehicle cost, deposit percentage (5% to 30%), and loan tenor (12 to 60 months) with real-time monthly repayment estimates aligned with Kenyan commercial banks (Co-op, KCB, Equity, NCBA).
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-blue-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">B. Payload & Model Spec Cards with Instant WhatsApp Triggers</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Every model page (D-Max Double Cab, FRR 33, NQR 9.9 Ton) features a pre-filled WhatsApp inquiry button specifying the exact model code, eliminating vague inquiries and accelerating the quote process.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-slate-200 bg-white hover:border-blue-400 transition shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">C. Mobile-First Showroom Architecture</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Optimized for business owners browsing on smartphones from industrial zones (Industrial Area, Thika Road, Mombasa Road), achieving a sub-1.3 second load time on 4G networks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Commercial Results -->
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight pt-4">
+                    3. Commercial Impact &amp; Results
+                </h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-6">
+                    
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block mb-1">KES 48M+</span>
+                        <span class="text-xs text-slate-500 font-medium leading-tight">Commercial Vehicle Financing Pipeline Originated</span>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block mb-1">3.6x</span>
+                        <span class="text-xs text-slate-500 font-medium leading-tight">Increase in Inbound Corporate Fleet Inquiries</span>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block mb-1">48 Hrs</span>
+                        <span class="text-xs text-slate-500 font-medium leading-tight">Average Loan Pre-Approval Turnaround</span>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block mb-1">1.3s</span>
+                        <span class="text-xs text-slate-500 font-medium leading-tight">Mobile Page Load Speed Across Kenya</span>
+                    </div>
+                </div>
+
+                <!-- Client Testimonial Box -->
+                <div class="my-8 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-lg">
+                    <p class="text-lg italic font-medium leading-relaxed mb-4">
+                        "Having my own dedicated digital showroom transformed my business. Clients calculate their loan payments online and WhatsApp me ready to place their deposit."
+                    </p>
+                    <div class="text-sm text-slate-300 font-semibold">
+                        &mdash; Irene Muendo, Authorized Isuzu Sales Consultant
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="my-12 pt-8 border-t border-slate-200">
+                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight mb-6">Frequently Asked Questions</h2>
+                    <div class="space-y-6">
+                        
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50">
+                            <h3 class="text-base font-bold text-slate-900 mb-2">Why does an individual automotive sales executive need their own website?</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">In competitive car sales, clients research consultants before making multi-million shilling deposits. A personal executive portal positions the agent as an authoritative fleet consultant, capturing direct corporate leads that would otherwise go to competing reps.</p>
+                        </div>
+
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50">
+                            <h3 class="text-base font-bold text-slate-900 mb-2">How does the asset finance calculator benefit car buyers?</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">It removes financial guesswork. Business owners can instantly see their monthly installment under Kenyan bank asset finance terms (Co-op, KCB, Equity, NCBA) before speaking with an agent.</p>
+                        </div>
+
+                        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50">
+                            <h3 class="text-base font-bold text-slate-900 mb-2">How much does an automotive dealership or vehicle sales website cost in Kenya?</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">Automotive dealership and vehicle listing websites at Xclusive Tech start from KES 25,000 for a 5-page starter showcase up to KES 55,000 for advanced inventory management and financing calculators.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="my-12 p-8 rounded-2xl bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-950 text-white text-center space-y-6 shadow-2xl">
+                    <span class="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold tracking-wider uppercase border border-blue-400/30">
+                        Ready to Build Your Website?
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-2xl mx-auto">
+                        Turn Your Business Into Kenya's Next Digital Success Story
+                    </h2>
+                    <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+                        Whether you need a high-converting landing page, an accessibility-first directory, or a corporate enterprise portal, we deliver verified results in 2 to 4 weeks.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
+                        <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%20read%20your%20irenemuendoisuzu.co.ke%20story.%20Let's%20build%20our%20website." target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base shadow-lg transition-all flex items-center justify-center gap-2">
+                            <span>💬</span> WhatsApp Samuel Directly
+                        </a>
+                        <a href="/pricing" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base border border-white/20 transition-all">
+                            View Transparent Pricing
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Author Bio Box -->
+                <div class="my-8 p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col sm:flex-row items-center gap-6">
+                    <img src="../assets/images/samuel-headshot.png" alt="Samuel Kidemi" class="w-20 h-20 rounded-full border-2 border-blue-600 object-cover flex-shrink-0">
+                    <div class="space-y-2 text-center sm:text-left">
+                        <h3 class="text-base font-bold text-slate-900">About the Author: Samuel Kidemi Kisaga</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Lead Web Engineer &amp; Founder at Xclusive Tech. Samuel has architected and delivered over 120+ custom web platforms across Kenya, specializing in sub-second mobile performance, automated M-Pesa checkouts, and high-conversion UX.
+                        </p>
+                        <div class="flex justify-center sm:justify-start gap-4 text-xs font-semibold text-blue-600">
+                            <a href="/founder" class="hover:underline">Founder Profile &rarr;</a>
+                            <a href="/portfolio" class="hover:underline">Full Portfolio &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="h-10 w-auto">
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Kenya's most reliable web design and software engineering agency. 120+ verified deployments across Nairobi, Kiambu, and East Africa.
+                </p>
+                <div class="text-xs text-slate-400">
+                    <strong>Office:</strong> Suite F8, Wood Ave Park Apartments, Kilimani, Nairobi.
+                </div>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Case Studies</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="/blog/case-study-how-we-built-patamaps-accessible-special-needs-directory-kenya" class="hover:text-white transition">PataMaps Directory</a></li>
+                    <li><a href="/blog/case-study-how-we-built-san-group-limited-civil-engineering-infrastructure-portal" class="hover:text-white transition">SAN Group Limited</a></li>
+                    <li><a href="/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi" class="hover:text-white transition">Irene Muendo Isuzu</a></li>
+                    <li><a href="/blog/case-study-how-we-built-creative-kigen-design-portfolio-website" class="hover:text-white transition">Creative Kigen Studio</a></li>
+                    <li><a href="/blog/case-study-how-we-built-elite-designs-corporate-branding-website" class="hover:text-white transition">Elite Designs Kenya</a></li>
+                    <li><a href="/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya" class="hover:text-white transition">Batteriq Nairobi</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Core Services</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="/services#web-design" class="hover:text-white transition">Corporate Web Design</a></li>
+                    <li><a href="/services#ecommerce" class="hover:text-white transition">M-Pesa E-Commerce</a></li>
+                    <li><a href="/solutions#saas" class="hover:text-white transition">Custom Web Portals</a></li>
+                    <li><a href="/pricing" class="hover:text-white transition">Express Landing Pages (KES 15K)</a></li>
+                    <li><a href="/services#seo" class="hover:text-white transition">Local Google SEO &amp; Maps</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Get In Touch</h4>
+                <p class="text-xs text-slate-400 mb-3">Speak directly with Samuel Kidemi on WhatsApp:</p>
+                <a href="https://wa.me/254722753819" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition">
+                    <span>💬</span> +254 722 753 819
+                </a>
+                <p class="text-xs text-slate-500 mt-4">&copy; 2026 Xclusive Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

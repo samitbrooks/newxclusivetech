@@ -5,8 +5,20 @@
     "founded": "2020",
     "tagline": "The most affordable, reliable web designer in Kiambu — fast, affordable, built to get you found.",
     "positioning": "Affordable, transparent web design and development company for Kenyan small and growing businesses.",
-    "primaryServiceArea": ["Thika", "Kiambu County", "Ruiru", "Juja", "Gatundu", "Githunguri", "Limuru", "Kikuyu"],
-    "secondaryServiceArea": ["Nairobi", "Kenya-wide"],
+    "primaryServiceArea": [
+      "Thika",
+      "Kiambu County",
+      "Ruiru",
+      "Juja",
+      "Gatundu",
+      "Githunguri",
+      "Limuru",
+      "Kikuyu"
+    ],
+    "secondaryServiceArea": [
+      "Nairobi",
+      "Kenya-wide"
+    ],
     "website": "https://www.xclusivetech.co.ke",
     "email": "hello@xclusivetech.co.ke",
     "phone": "+254722753819",
@@ -65,14 +77,37 @@
     "carePlan": "Ongoing maintenance from KES 2,000/month, covers 4 hours of support and updates per month",
     "domainRegistration": {
       "tlds": [
-        { "tld": ".co.ke", "price": "From KES 1,500/yr" },
-        { "tld": ".com", "price": "From KES 1,800/yr" },
-        { "tld": ".org", "price": "From KES 2,000/yr" },
-        { "tld": ".ke", "price": "From KES 2,500/yr" },
-        { "tld": ".africa", "price": "From KES 2,500/yr" },
-        { "tld": ".io", "price": "From KES 6,500/yr" }
+        {
+          "tld": ".co.ke",
+          "price": "From KES 1,500/yr"
+        },
+        {
+          "tld": ".com",
+          "price": "From KES 1,800/yr"
+        },
+        {
+          "tld": ".org",
+          "price": "From KES 2,000/yr"
+        },
+        {
+          "tld": ".ke",
+          "price": "From KES 2,500/yr"
+        },
+        {
+          "tld": ".africa",
+          "price": "From KES 2,500/yr"
+        },
+        {
+          "tld": ".io",
+          "price": "From KES 6,500/yr"
+        }
       ],
-      "features": ["M-Pesa STK push payment", "Free WHOIS privacy", "Self-service DNS management", "Auto-renewal reminders"]
+      "features": [
+        "M-Pesa STK push payment",
+        "Free WHOIS privacy",
+        "Self-service DNS management",
+        "Auto-renewal reminders"
+      ]
     }
   },
   "services": [
@@ -153,12 +188,26 @@
     }
   },
   "industriesServed": [
-    "Churches & Ministries", "NGOs & Non-Profits", "Law Firms", "Clinics & Healthcare",
-    "Schools & Education", "Hotels & Hospitality", "Restaurants & Cafes", "Real Estate",
-    "Startups", "E-commerce & Retail", "Beauty Salons & Spas", "Gyms & Fitness Studios",
-    "Logistics & Transport", "Event Planners & Entertainment", "Agriculture & Agribusiness",
-    "Consultants & Professional Services", "Financial Services & Fintech", "Fashion & Apparel",
-    "Cosmetics & Beauty Brands", "Food & Beverage Brands"
+    "Churches & Ministries",
+    "NGOs & Non-Profits",
+    "Law Firms",
+    "Clinics & Healthcare",
+    "Schools & Education",
+    "Hotels & Hospitality",
+    "Restaurants & Cafes",
+    "Real Estate",
+    "Startups",
+    "E-commerce & Retail",
+    "Beauty Salons & Spas",
+    "Gyms & Fitness Studios",
+    "Logistics & Transport",
+    "Event Planners & Entertainment",
+    "Agriculture & Agribusiness",
+    "Consultants & Professional Services",
+    "Financial Services & Fintech",
+    "Fashion & Apparel",
+    "Cosmetics & Beauty Brands",
+    "Food & Beverage Brands"
   ],
   "portfolio": [
     {
@@ -224,6 +273,38 @@
       "challenge": "High-value solar equipment buyers needing transparent sizing calculators and EPRA accreditation proof.",
       "whatWeBuilt": "Commercial solar portal combining system sizing taxonomy, kilowatt calculators, EPRA badges, and direct M-Pesa hardware checkout.",
       "result": "High customer confidence and streamlined procurement for commercial and residential clean energy."
+    },
+    {
+      "name": "PataMaps",
+      "industry": "Healthcare & Disability Directory",
+      "url": "https://patamaps.com/",
+      "challenge": "Families with special needs children in Kenya struggled to find accredited, verified therapy clinics, inclusive schools, and NCPWD services.",
+      "whatWeBuilt": "An accessibility-first directory compliant with WCAG 2.2 AA standards, multi-county provider locator, community review engine, and direct WhatsApp helpline integration.",
+      "result": "Empowered hundreds of caregivers across Nairobi, Kiambu, and nationwide to discover verified therapy clinics in minutes with zero guesswork."
+    },
+    {
+      "name": "SAN Group Limited",
+      "industry": "Civil Engineering & Infrastructure",
+      "url": "https://sangrouplimited.com/",
+      "challenge": "A multi-subsidiary infrastructure contractor bidding on large county and cross-border tenders with fragmented digital credibility.",
+      "whatWeBuilt": "A high-authority corporate holding portal showcasing roads, bridges, WASH water systems, and heavy equipment chartering for public and private tender vetting.",
+      "result": "Established institutional credibility that enables enterprise procurement teams and government agencies to verify past projects and plant machinery fleet."
+    },
+    {
+      "name": "Creative Kigen",
+      "industry": "Graphic Design & Visual Identity",
+      "url": "https://creativekigen.com/",
+      "challenge": "One of Nairobi's top graphic designers needed a digital portfolio that matched the international caliber of his brand identities without clunky CMS bloat.",
+      "whatWeBuilt": "A lightning-fast, minimalist visual design portfolio featuring fluid category filtering, high-contrast editorial typography, and direct project brief booking.",
+      "result": "A high-retention digital showcase driving consistent inquiries for corporate branding, packaging design, and visual direction."
+    },
+    {
+      "name": "Elite Designs Kenya",
+      "industry": "Corporate Branding & Design Solutions",
+      "url": "https://elitedesigns.co.ke/",
+      "challenge": "A boutique brand consultancy needed a structured web presence to present standardized branding packages and pricing tiers to Nairobi businesses.",
+      "whatWeBuilt": "An agency presentation platform with transparent service package selectors, vector brand asset downloads, and instant quote estimation.",
+      "result": "Significantly shortened the B2B sales cycle by answering prospect pricing and deliverable questions before the initial discovery call."
     }
   ],
   "geoFaq": [

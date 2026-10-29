@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Short Video & Reels Buffer Campaign • Xclusive Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5f39ff;
+      --primary-glow: rgba(95, 57, 255, 0.35);
+      --secondary: #20d9a1;
+      --secondary-glow: rgba(32, 217, 161, 0.3);
+      --accent: #fd31bc;
+      --gold: #fbb500;
+      --dark-bg: #0b0c10;
+      --card-bg: #14161f;
+      --card-border: #232738;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-highlight: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-main);
+      padding: 40px 20px 80px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    /* Top Nav Switcher */
+    .nav-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: 1px solid var(--card-border);
+      background: #181b26;
+      color: var(--text-muted);
+    }
+
+    .nav-pill:hover {
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .nav-pill.active {
+      background: linear-gradient(135deg, var(--primary), #845ef7);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 18px var(--primary-glow);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(95, 57, 255, 0.15);
+      border: 1px solid rgba(95, 57, 255, 0.4);
+      color: #a78bfa;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #ffffff 30%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 14px;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Quick Filter / Jump Bar */
+    .jump-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .jump-btn {
+      background: #181b26;
+      color: var(--text-muted);
+      border: 1px solid var(--card-border);
+      padding: 8px 16px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .jump-btn:hover {
+      background: #202434;
+      color: var(--secondary);
+      border-color: var(--secondary);
+    }
+
+    /* Reel Card */
+    .reel-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 50px;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 36px;
+      position: relative;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .reel-card:hover {
+      border-color: rgba(95, 57, 255, 0.4);
+    }
+
+    @media (max-width: 960px) {
+      .reel-card {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+    }
+
+    /* Vertical Phone Simulator (9:16) */
+    .phone-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .phone-frame {
+      width: 100%;
+      max-width: 330px;
+      aspect-ratio: 9 / 16;
+      background: #000;
+      border-radius: 36px;
+      border: 6px solid #232738;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(255,255,255,0.1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px 16px;
+    }
+
+    .phone-notch {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 20px;
+      background: #14161f;
+      border-radius: 12px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .phone-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 5;
+      border-radius: 30px;
+    }
+
+    .video-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      padding: 6px 14px;
+      background: rgba(32, 217, 161, 0.15);
+      border: 1px solid rgba(32, 217, 161, 0.4);
+      color: var(--secondary);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .video-badge-pill:hover {
+      background: var(--secondary);
+      color: #042f2e;
+    }
+
+    .reel-overlay-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.35;
+      z-index: 1;
+      filter: saturate(1.2);
+    }
+
+    .reel-overlay-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.85) 100%);
+      z-index: 2;
+    }
+
+    .reel-screen-content {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .screen-top {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .screen-badge {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .screen-duration {
+      font-size: 0.75rem;
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+
+    .screen-center {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .on-screen-hook-text {
+      background: rgba(0, 0, 0, 0.85);
+      border-left: 4px solid var(--secondary);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .on-screen-hook-text span.highlight {
+      color: var(--secondary);
+    }
+
+    .screen-bottom {
+      margin-bottom: 8px;
+    }
+
+    .screen-author {
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .screen-caption-preview {
+      font-size: 0.78rem;
+      color: #e2e8f0;
+      line-height: 1.35;
+      max-height: 52px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      margin-bottom: 10px;
+    }
+
+    .screen-audio {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      color: #94a3b8;
+    }
+
+    /* Action bar on right of reel screen */
+    .reel-sidebar-actions {
+      position: absolute;
+      right: 12px;
+      bottom: 80px;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .action-icon-pill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.65rem;
+      color: #fff;
+      gap: 3px;
+    }
+
+    .icon-bubble {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    /* Content Area (Right) */
+    .reel-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .reel-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-purple { background: rgba(95, 57, 255, 0.2); color: #a78bfa; border: 1px solid rgba(95, 57, 255, 0.4); }
+    .tag-teal { background: rgba(32, 217, 161, 0.2); color: #20d9a1; border: 1px solid rgba(32, 217, 161, 0.4); }
+    .tag-amber { background: rgba(251, 181, 0, 0.2); color: #fbb500; border: 1px solid rgba(251, 181, 0, 0.4); }
+    .tag-pink { background: rgba(253, 49, 188, 0.2); color: #fd31bc; border: 1px solid rgba(253, 49, 188, 0.4); }
+
+    .reel-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      color: #fff;
+      margin-top: 6px;
+    }
+
+    /* Metadata Bar */
+    .meta-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      background: #181b26;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 14px 18px;
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .meta-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .meta-value {
+      font-size: 0.88rem;
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+
+    /* Scene Timeline / Storyboard */
+    .storyboard-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .scene-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .scene-box {
+      background: #181b26;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      position: relative;
+      border-left: 3px solid var(--primary);
+    }
+
+    .scene-box.hook { border-left-color: var(--accent); }
+    .scene-box.agitation { border-left-color: var(--gold); }
+    .scene-box.solution { border-left-color: var(--secondary); }
+    .scene-box.cta { border-left-color: var(--primary); }
+
+    .scene-top-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .scene-time {
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    .scene-visual {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+
+    .scene-visual strong {
+      color: #f8fafc;
+    }
+
+    .scene-dialogue {
+      font-size: 0.9rem;
+      color: #ffffff;
+      background: #0f121d;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border-left: 2px solid rgba(255,255,255,0.2);
+      font-style: italic;
+    }
+
+    /* Buffer Caption Section */
+    .caption-box {
+      background: #0d0f17;
+      border: 1px solid #1f2333;
+      border-radius: 14px;
+      padding: 18px;
+      position: relative;
+    }
+
+    .caption-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .caption-header-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .copy-btn {
+      background: linear-gradient(90deg, var(--secondary), #10b981);
+      color: #042f2e;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px var(--secondary-glow);
+    }
+
+    .copy-btn.copied {
+      background: #3b82f6;
+      color: #fff;
+    }
+
+    pre.caption-content {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-family: inherit;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      max-height: 280px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+
+    /* Production Tips Card */
+    .tips-card {
+      background: linear-gradient(135deg, rgba(95, 57, 255, 0.1), rgba(32, 217, 161, 0.05));
+      border: 1px solid rgba(95, 57, 255, 0.3);
+      border-radius: 20px;
+      padding: 24px;
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .tip-box h4 {
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tip-box p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10b981;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 9999;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Top Navigation -->
+    <div class="nav-switcher">
+      <a href="preview_posts.html" class="nav-pill">
+        <span>🖼️</span> Static Image Posts (Batch 1)
+      </a>
+      <a href="preview_reels.html" class="nav-pill active">
+        <span>🎬</span> Short Reels / Videos (Batch 2)
+      </a>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="header-badge" style="background: rgba(32, 217, 161, 0.15); border-color: rgba(32, 217, 161, 0.5); color: #20d9a1;">✨ CANVA DYNAMIC MOTION EDITION • 1080x1920 (9:16)</div>
+      <h1>High-Converting Short Reels & Videos</h1>
+      <p class="subtitle">Broadcast-quality animated reels built with <strong>Canva-style kinetic typewriter text</strong>, <strong>spring overshoot "boom" card pop-ins</strong>, <strong>stamp slams</strong>, and <strong>synchronized 124 BPM tech sound design</strong>. Ready to schedule via Buffer across Instagram Reels, TikTok, YouTube Shorts & LinkedIn.</p>
+    </header>
+
+    <!-- Quick Jump Bar -->
+    <div class="jump-bar">
+      <a href="#reel1" class="jump-btn">⚡ Reel #1: The "DM for Price" Trap</a>
+      <a href="#reel2" class="jump-btn">💼 Reel #2: "Huna Website?" Reality Check</a>
+      <a href="#reel3" class="jump-btn">🛑 Reel #3: Ghosted by Freelancer</a>
+      <a href="#reel4" class="jump-btn">🚀 Reel #4: KES 15K Express Landing Page</a>
+      <a href="#reel5" class="jump-btn">📊 Reel #5: Chama Excel vs. Cloud SaaS</a>
+    </div>
+
+    <!-- ==================== REEL 1 ==================== -->
+    <div class="reel-card" id="reel1">
+      <!-- Phone Mockup & Video Player -->
+      <div class="phone-container">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <video class="phone-video" controls playsinline loop poster="assets/images/post2_not_expensive_buffer.jpg">
+            <source src="assets/videos/reel1_dm_for_price_trap.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <a href="assets/videos/reel1_dm_for_price_trap.mp4" download class="video-badge-pill">
+          ⬇️ Download Reel #1 MP4 (1080x1920)
+        </a>
+      </div>
+
+      <!-- Script & Details -->
+      <div class="reel-details">
+        <div class="reel-header-row">
+          <div>
+            <span class="pill-tag tag-teal">Reel #1 • E-Commerce & Automated Sales</span>
+            <h2 class="reel-title">The "DM For Price" Trap vs. 24/7 Daraja Checkout</h2>
+          </div>
+        </div>
+
+        <div class="meta-bar">
+          <div class="meta-item">
+            <span class="meta-label">Optimal Day & Time</span>
+            <span class="meta-value">Tuesday 7:45 AM EAT</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Platforms</span>
+            <span class="meta-value">IG Reels, TikTok, Shorts, FB</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Length</span>
+            <span class="meta-value">30 – 35 Seconds</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Audio Recommendation</span>
+            <span class="meta-value">Lo-Fi Tech Hip Hop / Subtle Bass</span>
+          </div>
+        </div>
+
+        <!-- Storyboard -->
+        <div class="storyboard-title">🎬 Scene-by-Scene Production Blueprint</div>
+        <div class="scene-grid">
+          <div class="scene-box hook">
+            <div class="scene-top-row">
+              <span>Scene 1 • Pattern Interrupt</span>
+              <span class="scene-time">0:00 - 0:04</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Creator looks directly into camera with an intense, questioning expression. Holding a phone. Big on-screen neon text appears.</div>
+            <div class="scene-dialogue">"Unajua why your Instagram DMs are full of 'How much?' na 'Location?'... lakini Till yako ya M-Pesa iko completely dry?"</div>
+          </div>
+
+          <div class="scene-box agitation">
+            <div class="scene-top-row">
+              <span>Scene 2 • The Agitation</span>
+              <span class="scene-time">0:04 - 0:15</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Quick B-roll cut: Clock ticking at 11:30 PM. Customer lying in bed scrolling phone with credit card/M-Pesa ready. Frustrated swipe away when seeing 'Price in DM'.</div>
+            <div class="scene-dialogue">"Kenyan buyers do their heavy shopping late at night in bed. When they see your post, they want to buy RIGHT NOW. But the moment unawaambia 'DM for price', the buying impulse dies. By morning, wamenunua elsewhere."</div>
+          </div>
+
+          <div class="scene-box solution">
+            <div class="scene-top-row">
+              <span>Scene 3 • The Solution (Live Screen Recording)</span>
+              <span class="scene-time">0:15 - 0:26</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Screen capture of an Xclusive Tech client e-commerce store (e.g., Billan Beauty or Greenhunt Energy). Tapping product, entering phone number, Daraja STK Push pops on phone immediately with PIN prompt.</div>
+            <div class="scene-dialogue">"Here is what happens when you have a real automated store: Client taps 'Buy', M-Pesa prompt pops on their phone, they enter their PIN, transaction is locked. You wake up to M-Pesa payment confirmations, not endless DMs."</div>
+          </div>
+
+          <div class="scene-box cta">
+            <div class="scene-top-row">
+              <span>Scene 4 • Call to Action</span>
+              <span class="scene-time">0:26 - 0:32</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Back to creator pointing down to screen / caption with contact pill graphic.</div>
+            <div class="scene-dialogue">"Stop losing late-night sales. Comment 'STORE' or WhatsApp Samuel directly at the link in bio to build your M-Pesa checkout store this week."</div>
+          </div>
+        </div>
+
+        <!-- Buffer Caption -->
+        <div class="caption-box">
+          <div class="caption-header">
+            <span class="caption-header-title">📋 Buffer Copy-Paste Caption</span>
+            <button class="copy-btn" onclick="copyCaption('cap1', this)">Copy Caption</button>
+          </div>
+          <pre class="caption-content" id="cap1">"How much?" "Check DM." "Location?" "Check DM." 🤦‍♂️
+
+If this is your entire sales process on Instagram and TikTok, you are silently losing over 70% of potential buyers every single week.
+
+Here is the reality of the modern Kenyan consumer:
+• They browse on their phones at 11:00 PM while in bed.
+• Their impulse to buy is highest at that exact moment.
+• They have money sitting in their M-Pesa wallet ready to spend.
+
+The moment you make them wait 6 hours for a DM reply, their buying impulse is gone. Or worse—they find a competitor with a website and buy immediately.
+
+Imagine this instead:
+1. Customer taps your link.
+2. Selects their size or product.
+3. Enters their phone number.
+4. An automated Safaricom Daraja STK Push pops directly onto their screen asking for PIN.
+5. Order is confirmed, inventory updates, and you get paid while you sleep.
+
+At Xclusive Tech, we build high-converting, mobile-first E-Commerce websites with direct Daraja M-Pesa & Card checkout integration.
+
+⚡ E-Commerce Pro Stores: Unlimited products, automated inventory, Daraja STK push & customer accounts.
+🚀 Starter Landing Pages from just KES 15,000!
+
+👉 Calculate your website cost: https://www.xclusivetech.co.ke/pricing
+💬 WhatsApp Samuel directly for a free consultation: +254 722 753 819
+
+#KenyanBusiness #EcommerceKenya #MPesaIntegration #WebDesignKenya #NairobiBusiness #KenyanEntrepreneurs #SMEsKenya #OnlineShoppingKenya #XclusiveTech</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== REEL 2 ==================== -->
+    <div class="reel-card" id="reel2">
+      <!-- Phone Mockup & Video Player -->
+      <div class="phone-container">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <video class="phone-video" controls playsinline loop poster="assets/images/post1_blue_mockup_buffer.jpg">
+            <source src="assets/videos/reel2_huna_website_corporate.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <a href="assets/videos/reel2_huna_website_corporate.mp4" download class="video-badge-pill">
+          ⬇️ Download Reel #2 MP4 (1080x1920)
+        </a>
+      </div>
+
+      <!-- Script & Details -->
+      <div class="reel-details">
+        <div class="reel-header-row">
+          <div>
+            <span class="pill-tag tag-purple">Reel #2 • B2B Authority & Pricing Power</span>
+            <h2 class="reel-title">"Huna Website?" The Silent Deal Killer in Kenya</h2>
+          </div>
+        </div>
+
+        <div class="meta-bar">
+          <div class="meta-item">
+            <span class="meta-label">Optimal Day & Time</span>
+            <span class="meta-value">Thursday 12:30 PM EAT</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Platforms</span>
+            <span class="meta-value">LinkedIn, IG Reels, TikTok, FB</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Length</span>
+            <span class="meta-value">28 – 32 Seconds</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Audio Recommendation</span>
+            <span class="meta-value">Subtle Cinematic Suspense / Corporate Tech</span>
+          </div>
+        </div>
+
+        <!-- Storyboard -->
+        <div class="storyboard-title">🎬 Scene-by-Scene Production Blueprint</div>
+        <div class="scene-grid">
+          <div class="scene-box hook">
+            <div class="scene-top-row">
+              <span>Scene 1 • High Stakes Scenario</span>
+              <span class="scene-time">0:00 - 0:04</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Creator acts out a boardroom or phone call moment. Sound effect: Awkward cricket sound or record scratch.</div>
+            <div class="scene-dialogue">"A high-value corporate client asks you: 'Do you have a website or official company profile?' Na wewe unamtumia handle ya Instagram."</div>
+          </div>
+
+          <div class="scene-box agitation">
+            <div class="scene-top-row">
+              <span>Scene 2 • The Hidden Cost</span>
+              <span class="scene-time">0:04 - 0:14</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Split screen graphic: Serious procurement manager scrolling an Instagram meme page vs. a professional `.co.ke` portal.</div>
+            <div class="scene-dialogue">"You just cut your negotiating power by 50%. In Kenya, serious directors and decision makers do not buy 6-figure contracts from a WhatsApp catalog. They want corporate legitimacy before releasing cheques."</div>
+          </div>
+
+          <div class="scene-box solution">
+            <div class="scene-top-row">
+              <span>Scene 3 • Instant Authority</span>
+              <span class="scene-time">0:14 - 0:24</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Fast scroll of SMA Advocates or Irene Muendo Isuzu live website on a MacBook screen showing client logos, case studies, and fast load speeds.</div>
+            <div class="scene-dialogue">"A professional website is not an expense—it is your permanent 24/7 pitch deck. It positions you as an established leader, commands higher prices, and closes corporate deals while you're offline."</div>
+          </div>
+
+          <div class="scene-box cta">
+            <div class="scene-top-row">
+              <span>Scene 4 • Call to Action</span>
+              <span class="scene-time">0:24 - 0:30</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Creator speaking with authority, showing the KES 25,000 Starter package badge.</div>
+            <div class="scene-dialogue">"Get your 5-page custom business website launched from KES 25,000. Stop losing big deals. Tap the link in bio to WhatsApp us today."</div>
+          </div>
+        </div>
+
+        <!-- Buffer Caption -->
+        <div class="caption-box">
+          <div class="caption-header">
+            <span class="caption-header-title">📋 Buffer Copy-Paste Caption</span>
+            <button class="copy-btn" onclick="copyCaption('cap2', this)">Copy Caption</button>
+          </div>
+          <pre class="caption-content" id="cap2">"Can you send us your website and company profile before our board meeting?"
+
+If your answer is sending a WhatsApp catalog or an Instagram profile link, you just gave the client every reason to bargain your quotation down by 50%.
+
+Here is the truth about doing business in Kenya today:
+Corporate clients, NGOs, government tenders, and serious high-ticket customers do NOT verify credibility on social media alone.
+
+When they want to commit KES 100,000+, they open Google and search your name.
+• If they find a broken page or nothing at all: High risk.
+• If they find a fast, polished, branded website with case studies, verified address, and a custom company email (hello@yourcompany.co.ke): Instant trust.
+
+Your website is not an vanity project—it is your highest-leverage sales asset.
+
+What we build for you at Xclusive Tech:
+✅ 5-Page Tailored Corporate Website (About, Services, Case Studies, Contact)
+✅ Custom Business Email Setup
+✅ Fast Mobile-First Architecture (Loads in under 1.5s on Kenyan 4G)
+✅ Direct WhatsApp & Lead Capture Integration
+✅ Google Search & Google Maps Optimization
+
+🚀 Starter Business Package: From KES 25,000 | Ready in 14 Days.
+
+👉 View live client case studies: https://www.xclusivetech.co.ke/portfolio
+💬 Chat directly with our lead engineer on WhatsApp: +254 722 753 819
+
+#KenyanEntrepreneurs #NairobiBusiness #SMEsKenya #CorporateKenya #BusinessGrowthKenya #WebDesignNairobi #XclusiveTech #B2BKenya</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== REEL 3 ==================== -->
+    <div class="reel-card" id="reel3">
+      <!-- Phone Mockup & Video Player -->
+      <div class="phone-container">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <video class="phone-video" controls playsinline loop poster="assets/images/post1_huna_website_social_card.jpg">
+            <source src="assets/videos/reel3_ghosted_web_guy.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <a href="assets/videos/reel3_ghosted_web_guy.mp4" download class="video-badge-pill">
+          ⬇️ Download Reel #3 MP4 (1080x1920)
+        </a>
+      </div>
+
+      <!-- Script & Details -->
+      <div class="reel-details">
+        <div class="reel-header-row">
+          <div>
+            <span class="pill-tag tag-pink">Reel #3 • Pain Reliever & Brand Credibility</span>
+            <h2 class="reel-title">The "Ghosted by Web Freelancer" Kenyan Horror Story</h2>
+          </div>
+        </div>
+
+        <div class="meta-bar">
+          <div class="meta-item">
+            <span class="meta-label">Optimal Day & Time</span>
+            <span class="meta-value">Monday 8:15 AM EAT</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Platforms</span>
+            <span class="meta-value">TikTok, IG Reels, FB Reels, Shorts</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Length</span>
+            <span class="meta-value">32 – 36 Seconds</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Audio Recommendation</span>
+            <span class="meta-value">Viral Storytime Beat / Light Percussion</span>
+          </div>
+        </div>
+
+        <!-- Storyboard -->
+        <div class="storyboard-title">🎬 Scene-by-Scene Production Blueprint</div>
+        <div class="scene-grid">
+          <div class="scene-box hook">
+            <div class="scene-top-row">
+              <span>Scene 1 • Relatable Hook</span>
+              <span class="scene-time">0:00 - 0:05</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Creator shaking head holding phone showing WhatsApp 'Double Blue Ticks' with zero reply. Pop-up graphic: 👻 GHOSTED.</div>
+            <div class="scene-dialogue">"Ulipana deposit ya website in March... it is now October and your site still says 'Error 404' or 'Under Construction'?"</div>
+          </div>
+
+          <div class="scene-box agitation">
+            <div class="scene-top-row">
+              <span>Scene 2 • The 3 Classic Excuses</span>
+              <span class="scene-time">0:05 - 0:16</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Fast counting with fingers (1, 2, 3) with animated WhatsApp chat bubbles popping up: "Laptop iliharibika", "Host provider wako down".</div>
+            <div class="scene-dialogue">"Sign 1: 'Kuna issue na server naitatua leo jioni.' Sign 2: He never gives you domain or cPanel login. Sign 3: Phone calls start going straight to voicemail. You thought you saved money with a cheap quote, but you lost 7 months of leads."</div>
+          </div>
+
+          <div class="scene-box solution">
+            <div class="scene-top-row">
+              <span>Scene 3 • The Agency Guarantee</span>
+              <span class="scene-time">0:16 - 0:26</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Showcase the Xclusive Tech office, legal contracts, live 120+ client list, and direct WhatsApp support screenshot.</div>
+            <div class="scene-dialogue">"At Xclusive Tech, we do things differently: Transparent written contracts, fixed delivery dates, 100% full ownership of your domain and source code, and a real team you can visit in Kilimani or reach on WhatsApp anytime."</div>
+          </div>
+
+          <div class="scene-box cta">
+            <div class="scene-top-row">
+              <span>Scene 4 • Call to Action</span>
+              <span class="scene-time">0:26 - 0:34</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Creator pointing forward: "Let us rescue your project."</div>
+            <div class="scene-dialogue">"Have a stuck or abandoned website project? Don't start from scratch alone. Comment 'RESCUE' or WhatsApp us directly and we'll have you live in 7 days."</div>
+          </div>
+        </div>
+
+        <!-- Buffer Caption -->
+        <div class="caption-box">
+          <div class="caption-header">
+            <span class="caption-header-title">📋 Buffer Copy-Paste Caption</span>
+            <button class="copy-btn" onclick="copyCaption('cap3', this)">Copy Caption</button>
+          </div>
+          <pre class="caption-content" id="cap3">"Mheshimiwa server zimeleta shida leo, nakumalizia kesho jioni..." 🚩🚩🚩
+
+Does this sound painfully familiar?
+
+We speak to business owners across Kenya every single week who went through the exact same nightmare:
+1. They hired a friend's cousin or an anonymous freelancer who quoted KES 8,000.
+2. Paid a 50% deposit upfront.
+3. Weeks turned into months.
+4. Excuses started piling up ("My laptop crashed", "Safaricom network is down", "Hosting provider locked my account").
+5. The freelancer disappears, leaving them with no domain credentials, no website, and zero recourse.
+
+"Cheap" web design in Kenya usually ends up being the most expensive mistake your business can make.
+
+Why over 120+ Kenyan brands trust Xclusive Tech:
+🔒 Milestone Contracts & Clear Deliverables
+⚡ Fast Delivery (Express in 3-5 days, Starter Sites in 14 days)
+🔑 100% Code, Hosting & Domain Ownership handed over to you
+💬 Direct WhatsApp support with Samuel (+254 722 753 819)
+🏢 Real physical office: Wood Ave, Kilimani, Nairobi
+
+If your website project is currently stuck in "Under Construction" limbo, let us rescue it.
+
+👉 Check our transparent pricing: https://www.xclusivetech.co.ke/pricing
+💬 WhatsApp Samuel to rescue your site: +254 722 753 819
+
+#KenyanStartups #BusinessKenya #WebDesignKenya #NairobiEntrepreneurs #SmallBusinessKenya #DigitalAgencyKenya #XclusiveTech #ThikaBusiness</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== REEL 4 ==================== -->
+    <div class="reel-card" id="reel4">
+      <!-- Phone Mockup & Video Player -->
+      <div class="phone-container">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <video class="phone-video" controls playsinline loop poster="assets/images/post2_not_expensive_buffer.jpg">
+            <source src="assets/videos/reel4_express_landing_page.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <a href="assets/videos/reel4_express_landing_page.mp4" download class="video-badge-pill">
+          ⬇️ Download Reel #4 MP4 (1080x1920)
+        </a>
+      </div>
+
+      <!-- Script & Details -->
+      <div class="reel-details">
+        <div class="reel-header-row">
+          <div>
+            <span class="pill-tag tag-amber">Reel #4 • Irresistible Offer & Fast Delivery</span>
+            <h2 class="reel-title">The KES 15,000 Express Landing Page Gamechanger</h2>
+          </div>
+        </div>
+
+        <div class="meta-bar">
+          <div class="meta-item">
+            <span class="meta-label">Optimal Day & Time</span>
+            <span class="meta-value">Wednesday 6:30 PM EAT</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Platforms</span>
+            <span class="meta-value">IG Reels, TikTok, YouTube Shorts, FB</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Length</span>
+            <span class="meta-value">25 – 28 Seconds</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Audio Recommendation</span>
+            <span class="meta-value">Punchy, upbeat creator beat with bass drops</span>
+          </div>
+        </div>
+
+        <!-- Storyboard -->
+        <div class="storyboard-title">🎬 Scene-by-Scene Production Blueprint</div>
+        <div class="scene-grid">
+          <div class="scene-box hook">
+            <div class="scene-top-row">
+              <span>Scene 1 • Myth Buster</span>
+              <span class="scene-time">0:00 - 0:04</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Creator holds up a paper with "KES 100,000" written on it and tosses it aside with a smile.</div>
+            <div class="scene-dialogue">"Who told you that you need 100,000 shillings or two months to launch a website for your business in Kenya?"</div>
+          </div>
+
+          <div class="scene-box agitation">
+            <div class="scene-top-row">
+              <span>Scene 2 • The Modern Approach</span>
+              <span class="scene-time">0:04 - 0:12</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Smooth dynamic phone scroll showing a clean, snappy single-page site with high-contrast buttons and sleek typography.</div>
+            <div class="scene-dialogue">"When starting out or testing a new product, you don't need 20 pages. You need ONE focused, lightning-fast landing page designed to do one job: Convert visitors into paying WhatsApp inquiries."</div>
+          </div>
+
+          <div class="scene-box solution">
+            <div class="scene-top-row">
+              <span>Scene 3 • The Offer Breakdown</span>
+              <span class="scene-time">0:12 - 0:22</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Animated bullet badges pop up on screen: ⚡ KES 15,000 | ⏱️ 3-5 Days | 📱 Sub-1.5s Mobile Speed | 💬 WhatsApp Lead Button.</div>
+            <div class="scene-dialogue">"That's why we created our Express Landing Page: Ready in just 3 to 5 business days for only KES 15,000. And if you upgrade to a full multi-page site within 6 months, we credit 100% of your 15k!"</div>
+          </div>
+
+          <div class="scene-box cta">
+            <div class="scene-top-row">
+              <span>Scene 4 • Call to Action</span>
+              <span class="scene-time">0:22 - 0:28</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Creator pointing down to bio link.</div>
+            <div class="scene-dialogue">"Zero risk, maximum speed. Comment 'EXPRESS' or tap our link in bio to claim your slot this week!"</div>
+          </div>
+        </div>
+
+        <!-- Buffer Caption -->
+        <div class="caption-box">
+          <div class="caption-header">
+            <span class="caption-header-title">📋 Buffer Copy-Paste Caption</span>
+            <button class="copy-btn" onclick="copyCaption('cap4', this)">Copy Caption</button>
+          </div>
+          <pre class="caption-content" id="cap4">Myth: "I need KES 100,000 and 2 months of planning before my business can have a website." ❌
+
+Fact: A focused, 1-page high-converting sales landing page will often generate MORE direct leads than an overloaded 20-page corporate labyrinth.
+
+If you have a:
+• New product launch
+• Consulting or professional practice
+• Cleaning, salon, fitness, or service business
+• Lead-gen campaign running on Meta or Google Ads
+
+You don't need complexity. You need SPEED and CLARITY.
+
+Introducing the Xclusive Tech Express Landing Page Package:
+⚡ Price: KES 15,000 (One-time, no hidden extras)
+⏱️ Turnaround: 3 to 5 business days
+📱 Ultra-Fast: Sub-1.5 second load time on Kenyan 4G
+💬 Direct WhatsApp floating chat button + lead capture
+🗺️ Google Maps + SEO meta tags + mobile responsiveness
+🎁 100% Upgrade Guarantee: Upgrade to a full business site within 6 months and we credit your full KES 15,000!
+
+Stop letting your business stay invisible while competitors take your market.
+
+👉 Reserve your slot: https://www.xclusivetech.co.ke/
+💬 WhatsApp Samuel directly: +254 722 753 819
+
+#WebDesignKenya #LandingPageDesign #SmallBusinessKenya #NairobiTech #KenyanEntrepreneurs #AffordableWebsitesKenya #XclusiveTech #DigitalMarketingKenya</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== REEL 5 ==================== -->
+    <div class="reel-card" id="reel5">
+      <!-- Phone Mockup & Video Player -->
+      <div class="phone-container">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <video class="phone-video" controls playsinline loop poster="assets/images/post3_chama_saas_buffer.jpg">
+            <source src="assets/videos/reel5_chama_sacco_automation.mp4" type="video/mp4">
+            <source src="assets/videos/reel3_chama_sacco_automation.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <a href="assets/videos/reel5_chama_sacco_automation.mp4" download class="video-badge-pill">
+          ⬇️ Download Reel #5 MP4 (1080x1920)
+        </a>
+      </div>
+
+      <!-- Script & Details -->
+      <div class="reel-details">
+        <div class="reel-header-row">
+          <div>
+            <span class="pill-tag tag-teal">Reel #5 • Custom SaaS & Fintech Automation</span>
+            <h2 class="reel-title">Chama & SACCO Automation: Goodbye WhatsApp Screenshots</h2>
+          </div>
+        </div>
+
+        <div class="meta-bar">
+          <div class="meta-item">
+            <span class="meta-label">Optimal Day & Time</span>
+            <span class="meta-value">Sunday 4:30 PM EAT</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Platforms</span>
+            <span class="meta-value">TikTok, IG Reels, FB Reels, LinkedIn</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Length</span>
+            <span class="meta-value">30 – 35 Seconds</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Audio Recommendation</span>
+            <span class="meta-value">Dramatic intro transitioning into smooth modern afrobeat/tech beat</span>
+          </div>
+        </div>
+
+        <!-- Storyboard -->
+        <div class="storyboard-title">🎬 Scene-by-Scene Production Blueprint</div>
+        <div class="scene-grid">
+          <div class="scene-box hook">
+            <div class="scene-top-row">
+              <span>Scene 1 • Relatable Chaos</span>
+              <span class="scene-time">0:00 - 0:05</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Creator acts as a stressed treasurer holding their forehead looking at a laptop with Excel spreadsheet formulas going red.</div>
+            <div class="scene-dialogue">"If you are the treasurer of a Kenyan Chama, SACCO, or investment club, this video is about to save your sanity."</div>
+          </div>
+
+          <div class="scene-box agitation">
+            <div class="scene-top-row">
+              <span>Scene 2 • The Pain Points</span>
+              <span class="scene-time">0:05 - 0:15</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Fast collage: 30 M-Pesa screenshots flooding a WhatsApp chat, someone sending an edited message, and people arguing during an AGM.</div>
+            <div class="scene-dialogue">"End of month: 35 different M-Pesa screenshots flooding WhatsApp, manual Excel formulas breaking, someone sends an edited transaction, and endless arguments over loan interest during AGMs."</div>
+          </div>
+
+          <div class="scene-box solution">
+            <div class="scene-top-row">
+              <span>Scene 3 • The Cloud Platform Demo</span>
+              <span class="scene-time">0:15 - 0:26</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Screen recording of a custom Chama portal built by Xclusive Tech: Member dashboard, Daraja M-Pesa STK push contribution button, automatic statement generation, loan calculator.</div>
+            <div class="scene-dialogue">"At Xclusive Tech, we build custom cloud Chama & SACCO software: Members pay via automated M-Pesa STK push, payments reconcile in real-time, loans calculate automatically, and members check their own statements anytime from their phones."</div>
+          </div>
+
+          <div class="scene-box cta">
+            <div class="scene-top-row">
+              <span>Scene 4 • Call to Action</span>
+              <span class="scene-time">0:26 - 0:33</span>
+            </div>
+            <div class="scene-visual"><strong>Visual:</strong> Creator smiling calmly: "Tag your Chama group chairman."</div>
+            <div class="scene-dialogue">"Share this video in your Chama WhatsApp group or message Samuel directly at the link in bio for a live interactive demo."</div>
+          </div>
+        </div>
+
+        <!-- Buffer Caption -->
+        <div class="caption-box">
+          <div class="caption-header">
+            <span class="caption-header-title">📋 Buffer Copy-Paste Caption</span>
+            <button class="copy-btn" onclick="copyCaption('cap5', this)">Copy Caption</button>
+          </div>
+          <pre class="caption-content" id="cap5">POV: End of month in a Kenyan Chama WhatsApp group 💀
+
+• 35 random M-Pesa transaction screenshots flooding the chat
+• The treasurer spending their entire Sunday fighting an Excel spreadsheet
+• Someone sending an edited transaction message that almost slips through
+• Disputed loan balances and missing contribution records at the AGM
+• Awkward manual follow-ups chasing members who haven't paid
+
+Why are you managing a group contributing hundreds of thousands (or millions) of shillings like a primary school tuckshop?
+
+One laptop crash or one corrupt Excel formula can lead to massive financial disputes.
+
+At Xclusive Tech, we engineer custom, cloud-hosted Chama & SACCO Management Web Platforms tailored for Kenya:
+
+1. Direct Daraja M-Pesa STK Push — members pay with one tap on their phone.
+2. 100% Automated Reconciliation — no manual entries, no screenshots needed.
+3. Member Self-Service Dashboard — each member sees their savings, loans & dividends 24/7.
+4. Automated Loan & Interest Engine — handles merry-go-round and table banking seamlessly.
+5. Automated SMS & WhatsApp Due-Date Reminders.
+6. Bank-grade cloud security with daily automated backups.
+
+Bring total financial transparency to your investment group today.
+
+👉 Explore our custom software platforms: https://www.xclusivetech.co.ke/solutions
+💬 WhatsApp Samuel directly for a live software demo: +254 722 753 819
+
+#ChamaKenya #SACCOKenya #InvestmentGroupKenya #FintechKenya #TableBankingKenya #KenyanBusiness #SoftwareDevelopmentKenya #NairobiTech #XclusiveTech</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Production Tips & Checklist -->
+    <div class="tips-card">
+      <div class="tip-box">
+        <h4>📱 Recording Best Practices</h4>
+        <p>Record vertically in 9:16 format (1080x1920) at 60fps. Stand 1-2 meters from a natural window or ring light. Use eye contact with the phone camera lens, not the screen!</p>
+      </div>
+      <div class="tip-box">
+        <h4>🎙️ Audio & Mic Quality</h4>
+        <p>Use a clip-on lavalier mic (e.g. Boya or wireless mic). Clear audio is responsible for 80% of video retention on TikTok and Reels. Add subtle trending background music at 8-12% volume.</p>
+      </div>
+      <div class="tip-box">
+        <h4>🔤 Dynamic Captions & Text</h4>
+        <p>85% of people watch reels on mute in public/office. Use apps like CapCut, AutoCap, or Premiere to generate high-contrast word-by-word animated subtitles with green/yellow highlights.</p>
+      </div>
+      <div class="tip-box">
+        <h4>⏱️ Buffer Scheduling Timing</h4>
+        <p>Best Kenyan posting windows: Morning commute (7:30 - 8:30 AM EAT), Lunch break (12:30 - 1:30 PM EAT), and Evening chill (6:30 - 8:00 PM EAT). Select Instagram Reels, TikTok, YouTube Shorts & LinkedIn simultaneously.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Caption copied to clipboard! Ready for Buffer 🚀</div>
+
+  <script>
+    function copyCaption(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = btn.innerText;
+        btn.innerText = 'Copied! ✅';
+        btn.classList.add('copied');
+
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+
+        setTimeout(() => {
+          btn.innerText = originalText;
+          btn.classList.remove('copied');
+          toast.classList.remove('show');
+        }, 2500);
+      }).catch(err => {
+        alert('Could not auto-copy. Please select the text manually.');
+      });
+    }
+  </script>
+</body>
+</html>
+

@@ -85,10 +85,48 @@
       font-size: 0.85rem;
       color: #94a3b8;
     }
+    .nav-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: 1px solid #334155;
+      background: #181b26;
+      color: #94a3b8;
+    }
+    .nav-pill:hover {
+      color: #fff;
+      border-color: #38bdf8;
+    }
+    .nav-pill.active {
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35);
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="nav-switcher">
+      <a href="preview_posts.html" class="nav-pill active">
+        <span>🖼️</span> Static Image Posts (Batch 1)
+      </a>
+      <a href="preview_reels.html" class="nav-pill">
+        <span>🎬</span> Short Reels / Videos (Batch 2)
+      </a>
+    </div>
     <h1>Weekly Buffer Campaign Preview</h1>
     <p class="subtitle">Social media visuals and captions prepared for Xclusive Tech</p>
 
