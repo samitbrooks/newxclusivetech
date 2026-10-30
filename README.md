@@ -301,3 +301,21 @@ It writes matching 800×500 PNG and WebP previews. It uses installed Google Chro
 on macOS; otherwise install Chromium with `playwright install chromium`.
 Failed loads, blank pages and detected security challenges leave existing images
 untouched. Failures are printed and cause a nonzero exit code.
+
+## Static styles, icons and county pages
+
+Run `npm ci` and `npm run build:css` after adding utility classes. The generated
+`css/utilities.css` is committed so deployed pages do not need the Tailwind
+browser compiler or JavaScript to render their layout.
+
+Run `python3 scripts/normalize_site_assets.py` after generating HTML. It replaces
+emoji text with the shared SVG sprite, versions shared assets and repairs the
+county navigation markup. County generation also calls
+`scripts/enhance_county_pages.py` to preserve service summaries and quote paths.
+Run `python3 scripts/check_site_quality.py` before deploying.
+
+Contact actions emit `contact_click` and valid form submissions emit
+`quote_form_attempt`. These are intent/attempt events, not confirmed sales or
+email deliveries. They are forwarded to `gtag` if configured, otherwise queued
+in `window.dataLayer`; an analytics property must be connected to report them.
+No visitor name, email, phone number or message is included in those events.

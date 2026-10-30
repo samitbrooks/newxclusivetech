@@ -1,86 +1,15 @@
-# Xclusive Tech Website robots.txt
-# Directives for search engine crawlers
-
+# Public search and AI discovery use the same crawl boundaries.
 User-agent: *
 Allow: /
-Allow: /css/
-Allow: /js/
-Allow: /assets/
-
-# Disallow admin, private, and internal preview areas
 Disallow: /admin
-Disallow: /admin/
-Disallow: /admin.html
 Disallow: /private/
 Disallow: /preview/
 Disallow: /preview.html
+Disallow: /preview_posts.html
+Disallow: /preview_reels.html
 Disallow: /review_templates.html
 Disallow: /.env
 Disallow: /*.backup
+Disallow: /scripts/
 
-# Sitemap location
 Sitemap: https://www.xclusivetech.co.ke/sitemap.xml
-
-# LLM context & directory (https://llmstxt.org/)
-# llms.txt: https://www.xclusivetech.co.ke/llms.txt
-# llms-full.txt: https://www.xclusivetech.co.ke/llms-full.txt
-
-# AI assistants and answer engines — explicitly welcome
-# (GEO/AEO: we want ChatGPT, Claude, Gemini and Perplexity to read
-# and cite this site accurately, not just traditional search engines)
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-# Crawl delay (optional - be nice to servers)
-Crawl-delay: 1
-
-# Request rate (Google)
-User-agent: Googlebot
-Crawl-delay: 0
-
-# Allow specific bots
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Block bad bots (optional)
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /

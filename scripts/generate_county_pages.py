@@ -10,6 +10,8 @@ tailored local economic contexts, key commercial town hubs, and direct WhatsApp 
 import os
 import re
 import json
+from normalize_site_assets import normalize_html
+from enhance_county_pages import enhance_county_html
 
 WORKSPACE_DIR = "/Users/app/newxclusivetech"
 LOCATIONS_DIR = os.path.join(WORKSPACE_DIR, "locations")
@@ -1503,14 +1505,14 @@ def main():
     print(f"Generating 47 county landing pages in {LOCATIONS_DIR}...")
     for county in COUNTIES:
         filepath = os.path.join(LOCATIONS_DIR, f"{county['slug']}.html")
-        content = render_county_page(county)
+        content = enhance_county_html(render_county_page(county), county)
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"  -> Generated {county['slug']}.html (County {county['code']} - {county['name']})")
 
     print("\nGenerating County Directory Index at /locations/index.html...")
     index_filepath = os.path.join(LOCATIONS_DIR, "index.html")
-    index_content = render_locations_index()
+    index_content = normalize_html(render_locations_index())
     with open(index_filepath, "w", encoding="utf-8") as f:
         f.write(index_content)
     print("  -> Generated locations/index.html successfully!")

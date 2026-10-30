@@ -16,11 +16,11 @@
     <meta property="og:description" content="Local website design, e-commerce, and SEO services engineered for businesses across all 47 Kenyan counties. Transparent KES pricing from KES 15,000.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.xclusivetech.co.ke/locations/">
-    <meta property="og:image" content="../assets/images/og-preview.png">
+    <meta property="og:image" content="https://www.xclusivetech.co.ke/assets/images/og-preview.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Web Design in All 47 Counties in Kenya | Xclusive Tech">
     <meta name="twitter:description" content="Transparent website packages and local SEO engineering across Kenya.">
-    <meta name="twitter:image" content="../assets/images/og-preview.png">
+    <meta name="twitter:image" content="https://www.xclusivetech.co.ke/assets/images/og-preview.png">
 
     <!-- Theme Enforcement: Strictly Light Mode -->
     <script>
@@ -37,26 +37,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS & Styles (Configured to ignore OS dark mode) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                    }
-                }
-            }
-        };
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
-    </script>
+    <link rel="stylesheet" href="/css/utilities.css?v=20261030seo">
+
     <link rel="icon" href="../assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96x96.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png?v=2">
     <link rel="manifest" href="../site.webmanifest">
-    <link rel="stylesheet" href="../css/styles.css?v=20261030motion">
+    <link rel="stylesheet" href="../css/styles.css?v=20261030seo">
 
     <!-- Structured Data: CollectionPage & BreadcrumbList -->
     <script type="application/ld+json">
@@ -144,22 +131,19 @@
                         <span>WhatsApp Us</span>
                         <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
-                    <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                    </button>
+                    <button type="button" id="mobile-menu-btn" class="nav-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
                 </div>
             </div>
         </nav>
-    </header>
+    <div id="mobile-menu" class="nav-mobile-menu hidden"><a href="/" class="nav-mobile-link">Home</a><a href="/services" class="nav-mobile-link">Services</a><a href="/pricing" class="nav-mobile-link">Pricing</a><a href="/portfolio" class="nav-mobile-link">Portfolio</a><a href="/locations/" class="nav-mobile-link">Locations</a><a href="/blog/" class="nav-mobile-link">Blog</a><a href="/contact" class="nav-mobile-link">Contact</a></div>
+</header>
 
     <main class="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <!-- Hero Header -->
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold uppercase tracking-wider mb-4">
-                    <span>🇰🇪 Nationwide Coverage</span>
+                    <span><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#flag"></use></svg> Nationwide Coverage</span>
                     <span>&bull;</span>
                     <span>All 47 Counties of Kenya</span>
                 </span>
@@ -184,7 +168,7 @@
 
             <!-- County Cards Grid -->
             <div id="county-grid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="mombasa" data-region="coast" data-towns="mombasa cbd, nyali, bamburi, changamwe, likoni, mtwapa border">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -203,7 +187,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="kwale" data-region="coast" data-towns="diani beach, ukunda, kwale town, msambweni, kinango, lungalunga">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -222,7 +206,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="kilifi" data-region="coast" data-towns="malindi, kilifi town, watamu, mtwapa, mariakani, kaloleni">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -241,7 +225,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="tana river" data-region="coast" data-towns="hola town, madogo, garsen, bura, kipini">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -260,7 +244,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="lamu" data-region="coast" data-towns="lamu old town, shela, mpeketoni, mokowe, faza, kiunga">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -279,7 +263,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="taita-taveta" data-region="coast" data-towns="voi, taveta, wundanyi, mwatate, mackinnon road">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -298,7 +282,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="garissa" data-region="north eastern" data-towns="garissa town, dadaab, masalani, modogashe, bura east">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -317,7 +301,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="wajir" data-region="north eastern" data-towns="wajir town, habaswein, tarbaj, eldas, bute, griftu">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -336,7 +320,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="mandera" data-region="north eastern" data-towns="mandera town, elwak, rhamu, takaba, banissa, lafey">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -355,7 +339,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="marsabit" data-region="eastern" data-towns="marsabit town, moyale, loiyangalani, north horr, laisamis">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -374,7 +358,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="isiolo" data-region="eastern" data-towns="isiolo town, garbatulla, merti, oldonyiro, kinna">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -393,7 +377,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="meru" data-region="eastern" data-towns="meru town, nkubu, maua, timau, makutano, mikinduri">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -412,7 +396,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="tharaka-nithi" data-region="eastern" data-towns="chuka, kathwana, marimanti, chogoria, magutuni">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -431,7 +415,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="embu" data-region="eastern" data-towns="embu town, runyenjes, siakago, manyatta, kiritiri">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -450,7 +434,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="kitui" data-region="eastern" data-towns="kitui town, mwingi, mutomo, kwa vonza, kibwezi border">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -469,7 +453,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="machakos" data-region="eastern" data-towns="machakos town, athi river, syokimau, mavoko, mlolongo, tala, kangundo">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -488,7 +472,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="makueni" data-region="eastern" data-towns="wote, mtito andei, kibwezi, emali, makindu, sultan hamud">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -507,7 +491,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="nyandarua" data-region="central" data-towns="ol kalou, engineer, mairo inya, ndunyu njeru, ndaragwa">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -526,7 +510,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="nyeri" data-region="central" data-towns="nyeri town, karatina, othaya, mukurweini, tetu, mweiga">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -545,7 +529,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="kirinyaga" data-region="central" data-towns="kerugoya, kutus, sagana, wang'uru (mwea), kagio">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -564,7 +548,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="murang'a" data-region="central" data-towns="murang'a town, kenol, thika greens, kangema, kiriaini, maragua">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -583,7 +567,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="kiambu" data-region="central" data-towns="thika, ruiru, juja, kikuyu, limuru, kiambu town, gatundu, karuri">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -602,7 +586,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="turkana" data-region="rift valley" data-towns="lodwar, kakuma, lokichogio, kalokol, lokichar">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -621,7 +605,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="west pokot" data-region="rift valley" data-towns="kapenguria, makutano, chepareria, ortum, alale">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -640,7 +624,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="samburu" data-region="rift valley" data-towns="maralal, archer's post, baragoi, wamba, south horr">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -659,7 +643,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="trans nzoia" data-region="rift valley" data-towns="kitale, kiminini, endebess, cherangany, saboti">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -678,7 +662,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="uasin gishu" data-region="rift valley" data-towns="eldoret city, annex, turbo, moiben, burnt forest, soy">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -697,7 +681,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="elgeyo-marakwet" data-region="rift valley" data-towns="iten, kapsowar, tambach, tot, chepkorio">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -716,7 +700,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="nandi" data-region="rift valley" data-towns="kapsabet, nandi hills, mosoriot, chepterit, kobujoi">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -735,7 +719,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="baringo" data-region="rift valley" data-towns="kabarnet, eldama ravine, marigat, mogotio, chemolingot">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -754,7 +738,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="laikipia" data-region="rift valley" data-towns="nanyuki, nyahururu, rumuruti, doldol, kinamba">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -773,7 +757,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="nakuru" data-region="rift valley" data-towns="nakuru city, naivasha, gilgil, njoro, molo, subukia, rongai">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -792,7 +776,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="narok" data-region="rift valley" data-towns="narok town, maasai mara, kilgoris, nairagie enkare, ololulung'a">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -811,7 +795,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="kajiado" data-region="rift valley" data-towns="kitengela, ongata rongai, ngong, kiserian, kajiado town, namanga">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -830,7 +814,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="kericho" data-region="rift valley" data-towns="kericho town, litein, kipkelion, londiani, chepseon">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -849,7 +833,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="bomet" data-region="rift valley" data-towns="bomet town, sotik, longisa, silibwet, mogogosiek">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -868,7 +852,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="kakamega" data-region="western" data-towns="kakamega town, mumias, malava, butere, lugari, shinyalu">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -887,7 +871,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="vihiga" data-region="western" data-towns="mbale, chavakali, luanda, hamisi, majengo, serem">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -906,7 +890,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="bungoma" data-region="western" data-towns="bungoma town, webuye, kimilili, chwele, sirisia, malakisi">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -925,7 +909,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="busia" data-region="western" data-towns="busia town, malaba, nambale, funyula, port victoria, alupe">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -944,7 +928,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="siaya" data-region="nyanza" data-towns="siaya town, bondo, ugunja, usenge, yala, kogelo">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -963,7 +947,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="kisumu" data-region="nyanza" data-towns="kisumu city, milimani, maseno, ahero, kondele, mamboleo, kibos">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -982,7 +966,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="homa bay" data-region="nyanza" data-towns="homa bay town, mbita, kendu bay, oyugis, ndhiwa, rusinga island">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -1001,7 +985,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="migori" data-region="nyanza" data-towns="migori town, isebania, rongo, kehancha, awendo, muhuru bay">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -1020,7 +1004,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="kisii" data-region="nyanza" data-towns="kisii town, ogembo, suneka, tabaka, nyamache, keroka border">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -1039,7 +1023,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="nyamira" data-region="nyanza" data-towns="nyamira town, nyansiongo, keroka, manga, borabu">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -1058,7 +1042,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
         <div class="county-card p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-county="nairobi" data-region="nairobi" data-towns="nairobi cbd, westlands, kilimani, upper hill, karen, lavington, gigiri, eastleigh, industrial area">
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -1077,7 +1061,7 @@
                 <span style="color: #ffffff !important;">&rarr;</span>
             </a>
         </div>
-        
+
             </div>
 
             <!-- Empty Search State -->
@@ -1302,8 +1286,9 @@
         });
     </script>
 
-    <script src="../js/main.js?v=20260926d"></script>
-    <script src="../js/animations.js?v=20261030motion"></script>
-    <script src="../js/navigation.js?v=20261030motion"></script>
+    <script src="../js/main.js?v=20261030seo"></script>
+    <script src="../js/animations.js?v=20261030seo"></script>
+    <script src="../js/navigation.js?v=20261030seo"></script>
+    <script src="/js/lead-events.js?v=20261030seo" defer></script>
 </body>
 </html>

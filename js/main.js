@@ -67,20 +67,20 @@ class XclusiveTech {
                 const data = {
                     name: formData.get('name'),
                     email: formData.get('email'),
+                    phone: formData.get('phone'),
                     subject: formData.get('subject'),
                     message: formData.get('message'),
                     service: formData.get('service')
                 };
 
-                if (!this.validateForm(data)) {
+                // The HTML form defines its required fields. Optional email and
+                // notes must not prevent a phone-only enquiry from being submitted.
+                if (!contactForm.checkValidity()) {
                     e.preventDefault();
-                    alert('Please fill in all required fields');
+                    contactForm.reportValidity();
                     return;
                 }
-
-                if (shouldUseNativeSubmit) {
-                    return;
-                }
+                if (shouldUseNativeSubmit) return;
 
                 e.preventDefault();
                 this.handleFormSubmit(contactForm);
@@ -94,6 +94,7 @@ class XclusiveTech {
         const data = {
             name: formData.get('name'),
             email: formData.get('email'),
+                    phone: formData.get('phone'),
             subject: formData.get('subject'),
             message: formData.get('message'),
             service: formData.get('service')
@@ -123,7 +124,7 @@ class XclusiveTech {
     // Validate form
     static validateForm(data) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return data.name && data.email && emailRegex.test(data.email) && data.message;
+        return Boolean(data.name && (data.phone || data.email) && (!data.email || emailRegex.test(data.email)));
     }
     
     // Show success message
@@ -370,7 +371,7 @@ class XclusiveTech {
 
                             <div class="xt-exit-reviews-grid">
                                 <div class="xt-exit-review-card">
-                                    <div class="xt-review-stars">★★★★★</div>
+                                    <div class="xt-review-stars"><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg></div>
                                     <div class="xt-review-text"><strong>5.0</strong> Based on 202+ reviews</div>
                                 </div>
                                 <div class="xt-exit-award-card">
@@ -401,7 +402,7 @@ class XclusiveTech {
                                     </div>
                                     <div class="xt-phone-group">
                                         <div class="xt-phone-prefix" title="Kenya (+254)">
-                                            <span class="xt-flag">🇰🇪</span>
+                                            <span class="xt-flag"><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#globe"></use></svg></span>
                                             <span class="xt-caret">▾</span>
                                             <span class="xt-code">+254</span>
                                         </div>
@@ -556,7 +557,7 @@ class XclusiveTech {
                         service: serviceSelect.value || 'Not specified',
                         budget: budgetSelect.value || 'Not specified',
                         project_details: projectInput.value.trim(),
-                        _subject: `⚡ Smart Exit-Intent Lead: ${nameInput.value.trim()} (${cleanPhone})`,
+                        _subject: `Smart Exit-Intent Lead: ${nameInput.value.trim()} (${cleanPhone})`,
                         _captcha: 'false'
                     };
 

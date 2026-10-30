@@ -7,10 +7,10 @@
         let observer;
         const motion = () => !media.matches;
         // Animate only below-fold content; never delay the first screen.
-        const candidates = new Set(document.querySelectorAll('section > div > h2, .tj-sec-heading, .animate-fade-in-up, .animate-fade-in, main article > h2'));
+        const candidates = new Set(document.querySelectorAll('section > div > h2, .tj-sec-heading, .animate-fade-in-up, .animate-fade-in, main article > h2, main section h2, .county-highlight-card, .county-card, .county-brief-card'));
         document.querySelectorAll('.grid, .services-grid, .pricing-grid, .blog-grid, .portfolio-grid').forEach(grid => {
             [...grid.children].forEach((card, index) => {
-                if (card.matches('a, article, .service-card, .pricing-card, .group')) {
+                if (card.matches('a, article, .service-card, .pricing-card, .group, .county-card, .county-highlight-card')) {
                     card.style.setProperty('--xt-stagger', `${Math.min(index % 3, 2) * 75}ms`);
                     candidates.add(card);
                 }
@@ -20,7 +20,7 @@
             observer?.disconnect();
             document.querySelectorAll('.xt-reveal').forEach(el => el.classList.remove('xt-reveal'));
         }
-        if (motion() && 'IntersectionObserver' in window) {
+        if (motion() && typeof IntersectionObserver === 'function') {
             observer = new IntersectionObserver(entries => entries.forEach(entry => {
                 if (!entry.isIntersecting) return;
                 entry.target.classList.add('xt-revealed');
@@ -31,9 +31,21 @@
                 el.classList.add('xt-reveal'); observer.observe(el);
             });
         }
+        // A short visible entrance also covers county heroes and touch devices.
+        // WAAPI never hides content if scripting fails or reduced motion is enabled.
+        if (motion()) {
+            const heading = document.querySelector('h1');
+            const hero = heading?.closest('section, header');
+            const entrance = [heading, hero?.querySelector('.county-service-summary, .hero-lead'), hero?.querySelector('.county-highlight-card')].filter(Boolean);
+            entrance.forEach((el, index) => {
+                if (!el.animate) return;
+                const animation = el.animate({ opacity: [0.25, 1], transform: ['translateY(20px)', 'translateY(0)'] }, { duration: 700, delay: index * 90, easing: 'cubic-bezier(.2,.7,.2,1)' });
+                cleanups.add(() => animation.cancel());
+            });
+        }
         // Identify shared controls without changing their labels or destinations.
         document.querySelectorAll('.nav-link, .footer-nav-link, .footer-location-link, .footer-bottom-link, main p a, article p a').forEach(el => el.classList.add('xt-link'));
-        document.querySelectorAll('a[class*="btn"], button[class*="btn"], a[class*="rounded-full"][class*="px-"], button[type="submit"]').forEach(el => {
+        document.querySelectorAll('a[class*="btn"], button[class*="btn"], a[class*="rounded-full"][class*="px-"], a.inline-flex[class*="rounded-xl"], button[type="submit"]').forEach(el => {
             el.classList.add('xt-button');
             el.querySelectorAll('svg, [aria-hidden="true"]').forEach(icon => icon.classList.add('xt-icon'));
         });
@@ -111,7 +123,7 @@
         function scheduleScroll() { if (!scheduled) { scheduled = true; requestAnimationFrame(updateScroll); } }
         addEventListener('scroll', scheduleScroll, { passive: true }); addEventListener('resize', scheduleScroll); updateScroll();
         // Counters finish immediately when motion is disabled, including mid-animation.
-        const counterObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => entries.forEach(({ target, isIntersecting }) => {
+        const counterObserver = typeof IntersectionObserver === 'function' ? new IntersectionObserver(entries => entries.forEach(({ target, isIntersecting }) => {
             if (!isIntersecting) return;
             counterObserver.unobserve(target); const value = Number(target.dataset.target); const start = performance.now();
             function tick(now) {

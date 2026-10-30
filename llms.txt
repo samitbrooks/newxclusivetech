@@ -24,7 +24,6 @@ Xclusive Tech specializes in custom UI/UX design, mobile-first business websites
 - [Founder & Lead Engineer](https://www.xclusivetech.co.ke/founder): Profile of Samuel Kidemi, lead software engineer and award-winning digital architect.
 - [Frostwood CRM](https://www.xclusivetech.co.ke/frostwoodcrm): Proprietary customer relationship management and sales lead pipeline software developed by Xclusive Tech.
 - [Contact Intake](https://www.xclusivetech.co.ke/contact): Consultation booking, direct WhatsApp channel, phone lines, and Kilimani office coordinates.
-- [Google Review Templates](https://www.xclusivetech.co.ke/review_templates): Free toolkit of 20 high-converting Google review request templates for Kenyan small and medium businesses.
 - [Technical & Industry Blog](https://www.xclusivetech.co.ke/blog/): Authoritative guides on Kenyan web design costs, SEO, GEO/AEO, and digital strategy.
 
 ## County Web Design Hubs (All 47 Counties)
@@ -89,3 +88,11 @@ Xclusive Tech specializes in custom UI/UX design, mobile-first business websites
 ## Optional
 
 - [Comprehensive Context & Detailed Documentation (llms-full.txt)](https://www.xclusivetech.co.ke/llms-full.txt): Complete expanded markdown reference containing full technical specs, industry deep-dives, detailed service scopes, and comprehensive FAQs for AI models.
+
+## Service coverage and enquiries
+
+Xclusive Tech is based in Nairobi and serves businesses remotely across Kenya. County pages describe service coverage, not branch offices.
+- [Bungoma website design](https://www.xclusivetech.co.ke/locations/web-design-bungoma): Service scope, pricing and a project brief for Bungoma Town, Webuye, Kimilili and Chwele.
+- [Contact the team](https://www.xclusivetech.co.ke/contact): Request a written scope and quote. Domain and hosting costs are separate from build packages.
+
+These files help describe the business; inclusion or citations in search and AI answers are not guaranteed.

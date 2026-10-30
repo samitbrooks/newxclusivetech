@@ -7575,3 +7575,23 @@ svg.h-6, .h-6 { height: 24px !important; }
     .xt-ambient-layer { animation: none !important; }
     .xt-button:hover, .xt-button:hover .xt-icon, .xt-image-frame:hover .xt-preview { translate: none; scale: none; }
 }
+
+/* Static SVG icons replace platform-dependent emoji glyphs. */
+.xt-ui-icon { display: inline-block; width: 1em; height: 1em; min-width: 1em; vertical-align: -.13em; flex-shrink: 0; color: inherit; }
+.xt-review-stars .xt-ui-icon { width: 1rem; height: 1rem; }
+.county-service-summary { font-size: 1.05rem; line-height: 1.8; color: #334155; max-width: 56rem; }
+.county-service-summary a, .county-brief-section p a { color: #245bec; text-decoration: underline; text-underline-offset: 3px; }
+.county-brief-section { padding: 4rem 1.25rem; background: #f8faff; border-top: 1px solid #e2e8f0; }
+.county-brief-container { max-width: 72rem; margin: auto; }
+.county-brief-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1.25; color: #17233a; margin-bottom: 1rem; }
+.county-brief-section p { line-height: 1.8; color: #475569; }
+.county-brief-grid { display: grid; gap: 1.25rem; margin: 2rem 0; }
+.county-brief-card { padding: 1.5rem; background: white; border: 1px solid #e2e8f0; border-radius: 1rem; }
+.county-brief-section h3 { font-size: 1.1rem; font-weight: 700; color: #17233a; margin-bottom: .65rem; }
+.county-brief-next { max-width: 60rem; }
+.county-brief-next h3 { margin-top: 1.5rem; }
+.county-brief-next .nav-cta-btn { display: inline-flex; margin-top: 1.25rem; }
+.county-phone-link { display: inline-block; padding: 1rem; color: #245bec; text-decoration: underline; }
+.xt-ambient-layer { background: radial-gradient(ellipse at 20% 30%, rgb(22 200 162 / 16%), transparent 55%), radial-gradient(ellipse at 80% 70%, rgb(101 69 255 / 18%), transparent 55%); background-size: 160% 160%; }
+@media (min-width: 768px) { .county-brief-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (hover: hover) and (pointer: fine) { .xt-preview { transition-duration: 600ms; } .xt-image-frame:hover .xt-preview { scale: 1.045; } }

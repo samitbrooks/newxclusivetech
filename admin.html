@@ -9,28 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            purple: '#5f39ff',
-                            darkPurple: '#4926dc',
-                            teal: '#20d9a1',
-                            darkTeal: '#10b981',
-                            accent: '#fd31bc',
-                            dark: '#0f172a'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="/css/utilities.css?v=20261030seo">
+
     <style>
         body { font-family: 'Ubuntu', sans-serif; }
         .gradient-brand { background: linear-gradient(135deg, #5f39ff 0%, #20d9a1 100%); }
@@ -40,7 +20,7 @@
         .badge-clinic { background-color: #faf5ff; color: #7e22ce; border: 1px solid #e9d5ff; }
         .badge-retail { background-color: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
         .badge-agency { background-color: #fdf2f8; color: #be185d; border: 1px solid #fbcfe8; }
-        
+
         .status-PENDING { background-color: #f1f5f9; color: #475569; }
         .status-DRAFTED { background-color: #eff6ff; color: #2563eb; }
         .status-EMAILED { background-color: #fef3c7; color: #d97706; }
@@ -54,7 +34,7 @@
     <div id="login-overlay" class="fixed inset-0 z-50 bg-slate-900/90 backdrop-blur-md flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 max-w-md w-full p-8 md:p-10 animate-fade-in relative overflow-hidden">
             <div class="absolute top-0 left-0 right-0 h-2 gradient-brand"></div>
-            
+
             <div class="text-center mb-8">
                 <div class="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center mx-auto mb-4 shadow-sm text-brand-purple">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +69,7 @@
                         </button>
                     </div>
                     <p id="login-error" class="text-xs text-rose-600 mt-2 hidden font-medium flex items-center gap-1">
-                        <span>⚠️</span> Invalid username or password.
+                        <span><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#alert"></use></svg></span> Invalid username or password.
                     </p>
                 </div>
 
@@ -115,12 +95,12 @@
 
     <!-- MAIN APP WRAPPER -->
     <div id="app-wrapper" class="hidden min-h-screen flex flex-col">
-        
+
         <!-- HEADER NAV -->
         <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-20">
-                    
+
                     <!-- BRAND LOGO -->
                     <div class="flex items-center gap-3">
                         <a href="/" class="flex items-center gap-2" title="Back to Main Website">
@@ -137,16 +117,16 @@
                     <!-- VIEW TABS -->
                     <nav class="flex items-center gap-1 sm:gap-2">
                         <button onclick="switchTab('pipeline')" id="tab-btn-pipeline" class="tab-btn px-3.5 py-2 rounded-xl text-sm font-semibold bg-brand-purple text-white shadow-sm transition">
-                            📊 Pipeline (<span id="nav-lead-count">15</span>)
+                            <svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#chart"></use></svg> Pipeline (<span id="nav-lead-count">15</span>)
                         </button>
                         <button onclick="switchTab('dispatcher')" id="tab-btn-dispatcher" class="tab-btn px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">
-                            ✉️ Outreach &amp; Calls
+                            <svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#mail"></use></svg> Outreach &amp; Calls
                         </button>
                         <button onclick="switchTab('auditor')" id="tab-btn-auditor" class="tab-btn px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">
-                            🔍 Website Auditor
+                            <svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#search"></use></svg> Website Auditor
                         </button>
                         <button onclick="switchTab('settings')" id="tab-btn-settings" class="tab-btn px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">
-                            ⚙️ Settings
+                            <svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#code"></use></svg> Settings
                         </button>
                     </nav>
 
@@ -170,7 +150,7 @@
         <section class="bg-white border-b border-slate-200 py-6">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                    
+
                     <div class="p-4 rounded-2xl bg-indigo-50/50 border border-indigo-100">
                         <div class="text-xs font-bold uppercase tracking-wider text-indigo-700 mb-1">Target Prospects</div>
                         <div class="flex items-baseline gap-2">
@@ -212,10 +192,10 @@
 
             <!-- TAB 1: PIPELINE & LEADS CRM -->
             <div id="tab-pipeline" class="tab-pane space-y-6">
-                
+
                 <!-- Action toolbar -->
                 <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-xs">
-                    
+
                     <div class="flex flex-wrap items-center gap-2">
                         <!-- Search input -->
                         <div class="relative min-w-[220px]">
@@ -237,8 +217,8 @@
                             <option value="ALL">All Statuses</option>
                             <option value="PENDING">Pending Outreach</option>
                             <option value="EMAILED">Email Sent</option>
-                            <option value="CALL_BOOKED">Call Booked 🏆</option>
-                            <option value="WON">Closed Won 💰</option>
+                            <option value="CALL_BOOKED">Call Booked <svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#trophy"></use></svg></option>
+                            <option value="WON">Closed Won <svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#money"></use></svg></option>
                         </select>
                     </div>
 
@@ -279,13 +259,13 @@
 
             <!-- TAB 2: COLD EMAIL DISPATCHER -->
             <div id="tab-dispatcher" class="tab-pane hidden space-y-6">
-                
+
                 <div class="grid lg:grid-cols-3 gap-6">
-                    
+
                     <!-- Left: Lead Selector & Customization -->
                     <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-5">
                         <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">1. Select Target Prospect</h3>
-                        
+
                         <div>
                             <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Target Lead</label>
                             <select id="disp-lead-select" onchange="loadLeadIntoDispatcher(this.value)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 font-semibold text-slate-800 text-sm focus:ring-2 focus:ring-brand-purple">
@@ -308,7 +288,7 @@
 
                         <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-100 text-xs text-indigo-900 space-y-1.5">
                             <div class="font-bold flex items-center gap-1.5">
-                                <span>🎯</span> Subject Line Optimization
+                                <span><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#target"></use></svg></span> Subject Line Optimization
                             </div>
                             <p>As requested, every email includes <strong>"Book a 10-min Call"</strong> prominently in the subject to maximize discovery call booking rate!</p>
                         </div>
@@ -316,7 +296,7 @@
 
                     <!-- Right: Rendered Email Preview & Dispatch Actions -->
                     <div class="lg:col-span-2 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6 flex flex-col justify-between">
-                        
+
                         <div class="space-y-4">
                             <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                                 <div>
@@ -355,7 +335,7 @@
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                                     <span id="copy-btn-text">Copy Full Email</span>
                                 </button>
-                                
+
                                 <button onclick="openInEmailClient()" class="px-4 py-2.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-brand-purple text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                                     <span>Open in Mail Client</span>
@@ -364,7 +344,7 @@
 
                             <div class="flex items-center gap-2">
                                 <button onclick="openWhatsAppOutreach()" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition flex items-center gap-1.5 cursor-pointer">
-                                    <span>💬 Send via WhatsApp</span>
+                                    <span><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#chat"></use></svg> Send via WhatsApp</span>
                                 </button>
 
                                 <button onclick="markCurrentAsEmailed()" class="px-4 py-2.5 rounded-xl bg-brand-purple hover:bg-brand-darkPurple text-white text-xs font-bold shadow-md transition flex items-center gap-1.5 cursor-pointer">
@@ -381,7 +361,7 @@
 
             <!-- TAB 3: WEBSITE AUDITOR -->
             <div id="tab-auditor" class="tab-pane hidden space-y-6">
-                
+
                 <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm max-w-3xl mx-auto space-y-6">
                     <div>
                         <h2 class="text-2xl font-bold text-slate-900">Prospect Website Speed &amp; Conversion Auditor</h2>
@@ -433,13 +413,13 @@
 
             <!-- TAB 4: SETTINGS & SMTP -->
             <div id="tab-settings" class="tab-pane hidden space-y-6">
-                
+
                 <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                    
+
                     <!-- Sender & Booking Profile -->
                     <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
                         <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">Sender Profile &amp; Booking</h3>
-                        
+
                         <div>
                             <label class="block text-xs font-bold text-slate-600 mb-1">Sender Name</label>
                             <input type="text" id="setting-sender-name" value="Samuel Kidemi | Xclusive Tech" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-sm">
@@ -466,7 +446,7 @@
                     <!-- Security & Admin Password -->
                     <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
                         <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">Security &amp; Master Password</h3>
-                        
+
                         <div>
                             <label class="block text-xs font-bold text-slate-600 mb-1">Change Admin Password</label>
                             <input type="password" id="setting-new-pass" placeholder="Enter new password" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-sm">
@@ -485,12 +465,12 @@
                         <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
                             <div>
                                 <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-                                    <span>✈️</span> Telegram Visitor &amp; Lead Alerts (Real-Time)
+                                    <span><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#truck"></use></svg></span> Telegram Visitor &amp; Lead Alerts (Real-Time)
                                 </h3>
                                 <p class="text-xs text-slate-500 mt-0.5">Receive immediate Telegram notifications on your phone whenever someone lands on your site, visits high-intent pages, or submits a lead form.</p>
                             </div>
                             <span id="telegram-status-pill" class="text-xs px-2.5 py-1 rounded-full font-bold bg-amber-100 text-amber-800 border border-amber-200">
-                                ⚠️ Unconfigured
+                                <svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#alert"></use></svg> Unconfigured
                             </span>
                         </div>
 
@@ -499,7 +479,7 @@
                                 <label class="block text-xs font-bold text-slate-600 mb-1">Telegram Bot Token</label>
                                 <div class="relative">
                                     <input type="password" id="setting-telegram-token" placeholder="123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ" class="w-full px-3 py-2 pr-10 rounded-xl bg-slate-50 border border-slate-300 font-mono text-xs">
-                                    <button type="button" onclick="toggleTokenVisibility()" class="absolute right-2 top-2 text-slate-400 hover:text-slate-600 text-xs px-1">👁️</button>
+                                    <button type="button" onclick="toggleTokenVisibility()" class="absolute right-2 top-2 text-slate-400 hover:text-slate-600 text-xs px-1"><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#search"></use></svg></button>
                                 </div>
                                 <span class="text-[11px] text-slate-400">Created via <a href="https://t.me/BotFather" target="_blank" class="text-brand-purple underline">@BotFather</a> with <code>/newbot</code></span>
                             </div>
@@ -533,7 +513,7 @@
                         <!-- Filters & Bot Verification -->
                         <div class="p-3.5 bg-emerald-50/70 rounded-2xl border border-emerald-200 space-y-2 text-xs">
                             <span class="font-bold text-emerald-950 block flex items-center gap-1.5">
-                                <span>🛡️</span> Bot Protection & Quality Filters:
+                                <span><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#lock"></use></svg></span> Bot Protection & Quality Filters:
                             </span>
                             <div class="grid sm:grid-cols-3 gap-2">
                                 <label class="flex items-center gap-2 cursor-pointer text-slate-700">
@@ -554,7 +534,7 @@
                         <!-- Quick 3-Step Setup Guide -->
                         <div class="p-3.5 bg-sky-50 rounded-2xl border border-sky-200 text-xs text-sky-900 space-y-1.5">
                             <div class="font-bold flex items-center gap-1.5">
-                                <span>💡</span> Quick 3-Step Setup (Takes 60 seconds):
+                                <span><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#bolt"></use></svg></span> Quick 3-Step Setup (Takes 60 seconds):
                             </div>
                             <ol class="list-decimal list-inside space-y-1 text-slate-700">
                                 <li>Open Telegram, search for <b>@BotFather</b> and send <code>/newbot</code>. Choose a bot name and username (e.g. <code>MySiteNotifierBot</code>), then copy the <b>HTTP API Token</b>.</li>
@@ -565,10 +545,10 @@
 
                         <div class="flex flex-wrap items-center gap-3 pt-2">
                             <button onclick="saveTelegramSettings()" class="px-5 py-2.5 rounded-xl bg-brand-purple text-white text-xs font-bold hover:bg-brand-darkPurple transition shadow-sm">
-                                💾 Save Telegram Settings
+                                <svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg> Save Telegram Settings
                             </button>
                             <button onclick="testTelegramAlert()" id="btn-test-telegram" class="px-5 py-2.5 rounded-xl bg-slate-800 text-white text-xs font-bold hover:bg-slate-900 transition shadow-sm flex items-center gap-1.5">
-                                <span>🚀</span> Send Test Notification
+                                <span><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#rocket"></use></svg></span> Send Test Notification
                             </button>
                             <div id="telegram-test-result" class="text-xs font-medium text-slate-600 hidden"></div>
                         </div>
@@ -638,7 +618,7 @@
 
     <!-- TOAST NOTIFICATION -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-2xl bg-slate-900 text-white text-xs font-semibold shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none flex items-center gap-2">
-        <span id="toast-icon">✅</span>
+        <span id="toast-icon"><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#check"></use></svg></span>
         <span id="toast-msg">Action completed</span>
     </div>
 
@@ -894,7 +874,7 @@
                 document.getElementById("login-error").classList.add("hidden");
                 document.getElementById("login-overlay").classList.add("hidden");
                 document.getElementById("app-wrapper").classList.remove("hidden");
-                showToast(`Access granted. Welcome!`, "🔓");
+                showToast(`Access granted. Welcome!`, "");
                 initApp();
             } else {
                 document.getElementById("login-error").classList.remove("hidden");
@@ -928,7 +908,7 @@
             }
             localStorage.setItem("xclusive_admin_pass", newPass);
             document.getElementById("setting-new-pass").value = "";
-            showToast("Admin password successfully updated!", "🔑");
+            showToast("Admin password successfully updated!", "");
         }
 
         // TAB SWITCHER
@@ -949,10 +929,10 @@
         function updateKPIs() {
             document.getElementById("nav-lead-count").textContent = leads.length;
             document.getElementById("stat-total").textContent = leads.length;
-            
+
             const pending = leads.filter(l => l.status === "PENDING").length;
             const booked = leads.filter(l => l.status === "CALL_BOOKED").length;
-            
+
             document.getElementById("stat-pending").textContent = pending;
             document.getElementById("stat-booked").textContent = booked;
         }
@@ -1007,13 +987,13 @@
                                 <option value="PENDING" ${lead.status === 'PENDING' ? 'selected' : ''}>Pending</option>
                                 <option value="DRAFTED" ${lead.status === 'DRAFTED' ? 'selected' : ''}>Drafted</option>
                                 <option value="EMAILED" ${lead.status === 'EMAILED' ? 'selected' : ''}>Email Sent</option>
-                                <option value="CALL_BOOKED" ${lead.status === 'CALL_BOOKED' ? 'selected' : ''}>Call Booked 🏆</option>
-                                <option value="WON" ${lead.status === 'WON' ? 'selected' : ''}>Closed Won 💰</option>
+                                <option value="CALL_BOOKED" ${lead.status === 'CALL_BOOKED' ? 'selected' : ''}>Call Booked </option>
+                                <option value="WON" ${lead.status === 'WON' ? 'selected' : ''}>Closed Won </option>
                             </select>
                         </td>
                         <td class="py-4 px-6 text-right space-x-1">
                             <button onclick="openDispatcherForLead(${lead.id})" class="px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-brand-purple text-xs font-bold transition inline-flex items-center gap-1 cursor-pointer" title="Load into Outreach Dispatcher">
-                                <span>✉️ Send Email</span>
+                                <span> Send Email</span>
                             </button>
                             <button onclick="launchWhatsApp(${lead.id})" class="p-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 transition inline-flex items-center cursor-pointer" title="WhatsApp Direct">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
@@ -1033,7 +1013,7 @@
                 lead.status = newStatus;
                 saveLeads();
                 renderTable();
-                showToast(`${lead.company_name} status updated to ${newStatus}`, "✅");
+                showToast(`${lead.company_name} status updated to ${newStatus}`, "");
             }
         }
 
@@ -1043,7 +1023,7 @@
                 saveLeads();
                 renderTable();
                 populateDispatcherDropdown();
-                showToast("Lead removed", "🗑️");
+                showToast("Lead removed", "");
             }
         }
 
@@ -1062,8 +1042,8 @@ In our work engineering web systems for tourism brands (including Santorini Quee
 Would you be open to a quick 10-minute discovery call this week? I can share a free 3-point conversion audit of ${lead.website} with zero obligation.
 
 You can book a call with me directly here:
-👉 WhatsApp: ${booking}
-👉 Or simply reply to this email with a time that works best for you.
+ WhatsApp: ${booking}
+ Or simply reply to this email with a time that works best for you.
 
 Best regards,
 
@@ -1088,8 +1068,8 @@ We specialize in high-converting web engineering and modern search architecture 
 
 Could we do a brief 10-minute call to walk you through a complimentary digital audit of ${lead.website}?
 
-👉 Book directly: ${booking}
-👉 Or let me know what day works for you.
+ Book directly: ${booking}
+ Or let me know what day works for you.
 
 Best regards,
 
@@ -1113,8 +1093,8 @@ At Xclusive Tech, we engineer ultra-fast e-commerce platforms with automated Saf
 
 Would you be open to a 10-minute call to see a live 60-second checkout demo?
 
-👉 Book a call on WhatsApp: ${booking}
-👉 Or reply here and let me know when suits you.
+ Book a call on WhatsApp: ${booking}
+ Or reply here and let me know when suits you.
 
 Best regards,
 
@@ -1139,8 +1119,8 @@ We built Frostwood CRM specifically for Kenyan agencies, consultants, and contra
 
 Would you be open to a quick 10-minute walkthrough call to see how Frostwood CRM can save your team 5+ hours every week?
 
-👉 Schedule a call via WhatsApp: ${booking}
-👉 Or reply directly to this email.
+ Schedule a call via WhatsApp: ${booking}
+ Or reply directly to this email.
 
 Best regards,
 
@@ -1174,7 +1154,7 @@ WhatsApp: +254 722 753 819`
 
             document.getElementById("disp-hook").value = lead.personalized_observation;
             document.getElementById("disp-recipient-email").textContent = `${lead.contact_name} <${lead.email}>`;
-            
+
             const badge = document.getElementById("disp-lead-badge");
             badge.textContent = lead.niche.toUpperCase();
             badge.className = `px-3 py-1 rounded-full text-xs font-bold badge-${lead.niche === 'tourism' ? 'tourism' : lead.niche === 'retail_ecommerce' ? 'retail' : 'legal'}`;
@@ -1216,7 +1196,7 @@ WhatsApp: +254 722 753 819`
             navigator.clipboard.writeText(textToCopy).then(() => {
                 const btn = document.getElementById("copy-btn-text");
                 btn.textContent = "Copied!";
-                showToast("Subject & email body copied to clipboard!", "📋");
+                showToast("Subject & email body copied to clipboard!", "");
                 setTimeout(() => btn.textContent = "Copy Full Email", 2000);
             });
         }
@@ -1249,8 +1229,8 @@ WhatsApp: +254 722 753 819`
             currentDispatcherLead.status = "EMAILED";
             saveLeads();
             renderTable();
-            showToast(`${currentDispatcherLead.company_name} marked as EMAILED!`, "🚀");
-            
+            showToast(`${currentDispatcherLead.company_name} marked as EMAILED!`, "");
+
             // Advance to next lead in dropdown
             const select = document.getElementById("disp-lead-select");
             const nextIdx = (select.selectedIndex + 1) % select.options.length;
@@ -1269,7 +1249,7 @@ WhatsApp: +254 722 753 819`
             lastAuditedDomain = urlInput.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
             document.getElementById("audit-results").classList.remove("hidden");
-            
+
             // Simulate heuristic scan
             const isWp = !lastAuditedDomain.includes("shopify");
             const latency = (1.8 + Math.random() * 1.5).toFixed(1);
@@ -1277,7 +1257,7 @@ WhatsApp: +254 722 753 819`
             document.getElementById("audit-speed").textContent = `${latency}s`;
             document.getElementById("audit-speed").className = `text-lg font-black ${latency > 2.0 ? 'text-amber-600' : 'text-emerald-600'} mt-0.5`;
             document.getElementById("audit-cms").textContent = isWp ? "WordPress" : "Custom/Shopify";
-            
+
             const hook = `noticed your site takes ${latency}s to load on mobile and runs on ${isWp ? 'WordPress with plugin bloat' : 'standard code'} without an automated Safaricom Daraja M-Pesa STK push checkout`;
             document.getElementById("audit-hook-text").textContent = `"${hook}"`;
         }
@@ -1300,7 +1280,7 @@ WhatsApp: +254 722 753 819`
             saveLeads();
             renderTable();
             populateDispatcherDropdown();
-            showToast(`Added ${lastAuditedDomain} to Pipeline!`, "✅");
+            showToast(`Added ${lastAuditedDomain} to Pipeline!`, "");
             switchTab('pipeline');
         }
 
@@ -1332,7 +1312,7 @@ WhatsApp: +254 722 753 819`
             renderTable();
             populateDispatcherDropdown();
             closeAddLeadModal();
-            showToast(`Added ${newLead.company_name} to pipeline!`, "🎉");
+            showToast(`Added ${newLead.company_name} to pipeline!`, "");
         }
 
         // CSV EXPORT
@@ -1348,7 +1328,7 @@ WhatsApp: +254 722 753 819`
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-            showToast("Exported leads to CSV", "📥");
+            showToast("Exported leads to CSV", "");
         }
 
         // SETTINGS PERSISTENCE
@@ -1377,7 +1357,7 @@ WhatsApp: +254 722 753 819`
             localStorage.setItem("xclusive_sender_email", document.getElementById("setting-sender-email").value);
             localStorage.setItem("xclusive_wa_link", document.getElementById("setting-whatsapp-link").value);
             localStorage.setItem("xclusive_cal_link", document.getElementById("setting-calendar-link").value);
-            showToast("Settings saved successfully!", "💾");
+            showToast("Settings saved successfully!", "");
             updateDraftBody();
         }
 
@@ -1430,10 +1410,10 @@ WhatsApp: +254 722 753 819`
             if (!pill) return;
 
             if (token && chatId && token !== 'YOUR_TELEGRAM_BOT_TOKEN' && chatId !== 'YOUR_TELEGRAM_CHAT_ID') {
-                pill.textContent = "🟢 Configured";
+                pill.textContent = " Configured";
                 pill.className = "text-xs px-2.5 py-1 rounded-full font-bold bg-emerald-100 text-emerald-800 border border-emerald-200";
             } else {
-                pill.textContent = "⚠️ Unconfigured";
+                pill.textContent = " Unconfigured";
                 pill.className = "text-xs px-2.5 py-1 rounded-full font-bold bg-amber-100 text-amber-800 border border-amber-200";
             }
         }
@@ -1479,7 +1459,7 @@ WhatsApp: +254 722 753 819`
             }
 
             updateTelegramStatusPill();
-            showToast("Telegram Bot settings saved!", "✈️");
+            showToast("Telegram Bot settings saved!", "");
         }
 
         async function testTelegramAlert() {
@@ -1489,11 +1469,11 @@ WhatsApp: +254 722 753 819`
             const chatId = (document.getElementById("setting-telegram-chatid")?.value || "").trim();
 
             if (!token || !chatId) {
-                showToast("Please enter both Bot Token and Chat ID first!", "⚠️");
+                showToast("Please enter both Bot Token and Chat ID first!", "");
                 if (resultBox) {
                     resultBox.classList.remove("hidden", "text-emerald-600", "text-slate-600");
                     resultBox.classList.add("text-rose-600");
-                    resultBox.textContent = "⚠️ Please enter your Bot Token and Chat ID above.";
+                    resultBox.textContent = " Please enter your Bot Token and Chat ID above.";
                 }
                 return;
             }
@@ -1522,7 +1502,7 @@ WhatsApp: +254 722 753 819`
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({
                             chat_id: chatId,
-                            text: `🧪 <b>Xclusive Tech Test Alert</b>\n\n✅ Your Telegram notification bot is connected and operating properly!\n\nOrigin: ${window.location.origin}`,
+                            text: ` <b>Xclusive Tech Test Alert</b>\n\n Your Telegram notification bot is connected and operating properly!\n\nOrigin: ${window.location.origin}`,
                             parse_mode: "HTML"
                         })
                     });
@@ -1535,38 +1515,38 @@ WhatsApp: +254 722 753 819`
                 }
 
                 if (res && res.success) {
-                    showToast("Test notification sent! Check your Telegram.", "🚀");
+                    showToast("Test notification sent! Check your Telegram.", "");
                     if (resultBox) {
                         resultBox.classList.remove("text-slate-600", "text-rose-600");
                         resultBox.classList.add("text-emerald-600", "font-bold");
-                        resultBox.textContent = "✅ Test alert delivered! Check your Telegram chat.";
+                        resultBox.textContent = " Test alert delivered! Check your Telegram chat.";
                     }
                 } else {
                     const err = (res && res.error) ? res.error : "Unknown error";
-                    showToast(`Telegram Error: ${err}`, "❌");
+                    showToast(`Telegram Error: ${err}`, "");
                     if (resultBox) {
                         resultBox.classList.remove("text-slate-600", "text-emerald-600");
                         resultBox.classList.add("text-rose-600", "font-bold");
-                        resultBox.textContent = `❌ Telegram Error: ${err}`;
+                        resultBox.textContent = ` Telegram Error: ${err}`;
                     }
                 }
             } catch (err) {
-                showToast(`Failed: ${err.message}`, "❌");
+                showToast(`Failed: ${err.message}`, "");
                 if (resultBox) {
                     resultBox.classList.remove("text-slate-600", "text-emerald-600");
                     resultBox.classList.add("text-rose-600", "font-bold");
-                    resultBox.textContent = `❌ Network Error: ${err.message}`;
+                    resultBox.textContent = ` Network Error: ${err.message}`;
                 }
             } finally {
                 if (btn) {
                     btn.disabled = false;
-                    btn.innerHTML = `<span>🚀</span> Send Test Notification`;
+                    btn.innerHTML = `<span></span> Send Test Notification`;
                 }
             }
         }
 
         // TOAST HELPER
-        function showToast(msg, icon = "✅") {
+        function showToast(msg, icon = "") {
             const toast = document.getElementById("toast");
             document.getElementById("toast-msg").textContent = msg;
             document.getElementById("toast-icon").textContent = icon;
