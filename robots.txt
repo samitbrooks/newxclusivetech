@@ -13,3 +13,6 @@ Disallow: /*.backup
 Disallow: /scripts/
 
 Sitemap: https://www.xclusivetech.co.ke/sitemap.xml
+
+# Dedicated county sitemap for discovery and Search Console monitoring.
+Sitemap: https://www.xclusivetech.co.ke/sitemap-counties.xml

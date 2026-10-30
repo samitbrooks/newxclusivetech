@@ -34,5 +34,8 @@ for url in urls:
    assert marker in source,(url,marker)
   assert source.index('<!-- CTA Row -->') < source.index('<!-- Key Towns List -->'),url
 assert counties==47,counties
+county_urls=[x.text for x in ET.parse(ROOT/'sitemap-counties.xml').findall('.//s:loc',ns)]
+assert len(county_urls)==47 and len(set(county_urls))==47, 'County sitemap must contain 47 unique URLs'
+assert set(county_urls)=={u for u in urls if '/locations/web-design-' in u}, 'County sitemap must match canonical county destinations'
 assert 'noindex,follow' in (ROOT/'404.html').read_text()
 print(f'PASS: {len(urls)} unique indexable sitemap URLs; 47 county pages; valid canonicals, JSON-LD, H1s, SVG-only icons, static CSS and repaired county navigation')
