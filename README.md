@@ -319,3 +319,35 @@ Contact actions emit `contact_click` and valid form submissions emit
 email deliveries. They are forwarded to `gtag` if configured, otherwise queued
 in `window.dataLayer`; an analytics property must be connected to report them.
 No visitor name, email, phone number or message is included in those events.
+
+## Buyer content, evidence and measurement
+
+- Approved quotations live in `content/client-evidence.json`. A supplied review
+  must not be reassigned to an unrelated portfolio project. Bungoma has no
+  supplied case study yet; do not invent one.
+- Run `python3 scripts/implement_buyer_improvements.py`, then
+  `python3 scripts/implement_county_conversion.py` when rebuilding buyer sections.
+- Run `python3 scripts/normalize_site_assets.py` and
+  `python3 scripts/generate_responsive_previews.py` after generating public HTML,
+  followed by `npm run build:css` and the content checks.
+- Set only a real authorized property ID in `js/measurement-config.js` to connect
+  GA4. The county-label experiment is disabled until reporting is connected.
+  It has no declared winner; assess accepted/qualified enquiries, not clicks alone.
+- Events distinguish `contact_click`, `quote_form_attempt`,
+  `lead_provider_accepted` (positive AJAX response), and `lead_provider_return`
+  (a matching native-form return). Neither provider signal proves mailbox delivery
+  or a sale. `web_vital` reports measured LCP, CLS and INP where supported.
+- Google’s web-vitals library is self-hosted under `js/vendor/` with its Apache
+  licence. Portfolio originals stay intact; smaller 400px variants reduce mobile
+  transfer size.
+- Run `python3 scripts/monthly_seo_review.py --month YYYY-MM` for a completed month.
+  Reports go outside the public repository by default; the command never changes
+  public pages or claims a causal ranking improvement. No recurring job is created.
+
+For browser regression checks, run the clean-URL server with
+`python3 scripts/server.py 8766`, then run
+`python3 scripts/test_buyer_improvements.py` in an environment with Playwright.
+The browser test blocks service workers so provider calls are intercepted locally;
+it checks both rejected and accepted responses without sending real enquiries.
+`XT_TEST_BASE_URL` can override the local server address. `npm test` runs static
+content/canonical/schema checks.

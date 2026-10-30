@@ -1,0 +1,14 @@
+{
+  "principle": "Give each destination a distinct buying task; avoid new near-duplicate location pages.",
+  "pages": [
+    {"path":"/","intent":"Find a website developer serving Nairobi and Kenya","primaryTopic":"website developers in Nairobi"},
+    {"path":"/services","intent":"Compare available website and digital services","primaryTopic":"web design and development services Kenya"},
+    {"path":"/pricing","intent":"Compare package prices and deliverables","primaryTopic":"website design prices Kenya"},
+    {"path":"/project-guide","intent":"Understand scope, costs, process and ownership before buying","primaryTopic":"website project planning guide Kenya"},
+    {"path":"/portfolio","intent":"Inspect past work and relevant implementation details","primaryTopic":"Xclusive Tech website portfolio"},
+    {"path":"/founder","intent":"Understand who leads the project","primaryTopic":"Samuel Kidemi Xclusive Tech"},
+    {"path":"/contact","intent":"Request a project conversation or written quote","primaryTopic":"contact Xclusive Tech"},
+    {"path":"/locations/","intent":"Choose a county service-coverage page","primaryTopic":"website design services across Kenya counties"}
+  ],
+  "countyPattern": {"path":"/locations/web-design-{county}","intent":"Find scope, local buying guidance and enquiry options for the named service area","primaryTopic":"website design in {county} County"}
+}

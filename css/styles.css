@@ -7595,3 +7595,37 @@ svg.h-6, .h-6 { height: 24px !important; }
 .xt-ambient-layer { background: radial-gradient(ellipse at 20% 30%, rgb(22 200 162 / 16%), transparent 55%), radial-gradient(ellipse at 80% 70%, rgb(101 69 255 / 18%), transparent 55%); background-size: 160% 160%; }
 @media (min-width: 768px) { .county-brief-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (hover: hover) and (pointer: fine) { .xt-preview { transition-duration: 600ms; } .xt-image-frame:hover .xt-preview { scale: 1.045; } }
+
+/* Buyer guidance and short quote forms use the existing visual system. */
+.buyer-section { padding: 3.5rem 1.25rem; border-top: 1px solid #e2e8f0; background: #fff; }
+.buyer-section:nth-of-type(even) { background: #f8faff; }
+.buyer-container { max-width: 72rem; margin: auto; }
+.buyer-section h1 { font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 700; line-height: 1.15; margin: 1.5rem 0; color: #17233a; }
+.buyer-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1.25; margin-bottom: 1.25rem; color: #17233a; }
+.buyer-section h3 { font-size: 1.15rem; font-weight: 700; margin: .75rem 0; color: #17233a; }
+.buyer-section p, .buyer-section li, .buyer-section blockquote { color: #475569; line-height: 1.8; margin: .8rem 0; }
+.buyer-section a:not(.nav-cta-btn) { color: #245bec; text-decoration: underline; text-underline-offset: 3px; }
+.buyer-grid { display: grid; gap: 1.25rem; margin: 1.5rem 0; }
+.buyer-card { min-width: 0; padding: 1.5rem; background: white; border: 1px solid #e2e8f0; border-radius: 1rem; }
+.buyer-card img { width: 100%; height: auto; border-radius: .75rem; }
+.buyer-card figcaption { margin-top: 1rem; color: #334155; line-height: 1.6; }
+.buyer-lead { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; }
+.buyer-lead img { width: 120px; height: 120px; border-radius: 1.25rem; object-fit: cover; }
+.buyer-lead > div { flex: 1 1 240px; }
+.buyer-fields { display: grid; gap: 1rem; margin: 1.25rem 0; }
+.buyer-section label { display: block; font-size: .95rem; font-weight: 500; color: #334155; }
+.buyer-section input:not([type="hidden"]), .buyer-section textarea { display: block; width: 100%; box-sizing: border-box; margin-top: .5rem; padding: .8rem 1rem; border: 1px solid #cbd5e1; border-radius: .6rem; background: #f8fafc; color: #17233a; }
+.buyer-section input:focus-visible, .buyer-section textarea:focus-visible { outline: 2px solid #245bec; outline-offset: 2px; }
+.buyer-section input[hidden] { display: none; }
+.buyer-section .buyer-note { font-size: .85rem; }
+.buyer-quote-form, .ownership-calculator { max-width: 50rem; }
+.buyer-steps, .buyer-list { padding-left: 1.5rem; list-style: decimal; }
+.buyer-list { list-style: disc; }
+.buyer-jump { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+.buyer-section details { padding: 1rem 0; border-bottom: 1px solid #e2e8f0; }
+.buyer-section summary { cursor: pointer; font-weight: 700; color: #17233a; }
+.buyer-section, .buyer-section [id] { scroll-margin-top: 6rem; }
+@media (min-width: 768px) { .buyer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .buyer-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* Header CTA visibility rules must not hide in-content quote buttons on mobile. */
+.buyer-section .nav-cta-btn { display: inline-flex; align-items: center; justify-content: center; max-width: 100%; white-space: normal; text-align: center; }
+#web-design, #seo, #ecommerce { scroll-margin-top: 6rem; }

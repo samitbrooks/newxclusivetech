@@ -12,6 +12,7 @@ import re
 import json
 from normalize_site_assets import normalize_html
 from enhance_county_pages import enhance_county_html
+from implement_county_conversion import improve_county_conversion
 
 WORKSPACE_DIR = "/Users/app/newxclusivetech"
 LOCATIONS_DIR = os.path.join(WORKSPACE_DIR, "locations")
@@ -751,7 +752,7 @@ def render_county_page(c):
                         "name": "How long will it take to build a website for my {c["name"]} business?",
                         "acceptedAnswer": {{
                             "@type": "Answer",
-                            "text": "Express landing pages are delivered in 3 to 5 business days. A standard 5-page business website takes 2 to 3 weeks, and an e-commerce platform with M-Pesa integration takes 4 to 6 weeks."
+                            "text": "Express landing pages are delivered in 3 to 5 business days. A standard 5-page business website takes 2 to 3 weeks, and an e-commerce platform with M-Pesa integration takes 5 to 7 weeks."
                         }}
                     }},
                     {{
@@ -1505,7 +1506,7 @@ def main():
     print(f"Generating 47 county landing pages in {LOCATIONS_DIR}...")
     for county in COUNTIES:
         filepath = os.path.join(LOCATIONS_DIR, f"{county['slug']}.html")
-        content = enhance_county_html(render_county_page(county), county)
+        content = improve_county_conversion(enhance_county_html(render_county_page(county), county), county)
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"  -> Generated {county['slug']}.html (County {county['code']} - {county['name']})")

@@ -43,11 +43,16 @@ def normalize_html(source):
    source=source.replace('</header>',menu+'\n</header>',1)
  if 'js/animations.js' in source and 'js/lead-events.js' not in source:
   source=source.replace('</body>','    <script src="/js/lead-events.js?v=20261030seo" defer></script>\n</body>')
+ if 'js/lead-events.js' in source and 'js/measurement-config.js' not in source:
+  source=source.replace('<script src="/js/lead-events.js', '<script src="/js/measurement-config.js?v=20261030buyer" defer></script>\n    <script src="/js/vendor/web-vitals.iife.js?v=4.2.4" defer></script>\n    <script src="/js/buyer-tools.js?v=20261030buyer" defer></script>\n    <script src="/js/lead-events.js',1)
+ source=re.sub(r'(css/styles\.css|css/utilities\.css|js/animations\.js|js/navigation\.js|js/main\.js|js/lead-events\.js)(?:\?[^\"]*)?(?=")',r'\1?v=20261030buyer',source)
  return re.sub(r'(?m)^[ \t]+$', '', source)
 
 if __name__=='__main__':
  import subprocess
- for name in subprocess.check_output(['git','ls-files','*.html']).decode().splitlines():
+ names=subprocess.check_output(['git','ls-files','*.html']).decode().splitlines()
+ if Path('project-guide.html').exists() and 'project-guide.html' not in names:names.append('project-guide.html')
+ for name in names:
   if name.startswith(('scripts/', 'assets/', 'preview/')) or name in ('preview.html', 'preview_posts.html', 'preview_reels.html'):continue
   p=Path(name)
   if p.exists():

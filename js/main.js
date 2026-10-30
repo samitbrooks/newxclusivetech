@@ -356,10 +356,10 @@ class XclusiveTech {
                                     <span class="xt-badge-sub">Daraja 2.0 API</span>
                                 </div>
 
-                                <!-- Badge 3: 95+ PageSpeed -->
+                                <!-- Badge 3: Mobile-first delivery -->
                                 <div class="xt-exit-badge-pill xt-badge-speed">
-                                    <span class="xt-speed-score">95+</span>
-                                    <span class="xt-badge-sub">PageSpeed</span>
+                                    <span class="xt-speed-score">Mobile</span>
+                                    <span class="xt-badge-sub">Responsive</span>
                                 </div>
 
                                 <!-- Badge 4: Digitally Fit '26 -->
@@ -370,10 +370,9 @@ class XclusiveTech {
                             </div>
 
                             <div class="xt-exit-reviews-grid">
-                                <div class="xt-exit-review-card">
-                                    <div class="xt-review-stars"><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#star"></use></svg></div>
-                                    <div class="xt-review-text"><strong>5.0</strong> Based on 202+ reviews</div>
-                                </div>
+                                <a href="/#approved-client-feedback" class="xt-exit-review-card">
+                                    <div class="xt-review-text"><strong>Client feedback</strong><br>Read client experiences</div>
+                                </a>
                                 <div class="xt-exit-award-card">
                                     <div class="xt-award-badge-tag">AWARD WINNER</div>
                                     <div class="xt-award-text">Digitally Fit Awards 2026</div>
@@ -443,7 +442,7 @@ class XclusiveTech {
                                 </button>
 
                                 <p class="xt-exit-security-note">
-                                    <svg class="w-4 h-4 text-emerald-600 inline-block align-text-bottom mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> 100% Risk-Free Guarantee &bull; <strong class="xt-secure-highlight">Zero Spam. Direct Engineer Response.</strong>
+                                    <svg class="w-4 h-4 text-emerald-600 inline-block align-text-bottom mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> Written scope &amp; agreed terms &bull; <strong class="xt-secure-highlight">Zero Spam. Direct Engineer Response.</strong>
                                 </p>
 
                                 <div id="xt-exit-feedback" class="xt-exit-feedback" style="display: none;"></div>
@@ -553,16 +552,16 @@ class XclusiveTech {
                         name: nameInput.value.trim(),
                         email: emailInput.value.trim(),
                         phone: cleanPhone,
-                        company: companyInput.value.trim() || 'N/A',
+                        company: companyInput?.value.trim() || 'N/A',
                         service: serviceSelect.value || 'Not specified',
-                        budget: budgetSelect.value || 'Not specified',
-                        project_details: projectInput.value.trim(),
+                        budget: budgetSelect?.value || 'Not specified',
+                        project_details: projectInput?.value.trim() || '',
                         _subject: `Smart Exit-Intent Lead: ${nameInput.value.trim()} (${cleanPhone})`,
                         _captcha: 'false'
                     };
 
                     try {
-                        await fetch('https://formsubmit.co/ajax/hello@xclusivetech.co.ke', {
+                        const providerResponse = await fetch('https://formsubmit.co/ajax/hello@xclusivetech.co.ke', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -570,6 +569,12 @@ class XclusiveTech {
                             },
                             body: JSON.stringify(payload)
                         });
+
+                        const providerResult = await providerResponse.json();
+                        if (!providerResponse.ok || ![true, 'true'].includes(providerResult.success)) {
+                            throw new Error('The enquiry service did not accept this submission.');
+                        }
+                        document.dispatchEvent(new CustomEvent('xt:lead-provider-accepted', { detail: { form_id: 'xt-exit-form' } }));
 
                         try {
                             if (window.localStorage) {
@@ -588,14 +593,11 @@ class XclusiveTech {
                             waBtn.href = `https://wa.me/254722753819?text=${waText}`;
                         }
                     } catch (err) {
-                        try {
-                            if (window.localStorage) {
-                                window.localStorage.setItem('xt_exit_intent_submitted', 'true');
-                            }
-                        } catch (e) {}
-
-                        exitForm.style.display = 'none';
-                        successEl.style.display = 'flex';
+                        feedbackEl.textContent = 'Your enquiry could not be submitted. Please retry, call +254 722 753 819, or use WhatsApp.';
+                        feedbackEl.className = 'xt-exit-feedback error';
+                        feedbackEl.style.display = 'block';
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Retry sending enquiry';
                     }
                 });
             }
@@ -773,7 +775,7 @@ class XclusiveTech {
         const deliverablesMap = {
             express: [
                 '1 High-Converting Long-Form Landing Page (5 Core Sections)',
-                'Delivered in 48 Hours (2 Days) with Full Revisions Round',
+                'Typical delivery: 3–5 business days; revision rounds agreed in the quote',
                 'Floating WhatsApp Quick-Chat Widget & Click-to-Call CTAs',
                 'Lead Intake Form with Instant Email & Mobile Notifications',
                 'Mobile-First Responsive Design Tested on Safaricom 4G/5G',
@@ -782,7 +784,7 @@ class XclusiveTech {
             ],
             starter: [
                 '5 Custom Pages: Home, About Company, Services, Portfolio & Contact',
-                'Guaranteed 7-Day Fast Delivery with Milestone Approval Stages',
+                'Typical 2–3 week delivery with milestone approval stages',
                 'Bespoke Figma UI/UX Design System Tailored to Your Brand Identity',
                 'Foundational On-Page SEO (Schema.org markup, meta tags & sitemap)',
                 'Interactive Google Maps Location & Google Business Profile Integration',
@@ -792,7 +794,7 @@ class XclusiveTech {
             ],
             growth: [
                 'Up to 15 Bespoke Responsive Pages & High-Performance Templates',
-                '10–14 Days Delivery with Dedicated Staging Preview Environment',
+                'Typical 3–5 week delivery with a staging preview',
                 'Lightweight Headless CMS Blog/News Engine for Publishing Articles',
                 'Interactive Quote Requests, Service Calculators or Booking Forms',
                 'Comprehensive County-by-County Kenya Local SEO & Semantic Schemas',
@@ -801,7 +803,7 @@ class XclusiveTech {
             ],
             ecommerce: [
                 'Full E-Commerce Storefront with Product Catalog & Categories',
-                '14 Days Delivery with End-to-End Real-Time Payment Testing',
+                'Typical 5–7 week delivery with payment-flow testing',
                 'Automated Safaricom Daraja M-Pesa STK Push Checkout Integration',
                 'Credit/Debit Card (Visa/Mastercard) & Bank Payment Gateway Option',
                 'Customer Accounts, Order History Dashboard & Automated PDF Invoices',
@@ -813,7 +815,7 @@ class XclusiveTech {
 
         let selectedPrice = 15000;
         let selectedName = 'Express Sales Landing Page';
-        let selectedTime = '2 Days (48 Hours)';
+        let selectedTime = '3–5 business days';
         let selectedKey = 'express';
 
         const updateDeliverables = (key) => {
@@ -864,7 +866,7 @@ class XclusiveTech {
             if (addonsList.length > 0) {
                 waMsg += `\n• Add-ons: ${addonsList.join(', ')}`;
             }
-            waMsg += `\n• Total: KES ${total.toLocaleString()} (50% deposit: KES ${deposit.toLocaleString()})\n• Deliverables: ${selectedKey === 'express' ? 'Landing page in 2 days' : 'Website in 7 days'}, 100% ownership & approval before final balance.\n\nCan you confirm your availability to get started?`;
+            waMsg += `\n• Total: KES ${total.toLocaleString()} (50% deposit: KES ${deposit.toLocaleString()})\n• Deliverables: ${selectedName} — ${selectedTime}, 100% ownership & approval before final balance.\n\nCan you confirm your availability to get started?`;
 
             waBtn.href = `https://wa.me/254722753819?text=${encodeURIComponent(waMsg)}`;
         };
@@ -879,7 +881,7 @@ class XclusiveTech {
 
                 selectedPrice = parseInt(card.getAttribute('data-price') || '15000', 10);
                 selectedName = card.getAttribute('data-name') || 'Express Sales Landing Page';
-                selectedTime = card.getAttribute('data-time') || '2 Days (48 Hours)';
+                selectedTime = card.getAttribute('data-time') || '3–5 business days';
                 selectedKey = card.getAttribute('data-pkg') || 'express';
 
                 calculate();

@@ -108,7 +108,9 @@
         "Self-service DNS management",
         "Auto-renewal reminders"
       ]
-    }
+    },
+    "paymentTerms": "50% deposit before work begins. Remaining balance due on delivery, before publication or file transfer, under the agreed terms.",
+    "revisionPolicy": "Included revision rounds are specified in the quote; extra rounds and scope changes are quoted separately."
   },
   "services": [
     {

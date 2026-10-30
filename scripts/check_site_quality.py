@@ -19,6 +19,8 @@ for url in urls:
  assert not re.search(r'<meta[^>]*name="robots"[^>]*content="[^\"]*noindex',source,re.I),url
  canonical=re.search(r'<link rel="canonical" href="([^"]+)"',source)
  assert canonical and canonical[1]==url,(url,'canonical mismatch')
+ ids=re.findall(r'\bid=[\"\']([^\"\']+)[\"\']',source)
+ assert len(ids)==len(set(ids)),(url,'duplicate element IDs')
  title=re.search(r'<title>(.*?)</title>',source,re.S)[1]
  assert title not in titles,(url,'duplicate title')
  titles.add(title)

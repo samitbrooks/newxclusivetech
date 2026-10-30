@@ -1,0 +1,14 @@
+{
+  "publicationApproval": "Owner supplied these names, roles, locations and quotations for publication on 2026-10-30.",
+  "bungomaCaseStudy": null,
+  "reviews": [
+    {"name":"Alex Mwangi","role":"Managing Partner, Corporate Law Firm","county":"Nairobi","location":"Nairobi","quote":"Xclusive Tech transformed our online presence. The portal is fast, structured, and has consistently delivered high-value corporate client inquiries that our previous website never generated."},
+    {"name":"Faith Njeri","role":"E-commerce Operations Director","county":"Uasin Gishu","location":"Eldoret","quote":"Outstanding engineering on our online storefront. The M-Pesa automated STK push integration functions without a glitch, and our checkout drop-off rate fell dramatically after launch."},
+    {"name":"Patricia Wambui","role":"Chief Executive, Real Estate Group","county":"Kiambu","location":"Kiambu","quote":"The most dependable web engineering team in Nairobi. They structured our property listings, optimized for mobile cellular speeds, and our qualified buyer leads increased visibly within weeks."}
+  ],
+  "projects": [
+    {"slug":"omniagentmarketplace","name":"Omni Agent Marketplace","url":"https://omniagentmarketplace.com","focus":"AI platform and B2B SaaS","implementation":"A public product website presenting an AI business automation platform and its routes to a product enquiry.","resultEvidence":"View the live product presentation and available enquiry paths.","image":"omniagentmarketplace"},
+    {"slug":"pharmapos","name":"PharmaPOS","url":"https://pharmacypos.co.ke","focus":"Healthcare SaaS and point of sale","implementation":"A pharmacy point-of-sale product website explaining the platform to pharmacy teams.","resultEvidence":"View the product information and available contact or demo routes.","image":"pharmapos"},
+    {"slug":"santoriniqueen","name":"Santorini Queen Charters","url":"https://santoriniqueen.com","focus":"Luxury charter experience","implementation":"A charter website showcasing the travel offering and routes to a booking enquiry.","resultEvidence":"View the charter presentation and enquiry experience.","image":"santoriniqueen"}
+  ]
+}

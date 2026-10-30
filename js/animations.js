@@ -7,7 +7,7 @@
         let observer;
         const motion = () => !media.matches;
         // Animate only below-fold content; never delay the first screen.
-        const candidates = new Set(document.querySelectorAll('section > div > h2, .tj-sec-heading, .animate-fade-in-up, .animate-fade-in, main article > h2, main section h2, .county-highlight-card, .county-card, .county-brief-card'));
+        const candidates = new Set(document.querySelectorAll('section > div > h2, .tj-sec-heading, .animate-fade-in-up, .animate-fade-in, main article > h2, main section h2, .county-highlight-card, .county-card, .county-brief-card, .buyer-card'));
         document.querySelectorAll('.grid, .services-grid, .pricing-grid, .blog-grid, .portfolio-grid').forEach(grid => {
             [...grid.children].forEach((card, index) => {
                 if (card.matches('a, article, .service-card, .pricing-card, .group, .county-card, .county-highlight-card')) {

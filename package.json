@@ -6,8 +6,9 @@
   "scripts": {
     "start": "python3 scripts/server.py 8000 || python -m http.server 8000 || npx http-server",
     "build": "npm run build:css",
-    "test": "echo 'Add tests when needed'",
-    "build:css": "tailwindcss -c tailwind.config.cjs -i css/tailwind-input.css -o css/utilities.css --minify"
+    "test": "npm run test:content",
+    "build:css": "tailwindcss -c tailwind.config.cjs -i css/tailwind-input.css -o css/utilities.css --minify",
+    "test:content": "python3 scripts/check_site_quality.py"
   },
   "keywords": [
     "web design",
@@ -38,5 +39,8 @@
   ],
   "devDependencies": {
     "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "web-vitals": "4.2.4"
   }
 }
