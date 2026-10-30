@@ -8,23 +8,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobile-menu');
     const navbar = document.getElementById('navbar');
     
-    // Mobile Menu Toggle
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
+    // Animate the mobile drawer while keeping its state accessible.
+    let menuAnimation;
+    function setMenu(open) {
+        if (!mobileMenu) return;
+        menuAnimation?.cancel();
+        mobileMenuBtn?.setAttribute('aria-expanded', String(open));
+        mobileMenu.inert = !open;
+        const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (open) mobileMenu.classList.remove('hidden');
+        if (!reduced && mobileMenu.animate) {
+            menuAnimation = mobileMenu.animate(
+                open ? { opacity: [0, 1], translate: ['0 -8px', '0 0'] } : { opacity: [1, 0], translate: ['0 0', '0 -8px'] },
+                { duration: 180, easing: 'ease-out' }
+            );
+            menuAnimation.onfinish = () => { mobileMenu.classList.toggle('hidden', !open); menuAnimation = null; };
+        } else mobileMenu.classList.toggle('hidden', !open);
+    }
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
+        mobileMenu.inert = mobileMenu.classList.contains('hidden');
+        mobileMenuBtn.addEventListener('click', () => setMenu(mobileMenuBtn.getAttribute('aria-expanded') !== 'true'));
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && mobileMenuBtn.getAttribute('aria-expanded') === 'true') {
+                setMenu(false); mobileMenuBtn.focus();
+            }
         });
     }
-    
-    // Close mobile menu when a link is clicked
-    const mobileMenuLinks = mobileMenu?.querySelectorAll('a');
-    if (mobileMenuLinks) {
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    }
-    
+
     // Sticky Navigation - Add shadow on scroll
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
@@ -37,11 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (!href || href === '#') return;
+            let target;
+            try { target = document.getElementById(decodeURIComponent(href.slice(1))); } catch { return; }
+            if (!target) return;
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({
-                    behavior: 'smooth',
+                    behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
                     block: 'start'
                 });
             }

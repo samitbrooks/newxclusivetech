@@ -7534,3 +7534,44 @@ svg.w-5, .w-5 { width: 20px !important; }
 svg.h-5, .h-5 { height: 20px !important; }
 svg.w-6, .w-6 { width: 24px !important; }
 svg.h-6, .h-6 { height: 24px !important; }
+
+/* Shared site motion. Elements remain visible until JS opts them in. */
+.xt-reveal { opacity: 0; translate: 0 16px; transition: opacity 550ms ease var(--xt-stagger, 0ms), translate 550ms cubic-bezier(.2,.7,.2,1) var(--xt-stagger, 0ms); animation: none !important; }
+.xt-reveal.xt-revealed { opacity: 1; translate: 0 0; }
+.xt-link { text-decoration-color: transparent; text-underline-offset: 5px; transition: color 180ms ease, text-decoration-color 180ms ease; }
+.xt-link:not(.nav-link) { background-image: linear-gradient(90deg, #16c8a2, #6545ff); background-size: 0% 2px; background-position: left bottom; background-repeat: no-repeat; transition: background-size 220ms ease, color 180ms ease; }
+.xt-link:not(.nav-link):hover, .xt-link:not(.nav-link):focus-visible { background-size: 100% 2px; }
+.nav-link::after { background: linear-gradient(90deg, #16c8a2, #6545ff); transform-origin: left; transition: transform 220ms ease, width 220ms ease, opacity 220ms ease; }
+.xt-button { transition: translate 180ms ease, box-shadow 180ms ease, background-color 180ms ease; }
+.xt-button:focus-visible, .xt-faq-toggle:focus-visible { outline: 3px solid #16c8a2; outline-offset: 4px; }
+.xt-icon, .xt-service-icon { transition: translate 180ms ease, rotate 180ms ease; }
+.xt-preview { transition: scale 450ms ease; }
+.site-header, #navbar { transition: box-shadow 220ms ease, background-color 220ms ease; }
+.site-header .nav-row, #navbar .nav-row { transition: height 220ms ease; }
+.xt-scrolled { box-shadow: 0 8px 24px rgb(12 18 35 / 18%); }
+.xt-scrolled .nav-row { height: 4.25rem; }
+.xt-reading-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #16c8a2, #6545ff); transform: scaleX(0); transform-origin: left; z-index: 1000; pointer-events: none; }
+.xt-ambient { position: relative; isolation: isolate; }
+.xt-ambient-layer { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; border-radius: inherit; background: radial-gradient(ellipse at 20% 30%, rgb(22 200 162 / 10%), transparent 55%), radial-gradient(ellipse at 80% 70%, rgb(101 69 255 / 12%), transparent 55%); background-size: 160% 160%; animation: xt-gradient-drift 18s ease-in-out infinite alternate; }
+@keyframes xt-gradient-drift { from { background-position: 0% 20%; } to { background-position: 100% 80%; } }
+.xt-motion-paused .xt-ambient-layer { animation-play-state: paused; }
+.xt-faq-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; text-align: left; font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.xt-faq-toggle:hover { transform: none; box-shadow: none; }
+.xt-faq-plus { flex: none; font-size: 1.5rem; font-weight: 400; transition: rotate 220ms ease; }
+.xt-faq-toggle[aria-expanded="true"] .xt-faq-plus { rotate: 45deg; }
+.xt-faq-panel { display: grid; grid-template-rows: 0fr; opacity: 0; visibility: hidden; transition: grid-template-rows 240ms ease, opacity 200ms ease, visibility 240ms; }
+.xt-faq-panel.xt-open { grid-template-rows: 1fr; opacity: 1; visibility: visible; }
+.xt-faq-inner { min-height: 0; overflow: hidden; }
+.xt-faq-inner .faq-answer { margin-top: 1rem; }
+@media (hover: hover) and (pointer: fine) {
+    .xt-button:hover { translate: 0 -2px; box-shadow: 0 8px 24px rgb(101 69 255 / 20%); }
+    .xt-button:hover .xt-icon { translate: 3px 0; }
+    .service-card:hover .xt-service-icon, .services-card:hover .xt-service-icon { rotate: -6deg; }
+    .xt-image-frame:hover .xt-preview { scale: 1.025; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; transition-delay: 0ms !important; scroll-behavior: auto !important; }
+    .xt-reveal { opacity: 1 !important; translate: none !important; }
+    .xt-ambient-layer { animation: none !important; }
+    .xt-button:hover, .xt-button:hover .xt-icon, .xt-image-frame:hover .xt-preview { translate: none; scale: none; }
+}
