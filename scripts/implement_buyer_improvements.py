@@ -55,6 +55,7 @@ def build():
  title='Website Project Guide: Costs, Process & Support | Xclusive Tech';description='Plan your website with clear package scopes, first-year costs, delivery steps, support, ownership and answers to common buying questions.'
  head=re.sub(r'<script type="application/ld\+json">[\s\S]*?</script>','',head)
  head=re.sub(r'<title>[\s\S]*?</title>',f'<title>{title}</title>',head)
+ head=re.sub(r'(<meta name="keywords" content=")[^"]*',lambda m:m[1]+'website project planning, website ownership costs, website delivery process, website support Kenya',head)
  head=re.sub(r'(<meta (?:name|property)="(?:description|og:description|twitter:description)" content=")[^"]*',lambda m:m[1]+description,head)
  head=re.sub(r'(<meta (?:property|name)="(?:og:title|twitter:title)" content=")[^"]*',lambda m:m[1]+title,head)
  head=head.replace('https://www.xclusivetech.co.ke/pricing','https://www.xclusivetech.co.ke/project-guide')
