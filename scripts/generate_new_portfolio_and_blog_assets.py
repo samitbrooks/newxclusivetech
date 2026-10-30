@@ -2,12 +2,11 @@
 """
 generate_new_portfolio_and_blog_assets.py
 Generates optimized 800x500 portfolio cards (PNG & WebP) and 1200x630 blog case study
-browser mockup covers (JPG & WebP) for the 5 new portfolio websites:
+browser mockup covers (JPG & WebP) for the 4 new portfolio websites:
 1. PataMaps (patamaps.com)
 2. SAN Group Limited (sangrouplimited.com)
 3. Irene Muendo Isuzu (irenemuendoisuzu.co.ke)
-4. Creative Kigen (creativekigen.com)
-5. Elite Designs Kenya (elitedesigns.co.ke)
+4. Elite Designs Kenya (elitedesigns.co.ke)
 """
 
 import os
@@ -39,13 +38,6 @@ PROJECTS = [
         "domain": "irenemuendoisuzu.co.ke",
         "src": "/tmp/live_irenemuendoisuzu.png",
         "blog_slug": "case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi",
-        "crop_top": 0
-    },
-    {
-        "id": "creativekigen",
-        "domain": "creativekigen.com",
-        "src": "/tmp/live_creativekigen.png",
-        "blog_slug": "case-study-how-we-built-creative-kigen-design-portfolio-website",
         "crop_top": 0
     },
     {
@@ -179,5 +171,5 @@ if __name__ == "__main__":
     for item in PROJECTS:
         make_portfolio_thumb(item)
         make_blog_mockup(item)
-    print("\n✅ All 5 portfolio and blog visuals successfully generated!")
+    print("\n✅ All 4 portfolio and blog visuals successfully generated!")
 

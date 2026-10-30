@@ -53,21 +53,6 @@ const newCaseStudyCards = `
                     <span class="text-sm font-semibold text-red-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read case study &rarr;</span>
                 </a>
 
-                <!-- Case Study: Creative Kigen -->
-                <a href="/blog/case-study-how-we-built-creative-kigen-design-portfolio-website" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-600 transition-all duration-300 flex flex-col group relative">
-                    <span class="absolute top-4 right-4 bg-purple-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">Client Case Study</span>
-                    <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-slate-200">
-                        <picture>
-                            <source srcset="../assets/images/blog/case-study-how-we-built-creative-kigen-design-portfolio-website.webp" type="image/webp">
-                            <img src="../assets/images/blog/case-study-how-we-built-creative-kigen-design-portfolio-website.jpg" alt="Creative Kigen brand identity design portfolio screenshot" width="600" height="315" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='/assets/images/blog/case-study-how-we-built-creative-kigen-design-portfolio-website.jpg';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        </picture>
-                    </div>
-                    <span class="text-xs uppercase tracking-widest text-purple-600 font-semibold mb-2">Design Studio &amp; Visual Identity</span>
-                    <h2 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">How We Built Creative Kigen: Crafting an Ultra-Fast Brand Identity &amp; Motion Design Portfolio Website</h2>
-                    <p class="text-gray-600 text-sm flex-grow">Engineering an immersive visual design portfolio: lazy-loaded WebP brand case studies, motion showcase frames, sub-second load times, and frictionless client booking channels.</p>
-                    <span class="text-sm font-semibold text-purple-600 mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read case study &rarr;</span>
-                </a>
-
                 <!-- Case Study: Elite Designs Kenya -->
                 <a href="/blog/case-study-how-we-built-elite-designs-corporate-branding-website" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-600 transition-all duration-300 flex flex-col group relative">
                     <span class="absolute top-4 right-4 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">Client Case Study</span>
@@ -114,13 +99,6 @@ const newSitemapEntries = `
 
     <url>
         <loc>https://www.xclusivetech.co.ke/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi</loc>
-        <lastmod>2026-10-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.85</priority>
-    </url>
-
-    <url>
-        <loc>https://www.xclusivetech.co.ke/blog/case-study-how-we-built-creative-kigen-design-portfolio-website</loc>
         <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>

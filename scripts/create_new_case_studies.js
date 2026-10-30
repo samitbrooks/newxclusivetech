@@ -204,73 +204,6 @@ const CASE_STUDIES = [
     ]
   },
   {
-    filename: 'case-study-how-we-built-creative-kigen-design-portfolio-website.html',
-    slug: 'case-study-how-we-built-creative-kigen-design-portfolio-website',
-    badge: '🎨 Brand Strategy & Visual Direction Portfolio',
-    accentColor: 'purple',
-    title: 'How We Built Creative Kigen: Engineering a Minimalist, High-Retention Portfolio for Nairobi\'s Top Visual Designer',
-    metaTitle: 'How We Built Creative Kigen: Graphic Design Portfolio Case Study | Xclusive Tech',
-    metaDesc: 'Case study by Samuel Kidemi on designing and engineering Creative Kigen\'s minimalist visual identity portfolio: responsive galleries, fluid filtering, and direct project booking.',
-    keywords: 'Creative Kigen case study, graphic designer website Nairobi, creative portfolio web design Kenya, minimalist web design Kenya, brand identity studio website Nairobi',
-    date: '2026-10-29',
-    readTime: '5 min read',
-    domain: 'creativekigen.com',
-    liveUrl: 'https://creativekigen.com',
-    imageAlt: 'Creative Kigen graphic design and visual identity portfolio screenshot',
-    summaryNiche: 'Brand Identity & Visual Direction',
-    summarySLA: '10 Days Turnaround',
-    summaryPayment: 'Creative Portfolio Package',
-    introHeadline: 'When a visual designer\'s work is world-class, the website must get completely out of the way and let the typography and imagery command the room.',
-    introText: '<strong>Creative Kigen</strong> is one of Kenya\'s most distinguished graphic designers and brand identity specialists, crafting visual direction, packaging, and corporate identities for top brands across Nairobi and the diaspora. His previous portfolio suffered from template bloat, slow image rendering, and clunky mobile previews. He engaged <strong>Xclusive Tech</strong> to engineer a clean, high-speed digital gallery that commands international respect.',
-    section1Title: '1. The Creative Portfolio Challenge: Zero Clutter, Pure Visual Punch',
-    section1Content: `
-      <p>Designing a portfolio for a design director requires extreme restraint and technical precision:</p>
-      <ul class="list-disc pl-6 space-y-2">
-        <li><strong>Image Fidelity vs. Mobile Speed:</strong> High-resolution vector logos, packaging renders, and editorial layouts must display with razor-sharp fidelity without sluggish load times.</li>
-        <li><strong>Frictionless Category Navigation:</strong> Clients scouting for corporate rebranding, social direction, or packaging need instant categorical filtering without full page reloads.</li>
-        <li><strong>Direct Commercial Action:</strong> Art directors and business founders need an immediate, frictionless path to submit project briefs or book a creative discovery call.</li>
-      </ul>
-    `,
-    section2Title: '2. The Engineering Strategy: How We Architected Creative Kigen',
-    section2Intro: 'We engineered <a href="https://creativekigen.com" target="_blank" rel="noopener noreferrer" class="text-purple-600 font-semibold underline">creativekigen.com</a> with a modern aesthetic, custom typography, and lightning-fast WebP rendering:',
-    features: [
-      {
-        title: 'A. Next-Gen Responsive Image Pipeline',
-        desc: 'Implemented modern WebP compression and responsive srcset attributes, delivering ultra-crisp visual assets that load in sub-1.1s even on mobile smartphones.'
-      },
-      {
-        title: 'B. Fluid In-Memory Category Filter Bar',
-        desc: 'Instant category toggling (Logo Design, Brand Identity, Packaging, Social Media Strategy, Digital Menus) with zero reload lag, maintaining an uninterrupted visual browsing rhythm.'
-      },
-      {
-        title: 'C. Minimalist WhatsApp Project Scoping Workflow',
-        desc: 'Integrated a direct creative brief trigger that pre-populates the client\'s desired design package and budget range into a direct WhatsApp message, doubling inbound conversion.'
-      }
-    ],
-    results: [
-      { metric: '3.2x', label: 'Increase in High-Ticket Corporate Identity Bookings' },
-      { metric: '3m 42s', label: 'Average Client Session Duration' },
-      { metric: '1.1s', label: 'Load Time for High-Res Visual Galleries' },
-      { metric: '65%', label: 'Of Inquiries Originating from Mobile Smartphones' }
-    ],
-    quote: '"Xclusive Tech gave my work the digital framing it deserved. The website is clean, fast, and effortlessly closes high-value corporate clients who appreciate world-class aesthetics."',
-    quoteAuthor: 'Creative Kigen, Lead Visual Designer',
-    faqs: [
-      {
-        q: 'Why should creative agencies and designers avoid heavy CMS portfolio templates?',
-        a: 'Heavy templates bundle hundreds of unused plugins and scripts that slow down image loading. A lightweight, custom-coded portfolio ensures high-resolution design renders load instantaneously without lag.'
-      },
-      {
-        q: 'How does high mobile speed impact creative portfolio conversions in Kenya?',
-        a: 'Over 70% of creative briefs and design inquiries in Kenya originate on mobile smartphones via Instagram and LinkedIn. If your portfolio takes 4 seconds to load images, art directors and founders bounce immediately.'
-      },
-      {
-        q: 'What is the pricing for a custom creative portfolio website in Kenya?',
-        a: 'Custom design and creative portfolio websites at Xclusive Tech range from KES 25,000 to KES 45,000, including responsive image pipelines, filterable galleries, and direct WhatsApp lead capture.'
-      }
-    ]
-  },
-  {
     filename: 'case-study-how-we-built-elite-designs-corporate-branding-website.html',
     slug: 'case-study-how-we-built-elite-designs-corporate-branding-website',
     badge: '💼 Corporate Brand Identity & Digital Solutions',
@@ -767,7 +700,6 @@ function generateHtml(cs) {
                     <li><a href="/blog/case-study-how-we-built-patamaps-accessible-special-needs-directory-kenya" class="hover:text-white transition">PataMaps Directory</a></li>
                     <li><a href="/blog/case-study-how-we-built-san-group-limited-civil-engineering-infrastructure-portal" class="hover:text-white transition">SAN Group Limited</a></li>
                     <li><a href="/blog/case-study-how-we-built-irene-muendo-isuzu-dealership-website-nairobi" class="hover:text-white transition">Irene Muendo Isuzu</a></li>
-                    <li><a href="/blog/case-study-how-we-built-creative-kigen-design-portfolio-website" class="hover:text-white transition">Creative Kigen Studio</a></li>
                     <li><a href="/blog/case-study-how-we-built-elite-designs-corporate-branding-website" class="hover:text-white transition">Elite Designs Kenya</a></li>
                     <li><a href="/blog/case-study-how-i-built-batteriq-automotive-battery-delivery-kenya" class="hover:text-white transition">Batteriq Nairobi</a></li>
                 </ul>

@@ -292,7 +292,7 @@ Install `playwright` and `Pillow` in a Python virtual environment, then run:
 ```sh
 python scripts/capture_portfolio_screenshots.py
 # Refresh selected cards, with a longer settling delay:
-python scripts/capture_portfolio_screenshots.py --only elitedesigns creativekigen --delay 8
+python scripts/capture_portfolio_screenshots.py --only elitedesigns patamaps --delay 8
 ```
 
 The capture script reads the cards in `portfolio.html`, captures each domain once,
