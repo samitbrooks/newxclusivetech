@@ -1,8 +1,8 @@
 const fs = require('fs');
+const excludedUrls = new Set(JSON.parse(fs.readFileSync('assets/data/portfolio-excluded.json', 'utf8')).projects.map(project => project.url));
 let html = fs.readFileSync('portfolio.html', 'utf8');
 
-// 1. Update stats counter
-html = html.replace('data-target="61"', 'data-target="66"');
+// Featured project count is updated from the rendered cards below.
 
 // 2. Insert PataMaps in Healthcare, Wellness & Medical Education
 const hcTarget = `<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4 leading-tight">Healthcare, Wellness & Medical Education</h2>
@@ -11,7 +11,7 @@ const hcTarget = `<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 m
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">`;
 
 const patamapsCard = `
-                <a href="https://patamaps.com" target="_blank" rel="noopener noreferrer" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-emerald-500 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden">
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-emerald-500 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden">
                     <div class="relative overflow-hidden aspect-[16/10] bg-slate-50 border-b border-slate-200">
                         <div class="absolute top-0 inset-x-0 h-7 bg-slate-100/95 backdrop-blur flex items-center gap-1.5 px-3 z-10 border-b border-slate-200">
                             <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
@@ -27,7 +27,7 @@ const patamapsCard = `
                     <div class="p-6 space-y-2 bg-white flex-grow flex flex-col justify-between">
                         <div>
                             <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-emerald-50 text-emerald-700 border border-emerald-200/80 mb-1.5">Accessibility &amp; Healthcare</span>
-                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-emerald-600 transition-colors leading-snug">PataMaps</h3>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-emerald-600 transition-colors leading-snug"><a href="https://patamaps.com" target="_blank" rel="noopener noreferrer">PataMaps</a></h3>
                             <p class="text-sm text-gray-600 font-medium">Special Needs, Disability &amp; Therapy Directory</p>
                             <p class="text-xs text-slate-500 leading-relaxed pt-1.5"><strong class="text-slate-700">Problem &amp; Solution:</strong> Kenya's first WCAG 2.2 AA compliant directory connecting caregivers with verified occupational therapy, speech pathology, autism clinics, and NCPWD services with county geo-filtering.</p>
                             <div class="flex flex-wrap gap-1.5 pt-2">
@@ -43,9 +43,13 @@ const patamapsCard = `
                             <p class="text-xs font-mono font-semibold text-slate-600 group-hover:text-emerald-600 transition-colors flex items-center gap-1">patamaps.com <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&nearr;</span></p>
                         </div>
                     </div>
-                </a>`;
+                </div>`;
 
-if (!html.includes(hcTarget)) {
+if (excludedUrls.has('https://patamaps.com')) {
+  console.log("Excluded unavailable project: https://patamaps.com");
+} else if (html.includes('href="https://patamaps.com"')) {
+  console.log("Project already exists: https://patamaps.com");
+} else if (!html.includes(hcTarget)) {
   console.error("Healthcare target not found!");
 } else {
   html = html.replace(hcTarget, hcTarget + patamapsCard);
@@ -59,7 +63,7 @@ const energyTarget = `<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">`;
 
 const sanCard = `
-                <a href="https://sangrouplimited.com" target="_blank" rel="noopener noreferrer" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-amber-500 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden">
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-amber-500 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden">
                     <div class="relative overflow-hidden aspect-[16/10] bg-slate-50 border-b border-slate-200">
                         <div class="absolute top-0 inset-x-0 h-7 bg-slate-100/95 backdrop-blur flex items-center gap-1.5 px-3 z-10 border-b border-slate-200">
                             <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
@@ -75,7 +79,7 @@ const sanCard = `
                     <div class="p-6 space-y-2 bg-white flex-grow flex flex-col justify-between">
                         <div>
                             <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-amber-50 text-amber-700 border border-amber-200/80 mb-1.5">Civil Engineering &amp; Infrastructure</span>
-                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-amber-600 transition-colors leading-snug">SAN Group Limited</h3>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-amber-600 transition-colors leading-snug"><a href="https://sangrouplimited.com" target="_blank" rel="noopener noreferrer">SAN Group Limited</a></h3>
                             <p class="text-sm text-gray-600 font-medium">Infrastructure, Civil Works &amp; Heavy Equipment</p>
                             <p class="text-xs text-slate-500 leading-relaxed pt-1.5"><strong class="text-slate-700">Problem &amp; Solution:</strong> Multi-tier corporate holding portal for SAN Engineering &amp; Construction (SEC), showcasing cross-border roadworks, WASH systems, and heavy machinery chartering for public and private tenders.</p>
                             <div class="flex flex-wrap gap-1.5 pt-2">
@@ -91,9 +95,13 @@ const sanCard = `
                             <p class="text-xs font-mono font-semibold text-slate-600 group-hover:text-amber-600 transition-colors flex items-center gap-1">sangrouplimited.com <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&nearr;</span></p>
                         </div>
                     </div>
-                </a>`;
+                </div>`;
 
-if (!html.includes(energyTarget)) {
+if (excludedUrls.has('https://sangrouplimited.com')) {
+  console.log("Excluded unavailable project: https://sangrouplimited.com");
+} else if (html.includes('href="https://sangrouplimited.com"')) {
+  console.log("Project already exists: https://sangrouplimited.com");
+} else if (!html.includes(energyTarget)) {
   console.error("Energy target not found!");
 } else {
   html = html.replace(energyTarget, energyTarget + sanCard);
@@ -107,7 +115,7 @@ const autoTarget = `<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">`;
 
 const isuzuCard = `
-                <a href="https://irenemuendoisuzu.co.ke" target="_blank" rel="noopener noreferrer" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-red-500 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden">
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-red-500 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden">
                     <div class="relative overflow-hidden aspect-[16/10] bg-slate-50 border-b border-slate-200">
                         <div class="absolute top-0 inset-x-0 h-7 bg-slate-100/95 backdrop-blur flex items-center gap-1.5 px-3 z-10 border-b border-slate-200">
                             <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
@@ -123,7 +131,7 @@ const isuzuCard = `
                     <div class="p-6 space-y-2 bg-white flex-grow flex flex-col justify-between">
                         <div>
                             <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-red-50 text-red-700 border border-red-200/80 mb-1.5">Automotive Dealership</span>
-                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-red-600 transition-colors leading-snug">Irene Muendo Isuzu</h3>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-red-600 transition-colors leading-snug"><a href="https://irenemuendoisuzu.co.ke" target="_blank" rel="noopener noreferrer">Irene Muendo Isuzu</a></h3>
                             <p class="text-sm text-gray-600 font-medium">Commercial Trucks, Pickups &amp; Asset Finance</p>
                             <p class="text-xs text-slate-500 leading-relaxed pt-1.5"><strong class="text-slate-700">Problem &amp; Solution:</strong> Digital showroom for an authorized Isuzu sales consultant, featuring interactive N-Series, F-Series, and D-Max models, 95% bank asset finance calculator, and instant VIP WhatsApp routing.</p>
                             <div class="flex flex-wrap gap-1.5 pt-2">
@@ -139,9 +147,13 @@ const isuzuCard = `
                             <p class="text-xs font-mono font-semibold text-slate-600 group-hover:text-red-600 transition-colors flex items-center gap-1">irenemuendoisuzu.co.ke <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&nearr;</span></p>
                         </div>
                     </div>
-                </a>`;
+                </div>`;
 
-if (!html.includes(autoTarget)) {
+if (excludedUrls.has('https://irenemuendoisuzu.co.ke')) {
+  console.log("Excluded unavailable project: https://irenemuendoisuzu.co.ke");
+} else if (html.includes('href="https://irenemuendoisuzu.co.ke"')) {
+  console.log("Project already exists: https://irenemuendoisuzu.co.ke");
+} else if (!html.includes(autoTarget)) {
   console.error("Automotive target not found!");
 } else {
   html = html.replace(autoTarget, autoTarget + isuzuCard);
@@ -155,7 +167,7 @@ const retailTarget = `<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">`;
 
 const kigenCard = `
-                <a href="https://creativekigen.com" target="_blank" rel="noopener noreferrer" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-purple-500 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden">
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-purple-500 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden">
                     <div class="relative overflow-hidden aspect-[16/10] bg-slate-50 border-b border-slate-200">
                         <div class="absolute top-0 inset-x-0 h-7 bg-slate-100/95 backdrop-blur flex items-center gap-1.5 px-3 z-10 border-b border-slate-200">
                             <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
@@ -171,7 +183,7 @@ const kigenCard = `
                     <div class="p-6 space-y-2 bg-white flex-grow flex flex-col justify-between">
                         <div>
                             <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-purple-50 text-purple-700 border border-purple-200/80 mb-1.5">Creative &amp; Brand Identity</span>
-                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-purple-600 transition-colors leading-snug">Creative Kigen</h3>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-purple-600 transition-colors leading-snug"><a href="https://creativekigen.com" target="_blank" rel="noopener noreferrer">Creative Kigen</a></h3>
                             <p class="text-sm text-gray-600 font-medium">Brand Identity, Visual Systems &amp; Direction</p>
                             <p class="text-xs text-slate-500 leading-relaxed pt-1.5"><strong class="text-slate-700">Problem &amp; Solution:</strong> High-impact minimalist portfolio for Kenya's leading graphic designer and visual director; dynamic layout with fluid gallery filtering and instant direct creative brief booking.</p>
                             <div class="flex flex-wrap gap-1.5 pt-2">
@@ -187,9 +199,13 @@ const kigenCard = `
                             <p class="text-xs font-mono font-semibold text-slate-600 group-hover:text-purple-600 transition-colors flex items-center gap-1">creativekigen.com <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&nearr;</span></p>
                         </div>
                     </div>
-                </a>`;
+                </div>`;
 
-if (!html.includes(retailTarget)) {
+if (excludedUrls.has('https://creativekigen.com')) {
+  console.log("Excluded unavailable project: https://creativekigen.com");
+} else if (html.includes('href="https://creativekigen.com"')) {
+  console.log("Project already exists: https://creativekigen.com");
+} else if (!html.includes(retailTarget)) {
   console.error("Retail target not found!");
 } else {
   html = html.replace(retailTarget, retailTarget + kigenCard);
@@ -203,7 +219,7 @@ const profTarget = `<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">`;
 
 const eliteCard = `
-                <a href="https://elitedesigns.co.ke" target="_blank" rel="noopener noreferrer" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-blue-500 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden">
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-blue-500 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden">
                     <div class="relative overflow-hidden aspect-[16/10] bg-slate-50 border-b border-slate-200">
                         <div class="absolute top-0 inset-x-0 h-7 bg-slate-100/95 backdrop-blur flex items-center gap-1.5 px-3 z-10 border-b border-slate-200">
                             <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
@@ -219,7 +235,7 @@ const eliteCard = `
                     <div class="p-6 space-y-2 bg-white flex-grow flex flex-col justify-between">
                         <div>
                             <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-blue-50 text-blue-700 border border-blue-200/80 mb-1.5">Branding &amp; Digital Solutions</span>
-                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug">Elite Designs Kenya</h3>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug"><a href="https://elitedesigns.co.ke" target="_blank" rel="noopener noreferrer">Elite Designs Kenya</a></h3>
                             <p class="text-sm text-gray-600 font-medium">Corporate Brand Identity &amp; Digital Collateral</p>
                             <p class="text-xs text-slate-500 leading-relaxed pt-1.5"><strong class="text-slate-700">Problem &amp; Solution:</strong> Agency presentation platform for corporate branding and design packages in Nairobi, featuring interactive service tier selector, vector brand asset downloads, and instant project scoping.</p>
                             <div class="flex flex-wrap gap-1.5 pt-2">
@@ -235,15 +251,22 @@ const eliteCard = `
                             <p class="text-xs font-mono font-semibold text-slate-600 group-hover:text-blue-600 transition-colors flex items-center gap-1">elitedesigns.co.ke <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&nearr;</span></p>
                         </div>
                     </div>
-                </a>`;
+                </div>`;
 
-if (!html.includes(profTarget)) {
+if (excludedUrls.has('https://elitedesigns.co.ke')) {
+  console.log("Excluded unavailable project: https://elitedesigns.co.ke");
+} else if (html.includes('href="https://elitedesigns.co.ke"')) {
+  console.log("Project already exists: https://elitedesigns.co.ke");
+} else if (!html.includes(profTarget)) {
   console.error("Professional target not found!");
 } else {
   html = html.replace(profTarget, profTarget + eliteCard);
   console.log("Inserted Elite Designs into Professional section");
 }
 
-fs.writeFileSync('portfolio.html', html, 'utf8');
+const cardCount = (html.match(/class="[^"]*group overflow-hidden[^"]*"/g) || []).length;
+html = html.replace(/data-target="\d+"(?=>0<\/span><\/p>\s*<p[^>]*>Featured Projects)/, `data-target="${cardCount}"`);
+
+fs.writeFileSync('portfolio.html' , html, 'utf8');
 console.log('portfolio.html updated successfully!');
 

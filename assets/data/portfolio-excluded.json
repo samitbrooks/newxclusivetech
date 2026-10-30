@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "slug": "belioras",
+      "url": "https://belioras.com",
+      "reason": "Coming soon page"
+    },
+    {
+      "slug": "elitecapitalfx",
+      "url": "https://elitecapital-mining.com",
+      "reason": "HTTP 523"
+    },
+    {
+      "slug": "greenhuntenergy",
+      "url": "https://greenhuntenergy.co.ke",
+      "reason": "Domain did not resolve"
+    },
+    {
+      "slug": "irenemuendoisuzu",
+      "url": "https://irenemuendoisuzu.co.ke",
+      "reason": "Domain did not resolve"
+    }
+  ]
+}

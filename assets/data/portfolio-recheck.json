@@ -1,0 +1,45 @@
+{
+  "note": "Automated-browser security checks do not establish public site downtime. Previous previews retained where capture was blocked.",
+  "restored": [
+    {
+      "slug": "traininkenya",
+      "url": "https://traininkenya.co.ke"
+    },
+    {
+      "slug": "difrontealmare",
+      "url": "https://difrontealmare.com"
+    },
+    {
+      "slug": "transformationarkhub",
+      "url": "https://transformationarkhub.co.ke"
+    },
+    {
+      "slug": "kishkidsbabyshop",
+      "url": "https://kishkidsbabyshop.co.ke/new/"
+    },
+    {
+      "slug": "onzetrends",
+      "url": "https://onzetrends.co.ke"
+    },
+    {
+      "slug": "billanbeauty",
+      "url": "https://billanbeauty.co.uk"
+    },
+    {
+      "slug": "visionarypharmacists",
+      "url": "https://visionaries.co.ke"
+    },
+    {
+      "slug": "ghsd",
+      "url": "https://globalhealthandsustainabledevelopment.com"
+    },
+    {
+      "slug": "suhad",
+      "url": "https://suhadsom.org"
+    },
+    {
+      "slug": "stalwartskhs2017",
+      "url": "https://stalwarts.co.ke"
+    }
+  ]
+}

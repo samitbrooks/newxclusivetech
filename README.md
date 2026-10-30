@@ -284,3 +284,20 @@ This project is proprietary to Xclusivetech. All rights reserved.
 **Version:** 1.0.0
 
 Built with ❤️ by Xclusivetech
+
+## Refresh portfolio previews
+
+Install `playwright` and `Pillow` in a Python virtual environment, then run:
+
+```sh
+python scripts/capture_portfolio_screenshots.py
+# Refresh selected cards, with a longer settling delay:
+python scripts/capture_portfolio_screenshots.py --only elitedesigns creativekigen --delay 8
+```
+
+The capture script reads the cards in `portfolio.html`, captures each domain once,
+waits for page load, fonts and visible images, then waits another five seconds.
+It writes matching 800×500 PNG and WebP previews. It uses installed Google Chrome
+on macOS; otherwise install Chromium with `playwright install chromium`.
+Failed loads, blank pages and detected security challenges leave existing images
+untouched. Failures are printed and cause a nonzero exit code.
