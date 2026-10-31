@@ -237,10 +237,12 @@ class XclusiveTech {
     // Show success message if redirected after native submit
     static checkQueryParams() {
         const params = this.getQueryParams();
-        if (params.success === 'true') {
+        if (params.success === 'true' && /^XT-\d{8}-[A-F0-9]{12}$/.test(params.reference || '')) {
             const contactForm = document.getElementById('contact-form');
             if (contactForm) {
                 this.showSuccessMessage(contactForm);
+                const message = contactForm.querySelector('#success-message');
+                if (message) message.textContent = `Your enquiry is saved. Reference: ${params.reference}. For immediate help, call +254 722 753 819 or use WhatsApp.`;
                 contactForm.reset();
             }
         }
@@ -561,20 +563,7 @@ class XclusiveTech {
                     };
 
                     try {
-                        const providerResponse = await fetch('https://formsubmit.co/ajax/hello@xclusivetech.co.ke', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'Accept': 'application/json'
-                            },
-                            body: JSON.stringify(payload)
-                        });
-
-                        const providerResult = await providerResponse.json();
-                        if (!providerResponse.ok || ![true, 'true'].includes(providerResult.success)) {
-                            throw new Error('The enquiry service did not accept this submission.');
-                        }
-                        document.dispatchEvent(new CustomEvent('xt:lead-provider-accepted', { detail: { form_id: 'xt-exit-form' } }));
+                        const savedResult = await window.XTLeadAPI.submit(payload, 'xt-exit-form');
 
                         try {
                             if (window.localStorage) {
@@ -585,6 +574,7 @@ class XclusiveTech {
                         // Switch to Success State
                         exitForm.style.display = 'none';
                         successEl.style.display = 'flex';
+                        successEl.querySelector('.xt-success-desc').textContent = `Your enquiry is saved. Reference: ${savedResult.reference}. We will contact you using the details provided. For immediate help, use WhatsApp below.`;
 
                         // Pre-populate WhatsApp button link
                         const waBtn = successEl.querySelector('.xt-success-whatsapp-btn');

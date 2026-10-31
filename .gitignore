@@ -82,3 +82,8 @@ dist/
 *.key
 config.local.json
 secrets.json
+
+# Cloudflare local state and secrets
+.wrangler/
+.dev.vars
+.dev.vars.*

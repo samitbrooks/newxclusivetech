@@ -28,29 +28,8 @@ async def main():
   quote=page.locator('#county-quote-form');assert await quote.locator('[required]').count()==2
   assert await page.locator('body').evaluate('(e)=>e.scrollWidth<=innerWidth+1')
   await quote.locator('[name="name"]').fill('Local QA');await quote.locator('[name="phone"]').fill('0712345678')
-  await page.route('https://formsubmit.co/**',lambda route:route.fulfill(status=200,content_type='text/html',body='<p>Local interception only</p>'))
-  async with page.expect_request('https://formsubmit.co/**') as outgoing:await quote.locator('button').click()
-  sent=await outgoing.value;assert 'Bungoma' in sent.post_data
-  await page.goto(BASE+'contact?success=true',wait_until='domcontentloaded')
-  await page.wait_for_timeout(100)
-  assert await page.evaluate('dataLayer.some(e=>e.event==="lead_provider_return")')
-  await page.reload(wait_until='domcontentloaded')
-  assert not await page.evaluate('dataLayer.some(e=>e.event==="lead_provider_return")')
-  # Explicit negative and positive provider responses: do not send real enquiries.
+  # Submission failure/success and retry semantics are covered by test_cloudflare_forms.py.
   await page.set_viewport_size({'width':1440,'height':1000})
-  await page.goto(BASE+'contact',wait_until='domcontentloaded');await page.evaluate('window.openSmartExitIntent()')
-  await page.locator('#xt-exit-name').fill('Local QA');await page.locator('#xt-exit-phone').fill('0712345678')
-  terms=page.locator('#xt-exit-terms')
-  if await terms.count():await terms.check()
-  await page.route('https://formsubmit.co/ajax/**',lambda route:route.fulfill(status=500,content_type='application/json',body='{"success":false}'))
-  await page.locator('#xt-exit-submit-btn').click();await page.locator('#xt-exit-feedback').wait_for(state='visible')
-  assert not await page.locator('#xt-exit-success').is_visible()
-  assert await page.locator('#xt-exit-submit-btn').is_enabled()
-  assert not await page.evaluate('dataLayer.some(e=>e.event==="lead_provider_accepted")')
-  await page.unroute('https://formsubmit.co/ajax/**')
-  await page.route('https://formsubmit.co/ajax/**',lambda route:route.fulfill(status=200,content_type='application/json',body='{"success":"true"}'))
-  await page.locator('#xt-exit-submit-btn').click();await page.locator('#xt-exit-success').wait_for(state='visible')
-  assert await page.evaluate('dataLayer.filter(e=>e.event==="lead_provider_accepted").length')==1
   # A/B wiring is tested with a local analytics stub; no real property is invented.
   await page.route('**/js/measurement-config.js*',lambda route:route.fulfill(content_type='application/javascript',body='window.__qaEvents=[];window.gtag=(...args)=>__qaEvents.push(args);window.XT_MEASUREMENT_CONFIG={ga4MeasurementId:null,ctaExperimentEnabled:true,ctaExperimentId:"qa-county-label"};'))
   await page.goto(BASE+'locations/web-design-bungoma',wait_until='domcontentloaded')
@@ -70,6 +49,6 @@ async def main():
   assert '5–7 weeks' in await page.locator('#estimator-timeline').inner_text()
   assert '5–7 weeks' in __import__('urllib.parse',fromlist=['unquote']).unquote(await page.locator('#estimator-whatsapp-btn').get_attribute('href'))
   assert not errors,errors
-  print('PASS: budget arithmetic, buyer FAQs, mobile layout, two-field native quotes, matching/deduplicated provider returns, failed-submission retry, positive acknowledgement event, stable A/B variant with local stub, 61 responsive portfolio cards and simple PataMaps; no browser errors')
+  print('PASS: budget arithmetic, buyer FAQs, mobile layout, two-field native quotes, stable A/B variant with local stub, 61 responsive portfolio cards and simple PataMaps; no browser errors')
   await b.close()
 asyncio.run(main())

@@ -1,0 +1,14 @@
+{
+  "name": "xclusivetech-leads",
+  "main": "worker.mjs",
+  "account_id": "0fb6d6b945f1c4612a5d6e399d321049",
+  "compatibility_date": "2026-10-31",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{"pattern": "www.xclusivetech.co.ke/api/leads*", "zone_id": "906d91715012241838e573e9d7f6645c"}],
+  "d1_databases": [{"binding": "LEADS_DB", "database_name": "xclusivetech-leads", "database_id": "8455634a-4299-4c1c-89b2-564d3fa73103", "migrations_dir": "migrations"}],
+  "send_email": [{"name": "EMAIL", "allowed_sender_addresses": ["hello@xclusivetech.co.ke"]}],
+  "vars": {"SENDER_EMAIL": "hello@xclusivetech.co.ke", "ALLOWED_ORIGINS": "https://www.xclusivetech.co.ke,https://xclusivetech.co.ke"},
+  "triggers": {"crons": ["*/5 * * * *"]},
+  "observability": {"enabled": true, "traces": {"enabled": true, "head_sampling_rate": 0.01}}
+}

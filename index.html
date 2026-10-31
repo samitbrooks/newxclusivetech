@@ -436,6 +436,7 @@
                                 </a>
                                 <a href="/solutions" class="nav-dropdown-item">Solutions by Business Type</a>
                                 <a href="/solutions#industries" class="nav-dropdown-item">Industries We Serve</a>
+                                <a href="/printing" class="nav-dropdown-item">Printing &amp; Publications</a>
                                 <a href="/locations/" class="nav-dropdown-item font-semibold text-emerald-600 flex items-center justify-between">
                                     All 47 Counties Coverage
                                     <span class="text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-emerald-600 text-white">Kenya</span>
@@ -482,6 +483,7 @@
                         <a href="/frostwoodcrm" class="nav-mobile-sublink text-blue-600 font-bold bg-blue-50/50">Frostwood CRM (Flagship SaaS)</a>
                         <a href="/solutions" class="nav-mobile-sublink">Solutions by Business Type</a>
                         <a href="/solutions#industries" class="nav-mobile-sublink">Industries We Serve</a>
+                        <a href="/printing" class="nav-mobile-sublink">Printing &amp; Publications</a>
                         <a href="/solutions#saas" class="nav-mobile-sublink">SaaS &amp; Custom Platforms</a>
                     </div>
                 </details>
@@ -1685,9 +1687,9 @@
         <div class="newsletter-container">
             <h2 id="newsletter-heading" class="newsletter-title">Kenya Web Performance &amp; Commercial Insights</h2>
             <p class="newsletter-lead">Quarterly benchmarks on local hosting latency, M-Pesa API updates, and search indexation for Kenyan web applications. No promotional noise.</p>
-            <form action="https://formsubmit.co/hello@xclusivetech.co.ke" method="POST" class="newsletter-form">
-                <input type="hidden" name="_subject" value="Newsletter signup from Xclusive Tech website">
-                <input type="hidden" name="_captcha" value="false">
+            <form action="/api/leads" method="POST" class="newsletter-form" id="newsletter-form"><input type="hidden" name="form_id" value="newsletter-form">
+
+
                 <input type="text" name="_honey" class="honeypot-field" tabindex="-1" autocomplete="off">
                 <input type="email" name="email" placeholder="Enter corporate email" required class="newsletter-input" aria-label="Corporate email address">
                 <button type="submit" class="newsletter-submit">Subscribe</button>
@@ -1895,12 +1897,13 @@
         </a>
     </aside>
 
-    <script src="js/main.js?v=20261030buyer"></script>
+    <script src="/js/lead-api.js?v=20261031leads"></script>
+    <script src="js/main.js?v=20261031leads"></script>
     <script src="js/animations.js?v=20261030buyer"></script>
     <script src="js/navigation.js?v=20261030buyer"></script>
     <script src="/js/measurement-config.js?v=20261030buyer" defer></script>
     <script src="/js/vendor/web-vitals.iife.js?v=4.2.4" defer></script>
     <script src="/js/buyer-tools.js?v=20261030buyer" defer></script>
-    <script src="/js/lead-events.js?v=20261030buyer" defer></script>
+    <script src="/js/lead-events.js?v=20261031leads" defer></script>
 </body>
 </html>

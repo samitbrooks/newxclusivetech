@@ -44,8 +44,10 @@ def normalize_html(source):
  if 'js/animations.js' in source and 'js/lead-events.js' not in source:
   source=source.replace('</body>','    <script src="/js/lead-events.js?v=20261030seo" defer></script>\n</body>')
  if 'js/lead-events.js' in source and 'js/measurement-config.js' not in source:
-  source=source.replace('<script src="/js/lead-events.js', '<script src="/js/measurement-config.js?v=20261030buyer" defer></script>\n    <script src="/js/vendor/web-vitals.iife.js?v=4.2.4" defer></script>\n    <script src="/js/buyer-tools.js?v=20261030buyer" defer></script>\n    <script src="/js/lead-events.js',1)
- source=re.sub(r'(css/styles\.css|css/utilities\.css|js/animations\.js|js/navigation\.js|js/main\.js|js/lead-events\.js)(?:\?[^\"]*)?(?=")',r'\1?v=20261030buyer',source)
+  source=source.replace('<script src="/js/lead-events.js', '<script src="/js/measurement-config.js?v=20261031leads" defer></script>\n    <script src="/js/vendor/web-vitals.iife.js?v=4.2.4" defer></script>\n    <script src="/js/buyer-tools.js?v=20261031leads" defer></script>\n    <script src="/js/lead-events.js',1)
+ source=re.sub(r'(css/styles\.css|css/utilities\.css|js/animations\.js|js/navigation\.js|js/main\.js|js/lead-events\.js)(?:\?[^\"]*)?(?=")',r'\1?v=20261031leads',source)
+ if 'js/main.js' in source and 'js/lead-api.js' not in source:
+  source=re.sub(r'(<script\b[^>]*src="[^\"]*js/main.js)',r'<script src="/js/lead-api.js?v=20261031leads"></script>\n    \1',source,count=1)
  return re.sub(r'(?m)^[ \t]+$', '', source)
 
 if __name__=='__main__':

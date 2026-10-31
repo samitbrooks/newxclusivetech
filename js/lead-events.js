@@ -64,15 +64,15 @@
             try { sessionStorage.setItem('xt_last_quote_attempt', JSON.stringify(state)); } catch {}
             track('quote_form_attempt', { form_id: form.id, variant });
         });
-        document.addEventListener('xt:lead-provider-accepted', event => {
-            track('lead_provider_accepted', { form_id: event.detail?.form_id || 'xt-exit-form', variant });
+        document.addEventListener('xt:lead-saved', event => {
+            track('lead_saved', { form_id: event.detail?.form_id || 'xt-exit-form', variant });
             try { sessionStorage.removeItem('xt_last_quote_attempt'); } catch {}
         });
-        if (params.get('success') === 'true' && location.pathname.includes('contact')) {
+        if (params.get('success') === 'true' && /^XT-\d{8}-[A-F0-9]{12}$/.test(params.get('reference') || '') && location.pathname.includes('contact')) {
             try {
                 const state = JSON.parse(sessionStorage.getItem('xt_last_quote_attempt') || 'null');
                 if (state && Date.now() - state.timestamp < 30 * 60 * 1000) {
-                    track('lead_provider_return', { form_id: state.form_id, variant: state.variant });
+                    track('lead_saved_return', { form_id: state.form_id, variant: state.variant });
                     sessionStorage.removeItem('xt_last_quote_attempt');
                 }
             } catch {}
