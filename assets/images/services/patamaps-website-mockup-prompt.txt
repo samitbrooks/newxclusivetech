@@ -1,0 +1,2 @@
+Built-in image_gen compositing edit.
+Prompt: Adapt the user-supplied restaurant website presentation into a PataMaps portfolio mockup using the supplied PataMaps screenshot. Preserve two overlapping tall webpage panels and a desktop monitor; use navy/teal PataMaps layouts and a pale teal background. No restaurant content, dollar prices, lorem ipsum or supplier caption.
