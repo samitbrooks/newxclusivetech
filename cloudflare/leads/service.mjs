@@ -1,3 +1,4 @@
+import { artworkNote } from './artwork.mjs';
 const MAX_BYTES = 32768;
 const JSON_HEADERS = { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff' };
 const respond = (body, status = 200) => new Response(JSON.stringify(body), { status, headers: JSON_HEADERS });
@@ -25,9 +26,20 @@ export function normalizeLead(body, request) {
     if (email && (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || /[\r\n]/.test(email))) throw new RequestError('Please check the email address, or leave it blank.');
     const formId = text(body.form_id || 'website-enquiry', 80);
     if (!/^[a-z0-9_-]+$/i.test(formId)) throw new RequestError('Please retry your enquiry.');
+    let message = text(body.message ?? body.project_details, 8000);
+    if (formId === 'printing-quote-form' && body.product) {
+        const product = text(body.product, 120);
+        const requested = text(body.requested_date, 20);
+        const artworkLink = text(body.artwork_link, 700);
+        if (artworkLink) {
+            try { if (!['https:', 'http:'].includes(new URL(artworkLink).protocol)) throw Error(); }
+            catch { throw new RequestError('Please enter a valid artwork download link.'); }
+        }
+        message = [`Product: ${product}`, requested ? `Requested date: ${requested} (subject to confirmation)` : '', artworkLink ? `Artwork link: ${artworkLink}` : '', message].filter(Boolean).join('\n\n');
+    }
     let path = '/';
     try { const page = new URL(body.page_path || request.headers.get('referer') || '/', request.url); if (page.origin === new URL(request.url).origin) path = page.pathname.slice(0, 250); } catch {}
-    return { name, phone, email, company: text(body.company, 200), service: text(body.service, 200), budget: text(body.budget, 160), message: text(body.message ?? body.project_details, 4000), county: text(body.county, 80), form_id: formId, page_path: path };
+    return { name, phone, email, company: text(body.company, 200), service: text(body.service, 200), budget: text(body.budget, 160), message, county: text(body.county, 80), form_id: formId, page_path: path };
 }
 async function hmac(secret, value) {
     const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
@@ -78,6 +90,7 @@ export async function handleRequest(request, env, context, sendNotification) {
     if (!allowed.includes(request.headers.get('origin'))) return respond({ success: false, error: 'This submission is not allowed.' }, 403);
     try {
         const body = await readBody(request); const lead = normalizeLead(body, request);
+        try { lead.message += await artworkNote(body.artwork_receipt, env); } catch { throw new RequestError('Please upload your artwork again, or send the enquiry without a file.'); }
         const key = body.client_request_id || request.headers.get('Idempotency-Key') || crypto.randomUUID();
         if (typeof key !== 'string' || !/^[a-z0-9_-]{16,80}$/i.test(key)) throw new RequestError('Please retry your enquiry.', 400);
         const hash = await hmac(env.IP_HASH_KEY, JSON.stringify(lead));

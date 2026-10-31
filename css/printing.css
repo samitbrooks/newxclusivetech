@@ -1,0 +1,65 @@
+/* Product imagery, artwork intake and quote flow share the site's light palette. */
+html { scroll-padding-top: 7rem; }
+.print-container { width:min(1280px,100%); margin:auto; }
+.print-section { padding:5rem 1.5rem; background:#fff; border-bottom:1px solid #e2e8f0; }
+.print-section-heading { max-width:760px; margin:0 auto 2.5rem; text-align:center; }
+.print-section-heading h2 { font-size:clamp(1.75rem,3vw,2.6rem); margin:.5rem 0 1rem; color:#0f172a; }
+.print-section-heading p { color:#475569; line-height:1.7; }
+.print-section-heading .print-eyebrow { color:#1d4ed8; font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; font-weight:700; }
+.print-hero-figure { overflow:hidden; border:1px solid #e2e8f0; border-radius:1.25rem; background:#f8fafc; }
+.print-hero-figure img { display:block; width:100%; height:auto; }
+.print-hero-figure figcaption { padding:1rem 1.25rem; color:#475569; font-size:.8rem; line-height:1.5; }
+.print-product-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.75rem; }
+.print-product { border:1px solid #e2e8f0; border-radius:1.2rem; overflow:hidden; background:#fff; }
+.print-product img { width:100%; aspect-ratio:3/2; object-fit:cover; display:block; }
+.print-product-body { padding:1.6rem; }
+.print-product h3 { font-size:1.4rem; margin:0 0 .8rem; color:#0f172a; }
+.print-product p { line-height:1.65; color:#475569; }
+.print-product .print-product-detail { margin:.75rem 0 1.25rem; font-size:.85rem; }
+.print-product button,.print-request-link { color:#1d4ed8; font-weight:700; text-decoration:underline; text-underline-offset:4px; text-align:left; }
+.print-caption { text-align:center; color:#475569; font-size:.8rem; line-height:1.6; margin-top:1.5rem; }
+.print-quote-section { background:#f8fafc; }
+.print-quote-grid { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:3rem; align-items:start; }
+.print-brief { padding:1.75rem; background:#eff6ff; border:1px solid #bfdbfe; border-radius:1rem; }
+.print-brief h3 { font-size:1.25rem; margin-bottom:1rem; color:#0f172a; }
+.print-brief p { color:#334155; white-space:pre-line; line-height:1.8; font-size:.9rem; }
+.print-brief a { display:inline-block; color:#1d4ed8; margin:1rem 0 2rem; text-decoration:underline; }
+.print-brief li { color:#334155; margin:1rem 0; line-height:1.7; font-size:.9rem; }
+.print-quote-form { padding:2rem; border:1px solid #e2e8f0; border-radius:1rem; background:#fff; display:grid; gap:1.3rem; }
+.print-quote-form label { display:grid; gap:.5rem; color:#0f172a; font-weight:500; font-size:.9rem; }
+.print-quote-form :is(input:not([type="hidden"]):not([type="file"]),select,textarea) { width:100%; min-width:0; padding:.85rem; border:1px solid #94a3b8; border-radius:.65rem; background:#fff; color:#0f172a; box-sizing:border-box; }
+.print-quote-form :is(input,select,textarea):focus-visible { outline:3px solid #93c5fd; outline-offset:2px; }
+.print-field-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.print-quote-form small,.print-privacy { color:#475569; font-weight:400; font-size:.8rem; line-height:1.65; }
+.print-privacy a { color:#1d4ed8; text-decoration:underline; }
+.print-upload { border:2px dashed #94a3b8; border-radius:.8rem; padding:1.4rem; background:#f8fafc; }
+.print-upload.is-dragging { border-color:#1d4ed8; background:#eff6ff; }
+.print-upload label span { color:#475569; font-size:.8rem; font-weight:400; }
+.print-upload input { max-width:100%; color:#334155; font-size:.85rem; }
+#print-upload-status { color:#334155; margin-top:.75rem; font-size:.85rem; line-height:1.6; overflow-wrap:anywhere; }
+#print-remove-artwork { color:#1d4ed8; text-decoration:underline; font-size:.8rem; margin-top:.5rem; }
+.print-submit { padding:1rem 1.4rem; border-radius:.75rem; color:#fff; background:#1d4ed8; font-weight:700; }
+.print-submit:hover { background:#1e40af; }
+.print-submit:disabled { background:#475569; cursor:default; }
+#print-quote-feedback { color:#334155; line-height:1.65; overflow-wrap:anywhere; }
+.print-guide-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.2rem; }
+.print-guide-grid article { padding:1.4rem; border:1px solid #e2e8f0; border-radius:.8rem; }
+.print-guide-grid h3 { font-size:1.1rem; margin-bottom:.75rem; }
+.print-guide-grid p { font-size:.9rem; line-height:1.7; color:#475569; }
+@media(max-width:767px){.print-product-grid,.print-quote-grid,.print-guide-grid {grid-template-columns:1fr}.print-field-pair {grid-template-columns:1fr}.print-quote-form {padding:1.25rem}.print-section {padding:3.5rem 1rem}.print-quote-grid{gap:1.5rem}}
+.print-speed-options { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.5rem; border:0; padding:0; }
+.print-speed-options label { display:grid; gap:.4rem; padding:.8rem .65rem; border:1px solid #94a3b8; border-radius:.65rem; color:#334155; cursor:pointer; font-size:.8rem; }
+.print-speed-options label:has(input:checked) { border:2px solid #1d4ed8; background:#eff6ff; padding:calc(.8rem - 1px) calc(.65rem - 1px); }
+.print-speed-options input { accent-color:#1d4ed8; }
+.print-speed-options small { color:#475569; font-size:.7rem; }
+.print-speed-options strong { color:#0f172a; }
+.print-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.print-quote-form label { align-content:start; }
+.print-quote-form :is(input:not([type="file"]),select) { min-height:3rem; }
+.print-navbar #mobile-menu a { color:#e2e8f0 !important; background:transparent !important; }
+.print-navbar #mobile-menu a[href="#calculator"] { color:#34d399 !important; background:#0f172a !important; }
+@media(max-width:1023px){.print-navbar .md\:flex {display:none !important}.print-navbar #mobile-menu-btn {display:flex !important}.print-navbar #mobile-menu:not(.hidden) {display:block !important}}
+@media(min-width:1024px){.print-navbar #mobile-menu-btn,.print-navbar #mobile-menu {display:none !important}}
+.print-quote-grid > *, .print-field-pair > *, .print-quote-form label { min-width:0; }
+.print-quote-form small,.print-privacy,.print-brief { overflow-wrap:anywhere; }
+@media(max-width:767px){.print-product-grid,.print-quote-grid,.print-guide-grid,.print-field-pair {grid-template-columns:minmax(0,1fr)}}

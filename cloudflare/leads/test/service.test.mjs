@@ -22,3 +22,5 @@ test('per-IP rate limit stops burst submissions',async()=>{const s=setup();for(l
 test('newsletter saves email-only opt-in, requires valid email',async()=>{const s=setup();assert.equal((await s.post(s.request({email:'owner@example.test',form_id:'newsletter-form',client_request_id:'newsletter-test-1234'}))).status,201);assert.equal((await s.post(s.request({form_id:'newsletter-form',client_request_id:'newsletter-test-5678'}))).status,422)});
 
 test('preserves international prefixes and normalizes Kenyan country codes',()=>{const s=setup();for(const [input,expected] of [['254722753819','+254722753819'],['+447700900000','+447700900000'],['722753819','+254722753819']])assert.equal(normalizeLead({...s.body,phone:input},s.request()).phone,expected)});
+
+test('native printing request retains product, date and artwork link',()=>{const s=setup();const lead=normalizeLead({...s.body,form_id:'printing-quote-form',product:'Business stationery',requested_date:'2026-11-15',artwork_link:'https://example.test/artwork.pdf'},s.request());assert.match(lead.message,/Business stationery/);assert.match(lead.message,/2026-11-15/);assert.match(lead.message,/example.test/)});

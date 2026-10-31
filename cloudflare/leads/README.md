@@ -19,3 +19,11 @@ Operations (authenticated Wrangler, config `cloudflare/leads/wrangler.jsonc`):
 Privacy: no raw IP addresses or enquiry contents in logs/analytics. Rate-limit keys are HMACs with short-lived buckets. Enquiry retention follows the published privacy policy; operators must review/delete expired records and action deletion requests in D1 and the destination mailbox. No automatic deletion of unsent leads is performed.
 
 Native HTML forms remain usable without JavaScript. On server failure, the visitor receives an explicit error and can return to retry or contact WhatsApp. JavaScript keeps entered fields on failed requests. Newsletter requests are stored as email-only opt-ins, not automatically added to a marketing platform.
+
+## Printing artwork
+
+`POST /api/leads/artwork` accepts a single binary PDF, PNG or JPG up to 10 MiB from the configured site origins. File signatures and types are checked; this is not a malware scan or an automatic preflight check. Per-IP upload limits use the existing hashed rate buckets. A signed receipt is returned only after storage succeeds.
+
+Small artwork uploads use the private `PRINT_ARTWORK` KV namespace with automatic 30-day expiry. R2 is not enabled on this account; no R2 subscription or paid plan was activated. For files over 10 MiB or source-design packages, the form accepts an artwork link instead. Capacity limits return an explicit error with the link/WhatsApp alternative.
+
+The enquiry endpoint verifies the signed artwork receipt and appends a private, expiring download link to the stored enquiry and owner notification. Downloads require an unguessable signed capability and force attachment delivery; there is no public file listing. KV can take up to a minute to become available in another region, so missing/new objects return a retry response rather than a false permanent-not-found result. Keep download links private. Expired artwork can be shared again by the sender.

@@ -1,4 +1,5 @@
 import { EmailMessage } from 'cloudflare:email';
+import { artworkRequest } from './artwork.mjs';
 import { handleRequest, retryPending } from './service.mjs';
 
 async function notify(lead, env) {
@@ -10,6 +11,6 @@ async function notify(lead, env) {
     await env.EMAIL.send(new EmailMessage(env.SENDER_EMAIL, env.NOTIFICATION_TO, headers.join('\r\n') + '\r\n\r\n' + encoded));
 }
 export default {
-    fetch(request, env, ctx) { return handleRequest(request, env, ctx, notify); },
+    async fetch(request, env, ctx) { return await artworkRequest(request, env) || handleRequest(request, env, ctx, notify); },
     scheduled(controller, env, ctx) { ctx.waitUntil(retryPending(env, notify)); }
 };
