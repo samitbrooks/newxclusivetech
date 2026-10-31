@@ -9,7 +9,6 @@ class XclusiveTech {
     static init() {
         this.setupThemeToggle();
         this.setupEventListeners();
-        this.setupFormHandling();
         this.checkQueryParams();
         this.optimizePerformance();
         this.setupSmartExitIntent();
@@ -52,79 +51,9 @@ class XclusiveTech {
         // Link navigation tracking (for analytics)
         document.querySelectorAll('a[href^="http"]').forEach(link => {
             link.addEventListener('click', () => {
-                this.trackEvent('outbound-link', link.href);
+                this.trackEvent('outbound-link', new URL(link.href).hostname);
             });
         });
-    }
-    
-    // Setup form handling
-    static setupFormHandling() {
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                const shouldUseNativeSubmit = contactForm.action && contactForm.method.toLowerCase() === 'post';
-                const formData = new FormData(contactForm);
-                const data = {
-                    name: formData.get('name'),
-                    email: formData.get('email'),
-                    phone: formData.get('phone'),
-                    subject: formData.get('subject'),
-                    message: formData.get('message'),
-                    service: formData.get('service')
-                };
-
-                // The HTML form defines its required fields. Optional email and
-                // notes must not prevent a phone-only enquiry from being submitted.
-                if (!contactForm.checkValidity()) {
-                    e.preventDefault();
-                    contactForm.reportValidity();
-                    return;
-                }
-                if (shouldUseNativeSubmit) return;
-
-                e.preventDefault();
-                this.handleFormSubmit(contactForm);
-            });
-        }
-    }
-    
-    // Handle form submission
-    static handleFormSubmit(form) {
-        const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-                    phone: formData.get('phone'),
-            subject: formData.get('subject'),
-            message: formData.get('message'),
-            service: formData.get('service')
-        };
-        
-        // Validate form
-        if (!this.validateForm(data)) {
-            alert('Please fill in all required fields');
-            return;
-        }
-        
-        // Show success message (in production, send to backend)
-        this.showSuccessMessage(form);
-        form.reset();
-        
-        // Log for demonstration
-        console.log('Form submitted:', data);
-        
-        // In production, you would send this to a backend API:
-        // fetch('/api/contact', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(data)
-        // })
-    }
-    
-    // Validate form
-    static validateForm(data) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return Boolean(data.name && (data.phone || data.email) && (!data.email || emailRegex.test(data.email)));
     }
     
     // Show success message
@@ -164,7 +93,6 @@ class XclusiveTech {
         if (typeof gtag !== 'undefined') {
             gtag('event', eventName, { value: eventValue });
         }
-        console.log(`Event tracked: ${eventName} - ${eventValue}`);
     }
     
     // Performance optimization
@@ -538,13 +466,8 @@ class XclusiveTech {
                         return;
                     }
 
-                    // Format phone number
-                    let cleanPhone = phoneInput.value.replace(/\s+/g, '');
-                    if (cleanPhone.startsWith('0')) {
-                        cleanPhone = '+254' + cleanPhone.substring(1);
-                    } else if (!cleanPhone.startsWith('+')) {
-                        cleanPhone = '+254' + cleanPhone;
-                    }
+                    // Server validation normalizes Kenyan numbers and preserves international prefixes.
+                    const cleanPhone = phoneInput.value.trim();
 
                     submitBtn.disabled = true;
                     submitBtn.innerHTML = `<span>SUBMITTING...</span>`;

@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync } from 'node:fs';
-import { handleRequest, retryPending } from '../service.mjs';
+import { handleRequest, retryPending, normalizeLead } from '../service.mjs';
 function setup(send = async () => {}) {
  const db = new DatabaseSync(':memory:'); db.exec(readFileSync(new URL('../migrations/0001_leads.sql',import.meta.url),'utf8'));
  const bind = (sql, args=[]) => ({bind(...v){return bind(sql,v)},async first(){return db.prepare(sql).get(...args)||null},async all(){return {results:db.prepare(sql).all(...args)}},async run(){return db.prepare(sql).run(...args)}});
@@ -20,3 +20,5 @@ test('rejects invalid fields, cross origin, honeypot and oversized body',async()
 test('native forms redirect only after saving',async()=>{const s=setup();const req=new Request('https://www.xclusivetech.co.ke/api/leads',{method:'POST',headers:{origin:'https://www.xclusivetech.co.ke','content-type':'application/x-www-form-urlencoded'},body:new URLSearchParams(s.body)});const r=await s.post(req);assert.equal(r.status,303);assert.match(r.headers.get('location'),/success=true&reference=XT-/)});
 test('per-IP rate limit stops burst submissions',async()=>{const s=setup();for(let i=0;i<8;i++) assert.equal((await s.post(s.request({...s.body,client_request_id:'test-rate-limit-'+i}))).status,201);assert.equal((await s.post(s.request({...s.body,client_request_id:'test-rate-limit-9'}))).status,429)});
 test('newsletter saves email-only opt-in, requires valid email',async()=>{const s=setup();assert.equal((await s.post(s.request({email:'owner@example.test',form_id:'newsletter-form',client_request_id:'newsletter-test-1234'}))).status,201);assert.equal((await s.post(s.request({form_id:'newsletter-form',client_request_id:'newsletter-test-5678'}))).status,422)});
+
+test('preserves international prefixes and normalizes Kenyan country codes',()=>{const s=setup();for(const [input,expected] of [['254722753819','+254722753819'],['+447700900000','+447700900000'],['722753819','+254722753819']])assert.equal(normalizeLead({...s.body,phone:input},s.request()).phone,expected)});

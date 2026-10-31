@@ -19,6 +19,7 @@ export function normalizeLead(body, request) {
     phone = phone.replace(/[ ().-]/g, '');
     if (/^0\d{9}$/.test(phone)) phone = '+254' + phone.slice(1);
     else if (/^[17]\d{8}$/.test(phone)) phone = '+254' + phone;
+    else if (/^254\d{9}$/.test(phone)) phone = '+' + phone;
     if (!newsletter && !/^\+?\d{7,15}$/.test(phone)) throw new RequestError('Please enter a phone number we can reach you on.');
     const email = text(body.email, 254, newsletter);
     if (email && (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || /[\r\n]/.test(email))) throw new RequestError('Please check the email address, or leave it blank.');
