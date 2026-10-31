@@ -1,0 +1,2 @@
+Built-in image_gen edit of user-supplied UI/UX illustration.
+Prompt: Preserve purple phone mockups, layout, palette, icons, diagonal background and shadows. Replace COMPANY NAME with XCLUSIVE TECH, LANDING PAGE with PRODUCT DESIGN, dummy subtitle with Clear flows. Better experiences., lorem ipsum with Thoughtful interfaces for websites and apps. From wireframes to interactive prototypes. Main CTA: EXPLORE DESIGN. Remove dollar prices and replace with neutral interface lines.
