@@ -7641,3 +7641,32 @@ svg.h-6, .h-6 { height: 24px !important; }
 :root .bg-amber-500.text-white { background-color: #92400E !important; }
 
 .award-photo-caption { background: #0F172A; padding: .75rem; border-radius: .5rem; }
+
+/* Approved fixed-scope website packages; a compact alternative to a comparison table. */
+.xt-packages-section { padding:3.5rem 1.5rem; background:#fff; }
+.xt-pricing-container { max-width:1200px; margin:auto; }
+.xt-pricing-container > h2 { color:#0f172a; font-size:clamp(1.5rem,3vw,2rem); margin:0 0 1rem; }
+.xt-pricing-intro { color:#475569; line-height:1.7; margin-bottom:1.5rem; }
+.xt-package-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; margin:1.5rem 0; }
+.xt-package-card { padding:1.4rem; border:1px solid #cbd5e1; border-radius:1rem; background:#fff; display:flex; flex-direction:column; gap:.7rem; min-width:0; }
+.xt-package-card h3 { color:#0f172a; font-size:1.2rem; }
+.xt-package-card .xt-package-price { color:#1d4ed8; font-size:1.85rem; font-weight:700; line-height:1.2; }
+.xt-package-card .xt-package-deposit { color:#065f46; font-size:.85rem; font-weight:700; }
+.xt-package-card .xt-package-time { color:#334155; font-size:.85rem; font-weight:700; }
+.xt-package-card .xt-package-scope { color:#334155; font-size:.9rem; line-height:1.6; }
+.xt-package-card ul { list-style:disc; padding-left:1rem; color:#475569; font-size:.8rem; line-height:1.65; flex:1; }
+:root .xt-package-card .xt-package-action { padding:.8rem; border-radius:.6rem; background:#1d4ed8; color:#fff !important; text-decoration:none; font-size:.85rem; font-weight:700; text-align:center; }
+:root .xt-package-card .xt-package-action:hover { background:#1e40af; }
+.xt-pricing-notes { padding:1.25rem; border:1px solid #cbd5e1; border-radius:.8rem; background:#f8fafc; margin:1.5rem 0 2rem; }
+.xt-pricing-notes p { color:#475569; font-size:.85rem; line-height:1.7; margin:.5rem 0; }
+.xt-extra-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.xt-extra-grid article { padding:1.25rem; border:1px solid #cbd5e1; border-radius:.8rem; }
+.xt-extra-grid h3 { font-size:1rem; color:#0f172a; }
+.xt-extra-grid p { color:#475569; font-size:.85rem; line-height:1.65; margin-top:.6rem; }
+.estimator-addon-card input { margin-right:.5rem; }
+.estimator-summary-row strong { overflow-wrap:anywhere; }
+@media(max-width:1100px){.xt-package-grid {grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.xt-package-grid,.xt-extra-grid {grid-template-columns:minmax(0,1fr)}.xt-packages-section {padding:2.5rem 1rem}.estimator-summary-row {gap:.75rem}}
+#quote-estimator .estimator-addon-card { display:flex; align-items:flex-start; gap:.5rem; padding:.9rem; border:1px solid #cbd5e1; border-radius:.7rem; color:#334155; font-size:.9rem; line-height:1.6; }
+#quote-estimator .estimator-addon-card input { flex-shrink:0; margin-top:.25rem; }
+#packages,#county-pricing,#package-deliverables,#pricing-table { scroll-margin-top:7rem; }

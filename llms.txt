@@ -16,7 +16,7 @@ Xclusive Tech specializes in custom UI/UX design, mobile-first business websites
 
 - [Home](https://www.xclusivetech.co.ke/): Flagship homepage highlighting web engineering capabilities, client case studies, national Digitally Fit awards, and direct quotation intake.
 - [Services](https://www.xclusivetech.co.ke/services): Complete architectural breakdown of engineering services including custom web design, full-stack development, M-Pesa e-commerce, SEO/GEO/AEO, domain registration, and social media management.
-- [Pricing & Packages](https://www.xclusivetech.co.ke/pricing): Transparent published website design prices in Kenya: Express Landing Page (KES 15,000), Starter Site (KES 25,000–45,500), Business Growth (KES 49,000–62,000), E-commerce Pro (KES 72,000–85,000), and bespoke Custom Solutions (from KES 85,000+).
+- [Pricing & Packages](https://www.xclusivetech.co.ke/pricing): Transparent published website design prices in Kenya: Express Landing Page (KES 10,000), Starter Site (KES 20,000), Business Growth (KES 35,000), E-commerce Pro (KES 50,000), and bespoke Custom Solutions (quoted per project).
 - [Client Portfolio](https://www.xclusivetech.co.ke/portfolio): Live, verifiable client websites across medical, legal, architectural, automotive, and export sectors in Kenya.
 - [Industry Solutions](https://www.xclusivetech.co.ke/solutions): Specialized website solutions tailored to 20+ Kenyan business sectors including clinics, law firms, NGOs, schools, real estate, and agribusiness.
 - [All 47 Counties Web Design Hub](https://www.xclusivetech.co.ke/locations/): Nationwide local web development directory serving all 47 counties of Kenya with localized business solutions, M-Pesa integration, and local SEO.
@@ -51,12 +51,14 @@ Xclusive Tech specializes in custom UI/UX design, mobile-first business websites
 
 ## Published Pricing in Kenya (KES)
 
-- [Express Sales Landing Page](https://www.xclusivetech.co.ke/pricing): KES 15,000 one-time. Single long-form conversion page with 5 sections, 1-click WhatsApp widget, direct lead intake form, under 1.5s load speed, 3–5 day delivery, and 100% upgrade credit guarantee.
-- [Starter Site Package](https://www.xclusivetech.co.ke/pricing): KES 25,000–45,500. Up to 5 pages, custom Figma UI/UX, responsive mobile design, foundational on-page SEO, WhatsApp chat integration, delivered in 2–3 weeks.
-- [Business Growth Package](https://www.xclusivetech.co.ke/pricing): KES 49,000–62,000. Up to 15 pages, dynamic CMS blog, advanced SEO schema, Google Analytics & Search Console setup, delivered in 3–5 weeks.
-- [E-commerce Pro Package](https://www.xclusivetech.co.ke/pricing): KES 72,000–85,000. Unlimited products, automated Daraja M-Pesa API integration, customer accounts, inventory control, automated order notifications, delivered in 5–7 weeks.
-- [Custom Enterprise Solutions](https://www.xclusivetech.co.ke/pricing): From KES 85,000+. Tailored web applications, proprietary portals, REST APIs, and role-based access control (RBAC).
-- [Website Maintenance & Care](https://www.xclusivetech.co.ke/pricing): Ongoing support, cloud backups, security patching, and content updates from KES 2,000/month.
+- [Express Landing Page](https://www.xclusivetech.co.ke/pricing#packages): KES 10,000; 50% build deposit KES 5,000; One landing page, up to five sections; target 2–3 business days after deposit, complete content and access. Two revision rounds; client supplies approved copy and images.
+- [Business Starter](https://www.xclusivetech.co.ke/pricing#packages): KES 20,000; 50% build deposit KES 10,000; Up to five pages; target 5–7 business days after deposit, complete content and access. Two revision rounds; client supplies approved copy and images.
+- [Business Growth](https://www.xclusivetech.co.ke/pricing#packages): KES 35,000; 50% build deposit KES 17,500; Up to ten pages with a blog/CMS; target 7–10 business days after deposit, complete content and access. Two revision rounds; client supplies approved copy and images.
+- [Online Store](https://www.xclusivetech.co.ke/pricing#packages): KES 50,000; 50% build deposit KES 25,000; Standard store with up to 20 initial product uploads; target 10–15 business days after deposit, complete content and access. Two revision rounds; client supplies approved copy and images.
+- Custom portals, bespoke APIs, copywriting, extra pages, larger product uploads and extra revisions: separately agreed written quote.
+- .co.ke domain: from KES 1,500/year. Hosting: from KES 3,000/year. First-year and renewal rates are separately confirmed before purchase.
+- Optional care: from KES 2,000/month for up to four hours. Monthly charges are separate from the build fee and deposit.
+- Payment-provider approvals and charges, paid licences and client feedback delays are separate from the package targets.
 
 ## Verifiable Client Portfolio
 

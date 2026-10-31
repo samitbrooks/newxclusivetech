@@ -7,6 +7,7 @@ Includes rich LocalBusiness, Service, BreadcrumbList and FAQPage structured JSON
 tailored local economic contexts, key commercial town hubs, and direct WhatsApp / lead intake CTAs.
 """
 
+from sync_website_pricing import render_county_pricing
 import os
 import re
 import json
@@ -609,7 +610,7 @@ def render_county_page(c):
     whatsapp_hero_msg = f"Hi Xclusive Tech, I'm looking for a professional website for my business in {c['name']} County ({c['seat']})."
     encoded_whatsapp_hero = urllib_quote(whatsapp_hero_msg)
     
-    whatsapp_express_msg = f"Hi Xclusive Tech, I want to claim the KES 15,000 Express Landing Page package for my business in {c['name']} County."
+    whatsapp_express_msg = f"Hi Xclusive Tech, I want to claim the KES 10,000 Express Landing Page package for my business in {c['name']} County."
     encoded_whatsapp_express = urllib_quote(whatsapp_express_msg)
 
     html_content = f'''<!DOCTYPE html>
@@ -618,7 +619,7 @@ def render_county_page(c):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Design in {c["name"]} County | Top Website Developers {c["seat"]} — Xclusive Tech</title>
-    <meta name="description" content="Looking for trusted website developers in {c["name"]} County? Xclusive Tech builds mobile-first websites from KES 15,000 with Daraja M-Pesa checkout, local SEO, and custom UI/UX for businesses in {", ".join(c["towns"][:4])}.">
+    <meta name="description" content="Looking for trusted website developers in {c["name"]} County? Xclusive Tech builds mobile-first websites from KES 10,000 with Daraja M-Pesa checkout, local SEO, and custom UI/UX for businesses in {", ".join(c["towns"][:4])}.">
     <meta name="keywords" content="{", ".join(c["top_searches"])}, web design kenya, website developers in {c["name"].lower()}">
     <meta name="author" content="Xclusive Tech">
     <link rel="canonical" href="https://www.xclusivetech.co.ke/locations/{c["slug"]}">
@@ -627,13 +628,13 @@ def render_county_page(c):
 
     <!-- Open Graph & Social Cards -->
     <meta property="og:title" content="Web Design in {c["name"]} County | Top Website Developers — Xclusive Tech">
-    <meta property="og:description" content="Award-winning website design in {c["name"]} County ({", ".join(c["towns"][:3])}). High-speed mobile sites, M-Pesa checkout, and local SEO from KES 15,000.">
+    <meta property="og:description" content="Award-winning website design in {c["name"]} County ({", ".join(c["towns"][:3])}). High-speed mobile sites, M-Pesa checkout, and local SEO from KES 10,000.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.xclusivetech.co.ke/locations/{c["slug"]}">
     <meta property="og:image" content="../assets/images/og-preview.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Web Design in {c["name"]} County | Xclusive Tech">
-    <meta name="twitter:description" content="Professional websites for commercial enterprises and growing businesses in {c["name"]} County from KES 15,000.">
+    <meta name="twitter:description" content="Professional websites for commercial enterprises and growing businesses in {c["name"]} County from KES 10,000.">
     <meta name="twitter:image" content="../assets/images/og-preview.png">
 
     <!-- Theme Enforcement: Strictly Light Mode -->
@@ -730,8 +731,8 @@ def render_county_page(c):
                 "offers": {{
                     "@type": "AggregateOffer",
                     "priceCurrency": "KES",
-                    "lowPrice": "15000",
-                    "highPrice": "85000",
+                    "lowPrice": "10000",
+                    "highPrice": "50000",
                     "url": "https://www.xclusivetech.co.ke/pricing"
                 }}
             }},
@@ -744,7 +745,7 @@ def render_county_page(c):
                         "name": "How much does a website cost in {c["name"]} County?",
                         "acceptedAnswer": {{
                             "@type": "Answer",
-                            "text": "Website prices for businesses in {c["name"]} County start at KES 15,000 for our high-converting Express Sales Landing Page. Full multi-page corporate sites range from KES 25,000 to KES 45,500, and comprehensive e-commerce stores with automated M-Pesa integration range from KES 72,000 to KES 85,000. All prices are transparent with zero hidden fees."
+                            "text": "Website prices for businesses in {c["name"]} County start at KES 10,000 for our high-converting Express Sales Landing Page. Full multi-page corporate sites range from KES 20,000, and comprehensive e-commerce stores with automated M-Pesa integration range from KES 50,000. All prices are transparent with zero hidden fees."
                         }}
                     }},
                     {{
@@ -752,7 +753,7 @@ def render_county_page(c):
                         "name": "How long will it take to build a website for my {c["name"]} business?",
                         "acceptedAnswer": {{
                             "@type": "Answer",
-                            "text": "Express landing pages are delivered in 3 to 5 business days. A standard 5-page business website takes 2 to 3 weeks, and an e-commerce platform with M-Pesa integration takes 5 to 7 weeks."
+                            "text": "Express landing pages are delivered in 2–3 business days. A standard 5-page business website takes 5–7 business days, and an e-commerce platform with M-Pesa integration takes 10–15 business days."
                         }}
                     }},
                     {{
@@ -926,91 +927,7 @@ def render_county_page(c):
             </div>
         </section>
 
-        <!-- Special KES 15,000 Landing Page Banner -->
-        <section class="county-dark-banner py-12 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white relative overflow-hidden">
-            <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-8 space-y-3">
-                    <span class="inline-block px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-black uppercase tracking-wider">⚡ Special Offer &bull; Fastest Launch (3–5 Days)</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white" style="color: #ffffff !important;">Express Sales Landing Page for {c["name"]} Businesses</h2>
-                    <p class="text-slate-300 text-sm leading-relaxed" style="color: #cbd5e1 !important;">
-                        Need sales inquiries and direct WhatsApp calls right now without spending KES 25K+ on a multi-page website? Includes 5 long-form conversion sections, 1-click WhatsApp inquiry widget, direct lead intake form, and sub-1.5s load speed.
-                    </p>
-                </div>
-                <div class="lg:col-span-4 text-center lg:text-right">
-                    <div class="text-3xl sm:text-4xl font-black text-amber-400 mb-2">KES 15,000</div>
-                    <a href="https://wa.me/254722753819?text={encoded_whatsapp_express}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-lg transition-all">
-                        <span>Claim KES 15,000 Offer</span>
-                        <span>&rarr;</span>
-                    </a>
-                    <p class="text-[11px] text-slate-400 mt-1.5" style="color: #94a3b8 !important;">Includes 100% upgrade credit guarantee</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Full Transparent Pricing Grid -->
-        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-200">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Honest &amp; Transparent</span>
-                    <h2 class="text-3xl font-bold text-slate-900 mt-1">Website Design Packages for {c["name"]} County</h2>
-                    <p class="text-slate-600 text-sm mt-2">All packages include bespoke Figma UI/UX design, foundational on-page SEO, mobile responsiveness, and 100% source code ownership.</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Starter -->
-                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
-                        <div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-blue-600">Starter Site</span>
-                            <div class="text-3xl font-extrabold text-slate-900 mt-2">KES 25,000–45,500</div>
-                            <p class="text-xs text-slate-500 mt-1">Delivered in 2–3 weeks</p>
-                            <ul class="space-y-3 mt-6 text-sm text-slate-700">
-                                <li class="flex items-start gap-2">✓ Up to 5 custom-designed pages</li>
-                                <li class="flex items-start gap-2">✓ Bespoke Figma UI/UX design</li>
-                                <li class="flex items-start gap-2">✓ 100% responsive mobile layout</li>
-                                <li class="flex items-start gap-2">✓ WhatsApp chat widget</li>
-                                <li class="flex items-start gap-2">✓ Foundational on-page SEO</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I'm%20interested%20in%20the%20Starter%20Site%20package%20for%20my%20business%20in%20{c['name']}." target="_blank" rel="noopener noreferrer" class="mt-8 block text-center py-3 px-4 rounded-xl bg-white border border-slate-300 text-slate-900 font-bold text-sm hover:bg-slate-100 shadow-xs transition-colors">Choose Starter</a>
-                    </div>
-
-                    <!-- Business Growth -->
-                    <div class="p-6 sm:p-8 rounded-3xl bg-blue-50/70 border-2 border-blue-500 flex flex-col justify-between relative shadow-xl">
-                        <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-blue-600 text-white text-[10px] font-extrabold uppercase tracking-wider">Most Popular</span>
-                        <div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-blue-600">Business Growth</span>
-                            <div class="text-3xl font-extrabold text-slate-900 mt-2">KES 49,000–62,000</div>
-                            <p class="text-xs text-slate-500 mt-1">Delivered in 3–5 weeks</p>
-                            <ul class="space-y-3 mt-6 text-sm text-slate-700">
-                                <li class="flex items-start gap-2">✓ Up to 15 custom pages</li>
-                                <li class="flex items-start gap-2">✓ Dynamic CMS blog engine</li>
-                                <li class="flex items-start gap-2">✓ Advanced Local SEO &amp; Schema</li>
-                                <li class="flex items-start gap-2">✓ Google Search Console setup</li>
-                                <li class="flex items-start gap-2">✓ High-speed asset optimization</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I'm%20interested%20in%20the%20Business%20Growth%20package%20for%20my%20business%20in%20{c['name']}." target="_blank" rel="noopener noreferrer" class="mt-8 block text-center py-3 px-4 rounded-xl bg-blue-600 text-white font-bold text-sm hover:bg-blue-700 shadow-md transition-colors">Choose Growth</a>
-                    </div>
-
-                    <!-- E-Commerce Pro -->
-                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
-                        <div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-blue-600">E-Commerce Pro</span>
-                            <div class="text-3xl font-extrabold text-slate-900 mt-2">KES 72,000–85,000</div>
-                            <p class="text-xs text-slate-500 mt-1">Delivered in 5–7 weeks</p>
-                            <ul class="space-y-3 mt-6 text-sm text-slate-700">
-                                <li class="flex items-start gap-2">✓ Unlimited products &amp; categories</li>
-                                <li class="flex items-start gap-2">✓ Automated Daraja M-Pesa STK Push</li>
-                                <li class="flex items-start gap-2">✓ Automated PDF tax invoices</li>
-                                <li class="flex items-start gap-2">✓ WhatsApp instant order alerts</li>
-                                <li class="flex items-start gap-2">✓ Inventory stock control</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I'm%20interested%20in%20an%20M-Pesa%20E-Commerce%20store%20for%20my%20business%20in%20{c['name']}." target="_blank" rel="noopener noreferrer" class="mt-8 block text-center py-3 px-4 rounded-xl bg-white border border-slate-300 text-slate-900 font-bold text-sm hover:bg-slate-100 shadow-xs transition-colors">Choose E-Commerce</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {render_county_pricing(c['name'] + ' County')}
 
         <!-- FAQs Section -->
         <section class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-b border-slate-200">
@@ -1023,7 +940,7 @@ def render_county_page(c):
                 <div class="space-y-4">
                     <div class="p-6 rounded-2xl bg-white border border-slate-200">
                         <h3 class="text-base font-bold text-slate-900">How much does a website cost in {c["name"]} County?</h3>
-                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">Website prices start at KES 15,000 for our Express Sales Landing Page. Multi-page business websites start at KES 25,000, and full e-commerce stores with Daraja M-Pesa integration start at KES 72,000. All prices are published transparently with zero hidden fees.</p>
+                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">Website prices start at KES 10,000 for our Express Sales Landing Page. Multi-page business websites start at KES 20,000, and full e-commerce stores with Daraja M-Pesa integration start at KES 50,000. All prices are published transparently with zero hidden fees.</p>
                     </div>
 
                     <div class="p-6 rounded-2xl bg-white border border-slate-200">
@@ -1114,7 +1031,7 @@ def render_county_page(c):
                         <li><a href="/services" class="footer-nav-link">Full-Stack Development</a></li>
                         <li><a href="/services" class="footer-nav-link">E-commerce &amp; M-Pesa</a></li>
                         <li><a href="/services" class="footer-nav-link">SEO, GEO &amp; AEO Schema</a></li>
-                        <li><a href="/pricing" class="footer-nav-link">Express KES 15,000 Offer</a></li>
+                        <li><a href="/pricing" class="footer-nav-link">Express KES 10,000 Offer</a></li>
                     </ul>
                 </div>
 
@@ -1188,7 +1105,7 @@ def render_locations_index():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Design Across All 47 Counties in Kenya | Xclusive Tech</title>
-    <meta name="description" content="Find trusted website developers, M-Pesa e-commerce engineers, and local SEO services across all 47 counties of Kenya. Transparent pricing from KES 15,000.">
+    <meta name="description" content="Find trusted website developers, M-Pesa e-commerce engineers, and local SEO services across all 47 counties of Kenya. Transparent pricing from KES 10,000.">
     <meta name="keywords" content="web design kenya, website developers in kenya, web design all counties kenya, web designers nairobi, web design mombasa, web design nakuru, web design kisumu, web design eldoret">
     <meta name="author" content="Xclusive Tech">
     <link rel="canonical" href="https://www.xclusivetech.co.ke/locations/">
@@ -1197,7 +1114,7 @@ def render_locations_index():
 
     <!-- Open Graph & Social Cards -->
     <meta property="og:title" content="Web Design Across All 47 Counties in Kenya | Xclusive Tech">
-    <meta property="og:description" content="Local website design, e-commerce, and SEO services engineered for businesses across all 47 Kenyan counties. Transparent KES pricing from KES 15,000.">
+    <meta property="og:description" content="Local website design, e-commerce, and SEO services engineered for businesses across all 47 Kenyan counties. Transparent KES pricing from KES 10,000.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.xclusivetech.co.ke/locations/">
     <meta property="og:image" content="../assets/images/og-preview.png">
@@ -1414,7 +1331,7 @@ def render_locations_index():
                         <li><a href="/services" class="footer-nav-link">Full-Stack Development</a></li>
                         <li><a href="/services" class="footer-nav-link">E-commerce &amp; M-Pesa</a></li>
                         <li><a href="/services" class="footer-nav-link">SEO, GEO &amp; AEO Schema</a></li>
-                        <li><a href="/pricing" class="footer-nav-link">Express KES 15,000 Offer</a></li>
+                        <li><a href="/pricing" class="footer-nav-link">Express KES 10,000 Offer</a></li>
                     </ul>
                 </div>
 

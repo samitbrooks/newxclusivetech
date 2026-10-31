@@ -12,7 +12,7 @@ async def main():
   await page.goto(BASE+'project-guide',wait_until='domcontentloaded')
   form=page.locator('.ownership-calculator');assert await form.count()==1
   await form.locator('[name="hosting"]').fill('3000');await form.locator('[name="care"]').fill('2000')
-  assert '43,500' in await form.locator('output').inner_text()
+  assert '38,500' in await form.locator('output').inner_text()
   assert await page.locator('.buyer-faqs details').count()==8
   height=await page.locator('body').evaluate('(e)=>e.scrollHeight')
   for offset in range(0,height,800):
@@ -44,10 +44,10 @@ async def main():
   assert await page.locator('source[srcset*="-400.webp"]').count()==61
   await page.goto(BASE,wait_until='domcontentloaded')
   await page.locator('[data-pkg="growth"]').click()
-  assert '3–5 weeks' in await page.locator('#estimator-timeline').inner_text()
+  assert '7–10 business days' in await page.locator('#estimator-timeline').inner_text()
   await page.locator('[data-pkg="ecommerce"]').click()
-  assert '5–7 weeks' in await page.locator('#estimator-timeline').inner_text()
-  assert '5–7 weeks' in __import__('urllib.parse',fromlist=['unquote']).unquote(await page.locator('#estimator-whatsapp-btn').get_attribute('href'))
+  assert '10–15 business days' in await page.locator('#estimator-timeline').inner_text()
+  assert '10–15 business days' in __import__('urllib.parse',fromlist=['unquote']).unquote(await page.locator('#estimator-whatsapp-btn').get_attribute('href'))
   assert not errors,errors
   print('PASS: budget arithmetic, buyer FAQs, mobile layout, two-field native quotes, stable A/B variant with local stub, 61 responsive portfolio cards and simple PataMaps; no browser errors')
   await b.close()

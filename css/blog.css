@@ -19,3 +19,8 @@
 @media(max-width:900px){:root .blog-cta {grid-template-columns:minmax(0,1fr)}.blog-cta-actions {justify-content:flex-start}}
 @media(max-width:480px){:root .blog-cta {padding:1.25rem}.blog-cta-actions a {width:100%}}
 :root .blog-info-panel a.bg-blue-600 * { color:#fff !important; }
+/* Keep article navigation compact on tablets as well as phones. */
+@media(max-width:1023px){nav#navbar .md\:flex,nav#navbar .nav-actions>a {display:none !important}nav#navbar #mobile-menu-btn {display:flex !important}nav#navbar #mobile-menu:not(.hidden) {display:block !important}}
+@media(min-width:1024px){nav#navbar #mobile-menu-btn,nav#navbar #mobile-menu {display:none !important}}
+nav#navbar #mobile-menu {background:#121218}
+nav#navbar #mobile-menu a {color:#e2e8f0 !important;background:transparent !important}

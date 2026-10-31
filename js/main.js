@@ -667,144 +667,48 @@ class XclusiveTech {
         }, holdDelay);
     }
 
-    // Setup 1-Minute Interactive Quote Estimator
+    // Website prices and targets are generated from the approved site facts.
     static setupQuoteEstimator() {
         const estimator = document.getElementById('quote-estimator');
-        if (!estimator) return;
-
-        const pkgCards = estimator.querySelectorAll('.estimator-pkg-card');
-        const addonDomain = estimator.querySelector('#addon-domain');
-        const addonMaintenance = estimator.querySelector('#addon-maintenance');
-        const totalEl = estimator.querySelector('#estimator-total');
-        const depositEl = estimator.querySelector('#estimator-deposit');
-        const balanceEl = estimator.querySelector('#estimator-balance');
-        const pkgNameEl = estimator.querySelector('#estimator-pkg-name');
-        const timelineEl = estimator.querySelector('#estimator-timeline');
-        const deliverablesListEl = estimator.querySelector('#estimator-deliverables-list');
-        const waBtn = estimator.querySelector('#estimator-whatsapp-btn');
-
-        if (!pkgCards.length || !totalEl || !waBtn) return;
-
-        const deliverablesMap = {
-            express: [
-                '1 High-Converting Long-Form Landing Page (5 Core Sections)',
-                'Typical delivery: 3–5 business days; revision rounds agreed in the quote',
-                'Floating WhatsApp Quick-Chat Widget & Click-to-Call CTAs',
-                'Lead Intake Form with Instant Email & Mobile Notifications',
-                'Mobile-First Responsive Design Tested on Safaricom 4G/5G',
-                '100% Upgrade Credit: Full KES 15,000 credited if upgrading in 6 mos.',
-                '100% Source Code & Asset Ownership (Zero builder lock-in fees)'
-            ],
-            starter: [
-                '5 Custom Pages: Home, About Company, Services, Portfolio & Contact',
-                'Typical 2–3 week delivery with milestone approval stages',
-                'Bespoke Figma UI/UX Design System Tailored to Your Brand Identity',
-                'Foundational On-Page SEO (Schema.org markup, meta tags & sitemap)',
-                'Interactive Google Maps Location & Google Business Profile Integration',
-                '1-Tap WhatsApp Chat & Multi-Field Contact Intake Forms',
-                '30 Days Free Post-Launch Technical Support & Automated Cloud Backups',
-                '100% Code & Domain Ownership with Direct Server Access'
-            ],
-            growth: [
-                'Up to 15 Bespoke Responsive Pages & High-Performance Templates',
-                'Typical 3–5 week delivery with a staging preview',
-                'Lightweight Headless CMS Blog/News Engine for Publishing Articles',
-                'Interactive Quote Requests, Service Calculators or Booking Forms',
-                'Comprehensive County-by-County Kenya Local SEO & Semantic Schemas',
-                'Google Analytics 4 (GA4) & Google Search Console Setup & Verification',
-                '90 Days Dedicated Priority Maintenance & Technical Warranty'
-            ],
-            ecommerce: [
-                'Full E-Commerce Storefront with Product Catalog & Categories',
-                'Typical 5–7 week delivery with payment-flow testing',
-                'Automated Safaricom Daraja M-Pesa STK Push Checkout Integration',
-                'Credit/Debit Card (Visa/Mastercard) & Bank Payment Gateway Option',
-                'Customer Accounts, Order History Dashboard & Automated PDF Invoices',
-                'Instant WhatsApp & SMS Notifications to Owner on Every New Order',
-                'Inventory Management, Low Stock Alerts & Coupon Promo Code Engine',
-                '6 Months Technical Warranty & Merchant Video Training Session'
-            ]
-        };
-
-        let selectedPrice = 15000;
-        let selectedName = 'Express Sales Landing Page';
-        let selectedTime = '3–5 business days';
-        let selectedKey = 'express';
-
-        const updateDeliverables = (key) => {
-            if (!deliverablesListEl) return;
-            const items = [...(deliverablesMap[key] || deliverablesMap.express)];
-            if (addonDomain && addonDomain.checked) {
-                items.push('Custom .co.ke Domain Registration & 3 Branded Business Webmail Accounts');
+        const config = window.XT_PRICING;
+        if (!estimator || !config) return;
+        const cards = estimator.querySelectorAll('.estimator-pkg-card');
+        const money = value => `KES ${value.toLocaleString('en-KE')}`;
+        const set = (id, value) => { const node = document.getElementById(id); if (node) node.textContent = value; };
+        let selected = 'express';
+        function calculate() {
+            const pkg = config.packages[selected];
+            const domain = document.getElementById('addon-domain')?.checked ? config.domainAnnual : 0;
+            const hosting = document.getElementById('addon-hosting')?.checked ? config.hostingAnnual : 0;
+            const care = document.getElementById('addon-maintenance')?.checked ? config.careMonthly : 0;
+            const annual = domain + hosting;
+            const firstYear = pkg.price + annual + 12 * care;
+            set('estimator-total', money(pkg.price));
+            set('estimator-deposit', money(pkg.deposit));
+            set('estimator-balance', money(pkg.price - pkg.deposit));
+            set('estimator-pkg-name', pkg.name);
+            set('estimator-timeline', pkg.delivery);
+            set('estimator-annual', `${money(annual)}/year selected`);
+            set('estimator-care', care ? `${money(care)}/month` : 'Not selected');
+            set('estimator-first-year', money(firstYear));
+            set('estimator-due-now', money(pkg.deposit + annual));
+            const list = document.getElementById('estimator-deliverables-list');
+            list.replaceChildren();
+            for (const value of [pkg.scope, ...pkg.features, 'Domain, hosting, paid licences and custom API work are separate.']) {
+                const item = document.createElement('li'); item.className = 'estimator-deliverable-item';
+                const span = document.createElement('span'); span.textContent = value; item.append(span); list.append(item);
             }
-            if (addonMaintenance && addonMaintenance.checked) {
-                items.push('Monthly Maintenance Care Plan (Daily Cloud Backups, Security Scans & Updates)');
-            }
-            deliverablesListEl.innerHTML = items.map(item => {
-                const isAddon = item.includes('Domain') || item.includes('Care Plan');
-                return `
-                <li class="estimator-deliverable-item${isAddon ? ' estimator-addon-item' : ''}">
-                    <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>${item}</span>
-                </li>
-            `}).join('');
-        };
-
-        const calculate = () => {
-            let total = selectedPrice;
-            let addonsList = [];
-
-            if (addonDomain && addonDomain.checked) {
-                total += 2500;
-                addonsList.push('Domain & Business Emails (+KES 2,500)');
-            }
-            if (addonMaintenance && addonMaintenance.checked) {
-                total += 2000;
-                addonsList.push('Monthly Care Plan (+KES 2,000)');
-            }
-
-            const deposit = Math.round(total * 0.5);
-            const balance = total - deposit;
-
-            totalEl.textContent = `KES ${total.toLocaleString()}`;
-            if (depositEl) depositEl.textContent = `KES ${deposit.toLocaleString()}`;
-            if (balanceEl) balanceEl.textContent = `KES ${balance.toLocaleString()}`;
-            if (pkgNameEl) pkgNameEl.textContent = selectedName;
-            if (timelineEl) timelineEl.textContent = selectedTime;
-
-            updateDeliverables(selectedKey);
-
-            // Generate WhatsApp conversion link with pre-filled message
-            let waMsg = `Hi Samuel, I used your website price calculator on Xclusive Tech:\n\n• Package: ${selectedName} (KES ${selectedPrice.toLocaleString()})\n• Turnaround: ${selectedTime}`;
-            if (addonsList.length > 0) {
-                waMsg += `\n• Add-ons: ${addonsList.join(', ')}`;
-            }
-            waMsg += `\n• Total: KES ${total.toLocaleString()} (50% deposit: KES ${deposit.toLocaleString()})\n• Deliverables: ${selectedName} — ${selectedTime}, 100% ownership & approval before final balance.\n\nCan you confirm your availability to get started?`;
-
-            waBtn.href = `https://wa.me/254722753819?text=${encodeURIComponent(waMsg)}`;
-        };
-
-        pkgCards.forEach(card => {
-            card.addEventListener('click', () => {
-                pkgCards.forEach(c => c.classList.remove('is-selected'));
-                card.classList.add('is-selected');
-
-                const radio = card.querySelector('input[type="radio"]');
-                if (radio) radio.checked = true;
-
-                selectedPrice = parseInt(card.getAttribute('data-price') || '15000', 10);
-                selectedName = card.getAttribute('data-name') || 'Express Sales Landing Page';
-                selectedTime = card.getAttribute('data-time') || '3–5 business days';
-                selectedKey = card.getAttribute('data-pkg') || 'express';
-
+            const message = `Hi Xclusive Tech, please confirm a written website quote:\n\nPackage: ${pkg.name}\nBase build: ${money(pkg.price)}\nScope: ${pkg.scope}\nTarget: ${pkg.delivery}, after deposit, complete content and access\nBuild deposit (50%): ${money(pkg.deposit)}\nBuild balance: ${money(pkg.price - pkg.deposit)}\n.co.ke domain selected: ${money(domain)}/year\nHosting selected: ${money(hosting)}/year\nOptional care: ${money(care)}/month\nBuild deposit + selected annual services: ${money(pkg.deposit + annual)} (care billed separately)\nFirst-year budget: ${money(firstYear)}\n\nTwo revision rounds; I supply approved copy and images. Please confirm renewal rates, any extras, payment-provider requirements and availability.`;
+            document.getElementById('estimator-whatsapp-btn').href = `https://wa.me/254722753819?text=${encodeURIComponent(message)}`;
+        }
+        cards.forEach(card => {
+            card.querySelector('input[type="radio"]').addEventListener('change', () => {
+                selected = card.dataset.pkg;
+                cards.forEach(item => item.classList.toggle('is-selected', item === card));
                 calculate();
             });
         });
-
-        if (addonDomain) addonDomain.addEventListener('change', calculate);
-        if (addonMaintenance) addonMaintenance.addEventListener('change', calculate);
-
-        // Initial calculation and deliverables render
+        for (const id of ['addon-domain','addon-hosting','addon-maintenance']) document.getElementById(id)?.addEventListener('change', calculate);
         calculate();
     }
 

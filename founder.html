@@ -42,76 +42,102 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=2">
     <link rel="shortcut icon" href="favicon.ico?v=2">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/styles.css?v=20261031contrast">
+    <link rel="stylesheet" href="css/styles.css?v=20261031rates">
 
     <!-- Structured Data: BreadcrumbList, ProfilePage, Person -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "BreadcrumbList",
+      "@id": "https://www.xclusivetech.co.ke/founder#breadcrumb",
+      "itemListElement": [
         {
-          "@type": "BreadcrumbList",
-          "@id": "https://www.xclusivetech.co.ke/founder#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.xclusivetech.co.ke/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Founder",
-              "item": "https://www.xclusivetech.co.ke/founder"
-            }
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.xclusivetech.co.ke/"
         },
         {
-          "@type": "ProfilePage",
-          "@id": "https://www.xclusivetech.co.ke/founder#webpage",
-          "url": "https://www.xclusivetech.co.ke/founder",
-          "name": "Samuel Kidemi — Founder & Lead Web Designer | Xclusive Tech",
-          "isPartOf": { "@id": "https://www.xclusivetech.co.ke/#website" },
-          "breadcrumb": { "@id": "https://www.xclusivetech.co.ke/founder#breadcrumb" },
-          "mainEntity": { "@id": "https://www.xclusivetech.co.ke/founder#person" }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://www.xclusivetech.co.ke/founder#person",
-          "name": "Samuel Kidemi Kisaga",
-          "alternateName": "Samuel Kidemi",
-          "jobTitle": ["Founder & Lead Web Designer", "UI/UX Specialist", "Front-End Developer"],
-          "award": "Top Digitally Fit Web Design Firm of the Year - Digitally Fit Awards",
-          "description": "Founder & Lead Web Designer & UI/UX Specialist — 6+ years experience, 120+ client websites delivered, and Top Digitally Fit Web Design Firm of the Year.",
-          "founder": [
-            { "@type": "Organization", "name": "Xclusive Tech", "url": "https://www.xclusivetech.co.ke/" },
-            { "@type": "Organization", "name": "Elite Designs Kenya", "url": "https://elitedesigns.co.ke" }
-          ],
-          "url": "https://www.xclusivetech.co.ke/founder",
-          "image": "https://www.xclusivetech.co.ke/assets/images/samuel-headshot.png",
-          "email": "mailto:sammiekidemi@gmail.com",
-          "telephone": "+254722753819",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Nairobi",
-            "addressCountry": "KE"
-          },
-          "worksFor": {
-            "@type": "Organization",
-            "@id": "https://www.xclusivetech.co.ke/#organization",
-            "name": "Xclusive Tech",
-            "url": "https://www.xclusivetech.co.ke/"
-          },
-          "knowsAbout": ["Web Design", "Front-End Development", "UI/UX Design", "Figma Design Systems", "SEO", "GEO", "AEO", "Brand Identity", "Graphic Design"],
-          "sameAs": [
-            "https://www.facebook.com/share/1CcjjbidRp/",
-            "https://www.instagram.com/xclusivetech.co.ke"
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Founder",
+          "item": "https://www.xclusivetech.co.ke/founder"
         }
       ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://www.xclusivetech.co.ke/founder#webpage",
+      "url": "https://www.xclusivetech.co.ke/founder",
+      "name": "Samuel Kidemi — Founder & Lead Web Designer | Xclusive Tech",
+      "isPartOf": {
+        "@id": "https://www.xclusivetech.co.ke/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://www.xclusivetech.co.ke/founder#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.xclusivetech.co.ke/founder#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.xclusivetech.co.ke/founder#person",
+      "name": "Samuel Kidemi Kisaga",
+      "alternateName": "Samuel Kidemi",
+      "jobTitle": [
+        "Founder & Lead Web Designer",
+        "UI/UX Specialist",
+        "Front-End Developer"
+      ],
+      "award": "Top Digitally Fit Web Design Firm of the Year - Digitally Fit Awards",
+      "description": "Founder & Lead Web Designer & UI/UX Specialist — 6+ years experience, 120+ client websites delivered, and Top Digitally Fit Web Design Firm of the Year.",
+      "founder": [
+        {
+          "@type": "Organization",
+          "name": "Xclusive Tech",
+          "url": "https://www.xclusivetech.co.ke/"
+        },
+        {
+          "@type": "Organization",
+          "name": "Elite Designs Kenya",
+          "url": "https://elitedesigns.co.ke"
+        }
+      ],
+      "url": "https://www.xclusivetech.co.ke/founder",
+      "image": "https://www.xclusivetech.co.ke/assets/images/samuel-headshot.png",
+      "email": "mailto:sammiekidemi@gmail.com",
+      "telephone": "+254722753819",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nairobi",
+        "addressCountry": "KE"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://www.xclusivetech.co.ke/#organization",
+        "name": "Xclusive Tech",
+        "url": "https://www.xclusivetech.co.ke/"
+      },
+      "knowsAbout": [
+        "Web Design",
+        "Front-End Development",
+        "UI/UX Design",
+        "Figma Design Systems",
+        "SEO",
+        "GEO",
+        "AEO",
+        "Brand Identity",
+        "Graphic Design"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/share/1CcjjbidRp/",
+        "https://www.instagram.com/xclusivetech.co.ke"
+      ]
     }
-    </script>
+  ]
+}</script>
     <!-- Google Preferred Sources Library -->
     <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
@@ -157,7 +183,7 @@
                     <!-- Light / Dark Mode Toggle Button -->
 
                     <!-- CTA button -->
-                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer" class="nav-cta-btn">
+                <a href="https://wa.me/254722753819?text=Hi+Xclusive+Tech%2C+I%27d+like+a+free+quote." target="_blank" rel="noopener noreferrer" class="nav-cta-btn">
                     Get a Free Quote
                 </a>
 
@@ -191,7 +217,7 @@
                 <a href="/portfolio" class="nav-mobile-link">Portfolio</a>
                 <a href="/blog/" class="nav-mobile-link">Blog</a>
                 <a href="/contact" class="nav-mobile-link">Contact</a>
-                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20a%20free%20quote." target="_blank" rel="noopener noreferrer" class="nav-mobile-cta">
+                <a href="https://wa.me/254722753819?text=Hi+Xclusive+Tech%2C+I%27d+like+a+free+quote." target="_blank" rel="noopener noreferrer" class="nav-mobile-cta">
                     Get a Free Quote
                 </a>
             </div>
@@ -218,7 +244,7 @@
                         <span class="px-4 py-2 rounded-full border border-slate-300 bg-slate-50 text-sm font-medium text-slate-800">120+ client websites delivered</span>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                        <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%27d%20like%20to%20connect%20about%20a%20web%20project." target="_blank" class="px-8 py-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-300 font-semibold text-center">Chat with me on WhatsApp</a>
+                        <a href="https://wa.me/254722753819?text=Hi+Samuel%2C+I%27d+like+to+connect+about+a+web+project." target="_blank" class="px-8 py-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-300 font-semibold text-center">Chat with me on WhatsApp</a>
                         <a href="/portfolio" class="px-8 py-4 rounded-full border border-slate-300 hover:border-blue-500 hover:bg-blue-50 hover:text-blue-700 text-slate-800 transition-all duration-300 font-semibold text-center shadow-sm">View Portfolio Work</a>
                     </div>
                 </div>
@@ -605,7 +631,7 @@
                         <span>See Our Past Works (120+ Live Sites)</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
-                    <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I'd%20like%20to%20see%20relevant%20examples%20of%20past%20websites%20you've%20built%20in%20my%20industry." target="_blank" rel="noopener noreferrer" class="past-works-btn-secondary">
+                    <a href="https://wa.me/254722753819?text=Hi+Samuel%2C+I%27d+like+to+see+relevant+examples+of+past+websites+you%27ve+built+in+my+industry." target="_blank" rel="noopener noreferrer" class="past-works-btn-secondary">
                         <svg class="w-4 h-4 fill-emerald-400" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.025 0-2.031.313-2.891.893L9.9 4.504C10.742 3.74 11.853 3.3 13.05 3.3c2.969 0 5.387 2.418 5.387 5.387 0 1.197-.46 2.307-1.224 3.15l.531 1.465c.592-.689.956-1.586.956-2.615 0-2.206-1.794-4-4-4zm0 0"/></svg>
                         <span>Ask on WhatsApp</span>
                     </a>
@@ -620,7 +646,7 @@
             <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Let's build something great</h2>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">Whether you want to work with me directly or through Xclusive Tech, I'd love to hear about your project.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-                <a href="https://wa.me/254722753819?text=Hi%20Samuel,%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" class="px-8 py-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-300 font-semibold">Message me on WhatsApp</a>
+                <a href="https://wa.me/254722753819?text=Hi+Samuel%2C+I%27d+like+to+discuss+a+project." target="_blank" class="px-8 py-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-300 font-semibold">Message me on WhatsApp</a>
                 <a href="mailto:sammiekidemi@gmail.com" class="px-8 py-4 rounded-full border border-slate-300 hover:border-blue-500 hover:bg-blue-50 hover:text-blue-700 text-gray-800 transition-all duration-300 font-semibold">Email me</a>
             </div>
         </div>
@@ -810,12 +836,12 @@
     </footer>
 
     <!-- WhatsApp Floating Action Button -->
-    <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20to%20discuss%20my%20project%20needs." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Contact lead engineer on WhatsApp" title="Chat on WhatsApp">
+    <a href="https://wa.me/254722753819?text=Hi+Xclusive+Tech%2C+I%27d+like+to+discuss+my+project+needs." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Contact lead engineer on WhatsApp" title="Chat on WhatsApp">
         <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.025 0-2.031.313-2.891.893L9.9 4.504C10.742 3.74 11.853 3.3 13.05 3.3c2.969 0 5.387 2.418 5.387 5.387 0 1.197-.46 2.307-1.224 3.15l.531 1.465c.592-.689.956-1.586.956-2.615 0-2.206-1.794-4-4-4zm0 0"/></svg>
     </a>
 
     <script src="/js/lead-api.js?v=20261031leads"></script>
-    <script src="js/main.js?v=20261031leads2"></script>
+    <script src="js/main.js?v=20261031rates"></script>
     <script src="js/animations.js?v=20261030buyer"></script>
     <script src="js/navigation.js?v=20261030buyer"></script>
     <script src="/js/measurement-config.js?v=20261030buyer" defer></script>

@@ -30,7 +30,7 @@
     "trackRecord": "120+ live websites delivered for real businesses across Kenya",
     "differentiators": [
       "Transparent, published pricing with no hidden costs",
-      "Fast delivery, typically 2-4 weeks from kick-off to launch",
+      "Published package targets from 2–3 business days for a content-ready landing page; final schedule agreed in writing.",
       "Mobile-first design",
       "Direct, reachable support on WhatsApp, not a ticketing queue",
       "M-Pesa payments accepted throughout, including domain registration"
@@ -39,39 +39,87 @@
   "pricing": {
     "currency": "KES",
     "launchOffer": {
-      "name": "Express Landing Page Offer",
-      "price": "KES 15,000",
-      "scope": "1 long-form high-converting sales page (5 conversion sections), WhatsApp floating chat, email lead capture form, Google Maps, sub-1.5s mobile speed, OpenGraph share preview, 100% upgrade credit within 6 months",
-      "delivery": "3-5 business days"
+      "id": "express",
+      "name": "Express Landing Page",
+      "price": "KES 10,000",
+      "priceAmount": 10000,
+      "depositAmount": 5000,
+      "delivery": "2–3 business days",
+      "scope": "One landing page, up to five sections",
+      "features": [
+        "Mobile-responsive layout",
+        "Foundational on-page SEO, contact form and WhatsApp",
+        "Two consolidated revision rounds on the agreed design",
+        "Client supplies approved copy and licensed images",
+        "30 days of bug-fix launch support"
+      ],
+      "revisionRounds": 2
     },
     "packages": [
       {
-        "name": "Starter Site",
-        "price": "KES 25,000-45,500",
-        "scope": "Up to 5 pages, custom UI/UX, mobile-first, basic on-page SEO, contact form + WhatsApp integration, 1 month free support",
-        "delivery": "2-3 weeks",
-        "fits": "Company profiles, logistics & transport, professional services, consultancies, single-location businesses"
+        "id": "starter",
+        "name": "Business Starter",
+        "price": "KES 20,000",
+        "priceAmount": 20000,
+        "depositAmount": 10000,
+        "delivery": "5–7 business days",
+        "scope": "Up to five pages",
+        "features": [
+          "Mobile-responsive layout",
+          "Foundational on-page SEO, contact form and WhatsApp",
+          "Two consolidated revision rounds on the agreed design",
+          "Client supplies approved copy and licensed images",
+          "30 days of bug-fix launch support"
+        ],
+        "revisionRounds": 2,
+        "fits": "Company profiles, professional services and small businesses"
       },
       {
+        "id": "growth",
         "name": "Business Growth",
-        "price": "KES 49,000-62,000",
-        "scope": "Up to 15 pages, everything in Starter, CMS for blog/news, advanced SEO + Google Analytics, social media integration, 3 months free support",
-        "delivery": "3-5 weeks",
-        "fits": "Multi-service companies, real estate & property listings, businesses that publish news/updates, catalogs without online checkout"
+        "price": "KES 35,000",
+        "priceAmount": 35000,
+        "depositAmount": 17500,
+        "delivery": "7–10 business days",
+        "scope": "Up to ten pages with a blog/CMS",
+        "features": [
+          "Mobile-responsive layout",
+          "Foundational on-page SEO, contact form and WhatsApp",
+          "Two consolidated revision rounds on the agreed design",
+          "Client supplies approved copy and licensed images",
+          "CMS handover and analytics/Search Console setup",
+          "90 days of bug-fix launch support"
+        ],
+        "revisionRounds": 2,
+        "fits": "Multi-service websites with regular publishing"
       },
       {
-        "name": "E-commerce Pro",
-        "price": "KES 72,000-85,000",
-        "scope": "Unlimited products, everything in Business Growth, secure M-Pesa (Daraja API) checkout, inventory management, customer accounts, 6 months priority support",
-        "delivery": "5-7 weeks",
-        "fits": "Retail shops, dropshipping, online stores, any business that needs real online checkout and inventory"
+        "id": "ecommerce",
+        "name": "Online Store",
+        "price": "KES 50,000",
+        "priceAmount": 50000,
+        "depositAmount": 25000,
+        "delivery": "10–15 business days",
+        "scope": "Standard store with up to 20 initial product uploads",
+        "features": [
+          "Mobile-responsive layout",
+          "Foundational on-page SEO, contact form and WhatsApp",
+          "Two consolidated revision rounds on the agreed design",
+          "Client supplies approved copy and licensed images",
+          "Standard supported M-Pesa payment gateway setup",
+          "Merchant approval and provider fees are separate",
+          "Six months of bug-fix launch support"
+        ],
+        "revisionRounds": 2,
+        "fits": "Retail shops using a standard supported checkout"
       },
       {
+        "id": "custom",
         "name": "Custom Solutions",
-        "price": "From KES 85,000+",
-        "scope": "Custom feature development, advanced API integrations, scalable architecture, dedicated project manager, ongoing maintenance & SLA, full ownership of code",
-        "delivery": "Scoped per project",
-        "fits": "Marketplaces, booking & reservation systems, custom web apps, businesses needing integrations beyond a standard website"
+        "price": "Written quote",
+        "scope": "Custom portals, bespoke APIs, automation and larger migrations are scoped separately.",
+        "delivery": "Agreed after scoping",
+        "fits": "Portals, marketplaces, bespoke integrations and larger workflows"
       }
     ],
     "carePlan": "Ongoing maintenance from KES 2,000/month, covers 4 hours of support and updates per month",
@@ -109,8 +157,33 @@
         "Auto-renewal reminders"
       ]
     },
-    "paymentTerms": "50% deposit before work begins. Remaining balance due on delivery, before publication or file transfer, under the agreed terms.",
-    "revisionPolicy": "Included revision rounds are specified in the quote; extra rounds and scope changes are quoted separately."
+    "paymentTerms": "50% of the agreed build fee to start, balance after review and approval before launch or file transfer. Annual domain/hosting charges are separate; optional care is billed monthly.",
+    "revisionPolicy": "Two consolidated revision rounds within the agreed design and scope; additional rounds or scope changes are quoted separately.",
+    "deliveryCondition": "Targets start after the 50% build deposit, complete content and required access are received. Feedback delays, scope changes and merchant/provider approvals can extend the schedule.",
+    "scopeBoundaries": "Two consolidated revision rounds. Client supplies approved text, brand assets and licensed images. Copywriting, extra pages, extra product uploads, custom APIs, paid licences and larger revisions are separately quoted before work starts.",
+    "hosting": "From KES 3,000/year; the first-year and renewal price are confirmed in writing.",
+    "extras": [
+      {
+        "name": "Additional standard page",
+        "price": "Separately quoted per additional page",
+        "scope": "Using the agreed design; client provides approved copy and images."
+      },
+      {
+        "name": "Additional product uploads",
+        "price": "Separately quoted per agreed batch",
+        "scope": "Client supplies organised titles, prices, descriptions and images; complex variants are quoted separately."
+      },
+      {
+        "name": "Extra revision round",
+        "price": "Separately quoted per extra round",
+        "scope": "Within the agreed design; redesigns and new functionality need a new quote."
+      },
+      {
+        "name": "Copywriting, custom APIs and paid licences",
+        "price": "Written quote",
+        "scope": "Agreed separately before work starts; no automatic charge."
+      }
+    ]
   },
   "services": [
     {
@@ -302,9 +375,9 @@
     }
   ],
   "geoFaq": [
-    "Websites start from an Express Landing Page package at KES 15,000 (single high-converting page, delivered in 3–5 days), with full business packages from KES 25,000.",
+    "Website builds start at KES 10,000 for a one-page landing page, KES 20,000 for Business Starter, KES 35,000 for Business Growth, and KES 50,000 for an Online Store. Domain, hosting and extras are separately itemised.",
     "Primary focus is Thika town and Kiambu County, also serving Nairobi and businesses across Kenya.",
     "All packages can be paid via M-Pesa.",
-    "Typical delivery is 2-3 weeks for a Starter Site."
+    "Business Starter targets 5–7 business days after deposit, complete content and access are received; provider approvals and feedback delays can extend delivery."
   ]
 }

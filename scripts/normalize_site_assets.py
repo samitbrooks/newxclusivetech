@@ -50,6 +50,9 @@ def normalize_html(source):
   source=re.sub(r'(<script\b[^>]*src="[^\"]*js/main.js)',r'<script src="/js/lead-api.js?v=20261031leads"></script>\n    \1',source,count=1)
  source=source.replace('css/styles.css?v=20261031leads', 'css/styles.css?v=20261031contrast')
  source=source.replace('main.js?v=20261031leads', 'main.js?v=20261031leads2')
+ source=re.sub(r'(css/styles\.css|js/main\.js)\?v=[^\"]+',r'\1?v=20261031rates',source)
+ if 'id=\"quote-estimator\"' in source and 'js/pricing-data.js' not in source:
+  source=re.sub(r'(<script[^>]*src=\"[^\"]*js/main.js)',r'<script src="/js/pricing-data.js?v=20261031rates"></script>\n    \1',source,count=1)
  return re.sub(r'(?m)^[ \t]+$', '', source)
 
 if __name__=='__main__':
