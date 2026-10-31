@@ -1,0 +1,2 @@
+Edited with built-in image_gen from the user-supplied notebook mockup.
+Prompt: Replace the cover and pencil brand lettering with "Xclusive" in black, matching the original perspective and bold typography. Preserve the purple background, notebook, pencil, orange ribbon, #02, 2 accents, lighting, shadows and composition.
