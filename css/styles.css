@@ -1029,7 +1029,7 @@ nav#navbar.shadow-md {
     }
 }
 
-/* Asymmetrical 2-Column Editorial Grid */
+/* The hero uses two semantic columns; 12-column utility spans create implicit rows here. */
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -1039,10 +1039,12 @@ nav#navbar.shadow-md {
 
 @media (min-width: 1024px) {
     .hero-grid {
-        grid-template-columns: 1.25fr 0.75fr;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
         gap: var(--space-12);
     }
 }
+
+.hero-grid > * { min-width: 0; }
 
 .hero-content {
     display: flex;
