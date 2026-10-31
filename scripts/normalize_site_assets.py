@@ -48,6 +48,7 @@ def normalize_html(source):
  source=re.sub(r'(css/styles\.css|css/utilities\.css|js/animations\.js|js/navigation\.js|js/main\.js|js/lead-events\.js)(?:\?[^\"]*)?(?=")',r'\1?v=20261031leads',source)
  if 'js/main.js' in source and 'js/lead-api.js' not in source:
   source=re.sub(r'(<script\b[^>]*src="[^\"]*js/main.js)',r'<script src="/js/lead-api.js?v=20261031leads"></script>\n    \1',source,count=1)
+ source=source.replace('css/styles.css?v=20261031leads', 'css/styles.css?v=20261031contrast')
  source=source.replace('main.js?v=20261031leads', 'main.js?v=20261031leads2')
  return re.sub(r'(?m)^[ \t]+$', '', source)
 

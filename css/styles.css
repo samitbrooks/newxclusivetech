@@ -3584,7 +3584,7 @@ nav#navbar.shadow-md {
 }
 
 .footer-location-sep {
-    color: #334155;
+    color: #94A3B8;
     user-select: none;
 }
 
@@ -6961,12 +6961,12 @@ section.county-dark-intake p {
 }
 
 .badge-check {
-    color: #10B981;
+    color: #047857;
     font-weight: 700;
 }
 
 .badge-warning {
-    color: #F59E0B;
+    color: #92400E;
 }
 
 /* Quote Estimator Interactive Card */
@@ -7478,7 +7478,7 @@ section.county-dark-intake p {
     font-weight: 700 !important;
     font-size: 14px !important;
     color: #FFFFFF !important;
-    background-color: #10B981 !important;
+    background-color: #047857 !important;
     box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3) !important;
     transition: all 0.25s ease !important;
     display: flex !important;
@@ -7490,7 +7490,7 @@ section.county-dark-intake p {
 }
 
 .estimator-whatsapp-btn:hover {
-    background-color: #059669 !important;
+    background-color: #065F46 !important;
     box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45) !important;
     transform: translateY(-1px) !important;
     color: #FFFFFF !important;
@@ -7629,3 +7629,13 @@ svg.h-6, .h-6 { height: 24px !important; }
 /* Header CTA visibility rules must not hide in-content quote buttons on mobile. */
 .buyer-section .nav-cta-btn { display: inline-flex; align-items: center; justify-content: center; max-width: 100%; white-space: normal; text-align: center; }
 #web-design, #seo, #ecommerce { scroll-margin-top: 6rem; }
+
+/* Preserve readable typography on the site's intentionally dark footers. */
+:root :is(.site-footer, footer.bg-slate-900, footer.bg-gray-900) :is(h2, h3, h4, h5, p, .font-bold, .font-semibold) {
+    color: #E2E8F0 !important;
+}
+/* White button/badge labels require deeper brand colours than decorative fills. */
+:root .bg-emerald-500.text-white { background-color: #047857 !important; }
+:root .bg-amber-500.text-white { background-color: #92400E !important; }
+
+.award-photo-caption { background: #0F172A; padding: .75rem; border-radius: .5rem; }

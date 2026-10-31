@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=2">
     <link rel="shortcut icon" href="favicon.ico?v=2">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/styles.css?v=20261030buyer">
+    <link rel="stylesheet" href="css/styles.css?v=20261031contrast">
 
     <!-- Structured Data: Service, WebApplication, BreadcrumbList, FAQPage -->
     <script type="application/ld+json">
@@ -190,13 +190,10 @@
             transition: all 0.2s ease;
         }
         .pill-toggle.active {
-            background: #0284c7;
+            background: #0369a1;
             color: #ffffff;
             border-color: #0284c7;
             box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
-        }
-        .calc-box-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
         }
         .custom-slider {
             -webkit-appearance: none;
@@ -221,6 +218,23 @@
         .custom-slider::-webkit-slider-thumb:hover {
             transform: scale(1.15);
         }
+
+        /* Explicit light surfaces prevent shared typography rules hiding estimate text. */
+        .print-estimate { background: #f8fafc; color: #0f172a; }
+        .print-estimate :is(p, span, label) { color: #334155; }
+        .print-estimate :is(#summary-copies, [id^="cost-"]) { color: #0f172a; }
+        .print-estimate :is(#grand-total, #summary-unit, #summary-weight) { color: #1d4ed8; }
+        .print-estimate #print-validation { color: #92400e; }
+        .print-estimate #btn-whatsapp-quote,
+        .print-estimate #btn-whatsapp-quote * { color: #fff !important; }
+        .print-estimate #btn-whatsapp-quote { background: #047857; }
+        .print-estimate #btn-whatsapp-quote:hover { background: #065f46; }
+        .print-estimate #btn-print-proforma { color: #0f172a; background: #fff; }
+        .print-estimate #btn-print-proforma:hover { background: #e2e8f0; }
+        .print-table-heading th { color: #0f172a; background: #e2e8f0; }
+        .print-consultation { background: #f1f5f9; color: #0f172a; border-top: 1px solid #e2e8f0; }
+        .print-consultation h3 { color: #0f172a; }
+        .print-consultation p { color: #475569; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden antialiased">
@@ -669,88 +683,88 @@
 
                     <!-- Right: Sticky Live Cost Breakdown (5 cols) -->
                     <div class="lg:col-span-5 sticky top-24 space-y-6">
-                        <div class="calc-box-gradient text-white p-6 sm:p-8 rounded-2xl border border-slate-700/80 shadow-2xl space-y-6">
+                        <div class="print-estimate text-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-2xl space-y-6">
 
-                            <div class="flex items-center justify-between pb-4 border-b border-slate-700">
+                            <div class="flex items-center justify-between pb-4 border-b border-slate-200">
                                 <div>
-                                    <p class="text-xs uppercase tracking-widest text-sky-400 font-bold">Live Line-Item Estimate</p>
-                                    <p id="summary-copies" class="text-2xl font-black text-white">100 Copies</p>
+                                    <p class="text-xs uppercase tracking-widest text-blue-700 font-bold">Live Line-Item Estimate</p>
+                                    <p id="summary-copies" class="text-2xl font-black text-slate-900">100 Copies</p>
                                 </div>
                                 <div class="text-right">
-                                    <p class="text-xs text-slate-400">Unit Price</p>
-                                    <p id="summary-unit" class="text-xl font-bold text-amber-400">KES 245.00</p>
+                                    <p class="text-xs text-slate-600">Unit Price</p>
+                                    <p id="summary-unit" class="text-xl font-bold text-blue-700">KES 245.00</p>
                                 </div>
                             </div>
 
                             <!-- Weight calculation -->
-                            <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-between text-xs">
+                            <div class="p-3.5 rounded-xl bg-white border border-slate-200 flex items-center justify-between text-xs">
                                 <div>
-                                    <span class="text-slate-400">Estimated Total Press Weight:</span>
-                                    <p id="summary-weight" class="font-mono font-bold text-sky-300">~24.4 kg (244g / copy)</p>
+                                    <span class="text-slate-600">Estimated Total Press Weight:</span>
+                                    <p id="summary-weight" class="font-mono font-bold text-blue-700">~24.4 kg (244g / copy)</p>
                                 </div>
-                                <span class="px-2 py-1 rounded bg-slate-700 text-slate-300 text-[10px] font-semibold">Logistics Ready</span>
+                                <span class="px-2 py-1 rounded bg-slate-200 text-slate-600 text-[10px] font-semibold">Logistics Ready</span>
                             </div>
 
                             <!-- Line items breakdown -->
                             <div class="space-y-2.5 text-xs">
-                                <div class="flex justify-between text-slate-300">
+                                <div class="flex justify-between text-slate-600">
                                     <span>Inner Pages (<span id="line-pages">48pp</span>, <span id="line-paper">130gsm</span>):</span>
-                                    <span id="cost-inner" class="font-mono font-semibold text-white">KES 17,280</span>
+                                    <span id="cost-inner" class="font-mono font-semibold text-slate-900">KES 17,280</span>
                                 </div>
-                                <div class="flex justify-between text-slate-300">
+                                <div class="flex justify-between text-slate-600">
                                     <span>Cover &amp; Lamination (<span id="line-cover">300gsm Matt</span>):</span>
-                                    <span id="cost-cover" class="font-mono font-semibold text-white">KES 4,200</span>
+                                    <span id="cost-cover" class="font-mono font-semibold text-slate-900">KES 4,200</span>
                                 </div>
-                                <div class="flex justify-between text-slate-300">
+                                <div class="flex justify-between text-slate-600">
                                     <span>Spine Bindery (<span id="line-binding">Perfect Bound</span>):</span>
-                                    <span id="cost-binding" class="font-mono font-semibold text-white">KES 2,000</span>
+                                    <span id="cost-binding" class="font-mono font-semibold text-slate-900">KES 2,000</span>
                                 </div>
-                                <div class="flex justify-between text-slate-300">
+                                <div class="flex justify-between text-slate-600">
                                     <span>Finishing &amp; Add-ons:</span>
-                                    <span id="cost-addons" class="font-mono font-semibold text-white">KES 1,500</span>
+                                    <span id="cost-addons" class="font-mono font-semibold text-slate-900">KES 1,500</span>
                                 </div>
-                                <div class="flex justify-between text-slate-300">
+                                <div class="flex justify-between text-slate-600">
                                     <span>Logistics (<span id="line-zone">Kilimani Pickup</span>):</span>
-                                    <span id="cost-logistics" class="font-mono font-semibold text-white">KES 0</span>
+                                    <span id="cost-logistics" class="font-mono font-semibold text-slate-900">KES 0</span>
                                 </div>
-                                <div id="discount-row" class="flex justify-between text-emerald-400 font-semibold">
+                                <div id="discount-row" class="flex justify-between text-emerald-700 font-semibold">
                                     <span>Volume Discount:</span>
                                     <span id="cost-discount" class="font-mono">-KES 0</span>
                                 </div>
                             </div>
 
                             <!-- Total -->
-                            <div class="pt-4 border-t border-slate-700 space-y-2">
+                            <div class="pt-4 border-t border-slate-200 space-y-2">
                                 <div class="flex items-center justify-between">
-                                    <span class="text-sm font-bold text-slate-300">ESTIMATED TOTAL</span>
+                                    <span class="text-sm font-bold text-slate-600">ESTIMATED TOTAL</span>
                                     <div class="text-right">
-                                        <p id="grand-total" class="text-3xl sm:text-4xl font-black text-sky-400">KES 24,980</p>
+                                        <p id="grand-total" class="text-3xl sm:text-4xl font-black text-blue-700">KES 24,980</p>
                                     </div>
                                 </div>
-                                <div class="flex items-center justify-between text-[11px] text-slate-400">
+                                <div class="flex items-center justify-between text-[11px] text-slate-600">
                                     <label class="flex items-center gap-1.5 cursor-pointer">
                                         <input type="checkbox" id="include-vat" class="rounded text-sky-500">
                                         <span>Show with 16% VAT (Invoice)</span>
                                     </label>
-                                    <span id="vat-breakdown" class="font-mono text-slate-400">VAT (16%): KES 3,996</span>
+                                    <span id="vat-breakdown" class="font-mono text-slate-600">VAT (16%): KES 3,996</span>
                                 </div>
                             </div>
 
                             <!-- Call to Actions -->
                             <div class="space-y-3 pt-2">
-                                <p id="print-validation" role="status" class="text-sm text-amber-300"></p><p class="text-xs text-slate-300 leading-relaxed">Indicative estimate only. Final artwork, production specifications, tax and delivery are confirmed in a written quotation before an order is accepted.</p>
+                                <p id="print-validation" role="status" class="text-sm text-amber-800"></p><p class="text-xs text-slate-600 leading-relaxed">Indicative estimate only. Final artwork, production specifications, tax and delivery are confirmed in a written quotation before an order is accepted.</p>
 <a id="btn-whatsapp-quote" href="#" target="_blank" class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
                                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.101-.476-.15-.677.15-.201.3-.778.979-.954 1.18-.176.201-.351.226-.652.076-.301-.15-1.27-.468-2.42-1.492-.895-.798-1.5-1.784-1.676-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.35.452-.526.15-.176.201-.3.301-.501.101-.2.05-.376-.025-.526-.075-.15-.677-1.632-.928-2.235-.245-.589-.494-.509-.677-.518-.176-.008-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.511 0 1.482 1.08 2.912 1.23 3.113.15.201 2.126 3.245 5.15 4.553.719.311 1.28.497 1.718.636.723.23 1.38.198 1.901.12.58-.088 1.78-.727 2.032-1.43.251-.703.251-1.305.176-1.43-.076-.126-.276-.201-.577-.352z"/></svg>
                                     <span>Send Quote &amp; Order via WhatsApp</span>
                                 </a>
 
-                                <button type="button" id="btn-print-proforma" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 font-semibold text-xs transition-all duration-200 flex items-center justify-center gap-2">
-                                    <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                                <button type="button" id="btn-print-proforma" class="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-200 text-slate-900 border border-slate-300 font-semibold text-xs transition-all duration-200 flex items-center justify-center gap-2">
+                                    <svg class="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
                                     <span>Generate Formal Printable Proforma</span>
                                 </button>
                             </div>
 
-                            <p class="text-[11px] text-slate-400 text-center">
+                            <p class="text-[11px] text-slate-600 text-center">
                                 Estimates require written confirmation after artwork review. 50% deposit on order, 50% on pre-dispatch approval.
                             </p>
                         </div>
@@ -897,7 +911,7 @@
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse border border-slate-200 rounded-xl overflow-hidden shadow-sm">
                     <thead>
-                        <tr class="bg-slate-900 text-white text-xs uppercase tracking-wider">
+                        <tr class="print-table-heading bg-slate-100 text-slate-900 text-xs uppercase tracking-wider">
                             <th class="p-4 font-bold">Paper Weight</th>
                             <th class="p-4 font-bold">Paper Type</th>
                             <th class="p-4 font-bold">Tactile Feel &amp; Opacity</th>
@@ -1104,16 +1118,13 @@
     </div>
 
     <!-- Footnote CTA Strip -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white">
+    <section class="print-consultation py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
             <div class="space-y-2 max-w-2xl text-center md:text-left">
-                <h3 class="text-2xl sm:text-3xl font-bold">Need a Custom Pre-Press Consultation or Sample Kit?</h3>
-                <p class="text-blue-100 text-sm">Visit our Kilimani headquarters or talk directly with our senior print estimators. We provide paper swatch fans and previous client samples.</p>
+                <h3 class="text-2xl sm:text-3xl font-bold">Need help planning your print project?</h3>
+                <p class="text-slate-600 text-sm">Talk to us about paper, binding, artwork and quantities before requesting a written quote.</p>
             </div>
             <div class="flex flex-wrap gap-4 justify-center">
-                <a href="https://wa.me/254722753819?text=Hi%20Xclusive%20Tech,%20I%27d%20like%20to%20request%20a%20commercial%20print%20sample%20pack." target="_blank" class="px-6 py-3 rounded-xl bg-white text-blue-700 font-bold text-sm hover:bg-blue-50 transition-colors shadow-lg">
-                    Request Physical Sample Pack
-                </a>
                 <a href="tel:+254722753819" class="px-6 py-3 rounded-xl bg-blue-800/80 hover:bg-blue-800 text-white font-bold text-sm border border-blue-400 transition-colors">
                     Call +254 722 753 819
                 </a>
