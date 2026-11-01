@@ -32,8 +32,8 @@ async def main():
   assert not errors,errors
   await page.goto(BASE+'/printing',wait_until='domcontentloaded');assert await page.locator('h1').count()==1
   total=await page.locator('#print-spec-summary').inner_text();await page.locator('#pub-qty').fill('200');await page.locator('#pub-qty').dispatch_event('input');assert await page.locator('#print-spec-summary').inner_text()!=total
-  await page.locator('#pub-pages').fill('9');await page.locator('#pub-pages').dispatch_event('input');assert await page.locator('#calculator').get_attribute('data-valid')=='false';assert await page.locator('#btn-whatsapp-quote').get_attribute('href') is None
-  await page.locator('#pub-pages').fill('52');await page.locator('#pub-pages').dispatch_event('input');assert await page.locator('#pub-binding').input_value()=='perfect';assert await page.locator('#calculator').get_attribute('data-valid')=='true'
+  await page.locator('#pub-binding').select_option('saddle');await page.locator('#pub-pages').fill('9');await page.locator('#pub-pages').dispatch_event('input');assert await page.locator('#calculator').get_attribute('data-valid')=='false';assert await page.locator('#btn-whatsapp-quote').get_attribute('href') is None
+  await page.locator('#pub-binding').select_option('perfect');await page.locator('#pub-pages').fill('52');await page.locator('#pub-pages').dispatch_event('input');assert await page.locator('#pub-binding').input_value()=='perfect';assert await page.locator('#calculator').get_attribute('data-valid')=='true'
   assert await page.locator('body').evaluate('(e)=>e.scrollWidth <= innerWidth+1')
 
   await page.set_viewport_size({'width':1440,'height':1000});await page.goto(BASE+'/printing',wait_until='domcontentloaded');await page.screenshot(path='/tmp/printing-desktop.png',full_page=True)

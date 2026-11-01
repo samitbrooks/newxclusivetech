@@ -35,7 +35,17 @@ export function normalizeLead(body, request) {
             try { if (!['https:', 'http:'].includes(new URL(artworkLink).protocol)) throw Error(); }
             catch { throw new RequestError('Please enter a valid artwork download link.'); }
         }
-        message = [`Product: ${product}`, requested ? `Requested date: ${requested} (subject to confirmation)` : '', artworkLink ? `Artwork link: ${artworkLink}` : '', message].filter(Boolean).join('\n\n');
+        // Native (no-JavaScript) printing submissions retain only the selected family's fields.
+        const publication = [['pub-size','Finished size'],['pub-pages','Inner pages'],['pub-qty','Complete copies'],['pub-sides','Printed sides'],['pub-colour','Print colour'],['pub-paper','Inner paper'],['pub-cover-stock','Cover'],['pub-lamination','Cover finish'],['pub-binding','Binding']];
+        const stationery = [['stationery-type','Stationery product'],['stationery-qty','Quantity'],['stationery-size','Finished size'],['stationery-sides','Printed sides'],['stationery-stock','Stock'],['stationery-finish','Finish']];
+        if (body['stationery-type'] === 'ncr') stationery.push(['ncr-parts','Parts per set'],['ncr-sets','Sets per book'],['ncr-numbering','Numbering']);
+        const display = [['display-type','Display product'],['display-qty','Quantity'],['display-width','Width (cm)'],['display-height','Height (cm)'],['display-material','Material'],['display-mount','Hardware'],['display-use','Use']];
+        const fields = product === 'Business stationery' ? stationery : product === 'Events & display' ? display : product === 'Other / help me choose' ? [] : publication;
+        fields.push(['pub-speed','Production preference'],['pub-zone','Receive order'],['delivery-town','Destination'],['artwork-help','Artwork readiness'],['order-type','Project type'],['billing-tax','Tax reference'],['purchase-order','Purchase-order reference'],['billing-address','Billing address']);
+        if (body['order-type'] === 'repeat') fields.push(['previous-reference','Previous reference'],['repeat-changes','Repeat changes']);
+        fields.push(['add-proof','Physical proof'],['add-prepress','Pre-press review'],['add-spotuv','Spot UV'],['add-shrinkwrap','Protective packaging']);
+        const details = fields.filter(([key]) => body[key]).map(([key, label]) => `${label}: ${text(body[key], 500)}`).join('\n');
+        message = text([`Product: ${product}`, requested ? `Requested date: ${requested} (subject to confirmation)` : '', artworkLink ? `Artwork link: ${artworkLink}` : '', details, message].filter(Boolean).join('\n\n'), 8000);
     }
     let path = '/';
     try { const page = new URL(body.page_path || request.headers.get('referer') || '/', request.url); if (page.origin === new URL(request.url).origin) path = page.pathname.slice(0, 250); } catch {}

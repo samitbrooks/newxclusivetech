@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="96mm" height="56mm" viewBox="0 0 96 56">
+<title>Xclusive Tech: 90 × 50 mm finished artwork template, 3 mm bleed</title>
+<desc>Document size includes 3 mm bleed on every edge. Add your artwork to the Artwork group. Extend backgrounds to the outer edge. Keep important text within the dashed safe area. Delete the entire Guides group and these sample labels before exporting your print PDF. Confirm stock, finishing, spine or hardware allowances with Xclusive Tech before production.</desc>
+<g id="Artwork"><rect width="96" height="56" fill="white"/></g>
+<g id="Guides-DELETE-BEFORE-EXPORT" fill="none" stroke-width="0.3">
+<rect x="0.2" y="0.2" width="95.6" height="55.6" stroke="#c026d3"/>
+<rect x="3" y="3" width="90" height="50" stroke="#15803d"/>
+<rect x="6" y="6" width="84" height="44" stroke="#1d4ed8" stroke-dasharray="2 1"/>
+<g fill="#334155" stroke="none" font-family="Arial,sans-serif" font-size="2.5714285714285716" text-anchor="middle">
+<text x="48.0" y="22.400000000000002">XCLUSIVE TECH · 90 × 50 mm</text>
+<text x="48.0" y="27.542857142857144">Magenta: bleed edge · Green: trim</text>
+<text x="48.0" y="32.68571428571429">Blue dashed: text safe area</text>
+<text x="48.0" y="37.828571428571436">DELETE Guides group before PDF export</text>
+</g></g></svg>
