@@ -1,4 +1,4 @@
-/* Printing quote intake: estimate and artwork accompany a durably saved enquiry. */
+/* Printing quote intake: specifications and artwork accompany a durably saved enquiry. */
 (() => {
  const form=document.getElementById('printing-quote-form');if(!form)return;
  const product=document.getElementById('print-product'),fileInput=document.getElementById('print-artwork'),status=document.getElementById('print-upload-status'),remove=document.getElementById('print-remove-artwork'),feedback=document.getElementById('print-quote-feedback');
@@ -7,11 +7,20 @@
  const active=()=>document.querySelector('.tab-pane:not(.hidden)')?.id;
  function specifications(){
   if(product.value==='Other / help me choose')return 'Custom print project. Please describe sizes, quantities and finishes in your project notes.';
-  if(active()==='tab-publications')return [`Product: ${product.value}`,`Format: ${label('pub-size')}`,`Inner pages: ${label('pub-pages')}`,`Quantity: ${label('pub-qty')}`,`Print: ${document.querySelector('.color-toggle.active')?.textContent.trim()||'Full colour'}`,`Paper: ${label('pub-paper')}`,`Cover: ${label('pub-cover-stock')}`,`Lamination: ${label('pub-lamination')}`,`Binding: ${label('pub-binding')}`,`Turnaround: ${label('pub-speed')}`,`Delivery: ${label('pub-zone')}`,`Finishing / add-ons: ${['add-proof','add-prepress','add-spotuv','add-shrinkwrap'].filter(id=>document.getElementById(id)?.checked).map(id=>document.getElementById(id).closest('label')?.innerText.trim().replace(/\s+/g,' ')).filter(Boolean).join('; ')||'None selected'}`,`Indicative estimate: ${text('grand-total')} (${document.getElementById('include-vat').checked?'including VAT estimate':'excluding VAT'})`].join('\n');
+  if(active()==='tab-publications')return [`Product: ${product.value}`,`Format: ${label('pub-size')}`,`Inner pages: ${label('pub-pages')}`,`Quantity: ${label('pub-qty')}`,`Print: ${document.querySelector('.color-toggle.active')?.textContent.trim()||'Full colour'}`,`Paper: ${label('pub-paper')}`,`Cover: ${label('pub-cover-stock')}`,`Lamination: ${label('pub-lamination')}`,`Binding: ${label('pub-binding')}`,`Turnaround: ${label('pub-speed')}`,`Delivery: ${label('pub-zone')}`,`Finishing / add-ons: ${['add-proof','add-prepress','add-spotuv','add-shrinkwrap'].filter(id=>document.getElementById(id)?.checked).map(id=>document.getElementById(id).closest('label')?.querySelector('.font-bold')?.textContent.trim()).filter(Boolean).join('; ')||'None selected'}`].join('\n');
   if(active()==='tab-stationery')return ['Product: Business stationery',...['card-qty','folder-qty','letterhead-qty'].map((id,i)=>`${['Business cards','Presentation folders','Letterheads'][i]}: ${label(id)}`),`Spot UV: ${document.getElementById('card-spotuv')?.checked?'Requested, quoted separately':'Not requested'}`, 'Final quote confirms finishing, delivery and tax.'].join('\n');
-  return 'Product: Events & display. Include item type, dimensions, quantities and event date in your project notes. Display prices are indicative; the written quote confirms the complete scope.';
+  return 'Product: Events & display. Include item type, dimensions, quantities and event date in your project notes. The written quote confirms the complete scope and current pricing.';
  }
- function refresh(){document.getElementById('print-spec-summary').textContent=specifications();const total=['card-qty','folder-qty','letterhead-qty'].reduce((n,id)=>n+Number(document.getElementById(id)?.value||0),0);document.getElementById('stationery-estimate').textContent=`Configured stationery base: KES ${total.toLocaleString()}. Finishing, delivery and tax are confirmed separately.`}
+ function refresh(){
+  const specs=specifications();document.getElementById('print-spec-summary').textContent=specs;
+  document.getElementById('print-live-summary').textContent=specs;
+  document.getElementById('stationery-estimate').textContent='Selected quantities will be included in your written quote request.';
+  const button=document.getElementById('btn-whatsapp-quote');
+  const valid=active()!=='tab-publications'||document.getElementById('calculator').dataset.valid==='true';
+  if(valid){button.href='https://wa.me/254722753819?text='+encodeURIComponent('Hi Xclusive Tech Printing Desk, please quote for:\n\n'+specs+'\n\nPlease confirm current pricing, VAT, artwork requirements, production timing and delivery.');button.removeAttribute('aria-disabled')}
+  else {button.removeAttribute('href');button.setAttribute('aria-disabled','true')}
+ }
+
  document.querySelectorAll('[name="print-speed-choice"]').forEach(radio=>radio.addEventListener('change',()=>{const select=document.getElementById('pub-speed');select.value=radio.value;select.dispatchEvent(new Event('change',{bubbles:true}))}));
  function setFamily(value,scroll){
   product.value=value;if(value==='Other / help me choose'){refresh();return}const target=value==='Business stationery'?'tab-stationery':value==='Events & display'?'tab-banners':'tab-publications';
@@ -32,7 +41,7 @@
  const drop=document.getElementById('artwork-dropzone');for(const type of ['dragenter','dragover'])drop.addEventListener(type,e=>{e.preventDefault();drop.classList.add('is-dragging')});for(const type of ['dragleave','drop'])drop.addEventListener(type,e=>{e.preventDefault();drop.classList.remove('is-dragging')});drop.addEventListener('drop',e=>{if(sending||!e.dataTransfer.files.length)return;const data=new DataTransfer();data.items.add(e.dataTransfer.files[0]);fileInput.files=data.files;chosen()});
  form.addEventListener('submit',async e=>{
   e.preventDefault();e.stopPropagation();if(sending||!form.reportValidity())return;
-  if(product.value!=='Other / help me choose'&&active()==='tab-publications'&&document.getElementById('btn-print-proforma').disabled){feedback.textContent='Please correct the page count and quantity in the calculator before submitting.';feedback.focus();return}
+  if(product.value!=='Other / help me choose'&&active()==='tab-publications'&&document.getElementById('calculator').dataset.valid!=='true'){feedback.textContent='Please correct the page count and quantity in the specification builder before submitting.';feedback.focus();return}
   const file=fileInput.files[0];if(file&&!validFile(file)){feedback.textContent='Please choose a supported file, remove it to send artwork later, or share an artwork link.';feedback.focus();return}
   sending=true;const button=form.querySelector('[type=submit]');button.disabled=true;fileInput.disabled=true;remove.disabled=true;button.textContent=file?'Uploading artwork…':'Saving quote request…';feedback.textContent='';
   try{

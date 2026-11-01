@@ -64,3 +64,5 @@ html { scroll-padding-top: 7rem; }
 .print-quote-grid > *, .print-field-pair > *, .print-quote-form label { min-width:0; }
 .print-quote-form small,.print-privacy,.print-brief { overflow-wrap:anywhere; }
 @media(max-width:767px){.print-product-grid,.print-quote-grid,.print-guide-grid,.print-field-pair {grid-template-columns:minmax(0,1fr)}}
+
+.print-live-summary { white-space:pre-wrap; overflow-wrap:anywhere; font:inherit; font-size:.875rem; line-height:1.8; color:#334155; }

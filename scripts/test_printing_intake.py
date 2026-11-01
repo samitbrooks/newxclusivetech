@@ -11,7 +11,7 @@ async def main():
   async def saved(r):calls.append(r.request.post_data_json);await r.fulfill(status=201,content_type='application/json',body='{"success":true,"status":"saved","reference":"XT-20261031-ABCDEF123456"}')
   await page.route('**/api/leads',fail)
   await page.goto(BASE+'/printing',wait_until='domcontentloaded');assert await page.locator('nav').get_by_text('Launch Calculator',exact=True).count()==0;assert await page.locator('nav a[href="#calculator"]').count()==2
-  assert await page.locator('.print-product img').count()==4
+  assert await page.locator('.print-hero-figure img').count()==1
   for img in await page.locator('.print-product img').all():await img.scroll_into_view_if_needed();await page.wait_for_function('(e)=>e.complete&&e.naturalWidth>0',arg=await img.element_handle())
   assert not await page.locator('#mobile-menu-btn').is_visible()
   await page.locator('[data-print-family="Reports & training materials"]').click();assert await page.locator('#pub-binding').input_value()=='wireo';assert 'Reports & training materials' in await page.locator('#print-spec-summary').inner_text()
@@ -28,6 +28,6 @@ async def main():
   await page.set_viewport_size({'width':390,'height':844});await page.reload(wait_until='domcontentloaded');assert await page.locator('body').evaluate('(e)=>e.scrollWidth<=innerWidth+1');await page.locator('#mobile-menu-btn').click();await page.wait_for_timeout(200);assert await page.locator('#mobile-menu').is_visible()
   await page.locator('#mobile-menu-btn').click();await page.locator('.print-product').first.screenshot(path='/tmp/printing-product-mobile.png')
   await page.set_viewport_size({'width':1440,'height':1000});await page.goto(BASE+'/printing',wait_until='domcontentloaded');await page.locator('#print-quote').screenshot(path='/tmp/printing-artwork-desktop.png');assert not errors,errors
-  print('PASS: navbar link, original mockups, product-to-calculator presets, spec summary, custom product, file validation, upload/quote retry and idempotency, mobile layout/menu; no browser errors or real submissions')
+  print('PASS: navbar link, print imagery, product-to-calculator presets, spec summary, custom product, file validation, upload/quote retry and idempotency, mobile layout/menu; no browser errors or real submissions')
   await b.close()
 asyncio.run(main())
