@@ -100,3 +100,12 @@ html { scroll-padding-top: 7rem; }
 .print-product button {margin-top:1rem}
 @media(max-width:900px){.print-builder-grid{grid-template-columns:minmax(0,1fr)}.print-template-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.print-fields,.print-template-grid{grid-template-columns:minmax(0,1fr)}.print-config,.print-estimate{padding:1.2rem}.print-tabs button{width:100%}}
+/* Shorter adjacent panels follow the page within their own section. */
+@media (min-width:1024px) and (prefers-reduced-motion:no-preference) {
+ .print-builder-grid > .print-estimate,
+ .print-quote-grid > .print-brief {
+  position:sticky;
+  top:var(--print-follow-top,7rem);
+  align-self:start;
+ }
+}

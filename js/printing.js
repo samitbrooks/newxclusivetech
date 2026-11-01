@@ -79,5 +79,20 @@
   }catch(error){feedback.textContent=`${error.name==='AbortError'?'The upload timed out.':error.message||'We could not confirm the request was saved.'} Your details are still here. Retry, remove the file and share a link, or contact us on WhatsApp.`;feedback.style.color='#991b1b';button.disabled=false;button.textContent='Retry print quote request';feedback.focus();}
   finally{sending=false;fileInput.disabled=false;remove.disabled=false}
  });
- refresh();
+ // CSS sticky supplies the scroll effect without scroll listeners or transforms.
+ // Tall briefs pin at their bottom so every line and action stays reachable.
+ const followers=document.querySelectorAll('.print-builder-grid > .print-estimate,.print-quote-grid > .print-brief');
+ const header=document.querySelector('.print-navbar');
+ let followFrame=0;
+ function sizeFollowers(){
+  cancelAnimationFrame(followFrame);
+  followFrame=requestAnimationFrame(()=>{
+   const inset=(header?.getBoundingClientRect().height||88)+24;
+   followers.forEach(panel=>panel.style.setProperty('--print-follow-top',Math.min(inset,window.innerHeight-panel.offsetHeight-24)+'px'));
+  });
+ }
+ const followObserver=new ResizeObserver(sizeFollowers);
+ followers.forEach(panel=>followObserver.observe(panel));if(header)followObserver.observe(header);
+ window.addEventListener('resize',sizeFollowers,{passive:true});
+ refresh();sizeFollowers();
 })();
