@@ -40,7 +40,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=2">
     <link rel="shortcut icon" href="favicon.ico?v=2">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="css/styles.css?v=20261031contrast">
+    <link rel="stylesheet" href="css/styles.css?v=20261101contacts">
 
     <!-- Structured Data: Service, WebApplication, BreadcrumbList, FAQPage -->
     <script type="application/ld+json">
@@ -376,7 +376,7 @@
 <details class="print-form-group"><summary>Ordering for a company or organisation? (optional)</summary><div class="print-field-pair"><label for="company">Company / organisation<input id="company" name="company" type="text" value="" form="printing-quote-form" maxlength="200" autocomplete="organization"></label><label for="billing-tax">Billing tax / KRA PIN reference<input id="billing-tax" name="billing-tax" type="text" value="" form="printing-quote-form" maxlength="60"></label><label for="purchase-order">Purchase-order / procurement reference<input id="purchase-order" name="purchase-order" type="text" value="" form="printing-quote-form" maxlength="100"></label></div><label for="billing-address">Billing address<textarea id="billing-address" name="billing-address" rows="2" maxlength="300"></textarea></label><p>Include any invoice requirements in your notes. A purchase-order reference does not grant credit; any LPO or credit arrangement requires separate written approval.</p></details>
         <label for="print-notes">Project notes / other sizes and quantities<textarea id="print-notes" name="message" rows="3" maxlength="1800" placeholder="For example: 200 A5 event programmes, 32 pages, required in Kisumu. Mention design help if needed."></textarea></label>
         <div id="artwork-dropzone" class="print-upload"><label for="print-artwork"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 16V3m-5 5 5-5 5 5M4 15v5h16v-5"/></svg><strong>Add your artwork (optional)</strong><span>Choose a file or drag it here. PDF, JPG or PNG, up to 10 MB.</span><input id="print-artwork" type="file" disabled accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" aria-describedby="print-upload-status"></label><p id="print-upload-status" role="status"></p><button type="button" id="print-remove-artwork" hidden>Remove file / send artwork later</button></div>
-        <label for="print-artwork-link">Artwork link (optional)<input type="url" id="print-artwork-link" name="artwork_link" pattern="https?://.*" placeholder="https://…" maxlength="700"><small>For larger PDFs, AI, PSD or packaged design files, share a Drive, Dropbox or download link with access enabled for hello@xclusivetech.co.ke.</small></label>
+        <label for="print-artwork-link">Artwork link (optional)<input type="url" id="print-artwork-link" name="artwork_link" pattern="https?://.*" placeholder="https://…" maxlength="700"><small>For larger PDFs, AI, PSD or packaged design files, share a Drive, Dropbox or download link with access enabled for <a href="mailto:hello@xclusivetech.co.ke" class="contact-inline-link">hello@xclusivetech.co.ke</a>.</small></label>
         <p class="print-privacy">Artwork is reviewed by our team; uploading a file is not automatic print approval. Uploaded files are private, used to review your quote and automatically removed after 30 days. You can also send artwork later on WhatsApp. <a href="/privacy">Privacy policy</a>.</p>
         <noscript><p>File upload needs JavaScript. You can submit your contact details and project notes now, include a file link, or send artwork later on WhatsApp.</p></noscript>
         <button type="submit" class="print-submit">Request my written print quote</button><p id="print-quote-feedback" role="status" tabindex="-1"></p>
@@ -386,7 +386,7 @@
 <section id="print-project-guide" class="print-section"><div class="print-container"><div class="print-section-heading"><p class="print-eyebrow">A clear brief. A smoother print run.</p><h2>Before approval, and after delivery</h2></div><div class="print-guide-grid">
 <article><h3>Not sure what to choose?</h3><p>Tell us what the print is for, the approximate quantity and your deadline. Select “Help me choose” for paper, binding or finish. We recommend a suitable specification in your quote.</p><a href="#print-quote">Ask for advice →</a></article>
 <article><h3>Approve the final proof</h3><ul><li>Check names, spelling and contact details.</li><li>Confirm size, page order, covers and quantity.</li><li>Check image quality, bleed and the chosen finish.</li><li>Give written approval of the final version before production.</li></ul><p>A quote request is not proof approval. Changes after approval may affect the price and schedule.</p></article>
-<article><h3>Something wrong with the print?</h3><p>Contact hello@xclusivetech.co.ke or WhatsApp +254 722 753 819 promptly with your reference, photos and the affected quantity. Keep the items while we review them against the approved artwork and specification.</p><p>Production faults and errors already present in approved artwork are assessed separately. We confirm the appropriate correction, reprint or other resolution after review; artwork changes are quoted separately.</p></article>
+<article><h3>Something wrong with the print?</h3><p>Contact <a href="mailto:hello@xclusivetech.co.ke" class="contact-inline-link">hello@xclusivetech.co.ke</a> or WhatsApp <a href="https://wa.me/254722753819" class="contact-inline-link" target="_blank" rel="noopener noreferrer">+254 722 753 819</a> promptly with your reference, photos and the affected quantity. Keep the items while we review them against the approved artwork and specification.</p><p>Production faults and errors already present in approved artwork are assessed separately. We confirm the appropriate correction, reprint or other resolution after review; artwork changes are quoted separately.</p></article>
 <article><h3>Need a repeat or a change?</h3><p>Choose “Repeat an earlier project”, add your previous reference and explain the changes. We confirm current materials, pricing and timing again. For a cancellation, contact us immediately; what can be changed depends on the production stage and costs already committed.</p><a href="#print-quote">Request a repeat quote →</a></article>
 </div></div></section>
 <section id="print-templates" class="print-section print-template-section"><div class="print-container"><div class="print-section-heading"><p class="print-eyebrow">Start at the right size</p><h2>Download editable artwork templates</h2><p>Open these SVG files in Illustrator, Inkscape or another vector editor. They show 3 mm bleed and safe-area guides. Replace the sample instructions, remove the guides and export a print-ready PDF with fonts embedded. Templates are size guides, not automatic pre-flight approval.</p></div><div class="print-template-grid">
@@ -597,8 +597,8 @@
                 <div class="space-y-3">
                     <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Headquarters</h4>
                     <p class="text-xs text-slate-400">1st Floor, Suite F8, Wood Ave Park Apartments, Kilimani, Nairobi, Kenya</p>
-                    <p class="text-xs text-slate-400"><strong class="text-white">Phone / WhatsApp:</strong> +254 722 753 819</p>
-                    <p class="text-xs text-slate-400"><strong class="text-white">Email:</strong> hello@xclusivetech.co.ke</p>
+                    <p class="text-xs text-slate-400"><strong class="text-white">Phone / WhatsApp:</strong> <a href="https://wa.me/254722753819" class="contact-inline-link" target="_blank" rel="noopener noreferrer">+254 722 753 819</a></p>
+                    <p class="text-xs text-slate-400"><strong class="text-white">Email:</strong> <a href="mailto:hello@xclusivetech.co.ke" class="contact-inline-link">hello@xclusivetech.co.ke</a></p>
                 </div>
             </div>
             <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
@@ -621,5 +621,6 @@
     <script src="/js/vendor/web-vitals.iife.js?v=4.2.4" defer></script>
     <script src="/js/buyer-tools.js?v=20261030buyer" defer></script>
     <script src="/js/lead-events.js?v=20261031leads" defer></script>
+<script src="/js/contact-links.js?v=20261101contacts" defer></script>
 </body>
 </html>

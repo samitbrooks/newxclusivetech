@@ -7675,3 +7675,8 @@ svg.h-6, .h-6 { height: 24px !important; }
 .home-portfolio-link { padding:1rem 1.5rem; text-align:center; background:#fff; }
 .home-portfolio-link a { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.8rem 1.4rem; border:1px solid #1d4ed8; border-radius:.6rem; color:#1d4ed8; background:#fff; font-weight:700; font-size:.95rem; text-decoration:none; }
 .home-portfolio-link a:hover { color:#fff; background:#1d4ed8; }
+
+/* Inline contact links inherit contrast from their surrounding light/dark surface. */
+a.contact-inline-link { display:inline !important; margin:0 !important; padding:0 !important; color:inherit !important; font-size:inherit; font-weight:inherit; text-decoration:underline; text-underline-offset:.15em; }
+a.contact-inline-link:hover { text-decoration-thickness:2px; }
+a.contact-inline-link:focus-visible { outline:2px solid currentColor; outline-offset:3px; border-radius:2px; }
