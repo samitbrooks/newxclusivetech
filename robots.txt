@@ -16,3 +16,6 @@ Sitemap: https://www.xclusivetech.co.ke/sitemap.xml
 
 # Dedicated county sitemap for discovery and Search Console monitoring.
 Sitemap: https://www.xclusivetech.co.ke/sitemap-counties.xml
+
+# Current canonical pages awaiting Google indexing; monitored separately.
+Sitemap: https://www.xclusivetech.co.ke/sitemap-recheck.xml
