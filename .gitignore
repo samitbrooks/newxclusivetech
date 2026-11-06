@@ -45,6 +45,11 @@ yarn-error.log*
 
 # Outreach and local campaigns
 outreach_drafts/
+scripts/dispatch_*.py
+scripts/generate_*campaign*.py
+scripts/run_scheduled_*.py
+scripts/test_html_email_template.py
+scripts/update_subjects_and_dispatch.py
 *.tmp
 *.bak
 
