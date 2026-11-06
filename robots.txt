@@ -1,4 +1,4 @@
-# Public search and AI discovery use the same crawl boundaries.
+# Public search, AI discovery, and generative engines use the same crawl boundaries.
 User-agent: *
 Allow: /
 Disallow: /admin
@@ -12,10 +12,31 @@ Disallow: /.env
 Disallow: /*.backup
 Disallow: /scripts/
 
+# Explicitly permit AI Search and Answer Engines for GEO & AEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# LLM Context Documents
+# https://www.xclusivetech.co.ke/llms.txt
+# https://www.xclusivetech.co.ke/llms-full.txt
+
+# Sitemaps & Syndication Feeds
 Sitemap: https://www.xclusivetech.co.ke/sitemap.xml
-
-# Dedicated county sitemap for discovery and Search Console monitoring.
 Sitemap: https://www.xclusivetech.co.ke/sitemap-counties.xml
-
-# Current canonical pages awaiting Google indexing; monitored separately.
 Sitemap: https://www.xclusivetech.co.ke/sitemap-recheck.xml
+Sitemap: https://www.xclusivetech.co.ke/feed.xml

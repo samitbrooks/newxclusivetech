@@ -1,0 +1,146 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ProfessionalService", "LocalBusiness", "Corporation"],
+      "@id": "https://www.xclusivetech.co.ke/#organization",
+      "name": "Xclusive Tech",
+      "alternateName": ["Xclusive Tech Kenya", "Xclusive Tech Web Design", "Elite Designs Kenya Partner"],
+      "url": "https://www.xclusivetech.co.ke",
+      "logo": "https://www.xclusivetech.co.ke/assets/images/logo.png",
+      "image": "https://www.xclusivetech.co.ke/assets/images/og-preview.png",
+      "description": "Award-winning web design and software engineering agency in Kilimani, Nairobi. Specialized in custom mobile-first websites, Safaricom Daraja M-Pesa e-commerce, and Generative Engine Optimization (GEO/AEO) across Kenya.",
+      "telephone": "+254722753819",
+      "email": "hello@xclusivetech.co.ke",
+      "priceRange": "KES 10,000 - KES 50,000",
+      "currenciesAccepted": "KES, USD",
+      "paymentAccepted": "M-Pesa, Cash, Bank Transfer, Credit Card",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st Floor, Suite F8, Wood Ave Park Apartments, Wood Avenue",
+        "addressLocality": "Kilimani",
+        "addressRegion": "Nairobi County",
+        "postalCode": "00100",
+        "addressCountry": "KE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.2961,
+        "longitude": 36.7865
+      },
+      "hasMap": "https://maps.google.com/?q=-1.2961,36.7865",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/share/1CcjjbidRp/",
+        "https://www.instagram.com/xclusivetech.co.ke",
+        "https://share.google/nOqYIkKFu0ynASqVK",
+        "https://elitedesigns.co.ke"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Samuel Kidemi",
+        "jobTitle": "Managing Director & Lead Software Engineer",
+        "email": "sam@elitedesigns.co.ke",
+        "telephone": "+254722753819",
+        "sameAs": "https://www.xclusivetech.co.ke/founder"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Kenya"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Nairobi County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kiambu County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Mombasa County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Nakuru County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kisumu County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Uasin Gishu County"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "48",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Web Design & Digital Engineering Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Express Landing Page",
+              "description": "High-converting single-page landing site delivered in 2-3 business days."
+            },
+            "price": "10000",
+            "priceCurrency": "KES"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Starter Website",
+              "description": "Professional 5-page corporate website with local SEO and mobile optimization."
+            },
+            "price": "20000",
+            "priceCurrency": "KES"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Growth Website",
+              "description": "Up to 10 pages with integrated blog/CMS, quotation intake, and Google Search Console setup."
+            },
+            "price": "35000",
+            "priceCurrency": "KES"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-Commerce Online Store",
+              "description": "Full online shop with Safaricom Daraja M-Pesa STK Push payment gateway."
+            },
+            "price": "50000",
+            "priceCurrency": "KES"
+          }
+        ]
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Samuel Kidemi — Branded Email Signature</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#F1F5F9] text-[#1E293B] antialiased p-4 md:p-8">
+
+  <div class="max-w-3xl mx-auto space-y-6">
+
+    <!-- Card Header & Action Bar -->
+    <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex flex-wrap items-center justify-between gap-4">
+      <div>
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Official Executive Asset</div>
+        <div class="text-lg font-bold text-slate-900">Dr. Samuel Kidemi &bull; Branded Email Signature</div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="copySignature()" id="copyBtn" class="flex items-center gap-2 bg-[#3600DF] hover:bg-[#2500A3] text-white text-xs font-bold py-2.5 px-4 rounded-lg shadow-md transition-all cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          <span id="copyBtnText">Copy Signature to Clipboard</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Live Preview Card (What it looks like in an email) -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+      <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Email Canvas Preview</div>
+      
+      <!-- Simulated Incoming Email Thread -->
+      <div class="border-b border-slate-100 pb-4 mb-6 text-sm text-slate-600">
+        <p class="mb-2">Looking forward to reviewing your proposal and discussing the project timeline.</p>
+        <p class="text-slate-400 italic">Warm regards,</p>
+      </div>
+
+      <!-- THE RAW SIGNATURE CONTAINER TO COPY -->
+      <div id="signatureContainer" class="p-4 bg-white inline-block">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.45; color: #334155; background-color: transparent;">
+          <tr>
+            <!-- Portrait Image Column -->
+            <td valign="top" style="padding-right: 18px; width: 84px; text-align: center;">
+              <a href="https://elitedesigns.co.ke" target="_blank" style="text-decoration: none; display: block;">
+                <img src="https://www.xclusivetech.co.ke/assets/images/samuel-headshot.png" alt="Dr. Samuel Kidemi" width="80" height="80" style="display: block; width: 80px; height: 80px; min-width: 80px; border-radius: 50%; border: 2.5px solid #3600DF; object-fit: cover; box-shadow: 0 4px 10px rgba(54, 0, 223, 0.18);" />
+              </a>
+              <div style="margin-top: 8px;">
+                <a href="https://elitedesigns.co.ke" target="_blank" style="text-decoration: none; display: inline-block;">
+                  <img src="https://elitedesigns.co.ke/logo.png" alt="Elite Designs" width="75" height="auto" style="display: block; width: 75px; max-width: 75px; height: auto;" />
+                </a>
+              </div>
+            </td>
+
+            <!-- Vertical Brand Gradient Divider -->
+            <td valign="top" style="width: 2px; background: linear-gradient(180deg, #3600DF 0%, #F22732 100%);">
+              <div style="width: 2px; height: 100%; min-height: 120px; font-size: 1px; line-height: 1px;">&nbsp;</div>
+            </td>
+
+            <!-- Information Column -->
+            <td valign="top" style="padding-left: 18px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="font-family: inherit;">
+                
+                <!-- Name & Credentials -->
+                <tr>
+                  <td style="padding-bottom: 2px;">
+                    <span style="font-size: 16px; font-weight: 800; color: #0F172A; letter-spacing: -0.2px;">Dr. Samuel Kidemi</span>
+                  </td>
+                </tr>
+
+                <!-- Title & Company -->
+                <tr>
+                  <td style="padding-bottom: 8px;">
+                    <span style="font-size: 12px; font-weight: 700; color: #3600DF; text-transform: uppercase; letter-spacing: 0.5px;">Managing Director</span>
+                    <span style="color: #CBD5E1; margin: 0 4px;">&bull;</span>
+                    <span style="font-size: 12.5px; font-weight: 600; color: #475569;">Elite Designs Kenya &amp; Xclusive Tech</span>
+                  </td>
+                </tr>
+
+                <!-- Contact Rows -->
+                <tr>
+                  <td style="padding-bottom: 4px; font-size: 12px; color: #475569;">
+                    <span style="display: inline-block; width: 16px; color: #F22732; font-weight: bold;">&#9742;</span>
+                    <strong style="color: #0F172A;">Direct / WhatsApp:</strong> 
+                    <a href="https://wa.me/254722753819" target="_blank" style="color: #3600DF; text-decoration: none; font-weight: 600;">+254 722 753 819</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding-bottom: 4px; font-size: 12px; color: #475569;">
+                    <span style="display: inline-block; width: 16px; color: #3600DF; font-weight: bold;">&#9993;</span>
+                    <strong style="color: #0F172A;">Email:</strong> 
+                    <a href="mailto:sam@elitedesigns.co.ke" style="color: #3600DF; text-decoration: none; font-weight: 500;">sam@elitedesigns.co.ke</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding-bottom: 4px; font-size: 12px; color: #475569;">
+                    <span style="display: inline-block; width: 16px; color: #64748B;">&#128205;</span>
+                    <span style="color: #64748B;">Suite F8, Wood Ave Park Apartments, Kilimani, Nairobi</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding-bottom: 8px; font-size: 12px; color: #475569;">
+                    <span style="display: inline-block; width: 16px; color: #3600DF;">&#127760;</span>
+                    <a href="https://elitedesigns.co.ke" target="_blank" style="color: #3600DF; text-decoration: none; font-weight: 600;">elitedesigns.co.ke</a>
+                    <span style="color: #CBD5E1; margin: 0 4px;">&bull;</span>
+                    <a href="https://www.xclusivetech.co.ke" target="_blank" style="color: #3600DF; text-decoration: none; font-weight: 600;">xclusivetech.co.ke</a>
+                  </td>
+                </tr>
+
+                <!-- Credibility / Recognition Badge -->
+                <tr>
+                  <td style="padding-top: 4px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 4px;">
+                      <tr>
+                        <td style="padding: 3px 8px; font-size: 11px; color: #64748B; font-weight: 500;">
+                          <span style="color: #D97706; font-weight: bold;">&#9733;</span> Top Digitally Fit Web Firm of the Year &bull; 120+ Sites Delivered
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- Installation Instructions Accordion -->
+    <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-4">
+      <div class="text-sm font-bold text-slate-900 flex items-center gap-2">
+        <svg class="w-5 h-5 text-[#3600DF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        How to Install This Signature in 60 Seconds
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 text-xs text-slate-600">
+        
+        <!-- Gmail -->
+        <div class="border border-slate-200 rounded-lg p-3 bg-slate-50 space-y-1.5">
+          <div class="font-bold text-slate-900 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-red-500"></span> Gmail / Google Workspace
+          </div>
+          <ol class="list-decimal pl-4 space-y-1">
+            <li>Click <strong>Copy Signature to Clipboard</strong> above.</li>
+            <li>In Gmail, click <strong>Settings (gear)</strong> &rarr; <strong>See all settings</strong>.</li>
+            <li>Scroll down to <strong>Signature</strong>, click <strong>Create new</strong>.</li>
+            <li>Press <strong>Ctrl+V / Cmd+V</strong> into the signature box.</li>
+            <li>Scroll to bottom and click <strong>Save Changes</strong>.</li>
+          </ol>
+        </div>
+
+        <!-- Apple Mail -->
+        <div class="border border-slate-200 rounded-lg p-3 bg-slate-50 space-y-1.5">
+          <div class="font-bold text-slate-900 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span> Apple Mail (Mac)
+          </div>
+          <ol class="list-decimal pl-4 space-y-1">
+            <li>Click <strong>Copy Signature to Clipboard</strong> above.</li>
+            <li>Open Mail &rarr; <strong>Settings</strong> &rarr; <strong>Signatures</strong>.</li>
+            <li>Click <strong>+</strong> under your account.</li>
+            <li>Paste (<strong>Cmd+V</strong>) into the signature field.</li>
+            <li>Uncheck <em>"Always match my default message font"</em>.</li>
+          </ol>
+        </div>
+
+        <!-- Outlook / Webmail -->
+        <div class="border border-slate-200 rounded-lg p-3 bg-slate-50 space-y-1.5">
+          <div class="font-bold text-slate-900 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-cyan-600"></span> Outlook / cPanel Webmail
+          </div>
+          <ol class="list-decimal pl-4 space-y-1">
+            <li>Click <strong>Copy Signature to Clipboard</strong> above.</li>
+            <li>In cPanel Webmail (Roundcube): <strong>Settings</strong> &rarr; <strong>Identities</strong> &rarr; click your email.</li>
+            <li>Toggle on <strong>HTML signature</strong>.</li>
+            <li>Paste directly and click <strong>Save</strong>.</li>
+          </ol>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function copySignature() {
+      const container = document.getElementById('signatureContainer');
+      
+      // Select the HTML of the container
+      const range = document.createRange();
+      range.selectNode(container);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          const btnText = document.getElementById('copyBtnText');
+          const btn = document.getElementById('copyBtn');
+          btnText.innerText = "✓ Copied to Clipboard!";
+          btn.classList.remove('bg-[#3600DF]', 'hover:bg-[#2500A3]');
+          btn.classList.add('bg-emerald-600');
+          setTimeout(() => {
+            btnText.innerText = "Copy Signature to Clipboard";
+            btn.classList.remove('bg-emerald-600');
+            btn.classList.add('bg-[#3600DF]', 'hover:bg-[#2500A3]');
+          }, 2500);
+        }
+      } catch (err) {
+        alert('Could not copy automatically. Please select the signature and press Cmd+C / Ctrl+C.');
+      }
+      window.getSelection().removeAllRanges();
+    }
+  </script>
+
+</body>
+</html>

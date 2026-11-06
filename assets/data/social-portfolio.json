@@ -1,0 +1,68 @@
+[
+  {
+    "key": "born2fro",
+    "name": "Born2Fro",
+    "sector": "HAIR CARE",
+    "bg": "#F4EDDF",
+    "ink": "#283E30",
+    "accent": "#B74D32",
+    "headline": [
+      "Your texture.",
+      "Your rhythm."
+    ],
+    "sub": [
+      "Make room for your",
+      "natural hair ritual."
+    ],
+    "cta": "Explore your hair-care routine",
+    "url": "born2fro.com",
+    "caption": "Your texture deserves its own rhythm. Make space for a hair-care ritual that feels like you. Explore Born2Fro and find your next routine. #Born2Fro #NaturalHair #HairCareRoutine",
+    "rationale": "A warm editorial palette, sculptural botanical forms and generous spacing create a calm, expressive hair-care direction. The language celebrates individual texture without promising product outcomes.",
+    "goal": "Brand affinity",
+    "audience": "Natural-hair and self-care audiences"
+  },
+  {
+    "key": "batteriq",
+    "name": "BATTERIQ",
+    "sector": "PORTABLE POWER",
+    "bg": "#111623",
+    "ink": "#F8FAFC",
+    "accent": "#C7F35D",
+    "headline": [
+      "More plans.",
+      "More power."
+    ],
+    "sub": [
+      "Power for wherever",
+      "the day takes you."
+    ],
+    "cta": "Explore portable power",
+    "url": "batteriq.com",
+    "caption": "The workday. The weekend. The next idea. Explore portable power with Batteriq and choose a setup for the way you move. #Batteriq #PortablePower #StayConnected",
+    "rationale": "Electric lime against deep navy creates a strong technology signal. An original battery illustration and disciplined type hierarchy keep the message legible in a fast-moving feed. No unverified capacity or runtime claims.",
+    "goal": "Product discovery",
+    "audience": "Mobile workers and portable-power shoppers"
+  },
+  {
+    "key": "diani",
+    "name": "DIANI ELITE TAXI",
+    "sector": "COASTAL TRAVEL",
+    "bg": "#073F49",
+    "ink": "#FFF3D9",
+    "accent": "#FFCB64",
+    "headline": [
+      "Touch down.",
+      "Coast on."
+    ],
+    "sub": [
+      "From arrivals",
+      "to coastal escapes."
+    ],
+    "cta": "Plan your next transfer",
+    "url": "dianielitetaxi.co.ke",
+    "caption": "Arrive with the coast on your mind. Plan your next transfer with Diani Elite Taxi and keep the journey part of the experience. Visit the website to enquire. #Diani #CoastalTravel #AirportTransfer",
+    "rationale": "A sunlit palette, flowing route line and illustrated coastal horizon communicate movement and arrival. The call to action invites an enquiry without inventing fares, availability or service guarantees.",
+    "goal": "Transfer enquiries",
+    "audience": "Visitors planning coastal travel"
+  }
+]

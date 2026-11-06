@@ -1,0 +1,26 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.7865, -1.2961]
+      },
+      "properties": {
+        "name": "Xclusive Tech",
+        "category": "Web Design & Software Development Company",
+        "address": "1st Floor, Suite F8, Wood Ave Park Apartments, Wood Avenue, Kilimani, Nairobi, Kenya",
+        "phone": "+254722753819",
+        "email": "hello@xclusivetech.co.ke",
+        "website": "https://www.xclusivetech.co.ke",
+        "hours": "Mo-Fr 08:00-18:00, Sa 09:00-14:00",
+        "country": "Kenya",
+        "city": "Nairobi",
+        "neighbourhood": "Kilimani",
+        "award": "Digitally Fit Web Design Firm of the Year"
+      }
+    }
+  ]
+}
+
