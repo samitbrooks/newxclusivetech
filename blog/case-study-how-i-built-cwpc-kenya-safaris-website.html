@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built CWPC Kenya Safaris: From Safari Discovery to Direct Enquiries | Xclusive Tech</title>
+    <meta name="description" content="A CWPC Kenya Safaris case study: destination navigation, clear itineraries, safari package previews and direct enquiry paths, with screenshots of the website.">
+    <meta name="keywords" content="safari website design Kenya, CWPC Kenya Safaris, tour operator website, itinerary website design, Elite Designs Kenya">
+    <meta name="author" content="Samuel Kidemi Kisaga, Xclusive Tech">
+    <meta property="og:title" content="How I Built CWPC Kenya Safaris: From Safari Discovery to Direct Enquiries">
+    <meta property="og:description" content="A CWPC Kenya Safaris case study: destination navigation, clear itineraries, safari package previews and direct enquiry paths, with screenshots of the website.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-cwpc-kenya-safaris-website">
+    <meta property="og:image" content="https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-i-built-cwpc-kenya-safaris-website.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How I Built CWPC Kenya Safaris: From Safari Discovery to Direct Enquiries">
+    <meta name="twitter:description" content="A CWPC Kenya Safaris case study: destination navigation, clear itineraries, safari package previews and direct enquiry paths, with screenshots of the website.">
+    <meta name="twitter:image" content="https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-i-built-cwpc-kenya-safaris-website.jpg">
+    <link rel="canonical" href="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-cwpc-kenya-safaris-website">
+
+    <!-- Theme Enforcement: Strictly Light Mode -->
+    <script>
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
+    </script>
+
+    <!-- Google Fonts Preconnect & Ubuntu Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+
+    <link rel="stylesheet" href="/css/utilities.css?v=20261030buyer">
+    <link rel="icon" href="../assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96x96.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png?v=2">
+    <link rel="shortcut icon" href="../favicon.ico?v=2">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css?v=20261101contacts">
+
+    <!-- Structured Data: BreadcrumbList, BlogPosting, FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.xclusivetech.co.ke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.xclusivetech.co.ke/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CWPC Kenya Safaris case study",
+          "item": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-cwpc-kenya-safaris-website"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "How I Built CWPC Kenya Safaris: From Safari Discovery to Direct Enquiries",
+      "description": "A CWPC Kenya Safaris case study: destination navigation, clear itineraries, safari package previews and direct enquiry paths, with screenshots of the website.",
+      "image": [
+        "https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-i-built-cwpc-kenya-safaris-website.jpg"
+      ],
+      "datePublished": "2026-11-07",
+      "dateModified": "2026-11-07",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-cwpc-kenya-safaris-website"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Samuel Kidemi Kisaga",
+        "url": "https://www.xclusivetech.co.ke/founder"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Xclusive Tech",
+        "url": "https://www.xclusivetech.co.ke/"
+      },
+      "inLanguage": "en-KE"
+    }
+  ]
+}</script>
+    <link rel="stylesheet" href="/css/blog.css?v=20261107footer">
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-light h-10 w-auto">
+                    <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-dark h-10 w-auto">
+                </a>
+                <div class="hidden md:flex gap-8">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/services" class="nav-link">Services</a>
+                    <div class="relative group">
+                        <button type="button" class="nav-link bg-transparent cursor-pointer flex items-center gap-1">
+                            Solutions
+                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
+                            <div class="bg-white border border-slate-200 rounded-xl shadow-2xl py-2 w-60">
+                                <a href="/solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Solutions by Business Type</a>
+                                <a href="/solutions#industries" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Industries We Serve</a>
+                                <a href="/printing" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Printing &amp; Publications</a>
+                                <a href="/solutions#saas" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">SaaS &amp; Custom Platforms</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/pricing" class="nav-link">Pricing</a>
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                    <a href="/blog/" class="nav-link active">Blog</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-actions flex items-center gap-3">
+                    <a href="https://wa.me/254722753819?text=Hi+Samuel%2C+I+read+your+CWPC+Kenya+Safaris+case+study.+We+need+a+safari+website." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all duration-300 font-medium">Get Safari Website Quote</a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Header -->
+    <header class="pt-28 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-50/60 to-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-blue-600 transition">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-blue-600 transition">Blog</a>
+                <span>/</span>
+                <span class="text-slate-800">CWPC Kenya Safaris Case Study</span>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold uppercase tracking-wider mb-4">
+                <span><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#truck"></use></svg> Safari Websites &amp; Direct Enquiries</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">How I Built CWPC Kenya Safaris: From Safari Discovery to Direct Enquiries</h1>
+
+            <div class="flex items-center gap-4 text-sm text-slate-600 pb-2 border-b border-slate-200">
+                <div class="flex items-center gap-2.5">
+                    <img src="../assets/images/samuel-headshot.webp" alt="Samuel Kidemi" class="w-10 h-10 rounded-full border border-blue-200 object-cover" srcset="../assets/images/samuel-headshot-256.webp 256w, ../assets/images/samuel-headshot.webp 800w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw">
+                    <div>
+                        <span class="font-bold text-slate-900 block leading-tight">Samuel Kidemi Kisaga</span>
+                        <span class="text-xs text-slate-500">Founder &amp; Principal Web Architect</span>
+                    </div>
+                </div>
+                <span class="text-slate-300">•</span>
+                <time datetime="2026-11-07" class="text-xs text-slate-500">November 7, 2026</time>
+                <span class="text-slate-300">•</span>
+                <span class="text-xs text-amber-700 font-semibold">5 min read</span>
+                <span class="text-slate-300">•</span>
+                <a href="https://www.cwpckenyasafaris.com" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-amber-800 hover:underline">Live Site: cwpckenyasafaris.com &rarr;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <article class="max-w-4xl mx-auto"><div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl mb-12"><img src="/assets/images/blog/case-study-how-i-built-cwpc-kenya-safaris-website.webp" alt="CWPC Kenya Safaris homepage with leopard photography and safari planning actions" width="1200" height="630" fetchpriority="high" class="w-full h-auto"><div class="p-4 bg-slate-900 text-slate-300 text-xs">CWPC Kenya Safaris · Safari &amp; experiential travel · Elite Designs Kenya project</div></div>
+<div class="prose prose-slate lg:prose-lg max-w-none space-y-8 text-slate-700 leading-relaxed">
+<p class="text-xl text-slate-800 font-medium">A safari website has to do more than show beautiful wildlife. It needs to help a traveller understand the route, compare options and feel ready to ask a useful question. That is the design problem at the centre of CWPC Kenya Safaris.</p>
+<p>In this walkthrough, I explain the project’s approach to discovery, trip presentation and direct enquiries. CWPC is an Elite Designs Kenya project, featured here in the Xclusive Tech portfolio. The screenshots show how the website brings those decisions together.</p>
+<div class="my-8 p-6 rounded-2xl bg-amber-50 border border-amber-200"><h2 class="text-xl font-bold text-slate-900 mb-3">Project at a glance</h2><ul class="list-disc pl-6 space-y-2"><li><strong>Business:</strong> CWPC Kenya Safaris, an East African safari and experiential travel operator.</li><li><strong>Design focus:</strong> destination discovery, structured safari information and a clear enquiry journey.</li><li><strong>Experience:</strong> wildlife safaris, gorilla trekking, Kilimanjaro climbs and beach holidays.</li><li><strong>Explore:</strong> <a href="https://www.cwpckenyasafaris.com" target="_blank" rel="noopener noreferrer" class="underline">Visit the CWPC website</a> or <a href="https://elitedesigns.co.ke/portfolio/cwpc-kenya-safaris" class="underline">read the Elite Designs project summary</a>.</li></ul></div>
+<h2 class="text-2xl font-bold text-slate-900">1. Start with the traveller’s decisions</h2>
+<p>The design follows the sequence a guest takes: where to go, which kind of trip to choose, what the journey includes and how to speak with the operator. A single undifferentiated list of tours would make those decisions harder. The CWPC navigation provides separate entry points for destinations, safari types, hiking and Zanzibar.</p>
+<p>This lets a guest begin with a country, an experience such as a family safari, or a specific interest such as climbing Kilimanjaro. The benefit is practical: different travellers can reach relevant information without first having to understand the operator’s entire catalogue.</p>
+<figure class="my-8"><a href="/assets/images/blog/cwpc-kenya-safaris-navigation.webp" target="_blank" rel="noopener noreferrer"><img src="/assets/images/blog/cwpc-kenya-safaris-navigation.webp" alt="CWPC desktop navigation showing destinations, safari, hiking, Zanzibar and an enquiry button" width="1440" height="145" loading="lazy" decoding="async" class="w-full h-auto rounded-xl border border-slate-200"></a><figcaption class="text-sm text-slate-500 mt-3">Navigation detail cropped from the existing desktop homepage screenshot. Click the preview to view it at full size.</figcaption></figure>
+<h2 class="text-2xl font-bold text-slate-900">2. Make the first screen explain the offer</h2>
+<p>The homepage combines wildlife photography with a direct message: “Compare, Choose &amp; Customize.” The supporting text names the types of trips and the countries served. I see this pairing as essential: the image creates interest, while the copy tells a prospective guest whether the business is relevant to their plans.</p>
+<p>Two actions serve different levels of readiness. “View All Tours” suits someone still researching; “Start Planning Your Safari” gives someone with an idea a route into a conversation. The dark image treatment also gives the white headline and outlined buttons a clear visual backdrop.</p>
+<figure class="my-8"><a href="/assets/images/blog/cwpc-kenya-safaris-hero-detail.webp" target="_blank" rel="noopener noreferrer"><img src="/assets/images/blog/cwpc-kenya-safaris-hero-detail.webp" alt="CWPC hero headline, safari description and two planning buttons" width="785" height="480" loading="lazy" decoding="async" class="w-full h-auto rounded-xl border border-slate-200"></a><figcaption class="text-sm text-slate-500 mt-3">Hero and action-button detail, cropped from the same desktop screenshot. Click the preview to view it at full size.</figcaption></figure>
+<h2 class="text-2xl font-bold text-slate-900">3. Give each safari a useful information structure</h2>
+<p>The live homepage’s featured packages show duration, destination, trip type, a short description, a starting price and a link to the tour. These fields help visitors distinguish a short fly-in trip from a longer cross-border safari before opening the full itinerary.</p>
+<p>The project also brings together day-by-day itineraries, lodge classifications and seasonal pricing. The design principle is consistency: comparable information should appear in comparable places. A guest should not have to hunt through several paragraphs to understand what changes between two options.</p>
+<p>Starting prices are an introduction to the offer, not a substitute for the final quote. Dates, accommodation choices and party size still need to be discussed with the operator. The website’s role is to prepare that discussion with clearer information.</p>
+<h2 class="text-2xl font-bold text-slate-900">4. Keep the next step close to the content</h2>
+<p>The homepage includes an “Inquire Now” navigation action, a safari-planning action and a visible WhatsApp contact. I treat these as complementary paths: some guests want to browse more pages, while others prefer to ask a person about dates and suitability.</p>
+<p>For a tailor-made safari, a direct enquiry is a useful outcome in its own right. It gives the operator an opportunity to understand the guest’s plans before agreeing on the itinerary. The guest and operator can then agree on the details before confirming the reservation.</p>
+<figure class="my-8"><a href="/assets/images/blog/cwpc-kenya-safaris-desktop.webp" target="_blank" rel="noopener noreferrer"><img src="/assets/images/blog/cwpc-kenya-safaris-desktop.webp" alt="Full desktop homepage preview of CWPC Kenya Safaris with navigation, safari hero and floating WhatsApp action" width="1440" height="900" loading="lazy" decoding="async" class="w-full h-auto rounded-xl border border-slate-200"></a><figcaption class="text-sm text-slate-500 mt-3">Existing desktop homepage capture from Elite Designs’ project assets. This is a desktop preview, not a mobile simulation. Click the preview to view it at full size.</figcaption></figure>
+<h2 class="text-2xl font-bold text-slate-900">5. What I would carry into another safari build</h2>
+<ul class="list-disc pl-6 space-y-2"><li><strong>Make choices legible:</strong> separate destinations, trip styles and practical planning information.</li><li><strong>Support comparison:</strong> show duration, route, inclusions and pricing context consistently.</li><li><strong>Offer a direct conversation:</strong> make enquiry and WhatsApp actions easy to find.</li><li><strong>Keep proof specific:</strong> use the operator’s genuine business information and verifiable reviews.</li><li><strong>Validate the finished journey:</strong> check phone layouts, image loading and enquiry links before launch, then measure actual visitor behaviour.</li></ul>
+<p>The result to inspect here is a structured safari presentation with direct enquiry paths. The useful lesson is how the content and interface work together to help a guest decide what to ask next.</p>
+<aside class="blog-cta" aria-label="Safari website project enquiry"><div class="blog-cta-copy"><h2>Need a clearer path from safari interest to enquiry?</h2><p>Share your packages and current website. We’ll agree on the scope, cost and delivery plan before work starts.</p></div><div class="blog-cta-actions"><a class="blog-cta-primary" href="https://wa.me/254722753819?text=Hello%20Samuel%2C%20I%20saw%20the%20CWPC%20Kenya%20Safaris%20case%20study." target="_blank" rel="noopener noreferrer">Discuss your safari website</a><a class="blog-cta-secondary" href="/portfolio#travel-tourism-transport">Explore the portfolio</a></div></aside>
+<div class="p-6 rounded-2xl bg-slate-50 border border-slate-200"><h2 class="text-lg font-bold text-slate-900">About the author</h2><p>Samuel Kidemi Kisaga writes about website design and digital platforms at Xclusive Tech. Explore the <a href="/founder" class="underline">founder profile</a> or the <a href="https://elitedesigns.co.ke/portfolio/cwpc-kenya-safaris" class="underline">Elite Designs CWPC project page</a>.</p></div>
+</div></article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="blog-footer bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <img src="../assets/icons/xclusivetech-header-logo.svg?v=20261107footer" alt="Xclusive Tech" class="h-10 w-auto">
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Top Digitally Fit Web Design &amp; Digital Architecture Firm in Nairobi, Kenya. We engineer high-speed, conversion-focused websites for transport brands, institutions, and enterprises.
+                    </p>
+                    <p class="text-xs text-slate-400">Kilimani, Nairobi, Kenya</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Case Studies</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/blog/case-study-how-i-built-opsok-medical-website-kenya" class="hover:text-white transition">OPSOK Medical Society</a></li>
+                        <li><a href="/blog/case-study-how-i-designed-lusweti-nabutola-law-firm-website-nairobi" class="hover:text-white transition">Lusweti &amp; Nabutola Law</a></li>
+                        <li><a href="/blog/case-study-how-i-built-cwpc-kenya-safaris-website" class="text-amber-400 hover:text-white transition">CWPC Kenya Safaris</a></li>
+                        <li><a href="/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website" class="hover:text-white transition">Santorini Queen Yacht</a></li>
+                        <li><a href="/blog/case-study-how-i-built-vape-collective-ecommerce-mpesa-kenya" class="hover:text-white transition">Vape Collective E-Commerce</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Core Services</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/services" class="hover:text-white transition">Transport &amp; Tour Portals</a></li>
+                        <li><a href="/services" class="hover:text-white transition">Institutional Web Design</a></li>
+                        <li><a href="/services" class="hover:text-white transition">E-Commerce &amp; Daraja M-Pesa</a></li>
+                        <li><a href="/services" class="hover:text-white transition">SEO &amp; GEO Optimization</a></li>
+                        <li><a href="/pricing" class="hover:text-white transition">Transparent Rate Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Get In Touch</h3>
+                    <p class="text-xs text-slate-400 mb-2">Speak directly with Samuel:</p>
+                    <p class="text-sm font-bold text-white mb-1"><a href="tel:+254722753819" class="contact-inline-link">+254 722 753 819</a></p>
+                    <p class="text-xs text-slate-400 mb-4"><a href="mailto:hello@xclusivetech.co.ke" class="contact-inline-link">hello@xclusivetech.co.ke</a></p>
+                    <a href="https://wa.me/254722753819" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition">
+                        Direct WhatsApp Chat &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                &copy; 2026 Xclusive Tech Kenya. All rights reserved. Crafting high-converting digital storefronts across East Africa.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/animations.js?v=20261030buyer" defer></script>
+    <script src="/js/measurement-config.js?v=20261030buyer" defer></script>
+    <script src="/js/vendor/web-vitals.iife.js?v=4.2.4" defer></script>
+    <script src="/js/buyer-tools.js?v=20261030buyer" defer></script>
+    <script src="/js/lead-events.js?v=20261031leads" defer></script>
+<script src="/js/contact-links.js?v=20261101contacts" defer></script>
+</body>
+</html>

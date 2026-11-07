@@ -24,3 +24,14 @@
 @media(min-width:1024px){nav#navbar #mobile-menu-btn,nav#navbar #mobile-menu {display:none !important}}
 nav#navbar #mobile-menu {background:#121218}
 nav#navbar #mobile-menu a {color:#e2e8f0 !important;background:transparent !important}
+
+/* Article footers use a dark surface: keep link and logo contrast independent of light-page defaults. */
+:root footer.blog-footer { background:#0f172a !important; color:#cbd5e1 !important; border-color:#334155 !important; }
+:root footer.blog-footer :is(p,li,span,div) { color:#cbd5e1 !important; }
+:root footer.blog-footer :is(h2,h3,h4,h5) { color:#f8fafc !important; }
+:root footer.blog-footer a { color:#cbd5e1 !important; }
+:root footer.blog-footer a:hover, :root footer.blog-footer a:focus-visible { color:#ffffff !important; text-decoration:underline; text-underline-offset:4px; }
+:root footer.blog-footer a:focus-visible { outline:2px solid #7dd3fc; outline-offset:5px; }
+:root footer.blog-footer a[class*="bg-emerald-"] { background:#047857 !important; color:#ffffff !important; }
+:root footer.blog-footer :is([class*="border-slate-"],[class*="border-gray-"]) { border-color:#334155 !important; }
+:root footer.blog-footer img[alt*="Xclusive"] { opacity:1 !important; filter:none !important; }
