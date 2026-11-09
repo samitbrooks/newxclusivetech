@@ -286,12 +286,12 @@
   ],
   "portfolio": [
     {
-      "name": "Irene Muendo Isuzu",
-      "industry": "Automotive / Logistics",
-      "url": "https://irenemuendoisuzu.co.ke/",
-      "challenge": "An Isuzu dealership with no online presence, relying entirely on showroom walk-ins.",
-      "whatWeBuilt": "A model listings site with financing info and a WhatsApp inquiry button on every vehicle page.",
-      "result": "A professional site the dealership can now point buyers to before they ever visit the showroom."
+      "name": "BatteriQ Kenya",
+      "industry": "Automotive / Emergency Logistics",
+      "url": "https://batteriq.co.ke/",
+      "challenge": "An automotive battery retailer needing fast emergency dispatch to reach stranded motorists across Nairobi.",
+      "whatWeBuilt": "An instant vehicle battery compatibility finder with WhatsApp emergency dispatch and mobile delivery.",
+      "result": "Sub-second mobile experience enabling stranded motorists to book on-site delivery in under 60 seconds."
     },
     {
       "name": "SMA Advocates",

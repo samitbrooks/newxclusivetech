@@ -1,14 +1,14 @@
 [
   {
-    "slug": "irenemuendoisuzu",
-    "project": "Irene Muendo Isuzu",
-    "industry": "Automotive",
-    "challenge": "Isuzu dealership needed a professional online presence to showcase their vehicle range and drive showroom visits.",
-    "solution": "Built a site with model listings, financing info, and a WhatsApp inquiry button.",
-    "result": "TODO: owner to supply real metric — e.g. number of showroom visits or inquiries since launch.",
-    "image": "assets/images/case-studies/irene-muendo-isuzu.png",
-    "imageAlt": "Irene Muendo Isuzu website — Isuzu truck and vehicle dealership in Kenya",
-    "url": "https://irenemuendoisuzu.co.ke/"
+    "slug": "batteriq",
+    "project": "BatteriQ Kenya",
+    "industry": "Automotive & Logistics",
+    "challenge": "An automotive battery retailer needing fast emergency dispatch to reach stranded motorists across Nairobi.",
+    "solution": "Built an on-demand battery compatibility portal with instant WhatsApp emergency dispatch and mobile delivery.",
+    "result": "Sub-second mobile experience enabling stranded motorists to book on-site delivery in under 60 seconds.",
+    "image": "assets/images/portfolio/batteriq.png",
+    "imageAlt": "BatteriQ Kenya website — Automotive battery delivery in Nairobi Kenya",
+    "url": "https://batteriq.co.ke/"
   },
   {
     "slug": "smaadvocates",
