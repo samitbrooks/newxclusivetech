@@ -286,6 +286,14 @@
   ],
   "portfolio": [
     {
+      "name": "UK RoadRunner",
+      "industry": "Automotive / Vehicle Import & Logistics",
+      "url": "https://ukroadrunner.co.uk/",
+      "challenge": "An international vehicle export business needing an online catalogue and destination-specific Kenya import duty estimation tool.",
+      "whatWeBuilt": "A comprehensive vehicle inventory portal with dynamic filtering, Kenya shipping route documentation, and an interactive car duty calculator.",
+      "result": "Transparent end-to-end import pricing that pre-qualifies buyers before sales consultations."
+    },
+    {
       "name": "BatteriQ Kenya",
       "industry": "Automotive / Emergency Logistics",
       "url": "https://batteriq.co.ke/",

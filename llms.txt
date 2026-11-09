@@ -64,6 +64,7 @@ Xclusive Tech specializes in custom UI/UX design, mobile-first business websites
 
 - [MedMarket Kenya](https://medmarket.co.ke/): Medical supplies and healthcare equipment e-commerce platform with automated M-Pesa checkout.
 - [Elite Designs](https://elitedesigns.co.ke/): Architectural planning, interior design, and 3D visualization studio in Nairobi, Kenya.
+- [UK RoadRunner](https://ukroadrunner.co.uk/): International vehicle sourcing and automotive export portal with Kenya shipping routes and import duty calculator.
 - [BatteriQ Kenya](https://batteriq.co.ke/): On-demand automotive battery delivery and mobile installation platform with emergency dispatch integration.
 - [SMA Advocates](https://smaadvocates.com/): Corporate and commercial law firm digital presence.
 - [Sage Beans Export](https://sagebeans.co.ke/): Global exporter of fresh French beans and avocados to European and Middle Eastern markets.

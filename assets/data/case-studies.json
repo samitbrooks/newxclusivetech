@@ -1,5 +1,16 @@
 [
   {
+    "slug": "ukroadrunner",
+    "project": "UK RoadRunner",
+    "industry": "Automotive & Logistics",
+    "challenge": "International vehicle exporter needing transparent duty estimation and searchable vehicle inventory for Kenyan car buyers.",
+    "solution": "Engineered an inventory search portal with Kenya shipping options and an interactive car import duty calculator.",
+    "result": "Streamlined buyer onboarding and instant preliminary duty estimates for direct import clients.",
+    "image": "assets/images/portfolio/ukroadrunner.png",
+    "imageAlt": "UK RoadRunner website — Vehicle sourcing and export to Kenya",
+    "url": "https://ukroadrunner.co.uk/"
+  },
+  {
     "slug": "batteriq",
     "project": "BatteriQ Kenya",
     "industry": "Automotive & Logistics",
