@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built UK RoadRunner: Vehicle Discovery, Export Guidance & Enquiries | Xclusive Tech</title>
+    <meta name="description" content="A screenshot-led UK RoadRunner website case study covering vehicle search, inventory browsing, shipping information and clear enquiry paths for overseas buyers.">
+    <meta name="keywords" content="UK RoadRunner website, automotive website design, car exporter website, vehicle inventory website, Xclusive Tech">
+    <meta name="author" content="Samuel Kidemi Kisaga, Xclusive Tech">
+    <meta property="og:title" content="How I Built UK RoadRunner: Vehicle Discovery, Export Guidance & Enquiries">
+    <meta property="og:description" content="A screenshot-led UK RoadRunner website case study covering vehicle search, inventory browsing, shipping information and clear enquiry paths for overseas buyers.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-uk-roadrunner-car-export-website">
+    <meta property="og:image" content="https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-i-built-uk-roadrunner-car-export-website.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How I Built UK RoadRunner: Vehicle Discovery, Export Guidance & Enquiries">
+    <meta name="twitter:description" content="A screenshot-led UK RoadRunner website case study covering vehicle search, inventory browsing, shipping information and clear enquiry paths for overseas buyers.">
+    <meta name="twitter:image" content="https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-i-built-uk-roadrunner-car-export-website.jpg">
+    <link rel="canonical" href="https://www.xclusivetech.co.ke/blog/case-study-how-i-built-uk-roadrunner-car-export-website">
+
+    <!-- Theme Enforcement: Strictly Light Mode -->
+    <script>
+        try {
+            localStorage.removeItem('xclusive_theme');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.classList.remove('dark');
+        } catch (e) {}
+    </script>
+
+    <!-- Google Fonts Preconnect & Ubuntu Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+
+    <link rel="stylesheet" href="/css/utilities.css?v=20261030buyer">
+    <link rel="icon" href="../assets/icons/xclusivetech-favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96x96.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png?v=2">
+    <link rel="shortcut icon" href="../favicon.ico?v=2">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css?v=20261101contacts">
+
+    <!-- Structured Data: BreadcrumbList, BlogPosting, FAQPage -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.xclusivetech.co.ke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.xclusivetech.co.ke/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "UK RoadRunner case study",
+          "item": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-uk-roadrunner-car-export-website"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "How I Built UK RoadRunner: Vehicle Discovery, Export Guidance & Enquiries",
+      "description": "A screenshot-led UK RoadRunner website case study covering vehicle search, inventory browsing, shipping information and clear enquiry paths for overseas buyers.",
+      "image": [
+        "https://www.xclusivetech.co.ke/assets/images/blog/case-study-how-i-built-uk-roadrunner-car-export-website.jpg"
+      ],
+      "datePublished": "2026-11-09",
+      "dateModified": "2026-11-09",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.xclusivetech.co.ke/blog/case-study-how-i-built-uk-roadrunner-car-export-website"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Samuel Kidemi Kisaga",
+        "url": "https://www.xclusivetech.co.ke/founder"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Xclusive Tech",
+        "url": "https://www.xclusivetech.co.ke/"
+      },
+      "inLanguage": "en-KE"
+    }
+  ]
+}</script>
+    <link rel="stylesheet" href="/css/blog.css?v=20261107footer">
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="../assets/icons/xclusivetech-header-logo-light.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-light h-10 w-auto">
+                    <img src="../assets/icons/xclusivetech-header-logo.svg" alt="Xclusive Tech logo" class="nav-logo-img nav-logo-dark h-10 w-auto">
+                </a>
+                <div class="hidden md:flex gap-8">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/services" class="nav-link">Services</a>
+                    <div class="relative group">
+                        <button type="button" class="nav-link bg-transparent cursor-pointer flex items-center gap-1">
+                            Solutions
+                            <svg aria-hidden="true" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block z-50">
+                            <div class="bg-white border border-slate-200 rounded-xl shadow-2xl py-2 w-60">
+                                <a href="/solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Solutions by Business Type</a>
+                                <a href="/solutions#industries" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Industries We Serve</a>
+                                <a href="/printing" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">Printing &amp; Publications</a>
+                                <a href="/solutions#saas" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-slate-50 hover:text-blue-600 transition-colors">SaaS &amp; Custom Platforms</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/pricing" class="nav-link">Pricing</a>
+                    <a href="/portfolio" class="nav-link">Portfolio</a>
+                    <a href="/blog/" class="nav-link active">Blog</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-actions flex items-center gap-3">
+                    <a href="https://wa.me/254722753819?text=Hi+Samuel%2C+I+read+your+UK+RoadRunner+case+study.+We+need+an+automotive+website." target="_blank" class="hidden md:block px-6 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all duration-300 font-medium">Discuss Your Website</a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Header -->
+    <header class="pt-28 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-50/60 to-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-blue-600 transition">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-blue-600 transition">Blog</a>
+                <span>/</span>
+                <span class="text-slate-800">UK RoadRunner Case Study</span>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold uppercase tracking-wider mb-4">
+                <span><svg class="xt-ui-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/icons/ui.svg#truck"></use></svg> Automotive Websites &amp; Vehicle Exports</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">How I Built UK RoadRunner: Vehicle Discovery, Export Guidance & Enquiries</h1>
+
+            <div class="flex items-center gap-4 text-sm text-slate-600 pb-2 border-b border-slate-200">
+                <div class="flex items-center gap-2.5">
+                    <img src="../assets/images/samuel-headshot.webp" alt="Samuel Kidemi" class="w-10 h-10 rounded-full border border-blue-200 object-cover" srcset="../assets/images/samuel-headshot-256.webp 256w, ../assets/images/samuel-headshot.webp 800w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw">
+                    <div>
+                        <span class="font-bold text-slate-900 block leading-tight">Samuel Kidemi Kisaga</span>
+                        <span class="text-xs text-slate-500">Founder &amp; Principal Web Architect</span>
+                    </div>
+                </div>
+                <span class="text-slate-300">•</span>
+                <time datetime="2026-11-09" class="text-xs text-slate-500">November 9, 2026</time>
+                <span class="text-slate-300">•</span>
+                <span class="text-xs text-amber-700 font-semibold">6 min read</span>
+                <span class="text-slate-300">•</span>
+                <a href="https://ukroadrunner.co.uk" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-amber-800 hover:underline">Live Site: ukroadrunner.co.uk &rarr;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
+        <article class="max-w-4xl mx-auto"><div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl mb-12"><img src="/assets/images/blog/case-study-how-i-built-uk-roadrunner-car-export-website.webp" alt="UK RoadRunner homepage with vehicle search and export service presentation" width="1200" height="630" fetchpriority="high" class="w-full h-auto"><div class="p-4 bg-slate-900 text-slate-300 text-xs">UK RoadRunner Limited · Automotive &amp; international vehicle exports · Website by Samuel Kidemi</div></div>
+<div class="prose prose-slate lg:prose-lg max-w-none space-y-8 text-slate-700 leading-relaxed">
+<p class="text-xl text-slate-800 font-medium">Buying a vehicle overseas starts with questions: which car fits my needs, what happens after I choose it, and who can help me through the import process? When I built UK RoadRunner’s website, I organised the experience around those decisions.</p>
+<p>This case study walks through the customer-facing design: a searchable showroom, practical export information and routes into a conversation with the team. The previews are real desktop captures of the live website taken on November 9, 2026.</p>
+<div class="my-8 p-6 rounded-2xl bg-amber-50 border border-amber-200"><h2 class="text-xl font-bold text-slate-900 mb-3">Project at a glance</h2><ul class="list-disc pl-6 space-y-2"><li><strong>Client:</strong> UK RoadRunner Limited.</li><li><strong>Sector:</strong> vehicle sourcing and international automotive logistics.</li><li><strong>My work:</strong> website design and development.</li><li><strong>Design focus:</strong> help buyers discover vehicles, understand the export journey and make a relevant enquiry.</li><li><strong>Explore:</strong> <a href="https://ukroadrunner.co.uk" target="_blank" rel="noopener noreferrer" class="underline">Visit UK RoadRunner</a>.</li></ul></div>
+<h2 class="text-2xl font-bold text-slate-900">1. Give the first screen a useful job</h2>
+<p>I brought vehicle discovery into the homepage instead of making buyers search through company information first. The search offers make, model, price, mileage and year controls, alongside a separate finance search tab. The visual direction pairs a deep purple identity with orange actions and prominent vehicle imagery.</p>
+<p>The broader design principle is simple: a strong first screen should explain the offer and let visitors do something useful. A buyer who already knows their preferred vehicle can begin searching; someone still researching can explore the services and process.</p>
+<figure class="my-8"><a href="/assets/images/blog/uk-roadrunner-desktop.webp" target="_blank" rel="noopener noreferrer"><img src="/assets/images/blog/uk-roadrunner-desktop.webp" alt="UK RoadRunner desktop homepage showing hero, vehicle filters and featured vehicles" width="1440" height="900" loading="lazy" decoding="async" class="w-full h-auto rounded-xl border border-slate-200"></a><figcaption class="text-sm text-slate-500 mt-3">Homepage preview captured in Chrome at a 1440 × 900 CSS-pixel viewport. Click any preview to inspect it at full size.</figcaption></figure>
+<h2 class="text-2xl font-bold text-slate-900">2. Make inventory easier to narrow down</h2>
+<p>The <a href="https://ukroadrunner.co.uk/inventory" target="_blank" rel="noopener noreferrer" class="underline">inventory page</a> combines a filter sidebar, brand shortcuts, sorting and vehicle cards. This gives visitors several ways to reduce a broad catalogue to a more useful shortlist.</p>
+<p>I used a repeatable card structure so the photograph, vehicle identity and key information occupy predictable places. Consistency helps comparison: visitors can focus on the differences between cars instead of relearning the layout for each listing. Stock and prices are live business information and will change after these screenshots.</p>
+<figure class="my-8"><a href="/assets/images/blog/uk-roadrunner-inventory.webp" target="_blank" rel="noopener noreferrer"><img src="/assets/images/blog/uk-roadrunner-inventory.webp" alt="UK RoadRunner inventory with make, model, price, mileage and body-style filters beside vehicle cards" width="1440" height="900" loading="lazy" decoding="async" class="w-full h-auto rounded-xl border border-slate-200"></a><figcaption class="text-sm text-slate-500 mt-3">Desktop inventory capture showing the search controls, brand shortcuts and vehicle imagery as displayed on November 9, 2026.</figcaption></figure>
+<h2 class="text-2xl font-bold text-slate-900">3. Connect the showroom to the export journey</h2>
+<p>Vehicle choice is only one part of this business. I separated the navigation into areas for finding a car, services, destinations and the import process. That structure gives different questions a clear home without forcing the entire service catalogue into the main page.</p>
+<figure class="my-8"><a href="/assets/images/blog/uk-roadrunner-navigation.webp" target="_blank" rel="noopener noreferrer"><img src="/assets/images/blog/uk-roadrunner-navigation.webp" alt="UK RoadRunner navigation with Find a Car, Services, Destinations, How It Works and Contact Us" width="1440" height="85" loading="lazy" decoding="async" class="w-full h-auto rounded-xl border border-slate-200"></a><figcaption class="text-sm text-slate-500 mt-3">Navigation detail cropped from the same desktop homepage capture.</figcaption></figure>
+<p>The <a href="https://ukroadrunner.co.uk/kenya-shipping" target="_blank" rel="noopener noreferrer" class="underline">Kenya shipping page</a> brings together shipping options, import preparation and a quote request. Destination-specific content helps buyers reach information relevant to their route, rather than treating every overseas enquiry as the same transaction.</p>
+<h2 class="text-2xl font-bold text-slate-900">4. Give research a clear next step</h2>
+<p>The site includes an <a href="https://ukroadrunner.co.uk/how-it-works/kenya-car-duty-calculator" target="_blank" rel="noopener noreferrer" class="underline">import-duty estimate tool</a> and a route to request a detailed cost breakdown. The calculator’s role in the interface is to support an initial budgeting conversation; its own disclaimer distinguishes an estimate from a final assessment.</p>
+<p>I kept the contact action visible in the navigation. A useful commercial website should let someone move from browsing to a specific question without losing context. The design supports that handoff rather than requiring every visitor to follow an identical path.</p>
+<h2 class="text-2xl font-bold text-slate-900">5. What this project demonstrates</h2>
+<ul class="list-disc pl-6 space-y-2"><li><strong>Discovery:</strong> give catalogue visitors practical ways to narrow their options.</li><li><strong>Clarity:</strong> separate product information from service and destination guidance.</li><li><strong>Consistency:</strong> repeat navigation, card patterns and action styles.</li><li><strong>Enquiries:</strong> connect research content to a relevant conversation.</li></ul>
+<p>The finished work is a vehicle export website that brings these journeys together. This walkthrough focuses on the interface and content decisions visible in the live project; it does not claim a measured increase in sales or enquiries.</p>
+<aside class="blog-cta" aria-label="Automotive website project enquiry"><div class="blog-cta-copy"><h2>Need a better digital showroom?</h2><p>Let’s organise your vehicles, services and enquiry journey around what your customers need to decide.</p></div><div class="blog-cta-actions"><a class="blog-cta-primary" href="https://wa.me/254722753819?text=Hello%20Samuel%2C%20I%20saw%20your%20UK%20RoadRunner%20case%20study." target="_blank" rel="noopener noreferrer">Discuss your website</a><a class="blog-cta-secondary" href="/portfolio#automotive">Explore automotive work</a></div></aside>
+<div class="p-6 rounded-2xl bg-slate-50 border border-slate-200"><h2 class="text-lg font-bold text-slate-900">About the author</h2><p>Samuel Kidemi Kisaga is the founder of Xclusive Tech. Read the <a href="/founder" class="underline">founder profile</a> or browse more <a href="/portfolio" class="underline">website projects</a>.</p></div>
+</div></article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="blog-footer bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <img src="../assets/icons/xclusivetech-header-logo.svg?v=20261107footer" alt="Xclusive Tech" class="h-10 w-auto">
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Top Digitally Fit Web Design &amp; Digital Architecture Firm in Nairobi, Kenya. We engineer high-speed, conversion-focused websites for transport brands, institutions, and enterprises.
+                    </p>
+                    <p class="text-xs text-slate-400">Kilimani, Nairobi, Kenya</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Case Studies</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/blog/case-study-how-i-built-opsok-medical-website-kenya" class="hover:text-white transition">OPSOK Medical Society</a></li>
+                        <li><a href="/blog/case-study-how-i-designed-lusweti-nabutola-law-firm-website-nairobi" class="hover:text-white transition">Lusweti &amp; Nabutola Law</a></li>
+                        <li><a href="/blog/case-study-how-i-built-uk-roadrunner-car-export-website" class="text-amber-400 hover:text-white transition">UK RoadRunner</a></li>
+                        <li><a href="/blog/case-study-how-i-built-santorini-queen-luxury-yacht-travel-website" class="hover:text-white transition">Santorini Queen Yacht</a></li>
+                        <li><a href="/blog/case-study-how-i-built-vape-collective-ecommerce-mpesa-kenya" class="hover:text-white transition">Vape Collective E-Commerce</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Core Services</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/services" class="hover:text-white transition">Transport &amp; Tour Portals</a></li>
+                        <li><a href="/services" class="hover:text-white transition">Institutional Web Design</a></li>
+                        <li><a href="/services" class="hover:text-white transition">E-Commerce &amp; Daraja M-Pesa</a></li>
+                        <li><a href="/services" class="hover:text-white transition">SEO &amp; GEO Optimization</a></li>
+                        <li><a href="/pricing" class="hover:text-white transition">Transparent Rate Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Get In Touch</h3>
+                    <p class="text-xs text-slate-400 mb-2">Speak directly with Samuel:</p>
+                    <p class="text-sm font-bold text-white mb-1"><a href="tel:+254722753819" class="contact-inline-link">+254 722 753 819</a></p>
+                    <p class="text-xs text-slate-400 mb-4"><a href="mailto:hello@xclusivetech.co.ke" class="contact-inline-link">hello@xclusivetech.co.ke</a></p>
+                    <a href="https://wa.me/254722753819" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition">
+                        Direct WhatsApp Chat &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                &copy; 2026 Xclusive Tech Kenya. All rights reserved. Crafting high-converting digital storefronts across East Africa.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/animations.js?v=20261030buyer" defer></script>
+    <script src="/js/measurement-config.js?v=20261030buyer" defer></script>
+    <script src="/js/vendor/web-vitals.iife.js?v=4.2.4" defer></script>
+    <script src="/js/buyer-tools.js?v=20261030buyer" defer></script>
+    <script src="/js/lead-events.js?v=20261031leads" defer></script>
+<script src="/js/contact-links.js?v=20261101contacts" defer></script>
+</body>
+</html>

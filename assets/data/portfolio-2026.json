@@ -347,9 +347,10 @@
       "projects": [
         {
           "slug": "ukroadrunner",
-          "name": "UK Roadrunner Limited",
-          "description": "Automotive Logistics",
-          "url": "https://ukroadrunner.co.uk"
+          "name": "UK RoadRunner Limited",
+          "description": "Vehicle Search, Global Shipping & Buyer Enquiries",
+          "url": "https://ukroadrunner.co.uk",
+          "caseStudy": "/blog/case-study-how-i-built-uk-roadrunner-car-export-website"
         }
       ]
     }
