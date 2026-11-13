@@ -1,0 +1,331 @@
+{
+  "tiers": {
+    "express": {
+      "name": "Express Landing Page",
+      "price": 10000,
+      "scope": "One landing page, up to five sections",
+      "time": "2-3 business days",
+      "support": "30 days",
+      "extra": []
+    },
+    "starter": {
+      "name": "Business Starter",
+      "price": 20000,
+      "scope": "Up to five pages",
+      "time": "5-7 business days",
+      "support": "30 days",
+      "extra": []
+    },
+    "growth": {
+      "name": "Business Growth",
+      "price": 35000,
+      "scope": "Up to ten pages with a blog/CMS",
+      "time": "7-10 business days",
+      "support": "90 days",
+      "extra": [
+        "CMS handover",
+        "Analytics and Search Console setup"
+      ]
+    },
+    "ecommerce": {
+      "name": "Online Store",
+      "price": 50000,
+      "scope": "Standard store with up to 20 initial product uploads",
+      "time": "10-15 business days",
+      "support": "Six months",
+      "extra": [
+        "Standard supported M-Pesa gateway setup"
+      ]
+    }
+  },
+  "packages": [
+    {
+      "slug": "professional-portfolio",
+      "title": "Professional Portfolio",
+      "category": "Professional services",
+      "tier": "starter",
+      "preview": "professional-portfolio",
+      "image": "/assets/images/solution-concepts/professional-portfolio.webp",
+      "benefit": "Give your experience, expertise and selected work a clear professional home.",
+      "content": [
+        "Introduction and biography",
+        "Qualifications and experience",
+        "Selected work and contact details"
+      ],
+      "separate": "Large publication archives, a CMS or additional detail pages",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "consultant-website",
+      "title": "Consultant Website",
+      "category": "Professional services",
+      "tier": "growth",
+      "preview": "consultant-website",
+      "image": "/assets/images/solution-concepts/consultant-website.webp",
+      "benefit": "Help prospective clients understand your expertise and approach.",
+      "content": [
+        "Expertise and service pages",
+        "Selected engagements",
+        "Insights and enquiry form"
+      ],
+      "separate": "Consultation scheduling, paid sessions and client portals",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "law-firm-website",
+      "title": "Law Firm Website",
+      "category": "Professional services",
+      "tier": "starter",
+      "preview": "law-firm-website",
+      "image": "/assets/images/solution-concepts/law-firm-website.webp",
+      "benefit": "Present your practice areas and make it easy to request a consultation.",
+      "content": [
+        "Firm overview and practice areas",
+        "Advocate profiles",
+        "Office details and enquiry form"
+      ],
+      "separate": "Secure case portals, document workflows and appointment systems",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "clinic-website",
+      "title": "Clinic Website",
+      "category": "Healthcare & education",
+      "tier": "starter",
+      "preview": "clinic-website",
+      "image": "/assets/images/solution-concepts/clinic-website.webp",
+      "benefit": "Help patients find your services, opening hours and contact information.",
+      "content": [
+        "Services and practitioner profiles",
+        "Location and opening hours",
+        "Appointment enquiry form"
+      ],
+      "separate": "Live scheduling, patient records and clinical systems",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "school-website",
+      "title": "School & Training Website",
+      "category": "Healthcare & education",
+      "tier": "growth",
+      "preview": "school-website",
+      "image": "/assets/images/solution-concepts/school-website.webp",
+      "benefit": "Bring admissions information, programmes and news into one organised website.",
+      "content": [
+        "Programmes and admissions information",
+        "Institution profile and gallery",
+        "News and contact details"
+      ],
+      "separate": "Student portals, applications processing and learning management",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "ngo-website",
+      "title": "NGO & Non-Profit Website",
+      "category": "Organisations",
+      "tier": "growth",
+      "preview": "ngo-website",
+      "image": "/assets/images/solution-concepts/ngo-website.webp",
+      "benefit": "Show what you do, where you work and the people your programmes serve.",
+      "content": [
+        "Mission and programme pages",
+        "Impact stories and reports",
+        "Partner and contact information"
+      ],
+      "separate": "Donation processing, donor CRM and multilingual publishing",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "church-website",
+      "title": "Church & Ministry Website",
+      "category": "Organisations",
+      "tier": "starter",
+      "preview": "church-website",
+      "image": "/assets/images/solution-concepts/church-website.webp",
+      "benefit": "Make service times, ministry information and upcoming gatherings easy to find.",
+      "content": [
+        "Service times and location",
+        "Ministries and events information",
+        "Contact and external giving links"
+      ],
+      "separate": "Donation checkout, member portals and sermon libraries",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "hotel-website",
+      "title": "Hotel & Guesthouse Website",
+      "category": "Travel & hospitality",
+      "tier": "growth",
+      "preview": "hotel-website",
+      "image": "/assets/images/solution-concepts/hotel-website.webp",
+      "benefit": "Show your rooms and experience, and invite direct booking enquiries.",
+      "content": [
+        "Room information and photo gallery",
+        "Facilities and location",
+        "Booking enquiry form"
+      ],
+      "separate": "Live room inventory, payments and reservation engines",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "tour-website",
+      "title": "Tours & Safari Website",
+      "category": "Travel & hospitality",
+      "tier": "growth",
+      "preview": "tour-website",
+      "image": "/assets/images/solution-concepts/tour-website.webp",
+      "benefit": "Help travellers explore your itineraries and request a tailored quote.",
+      "content": [
+        "Selected itineraries and destinations",
+        "Travel information and gallery",
+        "Tour enquiry form"
+      ],
+      "separate": "Live availability, booking payments and agent portals",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "restaurant-website",
+      "title": "Restaurant & Cafe Website",
+      "category": "Travel & hospitality",
+      "tier": "starter",
+      "preview": "restaurant-website",
+      "image": "/assets/images/solution-concepts/restaurant-website.webp",
+      "benefit": "Put your menu, location and enquiry options within easy reach.",
+      "content": [
+        "Menu presentation",
+        "Opening hours and location",
+        "Contact and reservation enquiries"
+      ],
+      "separate": "Online ordering, delivery workflows and live table reservations",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "real-estate-website",
+      "title": "Real Estate Website",
+      "category": "Business & property",
+      "tier": "growth",
+      "preview": "real-estate-website",
+      "image": "/assets/images/solution-concepts/real-estate-website.webp",
+      "benefit": "Present your property services and a carefully scoped selection of listings.",
+      "content": [
+        "Agency profile and services",
+        "Agreed initial property showcase",
+        "Viewing enquiry form"
+      ],
+      "separate": "Searchable property databases, maps, agent portals and large listing imports",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "logistics-website",
+      "title": "Logistics & Transport Website",
+      "category": "Business & property",
+      "tier": "starter",
+      "preview": "logistics-website",
+      "image": "/assets/images/solution-concepts/logistics-website.webp",
+      "benefit": "Explain your services, coverage and how to request a quote.",
+      "content": [
+        "Services and coverage",
+        "Fleet or capability showcase",
+        "Quote enquiry form"
+      ],
+      "separate": "Shipment tracking, dispatch systems and customer dashboards",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "startup-landing-page",
+      "title": "Startup Landing Page",
+      "category": "Business & property",
+      "tier": "express",
+      "preview": "startup-landing-page",
+      "image": "/assets/images/solution-concepts/startup-landing-page.webp",
+      "benefit": "Launch a focused introduction with a clear route to your first enquiry.",
+      "content": [
+        "Introduction and offering",
+        "Selected benefits and proof",
+        "Contact form and WhatsApp"
+      ],
+      "separate": "Extra pages, user accounts and application functionality",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "online-store",
+      "title": "Retail Online Store",
+      "category": "Online stores",
+      "tier": "ecommerce",
+      "preview": "online-store",
+      "image": "/assets/images/solution-concepts/online-store.webp",
+      "benefit": "Give customers a clear way to browse and buy your first product range.",
+      "content": [
+        "Up to 20 initial product uploads",
+        "Standard store and checkout",
+        "Supported M-Pesa gateway setup"
+      ],
+      "separate": "Large imports, complex variants, card gateways and custom checkout",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "fashion-store",
+      "title": "Fashion & Beauty Store",
+      "category": "Online stores",
+      "tier": "ecommerce",
+      "preview": "fashion-store",
+      "image": "/assets/images/solution-concepts/fashion-store.webp",
+      "benefit": "Present your collection in a mobile-friendly store with a defined launch scope.",
+      "content": [
+        "Up to 20 initial product uploads",
+        "Product categories and standard checkout",
+        "Supported M-Pesa gateway setup"
+      ],
+      "separate": "Complex sizing logic, subscriptions, custom configurators and large catalogues",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "agriculture-website",
+      "title": "Agribusiness Website",
+      "category": "Business & property",
+      "tier": "starter",
+      "preview": "agriculture-website",
+      "image": "/assets/images/solution-concepts/agriculture-website.webp",
+      "benefit": "Help buyers understand your products, sourcing and supply capabilities.",
+      "content": [
+        "Company and product information",
+        "Sourcing and quality information",
+        "Buyer enquiry form"
+      ],
+      "separate": "Online store checkout, stock systems and traceability platforms",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "fitness-website",
+      "title": "Fitness & Wellness Website",
+      "category": "Business & property",
+      "tier": "starter",
+      "preview": "fitness-website",
+      "image": "/assets/images/solution-concepts/fitness-website.webp",
+      "benefit": "Explain your services and give prospective members an easy way to get in touch.",
+      "content": [
+        "Services and team information",
+        "Timetable information",
+        "Location and membership enquiries"
+      ],
+      "separate": "Membership payments, live class bookings and client portals",
+      "previewType": "ai-generated-concept"
+    },
+    {
+      "slug": "event-website",
+      "title": "Event Landing Page",
+      "category": "Organisations",
+      "tier": "express",
+      "preview": "event-website",
+      "image": "/assets/images/solution-concepts/event-website.webp",
+      "benefit": "Give one event a focused destination for its programme and enquiry details.",
+      "content": [
+        "Event introduction and programme",
+        "Speaker or venue highlights",
+        "Enquiry form and registration link"
+      ],
+      "separate": "Ticket sales, custom registration systems and attendee management",
+      "previewType": "ai-generated-concept"
+    }
+  ]
+}
